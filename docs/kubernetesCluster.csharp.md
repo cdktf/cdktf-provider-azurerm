@@ -357,7 +357,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.importFrom"></a>
@@ -411,7 +411,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -426,7 +426,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -1252,13 +1252,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.aciConnectorLinux">AciConnectorLinux</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAciConnectorLinuxOutputReference">KubernetesClusterAciConnectorLinuxOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.apiServerAccessProfile">ApiServerAccessProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference">KubernetesClusterApiServerAccessProfileOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.autoScalerProfile">AutoScalerProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference">KubernetesClusterAutoScalerProfileOutputReference</a></code> | *No description.* |
@@ -1304,21 +1304,21 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.automaticUpgradeChannelInput">AutomaticUpgradeChannelInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.autoScalerProfileInput">AutoScalerProfileInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile">KubernetesClusterAutoScalerProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.azureActiveDirectoryRoleBasedAccessControlInput">AzureActiveDirectoryRoleBasedAccessControlInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl">KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.azurePolicyEnabledInput">AzurePolicyEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.azurePolicyEnabledInput">AzurePolicyEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.bootstrapProfileInput">BootstrapProfileInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterBootstrapProfile">KubernetesClusterBootstrapProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.confidentialComputingInput">ConfidentialComputingInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputing">KubernetesClusterConfidentialComputing</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.costAnalysisEnabledInput">CostAnalysisEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.costAnalysisEnabledInput">CostAnalysisEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.customCaTrustCertificatesBase64Input">CustomCaTrustCertificatesBase64Input</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.defaultNodePoolInput">DefaultNodePoolInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool">KubernetesClusterDefaultNodePool</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.diskEncryptionSetIdInput">DiskEncryptionSetIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.dnsPrefixInput">DnsPrefixInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.dnsPrefixPrivateClusterInput">DnsPrefixPrivateClusterInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.edgeZoneInput">EdgeZoneInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.httpApplicationRoutingEnabledInput">HttpApplicationRoutingEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.httpApplicationRoutingEnabledInput">HttpApplicationRoutingEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.httpProxyConfigInput">HttpProxyConfigInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterHttpProxyConfig">KubernetesClusterHttpProxyConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.identityInput">IdentityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIdentity">KubernetesClusterIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.imageCleanerEnabledInput">ImageCleanerEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.imageCleanerEnabledInput">ImageCleanerEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.imageCleanerIntervalHoursInput">ImageCleanerIntervalHoursInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.ingressApplicationGatewayInput">IngressApplicationGatewayInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIngressApplicationGateway">KubernetesClusterIngressApplicationGateway</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.keyManagementServiceInput">KeyManagementServiceInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyManagementService">KubernetesClusterKeyManagementService</a></code> | *No description.* |
@@ -1326,7 +1326,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.kubeletIdentityInput">KubeletIdentityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKubeletIdentity">KubernetesClusterKubeletIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.kubernetesVersionInput">KubernetesVersionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.linuxProfileInput">LinuxProfileInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterLinuxProfile">KubernetesClusterLinuxProfile</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.localAccountDisabledInput">LocalAccountDisabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.localAccountDisabledInput">LocalAccountDisabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.maintenanceWindowAutoUpgradeInput">MaintenanceWindowAutoUpgradeInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade">KubernetesClusterMaintenanceWindowAutoUpgrade</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.maintenanceWindowInput">MaintenanceWindowInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindow">KubernetesClusterMaintenanceWindow</a></code> | *No description.* |
@@ -1337,57 +1337,57 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.networkProfileInput">NetworkProfileInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile">KubernetesClusterNetworkProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.nodeOsUpgradeChannelInput">NodeOsUpgradeChannelInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.nodeResourceGroupInput">NodeResourceGroupInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.oidcIssuerEnabledInput">OidcIssuerEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.oidcIssuerEnabledInput">OidcIssuerEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.omsAgentInput">OmsAgentInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent">KubernetesClusterOmsAgent</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.openServiceMeshEnabledInput">OpenServiceMeshEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterEnabledInput">PrivateClusterEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterPublicFqdnEnabledInput">PrivateClusterPublicFqdnEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.openServiceMeshEnabledInput">OpenServiceMeshEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterEnabledInput">PrivateClusterEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterPublicFqdnEnabledInput">PrivateClusterPublicFqdnEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateDnsZoneIdInput">PrivateDnsZoneIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.resourceGroupNameInput">ResourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.roleBasedAccessControlEnabledInput">RoleBasedAccessControlEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.runCommandEnabledInput">RunCommandEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.roleBasedAccessControlEnabledInput">RoleBasedAccessControlEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.runCommandEnabledInput">RunCommandEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.serviceMeshProfileInput">ServiceMeshProfileInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile">KubernetesClusterServiceMeshProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.servicePrincipalInput">ServicePrincipalInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServicePrincipal">KubernetesClusterServicePrincipal</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.skuTierInput">SkuTierInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.storageProfileInput">StorageProfileInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile">KubernetesClusterStorageProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.supportPlanInput">SupportPlanInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.tagsInput">TagsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.upgradeOverrideInput">UpgradeOverrideInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverride">KubernetesClusterUpgradeOverride</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.webAppRoutingInput">WebAppRoutingInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWebAppRouting">KubernetesClusterWebAppRouting</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.windowsProfileInput">WindowsProfileInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfile">KubernetesClusterWindowsProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.workloadAutoscalerProfileInput">WorkloadAutoscalerProfileInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile">KubernetesClusterWorkloadAutoscalerProfile</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.workloadIdentityEnabledInput">WorkloadIdentityEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.workloadIdentityEnabledInput">WorkloadIdentityEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.automaticUpgradeChannel">AutomaticUpgradeChannel</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.azurePolicyEnabled">AzurePolicyEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.costAnalysisEnabled">CostAnalysisEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.azurePolicyEnabled">AzurePolicyEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.costAnalysisEnabled">CostAnalysisEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.customCaTrustCertificatesBase64">CustomCaTrustCertificatesBase64</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.diskEncryptionSetId">DiskEncryptionSetId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.dnsPrefix">DnsPrefix</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.dnsPrefixPrivateCluster">DnsPrefixPrivateCluster</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.edgeZone">EdgeZone</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.httpApplicationRoutingEnabled">HttpApplicationRoutingEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.httpApplicationRoutingEnabled">HttpApplicationRoutingEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.id">Id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.imageCleanerEnabled">ImageCleanerEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.imageCleanerEnabled">ImageCleanerEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.imageCleanerIntervalHours">ImageCleanerIntervalHours</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.kubernetesVersion">KubernetesVersion</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.localAccountDisabled">LocalAccountDisabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.localAccountDisabled">LocalAccountDisabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.location">Location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.nodeOsUpgradeChannel">NodeOsUpgradeChannel</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.nodeResourceGroup">NodeResourceGroup</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.oidcIssuerEnabled">OidcIssuerEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.openServiceMeshEnabled">OpenServiceMeshEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterEnabled">PrivateClusterEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterPublicFqdnEnabled">PrivateClusterPublicFqdnEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.oidcIssuerEnabled">OidcIssuerEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.openServiceMeshEnabled">OpenServiceMeshEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterEnabled">PrivateClusterEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterPublicFqdnEnabled">PrivateClusterPublicFqdnEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateDnsZoneId">PrivateDnsZoneId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.roleBasedAccessControlEnabled">RoleBasedAccessControlEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.runCommandEnabled">RunCommandEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.roleBasedAccessControlEnabled">RoleBasedAccessControlEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.runCommandEnabled">RunCommandEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.skuTier">SkuTier</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.supportPlan">SupportPlan</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.workloadIdentityEnabled">WorkloadIdentityEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.workloadIdentityEnabled">WorkloadIdentityEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -1466,20 +1466,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1526,10 +1526,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1986,10 +1986,10 @@ public KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl AzureActiveDi
 ##### `AzurePolicyEnabledInput`<sup>Optional</sup> <a name="AzurePolicyEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.azurePolicyEnabledInput"></a>
 
 ```csharp
-public object AzurePolicyEnabledInput { get; }
+public bool|IResolvable AzurePolicyEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2016,10 +2016,10 @@ public KubernetesClusterConfidentialComputing ConfidentialComputingInput { get; 
 ##### `CostAnalysisEnabledInput`<sup>Optional</sup> <a name="CostAnalysisEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.costAnalysisEnabledInput"></a>
 
 ```csharp
-public object CostAnalysisEnabledInput { get; }
+public bool|IResolvable CostAnalysisEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2086,10 +2086,10 @@ public string EdgeZoneInput { get; }
 ##### `HttpApplicationRoutingEnabledInput`<sup>Optional</sup> <a name="HttpApplicationRoutingEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.httpApplicationRoutingEnabledInput"></a>
 
 ```csharp
-public object HttpApplicationRoutingEnabledInput { get; }
+public bool|IResolvable HttpApplicationRoutingEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2126,10 +2126,10 @@ public string IdInput { get; }
 ##### `ImageCleanerEnabledInput`<sup>Optional</sup> <a name="ImageCleanerEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.imageCleanerEnabledInput"></a>
 
 ```csharp
-public object ImageCleanerEnabledInput { get; }
+public bool|IResolvable ImageCleanerEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2206,10 +2206,10 @@ public KubernetesClusterLinuxProfile LinuxProfileInput { get; }
 ##### `LocalAccountDisabledInput`<sup>Optional</sup> <a name="LocalAccountDisabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.localAccountDisabledInput"></a>
 
 ```csharp
-public object LocalAccountDisabledInput { get; }
+public bool|IResolvable LocalAccountDisabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2316,10 +2316,10 @@ public string NodeResourceGroupInput { get; }
 ##### `OidcIssuerEnabledInput`<sup>Optional</sup> <a name="OidcIssuerEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.oidcIssuerEnabledInput"></a>
 
 ```csharp
-public object OidcIssuerEnabledInput { get; }
+public bool|IResolvable OidcIssuerEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2336,30 +2336,30 @@ public KubernetesClusterOmsAgent OmsAgentInput { get; }
 ##### `OpenServiceMeshEnabledInput`<sup>Optional</sup> <a name="OpenServiceMeshEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.openServiceMeshEnabledInput"></a>
 
 ```csharp
-public object OpenServiceMeshEnabledInput { get; }
+public bool|IResolvable OpenServiceMeshEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `PrivateClusterEnabledInput`<sup>Optional</sup> <a name="PrivateClusterEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterEnabledInput"></a>
 
 ```csharp
-public object PrivateClusterEnabledInput { get; }
+public bool|IResolvable PrivateClusterEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `PrivateClusterPublicFqdnEnabledInput`<sup>Optional</sup> <a name="PrivateClusterPublicFqdnEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterPublicFqdnEnabledInput"></a>
 
 ```csharp
-public object PrivateClusterPublicFqdnEnabledInput { get; }
+public bool|IResolvable PrivateClusterPublicFqdnEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2386,20 +2386,20 @@ public string ResourceGroupNameInput { get; }
 ##### `RoleBasedAccessControlEnabledInput`<sup>Optional</sup> <a name="RoleBasedAccessControlEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.roleBasedAccessControlEnabledInput"></a>
 
 ```csharp
-public object RoleBasedAccessControlEnabledInput { get; }
+public bool|IResolvable RoleBasedAccessControlEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `RunCommandEnabledInput`<sup>Optional</sup> <a name="RunCommandEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.runCommandEnabledInput"></a>
 
 ```csharp
-public object RunCommandEnabledInput { get; }
+public bool|IResolvable RunCommandEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2466,10 +2466,10 @@ public System.Collections.Generic.IDictionary<string, string> TagsInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|KubernetesClusterTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a>
 
 ---
 
@@ -2516,10 +2516,10 @@ public KubernetesClusterWorkloadAutoscalerProfile WorkloadAutoscalerProfileInput
 ##### `WorkloadIdentityEnabledInput`<sup>Optional</sup> <a name="WorkloadIdentityEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.workloadIdentityEnabledInput"></a>
 
 ```csharp
-public object WorkloadIdentityEnabledInput { get; }
+public bool|IResolvable WorkloadIdentityEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2536,20 +2536,20 @@ public string AutomaticUpgradeChannel { get; }
 ##### `AzurePolicyEnabled`<sup>Required</sup> <a name="AzurePolicyEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.azurePolicyEnabled"></a>
 
 ```csharp
-public object AzurePolicyEnabled { get; }
+public bool|IResolvable AzurePolicyEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `CostAnalysisEnabled`<sup>Required</sup> <a name="CostAnalysisEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.costAnalysisEnabled"></a>
 
 ```csharp
-public object CostAnalysisEnabled { get; }
+public bool|IResolvable CostAnalysisEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2606,10 +2606,10 @@ public string EdgeZone { get; }
 ##### `HttpApplicationRoutingEnabled`<sup>Required</sup> <a name="HttpApplicationRoutingEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.httpApplicationRoutingEnabled"></a>
 
 ```csharp
-public object HttpApplicationRoutingEnabled { get; }
+public bool|IResolvable HttpApplicationRoutingEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2626,10 +2626,10 @@ public string Id { get; }
 ##### `ImageCleanerEnabled`<sup>Required</sup> <a name="ImageCleanerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.imageCleanerEnabled"></a>
 
 ```csharp
-public object ImageCleanerEnabled { get; }
+public bool|IResolvable ImageCleanerEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2656,10 +2656,10 @@ public string KubernetesVersion { get; }
 ##### `LocalAccountDisabled`<sup>Required</sup> <a name="LocalAccountDisabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.localAccountDisabled"></a>
 
 ```csharp
-public object LocalAccountDisabled { get; }
+public bool|IResolvable LocalAccountDisabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2706,40 +2706,40 @@ public string NodeResourceGroup { get; }
 ##### `OidcIssuerEnabled`<sup>Required</sup> <a name="OidcIssuerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.oidcIssuerEnabled"></a>
 
 ```csharp
-public object OidcIssuerEnabled { get; }
+public bool|IResolvable OidcIssuerEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `OpenServiceMeshEnabled`<sup>Required</sup> <a name="OpenServiceMeshEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.openServiceMeshEnabled"></a>
 
 ```csharp
-public object OpenServiceMeshEnabled { get; }
+public bool|IResolvable OpenServiceMeshEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `PrivateClusterEnabled`<sup>Required</sup> <a name="PrivateClusterEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterEnabled"></a>
 
 ```csharp
-public object PrivateClusterEnabled { get; }
+public bool|IResolvable PrivateClusterEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `PrivateClusterPublicFqdnEnabled`<sup>Required</sup> <a name="PrivateClusterPublicFqdnEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.privateClusterPublicFqdnEnabled"></a>
 
 ```csharp
-public object PrivateClusterPublicFqdnEnabled { get; }
+public bool|IResolvable PrivateClusterPublicFqdnEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2766,20 +2766,20 @@ public string ResourceGroupName { get; }
 ##### `RoleBasedAccessControlEnabled`<sup>Required</sup> <a name="RoleBasedAccessControlEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.roleBasedAccessControlEnabled"></a>
 
 ```csharp
-public object RoleBasedAccessControlEnabled { get; }
+public bool|IResolvable RoleBasedAccessControlEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `RunCommandEnabled`<sup>Required</sup> <a name="RunCommandEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.runCommandEnabled"></a>
 
 ```csharp
-public object RunCommandEnabled { get; }
+public bool|IResolvable RunCommandEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2816,10 +2816,10 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; }
 ##### `WorkloadIdentityEnabled`<sup>Required</sup> <a name="WorkloadIdentityEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesCluster.property.workloadIdentityEnabled"></a>
 
 ```csharp
-public object WorkloadIdentityEnabled { get; }
+public bool|IResolvable WorkloadIdentityEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -2898,7 +2898,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 new KubernetesClusterApiServerAccessProfile {
     string[] AuthorizedIpRanges = null,
     string SubnetId = null,
-    object VirtualNetworkIntegrationEnabled = null
+    bool|IResolvable VirtualNetworkIntegrationEnabled = null
 };
 ```
 
@@ -2908,7 +2908,7 @@ new KubernetesClusterApiServerAccessProfile {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile.property.authorizedIpRanges">AuthorizedIpRanges</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#authorized_ip_ranges KubernetesCluster#authorized_ip_ranges}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile.property.subnetId">SubnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#subnet_id KubernetesCluster#subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile.property.virtualNetworkIntegrationEnabled">VirtualNetworkIntegrationEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#virtual_network_integration_enabled KubernetesCluster#virtual_network_integration_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile.property.virtualNetworkIntegrationEnabled">VirtualNetworkIntegrationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#virtual_network_integration_enabled KubernetesCluster#virtual_network_integration_enabled}. |
 
 ---
 
@@ -2939,10 +2939,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `VirtualNetworkIntegrationEnabled`<sup>Optional</sup> <a name="VirtualNetworkIntegrationEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile.property.virtualNetworkIntegrationEnabled"></a>
 
 ```csharp
-public object VirtualNetworkIntegrationEnabled { get; set; }
+public bool|IResolvable VirtualNetworkIntegrationEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#virtual_network_integration_enabled KubernetesCluster#virtual_network_integration_enabled}.
 
@@ -2956,12 +2956,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterAutoScalerProfile {
-    object BalanceSimilarNodeGroups = null,
-    object DaemonsetEvictionForEmptyNodesEnabled = null,
-    object DaemonsetEvictionForOccupiedNodesEnabled = null,
+    bool|IResolvable BalanceSimilarNodeGroups = null,
+    bool|IResolvable DaemonsetEvictionForEmptyNodesEnabled = null,
+    bool|IResolvable DaemonsetEvictionForOccupiedNodesEnabled = null,
     string EmptyBulkDeleteMax = null,
     string Expander = null,
-    object IgnoreDaemonsetsUtilizationEnabled = null,
+    bool|IResolvable IgnoreDaemonsetsUtilizationEnabled = null,
     string MaxGracefulTerminationSec = null,
     string MaxNodeProvisioningTime = null,
     double MaxUnreadyNodes = null,
@@ -2974,8 +2974,8 @@ new KubernetesClusterAutoScalerProfile {
     string ScaleDownUnready = null,
     string ScaleDownUtilizationThreshold = null,
     string ScanInterval = null,
-    object SkipNodesWithLocalStorage = null,
-    object SkipNodesWithSystemPods = null
+    bool|IResolvable SkipNodesWithLocalStorage = null,
+    bool|IResolvable SkipNodesWithSystemPods = null
 };
 ```
 
@@ -2983,12 +2983,12 @@ new KubernetesClusterAutoScalerProfile {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.balanceSimilarNodeGroups">BalanceSimilarNodeGroups</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#balance_similar_node_groups KubernetesCluster#balance_similar_node_groups}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.daemonsetEvictionForEmptyNodesEnabled">DaemonsetEvictionForEmptyNodesEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#daemonset_eviction_for_empty_nodes_enabled KubernetesCluster#daemonset_eviction_for_empty_nodes_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.daemonsetEvictionForOccupiedNodesEnabled">DaemonsetEvictionForOccupiedNodesEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#daemonset_eviction_for_occupied_nodes_enabled KubernetesCluster#daemonset_eviction_for_occupied_nodes_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.balanceSimilarNodeGroups">BalanceSimilarNodeGroups</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#balance_similar_node_groups KubernetesCluster#balance_similar_node_groups}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.daemonsetEvictionForEmptyNodesEnabled">DaemonsetEvictionForEmptyNodesEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#daemonset_eviction_for_empty_nodes_enabled KubernetesCluster#daemonset_eviction_for_empty_nodes_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.daemonsetEvictionForOccupiedNodesEnabled">DaemonsetEvictionForOccupiedNodesEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#daemonset_eviction_for_occupied_nodes_enabled KubernetesCluster#daemonset_eviction_for_occupied_nodes_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.emptyBulkDeleteMax">EmptyBulkDeleteMax</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#empty_bulk_delete_max KubernetesCluster#empty_bulk_delete_max}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.expander">Expander</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#expander KubernetesCluster#expander}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.ignoreDaemonsetsUtilizationEnabled">IgnoreDaemonsetsUtilizationEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#ignore_daemonsets_utilization_enabled KubernetesCluster#ignore_daemonsets_utilization_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.ignoreDaemonsetsUtilizationEnabled">IgnoreDaemonsetsUtilizationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#ignore_daemonsets_utilization_enabled KubernetesCluster#ignore_daemonsets_utilization_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.maxGracefulTerminationSec">MaxGracefulTerminationSec</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#max_graceful_termination_sec KubernetesCluster#max_graceful_termination_sec}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.maxNodeProvisioningTime">MaxNodeProvisioningTime</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#max_node_provisioning_time KubernetesCluster#max_node_provisioning_time}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.maxUnreadyNodes">MaxUnreadyNodes</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#max_unready_nodes KubernetesCluster#max_unready_nodes}. |
@@ -3001,18 +3001,18 @@ new KubernetesClusterAutoScalerProfile {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownUnready">ScaleDownUnready</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#scale_down_unready KubernetesCluster#scale_down_unready}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scaleDownUtilizationThreshold">ScaleDownUtilizationThreshold</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#scale_down_utilization_threshold KubernetesCluster#scale_down_utilization_threshold}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.scanInterval">ScanInterval</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#scan_interval KubernetesCluster#scan_interval}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.skipNodesWithLocalStorage">SkipNodesWithLocalStorage</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#skip_nodes_with_local_storage KubernetesCluster#skip_nodes_with_local_storage}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.skipNodesWithSystemPods">SkipNodesWithSystemPods</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#skip_nodes_with_system_pods KubernetesCluster#skip_nodes_with_system_pods}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.skipNodesWithLocalStorage">SkipNodesWithLocalStorage</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#skip_nodes_with_local_storage KubernetesCluster#skip_nodes_with_local_storage}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.skipNodesWithSystemPods">SkipNodesWithSystemPods</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#skip_nodes_with_system_pods KubernetesCluster#skip_nodes_with_system_pods}. |
 
 ---
 
 ##### `BalanceSimilarNodeGroups`<sup>Optional</sup> <a name="BalanceSimilarNodeGroups" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.balanceSimilarNodeGroups"></a>
 
 ```csharp
-public object BalanceSimilarNodeGroups { get; set; }
+public bool|IResolvable BalanceSimilarNodeGroups { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#balance_similar_node_groups KubernetesCluster#balance_similar_node_groups}.
 
@@ -3021,10 +3021,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DaemonsetEvictionForEmptyNodesEnabled`<sup>Optional</sup> <a name="DaemonsetEvictionForEmptyNodesEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.daemonsetEvictionForEmptyNodesEnabled"></a>
 
 ```csharp
-public object DaemonsetEvictionForEmptyNodesEnabled { get; set; }
+public bool|IResolvable DaemonsetEvictionForEmptyNodesEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#daemonset_eviction_for_empty_nodes_enabled KubernetesCluster#daemonset_eviction_for_empty_nodes_enabled}.
 
@@ -3033,10 +3033,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DaemonsetEvictionForOccupiedNodesEnabled`<sup>Optional</sup> <a name="DaemonsetEvictionForOccupiedNodesEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.daemonsetEvictionForOccupiedNodesEnabled"></a>
 
 ```csharp
-public object DaemonsetEvictionForOccupiedNodesEnabled { get; set; }
+public bool|IResolvable DaemonsetEvictionForOccupiedNodesEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#daemonset_eviction_for_occupied_nodes_enabled KubernetesCluster#daemonset_eviction_for_occupied_nodes_enabled}.
 
@@ -3069,10 +3069,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `IgnoreDaemonsetsUtilizationEnabled`<sup>Optional</sup> <a name="IgnoreDaemonsetsUtilizationEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.ignoreDaemonsetsUtilizationEnabled"></a>
 
 ```csharp
-public object IgnoreDaemonsetsUtilizationEnabled { get; set; }
+public bool|IResolvable IgnoreDaemonsetsUtilizationEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#ignore_daemonsets_utilization_enabled KubernetesCluster#ignore_daemonsets_utilization_enabled}.
 
@@ -3225,10 +3225,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SkipNodesWithLocalStorage`<sup>Optional</sup> <a name="SkipNodesWithLocalStorage" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.skipNodesWithLocalStorage"></a>
 
 ```csharp
-public object SkipNodesWithLocalStorage { get; set; }
+public bool|IResolvable SkipNodesWithLocalStorage { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#skip_nodes_with_local_storage KubernetesCluster#skip_nodes_with_local_storage}.
 
@@ -3237,10 +3237,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SkipNodesWithSystemPods`<sup>Optional</sup> <a name="SkipNodesWithSystemPods" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile.property.skipNodesWithSystemPods"></a>
 
 ```csharp
-public object SkipNodesWithSystemPods { get; set; }
+public bool|IResolvable SkipNodesWithSystemPods { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#skip_nodes_with_system_pods KubernetesCluster#skip_nodes_with_system_pods}.
 
@@ -3255,7 +3255,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl {
     string[] AdminGroupObjectIds = null,
-    object AzureRbacEnabled = null,
+    bool|IResolvable AzureRbacEnabled = null,
     string TenantId = null
 };
 ```
@@ -3265,7 +3265,7 @@ new KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.adminGroupObjectIds">AdminGroupObjectIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#admin_group_object_ids KubernetesCluster#admin_group_object_ids}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.azureRbacEnabled">AzureRbacEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.azureRbacEnabled">AzureRbacEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.tenantId">TenantId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#tenant_id KubernetesCluster#tenant_id}. |
 
 ---
@@ -3285,10 +3285,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AzureRbacEnabled`<sup>Optional</sup> <a name="AzureRbacEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl.property.azureRbacEnabled"></a>
 
 ```csharp
-public object AzureRbacEnabled { get; set; }
+public bool|IResolvable AzureRbacEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#azure_rbac_enabled KubernetesCluster#azure_rbac_enabled}.
 
@@ -3360,7 +3360,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterConfidentialComputing {
-    object SgxQuoteHelperEnabled
+    bool|IResolvable SgxQuoteHelperEnabled
 };
 ```
 
@@ -3368,17 +3368,17 @@ new KubernetesClusterConfidentialComputing {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputing.property.sgxQuoteHelperEnabled">SgxQuoteHelperEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#sgx_quote_helper_enabled KubernetesCluster#sgx_quote_helper_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputing.property.sgxQuoteHelperEnabled">SgxQuoteHelperEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#sgx_quote_helper_enabled KubernetesCluster#sgx_quote_helper_enabled}. |
 
 ---
 
 ##### `SgxQuoteHelperEnabled`<sup>Required</sup> <a name="SgxQuoteHelperEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputing.property.sgxQuoteHelperEnabled"></a>
 
 ```csharp
-public object SgxQuoteHelperEnabled { get; set; }
+public bool|IResolvable SgxQuoteHelperEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#sgx_quote_helper_enabled KubernetesCluster#sgx_quote_helper_enabled}.
 
@@ -3392,13 +3392,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     KubernetesClusterDefaultNodePool DefaultNodePool,
     string Location,
     string Name,
@@ -3408,20 +3408,20 @@ new KubernetesClusterConfig {
     string AutomaticUpgradeChannel = null,
     KubernetesClusterAutoScalerProfile AutoScalerProfile = null,
     KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl AzureActiveDirectoryRoleBasedAccessControl = null,
-    object AzurePolicyEnabled = null,
+    bool|IResolvable AzurePolicyEnabled = null,
     KubernetesClusterBootstrapProfile BootstrapProfile = null,
     KubernetesClusterConfidentialComputing ConfidentialComputing = null,
-    object CostAnalysisEnabled = null,
+    bool|IResolvable CostAnalysisEnabled = null,
     string[] CustomCaTrustCertificatesBase64 = null,
     string DiskEncryptionSetId = null,
     string DnsPrefix = null,
     string DnsPrefixPrivateCluster = null,
     string EdgeZone = null,
-    object HttpApplicationRoutingEnabled = null,
+    bool|IResolvable HttpApplicationRoutingEnabled = null,
     KubernetesClusterHttpProxyConfig HttpProxyConfig = null,
     string Id = null,
     KubernetesClusterIdentity Identity = null,
-    object ImageCleanerEnabled = null,
+    bool|IResolvable ImageCleanerEnabled = null,
     double ImageCleanerIntervalHours = null,
     KubernetesClusterIngressApplicationGateway IngressApplicationGateway = null,
     KubernetesClusterKeyManagementService KeyManagementService = null,
@@ -3429,7 +3429,7 @@ new KubernetesClusterConfig {
     KubernetesClusterKubeletIdentity KubeletIdentity = null,
     string KubernetesVersion = null,
     KubernetesClusterLinuxProfile LinuxProfile = null,
-    object LocalAccountDisabled = null,
+    bool|IResolvable LocalAccountDisabled = null,
     KubernetesClusterMaintenanceWindow MaintenanceWindow = null,
     KubernetesClusterMaintenanceWindowAutoUpgrade MaintenanceWindowAutoUpgrade = null,
     KubernetesClusterMaintenanceWindowNodeOs MaintenanceWindowNodeOs = null,
@@ -3438,14 +3438,14 @@ new KubernetesClusterConfig {
     KubernetesClusterNetworkProfile NetworkProfile = null,
     string NodeOsUpgradeChannel = null,
     string NodeResourceGroup = null,
-    object OidcIssuerEnabled = null,
+    bool|IResolvable OidcIssuerEnabled = null,
     KubernetesClusterOmsAgent OmsAgent = null,
-    object OpenServiceMeshEnabled = null,
-    object PrivateClusterEnabled = null,
-    object PrivateClusterPublicFqdnEnabled = null,
+    bool|IResolvable OpenServiceMeshEnabled = null,
+    bool|IResolvable PrivateClusterEnabled = null,
+    bool|IResolvable PrivateClusterPublicFqdnEnabled = null,
     string PrivateDnsZoneId = null,
-    object RoleBasedAccessControlEnabled = null,
-    object RunCommandEnabled = null,
+    bool|IResolvable RoleBasedAccessControlEnabled = null,
+    bool|IResolvable RunCommandEnabled = null,
     KubernetesClusterServiceMeshProfile ServiceMeshProfile = null,
     KubernetesClusterServicePrincipal ServicePrincipal = null,
     string SkuTier = null,
@@ -3457,7 +3457,7 @@ new KubernetesClusterConfig {
     KubernetesClusterWebAppRouting WebAppRouting = null,
     KubernetesClusterWindowsProfile WindowsProfile = null,
     KubernetesClusterWorkloadAutoscalerProfile WorkloadAutoscalerProfile = null,
-    object WorkloadIdentityEnabled = null
+    bool|IResolvable WorkloadIdentityEnabled = null
 };
 ```
 
@@ -3465,13 +3465,13 @@ new KubernetesClusterConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.defaultNodePool">DefaultNodePool</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool">KubernetesClusterDefaultNodePool</a></code> | default_node_pool block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#location KubernetesCluster#location}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}. |
@@ -3481,20 +3481,20 @@ new KubernetesClusterConfig {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.automaticUpgradeChannel">AutomaticUpgradeChannel</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#automatic_upgrade_channel KubernetesCluster#automatic_upgrade_channel}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.autoScalerProfile">AutoScalerProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile">KubernetesClusterAutoScalerProfile</a></code> | auto_scaler_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.azureActiveDirectoryRoleBasedAccessControl">AzureActiveDirectoryRoleBasedAccessControl</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl">KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl</a></code> | azure_active_directory_role_based_access_control block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.azurePolicyEnabled">AzurePolicyEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#azure_policy_enabled KubernetesCluster#azure_policy_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.azurePolicyEnabled">AzurePolicyEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#azure_policy_enabled KubernetesCluster#azure_policy_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.bootstrapProfile">BootstrapProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterBootstrapProfile">KubernetesClusterBootstrapProfile</a></code> | bootstrap_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.confidentialComputing">ConfidentialComputing</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputing">KubernetesClusterConfidentialComputing</a></code> | confidential_computing block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.costAnalysisEnabled">CostAnalysisEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#cost_analysis_enabled KubernetesCluster#cost_analysis_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.costAnalysisEnabled">CostAnalysisEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#cost_analysis_enabled KubernetesCluster#cost_analysis_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.customCaTrustCertificatesBase64">CustomCaTrustCertificatesBase64</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#custom_ca_trust_certificates_base64 KubernetesCluster#custom_ca_trust_certificates_base64}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.diskEncryptionSetId">DiskEncryptionSetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#disk_encryption_set_id KubernetesCluster#disk_encryption_set_id}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.dnsPrefix">DnsPrefix</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#dns_prefix KubernetesCluster#dns_prefix}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.dnsPrefixPrivateCluster">DnsPrefixPrivateCluster</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#dns_prefix_private_cluster KubernetesCluster#dns_prefix_private_cluster}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.edgeZone">EdgeZone</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#edge_zone KubernetesCluster#edge_zone}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.httpApplicationRoutingEnabled">HttpApplicationRoutingEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#http_application_routing_enabled KubernetesCluster#http_application_routing_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.httpApplicationRoutingEnabled">HttpApplicationRoutingEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#http_application_routing_enabled KubernetesCluster#http_application_routing_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.httpProxyConfig">HttpProxyConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterHttpProxyConfig">KubernetesClusterHttpProxyConfig</a></code> | http_proxy_config block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#id KubernetesCluster#id}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIdentity">KubernetesClusterIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.imageCleanerEnabled">ImageCleanerEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#image_cleaner_enabled KubernetesCluster#image_cleaner_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.imageCleanerEnabled">ImageCleanerEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#image_cleaner_enabled KubernetesCluster#image_cleaner_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.imageCleanerIntervalHours">ImageCleanerIntervalHours</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#image_cleaner_interval_hours KubernetesCluster#image_cleaner_interval_hours}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.ingressApplicationGateway">IngressApplicationGateway</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterIngressApplicationGateway">KubernetesClusterIngressApplicationGateway</a></code> | ingress_application_gateway block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.keyManagementService">KeyManagementService</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyManagementService">KubernetesClusterKeyManagementService</a></code> | key_management_service block. |
@@ -3502,7 +3502,7 @@ new KubernetesClusterConfig {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.kubeletIdentity">KubeletIdentity</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKubeletIdentity">KubernetesClusterKubeletIdentity</a></code> | kubelet_identity block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.kubernetesVersion">KubernetesVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#kubernetes_version KubernetesCluster#kubernetes_version}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.linuxProfile">LinuxProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterLinuxProfile">KubernetesClusterLinuxProfile</a></code> | linux_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.localAccountDisabled">LocalAccountDisabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#local_account_disabled KubernetesCluster#local_account_disabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.localAccountDisabled">LocalAccountDisabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#local_account_disabled KubernetesCluster#local_account_disabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.maintenanceWindow">MaintenanceWindow</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindow">KubernetesClusterMaintenanceWindow</a></code> | maintenance_window block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.maintenanceWindowAutoUpgrade">MaintenanceWindowAutoUpgrade</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade">KubernetesClusterMaintenanceWindowAutoUpgrade</a></code> | maintenance_window_auto_upgrade block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.maintenanceWindowNodeOs">MaintenanceWindowNodeOs</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs">KubernetesClusterMaintenanceWindowNodeOs</a></code> | maintenance_window_node_os block. |
@@ -3511,14 +3511,14 @@ new KubernetesClusterConfig {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.networkProfile">NetworkProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfile">KubernetesClusterNetworkProfile</a></code> | network_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.nodeOsUpgradeChannel">NodeOsUpgradeChannel</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#node_os_upgrade_channel KubernetesCluster#node_os_upgrade_channel}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.nodeResourceGroup">NodeResourceGroup</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#node_resource_group KubernetesCluster#node_resource_group}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.oidcIssuerEnabled">OidcIssuerEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#oidc_issuer_enabled KubernetesCluster#oidc_issuer_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.oidcIssuerEnabled">OidcIssuerEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#oidc_issuer_enabled KubernetesCluster#oidc_issuer_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.omsAgent">OmsAgent</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent">KubernetesClusterOmsAgent</a></code> | oms_agent block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.openServiceMeshEnabled">OpenServiceMeshEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#open_service_mesh_enabled KubernetesCluster#open_service_mesh_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateClusterEnabled">PrivateClusterEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#private_cluster_enabled KubernetesCluster#private_cluster_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateClusterPublicFqdnEnabled">PrivateClusterPublicFqdnEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#private_cluster_public_fqdn_enabled KubernetesCluster#private_cluster_public_fqdn_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.openServiceMeshEnabled">OpenServiceMeshEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#open_service_mesh_enabled KubernetesCluster#open_service_mesh_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateClusterEnabled">PrivateClusterEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#private_cluster_enabled KubernetesCluster#private_cluster_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateClusterPublicFqdnEnabled">PrivateClusterPublicFqdnEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#private_cluster_public_fqdn_enabled KubernetesCluster#private_cluster_public_fqdn_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateDnsZoneId">PrivateDnsZoneId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#private_dns_zone_id KubernetesCluster#private_dns_zone_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.roleBasedAccessControlEnabled">RoleBasedAccessControlEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#role_based_access_control_enabled KubernetesCluster#role_based_access_control_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.runCommandEnabled">RunCommandEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#run_command_enabled KubernetesCluster#run_command_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.roleBasedAccessControlEnabled">RoleBasedAccessControlEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#role_based_access_control_enabled KubernetesCluster#role_based_access_control_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.runCommandEnabled">RunCommandEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#run_command_enabled KubernetesCluster#run_command_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.serviceMeshProfile">ServiceMeshProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile">KubernetesClusterServiceMeshProfile</a></code> | service_mesh_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.servicePrincipal">ServicePrincipal</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServicePrincipal">KubernetesClusterServicePrincipal</a></code> | service_principal block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.skuTier">SkuTier</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#sku_tier KubernetesCluster#sku_tier}. |
@@ -3530,27 +3530,27 @@ new KubernetesClusterConfig {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.webAppRouting">WebAppRouting</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWebAppRouting">KubernetesClusterWebAppRouting</a></code> | web_app_routing block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.windowsProfile">WindowsProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWindowsProfile">KubernetesClusterWindowsProfile</a></code> | windows_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.workloadAutoscalerProfile">WorkloadAutoscalerProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile">KubernetesClusterWorkloadAutoscalerProfile</a></code> | workload_autoscaler_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.workloadIdentityEnabled">WorkloadIdentityEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#workload_identity_enabled KubernetesCluster#workload_identity_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.workloadIdentityEnabled">WorkloadIdentityEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#workload_identity_enabled KubernetesCluster#workload_identity_enabled}. |
 
 ---
 
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -3597,10 +3597,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -3725,10 +3725,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AzurePolicyEnabled`<sup>Optional</sup> <a name="AzurePolicyEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.azurePolicyEnabled"></a>
 
 ```csharp
-public object AzurePolicyEnabled { get; set; }
+public bool|IResolvable AzurePolicyEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#azure_policy_enabled KubernetesCluster#azure_policy_enabled}.
 
@@ -3765,10 +3765,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `CostAnalysisEnabled`<sup>Optional</sup> <a name="CostAnalysisEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.costAnalysisEnabled"></a>
 
 ```csharp
-public object CostAnalysisEnabled { get; set; }
+public bool|IResolvable CostAnalysisEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#cost_analysis_enabled KubernetesCluster#cost_analysis_enabled}.
 
@@ -3837,10 +3837,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `HttpApplicationRoutingEnabled`<sup>Optional</sup> <a name="HttpApplicationRoutingEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.httpApplicationRoutingEnabled"></a>
 
 ```csharp
-public object HttpApplicationRoutingEnabled { get; set; }
+public bool|IResolvable HttpApplicationRoutingEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#http_application_routing_enabled KubernetesCluster#http_application_routing_enabled}.
 
@@ -3892,10 +3892,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ImageCleanerEnabled`<sup>Optional</sup> <a name="ImageCleanerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.imageCleanerEnabled"></a>
 
 ```csharp
-public object ImageCleanerEnabled { get; set; }
+public bool|IResolvable ImageCleanerEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#image_cleaner_enabled KubernetesCluster#image_cleaner_enabled}.
 
@@ -3998,10 +3998,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `LocalAccountDisabled`<sup>Optional</sup> <a name="LocalAccountDisabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.localAccountDisabled"></a>
 
 ```csharp
-public object LocalAccountDisabled { get; set; }
+public bool|IResolvable LocalAccountDisabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#local_account_disabled KubernetesCluster#local_account_disabled}.
 
@@ -4118,10 +4118,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OidcIssuerEnabled`<sup>Optional</sup> <a name="OidcIssuerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.oidcIssuerEnabled"></a>
 
 ```csharp
-public object OidcIssuerEnabled { get; set; }
+public bool|IResolvable OidcIssuerEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#oidc_issuer_enabled KubernetesCluster#oidc_issuer_enabled}.
 
@@ -4144,10 +4144,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OpenServiceMeshEnabled`<sup>Optional</sup> <a name="OpenServiceMeshEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.openServiceMeshEnabled"></a>
 
 ```csharp
-public object OpenServiceMeshEnabled { get; set; }
+public bool|IResolvable OpenServiceMeshEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#open_service_mesh_enabled KubernetesCluster#open_service_mesh_enabled}.
 
@@ -4156,10 +4156,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PrivateClusterEnabled`<sup>Optional</sup> <a name="PrivateClusterEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateClusterEnabled"></a>
 
 ```csharp
-public object PrivateClusterEnabled { get; set; }
+public bool|IResolvable PrivateClusterEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#private_cluster_enabled KubernetesCluster#private_cluster_enabled}.
 
@@ -4168,10 +4168,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PrivateClusterPublicFqdnEnabled`<sup>Optional</sup> <a name="PrivateClusterPublicFqdnEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.privateClusterPublicFqdnEnabled"></a>
 
 ```csharp
-public object PrivateClusterPublicFqdnEnabled { get; set; }
+public bool|IResolvable PrivateClusterPublicFqdnEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#private_cluster_public_fqdn_enabled KubernetesCluster#private_cluster_public_fqdn_enabled}.
 
@@ -4192,10 +4192,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RoleBasedAccessControlEnabled`<sup>Optional</sup> <a name="RoleBasedAccessControlEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.roleBasedAccessControlEnabled"></a>
 
 ```csharp
-public object RoleBasedAccessControlEnabled { get; set; }
+public bool|IResolvable RoleBasedAccessControlEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#role_based_access_control_enabled KubernetesCluster#role_based_access_control_enabled}.
 
@@ -4204,10 +4204,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RunCommandEnabled`<sup>Optional</sup> <a name="RunCommandEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.runCommandEnabled"></a>
 
 ```csharp
-public object RunCommandEnabled { get; set; }
+public bool|IResolvable RunCommandEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#run_command_enabled KubernetesCluster#run_command_enabled}.
 
@@ -4364,10 +4364,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `WorkloadIdentityEnabled`<sup>Optional</sup> <a name="WorkloadIdentityEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfig.property.workloadIdentityEnabled"></a>
 
 ```csharp
-public object WorkloadIdentityEnabled { get; set; }
+public bool|IResolvable WorkloadIdentityEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#workload_identity_enabled KubernetesCluster#workload_identity_enabled}.
 
@@ -4382,12 +4382,12 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterDefaultNodePool {
     string Name,
-    object AutoScalingEnabled = null,
+    bool|IResolvable AutoScalingEnabled = null,
     string CapacityReservationGroupId = null,
-    object FipsEnabled = null,
+    bool|IResolvable FipsEnabled = null,
     string GpuDriver = null,
     string GpuInstance = null,
-    object HostEncryptionEnabled = null,
+    bool|IResolvable HostEncryptionEnabled = null,
     string HostGroupId = null,
     KubernetesClusterDefaultNodePoolKubeletConfig KubeletConfig = null,
     string KubeletDiskType = null,
@@ -4398,9 +4398,9 @@ new KubernetesClusterDefaultNodePool {
     double NodeCount = null,
     System.Collections.Generic.IDictionary<string, string> NodeLabels = null,
     KubernetesClusterDefaultNodePoolNodeNetworkProfile NodeNetworkProfile = null,
-    object NodePublicIpEnabled = null,
+    bool|IResolvable NodePublicIpEnabled = null,
     string NodePublicIpPrefixId = null,
-    object OnlyCriticalAddonsEnabled = null,
+    bool|IResolvable OnlyCriticalAddonsEnabled = null,
     string OrchestratorVersion = null,
     double OsDiskSizeGb = null,
     string OsDiskType = null,
@@ -4412,7 +4412,7 @@ new KubernetesClusterDefaultNodePool {
     System.Collections.Generic.IDictionary<string, string> Tags = null,
     string TemporaryNameForRotation = null,
     string Type = null,
-    object UltraSsdEnabled = null,
+    bool|IResolvable UltraSsdEnabled = null,
     KubernetesClusterDefaultNodePoolUpgradeSettings UpgradeSettings = null,
     string VmSize = null,
     string VnetSubnetId = null,
@@ -4426,12 +4426,12 @@ new KubernetesClusterDefaultNodePool {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#name KubernetesCluster#name}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.autoScalingEnabled">AutoScalingEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#auto_scaling_enabled KubernetesCluster#auto_scaling_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.autoScalingEnabled">AutoScalingEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#auto_scaling_enabled KubernetesCluster#auto_scaling_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.capacityReservationGroupId">CapacityReservationGroupId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#capacity_reservation_group_id KubernetesCluster#capacity_reservation_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.fipsEnabled">FipsEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#fips_enabled KubernetesCluster#fips_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.fipsEnabled">FipsEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#fips_enabled KubernetesCluster#fips_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.gpuDriver">GpuDriver</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#gpu_driver KubernetesCluster#gpu_driver}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.gpuInstance">GpuInstance</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#gpu_instance KubernetesCluster#gpu_instance}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.hostEncryptionEnabled">HostEncryptionEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#host_encryption_enabled KubernetesCluster#host_encryption_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.hostEncryptionEnabled">HostEncryptionEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#host_encryption_enabled KubernetesCluster#host_encryption_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.hostGroupId">HostGroupId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#host_group_id KubernetesCluster#host_group_id}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.kubeletConfig">KubeletConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig">KubernetesClusterDefaultNodePoolKubeletConfig</a></code> | kubelet_config block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.kubeletDiskType">KubeletDiskType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#kubelet_disk_type KubernetesCluster#kubelet_disk_type}. |
@@ -4442,9 +4442,9 @@ new KubernetesClusterDefaultNodePool {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodeCount">NodeCount</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#node_count KubernetesCluster#node_count}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodeLabels">NodeLabels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#node_labels KubernetesCluster#node_labels}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodeNetworkProfile">NodeNetworkProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfile">KubernetesClusterDefaultNodePoolNodeNetworkProfile</a></code> | node_network_profile block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodePublicIpEnabled">NodePublicIpEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#node_public_ip_enabled KubernetesCluster#node_public_ip_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodePublicIpEnabled">NodePublicIpEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#node_public_ip_enabled KubernetesCluster#node_public_ip_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodePublicIpPrefixId">NodePublicIpPrefixId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#node_public_ip_prefix_id KubernetesCluster#node_public_ip_prefix_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.onlyCriticalAddonsEnabled">OnlyCriticalAddonsEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#only_critical_addons_enabled KubernetesCluster#only_critical_addons_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.onlyCriticalAddonsEnabled">OnlyCriticalAddonsEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#only_critical_addons_enabled KubernetesCluster#only_critical_addons_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.orchestratorVersion">OrchestratorVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#orchestrator_version KubernetesCluster#orchestrator_version}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.osDiskSizeGb">OsDiskSizeGb</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#os_disk_size_gb KubernetesCluster#os_disk_size_gb}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.osDiskType">OsDiskType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#os_disk_type KubernetesCluster#os_disk_type}. |
@@ -4456,7 +4456,7 @@ new KubernetesClusterDefaultNodePool {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#tags KubernetesCluster#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.temporaryNameForRotation">TemporaryNameForRotation</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#temporary_name_for_rotation KubernetesCluster#temporary_name_for_rotation}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#type KubernetesCluster#type}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.ultraSsdEnabled">UltraSsdEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.ultraSsdEnabled">UltraSsdEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.upgradeSettings">UpgradeSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolUpgradeSettings">KubernetesClusterDefaultNodePoolUpgradeSettings</a></code> | upgrade_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.vmSize">VmSize</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#vm_size KubernetesCluster#vm_size}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.vnetSubnetId">VnetSubnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#vnet_subnet_id KubernetesCluster#vnet_subnet_id}. |
@@ -4480,10 +4480,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AutoScalingEnabled`<sup>Optional</sup> <a name="AutoScalingEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.autoScalingEnabled"></a>
 
 ```csharp
-public object AutoScalingEnabled { get; set; }
+public bool|IResolvable AutoScalingEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#auto_scaling_enabled KubernetesCluster#auto_scaling_enabled}.
 
@@ -4504,10 +4504,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `FipsEnabled`<sup>Optional</sup> <a name="FipsEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.fipsEnabled"></a>
 
 ```csharp
-public object FipsEnabled { get; set; }
+public bool|IResolvable FipsEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#fips_enabled KubernetesCluster#fips_enabled}.
 
@@ -4540,10 +4540,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `HostEncryptionEnabled`<sup>Optional</sup> <a name="HostEncryptionEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.hostEncryptionEnabled"></a>
 
 ```csharp
-public object HostEncryptionEnabled { get; set; }
+public bool|IResolvable HostEncryptionEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#host_encryption_enabled KubernetesCluster#host_encryption_enabled}.
 
@@ -4678,10 +4678,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NodePublicIpEnabled`<sup>Optional</sup> <a name="NodePublicIpEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.nodePublicIpEnabled"></a>
 
 ```csharp
-public object NodePublicIpEnabled { get; set; }
+public bool|IResolvable NodePublicIpEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#node_public_ip_enabled KubernetesCluster#node_public_ip_enabled}.
 
@@ -4702,10 +4702,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `OnlyCriticalAddonsEnabled`<sup>Optional</sup> <a name="OnlyCriticalAddonsEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.onlyCriticalAddonsEnabled"></a>
 
 ```csharp
-public object OnlyCriticalAddonsEnabled { get; set; }
+public bool|IResolvable OnlyCriticalAddonsEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#only_critical_addons_enabled KubernetesCluster#only_critical_addons_enabled}.
 
@@ -4846,10 +4846,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `UltraSsdEnabled`<sup>Optional</sup> <a name="UltraSsdEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePool.property.ultraSsdEnabled"></a>
 
 ```csharp
-public object UltraSsdEnabled { get; set; }
+public bool|IResolvable UltraSsdEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#ultra_ssd_enabled KubernetesCluster#ultra_ssd_enabled}.
 
@@ -4928,7 +4928,7 @@ new KubernetesClusterDefaultNodePoolKubeletConfig {
     string[] AllowedUnsafeSysctls = null,
     double ContainerLogMaxLine = null,
     double ContainerLogMaxSizeMb = null,
-    object CpuCfsQuotaEnabled = null,
+    bool|IResolvable CpuCfsQuotaEnabled = null,
     string CpuCfsQuotaPeriod = null,
     string CpuManagerPolicy = null,
     double ImageGcHighThreshold = null,
@@ -4945,7 +4945,7 @@ new KubernetesClusterDefaultNodePoolKubeletConfig {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.allowedUnsafeSysctls">AllowedUnsafeSysctls</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#allowed_unsafe_sysctls KubernetesCluster#allowed_unsafe_sysctls}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.containerLogMaxLine">ContainerLogMaxLine</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#container_log_max_line KubernetesCluster#container_log_max_line}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.containerLogMaxSizeMb">ContainerLogMaxSizeMb</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#container_log_max_size_mb KubernetesCluster#container_log_max_size_mb}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.cpuCfsQuotaEnabled">CpuCfsQuotaEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_enabled KubernetesCluster#cpu_cfs_quota_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.cpuCfsQuotaEnabled">CpuCfsQuotaEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_enabled KubernetesCluster#cpu_cfs_quota_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.cpuCfsQuotaPeriod">CpuCfsQuotaPeriod</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_period KubernetesCluster#cpu_cfs_quota_period}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.cpuManagerPolicy">CpuManagerPolicy</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#cpu_manager_policy KubernetesCluster#cpu_manager_policy}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.imageGcHighThreshold">ImageGcHighThreshold</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#image_gc_high_threshold KubernetesCluster#image_gc_high_threshold}. |
@@ -4994,10 +4994,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `CpuCfsQuotaEnabled`<sup>Optional</sup> <a name="CpuCfsQuotaEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig.property.cpuCfsQuotaEnabled"></a>
 
 ```csharp
-public object CpuCfsQuotaEnabled { get; set; }
+public bool|IResolvable CpuCfsQuotaEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#cpu_cfs_quota_enabled KubernetesCluster#cpu_cfs_quota_enabled}.
 
@@ -5196,7 +5196,7 @@ new KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig {
     double NetIpv4TcpKeepaliveTime = null,
     double NetIpv4TcpMaxSynBacklog = null,
     double NetIpv4TcpMaxTwBuckets = null,
-    object NetIpv4TcpTwReuse = null,
+    bool|IResolvable NetIpv4TcpTwReuse = null,
     double NetNetfilterNfConntrackBuckets = null,
     double NetNetfilterNfConntrackMax = null,
     double VmMaxMapCount = null,
@@ -5232,7 +5232,7 @@ new KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpKeepaliveTime">NetIpv4TcpKeepaliveTime</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_keepalive_time KubernetesCluster#net_ipv4_tcp_keepalive_time}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpMaxSynBacklog">NetIpv4TcpMaxSynBacklog</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_syn_backlog KubernetesCluster#net_ipv4_tcp_max_syn_backlog}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpMaxTwBuckets">NetIpv4TcpMaxTwBuckets</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_max_tw_buckets KubernetesCluster#net_ipv4_tcp_max_tw_buckets}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpTwReuse">NetIpv4TcpTwReuse</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_tw_reuse KubernetesCluster#net_ipv4_tcp_tw_reuse}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpTwReuse">NetIpv4TcpTwReuse</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_tw_reuse KubernetesCluster#net_ipv4_tcp_tw_reuse}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netNetfilterNfConntrackBuckets">NetNetfilterNfConntrackBuckets</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_buckets KubernetesCluster#net_netfilter_nf_conntrack_buckets}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netNetfilterNfConntrackMax">NetNetfilterNfConntrackMax</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#net_netfilter_nf_conntrack_max KubernetesCluster#net_netfilter_nf_conntrack_max}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.vmMaxMapCount">VmMaxMapCount</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#vm_max_map_count KubernetesCluster#vm_max_map_count}. |
@@ -5520,10 +5520,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NetIpv4TcpTwReuse`<sup>Optional</sup> <a name="NetIpv4TcpTwReuse" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfig.property.netIpv4TcpTwReuse"></a>
 
 ```csharp
-public object NetIpv4TcpTwReuse { get; set; }
+public bool|IResolvable NetIpv4TcpTwReuse { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#net_ipv4_tcp_tw_reuse KubernetesCluster#net_ipv4_tcp_tw_reuse}.
 
@@ -5597,7 +5597,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterDefaultNodePoolNodeNetworkProfile {
-    object AllowedHostPorts = null,
+    IResolvable|KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts[] AllowedHostPorts = null,
     string[] ApplicationSecurityGroupIds = null,
     System.Collections.Generic.IDictionary<string, string> NodePublicIpTags = null
 };
@@ -5607,7 +5607,7 @@ new KubernetesClusterDefaultNodePoolNodeNetworkProfile {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfile.property.allowedHostPorts">AllowedHostPorts</a></code> | <code>object</code> | allowed_host_ports block. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfile.property.allowedHostPorts">AllowedHostPorts</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts">KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts</a>[]</code> | allowed_host_ports block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfile.property.applicationSecurityGroupIds">ApplicationSecurityGroupIds</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#application_security_group_ids KubernetesCluster#application_security_group_ids}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfile.property.nodePublicIpTags">NodePublicIpTags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#node_public_ip_tags KubernetesCluster#node_public_ip_tags}. |
 
@@ -5616,10 +5616,10 @@ new KubernetesClusterDefaultNodePoolNodeNetworkProfile {
 ##### `AllowedHostPorts`<sup>Optional</sup> <a name="AllowedHostPorts" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfile.property.allowedHostPorts"></a>
 
 ```csharp
-public object AllowedHostPorts { get; set; }
+public IResolvable|KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts[] AllowedHostPorts { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts">KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts</a>[]
 
 allowed_host_ports block.
 
@@ -6032,7 +6032,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterKeyVaultSecretsProvider {
-    object SecretRotationEnabled = null,
+    bool|IResolvable SecretRotationEnabled = null,
     string SecretRotationInterval = null
 };
 ```
@@ -6041,7 +6041,7 @@ new KubernetesClusterKeyVaultSecretsProvider {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProvider.property.secretRotationEnabled">SecretRotationEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#secret_rotation_enabled KubernetesCluster#secret_rotation_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProvider.property.secretRotationEnabled">SecretRotationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#secret_rotation_enabled KubernetesCluster#secret_rotation_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProvider.property.secretRotationInterval">SecretRotationInterval</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#secret_rotation_interval KubernetesCluster#secret_rotation_interval}. |
 
 ---
@@ -6049,10 +6049,10 @@ new KubernetesClusterKeyVaultSecretsProvider {
 ##### `SecretRotationEnabled`<sup>Optional</sup> <a name="SecretRotationEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProvider.property.secretRotationEnabled"></a>
 
 ```csharp
-public object SecretRotationEnabled { get; set; }
+public bool|IResolvable SecretRotationEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#secret_rotation_enabled KubernetesCluster#secret_rotation_enabled}.
 
@@ -6257,8 +6257,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterMaintenanceWindow {
-    object Allowed = null,
-    object NotAllowed = null
+    IResolvable|KubernetesClusterMaintenanceWindowAllowed[] Allowed = null,
+    IResolvable|KubernetesClusterMaintenanceWindowNotAllowed[] NotAllowed = null
 };
 ```
 
@@ -6266,18 +6266,18 @@ new KubernetesClusterMaintenanceWindow {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindow.property.allowed">Allowed</a></code> | <code>object</code> | allowed block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindow.property.notAllowed">NotAllowed</a></code> | <code>object</code> | not_allowed block. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindow.property.allowed">Allowed</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>[]</code> | allowed block. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindow.property.notAllowed">NotAllowed</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>[]</code> | not_allowed block. |
 
 ---
 
 ##### `Allowed`<sup>Optional</sup> <a name="Allowed" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindow.property.allowed"></a>
 
 ```csharp
-public object Allowed { get; set; }
+public IResolvable|KubernetesClusterMaintenanceWindowAllowed[] Allowed { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>[]
 
 allowed block.
 
@@ -6288,10 +6288,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NotAllowed`<sup>Optional</sup> <a name="NotAllowed" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindow.property.notAllowed"></a>
 
 ```csharp
-public object NotAllowed { get; set; }
+public IResolvable|KubernetesClusterMaintenanceWindowNotAllowed[] NotAllowed { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>[]
 
 not_allowed block.
 
@@ -6358,7 +6358,7 @@ new KubernetesClusterMaintenanceWindowAutoUpgrade {
     double Interval,
     double DayOfMonth = null,
     string DayOfWeek = null,
-    object NotAllowed = null,
+    IResolvable|KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed[] NotAllowed = null,
     string StartDate = null,
     string StartTime = null,
     string UtcOffset = null,
@@ -6375,7 +6375,7 @@ new KubernetesClusterMaintenanceWindowAutoUpgrade {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.interval">Interval</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.dayOfMonth">DayOfMonth</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.dayOfWeek">DayOfWeek</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.notAllowed">NotAllowed</a></code> | <code>object</code> | not_allowed block. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.notAllowed">NotAllowed</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed">KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed</a>[]</code> | not_allowed block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.startDate">StartDate</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.startTime">StartTime</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.utcOffset">UtcOffset</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}. |
@@ -6446,10 +6446,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NotAllowed`<sup>Optional</sup> <a name="NotAllowed" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgrade.property.notAllowed"></a>
 
 ```csharp
-public object NotAllowed { get; set; }
+public IResolvable|KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed[] NotAllowed { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed">KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed</a>[]
 
 not_allowed block.
 
@@ -6564,7 +6564,7 @@ new KubernetesClusterMaintenanceWindowNodeOs {
     double Interval,
     double DayOfMonth = null,
     string DayOfWeek = null,
-    object NotAllowed = null,
+    IResolvable|KubernetesClusterMaintenanceWindowNodeOsNotAllowed[] NotAllowed = null,
     string StartDate = null,
     string StartTime = null,
     string UtcOffset = null,
@@ -6581,7 +6581,7 @@ new KubernetesClusterMaintenanceWindowNodeOs {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.interval">Interval</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#interval KubernetesCluster#interval}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.dayOfMonth">DayOfMonth</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#day_of_month KubernetesCluster#day_of_month}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.dayOfWeek">DayOfWeek</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#day_of_week KubernetesCluster#day_of_week}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.notAllowed">NotAllowed</a></code> | <code>object</code> | not_allowed block. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.notAllowed">NotAllowed</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed">KubernetesClusterMaintenanceWindowNodeOsNotAllowed</a>[]</code> | not_allowed block. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.startDate">StartDate</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#start_date KubernetesCluster#start_date}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.startTime">StartTime</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#start_time KubernetesCluster#start_time}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.utcOffset">UtcOffset</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#utc_offset KubernetesCluster#utc_offset}. |
@@ -6652,10 +6652,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NotAllowed`<sup>Optional</sup> <a name="NotAllowed" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOs.property.notAllowed"></a>
 
 ```csharp
-public object NotAllowed { get; set; }
+public IResolvable|KubernetesClusterMaintenanceWindowNodeOsNotAllowed[] NotAllowed { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed">KubernetesClusterMaintenanceWindowNodeOsNotAllowed</a>[]
 
 not_allowed block.
 
@@ -7137,8 +7137,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterNetworkProfileAdvancedNetworking {
-    object ObservabilityEnabled = null,
-    object SecurityEnabled = null
+    bool|IResolvable ObservabilityEnabled = null,
+    bool|IResolvable SecurityEnabled = null
 };
 ```
 
@@ -7146,18 +7146,18 @@ new KubernetesClusterNetworkProfileAdvancedNetworking {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworking.property.observabilityEnabled">ObservabilityEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#observability_enabled KubernetesCluster#observability_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworking.property.securityEnabled">SecurityEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#security_enabled KubernetesCluster#security_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworking.property.observabilityEnabled">ObservabilityEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#observability_enabled KubernetesCluster#observability_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworking.property.securityEnabled">SecurityEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#security_enabled KubernetesCluster#security_enabled}. |
 
 ---
 
 ##### `ObservabilityEnabled`<sup>Optional</sup> <a name="ObservabilityEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworking.property.observabilityEnabled"></a>
 
 ```csharp
-public object ObservabilityEnabled { get; set; }
+public bool|IResolvable ObservabilityEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#observability_enabled KubernetesCluster#observability_enabled}.
 
@@ -7166,10 +7166,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SecurityEnabled`<sup>Optional</sup> <a name="SecurityEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworking.property.securityEnabled"></a>
 
 ```csharp
-public object SecurityEnabled { get; set; }
+public bool|IResolvable SecurityEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#security_enabled KubernetesCluster#security_enabled}.
 
@@ -7346,7 +7346,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterOmsAgent {
     string LogAnalyticsWorkspaceId,
-    object MsiAuthForMonitoringEnabled = null
+    bool|IResolvable MsiAuthForMonitoringEnabled = null
 };
 ```
 
@@ -7355,7 +7355,7 @@ new KubernetesClusterOmsAgent {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#log_analytics_workspace_id KubernetesCluster#log_analytics_workspace_id}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.msiAuthForMonitoringEnabled">MsiAuthForMonitoringEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.msiAuthForMonitoringEnabled">MsiAuthForMonitoringEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}. |
 
 ---
 
@@ -7374,10 +7374,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `MsiAuthForMonitoringEnabled`<sup>Optional</sup> <a name="MsiAuthForMonitoringEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent.property.msiAuthForMonitoringEnabled"></a>
 
 ```csharp
-public object MsiAuthForMonitoringEnabled { get; set; }
+public bool|IResolvable MsiAuthForMonitoringEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#msi_auth_for_monitoring_enabled KubernetesCluster#msi_auth_for_monitoring_enabled}.
 
@@ -7407,8 +7407,8 @@ new KubernetesClusterServiceMeshProfile {
     string Mode,
     string[] Revisions,
     KubernetesClusterServiceMeshProfileCertificateAuthority CertificateAuthority = null,
-    object ExternalIngressGatewayEnabled = null,
-    object InternalIngressGatewayEnabled = null
+    bool|IResolvable ExternalIngressGatewayEnabled = null,
+    bool|IResolvable InternalIngressGatewayEnabled = null
 };
 ```
 
@@ -7419,8 +7419,8 @@ new KubernetesClusterServiceMeshProfile {
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.mode">Mode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#mode KubernetesCluster#mode}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.revisions">Revisions</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#revisions KubernetesCluster#revisions}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.certificateAuthority">CertificateAuthority</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileCertificateAuthority">KubernetesClusterServiceMeshProfileCertificateAuthority</a></code> | certificate_authority block. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.externalIngressGatewayEnabled">ExternalIngressGatewayEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#external_ingress_gateway_enabled KubernetesCluster#external_ingress_gateway_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.internalIngressGatewayEnabled">InternalIngressGatewayEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#internal_ingress_gateway_enabled KubernetesCluster#internal_ingress_gateway_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.externalIngressGatewayEnabled">ExternalIngressGatewayEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#external_ingress_gateway_enabled KubernetesCluster#external_ingress_gateway_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.internalIngressGatewayEnabled">InternalIngressGatewayEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#internal_ingress_gateway_enabled KubernetesCluster#internal_ingress_gateway_enabled}. |
 
 ---
 
@@ -7465,10 +7465,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ExternalIngressGatewayEnabled`<sup>Optional</sup> <a name="ExternalIngressGatewayEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.externalIngressGatewayEnabled"></a>
 
 ```csharp
-public object ExternalIngressGatewayEnabled { get; set; }
+public bool|IResolvable ExternalIngressGatewayEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#external_ingress_gateway_enabled KubernetesCluster#external_ingress_gateway_enabled}.
 
@@ -7477,10 +7477,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `InternalIngressGatewayEnabled`<sup>Optional</sup> <a name="InternalIngressGatewayEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile.property.internalIngressGatewayEnabled"></a>
 
 ```csharp
-public object InternalIngressGatewayEnabled { get; set; }
+public bool|IResolvable InternalIngressGatewayEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#internal_ingress_gateway_enabled KubernetesCluster#internal_ingress_gateway_enabled}.
 
@@ -7628,10 +7628,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterStorageProfile {
-    object BlobDriverEnabled = null,
-    object DiskDriverEnabled = null,
-    object FileDriverEnabled = null,
-    object SnapshotControllerEnabled = null
+    bool|IResolvable BlobDriverEnabled = null,
+    bool|IResolvable DiskDriverEnabled = null,
+    bool|IResolvable FileDriverEnabled = null,
+    bool|IResolvable SnapshotControllerEnabled = null
 };
 ```
 
@@ -7639,20 +7639,20 @@ new KubernetesClusterStorageProfile {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.blobDriverEnabled">BlobDriverEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#blob_driver_enabled KubernetesCluster#blob_driver_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.diskDriverEnabled">DiskDriverEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#disk_driver_enabled KubernetesCluster#disk_driver_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.fileDriverEnabled">FileDriverEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#file_driver_enabled KubernetesCluster#file_driver_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.snapshotControllerEnabled">SnapshotControllerEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#snapshot_controller_enabled KubernetesCluster#snapshot_controller_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.blobDriverEnabled">BlobDriverEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#blob_driver_enabled KubernetesCluster#blob_driver_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.diskDriverEnabled">DiskDriverEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#disk_driver_enabled KubernetesCluster#disk_driver_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.fileDriverEnabled">FileDriverEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#file_driver_enabled KubernetesCluster#file_driver_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.snapshotControllerEnabled">SnapshotControllerEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#snapshot_controller_enabled KubernetesCluster#snapshot_controller_enabled}. |
 
 ---
 
 ##### `BlobDriverEnabled`<sup>Optional</sup> <a name="BlobDriverEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.blobDriverEnabled"></a>
 
 ```csharp
-public object BlobDriverEnabled { get; set; }
+public bool|IResolvable BlobDriverEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#blob_driver_enabled KubernetesCluster#blob_driver_enabled}.
 
@@ -7661,10 +7661,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DiskDriverEnabled`<sup>Optional</sup> <a name="DiskDriverEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.diskDriverEnabled"></a>
 
 ```csharp
-public object DiskDriverEnabled { get; set; }
+public bool|IResolvable DiskDriverEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#disk_driver_enabled KubernetesCluster#disk_driver_enabled}.
 
@@ -7673,10 +7673,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `FileDriverEnabled`<sup>Optional</sup> <a name="FileDriverEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.fileDriverEnabled"></a>
 
 ```csharp
-public object FileDriverEnabled { get; set; }
+public bool|IResolvable FileDriverEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#file_driver_enabled KubernetesCluster#file_driver_enabled}.
 
@@ -7685,10 +7685,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SnapshotControllerEnabled`<sup>Optional</sup> <a name="SnapshotControllerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile.property.snapshotControllerEnabled"></a>
 
 ```csharp
-public object SnapshotControllerEnabled { get; set; }
+public bool|IResolvable SnapshotControllerEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#snapshot_controller_enabled KubernetesCluster#snapshot_controller_enabled}.
 
@@ -7776,7 +7776,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterUpgradeOverride {
-    object ForceUpgradeEnabled,
+    bool|IResolvable ForceUpgradeEnabled,
     string EffectiveUntil = null
 };
 ```
@@ -7785,7 +7785,7 @@ new KubernetesClusterUpgradeOverride {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverride.property.forceUpgradeEnabled">ForceUpgradeEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#force_upgrade_enabled KubernetesCluster#force_upgrade_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverride.property.forceUpgradeEnabled">ForceUpgradeEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#force_upgrade_enabled KubernetesCluster#force_upgrade_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverride.property.effectiveUntil">EffectiveUntil</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#effective_until KubernetesCluster#effective_until}. |
 
 ---
@@ -7793,10 +7793,10 @@ new KubernetesClusterUpgradeOverride {
 ##### `ForceUpgradeEnabled`<sup>Required</sup> <a name="ForceUpgradeEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverride.property.forceUpgradeEnabled"></a>
 
 ```csharp
-public object ForceUpgradeEnabled { get; set; }
+public bool|IResolvable ForceUpgradeEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#force_upgrade_enabled KubernetesCluster#force_upgrade_enabled}.
 
@@ -8003,8 +8003,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new KubernetesClusterWorkloadAutoscalerProfile {
-    object KedaEnabled = null,
-    object VerticalPodAutoscalerEnabled = null
+    bool|IResolvable KedaEnabled = null,
+    bool|IResolvable VerticalPodAutoscalerEnabled = null
 };
 ```
 
@@ -8012,18 +8012,18 @@ new KubernetesClusterWorkloadAutoscalerProfile {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.kedaEnabled">KedaEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.verticalPodAutoscalerEnabled">VerticalPodAutoscalerEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.kedaEnabled">KedaEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.verticalPodAutoscalerEnabled">VerticalPodAutoscalerEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}. |
 
 ---
 
 ##### `KedaEnabled`<sup>Optional</sup> <a name="KedaEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.kedaEnabled"></a>
 
 ```csharp
-public object KedaEnabled { get; set; }
+public bool|IResolvable KedaEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#keda_enabled KubernetesCluster#keda_enabled}.
 
@@ -8032,10 +8032,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `VerticalPodAutoscalerEnabled`<sup>Optional</sup> <a name="VerticalPodAutoscalerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile.property.verticalPodAutoscalerEnabled"></a>
 
 ```csharp
-public object VerticalPodAutoscalerEnabled { get; set; }
+public bool|IResolvable VerticalPodAutoscalerEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/kubernetes_cluster#vertical_pod_autoscaler_enabled KubernetesCluster#vertical_pod_autoscaler_enabled}.
 
@@ -9007,10 +9007,10 @@ private void ResetVirtualNetworkIntegrationEnabled()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.authorizedIpRangesInput">AuthorizedIpRangesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.subnetIdInput">SubnetIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.virtualNetworkIntegrationEnabledInput">VirtualNetworkIntegrationEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.virtualNetworkIntegrationEnabledInput">VirtualNetworkIntegrationEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.authorizedIpRanges">AuthorizedIpRanges</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.subnetId">SubnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.virtualNetworkIntegrationEnabled">VirtualNetworkIntegrationEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.virtualNetworkIntegrationEnabled">VirtualNetworkIntegrationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfile">KubernetesClusterApiServerAccessProfile</a></code> | *No description.* |
 
 ---
@@ -9062,10 +9062,10 @@ public string SubnetIdInput { get; }
 ##### `VirtualNetworkIntegrationEnabledInput`<sup>Optional</sup> <a name="VirtualNetworkIntegrationEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.virtualNetworkIntegrationEnabledInput"></a>
 
 ```csharp
-public object VirtualNetworkIntegrationEnabledInput { get; }
+public bool|IResolvable VirtualNetworkIntegrationEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9092,10 +9092,10 @@ public string SubnetId { get; }
 ##### `VirtualNetworkIntegrationEnabled`<sup>Required</sup> <a name="VirtualNetworkIntegrationEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterApiServerAccessProfileOutputReference.property.virtualNetworkIntegrationEnabled"></a>
 
 ```csharp
-public object VirtualNetworkIntegrationEnabled { get; }
+public bool|IResolvable VirtualNetworkIntegrationEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9460,12 +9460,12 @@ private void ResetSkipNodesWithSystemPods()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.balanceSimilarNodeGroupsInput">BalanceSimilarNodeGroupsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForEmptyNodesEnabledInput">DaemonsetEvictionForEmptyNodesEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForOccupiedNodesEnabledInput">DaemonsetEvictionForOccupiedNodesEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.balanceSimilarNodeGroupsInput">BalanceSimilarNodeGroupsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForEmptyNodesEnabledInput">DaemonsetEvictionForEmptyNodesEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForOccupiedNodesEnabledInput">DaemonsetEvictionForOccupiedNodesEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.emptyBulkDeleteMaxInput">EmptyBulkDeleteMaxInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.expanderInput">ExpanderInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.ignoreDaemonsetsUtilizationEnabledInput">IgnoreDaemonsetsUtilizationEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.ignoreDaemonsetsUtilizationEnabledInput">IgnoreDaemonsetsUtilizationEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.maxGracefulTerminationSecInput">MaxGracefulTerminationSecInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.maxNodeProvisioningTimeInput">MaxNodeProvisioningTimeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.maxUnreadyNodesInput">MaxUnreadyNodesInput</a></code> | <code>double</code> | *No description.* |
@@ -9478,14 +9478,14 @@ private void ResetSkipNodesWithSystemPods()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.scaleDownUnreadyInput">ScaleDownUnreadyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.scaleDownUtilizationThresholdInput">ScaleDownUtilizationThresholdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.scanIntervalInput">ScanIntervalInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithLocalStorageInput">SkipNodesWithLocalStorageInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithSystemPodsInput">SkipNodesWithSystemPodsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.balanceSimilarNodeGroups">BalanceSimilarNodeGroups</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForEmptyNodesEnabled">DaemonsetEvictionForEmptyNodesEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForOccupiedNodesEnabled">DaemonsetEvictionForOccupiedNodesEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithLocalStorageInput">SkipNodesWithLocalStorageInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithSystemPodsInput">SkipNodesWithSystemPodsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.balanceSimilarNodeGroups">BalanceSimilarNodeGroups</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForEmptyNodesEnabled">DaemonsetEvictionForEmptyNodesEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForOccupiedNodesEnabled">DaemonsetEvictionForOccupiedNodesEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.emptyBulkDeleteMax">EmptyBulkDeleteMax</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.expander">Expander</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.ignoreDaemonsetsUtilizationEnabled">IgnoreDaemonsetsUtilizationEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.ignoreDaemonsetsUtilizationEnabled">IgnoreDaemonsetsUtilizationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.maxGracefulTerminationSec">MaxGracefulTerminationSec</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.maxNodeProvisioningTime">MaxNodeProvisioningTime</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.maxUnreadyNodes">MaxUnreadyNodes</a></code> | <code>double</code> | *No description.* |
@@ -9498,8 +9498,8 @@ private void ResetSkipNodesWithSystemPods()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.scaleDownUnready">ScaleDownUnready</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.scaleDownUtilizationThreshold">ScaleDownUtilizationThreshold</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.scanInterval">ScanInterval</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithLocalStorage">SkipNodesWithLocalStorage</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithSystemPods">SkipNodesWithSystemPods</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithLocalStorage">SkipNodesWithLocalStorage</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithSystemPods">SkipNodesWithSystemPods</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfile">KubernetesClusterAutoScalerProfile</a></code> | *No description.* |
 
 ---
@@ -9531,30 +9531,30 @@ public string Fqn { get; }
 ##### `BalanceSimilarNodeGroupsInput`<sup>Optional</sup> <a name="BalanceSimilarNodeGroupsInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.balanceSimilarNodeGroupsInput"></a>
 
 ```csharp
-public object BalanceSimilarNodeGroupsInput { get; }
+public bool|IResolvable BalanceSimilarNodeGroupsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DaemonsetEvictionForEmptyNodesEnabledInput`<sup>Optional</sup> <a name="DaemonsetEvictionForEmptyNodesEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForEmptyNodesEnabledInput"></a>
 
 ```csharp
-public object DaemonsetEvictionForEmptyNodesEnabledInput { get; }
+public bool|IResolvable DaemonsetEvictionForEmptyNodesEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DaemonsetEvictionForOccupiedNodesEnabledInput`<sup>Optional</sup> <a name="DaemonsetEvictionForOccupiedNodesEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForOccupiedNodesEnabledInput"></a>
 
 ```csharp
-public object DaemonsetEvictionForOccupiedNodesEnabledInput { get; }
+public bool|IResolvable DaemonsetEvictionForOccupiedNodesEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9581,10 +9581,10 @@ public string ExpanderInput { get; }
 ##### `IgnoreDaemonsetsUtilizationEnabledInput`<sup>Optional</sup> <a name="IgnoreDaemonsetsUtilizationEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.ignoreDaemonsetsUtilizationEnabledInput"></a>
 
 ```csharp
-public object IgnoreDaemonsetsUtilizationEnabledInput { get; }
+public bool|IResolvable IgnoreDaemonsetsUtilizationEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9711,50 +9711,50 @@ public string ScanIntervalInput { get; }
 ##### `SkipNodesWithLocalStorageInput`<sup>Optional</sup> <a name="SkipNodesWithLocalStorageInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithLocalStorageInput"></a>
 
 ```csharp
-public object SkipNodesWithLocalStorageInput { get; }
+public bool|IResolvable SkipNodesWithLocalStorageInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `SkipNodesWithSystemPodsInput`<sup>Optional</sup> <a name="SkipNodesWithSystemPodsInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithSystemPodsInput"></a>
 
 ```csharp
-public object SkipNodesWithSystemPodsInput { get; }
+public bool|IResolvable SkipNodesWithSystemPodsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `BalanceSimilarNodeGroups`<sup>Required</sup> <a name="BalanceSimilarNodeGroups" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.balanceSimilarNodeGroups"></a>
 
 ```csharp
-public object BalanceSimilarNodeGroups { get; }
+public bool|IResolvable BalanceSimilarNodeGroups { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DaemonsetEvictionForEmptyNodesEnabled`<sup>Required</sup> <a name="DaemonsetEvictionForEmptyNodesEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForEmptyNodesEnabled"></a>
 
 ```csharp
-public object DaemonsetEvictionForEmptyNodesEnabled { get; }
+public bool|IResolvable DaemonsetEvictionForEmptyNodesEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DaemonsetEvictionForOccupiedNodesEnabled`<sup>Required</sup> <a name="DaemonsetEvictionForOccupiedNodesEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.daemonsetEvictionForOccupiedNodesEnabled"></a>
 
 ```csharp
-public object DaemonsetEvictionForOccupiedNodesEnabled { get; }
+public bool|IResolvable DaemonsetEvictionForOccupiedNodesEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9781,10 +9781,10 @@ public string Expander { get; }
 ##### `IgnoreDaemonsetsUtilizationEnabled`<sup>Required</sup> <a name="IgnoreDaemonsetsUtilizationEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.ignoreDaemonsetsUtilizationEnabled"></a>
 
 ```csharp
-public object IgnoreDaemonsetsUtilizationEnabled { get; }
+public bool|IResolvable IgnoreDaemonsetsUtilizationEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9911,20 +9911,20 @@ public string ScanInterval { get; }
 ##### `SkipNodesWithLocalStorage`<sup>Required</sup> <a name="SkipNodesWithLocalStorage" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithLocalStorage"></a>
 
 ```csharp
-public object SkipNodesWithLocalStorage { get; }
+public bool|IResolvable SkipNodesWithLocalStorage { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `SkipNodesWithSystemPods`<sup>Required</sup> <a name="SkipNodesWithSystemPods" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAutoScalerProfileOutputReference.property.skipNodesWithSystemPods"></a>
 
 ```csharp
-public object SkipNodesWithSystemPods { get; }
+public bool|IResolvable SkipNodesWithSystemPods { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10171,10 +10171,10 @@ private void ResetTenantId()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.adminGroupObjectIdsInput">AdminGroupObjectIdsInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.azureRbacEnabledInput">AzureRbacEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.azureRbacEnabledInput">AzureRbacEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.tenantIdInput">TenantIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.adminGroupObjectIds">AdminGroupObjectIds</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.azureRbacEnabled">AzureRbacEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.azureRbacEnabled">AzureRbacEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.tenantId">TenantId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl">KubernetesClusterAzureActiveDirectoryRoleBasedAccessControl</a></code> | *No description.* |
 
@@ -10217,10 +10217,10 @@ public string[] AdminGroupObjectIdsInput { get; }
 ##### `AzureRbacEnabledInput`<sup>Optional</sup> <a name="AzureRbacEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.azureRbacEnabledInput"></a>
 
 ```csharp
-public object AzureRbacEnabledInput { get; }
+public bool|IResolvable AzureRbacEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10247,10 +10247,10 @@ public string[] AdminGroupObjectIds { get; }
 ##### `AzureRbacEnabled`<sup>Required</sup> <a name="AzureRbacEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterAzureActiveDirectoryRoleBasedAccessControlOutputReference.property.azureRbacEnabled"></a>
 
 ```csharp
-public object AzureRbacEnabled { get; }
+public bool|IResolvable AzureRbacEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10792,8 +10792,8 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputingOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputingOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputingOutputReference.property.sgxQuoteHelperEnabledInput">SgxQuoteHelperEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputingOutputReference.property.sgxQuoteHelperEnabled">SgxQuoteHelperEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputingOutputReference.property.sgxQuoteHelperEnabledInput">SgxQuoteHelperEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputingOutputReference.property.sgxQuoteHelperEnabled">SgxQuoteHelperEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputingOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputing">KubernetesClusterConfidentialComputing</a></code> | *No description.* |
 
 ---
@@ -10825,20 +10825,20 @@ public string Fqn { get; }
 ##### `SgxQuoteHelperEnabledInput`<sup>Optional</sup> <a name="SgxQuoteHelperEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputingOutputReference.property.sgxQuoteHelperEnabledInput"></a>
 
 ```csharp
-public object SgxQuoteHelperEnabledInput { get; }
+public bool|IResolvable SgxQuoteHelperEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `SgxQuoteHelperEnabled`<sup>Required</sup> <a name="SgxQuoteHelperEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterConfidentialComputingOutputReference.property.sgxQuoteHelperEnabled"></a>
 
 ```csharp
-public object SgxQuoteHelperEnabled { get; }
+public bool|IResolvable SgxQuoteHelperEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -11136,7 +11136,7 @@ private void ResetTopologyManagerPolicy()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.allowedUnsafeSysctlsInput">AllowedUnsafeSysctlsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.containerLogMaxLineInput">ContainerLogMaxLineInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.containerLogMaxSizeMbInput">ContainerLogMaxSizeMbInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.cpuCfsQuotaEnabledInput">CpuCfsQuotaEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.cpuCfsQuotaEnabledInput">CpuCfsQuotaEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.cpuCfsQuotaPeriodInput">CpuCfsQuotaPeriodInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.cpuManagerPolicyInput">CpuManagerPolicyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.imageGcHighThresholdInput">ImageGcHighThresholdInput</a></code> | <code>double</code> | *No description.* |
@@ -11146,7 +11146,7 @@ private void ResetTopologyManagerPolicy()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.allowedUnsafeSysctls">AllowedUnsafeSysctls</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.containerLogMaxLine">ContainerLogMaxLine</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.containerLogMaxSizeMb">ContainerLogMaxSizeMb</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.cpuCfsQuotaEnabled">CpuCfsQuotaEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.cpuCfsQuotaEnabled">CpuCfsQuotaEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.cpuCfsQuotaPeriod">CpuCfsQuotaPeriod</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.cpuManagerPolicy">CpuManagerPolicy</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.imageGcHighThreshold">ImageGcHighThreshold</a></code> | <code>double</code> | *No description.* |
@@ -11214,10 +11214,10 @@ public double ContainerLogMaxSizeMbInput { get; }
 ##### `CpuCfsQuotaEnabledInput`<sup>Optional</sup> <a name="CpuCfsQuotaEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.cpuCfsQuotaEnabledInput"></a>
 
 ```csharp
-public object CpuCfsQuotaEnabledInput { get; }
+public bool|IResolvable CpuCfsQuotaEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -11314,10 +11314,10 @@ public double ContainerLogMaxSizeMb { get; }
 ##### `CpuCfsQuotaEnabled`<sup>Required</sup> <a name="CpuCfsQuotaEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfigOutputReference.property.cpuCfsQuotaEnabled"></a>
 
 ```csharp
-public object CpuCfsQuotaEnabled { get; }
+public bool|IResolvable CpuCfsQuotaEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12235,7 +12235,7 @@ private void ResetVmVfsCachePressure()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpKeepaliveTimeInput">NetIpv4TcpKeepaliveTimeInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpMaxSynBacklogInput">NetIpv4TcpMaxSynBacklogInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpMaxTwBucketsInput">NetIpv4TcpMaxTwBucketsInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpTwReuseInput">NetIpv4TcpTwReuseInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpTwReuseInput">NetIpv4TcpTwReuseInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netNetfilterNfConntrackBucketsInput">NetNetfilterNfConntrackBucketsInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netNetfilterNfConntrackMaxInput">NetNetfilterNfConntrackMaxInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.vmMaxMapCountInput">VmMaxMapCountInput</a></code> | <code>double</code> | *No description.* |
@@ -12264,7 +12264,7 @@ private void ResetVmVfsCachePressure()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpKeepaliveTime">NetIpv4TcpKeepaliveTime</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpMaxSynBacklog">NetIpv4TcpMaxSynBacklog</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpMaxTwBuckets">NetIpv4TcpMaxTwBuckets</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpTwReuse">NetIpv4TcpTwReuse</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpTwReuse">NetIpv4TcpTwReuse</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netNetfilterNfConntrackBuckets">NetNetfilterNfConntrackBuckets</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netNetfilterNfConntrackMax">NetNetfilterNfConntrackMax</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.vmMaxMapCount">VmMaxMapCount</a></code> | <code>double</code> | *No description.* |
@@ -12531,10 +12531,10 @@ public double NetIpv4TcpMaxTwBucketsInput { get; }
 ##### `NetIpv4TcpTwReuseInput`<sup>Optional</sup> <a name="NetIpv4TcpTwReuseInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpTwReuseInput"></a>
 
 ```csharp
-public object NetIpv4TcpTwReuseInput { get; }
+public bool|IResolvable NetIpv4TcpTwReuseInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12821,10 +12821,10 @@ public double NetIpv4TcpMaxTwBuckets { get; }
 ##### `NetIpv4TcpTwReuse`<sup>Required</sup> <a name="NetIpv4TcpTwReuse" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigSysctlConfigOutputReference.property.netIpv4TcpTwReuse"></a>
 
 ```csharp
-public object NetIpv4TcpTwReuse { get; }
+public bool|IResolvable NetIpv4TcpTwReuse { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -13010,7 +13010,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts">KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts</a>[]</code> | *No description.* |
 
 ---
 
@@ -13041,10 +13041,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts">KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts</a>[]
 
 ---
 
@@ -13304,7 +13304,7 @@ private void ResetProtocol()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsOutputReference.property.portEnd">PortEnd</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsOutputReference.property.portStart">PortStart</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsOutputReference.property.protocol">Protocol</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts">KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts</a></code> | *No description.* |
 
 ---
 
@@ -13395,10 +13395,10 @@ public string Protocol { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts">KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts</a>
 
 ---
 
@@ -13613,12 +13613,12 @@ Returns a reversible string representation.
 ##### `PutAllowedHostPorts` <a name="PutAllowedHostPorts" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference.putAllowedHostPorts"></a>
 
 ```csharp
-private void PutAllowedHostPorts(object Value)
+private void PutAllowedHostPorts(IResolvable|KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference.putAllowedHostPorts.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts">KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts</a>[]
 
 ---
 
@@ -13648,7 +13648,7 @@ private void ResetNodePublicIpTags()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference.property.allowedHostPorts">AllowedHostPorts</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsList">KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference.property.allowedHostPortsInput">AllowedHostPortsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference.property.allowedHostPortsInput">AllowedHostPortsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts">KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference.property.applicationSecurityGroupIdsInput">ApplicationSecurityGroupIdsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference.property.nodePublicIpTagsInput">NodePublicIpTagsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference.property.applicationSecurityGroupIds">ApplicationSecurityGroupIds</a></code> | <code>string[]</code> | *No description.* |
@@ -13694,10 +13694,10 @@ public KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPortsList Al
 ##### `AllowedHostPortsInput`<sup>Optional</sup> <a name="AllowedHostPortsInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference.property.allowedHostPortsInput"></a>
 
 ```csharp
-public object AllowedHostPortsInput { get; }
+public IResolvable|KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts[] AllowedHostPortsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts">KubernetesClusterDefaultNodePoolNodeNetworkProfileAllowedHostPorts</a>[]
 
 ---
 
@@ -14270,12 +14270,12 @@ private void ResetZones()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.linuxOsConfig">LinuxOsConfig</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference">KubernetesClusterDefaultNodePoolLinuxOsConfigOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodeNetworkProfile">NodeNetworkProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference">KubernetesClusterDefaultNodePoolNodeNetworkProfileOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.upgradeSettings">UpgradeSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference">KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.autoScalingEnabledInput">AutoScalingEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.autoScalingEnabledInput">AutoScalingEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.capacityReservationGroupIdInput">CapacityReservationGroupIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.fipsEnabledInput">FipsEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.fipsEnabledInput">FipsEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.gpuDriverInput">GpuDriverInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.gpuInstanceInput">GpuInstanceInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.hostEncryptionEnabledInput">HostEncryptionEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.hostEncryptionEnabledInput">HostEncryptionEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.hostGroupIdInput">HostGroupIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.kubeletConfigInput">KubeletConfigInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolKubeletConfig">KubernetesClusterDefaultNodePoolKubeletConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.kubeletDiskTypeInput">KubeletDiskTypeInput</a></code> | <code>string</code> | *No description.* |
@@ -14287,9 +14287,9 @@ private void ResetZones()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodeCountInput">NodeCountInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodeLabelsInput">NodeLabelsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodeNetworkProfileInput">NodeNetworkProfileInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolNodeNetworkProfile">KubernetesClusterDefaultNodePoolNodeNetworkProfile</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodePublicIpEnabledInput">NodePublicIpEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodePublicIpEnabledInput">NodePublicIpEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodePublicIpPrefixIdInput">NodePublicIpPrefixIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.onlyCriticalAddonsEnabledInput">OnlyCriticalAddonsEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.onlyCriticalAddonsEnabledInput">OnlyCriticalAddonsEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.orchestratorVersionInput">OrchestratorVersionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.osDiskSizeGbInput">OsDiskSizeGbInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.osDiskTypeInput">OsDiskTypeInput</a></code> | <code>string</code> | *No description.* |
@@ -14301,18 +14301,18 @@ private void ResetZones()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.tagsInput">TagsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.temporaryNameForRotationInput">TemporaryNameForRotationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.typeInput">TypeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.ultraSsdEnabledInput">UltraSsdEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.ultraSsdEnabledInput">UltraSsdEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.upgradeSettingsInput">UpgradeSettingsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolUpgradeSettings">KubernetesClusterDefaultNodePoolUpgradeSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.vmSizeInput">VmSizeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.vnetSubnetIdInput">VnetSubnetIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.workloadRuntimeInput">WorkloadRuntimeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.zonesInput">ZonesInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.autoScalingEnabled">AutoScalingEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.autoScalingEnabled">AutoScalingEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.capacityReservationGroupId">CapacityReservationGroupId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.fipsEnabled">FipsEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.fipsEnabled">FipsEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.gpuDriver">GpuDriver</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.gpuInstance">GpuInstance</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.hostEncryptionEnabled">HostEncryptionEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.hostEncryptionEnabled">HostEncryptionEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.hostGroupId">HostGroupId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.kubeletDiskType">KubeletDiskType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.maxCount">MaxCount</a></code> | <code>double</code> | *No description.* |
@@ -14321,9 +14321,9 @@ private void ResetZones()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodeCount">NodeCount</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodeLabels">NodeLabels</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodePublicIpEnabled">NodePublicIpEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodePublicIpEnabled">NodePublicIpEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodePublicIpPrefixId">NodePublicIpPrefixId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.onlyCriticalAddonsEnabled">OnlyCriticalAddonsEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.onlyCriticalAddonsEnabled">OnlyCriticalAddonsEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.orchestratorVersion">OrchestratorVersion</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.osDiskSizeGb">OsDiskSizeGb</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.osDiskType">OsDiskType</a></code> | <code>string</code> | *No description.* |
@@ -14335,7 +14335,7 @@ private void ResetZones()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.temporaryNameForRotation">TemporaryNameForRotation</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.ultraSsdEnabled">UltraSsdEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.ultraSsdEnabled">UltraSsdEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.vmSize">VmSize</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.vnetSubnetId">VnetSubnetId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.workloadRuntime">WorkloadRuntime</a></code> | <code>string</code> | *No description.* |
@@ -14411,10 +14411,10 @@ public KubernetesClusterDefaultNodePoolUpgradeSettingsOutputReference UpgradeSet
 ##### `AutoScalingEnabledInput`<sup>Optional</sup> <a name="AutoScalingEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.autoScalingEnabledInput"></a>
 
 ```csharp
-public object AutoScalingEnabledInput { get; }
+public bool|IResolvable AutoScalingEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14431,10 +14431,10 @@ public string CapacityReservationGroupIdInput { get; }
 ##### `FipsEnabledInput`<sup>Optional</sup> <a name="FipsEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.fipsEnabledInput"></a>
 
 ```csharp
-public object FipsEnabledInput { get; }
+public bool|IResolvable FipsEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14461,10 +14461,10 @@ public string GpuInstanceInput { get; }
 ##### `HostEncryptionEnabledInput`<sup>Optional</sup> <a name="HostEncryptionEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.hostEncryptionEnabledInput"></a>
 
 ```csharp
-public object HostEncryptionEnabledInput { get; }
+public bool|IResolvable HostEncryptionEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14581,10 +14581,10 @@ public KubernetesClusterDefaultNodePoolNodeNetworkProfile NodeNetworkProfileInpu
 ##### `NodePublicIpEnabledInput`<sup>Optional</sup> <a name="NodePublicIpEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodePublicIpEnabledInput"></a>
 
 ```csharp
-public object NodePublicIpEnabledInput { get; }
+public bool|IResolvable NodePublicIpEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14601,10 +14601,10 @@ public string NodePublicIpPrefixIdInput { get; }
 ##### `OnlyCriticalAddonsEnabledInput`<sup>Optional</sup> <a name="OnlyCriticalAddonsEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.onlyCriticalAddonsEnabledInput"></a>
 
 ```csharp
-public object OnlyCriticalAddonsEnabledInput { get; }
+public bool|IResolvable OnlyCriticalAddonsEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14721,10 +14721,10 @@ public string TypeInput { get; }
 ##### `UltraSsdEnabledInput`<sup>Optional</sup> <a name="UltraSsdEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.ultraSsdEnabledInput"></a>
 
 ```csharp
-public object UltraSsdEnabledInput { get; }
+public bool|IResolvable UltraSsdEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14781,10 +14781,10 @@ public string[] ZonesInput { get; }
 ##### `AutoScalingEnabled`<sup>Required</sup> <a name="AutoScalingEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.autoScalingEnabled"></a>
 
 ```csharp
-public object AutoScalingEnabled { get; }
+public bool|IResolvable AutoScalingEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14801,10 +14801,10 @@ public string CapacityReservationGroupId { get; }
 ##### `FipsEnabled`<sup>Required</sup> <a name="FipsEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.fipsEnabled"></a>
 
 ```csharp
-public object FipsEnabled { get; }
+public bool|IResolvable FipsEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14831,10 +14831,10 @@ public string GpuInstance { get; }
 ##### `HostEncryptionEnabled`<sup>Required</sup> <a name="HostEncryptionEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.hostEncryptionEnabled"></a>
 
 ```csharp
-public object HostEncryptionEnabled { get; }
+public bool|IResolvable HostEncryptionEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14921,10 +14921,10 @@ public System.Collections.Generic.IDictionary<string, string> NodeLabels { get; 
 ##### `NodePublicIpEnabled`<sup>Required</sup> <a name="NodePublicIpEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.nodePublicIpEnabled"></a>
 
 ```csharp
-public object NodePublicIpEnabled { get; }
+public bool|IResolvable NodePublicIpEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14941,10 +14941,10 @@ public string NodePublicIpPrefixId { get; }
 ##### `OnlyCriticalAddonsEnabled`<sup>Required</sup> <a name="OnlyCriticalAddonsEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.onlyCriticalAddonsEnabled"></a>
 
 ```csharp
-public object OnlyCriticalAddonsEnabled { get; }
+public bool|IResolvable OnlyCriticalAddonsEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -15061,10 +15061,10 @@ public string Type { get; }
 ##### `UltraSsdEnabled`<sup>Required</sup> <a name="UltraSsdEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterDefaultNodePoolOutputReference.property.ultraSsdEnabled"></a>
 
 ```csharp
-public object UltraSsdEnabled { get; }
+public bool|IResolvable UltraSsdEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17496,9 +17496,9 @@ private void ResetSecretRotationInterval()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.secretIdentity">SecretIdentity</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderSecretIdentityList">KubernetesClusterKeyVaultSecretsProviderSecretIdentityList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.secretRotationEnabledInput">SecretRotationEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.secretRotationEnabledInput">SecretRotationEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.secretRotationIntervalInput">SecretRotationIntervalInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.secretRotationEnabled">SecretRotationEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.secretRotationEnabled">SecretRotationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.secretRotationInterval">SecretRotationInterval</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProvider">KubernetesClusterKeyVaultSecretsProvider</a></code> | *No description.* |
 
@@ -17541,10 +17541,10 @@ public KubernetesClusterKeyVaultSecretsProviderSecretIdentityList SecretIdentity
 ##### `SecretRotationEnabledInput`<sup>Optional</sup> <a name="SecretRotationEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.secretRotationEnabledInput"></a>
 
 ```csharp
-public object SecretRotationEnabledInput { get; }
+public bool|IResolvable SecretRotationEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17561,10 +17561,10 @@ public string SecretRotationIntervalInput { get; }
 ##### `SecretRotationEnabled`<sup>Required</sup> <a name="SecretRotationEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterKeyVaultSecretsProviderOutputReference.property.secretRotationEnabled"></a>
 
 ```csharp
-public object SecretRotationEnabled { get; }
+public bool|IResolvable SecretRotationEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -20036,7 +20036,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>[]</code> | *No description.* |
 
 ---
 
@@ -20067,10 +20067,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowAllowed[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>[]
 
 ---
 
@@ -20307,7 +20307,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.hoursInput">HoursInput</a></code> | <code>double[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.day">Day</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.hours">Hours</a></code> | <code>double[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a></code> | *No description.* |
 
 ---
 
@@ -20378,10 +20378,10 @@ public double[] Hours { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowAllowed InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>
 
 ---
 
@@ -20507,7 +20507,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed">KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed</a>[]</code> | *No description.* |
 
 ---
 
@@ -20538,10 +20538,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed">KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed</a>[]
 
 ---
 
@@ -20778,7 +20778,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedOutputReference.property.startInput">StartInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedOutputReference.property.end">End</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedOutputReference.property.start">Start</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed">KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed</a></code> | *No description.* |
 
 ---
 
@@ -20849,10 +20849,10 @@ public string Start { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowedOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed">KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed</a>
 
 ---
 
@@ -21071,12 +21071,12 @@ Returns a reversible string representation.
 ##### `PutNotAllowed` <a name="PutNotAllowed" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference.putNotAllowed"></a>
 
 ```csharp
-private void PutNotAllowed(object Value)
+private void PutNotAllowed(IResolvable|KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference.putNotAllowed.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed">KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed</a>[]
 
 ---
 
@@ -21135,7 +21135,7 @@ private void ResetWeekIndex()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference.property.durationInput">DurationInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference.property.frequencyInput">FrequencyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference.property.intervalInput">IntervalInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference.property.notAllowedInput">NotAllowedInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference.property.notAllowedInput">NotAllowedInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed">KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference.property.startDateInput">StartDateInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference.property.startTimeInput">StartTimeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference.property.utcOffsetInput">UtcOffsetInput</a></code> | <code>string</code> | *No description.* |
@@ -21240,10 +21240,10 @@ public double IntervalInput { get; }
 ##### `NotAllowedInput`<sup>Optional</sup> <a name="NotAllowedInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeOutputReference.property.notAllowedInput"></a>
 
 ```csharp
-public object NotAllowedInput { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed[] NotAllowedInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed">KubernetesClusterMaintenanceWindowAutoUpgradeNotAllowed</a>[]
 
 ---
 
@@ -21509,7 +21509,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowedList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowedList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowedList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowedList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed">KubernetesClusterMaintenanceWindowNodeOsNotAllowed</a>[]</code> | *No description.* |
 
 ---
 
@@ -21540,10 +21540,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowedList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowNodeOsNotAllowed[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed">KubernetesClusterMaintenanceWindowNodeOsNotAllowed</a>[]
 
 ---
 
@@ -21780,7 +21780,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowedOutputReference.property.startInput">StartInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowedOutputReference.property.end">End</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowedOutputReference.property.start">Start</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowedOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowedOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed">KubernetesClusterMaintenanceWindowNodeOsNotAllowed</a></code> | *No description.* |
 
 ---
 
@@ -21851,10 +21851,10 @@ public string Start { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowedOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowNodeOsNotAllowed InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed">KubernetesClusterMaintenanceWindowNodeOsNotAllowed</a>
 
 ---
 
@@ -22073,12 +22073,12 @@ Returns a reversible string representation.
 ##### `PutNotAllowed` <a name="PutNotAllowed" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsOutputReference.putNotAllowed"></a>
 
 ```csharp
-private void PutNotAllowed(object Value)
+private void PutNotAllowed(IResolvable|KubernetesClusterMaintenanceWindowNodeOsNotAllowed[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsOutputReference.putNotAllowed.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed">KubernetesClusterMaintenanceWindowNodeOsNotAllowed</a>[]
 
 ---
 
@@ -22137,7 +22137,7 @@ private void ResetWeekIndex()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsOutputReference.property.durationInput">DurationInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsOutputReference.property.frequencyInput">FrequencyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsOutputReference.property.intervalInput">IntervalInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsOutputReference.property.notAllowedInput">NotAllowedInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsOutputReference.property.notAllowedInput">NotAllowedInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed">KubernetesClusterMaintenanceWindowNodeOsNotAllowed</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsOutputReference.property.startDateInput">StartDateInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsOutputReference.property.startTimeInput">StartTimeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsOutputReference.property.utcOffsetInput">UtcOffsetInput</a></code> | <code>string</code> | *No description.* |
@@ -22242,10 +22242,10 @@ public double IntervalInput { get; }
 ##### `NotAllowedInput`<sup>Optional</sup> <a name="NotAllowedInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsOutputReference.property.notAllowedInput"></a>
 
 ```csharp
-public object NotAllowedInput { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowNodeOsNotAllowed[] NotAllowedInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNodeOsNotAllowed">KubernetesClusterMaintenanceWindowNodeOsNotAllowed</a>[]
 
 ---
 
@@ -22511,7 +22511,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>[]</code> | *No description.* |
 
 ---
 
@@ -22542,10 +22542,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowNotAllowed[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>[]
 
 ---
 
@@ -22782,7 +22782,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.startInput">StartInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.end">End</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.start">Start</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a></code> | *No description.* |
 
 ---
 
@@ -22853,10 +22853,10 @@ public string Start { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowNotAllowed InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>
 
 ---
 
@@ -23071,24 +23071,24 @@ Returns a reversible string representation.
 ##### `PutAllowed` <a name="PutAllowed" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.putAllowed"></a>
 
 ```csharp
-private void PutAllowed(object Value)
+private void PutAllowed(IResolvable|KubernetesClusterMaintenanceWindowAllowed[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.putAllowed.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>[]
 
 ---
 
 ##### `PutNotAllowed` <a name="PutNotAllowed" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.putNotAllowed"></a>
 
 ```csharp
-private void PutNotAllowed(object Value)
+private void PutNotAllowed(IResolvable|KubernetesClusterMaintenanceWindowNotAllowed[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.putNotAllowed.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>[]
 
 ---
 
@@ -23113,8 +23113,8 @@ private void ResetNotAllowed()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.property.allowed">Allowed</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowedList">KubernetesClusterMaintenanceWindowAllowedList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.property.notAllowed">NotAllowed</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowedList">KubernetesClusterMaintenanceWindowNotAllowedList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.property.allowedInput">AllowedInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.property.notAllowedInput">NotAllowedInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.property.allowedInput">AllowedInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.property.notAllowedInput">NotAllowedInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindow">KubernetesClusterMaintenanceWindow</a></code> | *No description.* |
 
 ---
@@ -23166,20 +23166,20 @@ public KubernetesClusterMaintenanceWindowNotAllowedList NotAllowed { get; }
 ##### `AllowedInput`<sup>Optional</sup> <a name="AllowedInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.property.allowedInput"></a>
 
 ```csharp
-public object AllowedInput { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowAllowed[] AllowedInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowAllowed">KubernetesClusterMaintenanceWindowAllowed</a>[]
 
 ---
 
 ##### `NotAllowedInput`<sup>Optional</sup> <a name="NotAllowedInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowOutputReference.property.notAllowedInput"></a>
 
 ```csharp
-public object NotAllowedInput { get; }
+public IResolvable|KubernetesClusterMaintenanceWindowNotAllowed[] NotAllowedInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterMaintenanceWindowNotAllowed">KubernetesClusterMaintenanceWindowNotAllowed</a>[]
 
 ---
 
@@ -23996,10 +23996,10 @@ private void ResetSecurityEnabled()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.observabilityEnabledInput">ObservabilityEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.securityEnabledInput">SecurityEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.observabilityEnabled">ObservabilityEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.securityEnabled">SecurityEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.observabilityEnabledInput">ObservabilityEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.securityEnabledInput">SecurityEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.observabilityEnabled">ObservabilityEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.securityEnabled">SecurityEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworking">KubernetesClusterNetworkProfileAdvancedNetworking</a></code> | *No description.* |
 
 ---
@@ -24031,40 +24031,40 @@ public string Fqn { get; }
 ##### `ObservabilityEnabledInput`<sup>Optional</sup> <a name="ObservabilityEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.observabilityEnabledInput"></a>
 
 ```csharp
-public object ObservabilityEnabledInput { get; }
+public bool|IResolvable ObservabilityEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `SecurityEnabledInput`<sup>Optional</sup> <a name="SecurityEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.securityEnabledInput"></a>
 
 ```csharp
-public object SecurityEnabledInput { get; }
+public bool|IResolvable SecurityEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ObservabilityEnabled`<sup>Required</sup> <a name="ObservabilityEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.observabilityEnabled"></a>
 
 ```csharp
-public object ObservabilityEnabled { get; }
+public bool|IResolvable ObservabilityEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `SecurityEnabled`<sup>Required</sup> <a name="SecurityEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterNetworkProfileAdvancedNetworkingOutputReference.property.securityEnabled"></a>
 
 ```csharp
-public object SecurityEnabled { get; }
+public bool|IResolvable SecurityEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -26273,9 +26273,9 @@ private void ResetMsiAuthForMonitoringEnabled()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.omsAgentIdentity">OmsAgentIdentity</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOmsAgentIdentityList">KubernetesClusterOmsAgentOmsAgentIdentityList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.logAnalyticsWorkspaceIdInput">LogAnalyticsWorkspaceIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabledInput">MsiAuthForMonitoringEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabledInput">MsiAuthForMonitoringEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.logAnalyticsWorkspaceId">LogAnalyticsWorkspaceId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabled">MsiAuthForMonitoringEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabled">MsiAuthForMonitoringEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgent">KubernetesClusterOmsAgent</a></code> | *No description.* |
 
 ---
@@ -26327,10 +26327,10 @@ public string LogAnalyticsWorkspaceIdInput { get; }
 ##### `MsiAuthForMonitoringEnabledInput`<sup>Optional</sup> <a name="MsiAuthForMonitoringEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabledInput"></a>
 
 ```csharp
-public object MsiAuthForMonitoringEnabledInput { get; }
+public bool|IResolvable MsiAuthForMonitoringEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -26347,10 +26347,10 @@ public string LogAnalyticsWorkspaceId { get; }
 ##### `MsiAuthForMonitoringEnabled`<sup>Required</sup> <a name="MsiAuthForMonitoringEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterOmsAgentOutputReference.property.msiAuthForMonitoringEnabled"></a>
 
 ```csharp
-public object MsiAuthForMonitoringEnabled { get; }
+public bool|IResolvable MsiAuthForMonitoringEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -26970,12 +26970,12 @@ private void ResetInternalIngressGatewayEnabled()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.certificateAuthority">CertificateAuthority</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileCertificateAuthorityOutputReference">KubernetesClusterServiceMeshProfileCertificateAuthorityOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.certificateAuthorityInput">CertificateAuthorityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileCertificateAuthority">KubernetesClusterServiceMeshProfileCertificateAuthority</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.externalIngressGatewayEnabledInput">ExternalIngressGatewayEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.internalIngressGatewayEnabledInput">InternalIngressGatewayEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.externalIngressGatewayEnabledInput">ExternalIngressGatewayEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.internalIngressGatewayEnabledInput">InternalIngressGatewayEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.modeInput">ModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.revisionsInput">RevisionsInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.externalIngressGatewayEnabled">ExternalIngressGatewayEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.internalIngressGatewayEnabled">InternalIngressGatewayEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.externalIngressGatewayEnabled">ExternalIngressGatewayEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.internalIngressGatewayEnabled">InternalIngressGatewayEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.mode">Mode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.revisions">Revisions</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfile">KubernetesClusterServiceMeshProfile</a></code> | *No description.* |
@@ -27029,20 +27029,20 @@ public KubernetesClusterServiceMeshProfileCertificateAuthority CertificateAuthor
 ##### `ExternalIngressGatewayEnabledInput`<sup>Optional</sup> <a name="ExternalIngressGatewayEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.externalIngressGatewayEnabledInput"></a>
 
 ```csharp
-public object ExternalIngressGatewayEnabledInput { get; }
+public bool|IResolvable ExternalIngressGatewayEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `InternalIngressGatewayEnabledInput`<sup>Optional</sup> <a name="InternalIngressGatewayEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.internalIngressGatewayEnabledInput"></a>
 
 ```csharp
-public object InternalIngressGatewayEnabledInput { get; }
+public bool|IResolvable InternalIngressGatewayEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -27069,20 +27069,20 @@ public string[] RevisionsInput { get; }
 ##### `ExternalIngressGatewayEnabled`<sup>Required</sup> <a name="ExternalIngressGatewayEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.externalIngressGatewayEnabled"></a>
 
 ```csharp
-public object ExternalIngressGatewayEnabled { get; }
+public bool|IResolvable ExternalIngressGatewayEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `InternalIngressGatewayEnabled`<sup>Required</sup> <a name="InternalIngressGatewayEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterServiceMeshProfileOutputReference.property.internalIngressGatewayEnabled"></a>
 
 ```csharp
-public object InternalIngressGatewayEnabled { get; }
+public bool|IResolvable InternalIngressGatewayEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -27648,14 +27648,14 @@ private void ResetSnapshotControllerEnabled()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.blobDriverEnabledInput">BlobDriverEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.diskDriverEnabledInput">DiskDriverEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.fileDriverEnabledInput">FileDriverEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.snapshotControllerEnabledInput">SnapshotControllerEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.blobDriverEnabled">BlobDriverEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.diskDriverEnabled">DiskDriverEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.fileDriverEnabled">FileDriverEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.snapshotControllerEnabled">SnapshotControllerEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.blobDriverEnabledInput">BlobDriverEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.diskDriverEnabledInput">DiskDriverEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.fileDriverEnabledInput">FileDriverEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.snapshotControllerEnabledInput">SnapshotControllerEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.blobDriverEnabled">BlobDriverEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.diskDriverEnabled">DiskDriverEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.fileDriverEnabled">FileDriverEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.snapshotControllerEnabled">SnapshotControllerEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfile">KubernetesClusterStorageProfile</a></code> | *No description.* |
 
 ---
@@ -27687,80 +27687,80 @@ public string Fqn { get; }
 ##### `BlobDriverEnabledInput`<sup>Optional</sup> <a name="BlobDriverEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.blobDriverEnabledInput"></a>
 
 ```csharp
-public object BlobDriverEnabledInput { get; }
+public bool|IResolvable BlobDriverEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DiskDriverEnabledInput`<sup>Optional</sup> <a name="DiskDriverEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.diskDriverEnabledInput"></a>
 
 ```csharp
-public object DiskDriverEnabledInput { get; }
+public bool|IResolvable DiskDriverEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `FileDriverEnabledInput`<sup>Optional</sup> <a name="FileDriverEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.fileDriverEnabledInput"></a>
 
 ```csharp
-public object FileDriverEnabledInput { get; }
+public bool|IResolvable FileDriverEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `SnapshotControllerEnabledInput`<sup>Optional</sup> <a name="SnapshotControllerEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.snapshotControllerEnabledInput"></a>
 
 ```csharp
-public object SnapshotControllerEnabledInput { get; }
+public bool|IResolvable SnapshotControllerEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `BlobDriverEnabled`<sup>Required</sup> <a name="BlobDriverEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.blobDriverEnabled"></a>
 
 ```csharp
-public object BlobDriverEnabled { get; }
+public bool|IResolvable BlobDriverEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `DiskDriverEnabled`<sup>Required</sup> <a name="DiskDriverEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.diskDriverEnabled"></a>
 
 ```csharp
-public object DiskDriverEnabled { get; }
+public bool|IResolvable DiskDriverEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `FileDriverEnabled`<sup>Required</sup> <a name="FileDriverEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.fileDriverEnabled"></a>
 
 ```csharp
-public object FileDriverEnabled { get; }
+public bool|IResolvable FileDriverEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `SnapshotControllerEnabled`<sup>Required</sup> <a name="SnapshotControllerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterStorageProfileOutputReference.property.snapshotControllerEnabled"></a>
 
 ```csharp
-public object SnapshotControllerEnabled { get; }
+public bool|IResolvable SnapshotControllerEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -28021,7 +28021,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.read">Read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -28132,10 +28132,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|KubernetesClusterTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterTimeouts">KubernetesClusterTimeouts</a>
 
 ---
 
@@ -28358,9 +28358,9 @@ private void ResetEffectiveUntil()
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverrideOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverrideOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverrideOutputReference.property.effectiveUntilInput">EffectiveUntilInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverrideOutputReference.property.forceUpgradeEnabledInput">ForceUpgradeEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverrideOutputReference.property.forceUpgradeEnabledInput">ForceUpgradeEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverrideOutputReference.property.effectiveUntil">EffectiveUntil</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverrideOutputReference.property.forceUpgradeEnabled">ForceUpgradeEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverrideOutputReference.property.forceUpgradeEnabled">ForceUpgradeEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverrideOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverride">KubernetesClusterUpgradeOverride</a></code> | *No description.* |
 
 ---
@@ -28402,10 +28402,10 @@ public string EffectiveUntilInput { get; }
 ##### `ForceUpgradeEnabledInput`<sup>Optional</sup> <a name="ForceUpgradeEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverrideOutputReference.property.forceUpgradeEnabledInput"></a>
 
 ```csharp
-public object ForceUpgradeEnabledInput { get; }
+public bool|IResolvable ForceUpgradeEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -28422,10 +28422,10 @@ public string EffectiveUntil { get; }
 ##### `ForceUpgradeEnabled`<sup>Required</sup> <a name="ForceUpgradeEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterUpgradeOverrideOutputReference.property.forceUpgradeEnabled"></a>
 
 ```csharp
-public object ForceUpgradeEnabled { get; }
+public bool|IResolvable ForceUpgradeEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -30081,10 +30081,10 @@ private void ResetVerticalPodAutoscalerEnabled()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabledInput">KedaEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabledInput">VerticalPodAutoscalerEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabled">KedaEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabled">VerticalPodAutoscalerEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabledInput">KedaEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabledInput">VerticalPodAutoscalerEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabled">KedaEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabled">VerticalPodAutoscalerEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfile">KubernetesClusterWorkloadAutoscalerProfile</a></code> | *No description.* |
 
 ---
@@ -30116,40 +30116,40 @@ public string Fqn { get; }
 ##### `KedaEnabledInput`<sup>Optional</sup> <a name="KedaEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabledInput"></a>
 
 ```csharp
-public object KedaEnabledInput { get; }
+public bool|IResolvable KedaEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `VerticalPodAutoscalerEnabledInput`<sup>Optional</sup> <a name="VerticalPodAutoscalerEnabledInput" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabledInput"></a>
 
 ```csharp
-public object VerticalPodAutoscalerEnabledInput { get; }
+public bool|IResolvable VerticalPodAutoscalerEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `KedaEnabled`<sup>Required</sup> <a name="KedaEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.kedaEnabled"></a>
 
 ```csharp
-public object KedaEnabled { get; }
+public bool|IResolvable KedaEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `VerticalPodAutoscalerEnabled`<sup>Required</sup> <a name="VerticalPodAutoscalerEnabled" id="@cdktf/provider-azurerm.kubernetesCluster.KubernetesClusterWorkloadAutoscalerProfileOutputReference.property.verticalPodAutoscalerEnabled"></a>
 
 ```csharp
-public object VerticalPodAutoscalerEnabled { get; }
+public bool|IResolvable VerticalPodAutoscalerEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
