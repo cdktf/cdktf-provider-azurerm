@@ -14,15 +14,15 @@ from cdktf_cdktf_provider_azurerm import dns_srv_record
 dnsSrvRecord.DnsSrvRecord(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
-  record: typing.Union[IResolvable, typing.List[DnsSrvRecordRecord]],
+  record: IResolvable | typing.List[DnsSrvRecordRecord],
   resource_group_name: str,
   ttl: typing.Union[int, float],
   zone_name: str,
@@ -36,15 +36,15 @@ dnsSrvRecord.DnsSrvRecord(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/dns_srv_record#name DnsSrvRecord#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.record">record</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]]</code> | record block. |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.record">record</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]</code> | record block. |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/dns_srv_record#resource_group_name DnsSrvRecord#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.ttl">ttl</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/dns_srv_record#ttl DnsSrvRecord#ttl}. |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.zoneName">zone_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/dns_srv_record#zone_name DnsSrvRecord#zone_name}. |
@@ -74,13 +74,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `record`<sup>Required</sup> <a name="record" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.Initializer.parameter.record"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]
 
 record block.
 
@@ -442,7 +442,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.importFrom"></a>
@@ -505,7 +505,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -521,7 +521,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -549,13 +549,13 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_record(
-  value: typing.Union[IResolvable, typing.List[DnsSrvRecordRecord]]
+  value: IResolvable | typing.List[DnsSrvRecordRecord]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.putRecord.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]
 
 ---
 
@@ -757,22 +757,22 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.fqdn">fqdn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.record">record</a></code> | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordList">DnsSrvRecordRecordList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeoutsOutputReference">DnsSrvRecordTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.recordInput">record_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.recordInput">record_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeouts">DnsSrvRecordTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeouts">DnsSrvRecordTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.ttlInput">ttl_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.zoneNameInput">zone_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -859,20 +859,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -919,10 +919,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -979,10 +979,10 @@ name_input: str
 ##### `record_input`<sup>Optional</sup> <a name="record_input" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.recordInput"></a>
 
 ```python
-record_input: typing.Union[IResolvable, typing.List[DnsSrvRecordRecord]]
+record_input: IResolvable | typing.List[DnsSrvRecordRecord]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]
 
 ---
 
@@ -1009,10 +1009,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecord.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, DnsSrvRecordTimeouts]
+timeouts_input: IResolvable | DnsSrvRecordTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeouts">DnsSrvRecordTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeouts">DnsSrvRecordTimeouts</a>
 
 ---
 
@@ -1124,15 +1124,15 @@ tfResourceType: str
 from cdktf_cdktf_provider_azurerm import dns_srv_record
 
 dnsSrvRecord.DnsSrvRecordConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
-  record: typing.Union[IResolvable, typing.List[DnsSrvRecordRecord]],
+  record: IResolvable | typing.List[DnsSrvRecordRecord],
   resource_group_name: str,
   ttl: typing.Union[int, float],
   zone_name: str,
@@ -1146,15 +1146,15 @@ dnsSrvRecord.DnsSrvRecordConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/dns_srv_record#name DnsSrvRecord#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.record">record</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]]</code> | record block. |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.record">record</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]</code> | record block. |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/dns_srv_record#resource_group_name DnsSrvRecord#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.ttl">ttl</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/dns_srv_record#ttl DnsSrvRecord#ttl}. |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.zoneName">zone_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/dns_srv_record#zone_name DnsSrvRecord#zone_name}. |
@@ -1167,20 +1167,20 @@ dnsSrvRecord.DnsSrvRecordConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1227,10 +1227,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1249,10 +1249,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `record`<sup>Required</sup> <a name="record" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordConfig.property.record"></a>
 
 ```python
-record: typing.Union[IResolvable, typing.List[DnsSrvRecordRecord]]
+record: IResolvable | typing.List[DnsSrvRecordRecord]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]
 
 record block.
 
@@ -1618,7 +1618,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]</code> | *No description.* |
 
 ---
 
@@ -1649,10 +1649,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[DnsSrvRecordRecord]]
+internal_value: IResolvable | typing.List[DnsSrvRecordRecord]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]
 
 ---
 
@@ -1920,7 +1920,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordOutputReference.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordOutputReference.property.target">target</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordOutputReference.property.weight">weight</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a></code> | *No description.* |
 
 ---
 
@@ -2031,10 +2031,10 @@ weight: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecordOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DnsSrvRecordRecord]
+internal_value: IResolvable | DnsSrvRecordRecord
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordRecord">DnsSrvRecordRecord</a>
 
 ---
 
@@ -2310,7 +2310,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeouts">DnsSrvRecordTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeouts">DnsSrvRecordTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2421,10 +2421,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, DnsSrvRecordTimeouts]
+internal_value: IResolvable | DnsSrvRecordTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeouts">DnsSrvRecordTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.dnsSrvRecord.DnsSrvRecordTimeouts">DnsSrvRecordTimeouts</a>
 
 ---
 

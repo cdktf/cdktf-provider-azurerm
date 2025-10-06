@@ -14,17 +14,17 @@ from cdktf_cdktf_provider_azurerm import route_map
 routeMap.RouteMap(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
   virtual_hub_id: str,
   id: str = None,
-  rule: typing.Union[IResolvable, typing.List[RouteMapRule]] = None,
+  rule: IResolvable | typing.List[RouteMapRule] = None,
   timeouts: RouteMapTimeouts = None
 )
 ```
@@ -33,17 +33,17 @@ routeMap.RouteMap(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/route_map#name RouteMap#name}. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.virtualHubId">virtual_hub_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/route_map#virtual_hub_id RouteMap#virtual_hub_id}. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/route_map#id RouteMap#id}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.rule">rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]]</code> | rule block. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.rule">rule</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]</code> | rule block. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts">RouteMapTimeouts</a></code> | timeouts block. |
 
 ---
@@ -68,13 +68,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -104,7 +104,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -137,7 +137,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 ##### `rule`<sup>Optional</sup> <a name="rule" id="@cdktf/provider-azurerm.routeMap.RouteMap.Initializer.parameter.rule"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]
 
 rule block.
 
@@ -412,7 +412,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.routeMap.RouteMap.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.routeMap.RouteMap.importFrom"></a>
@@ -475,7 +475,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -491,7 +491,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.routeMap.RouteMap.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -519,13 +519,13 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_rule(
-  value: typing.Union[IResolvable, typing.List[RouteMapRule]]
+  value: IResolvable | typing.List[RouteMapRule]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.routeMap.RouteMap.putRule.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]
 
 ---
 
@@ -727,19 +727,19 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.rule">rule</a></code> | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleList">RouteMapRuleList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeoutsOutputReference">RouteMapTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.ruleInput">rule_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts">RouteMapTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.ruleInput">rule_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts">RouteMapTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.virtualHubIdInput">virtual_hub_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMap.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -822,20 +822,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.routeMap.RouteMap.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.routeMap.RouteMap.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -882,10 +882,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.routeMap.RouteMap.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -932,20 +932,20 @@ name_input: str
 ##### `rule_input`<sup>Optional</sup> <a name="rule_input" id="@cdktf/provider-azurerm.routeMap.RouteMap.property.ruleInput"></a>
 
 ```python
-rule_input: typing.Union[IResolvable, typing.List[RouteMapRule]]
+rule_input: IResolvable | typing.List[RouteMapRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]
 
 ---
 
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.routeMap.RouteMap.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, RouteMapTimeouts]
+timeouts_input: IResolvable | RouteMapTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts">RouteMapTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts">RouteMapTimeouts</a>
 
 ---
 
@@ -1017,17 +1017,17 @@ tfResourceType: str
 from cdktf_cdktf_provider_azurerm import route_map
 
 routeMap.RouteMapConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
   virtual_hub_id: str,
   id: str = None,
-  rule: typing.Union[IResolvable, typing.List[RouteMapRule]] = None,
+  rule: IResolvable | typing.List[RouteMapRule] = None,
   timeouts: RouteMapTimeouts = None
 )
 ```
@@ -1036,17 +1036,17 @@ routeMap.RouteMapConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/route_map#name RouteMap#name}. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.virtualHubId">virtual_hub_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/route_map#virtual_hub_id RouteMap#virtual_hub_id}. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/route_map#id RouteMap#id}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.rule">rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]]</code> | rule block. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.rule">rule</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]</code> | rule block. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts">RouteMapTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1054,20 +1054,20 @@ routeMap.RouteMapConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1114,10 +1114,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1163,10 +1163,10 @@ If you experience problems setting this value it might not be settable. Please t
 ##### `rule`<sup>Optional</sup> <a name="rule" id="@cdktf/provider-azurerm.routeMap.RouteMapConfig.property.rule"></a>
 
 ```python
-rule: typing.Union[IResolvable, typing.List[RouteMapRule]]
+rule: IResolvable | typing.List[RouteMapRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]
 
 rule block.
 
@@ -1197,8 +1197,8 @@ from cdktf_cdktf_provider_azurerm import route_map
 
 routeMap.RouteMapRule(
   name: str,
-  action: typing.Union[IResolvable, typing.List[RouteMapRuleAction]] = None,
-  match_criterion: typing.Union[IResolvable, typing.List[RouteMapRuleMatchCriterion]] = None,
+  action: IResolvable | typing.List[RouteMapRuleAction] = None,
+  match_criterion: IResolvable | typing.List[RouteMapRuleMatchCriterion] = None,
   next_step_if_matched: str = None
 )
 ```
@@ -1208,8 +1208,8 @@ routeMap.RouteMapRule(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/route_map#name RouteMap#name}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.action">action</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]]</code> | action block. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.matchCriterion">match_criterion</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]]</code> | match_criterion block. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.action">action</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]</code> | action block. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.matchCriterion">match_criterion</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]</code> | match_criterion block. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule.property.nextStepIfMatched">next_step_if_matched</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/route_map#next_step_if_matched RouteMap#next_step_if_matched}. |
 
 ---
@@ -1229,10 +1229,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `action`<sup>Optional</sup> <a name="action" id="@cdktf/provider-azurerm.routeMap.RouteMapRule.property.action"></a>
 
 ```python
-action: typing.Union[IResolvable, typing.List[RouteMapRuleAction]]
+action: IResolvable | typing.List[RouteMapRuleAction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]
 
 action block.
 
@@ -1243,10 +1243,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `match_criterion`<sup>Optional</sup> <a name="match_criterion" id="@cdktf/provider-azurerm.routeMap.RouteMapRule.property.matchCriterion"></a>
 
 ```python
-match_criterion: typing.Union[IResolvable, typing.List[RouteMapRuleMatchCriterion]]
+match_criterion: IResolvable | typing.List[RouteMapRuleMatchCriterion]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]
 
 match_criterion block.
 
@@ -1275,7 +1275,7 @@ from cdktf_cdktf_provider_azurerm import route_map
 
 routeMap.RouteMapRuleAction(
   type: str,
-  parameter: typing.Union[IResolvable, typing.List[RouteMapRuleActionParameter]] = None
+  parameter: IResolvable | typing.List[RouteMapRuleActionParameter] = None
 )
 ```
 
@@ -1284,7 +1284,7 @@ routeMap.RouteMapRuleAction(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/route_map#type RouteMap#type}. |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction.property.parameter">parameter</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]]</code> | parameter block. |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction.property.parameter">parameter</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]</code> | parameter block. |
 
 ---
 
@@ -1303,10 +1303,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `parameter`<sup>Optional</sup> <a name="parameter" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleAction.property.parameter"></a>
 
 ```python
-parameter: typing.Union[IResolvable, typing.List[RouteMapRuleActionParameter]]
+parameter: IResolvable | typing.List[RouteMapRuleActionParameter]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]
 
 parameter block.
 
@@ -1655,7 +1655,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]</code> | *No description.* |
 
 ---
 
@@ -1686,10 +1686,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleActionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[RouteMapRuleAction]]
+internal_value: IResolvable | typing.List[RouteMapRuleAction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]
 
 ---
 
@@ -1948,13 +1948,13 @@ Returns a reversible string representation.
 
 ```python
 def put_parameter(
-  value: typing.Union[IResolvable, typing.List[RouteMapRuleActionParameter]]
+  value: IResolvable | typing.List[RouteMapRuleActionParameter]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.putParameter.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]
 
 ---
 
@@ -1972,10 +1972,10 @@ def reset_parameter() -> None
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.property.parameter">parameter</a></code> | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterList">RouteMapRuleActionParameterList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.property.parameterInput">parameter_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.property.parameterInput">parameter_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.property.typeInput">type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a></code> | *No description.* |
 
 ---
 
@@ -2016,10 +2016,10 @@ parameter: RouteMapRuleActionParameterList
 ##### `parameter_input`<sup>Optional</sup> <a name="parameter_input" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.property.parameterInput"></a>
 
 ```python
-parameter_input: typing.Union[IResolvable, typing.List[RouteMapRuleActionParameter]]
+parameter_input: IResolvable | typing.List[RouteMapRuleActionParameter]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]
 
 ---
 
@@ -2046,10 +2046,10 @@ type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleActionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, RouteMapRuleAction]
+internal_value: IResolvable | RouteMapRuleAction
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>
 
 ---
 
@@ -2185,7 +2185,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]</code> | *No description.* |
 
 ---
 
@@ -2216,10 +2216,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[RouteMapRuleActionParameter]]
+internal_value: IResolvable | typing.List[RouteMapRuleActionParameter]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]
 
 ---
 
@@ -2506,7 +2506,7 @@ def reset_route_prefix() -> None
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterOutputReference.property.asPath">as_path</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterOutputReference.property.community">community</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterOutputReference.property.routePrefix">route_prefix</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a></code> | *No description.* |
 
 ---
 
@@ -2597,10 +2597,10 @@ route_prefix: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameterOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, RouteMapRuleActionParameter]
+internal_value: IResolvable | RouteMapRuleActionParameter
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionParameter">RouteMapRuleActionParameter</a>
 
 ---
 
@@ -2736,7 +2736,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]</code> | *No description.* |
 
 ---
 
@@ -2767,10 +2767,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[RouteMapRule]]
+internal_value: IResolvable | typing.List[RouteMapRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]
 
 ---
 
@@ -2906,7 +2906,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]</code> | *No description.* |
 
 ---
 
@@ -2937,10 +2937,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[RouteMapRuleMatchCriterion]]
+internal_value: IResolvable | typing.List[RouteMapRuleMatchCriterion]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]
 
 ---
 
@@ -3229,7 +3229,7 @@ def reset_route_prefix() -> None
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionOutputReference.property.community">community</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionOutputReference.property.matchCondition">match_condition</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionOutputReference.property.routePrefix">route_prefix</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a></code> | *No description.* |
 
 ---
 
@@ -3340,10 +3340,10 @@ route_prefix: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, RouteMapRuleMatchCriterion]
+internal_value: IResolvable | RouteMapRuleMatchCriterion
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>
 
 ---
 
@@ -3605,13 +3605,13 @@ Returns a reversible string representation.
 
 ```python
 def put_action(
-  value: typing.Union[IResolvable, typing.List[RouteMapRuleAction]]
+  value: IResolvable | typing.List[RouteMapRuleAction]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.putAction.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]
 
 ---
 
@@ -3619,13 +3619,13 @@ def put_action(
 
 ```python
 def put_match_criterion(
-  value: typing.Union[IResolvable, typing.List[RouteMapRuleMatchCriterion]]
+  value: IResolvable | typing.List[RouteMapRuleMatchCriterion]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.putMatchCriterion.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]
 
 ---
 
@@ -3656,13 +3656,13 @@ def reset_next_step_if_matched() -> None
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.action">action</a></code> | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleActionList">RouteMapRuleActionList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.matchCriterion">match_criterion</a></code> | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterionList">RouteMapRuleMatchCriterionList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.actionInput">action_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.matchCriterionInput">match_criterion_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.actionInput">action_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.matchCriterionInput">match_criterion_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.nextStepIfMatchedInput">next_step_if_matched_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.nextStepIfMatched">next_step_if_matched</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a></code> | *No description.* |
 
 ---
 
@@ -3713,20 +3713,20 @@ match_criterion: RouteMapRuleMatchCriterionList
 ##### `action_input`<sup>Optional</sup> <a name="action_input" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.actionInput"></a>
 
 ```python
-action_input: typing.Union[IResolvable, typing.List[RouteMapRuleAction]]
+action_input: IResolvable | typing.List[RouteMapRuleAction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleAction">RouteMapRuleAction</a>]
 
 ---
 
 ##### `match_criterion_input`<sup>Optional</sup> <a name="match_criterion_input" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.matchCriterionInput"></a>
 
 ```python
-match_criterion_input: typing.Union[IResolvable, typing.List[RouteMapRuleMatchCriterion]]
+match_criterion_input: IResolvable | typing.List[RouteMapRuleMatchCriterion]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.routeMap.RouteMapRuleMatchCriterion">RouteMapRuleMatchCriterion</a>]
 
 ---
 
@@ -3773,10 +3773,10 @@ next_step_if_matched: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.routeMap.RouteMapRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, RouteMapRule]
+internal_value: IResolvable | RouteMapRule
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.routeMap.RouteMapRule">RouteMapRule</a>
 
 ---
 
@@ -4052,7 +4052,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts">RouteMapTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts">RouteMapTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -4163,10 +4163,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.routeMap.RouteMapTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, RouteMapTimeouts]
+internal_value: IResolvable | RouteMapTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts">RouteMapTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.routeMap.RouteMapTimeouts">RouteMapTimeouts</a>
 
 ---
 

@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 cdnFrontdoorRule.CdnFrontdoorRule(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   actions: CdnFrontdoorRuleActions,
   cdn_frontdoor_rule_set_id: str,
   name: str,
@@ -36,13 +36,13 @@ cdnFrontdoorRule.CdnFrontdoorRule(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.actions">actions</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActions">CdnFrontdoorRuleActions</a></code> | actions block. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.cdnFrontdoorRuleSetId">cdn_frontdoor_rule_set_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#cdn_frontdoor_rule_set_id CdnFrontdoorRule#cdn_frontdoor_rule_set_id}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#name CdnFrontdoorRule#name}. |
@@ -74,13 +74,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -446,7 +446,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.importFrom"></a>
@@ -509,7 +509,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -525,7 +525,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -553,8 +553,8 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_actions(
-  request_header_action: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsRequestHeaderAction]] = None,
-  response_header_action: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsResponseHeaderAction]] = None,
+  request_header_action: IResolvable | typing.List[CdnFrontdoorRuleActionsRequestHeaderAction] = None,
+  response_header_action: IResolvable | typing.List[CdnFrontdoorRuleActionsResponseHeaderAction] = None,
   route_configuration_override_action: CdnFrontdoorRuleActionsRouteConfigurationOverrideAction = None,
   url_redirect_action: CdnFrontdoorRuleActionsUrlRedirectAction = None,
   url_rewrite_action: CdnFrontdoorRuleActionsUrlRewriteAction = None
@@ -563,7 +563,7 @@ def put_actions(
 
 ###### `request_header_action`<sup>Optional</sup> <a name="request_header_action" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putActions.parameter.requestHeaderAction"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]
 
 request_header_action block.
 
@@ -573,7 +573,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `response_header_action`<sup>Optional</sup> <a name="response_header_action" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putActions.parameter.responseHeaderAction"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]
 
 response_header_action block.
 
@@ -615,31 +615,31 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_conditions(
-  client_port_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsClientPortCondition]] = None,
-  cookies_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsCookiesCondition]] = None,
-  host_name_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHostNameCondition]] = None,
-  http_version_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition]] = None,
-  is_device_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition]] = None,
-  post_args_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsPostArgsCondition]] = None,
-  query_string_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsQueryStringCondition]] = None,
-  remote_address_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition]] = None,
-  request_body_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition]] = None,
-  request_header_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition]] = None,
-  request_method_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition]] = None,
-  request_scheme_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition]] = None,
-  request_uri_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestUriCondition]] = None,
-  server_port_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsServerPortCondition]] = None,
-  socket_address_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition]] = None,
-  ssl_protocol_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition]] = None,
-  url_file_extension_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition]] = None,
-  url_filename_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition]] = None,
-  url_path_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlPathCondition]] = None
+  client_port_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsClientPortCondition] = None,
+  cookies_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsCookiesCondition] = None,
+  host_name_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsHostNameCondition] = None,
+  http_version_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition] = None,
+  is_device_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition] = None,
+  post_args_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsPostArgsCondition] = None,
+  query_string_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsQueryStringCondition] = None,
+  remote_address_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition] = None,
+  request_body_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition] = None,
+  request_header_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition] = None,
+  request_method_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition] = None,
+  request_scheme_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition] = None,
+  request_uri_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestUriCondition] = None,
+  server_port_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsServerPortCondition] = None,
+  socket_address_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition] = None,
+  ssl_protocol_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition] = None,
+  url_file_extension_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition] = None,
+  url_filename_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition] = None,
+  url_path_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlPathCondition] = None
 ) -> None
 ```
 
 ###### `client_port_condition`<sup>Optional</sup> <a name="client_port_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.clientPortCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]
 
 client_port_condition block.
 
@@ -649,7 +649,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `cookies_condition`<sup>Optional</sup> <a name="cookies_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.cookiesCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]
 
 cookies_condition block.
 
@@ -659,7 +659,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `host_name_condition`<sup>Optional</sup> <a name="host_name_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.hostNameCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]
 
 host_name_condition block.
 
@@ -669,7 +669,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `http_version_condition`<sup>Optional</sup> <a name="http_version_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.httpVersionCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]
 
 http_version_condition block.
 
@@ -679,7 +679,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `is_device_condition`<sup>Optional</sup> <a name="is_device_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.isDeviceCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]
 
 is_device_condition block.
 
@@ -689,7 +689,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `post_args_condition`<sup>Optional</sup> <a name="post_args_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.postArgsCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]
 
 post_args_condition block.
 
@@ -699,7 +699,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `query_string_condition`<sup>Optional</sup> <a name="query_string_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.queryStringCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]
 
 query_string_condition block.
 
@@ -709,7 +709,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `remote_address_condition`<sup>Optional</sup> <a name="remote_address_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.remoteAddressCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]
 
 remote_address_condition block.
 
@@ -719,7 +719,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `request_body_condition`<sup>Optional</sup> <a name="request_body_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.requestBodyCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]
 
 request_body_condition block.
 
@@ -729,7 +729,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `request_header_condition`<sup>Optional</sup> <a name="request_header_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.requestHeaderCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]
 
 request_header_condition block.
 
@@ -739,7 +739,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `request_method_condition`<sup>Optional</sup> <a name="request_method_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.requestMethodCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]
 
 request_method_condition block.
 
@@ -749,7 +749,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `request_scheme_condition`<sup>Optional</sup> <a name="request_scheme_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.requestSchemeCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]
 
 request_scheme_condition block.
 
@@ -759,7 +759,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `request_uri_condition`<sup>Optional</sup> <a name="request_uri_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.requestUriCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]
 
 request_uri_condition block.
 
@@ -769,7 +769,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `server_port_condition`<sup>Optional</sup> <a name="server_port_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.serverPortCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]
 
 server_port_condition block.
 
@@ -779,7 +779,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `socket_address_condition`<sup>Optional</sup> <a name="socket_address_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.socketAddressCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]
 
 socket_address_condition block.
 
@@ -789,7 +789,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `ssl_protocol_condition`<sup>Optional</sup> <a name="ssl_protocol_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.sslProtocolCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]
 
 ssl_protocol_condition block.
 
@@ -799,7 +799,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `url_file_extension_condition`<sup>Optional</sup> <a name="url_file_extension_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.urlFileExtensionCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]
 
 url_file_extension_condition block.
 
@@ -809,7 +809,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `url_filename_condition`<sup>Optional</sup> <a name="url_filename_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.urlFilenameCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]
 
 url_filename_condition block.
 
@@ -819,7 +819,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `url_path_condition`<sup>Optional</sup> <a name="url_path_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.putConditions.parameter.urlPathCondition"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]
 
 url_path_condition block.
 
@@ -1031,13 +1031,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.actions">actions</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference">CdnFrontdoorRuleActionsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.cdnFrontdoorRuleSetName">cdn_frontdoor_rule_set_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.conditions">conditions</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference">CdnFrontdoorRuleConditionsOutputReference</a></code> | *No description.* |
@@ -1049,7 +1049,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.orderInput">order_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeouts">CdnFrontdoorRuleTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeouts">CdnFrontdoorRuleTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.behaviorOnMatch">behavior_on_match</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.cdnFrontdoorRuleSetId">cdn_frontdoor_rule_set_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -1133,20 +1133,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1193,10 +1193,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1313,10 +1313,10 @@ order_input: typing.Union[int, float]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRule.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, CdnFrontdoorRuleTimeouts]
+timeouts_input: IResolvable | CdnFrontdoorRuleTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeouts">CdnFrontdoorRuleTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeouts">CdnFrontdoorRuleTimeouts</a>
 
 ---
 
@@ -1398,8 +1398,8 @@ tfResourceType: str
 from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 
 cdnFrontdoorRule.CdnFrontdoorRuleActions(
-  request_header_action: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsRequestHeaderAction]] = None,
-  response_header_action: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsResponseHeaderAction]] = None,
+  request_header_action: IResolvable | typing.List[CdnFrontdoorRuleActionsRequestHeaderAction] = None,
+  response_header_action: IResolvable | typing.List[CdnFrontdoorRuleActionsResponseHeaderAction] = None,
   route_configuration_override_action: CdnFrontdoorRuleActionsRouteConfigurationOverrideAction = None,
   url_redirect_action: CdnFrontdoorRuleActionsUrlRedirectAction = None,
   url_rewrite_action: CdnFrontdoorRuleActionsUrlRewriteAction = None
@@ -1410,8 +1410,8 @@ cdnFrontdoorRule.CdnFrontdoorRuleActions(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActions.property.requestHeaderAction">request_header_action</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]]</code> | request_header_action block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActions.property.responseHeaderAction">response_header_action</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]]</code> | response_header_action block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActions.property.requestHeaderAction">request_header_action</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]</code> | request_header_action block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActions.property.responseHeaderAction">response_header_action</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]</code> | response_header_action block. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActions.property.routeConfigurationOverrideAction">route_configuration_override_action</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction">CdnFrontdoorRuleActionsRouteConfigurationOverrideAction</a></code> | route_configuration_override_action block. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActions.property.urlRedirectAction">url_redirect_action</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRedirectAction">CdnFrontdoorRuleActionsUrlRedirectAction</a></code> | url_redirect_action block. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActions.property.urlRewriteAction">url_rewrite_action</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteAction">CdnFrontdoorRuleActionsUrlRewriteAction</a></code> | url_rewrite_action block. |
@@ -1421,10 +1421,10 @@ cdnFrontdoorRule.CdnFrontdoorRuleActions(
 ##### `request_header_action`<sup>Optional</sup> <a name="request_header_action" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActions.property.requestHeaderAction"></a>
 
 ```python
-request_header_action: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsRequestHeaderAction]]
+request_header_action: IResolvable | typing.List[CdnFrontdoorRuleActionsRequestHeaderAction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]
 
 request_header_action block.
 
@@ -1435,10 +1435,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `response_header_action`<sup>Optional</sup> <a name="response_header_action" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActions.property.responseHeaderAction"></a>
 
 ```python
-response_header_action: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsResponseHeaderAction]]
+response_header_action: IResolvable | typing.List[CdnFrontdoorRuleActionsResponseHeaderAction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]
 
 response_header_action block.
 
@@ -1619,7 +1619,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction(
   cache_behavior: str = None,
   cache_duration: str = None,
   cdn_frontdoor_origin_group_id: str = None,
-  compression_enabled: typing.Union[bool, IResolvable] = None,
+  compression_enabled: bool | IResolvable = None,
   forwarding_protocol: str = None,
   query_string_caching_behavior: str = None,
   query_string_parameters: typing.List[str] = None
@@ -1633,7 +1633,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction(
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction.property.cacheBehavior">cache_behavior</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#cache_behavior CdnFrontdoorRule#cache_behavior}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction.property.cacheDuration">cache_duration</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#cache_duration CdnFrontdoorRule#cache_duration}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction.property.cdnFrontdoorOriginGroupId">cdn_frontdoor_origin_group_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#cdn_frontdoor_origin_group_id CdnFrontdoorRule#cdn_frontdoor_origin_group_id}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction.property.compressionEnabled">compression_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#compression_enabled CdnFrontdoorRule#compression_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction.property.compressionEnabled">compression_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#compression_enabled CdnFrontdoorRule#compression_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction.property.forwardingProtocol">forwarding_protocol</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#forwarding_protocol CdnFrontdoorRule#forwarding_protocol}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction.property.queryStringCachingBehavior">query_string_caching_behavior</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#query_string_caching_behavior CdnFrontdoorRule#query_string_caching_behavior}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction.property.queryStringParameters">query_string_parameters</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#query_string_parameters CdnFrontdoorRule#query_string_parameters}. |
@@ -1679,10 +1679,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `compression_enabled`<sup>Optional</sup> <a name="compression_enabled" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction.property.compressionEnabled"></a>
 
 ```python
-compression_enabled: typing.Union[bool, IResolvable]
+compression_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#compression_enabled CdnFrontdoorRule#compression_enabled}.
 
@@ -1836,7 +1836,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteAction(
   destination: str,
   source_pattern: str,
-  preserve_unmatched_path: typing.Union[bool, IResolvable] = None
+  preserve_unmatched_path: bool | IResolvable = None
 )
 ```
 
@@ -1846,7 +1846,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteAction(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteAction.property.destination">destination</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#destination CdnFrontdoorRule#destination}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteAction.property.sourcePattern">source_pattern</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#source_pattern CdnFrontdoorRule#source_pattern}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteAction.property.preserveUnmatchedPath">preserve_unmatched_path</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#preserve_unmatched_path CdnFrontdoorRule#preserve_unmatched_path}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteAction.property.preserveUnmatchedPath">preserve_unmatched_path</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#preserve_unmatched_path CdnFrontdoorRule#preserve_unmatched_path}. |
 
 ---
 
@@ -1877,10 +1877,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `preserve_unmatched_path`<sup>Optional</sup> <a name="preserve_unmatched_path" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteAction.property.preserveUnmatchedPath"></a>
 
 ```python
-preserve_unmatched_path: typing.Union[bool, IResolvable]
+preserve_unmatched_path: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#preserve_unmatched_path CdnFrontdoorRule#preserve_unmatched_path}.
 
@@ -1894,25 +1894,25 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 
 cdnFrontdoorRule.CdnFrontdoorRuleConditions(
-  client_port_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsClientPortCondition]] = None,
-  cookies_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsCookiesCondition]] = None,
-  host_name_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHostNameCondition]] = None,
-  http_version_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition]] = None,
-  is_device_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition]] = None,
-  post_args_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsPostArgsCondition]] = None,
-  query_string_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsQueryStringCondition]] = None,
-  remote_address_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition]] = None,
-  request_body_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition]] = None,
-  request_header_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition]] = None,
-  request_method_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition]] = None,
-  request_scheme_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition]] = None,
-  request_uri_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestUriCondition]] = None,
-  server_port_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsServerPortCondition]] = None,
-  socket_address_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition]] = None,
-  ssl_protocol_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition]] = None,
-  url_file_extension_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition]] = None,
-  url_filename_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition]] = None,
-  url_path_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlPathCondition]] = None
+  client_port_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsClientPortCondition] = None,
+  cookies_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsCookiesCondition] = None,
+  host_name_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsHostNameCondition] = None,
+  http_version_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition] = None,
+  is_device_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition] = None,
+  post_args_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsPostArgsCondition] = None,
+  query_string_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsQueryStringCondition] = None,
+  remote_address_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition] = None,
+  request_body_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition] = None,
+  request_header_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition] = None,
+  request_method_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition] = None,
+  request_scheme_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition] = None,
+  request_uri_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestUriCondition] = None,
+  server_port_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsServerPortCondition] = None,
+  socket_address_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition] = None,
+  ssl_protocol_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition] = None,
+  url_file_extension_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition] = None,
+  url_filename_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition] = None,
+  url_path_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlPathCondition] = None
 )
 ```
 
@@ -1920,35 +1920,35 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditions(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.clientPortCondition">client_port_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]]</code> | client_port_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.cookiesCondition">cookies_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]]</code> | cookies_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.hostNameCondition">host_name_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]]</code> | host_name_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.httpVersionCondition">http_version_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]]</code> | http_version_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.isDeviceCondition">is_device_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]]</code> | is_device_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.postArgsCondition">post_args_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]]</code> | post_args_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.queryStringCondition">query_string_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]]</code> | query_string_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.remoteAddressCondition">remote_address_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]]</code> | remote_address_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestBodyCondition">request_body_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]]</code> | request_body_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestHeaderCondition">request_header_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]]</code> | request_header_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestMethodCondition">request_method_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]]</code> | request_method_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestSchemeCondition">request_scheme_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]]</code> | request_scheme_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestUriCondition">request_uri_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]]</code> | request_uri_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.serverPortCondition">server_port_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]]</code> | server_port_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.socketAddressCondition">socket_address_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]]</code> | socket_address_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.sslProtocolCondition">ssl_protocol_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]]</code> | ssl_protocol_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.urlFileExtensionCondition">url_file_extension_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]]</code> | url_file_extension_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.urlFilenameCondition">url_filename_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]]</code> | url_filename_condition block. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.urlPathCondition">url_path_condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]]</code> | url_path_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.clientPortCondition">client_port_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]</code> | client_port_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.cookiesCondition">cookies_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]</code> | cookies_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.hostNameCondition">host_name_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]</code> | host_name_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.httpVersionCondition">http_version_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]</code> | http_version_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.isDeviceCondition">is_device_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]</code> | is_device_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.postArgsCondition">post_args_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]</code> | post_args_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.queryStringCondition">query_string_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]</code> | query_string_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.remoteAddressCondition">remote_address_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]</code> | remote_address_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestBodyCondition">request_body_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]</code> | request_body_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestHeaderCondition">request_header_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]</code> | request_header_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestMethodCondition">request_method_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]</code> | request_method_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestSchemeCondition">request_scheme_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]</code> | request_scheme_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestUriCondition">request_uri_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]</code> | request_uri_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.serverPortCondition">server_port_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]</code> | server_port_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.socketAddressCondition">socket_address_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]</code> | socket_address_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.sslProtocolCondition">ssl_protocol_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]</code> | ssl_protocol_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.urlFileExtensionCondition">url_file_extension_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]</code> | url_file_extension_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.urlFilenameCondition">url_filename_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]</code> | url_filename_condition block. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.urlPathCondition">url_path_condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]</code> | url_path_condition block. |
 
 ---
 
 ##### `client_port_condition`<sup>Optional</sup> <a name="client_port_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.clientPortCondition"></a>
 
 ```python
-client_port_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsClientPortCondition]]
+client_port_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsClientPortCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]
 
 client_port_condition block.
 
@@ -1959,10 +1959,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `cookies_condition`<sup>Optional</sup> <a name="cookies_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.cookiesCondition"></a>
 
 ```python
-cookies_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsCookiesCondition]]
+cookies_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsCookiesCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]
 
 cookies_condition block.
 
@@ -1973,10 +1973,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `host_name_condition`<sup>Optional</sup> <a name="host_name_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.hostNameCondition"></a>
 
 ```python
-host_name_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHostNameCondition]]
+host_name_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsHostNameCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]
 
 host_name_condition block.
 
@@ -1987,10 +1987,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `http_version_condition`<sup>Optional</sup> <a name="http_version_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.httpVersionCondition"></a>
 
 ```python
-http_version_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition]]
+http_version_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]
 
 http_version_condition block.
 
@@ -2001,10 +2001,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `is_device_condition`<sup>Optional</sup> <a name="is_device_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.isDeviceCondition"></a>
 
 ```python
-is_device_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition]]
+is_device_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]
 
 is_device_condition block.
 
@@ -2015,10 +2015,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `post_args_condition`<sup>Optional</sup> <a name="post_args_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.postArgsCondition"></a>
 
 ```python
-post_args_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsPostArgsCondition]]
+post_args_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsPostArgsCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]
 
 post_args_condition block.
 
@@ -2029,10 +2029,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `query_string_condition`<sup>Optional</sup> <a name="query_string_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.queryStringCondition"></a>
 
 ```python
-query_string_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsQueryStringCondition]]
+query_string_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsQueryStringCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]
 
 query_string_condition block.
 
@@ -2043,10 +2043,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `remote_address_condition`<sup>Optional</sup> <a name="remote_address_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.remoteAddressCondition"></a>
 
 ```python
-remote_address_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition]]
+remote_address_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]
 
 remote_address_condition block.
 
@@ -2057,10 +2057,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `request_body_condition`<sup>Optional</sup> <a name="request_body_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestBodyCondition"></a>
 
 ```python
-request_body_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition]]
+request_body_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]
 
 request_body_condition block.
 
@@ -2071,10 +2071,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `request_header_condition`<sup>Optional</sup> <a name="request_header_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestHeaderCondition"></a>
 
 ```python
-request_header_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition]]
+request_header_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]
 
 request_header_condition block.
 
@@ -2085,10 +2085,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `request_method_condition`<sup>Optional</sup> <a name="request_method_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestMethodCondition"></a>
 
 ```python
-request_method_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition]]
+request_method_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]
 
 request_method_condition block.
 
@@ -2099,10 +2099,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `request_scheme_condition`<sup>Optional</sup> <a name="request_scheme_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestSchemeCondition"></a>
 
 ```python
-request_scheme_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition]]
+request_scheme_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]
 
 request_scheme_condition block.
 
@@ -2113,10 +2113,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `request_uri_condition`<sup>Optional</sup> <a name="request_uri_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.requestUriCondition"></a>
 
 ```python
-request_uri_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestUriCondition]]
+request_uri_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestUriCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]
 
 request_uri_condition block.
 
@@ -2127,10 +2127,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `server_port_condition`<sup>Optional</sup> <a name="server_port_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.serverPortCondition"></a>
 
 ```python
-server_port_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsServerPortCondition]]
+server_port_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsServerPortCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]
 
 server_port_condition block.
 
@@ -2141,10 +2141,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `socket_address_condition`<sup>Optional</sup> <a name="socket_address_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.socketAddressCondition"></a>
 
 ```python
-socket_address_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition]]
+socket_address_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]
 
 socket_address_condition block.
 
@@ -2155,10 +2155,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ssl_protocol_condition`<sup>Optional</sup> <a name="ssl_protocol_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.sslProtocolCondition"></a>
 
 ```python
-ssl_protocol_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition]]
+ssl_protocol_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]
 
 ssl_protocol_condition block.
 
@@ -2169,10 +2169,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `url_file_extension_condition`<sup>Optional</sup> <a name="url_file_extension_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.urlFileExtensionCondition"></a>
 
 ```python
-url_file_extension_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition]]
+url_file_extension_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]
 
 url_file_extension_condition block.
 
@@ -2183,10 +2183,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `url_filename_condition`<sup>Optional</sup> <a name="url_filename_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.urlFilenameCondition"></a>
 
 ```python
-url_filename_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition]]
+url_filename_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]
 
 url_filename_condition block.
 
@@ -2197,10 +2197,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `url_path_condition`<sup>Optional</sup> <a name="url_path_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions.property.urlPathCondition"></a>
 
 ```python
-url_path_condition: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlPathCondition]]
+url_path_condition: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlPathCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]
 
 url_path_condition block.
 
@@ -2218,7 +2218,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition(
   operator: str,
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None
+  negate_condition: bool | IResolvable = None
 )
 ```
 
@@ -2228,7 +2228,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 
 ---
 
@@ -2259,10 +2259,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -2279,7 +2279,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition(
   cookie_name: str,
   operator: str,
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   transforms: typing.List[str] = None
 )
 ```
@@ -2291,7 +2291,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition(
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition.property.cookieName">cookie_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#cookie_name CdnFrontdoorRule#cookie_name}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#transforms CdnFrontdoorRule#transforms}. |
 
 ---
@@ -2335,10 +2335,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -2366,7 +2366,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition(
   operator: str,
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   transforms: typing.List[str] = None
 )
 ```
@@ -2377,7 +2377,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#transforms CdnFrontdoorRule#transforms}. |
 
 ---
@@ -2409,10 +2409,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -2439,7 +2439,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition(
   match_values: typing.List[str],
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   operator: str = None
 )
 ```
@@ -2449,7 +2449,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 
 ---
@@ -2469,10 +2469,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -2499,7 +2499,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition(
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   operator: str = None
 )
 ```
@@ -2509,7 +2509,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 
 ---
@@ -2529,10 +2529,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -2561,7 +2561,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition(
   operator: str,
   post_args_name: str,
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   transforms: typing.List[str] = None
 )
 ```
@@ -2573,7 +2573,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition(
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition.property.postArgsName">post_args_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#post_args_name CdnFrontdoorRule#post_args_name}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#transforms CdnFrontdoorRule#transforms}. |
 
 ---
@@ -2617,10 +2617,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -2648,7 +2648,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition(
   operator: str,
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   transforms: typing.List[str] = None
 )
 ```
@@ -2659,7 +2659,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#transforms CdnFrontdoorRule#transforms}. |
 
 ---
@@ -2691,10 +2691,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -2721,7 +2721,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition(
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   operator: str = None
 )
 ```
@@ -2731,7 +2731,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 
 ---
@@ -2751,10 +2751,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -2782,7 +2782,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition(
   match_values: typing.List[str],
   operator: str,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   transforms: typing.List[str] = None
 )
 ```
@@ -2793,7 +2793,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#transforms CdnFrontdoorRule#transforms}. |
 
 ---
@@ -2825,10 +2825,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -2857,7 +2857,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition(
   header_name: str,
   operator: str,
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   transforms: typing.List[str] = None
 )
 ```
@@ -2869,7 +2869,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition(
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition.property.headerName">header_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#header_name CdnFrontdoorRule#header_name}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#transforms CdnFrontdoorRule#transforms}. |
 
 ---
@@ -2913,10 +2913,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -2943,7 +2943,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition(
   match_values: typing.List[str],
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   operator: str = None
 )
 ```
@@ -2953,7 +2953,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 
 ---
@@ -2973,10 +2973,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -3003,7 +3003,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition(
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   operator: str = None
 )
 ```
@@ -3013,7 +3013,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 
 ---
@@ -3033,10 +3033,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -3064,7 +3064,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition(
   operator: str,
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   transforms: typing.List[str] = None
 )
 ```
@@ -3075,7 +3075,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#transforms CdnFrontdoorRule#transforms}. |
 
 ---
@@ -3107,10 +3107,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -3138,7 +3138,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition(
   match_values: typing.List[str],
   operator: str,
-  negate_condition: typing.Union[bool, IResolvable] = None
+  negate_condition: bool | IResolvable = None
 )
 ```
 
@@ -3148,7 +3148,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 
 ---
 
@@ -3179,10 +3179,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -3197,7 +3197,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition(
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   operator: str = None
 )
 ```
@@ -3207,7 +3207,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 
 ---
@@ -3227,10 +3227,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -3257,7 +3257,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition(
   match_values: typing.List[str],
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   operator: str = None
 )
 ```
@@ -3267,7 +3267,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 
 ---
@@ -3287,10 +3287,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -3318,7 +3318,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition(
   match_values: typing.List[str],
   operator: str,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   transforms: typing.List[str] = None
 )
 ```
@@ -3329,7 +3329,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#transforms CdnFrontdoorRule#transforms}. |
 
 ---
@@ -3361,10 +3361,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -3392,7 +3392,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition(
   operator: str,
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   transforms: typing.List[str] = None
 )
 ```
@@ -3403,7 +3403,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#transforms CdnFrontdoorRule#transforms}. |
 
 ---
@@ -3435,10 +3435,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -3466,7 +3466,7 @@ from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition(
   operator: str,
   match_values: typing.List[str] = None,
-  negate_condition: typing.Union[bool, IResolvable] = None,
+  negate_condition: bool | IResolvable = None,
   transforms: typing.List[str] = None
 )
 ```
@@ -3477,7 +3477,7 @@ cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition.property.operator">operator</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#operator CdnFrontdoorRule#operator}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#match_values CdnFrontdoorRule#match_values}. |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#transforms CdnFrontdoorRule#transforms}. |
 
 ---
@@ -3509,10 +3509,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate_condition`<sup>Optional</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#negate_condition CdnFrontdoorRule#negate_condition}.
 
@@ -3538,13 +3538,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import cdn_frontdoor_rule
 
 cdnFrontdoorRule.CdnFrontdoorRuleConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   actions: CdnFrontdoorRuleActions,
   cdn_frontdoor_rule_set_id: str,
   name: str,
@@ -3560,13 +3560,13 @@ cdnFrontdoorRule.CdnFrontdoorRuleConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.actions">actions</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActions">CdnFrontdoorRuleActions</a></code> | actions block. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.cdnFrontdoorRuleSetId">cdn_frontdoor_rule_set_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#cdn_frontdoor_rule_set_id CdnFrontdoorRule#cdn_frontdoor_rule_set_id}. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#name CdnFrontdoorRule#name}. |
@@ -3581,20 +3581,20 @@ cdnFrontdoorRule.CdnFrontdoorRuleConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -3641,10 +3641,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -4071,13 +4071,13 @@ Returns a reversible string representation.
 
 ```python
 def put_request_header_action(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsRequestHeaderAction]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleActionsRequestHeaderAction]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.putRequestHeaderAction.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]
 
 ---
 
@@ -4085,13 +4085,13 @@ def put_request_header_action(
 
 ```python
 def put_response_header_action(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsResponseHeaderAction]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleActionsResponseHeaderAction]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.putResponseHeaderAction.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]
 
 ---
 
@@ -4102,7 +4102,7 @@ def put_route_configuration_override_action(
   cache_behavior: str = None,
   cache_duration: str = None,
   cdn_frontdoor_origin_group_id: str = None,
-  compression_enabled: typing.Union[bool, IResolvable] = None,
+  compression_enabled: bool | IResolvable = None,
   forwarding_protocol: str = None,
   query_string_caching_behavior: str = None,
   query_string_parameters: typing.List[str] = None
@@ -4135,7 +4135,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `compression_enabled`<sup>Optional</sup> <a name="compression_enabled" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.putRouteConfigurationOverrideAction.parameter.compressionEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#compression_enabled CdnFrontdoorRule#compression_enabled}.
 
@@ -4232,7 +4232,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 def put_url_rewrite_action(
   destination: str,
   source_pattern: str,
-  preserve_unmatched_path: typing.Union[bool, IResolvable] = None
+  preserve_unmatched_path: bool | IResolvable = None
 ) -> None
 ```
 
@@ -4254,7 +4254,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `preserve_unmatched_path`<sup>Optional</sup> <a name="preserve_unmatched_path" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.putUrlRewriteAction.parameter.preserveUnmatchedPath"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/cdn_frontdoor_rule#preserve_unmatched_path CdnFrontdoorRule#preserve_unmatched_path}.
 
@@ -4302,8 +4302,8 @@ def reset_url_rewrite_action() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.routeConfigurationOverrideAction">route_configuration_override_action</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference">CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.urlRedirectAction">url_redirect_action</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRedirectActionOutputReference">CdnFrontdoorRuleActionsUrlRedirectActionOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.urlRewriteAction">url_rewrite_action</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference">CdnFrontdoorRuleActionsUrlRewriteActionOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.requestHeaderActionInput">request_header_action_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.responseHeaderActionInput">response_header_action_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.requestHeaderActionInput">request_header_action_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.responseHeaderActionInput">response_header_action_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.routeConfigurationOverrideActionInput">route_configuration_override_action_input</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideAction">CdnFrontdoorRuleActionsRouteConfigurationOverrideAction</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.urlRedirectActionInput">url_redirect_action_input</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRedirectAction">CdnFrontdoorRuleActionsUrlRedirectAction</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.urlRewriteActionInput">url_rewrite_action_input</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteAction">CdnFrontdoorRuleActionsUrlRewriteAction</a></code> | *No description.* |
@@ -4388,20 +4388,20 @@ url_rewrite_action: CdnFrontdoorRuleActionsUrlRewriteActionOutputReference
 ##### `request_header_action_input`<sup>Optional</sup> <a name="request_header_action_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.requestHeaderActionInput"></a>
 
 ```python
-request_header_action_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsRequestHeaderAction]]
+request_header_action_input: IResolvable | typing.List[CdnFrontdoorRuleActionsRequestHeaderAction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]
 
 ---
 
 ##### `response_header_action_input`<sup>Optional</sup> <a name="response_header_action_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsOutputReference.property.responseHeaderActionInput"></a>
 
 ```python
-response_header_action_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsResponseHeaderAction]]
+response_header_action_input: IResolvable | typing.List[CdnFrontdoorRuleActionsResponseHeaderAction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]
 
 ---
 
@@ -4577,7 +4577,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderActionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderActionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderActionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderActionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]</code> | *No description.* |
 
 ---
 
@@ -4608,10 +4608,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderActionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsRequestHeaderAction]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleActionsRequestHeaderAction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]
 
 ---
 
@@ -4884,7 +4884,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderActionOutputReference.property.headerAction">header_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderActionOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderActionOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderActionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderActionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a></code> | *No description.* |
 
 ---
 
@@ -4975,10 +4975,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderActionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleActionsRequestHeaderAction]
+internal_value: IResolvable | CdnFrontdoorRuleActionsRequestHeaderAction
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRequestHeaderAction">CdnFrontdoorRuleActionsRequestHeaderAction</a>
 
 ---
 
@@ -5114,7 +5114,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderActionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderActionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderActionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderActionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]</code> | *No description.* |
 
 ---
 
@@ -5145,10 +5145,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderActionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleActionsResponseHeaderAction]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleActionsResponseHeaderAction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]
 
 ---
 
@@ -5421,7 +5421,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderActionOutputReference.property.headerAction">header_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderActionOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderActionOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderActionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderActionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a></code> | *No description.* |
 
 ---
 
@@ -5512,10 +5512,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderActionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleActionsResponseHeaderAction]
+internal_value: IResolvable | CdnFrontdoorRuleActionsResponseHeaderAction
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsResponseHeaderAction">CdnFrontdoorRuleActionsResponseHeaderAction</a>
 
 ---
 
@@ -5807,14 +5807,14 @@ def reset_query_string_parameters() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.cacheBehaviorInput">cache_behavior_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.cacheDurationInput">cache_duration_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.cdnFrontdoorOriginGroupIdInput">cdn_frontdoor_origin_group_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.compressionEnabledInput">compression_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.compressionEnabledInput">compression_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.forwardingProtocolInput">forwarding_protocol_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.queryStringCachingBehaviorInput">query_string_caching_behavior_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.queryStringParametersInput">query_string_parameters_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.cacheBehavior">cache_behavior</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.cacheDuration">cache_duration</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.cdnFrontdoorOriginGroupId">cdn_frontdoor_origin_group_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.compressionEnabled">compression_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.compressionEnabled">compression_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.forwardingProtocol">forwarding_protocol</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.queryStringCachingBehavior">query_string_caching_behavior</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.queryStringParameters">query_string_parameters</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -5879,10 +5879,10 @@ cdn_frontdoor_origin_group_id_input: str
 ##### `compression_enabled_input`<sup>Optional</sup> <a name="compression_enabled_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.compressionEnabledInput"></a>
 
 ```python
-compression_enabled_input: typing.Union[bool, IResolvable]
+compression_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5949,10 +5949,10 @@ cdn_frontdoor_origin_group_id: str
 ##### `compression_enabled`<sup>Required</sup> <a name="compression_enabled" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsRouteConfigurationOverrideActionOutputReference.property.compressionEnabled"></a>
 
 ```python
-compression_enabled: typing.Union[bool, IResolvable]
+compression_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6674,10 +6674,10 @@ def reset_preserve_unmatched_path() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.destinationInput">destination_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.preserveUnmatchedPathInput">preserve_unmatched_path_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.preserveUnmatchedPathInput">preserve_unmatched_path_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.sourcePatternInput">source_pattern_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.destination">destination</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.preserveUnmatchedPath">preserve_unmatched_path</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.preserveUnmatchedPath">preserve_unmatched_path</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.sourcePattern">source_pattern</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteAction">CdnFrontdoorRuleActionsUrlRewriteAction</a></code> | *No description.* |
 
@@ -6720,10 +6720,10 @@ destination_input: str
 ##### `preserve_unmatched_path_input`<sup>Optional</sup> <a name="preserve_unmatched_path_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.preserveUnmatchedPathInput"></a>
 
 ```python
-preserve_unmatched_path_input: typing.Union[bool, IResolvable]
+preserve_unmatched_path_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6750,10 +6750,10 @@ destination: str
 ##### `preserve_unmatched_path`<sup>Required</sup> <a name="preserve_unmatched_path" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleActionsUrlRewriteActionOutputReference.property.preserveUnmatchedPath"></a>
 
 ```python
-preserve_unmatched_path: typing.Union[bool, IResolvable]
+preserve_unmatched_path: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6909,7 +6909,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -6940,10 +6940,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsClientPortCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsClientPortCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]
 
 ---
 
@@ -7218,12 +7218,12 @@ def reset_negate_condition() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a></code> | *No description.* |
 
 ---
 
@@ -7264,10 +7264,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7294,10 +7294,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7314,10 +7314,10 @@ operator: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsClientPortCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsClientPortCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>
 
 ---
 
@@ -7453,7 +7453,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -7484,10 +7484,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsCookiesCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsCookiesCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]
 
 ---
 
@@ -7770,15 +7770,15 @@ def reset_transforms() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.cookieNameInput">cookie_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.transformsInput">transforms_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.cookieName">cookie_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a></code> | *No description.* |
 
 ---
 
@@ -7829,10 +7829,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7879,10 +7879,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7909,10 +7909,10 @@ transforms: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsCookiesCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsCookiesCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>
 
 ---
 
@@ -8048,7 +8048,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -8079,10 +8079,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHostNameCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsHostNameCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]
 
 ---
 
@@ -8364,14 +8364,14 @@ def reset_transforms() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.transformsInput">transforms_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a></code> | *No description.* |
 
 ---
 
@@ -8412,10 +8412,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8452,10 +8452,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8482,10 +8482,10 @@ transforms: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsHostNameCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsHostNameCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>
 
 ---
 
@@ -8621,7 +8621,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -8652,10 +8652,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]
 
 ---
 
@@ -8930,12 +8930,12 @@ def reset_operator() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a></code> | *No description.* |
 
 ---
 
@@ -8976,10 +8976,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9006,10 +9006,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9026,10 +9026,10 @@ operator: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsHttpVersionCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsHttpVersionCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>
 
 ---
 
@@ -9165,7 +9165,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -9196,10 +9196,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]
 
 ---
 
@@ -9481,12 +9481,12 @@ def reset_operator() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a></code> | *No description.* |
 
 ---
 
@@ -9527,10 +9527,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9557,10 +9557,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9577,10 +9577,10 @@ operator: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsIsDeviceCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsIsDeviceCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>
 
 ---
 
@@ -9855,13 +9855,13 @@ Returns a reversible string representation.
 
 ```python
 def put_client_port_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsClientPortCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsClientPortCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putClientPortCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]
 
 ---
 
@@ -9869,13 +9869,13 @@ def put_client_port_condition(
 
 ```python
 def put_cookies_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsCookiesCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsCookiesCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putCookiesCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]
 
 ---
 
@@ -9883,13 +9883,13 @@ def put_cookies_condition(
 
 ```python
 def put_host_name_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHostNameCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsHostNameCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putHostNameCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]
 
 ---
 
@@ -9897,13 +9897,13 @@ def put_host_name_condition(
 
 ```python
 def put_http_version_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putHttpVersionCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]
 
 ---
 
@@ -9911,13 +9911,13 @@ def put_http_version_condition(
 
 ```python
 def put_is_device_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putIsDeviceCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]
 
 ---
 
@@ -9925,13 +9925,13 @@ def put_is_device_condition(
 
 ```python
 def put_post_args_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsPostArgsCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsPostArgsCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putPostArgsCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]
 
 ---
 
@@ -9939,13 +9939,13 @@ def put_post_args_condition(
 
 ```python
 def put_query_string_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsQueryStringCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsQueryStringCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putQueryStringCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]
 
 ---
 
@@ -9953,13 +9953,13 @@ def put_query_string_condition(
 
 ```python
 def put_remote_address_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putRemoteAddressCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]
 
 ---
 
@@ -9967,13 +9967,13 @@ def put_remote_address_condition(
 
 ```python
 def put_request_body_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putRequestBodyCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]
 
 ---
 
@@ -9981,13 +9981,13 @@ def put_request_body_condition(
 
 ```python
 def put_request_header_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putRequestHeaderCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]
 
 ---
 
@@ -9995,13 +9995,13 @@ def put_request_header_condition(
 
 ```python
 def put_request_method_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putRequestMethodCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]
 
 ---
 
@@ -10009,13 +10009,13 @@ def put_request_method_condition(
 
 ```python
 def put_request_scheme_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putRequestSchemeCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]
 
 ---
 
@@ -10023,13 +10023,13 @@ def put_request_scheme_condition(
 
 ```python
 def put_request_uri_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestUriCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestUriCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putRequestUriCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]
 
 ---
 
@@ -10037,13 +10037,13 @@ def put_request_uri_condition(
 
 ```python
 def put_server_port_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsServerPortCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsServerPortCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putServerPortCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]
 
 ---
 
@@ -10051,13 +10051,13 @@ def put_server_port_condition(
 
 ```python
 def put_socket_address_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putSocketAddressCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]
 
 ---
 
@@ -10065,13 +10065,13 @@ def put_socket_address_condition(
 
 ```python
 def put_ssl_protocol_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putSslProtocolCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]
 
 ---
 
@@ -10079,13 +10079,13 @@ def put_ssl_protocol_condition(
 
 ```python
 def put_url_file_extension_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putUrlFileExtensionCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]
 
 ---
 
@@ -10093,13 +10093,13 @@ def put_url_file_extension_condition(
 
 ```python
 def put_url_filename_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putUrlFilenameCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]
 
 ---
 
@@ -10107,13 +10107,13 @@ def put_url_filename_condition(
 
 ```python
 def put_url_path_condition(
-  value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlPathCondition]]
+  value: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlPathCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.putUrlPathCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]
 
 ---
 
@@ -10257,25 +10257,25 @@ def reset_url_path_condition() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlFileExtensionCondition">url_file_extension_condition</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionList">CdnFrontdoorRuleConditionsUrlFileExtensionConditionList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlFilenameCondition">url_filename_condition</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionList">CdnFrontdoorRuleConditionsUrlFilenameConditionList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlPathCondition">url_path_condition</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionList">CdnFrontdoorRuleConditionsUrlPathConditionList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.clientPortConditionInput">client_port_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.cookiesConditionInput">cookies_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.hostNameConditionInput">host_name_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.httpVersionConditionInput">http_version_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.isDeviceConditionInput">is_device_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.postArgsConditionInput">post_args_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.queryStringConditionInput">query_string_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.remoteAddressConditionInput">remote_address_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestBodyConditionInput">request_body_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestHeaderConditionInput">request_header_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestMethodConditionInput">request_method_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestSchemeConditionInput">request_scheme_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestUriConditionInput">request_uri_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.serverPortConditionInput">server_port_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.socketAddressConditionInput">socket_address_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.sslProtocolConditionInput">ssl_protocol_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlFileExtensionConditionInput">url_file_extension_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlFilenameConditionInput">url_filename_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlPathConditionInput">url_path_condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.clientPortConditionInput">client_port_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.cookiesConditionInput">cookies_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.hostNameConditionInput">host_name_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.httpVersionConditionInput">http_version_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.isDeviceConditionInput">is_device_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.postArgsConditionInput">post_args_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.queryStringConditionInput">query_string_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.remoteAddressConditionInput">remote_address_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestBodyConditionInput">request_body_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestHeaderConditionInput">request_header_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestMethodConditionInput">request_method_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestSchemeConditionInput">request_scheme_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestUriConditionInput">request_uri_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.serverPortConditionInput">server_port_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.socketAddressConditionInput">socket_address_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.sslProtocolConditionInput">ssl_protocol_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlFileExtensionConditionInput">url_file_extension_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlFilenameConditionInput">url_filename_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlPathConditionInput">url_path_condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditions">CdnFrontdoorRuleConditions</a></code> | *No description.* |
 
 ---
@@ -10497,190 +10497,190 @@ url_path_condition: CdnFrontdoorRuleConditionsUrlPathConditionList
 ##### `client_port_condition_input`<sup>Optional</sup> <a name="client_port_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.clientPortConditionInput"></a>
 
 ```python
-client_port_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsClientPortCondition]]
+client_port_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsClientPortCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsClientPortCondition">CdnFrontdoorRuleConditionsClientPortCondition</a>]
 
 ---
 
 ##### `cookies_condition_input`<sup>Optional</sup> <a name="cookies_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.cookiesConditionInput"></a>
 
 ```python
-cookies_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsCookiesCondition]]
+cookies_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsCookiesCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsCookiesCondition">CdnFrontdoorRuleConditionsCookiesCondition</a>]
 
 ---
 
 ##### `host_name_condition_input`<sup>Optional</sup> <a name="host_name_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.hostNameConditionInput"></a>
 
 ```python
-host_name_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHostNameCondition]]
+host_name_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsHostNameCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHostNameCondition">CdnFrontdoorRuleConditionsHostNameCondition</a>]
 
 ---
 
 ##### `http_version_condition_input`<sup>Optional</sup> <a name="http_version_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.httpVersionConditionInput"></a>
 
 ```python
-http_version_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition]]
+http_version_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsHttpVersionCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsHttpVersionCondition">CdnFrontdoorRuleConditionsHttpVersionCondition</a>]
 
 ---
 
 ##### `is_device_condition_input`<sup>Optional</sup> <a name="is_device_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.isDeviceConditionInput"></a>
 
 ```python
-is_device_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition]]
+is_device_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsIsDeviceCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsIsDeviceCondition">CdnFrontdoorRuleConditionsIsDeviceCondition</a>]
 
 ---
 
 ##### `post_args_condition_input`<sup>Optional</sup> <a name="post_args_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.postArgsConditionInput"></a>
 
 ```python
-post_args_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsPostArgsCondition]]
+post_args_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsPostArgsCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]
 
 ---
 
 ##### `query_string_condition_input`<sup>Optional</sup> <a name="query_string_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.queryStringConditionInput"></a>
 
 ```python
-query_string_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsQueryStringCondition]]
+query_string_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsQueryStringCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]
 
 ---
 
 ##### `remote_address_condition_input`<sup>Optional</sup> <a name="remote_address_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.remoteAddressConditionInput"></a>
 
 ```python
-remote_address_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition]]
+remote_address_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]
 
 ---
 
 ##### `request_body_condition_input`<sup>Optional</sup> <a name="request_body_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestBodyConditionInput"></a>
 
 ```python
-request_body_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition]]
+request_body_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]
 
 ---
 
 ##### `request_header_condition_input`<sup>Optional</sup> <a name="request_header_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestHeaderConditionInput"></a>
 
 ```python
-request_header_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition]]
+request_header_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]
 
 ---
 
 ##### `request_method_condition_input`<sup>Optional</sup> <a name="request_method_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestMethodConditionInput"></a>
 
 ```python
-request_method_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition]]
+request_method_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]
 
 ---
 
 ##### `request_scheme_condition_input`<sup>Optional</sup> <a name="request_scheme_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestSchemeConditionInput"></a>
 
 ```python
-request_scheme_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition]]
+request_scheme_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]
 
 ---
 
 ##### `request_uri_condition_input`<sup>Optional</sup> <a name="request_uri_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.requestUriConditionInput"></a>
 
 ```python
-request_uri_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestUriCondition]]
+request_uri_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestUriCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]
 
 ---
 
 ##### `server_port_condition_input`<sup>Optional</sup> <a name="server_port_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.serverPortConditionInput"></a>
 
 ```python
-server_port_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsServerPortCondition]]
+server_port_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsServerPortCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]
 
 ---
 
 ##### `socket_address_condition_input`<sup>Optional</sup> <a name="socket_address_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.socketAddressConditionInput"></a>
 
 ```python
-socket_address_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition]]
+socket_address_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]
 
 ---
 
 ##### `ssl_protocol_condition_input`<sup>Optional</sup> <a name="ssl_protocol_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.sslProtocolConditionInput"></a>
 
 ```python
-ssl_protocol_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition]]
+ssl_protocol_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]
 
 ---
 
 ##### `url_file_extension_condition_input`<sup>Optional</sup> <a name="url_file_extension_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlFileExtensionConditionInput"></a>
 
 ```python
-url_file_extension_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition]]
+url_file_extension_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]
 
 ---
 
 ##### `url_filename_condition_input`<sup>Optional</sup> <a name="url_filename_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlFilenameConditionInput"></a>
 
 ```python
-url_filename_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition]]
+url_filename_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]
 
 ---
 
 ##### `url_path_condition_input`<sup>Optional</sup> <a name="url_path_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsOutputReference.property.urlPathConditionInput"></a>
 
 ```python
-url_path_condition_input: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlPathCondition]]
+url_path_condition_input: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlPathCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]
 
 ---
 
@@ -10826,7 +10826,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -10857,10 +10857,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsPostArgsCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsPostArgsCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]
 
 ---
 
@@ -11142,16 +11142,16 @@ def reset_transforms() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.postArgsNameInput">post_args_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.transformsInput">transforms_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.postArgsName">post_args_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a></code> | *No description.* |
 
 ---
 
@@ -11192,10 +11192,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11242,10 +11242,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11282,10 +11282,10 @@ transforms: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsPostArgsCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsPostArgsCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsPostArgsCondition">CdnFrontdoorRuleConditionsPostArgsCondition</a>
 
 ---
 
@@ -11421,7 +11421,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -11452,10 +11452,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsQueryStringCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsQueryStringCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]
 
 ---
 
@@ -11737,14 +11737,14 @@ def reset_transforms() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.transformsInput">transforms_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a></code> | *No description.* |
 
 ---
 
@@ -11785,10 +11785,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11825,10 +11825,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11855,10 +11855,10 @@ transforms: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsQueryStringCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsQueryStringCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsQueryStringCondition">CdnFrontdoorRuleConditionsQueryStringCondition</a>
 
 ---
 
@@ -11994,7 +11994,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -12025,10 +12025,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRemoteAddressCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]
 
 ---
 
@@ -12310,12 +12310,12 @@ def reset_operator() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a></code> | *No description.* |
 
 ---
 
@@ -12356,10 +12356,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12386,10 +12386,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12406,10 +12406,10 @@ operator: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsRemoteAddressCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsRemoteAddressCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRemoteAddressCondition">CdnFrontdoorRuleConditionsRemoteAddressCondition</a>
 
 ---
 
@@ -12545,7 +12545,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -12576,10 +12576,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestBodyCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]
 
 ---
 
@@ -12854,14 +12854,14 @@ def reset_transforms() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.transformsInput">transforms_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a></code> | *No description.* |
 
 ---
 
@@ -12902,10 +12902,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12942,10 +12942,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12972,10 +12972,10 @@ transforms: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsRequestBodyCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsRequestBodyCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestBodyCondition">CdnFrontdoorRuleConditionsRequestBodyCondition</a>
 
 ---
 
@@ -13111,7 +13111,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -13142,10 +13142,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestHeaderCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]
 
 ---
 
@@ -13428,15 +13428,15 @@ def reset_transforms() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.headerNameInput">header_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.transformsInput">transforms_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a></code> | *No description.* |
 
 ---
 
@@ -13487,10 +13487,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -13537,10 +13537,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -13567,10 +13567,10 @@ transforms: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsRequestHeaderCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsRequestHeaderCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestHeaderCondition">CdnFrontdoorRuleConditionsRequestHeaderCondition</a>
 
 ---
 
@@ -13706,7 +13706,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -13737,10 +13737,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestMethodCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]
 
 ---
 
@@ -14015,12 +14015,12 @@ def reset_operator() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a></code> | *No description.* |
 
 ---
 
@@ -14061,10 +14061,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14091,10 +14091,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14111,10 +14111,10 @@ operator: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsRequestMethodCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsRequestMethodCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestMethodCondition">CdnFrontdoorRuleConditionsRequestMethodCondition</a>
 
 ---
 
@@ -14250,7 +14250,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -14281,10 +14281,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestSchemeCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]
 
 ---
 
@@ -14566,12 +14566,12 @@ def reset_operator() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a></code> | *No description.* |
 
 ---
 
@@ -14612,10 +14612,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14642,10 +14642,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14662,10 +14662,10 @@ operator: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsRequestSchemeCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsRequestSchemeCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestSchemeCondition">CdnFrontdoorRuleConditionsRequestSchemeCondition</a>
 
 ---
 
@@ -14801,7 +14801,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -14832,10 +14832,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsRequestUriCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsRequestUriCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]
 
 ---
 
@@ -15117,14 +15117,14 @@ def reset_transforms() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.transformsInput">transforms_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a></code> | *No description.* |
 
 ---
 
@@ -15165,10 +15165,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -15205,10 +15205,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -15235,10 +15235,10 @@ transforms: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsRequestUriCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsRequestUriCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsRequestUriCondition">CdnFrontdoorRuleConditionsRequestUriCondition</a>
 
 ---
 
@@ -15374,7 +15374,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -15405,10 +15405,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsServerPortCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsServerPortCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]
 
 ---
 
@@ -15676,12 +15676,12 @@ def reset_negate_condition() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a></code> | *No description.* |
 
 ---
 
@@ -15722,10 +15722,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -15752,10 +15752,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -15772,10 +15772,10 @@ operator: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsServerPortCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsServerPortCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsServerPortCondition">CdnFrontdoorRuleConditionsServerPortCondition</a>
 
 ---
 
@@ -15911,7 +15911,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -15942,10 +15942,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsSocketAddressCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]
 
 ---
 
@@ -16227,12 +16227,12 @@ def reset_operator() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a></code> | *No description.* |
 
 ---
 
@@ -16273,10 +16273,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16303,10 +16303,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16323,10 +16323,10 @@ operator: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsSocketAddressCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsSocketAddressCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSocketAddressCondition">CdnFrontdoorRuleConditionsSocketAddressCondition</a>
 
 ---
 
@@ -16462,7 +16462,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -16493,10 +16493,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsSslProtocolCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]
 
 ---
 
@@ -16771,12 +16771,12 @@ def reset_operator() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a></code> | *No description.* |
 
 ---
 
@@ -16817,10 +16817,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16847,10 +16847,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16867,10 +16867,10 @@ operator: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsSslProtocolCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsSslProtocolCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsSslProtocolCondition">CdnFrontdoorRuleConditionsSslProtocolCondition</a>
 
 ---
 
@@ -17006,7 +17006,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -17037,10 +17037,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFileExtensionCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]
 
 ---
 
@@ -17315,14 +17315,14 @@ def reset_transforms() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.transformsInput">transforms_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a></code> | *No description.* |
 
 ---
 
@@ -17363,10 +17363,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -17403,10 +17403,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -17433,10 +17433,10 @@ transforms: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsUrlFileExtensionCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsUrlFileExtensionCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFileExtensionCondition">CdnFrontdoorRuleConditionsUrlFileExtensionCondition</a>
 
 ---
 
@@ -17572,7 +17572,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -17603,10 +17603,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlFilenameCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]
 
 ---
 
@@ -17888,14 +17888,14 @@ def reset_transforms() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.transformsInput">transforms_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a></code> | *No description.* |
 
 ---
 
@@ -17936,10 +17936,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -17976,10 +17976,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -18006,10 +18006,10 @@ transforms: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsUrlFilenameCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsUrlFilenameCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlFilenameCondition">CdnFrontdoorRuleConditionsUrlFilenameCondition</a>
 
 ---
 
@@ -18145,7 +18145,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -18176,10 +18176,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[CdnFrontdoorRuleConditionsUrlPathCondition]]
+internal_value: IResolvable | typing.List[CdnFrontdoorRuleConditionsUrlPathCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]
 
 ---
 
@@ -18461,14 +18461,14 @@ def reset_transforms() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.matchValuesInput">match_values_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.negateConditionInput">negate_condition_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.operatorInput">operator_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.transformsInput">transforms_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.matchValues">match_values</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.negateCondition">negate_condition</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.operator">operator</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.transforms">transforms</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a></code> | *No description.* |
 
 ---
 
@@ -18509,10 +18509,10 @@ match_values_input: typing.List[str]
 ##### `negate_condition_input`<sup>Optional</sup> <a name="negate_condition_input" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.negateConditionInput"></a>
 
 ```python
-negate_condition_input: typing.Union[bool, IResolvable]
+negate_condition_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -18549,10 +18549,10 @@ match_values: typing.List[str]
 ##### `negate_condition`<sup>Required</sup> <a name="negate_condition" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.negateCondition"></a>
 
 ```python
-negate_condition: typing.Union[bool, IResolvable]
+negate_condition: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -18579,10 +18579,10 @@ transforms: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleConditionsUrlPathCondition]
+internal_value: IResolvable | CdnFrontdoorRuleConditionsUrlPathCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleConditionsUrlPathCondition">CdnFrontdoorRuleConditionsUrlPathCondition</a>
 
 ---
 
@@ -18858,7 +18858,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeouts">CdnFrontdoorRuleTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeouts">CdnFrontdoorRuleTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -18969,10 +18969,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, CdnFrontdoorRuleTimeouts]
+internal_value: IResolvable | CdnFrontdoorRuleTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeouts">CdnFrontdoorRuleTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.cdnFrontdoorRule.CdnFrontdoorRuleTimeouts">CdnFrontdoorRuleTimeouts</a>
 
 ---
 

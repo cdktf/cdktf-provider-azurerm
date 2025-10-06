@@ -14,29 +14,29 @@ from cdktf_cdktf_provider_azurerm import bastion_host
 bastionHost.BastionHost(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   name: str,
   resource_group_name: str,
-  copy_paste_enabled: typing.Union[bool, IResolvable] = None,
-  file_copy_enabled: typing.Union[bool, IResolvable] = None,
+  copy_paste_enabled: bool | IResolvable = None,
+  file_copy_enabled: bool | IResolvable = None,
   id: str = None,
   ip_configuration: BastionHostIpConfiguration = None,
-  ip_connect_enabled: typing.Union[bool, IResolvable] = None,
-  kerberos_enabled: typing.Union[bool, IResolvable] = None,
+  ip_connect_enabled: bool | IResolvable = None,
+  kerberos_enabled: bool | IResolvable = None,
   scale_units: typing.Union[int, float] = None,
-  session_recording_enabled: typing.Union[bool, IResolvable] = None,
-  shareable_link_enabled: typing.Union[bool, IResolvable] = None,
+  session_recording_enabled: bool | IResolvable = None,
+  shareable_link_enabled: bool | IResolvable = None,
   sku: str = None,
   tags: typing.Mapping[str] = None,
   timeouts: BastionHostTimeouts = None,
-  tunneling_enabled: typing.Union[bool, IResolvable] = None,
+  tunneling_enabled: bool | IResolvable = None,
   virtual_network_id: str = None,
   zones: typing.List[str] = None
 )
@@ -46,29 +46,29 @@ bastionHost.BastionHost(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#location BastionHost#location}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#name BastionHost#name}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#resource_group_name BastionHost#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.copyPasteEnabled">copy_paste_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#copy_paste_enabled BastionHost#copy_paste_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.fileCopyEnabled">file_copy_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#file_copy_enabled BastionHost#file_copy_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.copyPasteEnabled">copy_paste_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#copy_paste_enabled BastionHost#copy_paste_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.fileCopyEnabled">file_copy_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#file_copy_enabled BastionHost#file_copy_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#id BastionHost#id}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.ipConfiguration">ip_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostIpConfiguration">BastionHostIpConfiguration</a></code> | ip_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.ipConnectEnabled">ip_connect_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#ip_connect_enabled BastionHost#ip_connect_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.kerberosEnabled">kerberos_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#kerberos_enabled BastionHost#kerberos_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.ipConnectEnabled">ip_connect_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#ip_connect_enabled BastionHost#ip_connect_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.kerberosEnabled">kerberos_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#kerberos_enabled BastionHost#kerberos_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.scaleUnits">scale_units</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#scale_units BastionHost#scale_units}. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.sessionRecordingEnabled">session_recording_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#session_recording_enabled BastionHost#session_recording_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.shareableLinkEnabled">shareable_link_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#shareable_link_enabled BastionHost#shareable_link_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.sessionRecordingEnabled">session_recording_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#session_recording_enabled BastionHost#session_recording_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.shareableLinkEnabled">shareable_link_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#shareable_link_enabled BastionHost#shareable_link_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.sku">sku</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#sku BastionHost#sku}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#tags BastionHost#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeouts">BastionHostTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.tunnelingEnabled">tunneling_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#tunneling_enabled BastionHost#tunneling_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.tunnelingEnabled">tunneling_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#tunneling_enabled BastionHost#tunneling_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.virtualNetworkId">virtual_network_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#virtual_network_id BastionHost#virtual_network_id}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.zones">zones</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#zones BastionHost#zones}. |
 
@@ -94,13 +94,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -130,7 +130,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -160,7 +160,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `copy_paste_enabled`<sup>Optional</sup> <a name="copy_paste_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.copyPasteEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#copy_paste_enabled BastionHost#copy_paste_enabled}.
 
@@ -168,7 +168,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `file_copy_enabled`<sup>Optional</sup> <a name="file_copy_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.fileCopyEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#file_copy_enabled BastionHost#file_copy_enabled}.
 
@@ -197,7 +197,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `ip_connect_enabled`<sup>Optional</sup> <a name="ip_connect_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.ipConnectEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#ip_connect_enabled BastionHost#ip_connect_enabled}.
 
@@ -205,7 +205,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `kerberos_enabled`<sup>Optional</sup> <a name="kerberos_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.kerberosEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#kerberos_enabled BastionHost#kerberos_enabled}.
 
@@ -221,7 +221,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `session_recording_enabled`<sup>Optional</sup> <a name="session_recording_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.sessionRecordingEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#session_recording_enabled BastionHost#session_recording_enabled}.
 
@@ -229,7 +229,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `shareable_link_enabled`<sup>Optional</sup> <a name="shareable_link_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.shareableLinkEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#shareable_link_enabled BastionHost#shareable_link_enabled}.
 
@@ -263,7 +263,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `tunneling_enabled`<sup>Optional</sup> <a name="tunneling_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.Initializer.parameter.tunnelingEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#tunneling_enabled BastionHost#tunneling_enabled}.
 
@@ -554,7 +554,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.bastionHost.BastionHost.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.bastionHost.BastionHost.importFrom"></a>
@@ -617,7 +617,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -633,7 +633,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.bastionHost.BastionHost.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -961,48 +961,48 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.dnsName">dns_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.ipConfiguration">ip_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostIpConfigurationOutputReference">BastionHostIpConfigurationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeoutsOutputReference">BastionHostTimeoutsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.copyPasteEnabledInput">copy_paste_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.fileCopyEnabledInput">file_copy_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.copyPasteEnabledInput">copy_paste_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.fileCopyEnabledInput">file_copy_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.ipConfigurationInput">ip_configuration_input</a></code> | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostIpConfiguration">BastionHostIpConfiguration</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.ipConnectEnabledInput">ip_connect_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.kerberosEnabledInput">kerberos_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.ipConnectEnabledInput">ip_connect_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.kerberosEnabledInput">kerberos_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.scaleUnitsInput">scale_units_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.sessionRecordingEnabledInput">session_recording_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.shareableLinkEnabledInput">shareable_link_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.sessionRecordingEnabledInput">session_recording_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.shareableLinkEnabledInput">shareable_link_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.skuInput">sku_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeouts">BastionHostTimeouts</a>]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.tunnelingEnabledInput">tunneling_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeouts">BastionHostTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.tunnelingEnabledInput">tunneling_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.virtualNetworkIdInput">virtual_network_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.zonesInput">zones_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.copyPasteEnabled">copy_paste_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.fileCopyEnabled">file_copy_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.copyPasteEnabled">copy_paste_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.fileCopyEnabled">file_copy_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.id">id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.ipConnectEnabled">ip_connect_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.kerberosEnabled">kerberos_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.ipConnectEnabled">ip_connect_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.kerberosEnabled">kerberos_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.location">location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.scaleUnits">scale_units</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.sessionRecordingEnabled">session_recording_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.shareableLinkEnabled">shareable_link_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.sessionRecordingEnabled">session_recording_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.shareableLinkEnabled">shareable_link_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.sku">sku</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.tunnelingEnabled">tunneling_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.tunnelingEnabled">tunneling_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.virtualNetworkId">virtual_network_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHost.property.zones">zones</a></code> | <code>typing.List[str]</code> | *No description.* |
 
@@ -1083,20 +1083,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1143,10 +1143,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1183,20 +1183,20 @@ timeouts: BastionHostTimeoutsOutputReference
 ##### `copy_paste_enabled_input`<sup>Optional</sup> <a name="copy_paste_enabled_input" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.copyPasteEnabledInput"></a>
 
 ```python
-copy_paste_enabled_input: typing.Union[bool, IResolvable]
+copy_paste_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `file_copy_enabled_input`<sup>Optional</sup> <a name="file_copy_enabled_input" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.fileCopyEnabledInput"></a>
 
 ```python
-file_copy_enabled_input: typing.Union[bool, IResolvable]
+file_copy_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1223,20 +1223,20 @@ ip_configuration_input: BastionHostIpConfiguration
 ##### `ip_connect_enabled_input`<sup>Optional</sup> <a name="ip_connect_enabled_input" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.ipConnectEnabledInput"></a>
 
 ```python
-ip_connect_enabled_input: typing.Union[bool, IResolvable]
+ip_connect_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `kerberos_enabled_input`<sup>Optional</sup> <a name="kerberos_enabled_input" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.kerberosEnabledInput"></a>
 
 ```python
-kerberos_enabled_input: typing.Union[bool, IResolvable]
+kerberos_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1283,20 +1283,20 @@ scale_units_input: typing.Union[int, float]
 ##### `session_recording_enabled_input`<sup>Optional</sup> <a name="session_recording_enabled_input" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.sessionRecordingEnabledInput"></a>
 
 ```python
-session_recording_enabled_input: typing.Union[bool, IResolvable]
+session_recording_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `shareable_link_enabled_input`<sup>Optional</sup> <a name="shareable_link_enabled_input" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.shareableLinkEnabledInput"></a>
 
 ```python
-shareable_link_enabled_input: typing.Union[bool, IResolvable]
+shareable_link_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1323,20 +1323,20 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, BastionHostTimeouts]
+timeouts_input: IResolvable | BastionHostTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeouts">BastionHostTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeouts">BastionHostTimeouts</a>
 
 ---
 
 ##### `tunneling_enabled_input`<sup>Optional</sup> <a name="tunneling_enabled_input" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.tunnelingEnabledInput"></a>
 
 ```python
-tunneling_enabled_input: typing.Union[bool, IResolvable]
+tunneling_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1363,20 +1363,20 @@ zones_input: typing.List[str]
 ##### `copy_paste_enabled`<sup>Required</sup> <a name="copy_paste_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.copyPasteEnabled"></a>
 
 ```python
-copy_paste_enabled: typing.Union[bool, IResolvable]
+copy_paste_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `file_copy_enabled`<sup>Required</sup> <a name="file_copy_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.fileCopyEnabled"></a>
 
 ```python
-file_copy_enabled: typing.Union[bool, IResolvable]
+file_copy_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1393,20 +1393,20 @@ id: str
 ##### `ip_connect_enabled`<sup>Required</sup> <a name="ip_connect_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.ipConnectEnabled"></a>
 
 ```python
-ip_connect_enabled: typing.Union[bool, IResolvable]
+ip_connect_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `kerberos_enabled`<sup>Required</sup> <a name="kerberos_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.kerberosEnabled"></a>
 
 ```python
-kerberos_enabled: typing.Union[bool, IResolvable]
+kerberos_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1453,20 +1453,20 @@ scale_units: typing.Union[int, float]
 ##### `session_recording_enabled`<sup>Required</sup> <a name="session_recording_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.sessionRecordingEnabled"></a>
 
 ```python
-session_recording_enabled: typing.Union[bool, IResolvable]
+session_recording_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `shareable_link_enabled`<sup>Required</sup> <a name="shareable_link_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.shareableLinkEnabled"></a>
 
 ```python
-shareable_link_enabled: typing.Union[bool, IResolvable]
+shareable_link_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1493,10 +1493,10 @@ tags: typing.Mapping[str]
 ##### `tunneling_enabled`<sup>Required</sup> <a name="tunneling_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHost.property.tunnelingEnabled"></a>
 
 ```python
-tunneling_enabled: typing.Union[bool, IResolvable]
+tunneling_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1548,29 +1548,29 @@ tfResourceType: str
 from cdktf_cdktf_provider_azurerm import bastion_host
 
 bastionHost.BastionHostConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   name: str,
   resource_group_name: str,
-  copy_paste_enabled: typing.Union[bool, IResolvable] = None,
-  file_copy_enabled: typing.Union[bool, IResolvable] = None,
+  copy_paste_enabled: bool | IResolvable = None,
+  file_copy_enabled: bool | IResolvable = None,
   id: str = None,
   ip_configuration: BastionHostIpConfiguration = None,
-  ip_connect_enabled: typing.Union[bool, IResolvable] = None,
-  kerberos_enabled: typing.Union[bool, IResolvable] = None,
+  ip_connect_enabled: bool | IResolvable = None,
+  kerberos_enabled: bool | IResolvable = None,
   scale_units: typing.Union[int, float] = None,
-  session_recording_enabled: typing.Union[bool, IResolvable] = None,
-  shareable_link_enabled: typing.Union[bool, IResolvable] = None,
+  session_recording_enabled: bool | IResolvable = None,
+  shareable_link_enabled: bool | IResolvable = None,
   sku: str = None,
   tags: typing.Mapping[str] = None,
   timeouts: BastionHostTimeouts = None,
-  tunneling_enabled: typing.Union[bool, IResolvable] = None,
+  tunneling_enabled: bool | IResolvable = None,
   virtual_network_id: str = None,
   zones: typing.List[str] = None
 )
@@ -1580,29 +1580,29 @@ bastionHost.BastionHostConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#location BastionHost#location}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#name BastionHost#name}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#resource_group_name BastionHost#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.copyPasteEnabled">copy_paste_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#copy_paste_enabled BastionHost#copy_paste_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.fileCopyEnabled">file_copy_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#file_copy_enabled BastionHost#file_copy_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.copyPasteEnabled">copy_paste_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#copy_paste_enabled BastionHost#copy_paste_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.fileCopyEnabled">file_copy_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#file_copy_enabled BastionHost#file_copy_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#id BastionHost#id}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.ipConfiguration">ip_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostIpConfiguration">BastionHostIpConfiguration</a></code> | ip_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.ipConnectEnabled">ip_connect_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#ip_connect_enabled BastionHost#ip_connect_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.kerberosEnabled">kerberos_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#kerberos_enabled BastionHost#kerberos_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.ipConnectEnabled">ip_connect_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#ip_connect_enabled BastionHost#ip_connect_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.kerberosEnabled">kerberos_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#kerberos_enabled BastionHost#kerberos_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.scaleUnits">scale_units</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#scale_units BastionHost#scale_units}. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.sessionRecordingEnabled">session_recording_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#session_recording_enabled BastionHost#session_recording_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.shareableLinkEnabled">shareable_link_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#shareable_link_enabled BastionHost#shareable_link_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.sessionRecordingEnabled">session_recording_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#session_recording_enabled BastionHost#session_recording_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.shareableLinkEnabled">shareable_link_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#shareable_link_enabled BastionHost#shareable_link_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.sku">sku</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#sku BastionHost#sku}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#tags BastionHost#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeouts">BastionHostTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.tunnelingEnabled">tunneling_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#tunneling_enabled BastionHost#tunneling_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.tunnelingEnabled">tunneling_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#tunneling_enabled BastionHost#tunneling_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.virtualNetworkId">virtual_network_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#virtual_network_id BastionHost#virtual_network_id}. |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.zones">zones</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#zones BastionHost#zones}. |
 
@@ -1611,20 +1611,20 @@ bastionHost.BastionHostConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1671,10 +1671,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1717,10 +1717,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `copy_paste_enabled`<sup>Optional</sup> <a name="copy_paste_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.copyPasteEnabled"></a>
 
 ```python
-copy_paste_enabled: typing.Union[bool, IResolvable]
+copy_paste_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#copy_paste_enabled BastionHost#copy_paste_enabled}.
 
@@ -1729,10 +1729,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `file_copy_enabled`<sup>Optional</sup> <a name="file_copy_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.fileCopyEnabled"></a>
 
 ```python
-file_copy_enabled: typing.Union[bool, IResolvable]
+file_copy_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#file_copy_enabled BastionHost#file_copy_enabled}.
 
@@ -1770,10 +1770,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ip_connect_enabled`<sup>Optional</sup> <a name="ip_connect_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.ipConnectEnabled"></a>
 
 ```python
-ip_connect_enabled: typing.Union[bool, IResolvable]
+ip_connect_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#ip_connect_enabled BastionHost#ip_connect_enabled}.
 
@@ -1782,10 +1782,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `kerberos_enabled`<sup>Optional</sup> <a name="kerberos_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.kerberosEnabled"></a>
 
 ```python
-kerberos_enabled: typing.Union[bool, IResolvable]
+kerberos_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#kerberos_enabled BastionHost#kerberos_enabled}.
 
@@ -1806,10 +1806,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `session_recording_enabled`<sup>Optional</sup> <a name="session_recording_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.sessionRecordingEnabled"></a>
 
 ```python
-session_recording_enabled: typing.Union[bool, IResolvable]
+session_recording_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#session_recording_enabled BastionHost#session_recording_enabled}.
 
@@ -1818,10 +1818,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `shareable_link_enabled`<sup>Optional</sup> <a name="shareable_link_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.shareableLinkEnabled"></a>
 
 ```python
-shareable_link_enabled: typing.Union[bool, IResolvable]
+shareable_link_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#shareable_link_enabled BastionHost#shareable_link_enabled}.
 
@@ -1868,10 +1868,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tunneling_enabled`<sup>Optional</sup> <a name="tunneling_enabled" id="@cdktf/provider-azurerm.bastionHost.BastionHostConfig.property.tunnelingEnabled"></a>
 
 ```python
-tunneling_enabled: typing.Union[bool, IResolvable]
+tunneling_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/bastion_host#tunneling_enabled BastionHost#tunneling_enabled}.
 
@@ -2648,7 +2648,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeouts">BastionHostTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeouts">BastionHostTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2759,10 +2759,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.bastionHost.BastionHostTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, BastionHostTimeouts]
+internal_value: IResolvable | BastionHostTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeouts">BastionHostTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.bastionHost.BastionHostTimeouts">BastionHostTimeouts</a>
 
 ---
 

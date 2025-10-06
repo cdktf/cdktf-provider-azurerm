@@ -290,7 +290,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-azurerm.containerApp.ContainerApp.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.containerApp.ContainerApp.importFrom"></a>
@@ -344,7 +344,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.containerApp.ContainerApp.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -359,7 +359,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-azurerm.containerApp.ContainerApp.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -420,24 +420,24 @@ private void PutIngress(ContainerAppIngress Value)
 ##### `PutRegistry` <a name="PutRegistry" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putRegistry"></a>
 
 ```csharp
-private void PutRegistry(object Value)
+private void PutRegistry(IResolvable|ContainerAppRegistry[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putRegistry.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>[]
 
 ---
 
 ##### `PutSecret` <a name="PutSecret" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putSecret"></a>
 
 ```csharp
-private void PutSecret(object Value)
+private void PutSecret(IResolvable|ContainerAppSecret[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putSecret.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>[]
 
 ---
 
@@ -651,13 +651,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.customDomainVerificationId">CustomDomainVerificationId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.dapr">Dapr</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference">ContainerAppDaprOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIdentityOutputReference">ContainerAppIdentityOutputReference</a></code> | *No description.* |
@@ -677,13 +677,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.ingressInput">IngressInput</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress">ContainerAppIngress</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.maxInactiveRevisionsInput">MaxInactiveRevisionsInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.registryInput">RegistryInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.registryInput">RegistryInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.resourceGroupNameInput">ResourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.revisionModeInput">RevisionModeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.secretInput">SecretInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.secretInput">SecretInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.tagsInput">TagsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.templateInput">TemplateInput</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate">ContainerAppTemplate</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.workloadProfileNameInput">WorkloadProfileNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.containerAppEnvironmentId">ContainerAppEnvironmentId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.id">Id</a></code> | <code>string</code> | *No description.* |
@@ -771,20 +771,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -831,10 +831,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1031,10 +1031,10 @@ public string NameInput { get; }
 ##### `RegistryInput`<sup>Optional</sup> <a name="RegistryInput" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.registryInput"></a>
 
 ```csharp
-public object RegistryInput { get; }
+public IResolvable|ContainerAppRegistry[] RegistryInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>[]
 
 ---
 
@@ -1061,10 +1061,10 @@ public string RevisionModeInput { get; }
 ##### `SecretInput`<sup>Optional</sup> <a name="SecretInput" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.secretInput"></a>
 
 ```csharp
-public object SecretInput { get; }
+public IResolvable|ContainerAppSecret[] SecretInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>[]
 
 ---
 
@@ -1091,10 +1091,10 @@ public ContainerAppTemplate TemplateInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|ContainerAppTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a>
 
 ---
 
@@ -1216,13 +1216,13 @@ public string TfResourceType { get; }
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new ContainerAppConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string ContainerAppEnvironmentId,
     string Name,
     string ResourceGroupName,
@@ -1233,8 +1233,8 @@ new ContainerAppConfig {
     ContainerAppIdentity Identity = null,
     ContainerAppIngress Ingress = null,
     double MaxInactiveRevisions = null,
-    object Registry = null,
-    object Secret = null,
+    IResolvable|ContainerAppRegistry[] Registry = null,
+    IResolvable|ContainerAppSecret[] Secret = null,
     System.Collections.Generic.IDictionary<string, string> Tags = null,
     ContainerAppTimeouts Timeouts = null,
     string WorkloadProfileName = null
@@ -1245,13 +1245,13 @@ new ContainerAppConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.containerAppEnvironmentId">ContainerAppEnvironmentId</a></code> | <code>string</code> | The ID of the Container App Environment to host this Container App. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.name">Name</a></code> | <code>string</code> | The name for this Container App. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}. |
@@ -1262,8 +1262,8 @@ new ContainerAppConfig {
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIdentity">ContainerAppIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.ingress">Ingress</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress">ContainerAppIngress</a></code> | ingress block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.maxInactiveRevisions">MaxInactiveRevisions</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#max_inactive_revisions ContainerApp#max_inactive_revisions}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.registry">Registry</a></code> | <code>object</code> | registry block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.secret">Secret</a></code> | <code>object</code> | secret block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.registry">Registry</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>[]</code> | registry block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.secret">Secret</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>[]</code> | secret block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#tags ContainerApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.workloadProfileName">WorkloadProfileName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#workload_profile_name ContainerApp#workload_profile_name}. |
@@ -1273,20 +1273,20 @@ new ContainerAppConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1333,10 +1333,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1478,10 +1478,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Registry`<sup>Optional</sup> <a name="Registry" id="@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.registry"></a>
 
 ```csharp
-public object Registry { get; set; }
+public IResolvable|ContainerAppRegistry[] Registry { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>[]
 
 registry block.
 
@@ -1492,10 +1492,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Secret`<sup>Optional</sup> <a name="Secret" id="@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.secret"></a>
 
 ```csharp
-public object Secret { get; set; }
+public IResolvable|ContainerAppSecret[] Secret { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>[]
 
 secret block.
 
@@ -1662,13 +1662,13 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new ContainerAppIngress {
     double TargetPort,
-    object TrafficWeight,
-    object AllowInsecureConnections = null,
+    IResolvable|ContainerAppIngressTrafficWeight[] TrafficWeight,
+    bool|IResolvable AllowInsecureConnections = null,
     string ClientCertificateMode = null,
     ContainerAppIngressCors Cors = null,
     double ExposedPort = null,
-    object ExternalEnabled = null,
-    object IpSecurityRestriction = null,
+    bool|IResolvable ExternalEnabled = null,
+    IResolvable|ContainerAppIngressIpSecurityRestriction[] IpSecurityRestriction = null,
     string Transport = null
 };
 ```
@@ -1678,13 +1678,13 @@ new ContainerAppIngress {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.targetPort">TargetPort</a></code> | <code>double</code> | The target port on the container for the Ingress traffic. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.trafficWeight">TrafficWeight</a></code> | <code>object</code> | traffic_weight block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.allowInsecureConnections">AllowInsecureConnections</a></code> | <code>object</code> | Should this ingress allow insecure connections? |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.trafficWeight">TrafficWeight</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>[]</code> | traffic_weight block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.allowInsecureConnections">AllowInsecureConnections</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should this ingress allow insecure connections? |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.clientCertificateMode">ClientCertificateMode</a></code> | <code>string</code> | Client certificate mode for mTLS authentication. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.cors">Cors</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors">ContainerAppIngressCors</a></code> | cors block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.exposedPort">ExposedPort</a></code> | <code>double</code> | The exposed port on the container for the Ingress traffic. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.externalEnabled">ExternalEnabled</a></code> | <code>object</code> | Is this an external Ingress. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.ipSecurityRestriction">IpSecurityRestriction</a></code> | <code>object</code> | ip_security_restriction block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.externalEnabled">ExternalEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Is this an external Ingress. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.ipSecurityRestriction">IpSecurityRestriction</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>[]</code> | ip_security_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.transport">Transport</a></code> | <code>string</code> | The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`, `tcp`. Defaults to `auto`. |
 
 ---
@@ -1706,10 +1706,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `TrafficWeight`<sup>Required</sup> <a name="TrafficWeight" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.trafficWeight"></a>
 
 ```csharp
-public object TrafficWeight { get; set; }
+public IResolvable|ContainerAppIngressTrafficWeight[] TrafficWeight { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>[]
 
 traffic_weight block.
 
@@ -1720,10 +1720,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AllowInsecureConnections`<sup>Optional</sup> <a name="AllowInsecureConnections" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.allowInsecureConnections"></a>
 
 ```csharp
-public object AllowInsecureConnections { get; set; }
+public bool|IResolvable AllowInsecureConnections { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should this ingress allow insecure connections?
 
@@ -1778,10 +1778,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ExternalEnabled`<sup>Optional</sup> <a name="ExternalEnabled" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.externalEnabled"></a>
 
 ```csharp
-public object ExternalEnabled { get; set; }
+public bool|IResolvable ExternalEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Is this an external Ingress.
 
@@ -1792,10 +1792,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `IpSecurityRestriction`<sup>Optional</sup> <a name="IpSecurityRestriction" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.ipSecurityRestriction"></a>
 
 ```csharp
-public object IpSecurityRestriction { get; set; }
+public IResolvable|ContainerAppIngressIpSecurityRestriction[] IpSecurityRestriction { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>[]
 
 ip_security_restriction block.
 
@@ -1826,7 +1826,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new ContainerAppIngressCors {
     string[] AllowedOrigins,
-    object AllowCredentialsEnabled = null,
+    bool|IResolvable AllowCredentialsEnabled = null,
     string[] AllowedHeaders = null,
     string[] AllowedMethods = null,
     string[] ExposedHeaders = null,
@@ -1839,7 +1839,7 @@ new ContainerAppIngressCors {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowedOrigins">AllowedOrigins</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allowed_origins ContainerApp#allowed_origins}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowCredentialsEnabled">AllowCredentialsEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allow_credentials_enabled ContainerApp#allow_credentials_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowCredentialsEnabled">AllowCredentialsEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allow_credentials_enabled ContainerApp#allow_credentials_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowedHeaders">AllowedHeaders</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allowed_headers ContainerApp#allowed_headers}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowedMethods">AllowedMethods</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allowed_methods ContainerApp#allowed_methods}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.exposedHeaders">ExposedHeaders</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#exposed_headers ContainerApp#exposed_headers}. |
@@ -1862,10 +1862,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AllowCredentialsEnabled`<sup>Optional</sup> <a name="AllowCredentialsEnabled" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowCredentialsEnabled"></a>
 
 ```csharp
-public object AllowCredentialsEnabled { get; set; }
+public bool|IResolvable AllowCredentialsEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allow_credentials_enabled ContainerApp#allow_credentials_enabled}.
 
@@ -2024,7 +2024,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 new ContainerAppIngressTrafficWeight {
     double Percentage,
     string Label = null,
-    object LatestRevision = null,
+    bool|IResolvable LatestRevision = null,
     string RevisionSuffix = null
 };
 ```
@@ -2035,7 +2035,7 @@ new ContainerAppIngressTrafficWeight {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.percentage">Percentage</a></code> | <code>double</code> | The percentage of traffic to send to this revision. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.label">Label</a></code> | <code>string</code> | The label to apply to the revision as a name prefix for routing traffic. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.latestRevision">LatestRevision</a></code> | <code>object</code> | This traffic Weight relates to the latest stable Container Revision. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.latestRevision">LatestRevision</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | This traffic Weight relates to the latest stable Container Revision. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.revisionSuffix">RevisionSuffix</a></code> | <code>string</code> | The suffix string to append to the revision. |
 
 ---
@@ -2071,10 +2071,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `LatestRevision`<sup>Optional</sup> <a name="LatestRevision" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.latestRevision"></a>
 
 ```csharp
-public object LatestRevision { get; set; }
+public bool|IResolvable LatestRevision { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 This traffic Weight relates to the latest stable Container Revision.
 
@@ -2270,17 +2270,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new ContainerAppTemplate {
-    object Container,
-    object AzureQueueScaleRule = null,
-    object CustomScaleRule = null,
-    object HttpScaleRule = null,
-    object InitContainer = null,
+    IResolvable|ContainerAppTemplateContainer[] Container,
+    IResolvable|ContainerAppTemplateAzureQueueScaleRule[] AzureQueueScaleRule = null,
+    IResolvable|ContainerAppTemplateCustomScaleRule[] CustomScaleRule = null,
+    IResolvable|ContainerAppTemplateHttpScaleRule[] HttpScaleRule = null,
+    IResolvable|ContainerAppTemplateInitContainer[] InitContainer = null,
     double MaxReplicas = null,
     double MinReplicas = null,
     string RevisionSuffix = null,
-    object TcpScaleRule = null,
+    IResolvable|ContainerAppTemplateTcpScaleRule[] TcpScaleRule = null,
     double TerminationGracePeriodSeconds = null,
-    object Volume = null
+    IResolvable|ContainerAppTemplateVolume[] Volume = null
 };
 ```
 
@@ -2288,27 +2288,27 @@ new ContainerAppTemplate {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.container">Container</a></code> | <code>object</code> | container block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.azureQueueScaleRule">AzureQueueScaleRule</a></code> | <code>object</code> | azure_queue_scale_rule block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.customScaleRule">CustomScaleRule</a></code> | <code>object</code> | custom_scale_rule block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.httpScaleRule">HttpScaleRule</a></code> | <code>object</code> | http_scale_rule block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.initContainer">InitContainer</a></code> | <code>object</code> | init_container block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.container">Container</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>[]</code> | container block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.azureQueueScaleRule">AzureQueueScaleRule</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>[]</code> | azure_queue_scale_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.customScaleRule">CustomScaleRule</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>[]</code> | custom_scale_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.httpScaleRule">HttpScaleRule</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>[]</code> | http_scale_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.initContainer">InitContainer</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>[]</code> | init_container block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.maxReplicas">MaxReplicas</a></code> | <code>double</code> | The maximum number of replicas for this container. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.minReplicas">MinReplicas</a></code> | <code>double</code> | The minimum number of replicas for this container. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.revisionSuffix">RevisionSuffix</a></code> | <code>string</code> | The suffix for the revision. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.tcpScaleRule">TcpScaleRule</a></code> | <code>object</code> | tcp_scale_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.tcpScaleRule">TcpScaleRule</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>[]</code> | tcp_scale_rule block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.terminationGracePeriodSeconds">TerminationGracePeriodSeconds</a></code> | <code>double</code> | The time in seconds after the container is sent the termination signal before the process if forcibly killed. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.volume">Volume</a></code> | <code>object</code> | volume block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.volume">Volume</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>[]</code> | volume block. |
 
 ---
 
 ##### `Container`<sup>Required</sup> <a name="Container" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.container"></a>
 
 ```csharp
-public object Container { get; set; }
+public IResolvable|ContainerAppTemplateContainer[] Container { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>[]
 
 container block.
 
@@ -2319,10 +2319,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AzureQueueScaleRule`<sup>Optional</sup> <a name="AzureQueueScaleRule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.azureQueueScaleRule"></a>
 
 ```csharp
-public object AzureQueueScaleRule { get; set; }
+public IResolvable|ContainerAppTemplateAzureQueueScaleRule[] AzureQueueScaleRule { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>[]
 
 azure_queue_scale_rule block.
 
@@ -2333,10 +2333,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `CustomScaleRule`<sup>Optional</sup> <a name="CustomScaleRule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.customScaleRule"></a>
 
 ```csharp
-public object CustomScaleRule { get; set; }
+public IResolvable|ContainerAppTemplateCustomScaleRule[] CustomScaleRule { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>[]
 
 custom_scale_rule block.
 
@@ -2347,10 +2347,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `HttpScaleRule`<sup>Optional</sup> <a name="HttpScaleRule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.httpScaleRule"></a>
 
 ```csharp
-public object HttpScaleRule { get; set; }
+public IResolvable|ContainerAppTemplateHttpScaleRule[] HttpScaleRule { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>[]
 
 http_scale_rule block.
 
@@ -2361,10 +2361,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `InitContainer`<sup>Optional</sup> <a name="InitContainer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.initContainer"></a>
 
 ```csharp
-public object InitContainer { get; set; }
+public IResolvable|ContainerAppTemplateInitContainer[] InitContainer { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>[]
 
 init_container block.
 
@@ -2419,10 +2419,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `TcpScaleRule`<sup>Optional</sup> <a name="TcpScaleRule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.tcpScaleRule"></a>
 
 ```csharp
-public object TcpScaleRule { get; set; }
+public IResolvable|ContainerAppTemplateTcpScaleRule[] TcpScaleRule { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>[]
 
 tcp_scale_rule block.
 
@@ -2447,10 +2447,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Volume`<sup>Optional</sup> <a name="Volume" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.volume"></a>
 
 ```csharp
-public object Volume { get; set; }
+public IResolvable|ContainerAppTemplateVolume[] Volume { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>[]
 
 volume block.
 
@@ -2466,7 +2466,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new ContainerAppTemplateAzureQueueScaleRule {
-    object Authentication,
+    IResolvable|ContainerAppTemplateAzureQueueScaleRuleAuthentication[] Authentication,
     string Name,
     double QueueLength,
     string QueueName
@@ -2477,7 +2477,7 @@ new ContainerAppTemplateAzureQueueScaleRule {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.authentication">Authentication</a></code> | <code>object</code> | authentication block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.authentication">Authentication</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>[]</code> | authentication block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#name ContainerApp#name}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.queueLength">QueueLength</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#queue_length ContainerApp#queue_length}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.queueName">QueueName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#queue_name ContainerApp#queue_name}. |
@@ -2487,10 +2487,10 @@ new ContainerAppTemplateAzureQueueScaleRule {
 ##### `Authentication`<sup>Required</sup> <a name="Authentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.authentication"></a>
 
 ```csharp
-public object Authentication { get; set; }
+public IResolvable|ContainerAppTemplateAzureQueueScaleRuleAuthentication[] Authentication { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>[]
 
 authentication block.
 
@@ -2594,11 +2594,11 @@ new ContainerAppTemplateContainer {
     string Name,
     string[] Args = null,
     string[] Command = null,
-    object Env = null,
-    object LivenessProbe = null,
-    object ReadinessProbe = null,
-    object StartupProbe = null,
-    object VolumeMounts = null
+    IResolvable|ContainerAppTemplateContainerEnv[] Env = null,
+    IResolvable|ContainerAppTemplateContainerLivenessProbe[] LivenessProbe = null,
+    IResolvable|ContainerAppTemplateContainerReadinessProbe[] ReadinessProbe = null,
+    IResolvable|ContainerAppTemplateContainerStartupProbe[] StartupProbe = null,
+    IResolvable|ContainerAppTemplateContainerVolumeMounts[] VolumeMounts = null
 };
 ```
 
@@ -2612,11 +2612,11 @@ new ContainerAppTemplateContainer {
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.name">Name</a></code> | <code>string</code> | The name of the container. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.args">Args</a></code> | <code>string[]</code> | A list of args to pass to the container. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.command">Command</a></code> | <code>string[]</code> | A command to pass to the container to override the default. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.env">Env</a></code> | <code>object</code> | env block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.livenessProbe">LivenessProbe</a></code> | <code>object</code> | liveness_probe block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.readinessProbe">ReadinessProbe</a></code> | <code>object</code> | readiness_probe block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.startupProbe">StartupProbe</a></code> | <code>object</code> | startup_probe block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.volumeMounts">VolumeMounts</a></code> | <code>object</code> | volume_mounts block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.env">Env</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>[]</code> | env block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.livenessProbe">LivenessProbe</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>[]</code> | liveness_probe block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.readinessProbe">ReadinessProbe</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>[]</code> | readiness_probe block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.startupProbe">StartupProbe</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>[]</code> | startup_probe block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.volumeMounts">VolumeMounts</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>[]</code> | volume_mounts block. |
 
 ---
 
@@ -2709,10 +2709,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Env`<sup>Optional</sup> <a name="Env" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.env"></a>
 
 ```csharp
-public object Env { get; set; }
+public IResolvable|ContainerAppTemplateContainerEnv[] Env { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>[]
 
 env block.
 
@@ -2723,10 +2723,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `LivenessProbe`<sup>Optional</sup> <a name="LivenessProbe" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.livenessProbe"></a>
 
 ```csharp
-public object LivenessProbe { get; set; }
+public IResolvable|ContainerAppTemplateContainerLivenessProbe[] LivenessProbe { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>[]
 
 liveness_probe block.
 
@@ -2737,10 +2737,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ReadinessProbe`<sup>Optional</sup> <a name="ReadinessProbe" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.readinessProbe"></a>
 
 ```csharp
-public object ReadinessProbe { get; set; }
+public IResolvable|ContainerAppTemplateContainerReadinessProbe[] ReadinessProbe { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>[]
 
 readiness_probe block.
 
@@ -2751,10 +2751,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `StartupProbe`<sup>Optional</sup> <a name="StartupProbe" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.startupProbe"></a>
 
 ```csharp
-public object StartupProbe { get; set; }
+public IResolvable|ContainerAppTemplateContainerStartupProbe[] StartupProbe { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>[]
 
 startup_probe block.
 
@@ -2765,10 +2765,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `VolumeMounts`<sup>Optional</sup> <a name="VolumeMounts" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.volumeMounts"></a>
 
 ```csharp
-public object VolumeMounts { get; set; }
+public IResolvable|ContainerAppTemplateContainerVolumeMounts[] VolumeMounts { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>[]
 
 volume_mounts block.
 
@@ -2853,7 +2853,7 @@ new ContainerAppTemplateContainerLivenessProbe {
     double Port,
     string Transport,
     double FailureCountThreshold = null,
-    object Header = null,
+    IResolvable|ContainerAppTemplateContainerLivenessProbeHeader[] Header = null,
     string Host = null,
     double InitialDelay = null,
     double IntervalSeconds = null,
@@ -2869,7 +2869,7 @@ new ContainerAppTemplateContainerLivenessProbe {
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.port">Port</a></code> | <code>double</code> | The port number on which to connect. Possible values are between `1` and `65535`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.transport">Transport</a></code> | <code>string</code> | Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.failureCountThreshold">FailureCountThreshold</a></code> | <code>double</code> | The number of consecutive failures required to consider this probe as failed. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.header">Header</a></code> | <code>object</code> | header block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.header">Header</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>[]</code> | header block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.host">Host</a></code> | <code>string</code> | The probe hostname. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.initialDelay">InitialDelay</a></code> | <code>double</code> | The number of seconds elapsed after the container has started before the probe is initiated. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.intervalSeconds">IntervalSeconds</a></code> | <code>double</code> | How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`. |
@@ -2925,10 +2925,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Header`<sup>Optional</sup> <a name="Header" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.header"></a>
 
 ```csharp
-public object Header { get; set; }
+public IResolvable|ContainerAppTemplateContainerLivenessProbeHeader[] Header { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>[]
 
 header block.
 
@@ -3073,7 +3073,7 @@ new ContainerAppTemplateContainerReadinessProbe {
     double Port,
     string Transport,
     double FailureCountThreshold = null,
-    object Header = null,
+    IResolvable|ContainerAppTemplateContainerReadinessProbeHeader[] Header = null,
     string Host = null,
     double InitialDelay = null,
     double IntervalSeconds = null,
@@ -3090,7 +3090,7 @@ new ContainerAppTemplateContainerReadinessProbe {
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.port">Port</a></code> | <code>double</code> | The port number on which to connect. Possible values are between `1` and `65535`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.transport">Transport</a></code> | <code>string</code> | Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.failureCountThreshold">FailureCountThreshold</a></code> | <code>double</code> | The number of consecutive failures required to consider this probe as failed. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.header">Header</a></code> | <code>object</code> | header block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.header">Header</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>[]</code> | header block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.host">Host</a></code> | <code>string</code> | The probe hostname. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.initialDelay">InitialDelay</a></code> | <code>double</code> | The number of seconds elapsed after the container has started before the probe is initiated. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.intervalSeconds">IntervalSeconds</a></code> | <code>double</code> | How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`. |
@@ -3147,10 +3147,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Header`<sup>Optional</sup> <a name="Header" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.header"></a>
 
 ```csharp
-public object Header { get; set; }
+public IResolvable|ContainerAppTemplateContainerReadinessProbeHeader[] Header { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>[]
 
 header block.
 
@@ -3309,7 +3309,7 @@ new ContainerAppTemplateContainerStartupProbe {
     double Port,
     string Transport,
     double FailureCountThreshold = null,
-    object Header = null,
+    IResolvable|ContainerAppTemplateContainerStartupProbeHeader[] Header = null,
     string Host = null,
     double InitialDelay = null,
     double IntervalSeconds = null,
@@ -3325,7 +3325,7 @@ new ContainerAppTemplateContainerStartupProbe {
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.port">Port</a></code> | <code>double</code> | The port number on which to connect. Possible values are between `1` and `65535`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.transport">Transport</a></code> | <code>string</code> | Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.failureCountThreshold">FailureCountThreshold</a></code> | <code>double</code> | The number of consecutive failures required to consider this probe as failed. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.header">Header</a></code> | <code>object</code> | header block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.header">Header</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>[]</code> | header block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.host">Host</a></code> | <code>string</code> | The probe hostname. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.initialDelay">InitialDelay</a></code> | <code>double</code> | The number of seconds elapsed after the container has started before the probe is initiated. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.intervalSeconds">IntervalSeconds</a></code> | <code>double</code> | How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`. |
@@ -3381,10 +3381,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Header`<sup>Optional</sup> <a name="Header" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.header"></a>
 
 ```csharp
-public object Header { get; set; }
+public IResolvable|ContainerAppTemplateContainerStartupProbeHeader[] Header { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>[]
 
 header block.
 
@@ -3595,7 +3595,7 @@ new ContainerAppTemplateCustomScaleRule {
     string CustomRuleType,
     System.Collections.Generic.IDictionary<string, string> Metadata,
     string Name,
-    object Authentication = null
+    IResolvable|ContainerAppTemplateCustomScaleRuleAuthentication[] Authentication = null
 };
 ```
 
@@ -3606,7 +3606,7 @@ new ContainerAppTemplateCustomScaleRule {
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.customRuleType">CustomRuleType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#custom_rule_type ContainerApp#custom_rule_type}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.metadata">Metadata</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#metadata ContainerApp#metadata}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#name ContainerApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.authentication">Authentication</a></code> | <code>object</code> | authentication block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.authentication">Authentication</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>[]</code> | authentication block. |
 
 ---
 
@@ -3649,10 +3649,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Authentication`<sup>Optional</sup> <a name="Authentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.authentication"></a>
 
 ```csharp
-public object Authentication { get; set; }
+public IResolvable|ContainerAppTemplateCustomScaleRuleAuthentication[] Authentication { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>[]
 
 authentication block.
 
@@ -3716,7 +3716,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 new ContainerAppTemplateHttpScaleRule {
     string ConcurrentRequests,
     string Name,
-    object Authentication = null
+    IResolvable|ContainerAppTemplateHttpScaleRuleAuthentication[] Authentication = null
 };
 ```
 
@@ -3726,7 +3726,7 @@ new ContainerAppTemplateHttpScaleRule {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.concurrentRequests">ConcurrentRequests</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#name ContainerApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.authentication">Authentication</a></code> | <code>object</code> | authentication block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.authentication">Authentication</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>[]</code> | authentication block. |
 
 ---
 
@@ -3757,10 +3757,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Authentication`<sup>Optional</sup> <a name="Authentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.authentication"></a>
 
 ```csharp
-public object Authentication { get; set; }
+public IResolvable|ContainerAppTemplateHttpScaleRuleAuthentication[] Authentication { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>[]
 
 authentication block.
 
@@ -3827,9 +3827,9 @@ new ContainerAppTemplateInitContainer {
     string[] Args = null,
     string[] Command = null,
     double Cpu = null,
-    object Env = null,
+    IResolvable|ContainerAppTemplateInitContainerEnv[] Env = null,
     string Memory = null,
-    object VolumeMounts = null
+    IResolvable|ContainerAppTemplateInitContainerVolumeMounts[] VolumeMounts = null
 };
 ```
 
@@ -3842,9 +3842,9 @@ new ContainerAppTemplateInitContainer {
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.args">Args</a></code> | <code>string[]</code> | A list of args to pass to the container. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.command">Command</a></code> | <code>string[]</code> | A command to pass to the container to override the default. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.cpu">Cpu</a></code> | <code>double</code> | The amount of vCPU to allocate to the container. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.env">Env</a></code> | <code>object</code> | env block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.env">Env</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>[]</code> | env block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.memory">Memory</a></code> | <code>string</code> | The amount of memory to allocate to the container. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.volumeMounts">VolumeMounts</a></code> | <code>object</code> | volume_mounts block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.volumeMounts">VolumeMounts</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>[]</code> | volume_mounts block. |
 
 ---
 
@@ -3923,10 +3923,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Env`<sup>Optional</sup> <a name="Env" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.env"></a>
 
 ```csharp
-public object Env { get; set; }
+public IResolvable|ContainerAppTemplateInitContainerEnv[] Env { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>[]
 
 env block.
 
@@ -3951,10 +3951,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `VolumeMounts`<sup>Optional</sup> <a name="VolumeMounts" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.volumeMounts"></a>
 
 ```csharp
-public object VolumeMounts { get; set; }
+public IResolvable|ContainerAppTemplateInitContainerVolumeMounts[] VolumeMounts { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>[]
 
 volume_mounts block.
 
@@ -4104,7 +4104,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 new ContainerAppTemplateTcpScaleRule {
     string ConcurrentRequests,
     string Name,
-    object Authentication = null
+    IResolvable|ContainerAppTemplateTcpScaleRuleAuthentication[] Authentication = null
 };
 ```
 
@@ -4114,7 +4114,7 @@ new ContainerAppTemplateTcpScaleRule {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.concurrentRequests">ConcurrentRequests</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#name ContainerApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.authentication">Authentication</a></code> | <code>object</code> | authentication block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.authentication">Authentication</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>[]</code> | authentication block. |
 
 ---
 
@@ -4145,10 +4145,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Authentication`<sup>Optional</sup> <a name="Authentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.authentication"></a>
 
 ```csharp
-public object Authentication { get; set; }
+public IResolvable|ContainerAppTemplateTcpScaleRuleAuthentication[] Authentication { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>[]
 
 authentication block.
 
@@ -5256,13 +5256,13 @@ private void ResetMaxAgeInSeconds()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabledInput">AllowCredentialsEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabledInput">AllowCredentialsEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedHeadersInput">AllowedHeadersInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedMethodsInput">AllowedMethodsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedOriginsInput">AllowedOriginsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.exposedHeadersInput">ExposedHeadersInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.maxAgeInSecondsInput">MaxAgeInSecondsInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabled">AllowCredentialsEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabled">AllowCredentialsEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedHeaders">AllowedHeaders</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedMethods">AllowedMethods</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedOrigins">AllowedOrigins</a></code> | <code>string[]</code> | *No description.* |
@@ -5299,10 +5299,10 @@ public string Fqn { get; }
 ##### `AllowCredentialsEnabledInput`<sup>Optional</sup> <a name="AllowCredentialsEnabledInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabledInput"></a>
 
 ```csharp
-public object AllowCredentialsEnabledInput { get; }
+public bool|IResolvable AllowCredentialsEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -5359,10 +5359,10 @@ public double MaxAgeInSecondsInput { get; }
 ##### `AllowCredentialsEnabled`<sup>Required</sup> <a name="AllowCredentialsEnabled" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabled"></a>
 
 ```csharp
-public object AllowCredentialsEnabled { get; }
+public bool|IResolvable AllowCredentialsEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -5997,7 +5997,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>[]</code> | *No description.* |
 
 ---
 
@@ -6028,10 +6028,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppIngressIpSecurityRestriction[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>[]
 
 ---
 
@@ -6279,7 +6279,7 @@ private void ResetDescription()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.description">Description</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.ipAddressRange">IpAddressRange</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a></code> | *No description.* |
 
 ---
 
@@ -6390,10 +6390,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppIngressIpSecurityRestriction InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>
 
 ---
 
@@ -6626,24 +6626,24 @@ private void PutCors(ContainerAppIngressCors Value)
 ##### `PutIpSecurityRestriction` <a name="PutIpSecurityRestriction" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.putIpSecurityRestriction"></a>
 
 ```csharp
-private void PutIpSecurityRestriction(object Value)
+private void PutIpSecurityRestriction(IResolvable|ContainerAppIngressIpSecurityRestriction[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.putIpSecurityRestriction.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>[]
 
 ---
 
 ##### `PutTrafficWeight` <a name="PutTrafficWeight" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.putTrafficWeight"></a>
 
 ```csharp
-private void PutTrafficWeight(object Value)
+private void PutTrafficWeight(IResolvable|ContainerAppIngressTrafficWeight[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.putTrafficWeight.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>[]
 
 ---
 
@@ -6701,19 +6701,19 @@ private void ResetTransport()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.fqdn">Fqdn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.ipSecurityRestriction">IpSecurityRestriction</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList">ContainerAppIngressIpSecurityRestrictionList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.trafficWeight">TrafficWeight</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList">ContainerAppIngressTrafficWeightList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnectionsInput">AllowInsecureConnectionsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnectionsInput">AllowInsecureConnectionsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.clientCertificateModeInput">ClientCertificateModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.corsInput">CorsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors">ContainerAppIngressCors</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.exposedPortInput">ExposedPortInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabledInput">ExternalEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.ipSecurityRestrictionInput">IpSecurityRestrictionInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabledInput">ExternalEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.ipSecurityRestrictionInput">IpSecurityRestrictionInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.targetPortInput">TargetPortInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.trafficWeightInput">TrafficWeightInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.trafficWeightInput">TrafficWeightInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.transportInput">TransportInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnections">AllowInsecureConnections</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnections">AllowInsecureConnections</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.clientCertificateMode">ClientCertificateMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.exposedPort">ExposedPort</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabled">ExternalEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabled">ExternalEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.targetPort">TargetPort</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.transport">Transport</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress">ContainerAppIngress</a></code> | *No description.* |
@@ -6797,10 +6797,10 @@ public ContainerAppIngressTrafficWeightList TrafficWeight { get; }
 ##### `AllowInsecureConnectionsInput`<sup>Optional</sup> <a name="AllowInsecureConnectionsInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnectionsInput"></a>
 
 ```csharp
-public object AllowInsecureConnectionsInput { get; }
+public bool|IResolvable AllowInsecureConnectionsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -6837,20 +6837,20 @@ public double ExposedPortInput { get; }
 ##### `ExternalEnabledInput`<sup>Optional</sup> <a name="ExternalEnabledInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabledInput"></a>
 
 ```csharp
-public object ExternalEnabledInput { get; }
+public bool|IResolvable ExternalEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `IpSecurityRestrictionInput`<sup>Optional</sup> <a name="IpSecurityRestrictionInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.ipSecurityRestrictionInput"></a>
 
 ```csharp
-public object IpSecurityRestrictionInput { get; }
+public IResolvable|ContainerAppIngressIpSecurityRestriction[] IpSecurityRestrictionInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>[]
 
 ---
 
@@ -6867,10 +6867,10 @@ public double TargetPortInput { get; }
 ##### `TrafficWeightInput`<sup>Optional</sup> <a name="TrafficWeightInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.trafficWeightInput"></a>
 
 ```csharp
-public object TrafficWeightInput { get; }
+public IResolvable|ContainerAppIngressTrafficWeight[] TrafficWeightInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>[]
 
 ---
 
@@ -6887,10 +6887,10 @@ public string TransportInput { get; }
 ##### `AllowInsecureConnections`<sup>Required</sup> <a name="AllowInsecureConnections" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnections"></a>
 
 ```csharp
-public object AllowInsecureConnections { get; }
+public bool|IResolvable AllowInsecureConnections { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -6917,10 +6917,10 @@ public double ExposedPort { get; }
 ##### `ExternalEnabled`<sup>Required</sup> <a name="ExternalEnabled" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabled"></a>
 
 ```csharp
-public object ExternalEnabled { get; }
+public bool|IResolvable ExternalEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7076,7 +7076,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>[]</code> | *No description.* |
 
 ---
 
@@ -7107,10 +7107,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppIngressTrafficWeight[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>[]
 
 ---
 
@@ -7365,14 +7365,14 @@ private void ResetRevisionSuffix()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.labelInput">LabelInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevisionInput">LatestRevisionInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevisionInput">LatestRevisionInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.percentageInput">PercentageInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.revisionSuffixInput">RevisionSuffixInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.label">Label</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevision">LatestRevision</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevision">LatestRevision</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.percentage">Percentage</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.revisionSuffix">RevisionSuffix</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a></code> | *No description.* |
 
 ---
 
@@ -7413,10 +7413,10 @@ public string LabelInput { get; }
 ##### `LatestRevisionInput`<sup>Optional</sup> <a name="LatestRevisionInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevisionInput"></a>
 
 ```csharp
-public object LatestRevisionInput { get; }
+public bool|IResolvable LatestRevisionInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7453,10 +7453,10 @@ public string Label { get; }
 ##### `LatestRevision`<sup>Required</sup> <a name="LatestRevision" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevision"></a>
 
 ```csharp
-public object LatestRevision { get; }
+public bool|IResolvable LatestRevision { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7483,10 +7483,10 @@ public string RevisionSuffix { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppIngressTrafficWeight InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>
 
 ---
 
@@ -7612,7 +7612,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>[]</code> | *No description.* |
 
 ---
 
@@ -7643,10 +7643,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppRegistryList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppRegistry[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>[]
 
 ---
 
@@ -7908,7 +7908,7 @@ private void ResetUsername()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.passwordSecretName">PasswordSecretName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.server">Server</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.username">Username</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a></code> | *No description.* |
 
 ---
 
@@ -8019,10 +8019,10 @@ public string Username { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppRegistry InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>
 
 ---
 
@@ -8148,7 +8148,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>[]</code> | *No description.* |
 
 ---
 
@@ -8179,10 +8179,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppSecretList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppSecret[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>[]
 
 ---
 
@@ -8444,7 +8444,7 @@ private void ResetValue()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.keyVaultSecretId">KeyVaultSecretId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a></code> | *No description.* |
 
 ---
 
@@ -8555,10 +8555,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppSecret InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>
 
 ---
 
@@ -8684,7 +8684,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>[]</code> | *No description.* |
 
 ---
 
@@ -8715,10 +8715,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateAzureQueueScaleRuleAuthentication[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>[]
 
 ---
 
@@ -8955,7 +8955,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.triggerParameterInput">TriggerParameterInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.secretName">SecretName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.triggerParameter">TriggerParameter</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a></code> | *No description.* |
 
 ---
 
@@ -9026,10 +9026,10 @@ public string TriggerParameter { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateAzureQueueScaleRuleAuthentication InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>
 
 ---
 
@@ -9155,7 +9155,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>[]</code> | *No description.* |
 
 ---
 
@@ -9186,10 +9186,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateAzureQueueScaleRule[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>[]
 
 ---
 
@@ -9419,12 +9419,12 @@ Returns a reversible string representation.
 ##### `PutAuthentication` <a name="PutAuthentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.putAuthentication"></a>
 
 ```csharp
-private void PutAuthentication(object Value)
+private void PutAuthentication(IResolvable|ContainerAppTemplateAzureQueueScaleRuleAuthentication[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.putAuthentication.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>[]
 
 ---
 
@@ -9436,14 +9436,14 @@ private void PutAuthentication(object Value)
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.authentication">Authentication</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList">ContainerAppTemplateAzureQueueScaleRuleAuthenticationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.authenticationInput">AuthenticationInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.authenticationInput">AuthenticationInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.queueLengthInput">QueueLengthInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.queueNameInput">QueueNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.queueLength">QueueLength</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.queueName">QueueName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a></code> | *No description.* |
 
 ---
 
@@ -9484,10 +9484,10 @@ public ContainerAppTemplateAzureQueueScaleRuleAuthenticationList Authentication 
 ##### `AuthenticationInput`<sup>Optional</sup> <a name="AuthenticationInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.authenticationInput"></a>
 
 ```csharp
-public object AuthenticationInput { get; }
+public IResolvable|ContainerAppTemplateAzureQueueScaleRuleAuthentication[] AuthenticationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>[]
 
 ---
 
@@ -9554,10 +9554,10 @@ public string QueueName { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateAzureQueueScaleRule InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>
 
 ---
 
@@ -9683,7 +9683,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>[]</code> | *No description.* |
 
 ---
 
@@ -9714,10 +9714,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerEnv[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>[]
 
 ---
 
@@ -9970,7 +9970,7 @@ private void ResetValue()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.secretName">SecretName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a></code> | *No description.* |
 
 ---
 
@@ -10061,10 +10061,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerEnv InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>
 
 ---
 
@@ -10190,7 +10190,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>[]</code> | *No description.* |
 
 ---
 
@@ -10221,10 +10221,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainer[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>[]
 
 ---
 
@@ -10350,7 +10350,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>[]</code> | *No description.* |
 
 ---
 
@@ -10381,10 +10381,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerLivenessProbeHeader[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>[]
 
 ---
 
@@ -10621,7 +10621,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.valueInput">ValueInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a></code> | *No description.* |
 
 ---
 
@@ -10692,10 +10692,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerLivenessProbeHeader InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>
 
 ---
 
@@ -10821,7 +10821,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>[]</code> | *No description.* |
 
 ---
 
@@ -10852,10 +10852,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerLivenessProbe[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>[]
 
 ---
 
@@ -11092,12 +11092,12 @@ Returns a reversible string representation.
 ##### `PutHeader` <a name="PutHeader" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.putHeader"></a>
 
 ```csharp
-private void PutHeader(object Value)
+private void PutHeader(IResolvable|ContainerAppTemplateContainerLivenessProbeHeader[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.putHeader.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>[]
 
 ---
 
@@ -11153,7 +11153,7 @@ private void ResetTimeout()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.header">Header</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList">ContainerAppTemplateContainerLivenessProbeHeaderList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.terminationGracePeriodSeconds">TerminationGracePeriodSeconds</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.failureCountThresholdInput">FailureCountThresholdInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.headerInput">HeaderInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.headerInput">HeaderInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.hostInput">HostInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.initialDelayInput">InitialDelayInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.intervalSecondsInput">IntervalSecondsInput</a></code> | <code>double</code> | *No description.* |
@@ -11169,7 +11169,7 @@ private void ResetTimeout()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.port">Port</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.timeout">Timeout</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.transport">Transport</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a></code> | *No description.* |
 
 ---
 
@@ -11230,10 +11230,10 @@ public double FailureCountThresholdInput { get; }
 ##### `HeaderInput`<sup>Optional</sup> <a name="HeaderInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.headerInput"></a>
 
 ```csharp
-public object HeaderInput { get; }
+public IResolvable|ContainerAppTemplateContainerLivenessProbeHeader[] HeaderInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>[]
 
 ---
 
@@ -11390,10 +11390,10 @@ public string Transport { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerLivenessProbe InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>
 
 ---
 
@@ -11634,60 +11634,60 @@ Returns a reversible string representation.
 ##### `PutEnv` <a name="PutEnv" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putEnv"></a>
 
 ```csharp
-private void PutEnv(object Value)
+private void PutEnv(IResolvable|ContainerAppTemplateContainerEnv[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putEnv.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>[]
 
 ---
 
 ##### `PutLivenessProbe` <a name="PutLivenessProbe" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putLivenessProbe"></a>
 
 ```csharp
-private void PutLivenessProbe(object Value)
+private void PutLivenessProbe(IResolvable|ContainerAppTemplateContainerLivenessProbe[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putLivenessProbe.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>[]
 
 ---
 
 ##### `PutReadinessProbe` <a name="PutReadinessProbe" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putReadinessProbe"></a>
 
 ```csharp
-private void PutReadinessProbe(object Value)
+private void PutReadinessProbe(IResolvable|ContainerAppTemplateContainerReadinessProbe[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putReadinessProbe.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>[]
 
 ---
 
 ##### `PutStartupProbe` <a name="PutStartupProbe" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putStartupProbe"></a>
 
 ```csharp
-private void PutStartupProbe(object Value)
+private void PutStartupProbe(IResolvable|ContainerAppTemplateContainerStartupProbe[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putStartupProbe.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>[]
 
 ---
 
 ##### `PutVolumeMounts` <a name="PutVolumeMounts" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putVolumeMounts"></a>
 
 ```csharp
-private void PutVolumeMounts(object Value)
+private void PutVolumeMounts(IResolvable|ContainerAppTemplateContainerVolumeMounts[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putVolumeMounts.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>[]
 
 ---
 
@@ -11749,21 +11749,21 @@ private void ResetVolumeMounts()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.argsInput">ArgsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.commandInput">CommandInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.cpuInput">CpuInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.envInput">EnvInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.envInput">EnvInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.imageInput">ImageInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.livenessProbeInput">LivenessProbeInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.livenessProbeInput">LivenessProbeInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.memoryInput">MemoryInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.readinessProbeInput">ReadinessProbeInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.startupProbeInput">StartupProbeInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.volumeMountsInput">VolumeMountsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.readinessProbeInput">ReadinessProbeInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.startupProbeInput">StartupProbeInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.volumeMountsInput">VolumeMountsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.args">Args</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.command">Command</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.cpu">Cpu</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.image">Image</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.memory">Memory</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a></code> | *No description.* |
 
 ---
 
@@ -11884,10 +11884,10 @@ public double CpuInput { get; }
 ##### `EnvInput`<sup>Optional</sup> <a name="EnvInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.envInput"></a>
 
 ```csharp
-public object EnvInput { get; }
+public IResolvable|ContainerAppTemplateContainerEnv[] EnvInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>[]
 
 ---
 
@@ -11904,10 +11904,10 @@ public string ImageInput { get; }
 ##### `LivenessProbeInput`<sup>Optional</sup> <a name="LivenessProbeInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.livenessProbeInput"></a>
 
 ```csharp
-public object LivenessProbeInput { get; }
+public IResolvable|ContainerAppTemplateContainerLivenessProbe[] LivenessProbeInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>[]
 
 ---
 
@@ -11934,30 +11934,30 @@ public string NameInput { get; }
 ##### `ReadinessProbeInput`<sup>Optional</sup> <a name="ReadinessProbeInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.readinessProbeInput"></a>
 
 ```csharp
-public object ReadinessProbeInput { get; }
+public IResolvable|ContainerAppTemplateContainerReadinessProbe[] ReadinessProbeInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>[]
 
 ---
 
 ##### `StartupProbeInput`<sup>Optional</sup> <a name="StartupProbeInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.startupProbeInput"></a>
 
 ```csharp
-public object StartupProbeInput { get; }
+public IResolvable|ContainerAppTemplateContainerStartupProbe[] StartupProbeInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>[]
 
 ---
 
 ##### `VolumeMountsInput`<sup>Optional</sup> <a name="VolumeMountsInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.volumeMountsInput"></a>
 
 ```csharp
-public object VolumeMountsInput { get; }
+public IResolvable|ContainerAppTemplateContainerVolumeMounts[] VolumeMountsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>[]
 
 ---
 
@@ -12024,10 +12024,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainer InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>
 
 ---
 
@@ -12153,7 +12153,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>[]</code> | *No description.* |
 
 ---
 
@@ -12184,10 +12184,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerReadinessProbeHeader[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>[]
 
 ---
 
@@ -12424,7 +12424,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.valueInput">ValueInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a></code> | *No description.* |
 
 ---
 
@@ -12495,10 +12495,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerReadinessProbeHeader InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>
 
 ---
 
@@ -12624,7 +12624,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>[]</code> | *No description.* |
 
 ---
 
@@ -12655,10 +12655,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerReadinessProbe[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>[]
 
 ---
 
@@ -12896,12 +12896,12 @@ Returns a reversible string representation.
 ##### `PutHeader` <a name="PutHeader" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.putHeader"></a>
 
 ```csharp
-private void PutHeader(object Value)
+private void PutHeader(IResolvable|ContainerAppTemplateContainerReadinessProbeHeader[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.putHeader.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>[]
 
 ---
 
@@ -12962,7 +12962,7 @@ private void ResetTimeout()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.header">Header</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList">ContainerAppTemplateContainerReadinessProbeHeaderList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.failureCountThresholdInput">FailureCountThresholdInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.headerInput">HeaderInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.headerInput">HeaderInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.hostInput">HostInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.initialDelayInput">InitialDelayInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.intervalSecondsInput">IntervalSecondsInput</a></code> | <code>double</code> | *No description.* |
@@ -12980,7 +12980,7 @@ private void ResetTimeout()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.successCountThreshold">SuccessCountThreshold</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.timeout">Timeout</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.transport">Transport</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a></code> | *No description.* |
 
 ---
 
@@ -13031,10 +13031,10 @@ public double FailureCountThresholdInput { get; }
 ##### `HeaderInput`<sup>Optional</sup> <a name="HeaderInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.headerInput"></a>
 
 ```csharp
-public object HeaderInput { get; }
+public IResolvable|ContainerAppTemplateContainerReadinessProbeHeader[] HeaderInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>[]
 
 ---
 
@@ -13211,10 +13211,10 @@ public string Transport { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerReadinessProbe InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>
 
 ---
 
@@ -13340,7 +13340,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>[]</code> | *No description.* |
 
 ---
 
@@ -13371,10 +13371,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerStartupProbeHeader[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>[]
 
 ---
 
@@ -13611,7 +13611,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.valueInput">ValueInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a></code> | *No description.* |
 
 ---
 
@@ -13682,10 +13682,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerStartupProbeHeader InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>
 
 ---
 
@@ -13811,7 +13811,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>[]</code> | *No description.* |
 
 ---
 
@@ -13842,10 +13842,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerStartupProbe[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>[]
 
 ---
 
@@ -14082,12 +14082,12 @@ Returns a reversible string representation.
 ##### `PutHeader` <a name="PutHeader" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.putHeader"></a>
 
 ```csharp
-private void PutHeader(object Value)
+private void PutHeader(IResolvable|ContainerAppTemplateContainerStartupProbeHeader[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.putHeader.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>[]
 
 ---
 
@@ -14143,7 +14143,7 @@ private void ResetTimeout()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.header">Header</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList">ContainerAppTemplateContainerStartupProbeHeaderList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.terminationGracePeriodSeconds">TerminationGracePeriodSeconds</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.failureCountThresholdInput">FailureCountThresholdInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.headerInput">HeaderInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.headerInput">HeaderInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.hostInput">HostInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.initialDelayInput">InitialDelayInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.intervalSecondsInput">IntervalSecondsInput</a></code> | <code>double</code> | *No description.* |
@@ -14159,7 +14159,7 @@ private void ResetTimeout()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.port">Port</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.timeout">Timeout</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.transport">Transport</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a></code> | *No description.* |
 
 ---
 
@@ -14220,10 +14220,10 @@ public double FailureCountThresholdInput { get; }
 ##### `HeaderInput`<sup>Optional</sup> <a name="HeaderInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.headerInput"></a>
 
 ```csharp
-public object HeaderInput { get; }
+public IResolvable|ContainerAppTemplateContainerStartupProbeHeader[] HeaderInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>[]
 
 ---
 
@@ -14380,10 +14380,10 @@ public string Transport { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerStartupProbe InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>
 
 ---
 
@@ -14509,7 +14509,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>[]</code> | *No description.* |
 
 ---
 
@@ -14540,10 +14540,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerVolumeMounts[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>[]
 
 ---
 
@@ -14789,7 +14789,7 @@ private void ResetSubPath()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.path">Path</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.subPath">SubPath</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a></code> | *No description.* |
 
 ---
 
@@ -14880,10 +14880,10 @@ public string SubPath { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateContainerVolumeMounts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>
 
 ---
 
@@ -15009,7 +15009,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>[]</code> | *No description.* |
 
 ---
 
@@ -15040,10 +15040,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateCustomScaleRuleAuthentication[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>[]
 
 ---
 
@@ -15280,7 +15280,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.triggerParameterInput">TriggerParameterInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.secretName">SecretName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.triggerParameter">TriggerParameter</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a></code> | *No description.* |
 
 ---
 
@@ -15351,10 +15351,10 @@ public string TriggerParameter { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateCustomScaleRuleAuthentication InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>
 
 ---
 
@@ -15480,7 +15480,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>[]</code> | *No description.* |
 
 ---
 
@@ -15511,10 +15511,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateCustomScaleRule[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>[]
 
 ---
 
@@ -15745,12 +15745,12 @@ Returns a reversible string representation.
 ##### `PutAuthentication` <a name="PutAuthentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.putAuthentication"></a>
 
 ```csharp
-private void PutAuthentication(object Value)
+private void PutAuthentication(IResolvable|ContainerAppTemplateCustomScaleRuleAuthentication[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.putAuthentication.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>[]
 
 ---
 
@@ -15768,14 +15768,14 @@ private void ResetAuthentication()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.authentication">Authentication</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList">ContainerAppTemplateCustomScaleRuleAuthenticationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.authenticationInput">AuthenticationInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.authenticationInput">AuthenticationInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.customRuleTypeInput">CustomRuleTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.metadataInput">MetadataInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.customRuleType">CustomRuleType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.metadata">Metadata</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a></code> | *No description.* |
 
 ---
 
@@ -15816,10 +15816,10 @@ public ContainerAppTemplateCustomScaleRuleAuthenticationList Authentication { ge
 ##### `AuthenticationInput`<sup>Optional</sup> <a name="AuthenticationInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.authenticationInput"></a>
 
 ```csharp
-public object AuthenticationInput { get; }
+public IResolvable|ContainerAppTemplateCustomScaleRuleAuthentication[] AuthenticationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>[]
 
 ---
 
@@ -15886,10 +15886,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateCustomScaleRule InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>
 
 ---
 
@@ -16015,7 +16015,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>[]</code> | *No description.* |
 
 ---
 
@@ -16046,10 +16046,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateHttpScaleRuleAuthentication[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>[]
 
 ---
 
@@ -16293,7 +16293,7 @@ private void ResetTriggerParameter()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.triggerParameterInput">TriggerParameterInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.secretName">SecretName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.triggerParameter">TriggerParameter</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a></code> | *No description.* |
 
 ---
 
@@ -16364,10 +16364,10 @@ public string TriggerParameter { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateHttpScaleRuleAuthentication InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>
 
 ---
 
@@ -16493,7 +16493,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>[]</code> | *No description.* |
 
 ---
 
@@ -16524,10 +16524,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateHttpScaleRule[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>[]
 
 ---
 
@@ -16758,12 +16758,12 @@ Returns a reversible string representation.
 ##### `PutAuthentication` <a name="PutAuthentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.putAuthentication"></a>
 
 ```csharp
-private void PutAuthentication(object Value)
+private void PutAuthentication(IResolvable|ContainerAppTemplateHttpScaleRuleAuthentication[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.putAuthentication.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>[]
 
 ---
 
@@ -16781,12 +16781,12 @@ private void ResetAuthentication()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.authentication">Authentication</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList">ContainerAppTemplateHttpScaleRuleAuthenticationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.authenticationInput">AuthenticationInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.authenticationInput">AuthenticationInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.concurrentRequestsInput">ConcurrentRequestsInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.concurrentRequests">ConcurrentRequests</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a></code> | *No description.* |
 
 ---
 
@@ -16827,10 +16827,10 @@ public ContainerAppTemplateHttpScaleRuleAuthenticationList Authentication { get;
 ##### `AuthenticationInput`<sup>Optional</sup> <a name="AuthenticationInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.authenticationInput"></a>
 
 ```csharp
-public object AuthenticationInput { get; }
+public IResolvable|ContainerAppTemplateHttpScaleRuleAuthentication[] AuthenticationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>[]
 
 ---
 
@@ -16877,10 +16877,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateHttpScaleRule InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>
 
 ---
 
@@ -17006,7 +17006,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>[]</code> | *No description.* |
 
 ---
 
@@ -17037,10 +17037,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateInitContainerEnv[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>[]
 
 ---
 
@@ -17293,7 +17293,7 @@ private void ResetValue()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.secretName">SecretName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a></code> | *No description.* |
 
 ---
 
@@ -17384,10 +17384,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateInitContainerEnv InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>
 
 ---
 
@@ -17513,7 +17513,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>[]</code> | *No description.* |
 
 ---
 
@@ -17544,10 +17544,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateInitContainer[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>[]
 
 ---
 
@@ -17784,24 +17784,24 @@ Returns a reversible string representation.
 ##### `PutEnv` <a name="PutEnv" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.putEnv"></a>
 
 ```csharp
-private void PutEnv(object Value)
+private void PutEnv(IResolvable|ContainerAppTemplateInitContainerEnv[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.putEnv.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>[]
 
 ---
 
 ##### `PutVolumeMounts` <a name="PutVolumeMounts" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.putVolumeMounts"></a>
 
 ```csharp
-private void PutVolumeMounts(object Value)
+private void PutVolumeMounts(IResolvable|ContainerAppTemplateInitContainerVolumeMounts[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.putVolumeMounts.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>[]
 
 ---
 
@@ -17854,18 +17854,18 @@ private void ResetVolumeMounts()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.argsInput">ArgsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.commandInput">CommandInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.cpuInput">CpuInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.envInput">EnvInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.envInput">EnvInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.imageInput">ImageInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.memoryInput">MemoryInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.volumeMountsInput">VolumeMountsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.volumeMountsInput">VolumeMountsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.args">Args</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.command">Command</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.cpu">Cpu</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.image">Image</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.memory">Memory</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a></code> | *No description.* |
 
 ---
 
@@ -17956,10 +17956,10 @@ public double CpuInput { get; }
 ##### `EnvInput`<sup>Optional</sup> <a name="EnvInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.envInput"></a>
 
 ```csharp
-public object EnvInput { get; }
+public IResolvable|ContainerAppTemplateInitContainerEnv[] EnvInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>[]
 
 ---
 
@@ -17996,10 +17996,10 @@ public string NameInput { get; }
 ##### `VolumeMountsInput`<sup>Optional</sup> <a name="VolumeMountsInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.volumeMountsInput"></a>
 
 ```csharp
-public object VolumeMountsInput { get; }
+public IResolvable|ContainerAppTemplateInitContainerVolumeMounts[] VolumeMountsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>[]
 
 ---
 
@@ -18066,10 +18066,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateInitContainer InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>
 
 ---
 
@@ -18195,7 +18195,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>[]</code> | *No description.* |
 
 ---
 
@@ -18226,10 +18226,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateInitContainerVolumeMounts[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>[]
 
 ---
 
@@ -18475,7 +18475,7 @@ private void ResetSubPath()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.path">Path</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.subPath">SubPath</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a></code> | *No description.* |
 
 ---
 
@@ -18566,10 +18566,10 @@ public string SubPath { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateInitContainerVolumeMounts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>
 
 ---
 
@@ -18797,84 +18797,84 @@ Returns a reversible string representation.
 ##### `PutAzureQueueScaleRule` <a name="PutAzureQueueScaleRule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putAzureQueueScaleRule"></a>
 
 ```csharp
-private void PutAzureQueueScaleRule(object Value)
+private void PutAzureQueueScaleRule(IResolvable|ContainerAppTemplateAzureQueueScaleRule[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putAzureQueueScaleRule.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>[]
 
 ---
 
 ##### `PutContainer` <a name="PutContainer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putContainer"></a>
 
 ```csharp
-private void PutContainer(object Value)
+private void PutContainer(IResolvable|ContainerAppTemplateContainer[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putContainer.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>[]
 
 ---
 
 ##### `PutCustomScaleRule` <a name="PutCustomScaleRule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putCustomScaleRule"></a>
 
 ```csharp
-private void PutCustomScaleRule(object Value)
+private void PutCustomScaleRule(IResolvable|ContainerAppTemplateCustomScaleRule[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putCustomScaleRule.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>[]
 
 ---
 
 ##### `PutHttpScaleRule` <a name="PutHttpScaleRule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putHttpScaleRule"></a>
 
 ```csharp
-private void PutHttpScaleRule(object Value)
+private void PutHttpScaleRule(IResolvable|ContainerAppTemplateHttpScaleRule[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putHttpScaleRule.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>[]
 
 ---
 
 ##### `PutInitContainer` <a name="PutInitContainer" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putInitContainer"></a>
 
 ```csharp
-private void PutInitContainer(object Value)
+private void PutInitContainer(IResolvable|ContainerAppTemplateInitContainer[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putInitContainer.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>[]
 
 ---
 
 ##### `PutTcpScaleRule` <a name="PutTcpScaleRule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putTcpScaleRule"></a>
 
 ```csharp
-private void PutTcpScaleRule(object Value)
+private void PutTcpScaleRule(IResolvable|ContainerAppTemplateTcpScaleRule[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putTcpScaleRule.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>[]
 
 ---
 
 ##### `PutVolume` <a name="PutVolume" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putVolume"></a>
 
 ```csharp
-private void PutVolume(object Value)
+private void PutVolume(IResolvable|ContainerAppTemplateVolume[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putVolume.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>[]
 
 ---
 
@@ -18952,17 +18952,17 @@ private void ResetVolume()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.initContainer">InitContainer</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList">ContainerAppTemplateInitContainerList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.tcpScaleRule">TcpScaleRule</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList">ContainerAppTemplateTcpScaleRuleList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.volume">Volume</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList">ContainerAppTemplateVolumeList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.azureQueueScaleRuleInput">AzureQueueScaleRuleInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.containerInput">ContainerInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.customScaleRuleInput">CustomScaleRuleInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.httpScaleRuleInput">HttpScaleRuleInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.initContainerInput">InitContainerInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.azureQueueScaleRuleInput">AzureQueueScaleRuleInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.containerInput">ContainerInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.customScaleRuleInput">CustomScaleRuleInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.httpScaleRuleInput">HttpScaleRuleInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.initContainerInput">InitContainerInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.maxReplicasInput">MaxReplicasInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.minReplicasInput">MinReplicasInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.revisionSuffixInput">RevisionSuffixInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.tcpScaleRuleInput">TcpScaleRuleInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.tcpScaleRuleInput">TcpScaleRuleInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.terminationGracePeriodSecondsInput">TerminationGracePeriodSecondsInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.volumeInput">VolumeInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.volumeInput">VolumeInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.maxReplicas">MaxReplicas</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.minReplicas">MinReplicas</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.revisionSuffix">RevisionSuffix</a></code> | <code>string</code> | *No description.* |
@@ -19068,50 +19068,50 @@ public ContainerAppTemplateVolumeList Volume { get; }
 ##### `AzureQueueScaleRuleInput`<sup>Optional</sup> <a name="AzureQueueScaleRuleInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.azureQueueScaleRuleInput"></a>
 
 ```csharp
-public object AzureQueueScaleRuleInput { get; }
+public IResolvable|ContainerAppTemplateAzureQueueScaleRule[] AzureQueueScaleRuleInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>[]
 
 ---
 
 ##### `ContainerInput`<sup>Optional</sup> <a name="ContainerInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.containerInput"></a>
 
 ```csharp
-public object ContainerInput { get; }
+public IResolvable|ContainerAppTemplateContainer[] ContainerInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>[]
 
 ---
 
 ##### `CustomScaleRuleInput`<sup>Optional</sup> <a name="CustomScaleRuleInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.customScaleRuleInput"></a>
 
 ```csharp
-public object CustomScaleRuleInput { get; }
+public IResolvable|ContainerAppTemplateCustomScaleRule[] CustomScaleRuleInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>[]
 
 ---
 
 ##### `HttpScaleRuleInput`<sup>Optional</sup> <a name="HttpScaleRuleInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.httpScaleRuleInput"></a>
 
 ```csharp
-public object HttpScaleRuleInput { get; }
+public IResolvable|ContainerAppTemplateHttpScaleRule[] HttpScaleRuleInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>[]
 
 ---
 
 ##### `InitContainerInput`<sup>Optional</sup> <a name="InitContainerInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.initContainerInput"></a>
 
 ```csharp
-public object InitContainerInput { get; }
+public IResolvable|ContainerAppTemplateInitContainer[] InitContainerInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>[]
 
 ---
 
@@ -19148,10 +19148,10 @@ public string RevisionSuffixInput { get; }
 ##### `TcpScaleRuleInput`<sup>Optional</sup> <a name="TcpScaleRuleInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.tcpScaleRuleInput"></a>
 
 ```csharp
-public object TcpScaleRuleInput { get; }
+public IResolvable|ContainerAppTemplateTcpScaleRule[] TcpScaleRuleInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>[]
 
 ---
 
@@ -19168,10 +19168,10 @@ public double TerminationGracePeriodSecondsInput { get; }
 ##### `VolumeInput`<sup>Optional</sup> <a name="VolumeInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.volumeInput"></a>
 
 ```csharp
-public object VolumeInput { get; }
+public IResolvable|ContainerAppTemplateVolume[] VolumeInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>[]
 
 ---
 
@@ -19347,7 +19347,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>[]</code> | *No description.* |
 
 ---
 
@@ -19378,10 +19378,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateTcpScaleRuleAuthentication[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>[]
 
 ---
 
@@ -19625,7 +19625,7 @@ private void ResetTriggerParameter()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.triggerParameterInput">TriggerParameterInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.secretName">SecretName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.triggerParameter">TriggerParameter</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a></code> | *No description.* |
 
 ---
 
@@ -19696,10 +19696,10 @@ public string TriggerParameter { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateTcpScaleRuleAuthentication InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>
 
 ---
 
@@ -19825,7 +19825,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>[]</code> | *No description.* |
 
 ---
 
@@ -19856,10 +19856,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateTcpScaleRule[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>[]
 
 ---
 
@@ -20090,12 +20090,12 @@ Returns a reversible string representation.
 ##### `PutAuthentication` <a name="PutAuthentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.putAuthentication"></a>
 
 ```csharp
-private void PutAuthentication(object Value)
+private void PutAuthentication(IResolvable|ContainerAppTemplateTcpScaleRuleAuthentication[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.putAuthentication.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>[]
 
 ---
 
@@ -20113,12 +20113,12 @@ private void ResetAuthentication()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.authentication">Authentication</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList">ContainerAppTemplateTcpScaleRuleAuthenticationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.authenticationInput">AuthenticationInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.authenticationInput">AuthenticationInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.concurrentRequestsInput">ConcurrentRequestsInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.concurrentRequests">ConcurrentRequests</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a></code> | *No description.* |
 
 ---
 
@@ -20159,10 +20159,10 @@ public ContainerAppTemplateTcpScaleRuleAuthenticationList Authentication { get; 
 ##### `AuthenticationInput`<sup>Optional</sup> <a name="AuthenticationInput" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.authenticationInput"></a>
 
 ```csharp
-public object AuthenticationInput { get; }
+public IResolvable|ContainerAppTemplateTcpScaleRuleAuthentication[] AuthenticationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>[]
 
 ---
 
@@ -20209,10 +20209,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateTcpScaleRule InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>
 
 ---
 
@@ -20338,7 +20338,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>[]</code> | *No description.* |
 
 ---
 
@@ -20369,10 +20369,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateVolume[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>[]
 
 ---
 
@@ -20634,7 +20634,7 @@ private void ResetStorageType()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.storageName">StorageName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.storageType">StorageType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a></code> | *No description.* |
 
 ---
 
@@ -20745,10 +20745,10 @@ public string StorageType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTemplateVolume InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>
 
 ---
 
@@ -20999,7 +20999,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.read">Read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -21110,10 +21110,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|ContainerAppTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a>
 
 ---
 

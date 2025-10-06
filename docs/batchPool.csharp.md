@@ -317,7 +317,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-azurerm.batchPool.BatchPool.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.batchPool.BatchPool.importFrom"></a>
@@ -371,7 +371,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.batchPool.BatchPool.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -386,7 +386,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-azurerm.batchPool.BatchPool.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -423,12 +423,12 @@ private void PutAutoScale(BatchPoolAutoScale Value)
 ##### `PutCertificate` <a name="PutCertificate" id="@cdktf/provider-azurerm.batchPool.BatchPool.putCertificate"></a>
 
 ```csharp
-private void PutCertificate(object Value)
+private void PutCertificate(IResolvable|BatchPoolCertificate[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPool.putCertificate.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate">BatchPoolCertificate</a>[]
 
 ---
 
@@ -447,36 +447,36 @@ private void PutContainerConfiguration(BatchPoolContainerConfiguration Value)
 ##### `PutDataDisks` <a name="PutDataDisks" id="@cdktf/provider-azurerm.batchPool.BatchPool.putDataDisks"></a>
 
 ```csharp
-private void PutDataDisks(object Value)
+private void PutDataDisks(IResolvable|BatchPoolDataDisks[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPool.putDataDisks.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks">BatchPoolDataDisks</a>[]
 
 ---
 
 ##### `PutDiskEncryption` <a name="PutDiskEncryption" id="@cdktf/provider-azurerm.batchPool.BatchPool.putDiskEncryption"></a>
 
 ```csharp
-private void PutDiskEncryption(object Value)
+private void PutDiskEncryption(IResolvable|BatchPoolDiskEncryption[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPool.putDiskEncryption.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption">BatchPoolDiskEncryption</a>[]
 
 ---
 
 ##### `PutExtensions` <a name="PutExtensions" id="@cdktf/provider-azurerm.batchPool.BatchPool.putExtensions"></a>
 
 ```csharp
-private void PutExtensions(object Value)
+private void PutExtensions(IResolvable|BatchPoolExtensions[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPool.putExtensions.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions">BatchPoolExtensions</a>[]
 
 ---
 
@@ -507,12 +507,12 @@ private void PutIdentity(BatchPoolIdentity Value)
 ##### `PutMount` <a name="PutMount" id="@cdktf/provider-azurerm.batchPool.BatchPool.putMount"></a>
 
 ```csharp
-private void PutMount(object Value)
+private void PutMount(IResolvable|BatchPoolMount[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPool.putMount.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount">BatchPoolMount</a>[]
 
 ---
 
@@ -531,12 +531,12 @@ private void PutNetworkConfiguration(BatchPoolNetworkConfiguration Value)
 ##### `PutNodePlacement` <a name="PutNodePlacement" id="@cdktf/provider-azurerm.batchPool.BatchPool.putNodePlacement"></a>
 
 ```csharp
-private void PutNodePlacement(object Value)
+private void PutNodePlacement(IResolvable|BatchPoolNodePlacement[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPool.putNodePlacement.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement">BatchPoolNodePlacement</a>[]
 
 ---
 
@@ -579,12 +579,12 @@ private void PutStorageImageReference(BatchPoolStorageImageReference Value)
 ##### `PutTaskSchedulingPolicy` <a name="PutTaskSchedulingPolicy" id="@cdktf/provider-azurerm.batchPool.BatchPool.putTaskSchedulingPolicy"></a>
 
 ```csharp
-private void PutTaskSchedulingPolicy(object Value)
+private void PutTaskSchedulingPolicy(IResolvable|BatchPoolTaskSchedulingPolicy[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPool.putTaskSchedulingPolicy.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy">BatchPoolTaskSchedulingPolicy</a>[]
 
 ---
 
@@ -603,24 +603,24 @@ private void PutTimeouts(BatchPoolTimeouts Value)
 ##### `PutUserAccounts` <a name="PutUserAccounts" id="@cdktf/provider-azurerm.batchPool.BatchPool.putUserAccounts"></a>
 
 ```csharp
-private void PutUserAccounts(object Value)
+private void PutUserAccounts(IResolvable|BatchPoolUserAccounts[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPool.putUserAccounts.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts">BatchPoolUserAccounts</a>[]
 
 ---
 
 ##### `PutWindows` <a name="PutWindows" id="@cdktf/provider-azurerm.batchPool.BatchPool.putWindows"></a>
 
 ```csharp
-private void PutWindows(object Value)
+private void PutWindows(IResolvable|BatchPoolWindows[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPool.putWindows.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows">BatchPoolWindows</a>[]
 
 ---
 
@@ -906,13 +906,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.autoScale">AutoScale</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolAutoScaleOutputReference">BatchPoolAutoScaleOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.certificate">Certificate</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificateList">BatchPoolCertificateList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.containerConfiguration">ContainerConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference">BatchPoolContainerConfigurationOutputReference</a></code> | *No description.* |
@@ -933,12 +933,12 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.windows">Windows</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsList">BatchPoolWindowsList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.accountNameInput">AccountNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.autoScaleInput">AutoScaleInput</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolAutoScale">BatchPoolAutoScale</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.certificateInput">CertificateInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.certificateInput">CertificateInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate">BatchPoolCertificate</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.containerConfigurationInput">ContainerConfigurationInput</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration">BatchPoolContainerConfiguration</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.dataDisksInput">DataDisksInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.diskEncryptionInput">DiskEncryptionInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.dataDisksInput">DataDisksInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks">BatchPoolDataDisks</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.diskEncryptionInput">DiskEncryptionInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption">BatchPoolDiskEncryption</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.displayNameInput">DisplayNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.extensionsInput">ExtensionsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.extensionsInput">ExtensionsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions">BatchPoolExtensions</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.fixedScaleInput">FixedScaleInput</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale">BatchPoolFixedScale</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.identityInput">IdentityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolIdentity">BatchPoolIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
@@ -946,23 +946,23 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.licenseTypeInput">LicenseTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.maxTasksPerNodeInput">MaxTasksPerNodeInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.metadataInput">MetadataInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.mountInput">MountInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.mountInput">MountInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount">BatchPoolMount</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.networkConfigurationInput">NetworkConfigurationInput</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration">BatchPoolNetworkConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.nodeAgentSkuIdInput">NodeAgentSkuIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.nodePlacementInput">NodePlacementInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.nodePlacementInput">NodePlacementInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement">BatchPoolNodePlacement</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.osDiskPlacementInput">OsDiskPlacementInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.resourceGroupNameInput">ResourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.securityProfileInput">SecurityProfileInput</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile">BatchPoolSecurityProfile</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.startTaskInput">StartTaskInput</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask">BatchPoolStartTask</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.stopPendingResizeOperationInput">StopPendingResizeOperationInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.stopPendingResizeOperationInput">StopPendingResizeOperationInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.storageImageReferenceInput">StorageImageReferenceInput</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference">BatchPoolStorageImageReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.targetNodeCommunicationModeInput">TargetNodeCommunicationModeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.taskSchedulingPolicyInput">TaskSchedulingPolicyInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.userAccountsInput">UserAccountsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.taskSchedulingPolicyInput">TaskSchedulingPolicyInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy">BatchPoolTaskSchedulingPolicy</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts">BatchPoolTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.userAccountsInput">UserAccountsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts">BatchPoolUserAccounts</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.vmSizeInput">VmSizeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.windowsInput">WindowsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.windowsInput">WindowsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows">BatchPoolWindows</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.accountName">AccountName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.displayName">DisplayName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.id">Id</a></code> | <code>string</code> | *No description.* |
@@ -974,7 +974,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.nodeAgentSkuId">NodeAgentSkuId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.osDiskPlacement">OsDiskPlacement</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.stopPendingResizeOperation">StopPendingResizeOperation</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.stopPendingResizeOperation">StopPendingResizeOperation</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.targetNodeCommunicationMode">TargetNodeCommunicationMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPool.property.vmSize">VmSize</a></code> | <code>string</code> | *No description.* |
 
@@ -1055,20 +1055,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1115,10 +1115,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1325,10 +1325,10 @@ public BatchPoolAutoScale AutoScaleInput { get; }
 ##### `CertificateInput`<sup>Optional</sup> <a name="CertificateInput" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.certificateInput"></a>
 
 ```csharp
-public object CertificateInput { get; }
+public IResolvable|BatchPoolCertificate[] CertificateInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate">BatchPoolCertificate</a>[]
 
 ---
 
@@ -1345,20 +1345,20 @@ public BatchPoolContainerConfiguration ContainerConfigurationInput { get; }
 ##### `DataDisksInput`<sup>Optional</sup> <a name="DataDisksInput" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.dataDisksInput"></a>
 
 ```csharp
-public object DataDisksInput { get; }
+public IResolvable|BatchPoolDataDisks[] DataDisksInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks">BatchPoolDataDisks</a>[]
 
 ---
 
 ##### `DiskEncryptionInput`<sup>Optional</sup> <a name="DiskEncryptionInput" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.diskEncryptionInput"></a>
 
 ```csharp
-public object DiskEncryptionInput { get; }
+public IResolvable|BatchPoolDiskEncryption[] DiskEncryptionInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption">BatchPoolDiskEncryption</a>[]
 
 ---
 
@@ -1375,10 +1375,10 @@ public string DisplayNameInput { get; }
 ##### `ExtensionsInput`<sup>Optional</sup> <a name="ExtensionsInput" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.extensionsInput"></a>
 
 ```csharp
-public object ExtensionsInput { get; }
+public IResolvable|BatchPoolExtensions[] ExtensionsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions">BatchPoolExtensions</a>[]
 
 ---
 
@@ -1455,10 +1455,10 @@ public System.Collections.Generic.IDictionary<string, string> MetadataInput { ge
 ##### `MountInput`<sup>Optional</sup> <a name="MountInput" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.mountInput"></a>
 
 ```csharp
-public object MountInput { get; }
+public IResolvable|BatchPoolMount[] MountInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount">BatchPoolMount</a>[]
 
 ---
 
@@ -1495,10 +1495,10 @@ public string NodeAgentSkuIdInput { get; }
 ##### `NodePlacementInput`<sup>Optional</sup> <a name="NodePlacementInput" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.nodePlacementInput"></a>
 
 ```csharp
-public object NodePlacementInput { get; }
+public IResolvable|BatchPoolNodePlacement[] NodePlacementInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement">BatchPoolNodePlacement</a>[]
 
 ---
 
@@ -1545,10 +1545,10 @@ public BatchPoolStartTask StartTaskInput { get; }
 ##### `StopPendingResizeOperationInput`<sup>Optional</sup> <a name="StopPendingResizeOperationInput" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.stopPendingResizeOperationInput"></a>
 
 ```csharp
-public object StopPendingResizeOperationInput { get; }
+public bool|IResolvable StopPendingResizeOperationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1575,30 +1575,30 @@ public string TargetNodeCommunicationModeInput { get; }
 ##### `TaskSchedulingPolicyInput`<sup>Optional</sup> <a name="TaskSchedulingPolicyInput" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.taskSchedulingPolicyInput"></a>
 
 ```csharp
-public object TaskSchedulingPolicyInput { get; }
+public IResolvable|BatchPoolTaskSchedulingPolicy[] TaskSchedulingPolicyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy">BatchPoolTaskSchedulingPolicy</a>[]
 
 ---
 
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|BatchPoolTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts">BatchPoolTimeouts</a>
 
 ---
 
 ##### `UserAccountsInput`<sup>Optional</sup> <a name="UserAccountsInput" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.userAccountsInput"></a>
 
 ```csharp
-public object UserAccountsInput { get; }
+public IResolvable|BatchPoolUserAccounts[] UserAccountsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts">BatchPoolUserAccounts</a>[]
 
 ---
 
@@ -1615,10 +1615,10 @@ public string VmSizeInput { get; }
 ##### `WindowsInput`<sup>Optional</sup> <a name="WindowsInput" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.windowsInput"></a>
 
 ```csharp
-public object WindowsInput { get; }
+public IResolvable|BatchPoolWindows[] WindowsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows">BatchPoolWindows</a>[]
 
 ---
 
@@ -1735,10 +1735,10 @@ public string ResourceGroupName { get; }
 ##### `StopPendingResizeOperation`<sup>Required</sup> <a name="StopPendingResizeOperation" id="@cdktf/provider-azurerm.batchPool.BatchPool.property.stopPendingResizeOperation"></a>
 
 ```csharp
-public object StopPendingResizeOperation { get; }
+public bool|IResolvable StopPendingResizeOperation { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1913,13 +1913,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new BatchPoolConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string AccountName,
     string Name,
     string NodeAgentSkuId,
@@ -1927,12 +1927,12 @@ new BatchPoolConfig {
     BatchPoolStorageImageReference StorageImageReference,
     string VmSize,
     BatchPoolAutoScale AutoScale = null,
-    object Certificate = null,
+    IResolvable|BatchPoolCertificate[] Certificate = null,
     BatchPoolContainerConfiguration ContainerConfiguration = null,
-    object DataDisks = null,
-    object DiskEncryption = null,
+    IResolvable|BatchPoolDataDisks[] DataDisks = null,
+    IResolvable|BatchPoolDiskEncryption[] DiskEncryption = null,
     string DisplayName = null,
-    object Extensions = null,
+    IResolvable|BatchPoolExtensions[] Extensions = null,
     BatchPoolFixedScale FixedScale = null,
     string Id = null,
     BatchPoolIdentity Identity = null,
@@ -1940,18 +1940,18 @@ new BatchPoolConfig {
     string LicenseType = null,
     double MaxTasksPerNode = null,
     System.Collections.Generic.IDictionary<string, string> Metadata = null,
-    object Mount = null,
+    IResolvable|BatchPoolMount[] Mount = null,
     BatchPoolNetworkConfiguration NetworkConfiguration = null,
-    object NodePlacement = null,
+    IResolvable|BatchPoolNodePlacement[] NodePlacement = null,
     string OsDiskPlacement = null,
     BatchPoolSecurityProfile SecurityProfile = null,
     BatchPoolStartTask StartTask = null,
-    object StopPendingResizeOperation = null,
+    bool|IResolvable StopPendingResizeOperation = null,
     string TargetNodeCommunicationMode = null,
-    object TaskSchedulingPolicy = null,
+    IResolvable|BatchPoolTaskSchedulingPolicy[] TaskSchedulingPolicy = null,
     BatchPoolTimeouts Timeouts = null,
-    object UserAccounts = null,
-    object Windows = null
+    IResolvable|BatchPoolUserAccounts[] UserAccounts = null,
+    IResolvable|BatchPoolWindows[] Windows = null
 };
 ```
 
@@ -1959,13 +1959,13 @@ new BatchPoolConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.accountName">AccountName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#account_name BatchPool#account_name}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#name BatchPool#name}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.nodeAgentSkuId">NodeAgentSkuId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#node_agent_sku_id BatchPool#node_agent_sku_id}. |
@@ -1973,12 +1973,12 @@ new BatchPoolConfig {
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.storageImageReference">StorageImageReference</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStorageImageReference">BatchPoolStorageImageReference</a></code> | storage_image_reference block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.vmSize">VmSize</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#vm_size BatchPool#vm_size}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.autoScale">AutoScale</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolAutoScale">BatchPoolAutoScale</a></code> | auto_scale block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.certificate">Certificate</a></code> | <code>object</code> | certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.certificate">Certificate</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate">BatchPoolCertificate</a>[]</code> | certificate block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.containerConfiguration">ContainerConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration">BatchPoolContainerConfiguration</a></code> | container_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.dataDisks">DataDisks</a></code> | <code>object</code> | data_disks block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.diskEncryption">DiskEncryption</a></code> | <code>object</code> | disk_encryption block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.dataDisks">DataDisks</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks">BatchPoolDataDisks</a>[]</code> | data_disks block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.diskEncryption">DiskEncryption</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption">BatchPoolDiskEncryption</a>[]</code> | disk_encryption block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.displayName">DisplayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#display_name BatchPool#display_name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.extensions">Extensions</a></code> | <code>object</code> | extensions block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.extensions">Extensions</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions">BatchPoolExtensions</a>[]</code> | extensions block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.fixedScale">FixedScale</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolFixedScale">BatchPoolFixedScale</a></code> | fixed_scale block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#id BatchPool#id}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolIdentity">BatchPoolIdentity</a></code> | identity block. |
@@ -1986,38 +1986,38 @@ new BatchPoolConfig {
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.licenseType">LicenseType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#license_type BatchPool#license_type}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.maxTasksPerNode">MaxTasksPerNode</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#max_tasks_per_node BatchPool#max_tasks_per_node}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.metadata">Metadata</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#metadata BatchPool#metadata}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.mount">Mount</a></code> | <code>object</code> | mount block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.mount">Mount</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount">BatchPoolMount</a>[]</code> | mount block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.networkConfiguration">NetworkConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration">BatchPoolNetworkConfiguration</a></code> | network_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.nodePlacement">NodePlacement</a></code> | <code>object</code> | node_placement block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.nodePlacement">NodePlacement</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement">BatchPoolNodePlacement</a>[]</code> | node_placement block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.osDiskPlacement">OsDiskPlacement</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#os_disk_placement BatchPool#os_disk_placement}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.securityProfile">SecurityProfile</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile">BatchPoolSecurityProfile</a></code> | security_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.startTask">StartTask</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask">BatchPoolStartTask</a></code> | start_task block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.stopPendingResizeOperation">StopPendingResizeOperation</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#stop_pending_resize_operation BatchPool#stop_pending_resize_operation}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.stopPendingResizeOperation">StopPendingResizeOperation</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#stop_pending_resize_operation BatchPool#stop_pending_resize_operation}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.targetNodeCommunicationMode">TargetNodeCommunicationMode</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#target_node_communication_mode BatchPool#target_node_communication_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.taskSchedulingPolicy">TaskSchedulingPolicy</a></code> | <code>object</code> | task_scheduling_policy block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.taskSchedulingPolicy">TaskSchedulingPolicy</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy">BatchPoolTaskSchedulingPolicy</a>[]</code> | task_scheduling_policy block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts">BatchPoolTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.userAccounts">UserAccounts</a></code> | <code>object</code> | user_accounts block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.windows">Windows</a></code> | <code>object</code> | windows block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.userAccounts">UserAccounts</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts">BatchPoolUserAccounts</a>[]</code> | user_accounts block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.windows">Windows</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows">BatchPoolWindows</a>[]</code> | windows block. |
 
 ---
 
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -2064,10 +2064,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -2162,10 +2162,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Certificate`<sup>Optional</sup> <a name="Certificate" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.certificate"></a>
 
 ```csharp
-public object Certificate { get; set; }
+public IResolvable|BatchPoolCertificate[] Certificate { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate">BatchPoolCertificate</a>[]
 
 certificate block.
 
@@ -2190,10 +2190,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DataDisks`<sup>Optional</sup> <a name="DataDisks" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.dataDisks"></a>
 
 ```csharp
-public object DataDisks { get; set; }
+public IResolvable|BatchPoolDataDisks[] DataDisks { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks">BatchPoolDataDisks</a>[]
 
 data_disks block.
 
@@ -2204,10 +2204,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DiskEncryption`<sup>Optional</sup> <a name="DiskEncryption" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.diskEncryption"></a>
 
 ```csharp
-public object DiskEncryption { get; set; }
+public IResolvable|BatchPoolDiskEncryption[] DiskEncryption { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption">BatchPoolDiskEncryption</a>[]
 
 disk_encryption block.
 
@@ -2230,10 +2230,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Extensions`<sup>Optional</sup> <a name="Extensions" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.extensions"></a>
 
 ```csharp
-public object Extensions { get; set; }
+public IResolvable|BatchPoolExtensions[] Extensions { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions">BatchPoolExtensions</a>[]
 
 extensions block.
 
@@ -2335,10 +2335,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Mount`<sup>Optional</sup> <a name="Mount" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.mount"></a>
 
 ```csharp
-public object Mount { get; set; }
+public IResolvable|BatchPoolMount[] Mount { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount">BatchPoolMount</a>[]
 
 mount block.
 
@@ -2363,10 +2363,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NodePlacement`<sup>Optional</sup> <a name="NodePlacement" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.nodePlacement"></a>
 
 ```csharp
-public object NodePlacement { get; set; }
+public IResolvable|BatchPoolNodePlacement[] NodePlacement { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement">BatchPoolNodePlacement</a>[]
 
 node_placement block.
 
@@ -2417,10 +2417,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `StopPendingResizeOperation`<sup>Optional</sup> <a name="StopPendingResizeOperation" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.stopPendingResizeOperation"></a>
 
 ```csharp
-public object StopPendingResizeOperation { get; set; }
+public bool|IResolvable StopPendingResizeOperation { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#stop_pending_resize_operation BatchPool#stop_pending_resize_operation}.
 
@@ -2441,10 +2441,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `TaskSchedulingPolicy`<sup>Optional</sup> <a name="TaskSchedulingPolicy" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.taskSchedulingPolicy"></a>
 
 ```csharp
-public object TaskSchedulingPolicy { get; set; }
+public IResolvable|BatchPoolTaskSchedulingPolicy[] TaskSchedulingPolicy { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy">BatchPoolTaskSchedulingPolicy</a>[]
 
 task_scheduling_policy block.
 
@@ -2469,10 +2469,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `UserAccounts`<sup>Optional</sup> <a name="UserAccounts" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.userAccounts"></a>
 
 ```csharp
-public object UserAccounts { get; set; }
+public IResolvable|BatchPoolUserAccounts[] UserAccounts { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts">BatchPoolUserAccounts</a>[]
 
 user_accounts block.
 
@@ -2483,10 +2483,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Windows`<sup>Optional</sup> <a name="Windows" id="@cdktf/provider-azurerm.batchPool.BatchPoolConfig.property.windows"></a>
 
 ```csharp
-public object Windows { get; set; }
+public IResolvable|BatchPoolWindows[] Windows { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows">BatchPoolWindows</a>[]
 
 windows block.
 
@@ -2503,7 +2503,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new BatchPoolContainerConfiguration {
     string[] ContainerImageNames = null,
-    object ContainerRegistries = null,
+    IResolvable|BatchPoolContainerConfigurationContainerRegistries[] ContainerRegistries = null,
     string Type = null
 };
 ```
@@ -2513,7 +2513,7 @@ new BatchPoolContainerConfiguration {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.property.containerImageNames">ContainerImageNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#container_image_names BatchPool#container_image_names}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.property.containerRegistries">ContainerRegistries</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#container_registries BatchPool#container_registries}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.property.containerRegistries">ContainerRegistries</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries">BatchPoolContainerConfigurationContainerRegistries</a>[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#container_registries BatchPool#container_registries}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#type BatchPool#type}. |
 
 ---
@@ -2533,10 +2533,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ContainerRegistries`<sup>Optional</sup> <a name="ContainerRegistries" id="@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfiguration.property.containerRegistries"></a>
 
 ```csharp
-public object ContainerRegistries { get; set; }
+public IResolvable|BatchPoolContainerConfigurationContainerRegistries[] ContainerRegistries { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries">BatchPoolContainerConfigurationContainerRegistries</a>[]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#container_registries BatchPool#container_registries}.
 
@@ -2745,8 +2745,8 @@ new BatchPoolExtensions {
     string Name,
     string Publisher,
     string Type,
-    object AutomaticUpgradeEnabled = null,
-    object AutoUpgradeMinorVersion = null,
+    bool|IResolvable AutomaticUpgradeEnabled = null,
+    bool|IResolvable AutoUpgradeMinorVersion = null,
     string ProtectedSettings = null,
     string[] ProvisionAfterExtensions = null,
     string SettingsJson = null,
@@ -2761,8 +2761,8 @@ new BatchPoolExtensions {
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#name BatchPool#name}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.publisher">Publisher</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#publisher BatchPool#publisher}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.type">Type</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#type BatchPool#type}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.automaticUpgradeEnabled">AutomaticUpgradeEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#automatic_upgrade_enabled BatchPool#automatic_upgrade_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.autoUpgradeMinorVersion">AutoUpgradeMinorVersion</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#auto_upgrade_minor_version BatchPool#auto_upgrade_minor_version}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.automaticUpgradeEnabled">AutomaticUpgradeEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#automatic_upgrade_enabled BatchPool#automatic_upgrade_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.autoUpgradeMinorVersion">AutoUpgradeMinorVersion</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#auto_upgrade_minor_version BatchPool#auto_upgrade_minor_version}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.protectedSettings">ProtectedSettings</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#protected_settings BatchPool#protected_settings}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.provisionAfterExtensions">ProvisionAfterExtensions</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#provision_after_extensions BatchPool#provision_after_extensions}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.settingsJson">SettingsJson</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#settings_json BatchPool#settings_json}. |
@@ -2809,10 +2809,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AutomaticUpgradeEnabled`<sup>Optional</sup> <a name="AutomaticUpgradeEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.automaticUpgradeEnabled"></a>
 
 ```csharp
-public object AutomaticUpgradeEnabled { get; set; }
+public bool|IResolvable AutomaticUpgradeEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#automatic_upgrade_enabled BatchPool#automatic_upgrade_enabled}.
 
@@ -2821,10 +2821,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AutoUpgradeMinorVersion`<sup>Optional</sup> <a name="AutoUpgradeMinorVersion" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensions.property.autoUpgradeMinorVersion"></a>
 
 ```csharp
-public object AutoUpgradeMinorVersion { get; set; }
+public bool|IResolvable AutoUpgradeMinorVersion { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#auto_upgrade_minor_version BatchPool#auto_upgrade_minor_version}.
 
@@ -3007,9 +3007,9 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new BatchPoolMount {
     BatchPoolMountAzureBlobFileSystem AzureBlobFileSystem = null,
-    object AzureFileShare = null,
-    object CifsMount = null,
-    object NfsMount = null
+    IResolvable|BatchPoolMountAzureFileShare[] AzureFileShare = null,
+    IResolvable|BatchPoolMountCifsMount[] CifsMount = null,
+    IResolvable|BatchPoolMountNfsMount[] NfsMount = null
 };
 ```
 
@@ -3018,9 +3018,9 @@ new BatchPoolMount {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount.property.azureBlobFileSystem">AzureBlobFileSystem</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem">BatchPoolMountAzureBlobFileSystem</a></code> | azure_blob_file_system block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount.property.azureFileShare">AzureFileShare</a></code> | <code>object</code> | azure_file_share block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount.property.cifsMount">CifsMount</a></code> | <code>object</code> | cifs_mount block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount.property.nfsMount">NfsMount</a></code> | <code>object</code> | nfs_mount block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount.property.azureFileShare">AzureFileShare</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare">BatchPoolMountAzureFileShare</a>[]</code> | azure_file_share block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount.property.cifsMount">CifsMount</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount">BatchPoolMountCifsMount</a>[]</code> | cifs_mount block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount.property.nfsMount">NfsMount</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount">BatchPoolMountNfsMount</a>[]</code> | nfs_mount block. |
 
 ---
 
@@ -3041,10 +3041,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AzureFileShare`<sup>Optional</sup> <a name="AzureFileShare" id="@cdktf/provider-azurerm.batchPool.BatchPoolMount.property.azureFileShare"></a>
 
 ```csharp
-public object AzureFileShare { get; set; }
+public IResolvable|BatchPoolMountAzureFileShare[] AzureFileShare { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare">BatchPoolMountAzureFileShare</a>[]
 
 azure_file_share block.
 
@@ -3055,10 +3055,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `CifsMount`<sup>Optional</sup> <a name="CifsMount" id="@cdktf/provider-azurerm.batchPool.BatchPoolMount.property.cifsMount"></a>
 
 ```csharp
-public object CifsMount { get; set; }
+public IResolvable|BatchPoolMountCifsMount[] CifsMount { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount">BatchPoolMountCifsMount</a>[]
 
 cifs_mount block.
 
@@ -3069,10 +3069,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NfsMount`<sup>Optional</sup> <a name="NfsMount" id="@cdktf/provider-azurerm.batchPool.BatchPoolMount.property.nfsMount"></a>
 
 ```csharp
-public object NfsMount { get; set; }
+public IResolvable|BatchPoolMountNfsMount[] NfsMount { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount">BatchPoolMountNfsMount</a>[]
 
 nfs_mount block.
 
@@ -3440,9 +3440,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new BatchPoolNetworkConfiguration {
-    object AcceleratedNetworkingEnabled = null,
+    bool|IResolvable AcceleratedNetworkingEnabled = null,
     string DynamicVnetAssignmentScope = null,
-    object EndpointConfiguration = null,
+    IResolvable|BatchPoolNetworkConfigurationEndpointConfiguration[] EndpointConfiguration = null,
     string PublicAddressProvisioningType = null,
     string[] PublicIps = null,
     string SubnetId = null
@@ -3453,9 +3453,9 @@ new BatchPoolNetworkConfiguration {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.acceleratedNetworkingEnabled">AcceleratedNetworkingEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#accelerated_networking_enabled BatchPool#accelerated_networking_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.acceleratedNetworkingEnabled">AcceleratedNetworkingEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#accelerated_networking_enabled BatchPool#accelerated_networking_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.dynamicVnetAssignmentScope">DynamicVnetAssignmentScope</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#dynamic_vnet_assignment_scope BatchPool#dynamic_vnet_assignment_scope}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.endpointConfiguration">EndpointConfiguration</a></code> | <code>object</code> | endpoint_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.endpointConfiguration">EndpointConfiguration</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration">BatchPoolNetworkConfigurationEndpointConfiguration</a>[]</code> | endpoint_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.publicAddressProvisioningType">PublicAddressProvisioningType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#public_address_provisioning_type BatchPool#public_address_provisioning_type}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.publicIps">PublicIps</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#public_ips BatchPool#public_ips}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.subnetId">SubnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#subnet_id BatchPool#subnet_id}. |
@@ -3465,10 +3465,10 @@ new BatchPoolNetworkConfiguration {
 ##### `AcceleratedNetworkingEnabled`<sup>Optional</sup> <a name="AcceleratedNetworkingEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.acceleratedNetworkingEnabled"></a>
 
 ```csharp
-public object AcceleratedNetworkingEnabled { get; set; }
+public bool|IResolvable AcceleratedNetworkingEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#accelerated_networking_enabled BatchPool#accelerated_networking_enabled}.
 
@@ -3489,10 +3489,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `EndpointConfiguration`<sup>Optional</sup> <a name="EndpointConfiguration" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfiguration.property.endpointConfiguration"></a>
 
 ```csharp
-public object EndpointConfiguration { get; set; }
+public IResolvable|BatchPoolNetworkConfigurationEndpointConfiguration[] EndpointConfiguration { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration">BatchPoolNetworkConfigurationEndpointConfiguration</a>[]
 
 endpoint_configuration block.
 
@@ -3548,7 +3548,7 @@ new BatchPoolNetworkConfigurationEndpointConfiguration {
     string FrontendPortRange,
     string Name,
     string Protocol,
-    object NetworkSecurityGroupRules = null
+    IResolvable|BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[] NetworkSecurityGroupRules = null
 };
 ```
 
@@ -3560,7 +3560,7 @@ new BatchPoolNetworkConfigurationEndpointConfiguration {
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.frontendPortRange">FrontendPortRange</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#frontend_port_range BatchPool#frontend_port_range}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#name BatchPool#name}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.protocol">Protocol</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#protocol BatchPool#protocol}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.networkSecurityGroupRules">NetworkSecurityGroupRules</a></code> | <code>object</code> | network_security_group_rules block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.networkSecurityGroupRules">NetworkSecurityGroupRules</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules">BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules</a>[]</code> | network_security_group_rules block. |
 
 ---
 
@@ -3615,10 +3615,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NetworkSecurityGroupRules`<sup>Optional</sup> <a name="NetworkSecurityGroupRules" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration.property.networkSecurityGroupRules"></a>
 
 ```csharp
-public object NetworkSecurityGroupRules { get; set; }
+public IResolvable|BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[] NetworkSecurityGroupRules { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules">BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules</a>[]
 
 network_security_group_rules block.
 
@@ -3740,10 +3740,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new BatchPoolSecurityProfile {
-    object HostEncryptionEnabled = null,
-    object SecureBootEnabled = null,
+    bool|IResolvable HostEncryptionEnabled = null,
+    bool|IResolvable SecureBootEnabled = null,
     string SecurityType = null,
-    object VtpmEnabled = null
+    bool|IResolvable VtpmEnabled = null
 };
 ```
 
@@ -3751,20 +3751,20 @@ new BatchPoolSecurityProfile {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile.property.hostEncryptionEnabled">HostEncryptionEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#host_encryption_enabled BatchPool#host_encryption_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile.property.secureBootEnabled">SecureBootEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#secure_boot_enabled BatchPool#secure_boot_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile.property.hostEncryptionEnabled">HostEncryptionEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#host_encryption_enabled BatchPool#host_encryption_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile.property.secureBootEnabled">SecureBootEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#secure_boot_enabled BatchPool#secure_boot_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile.property.securityType">SecurityType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#security_type BatchPool#security_type}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile.property.vtpmEnabled">VtpmEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#vtpm_enabled BatchPool#vtpm_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile.property.vtpmEnabled">VtpmEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#vtpm_enabled BatchPool#vtpm_enabled}. |
 
 ---
 
 ##### `HostEncryptionEnabled`<sup>Optional</sup> <a name="HostEncryptionEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile.property.hostEncryptionEnabled"></a>
 
 ```csharp
-public object HostEncryptionEnabled { get; set; }
+public bool|IResolvable HostEncryptionEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#host_encryption_enabled BatchPool#host_encryption_enabled}.
 
@@ -3773,10 +3773,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SecureBootEnabled`<sup>Optional</sup> <a name="SecureBootEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile.property.secureBootEnabled"></a>
 
 ```csharp
-public object SecureBootEnabled { get; set; }
+public bool|IResolvable SecureBootEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#secure_boot_enabled BatchPool#secure_boot_enabled}.
 
@@ -3797,10 +3797,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `VtpmEnabled`<sup>Optional</sup> <a name="VtpmEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile.property.vtpmEnabled"></a>
 
 ```csharp
-public object VtpmEnabled { get; set; }
+public bool|IResolvable VtpmEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#vtpm_enabled BatchPool#vtpm_enabled}.
 
@@ -3817,10 +3817,10 @@ new BatchPoolStartTask {
     string CommandLine,
     BatchPoolStartTaskUserIdentity UserIdentity,
     System.Collections.Generic.IDictionary<string, string> CommonEnvironmentProperties = null,
-    object Container = null,
-    object ResourceFile = null,
+    IResolvable|BatchPoolStartTaskContainer[] Container = null,
+    IResolvable|BatchPoolStartTaskResourceFile[] ResourceFile = null,
     double TaskRetryMaximum = null,
-    object WaitForSuccess = null
+    bool|IResolvable WaitForSuccess = null
 };
 ```
 
@@ -3831,10 +3831,10 @@ new BatchPoolStartTask {
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.commandLine">CommandLine</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#command_line BatchPool#command_line}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.userIdentity">UserIdentity</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentity">BatchPoolStartTaskUserIdentity</a></code> | user_identity block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.commonEnvironmentProperties">CommonEnvironmentProperties</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#common_environment_properties BatchPool#common_environment_properties}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.container">Container</a></code> | <code>object</code> | container block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.resourceFile">ResourceFile</a></code> | <code>object</code> | resource_file block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.container">Container</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer">BatchPoolStartTaskContainer</a>[]</code> | container block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.resourceFile">ResourceFile</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile">BatchPoolStartTaskResourceFile</a>[]</code> | resource_file block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.taskRetryMaximum">TaskRetryMaximum</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#task_retry_maximum BatchPool#task_retry_maximum}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.waitForSuccess">WaitForSuccess</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#wait_for_success BatchPool#wait_for_success}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.waitForSuccess">WaitForSuccess</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#wait_for_success BatchPool#wait_for_success}. |
 
 ---
 
@@ -3879,10 +3879,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Container`<sup>Optional</sup> <a name="Container" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.container"></a>
 
 ```csharp
-public object Container { get; set; }
+public IResolvable|BatchPoolStartTaskContainer[] Container { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer">BatchPoolStartTaskContainer</a>[]
 
 container block.
 
@@ -3893,10 +3893,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ResourceFile`<sup>Optional</sup> <a name="ResourceFile" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.resourceFile"></a>
 
 ```csharp
-public object ResourceFile { get; set; }
+public IResolvable|BatchPoolStartTaskResourceFile[] ResourceFile { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile">BatchPoolStartTaskResourceFile</a>[]
 
 resource_file block.
 
@@ -3919,10 +3919,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `WaitForSuccess`<sup>Optional</sup> <a name="WaitForSuccess" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTask.property.waitForSuccess"></a>
 
 ```csharp
-public object WaitForSuccess { get; set; }
+public bool|IResolvable WaitForSuccess { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#wait_for_success BatchPool#wait_for_success}.
 
@@ -3937,7 +3937,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new BatchPoolStartTaskContainer {
     string ImageName,
-    object Registry = null,
+    IResolvable|BatchPoolStartTaskContainerRegistry[] Registry = null,
     string RunOptions = null,
     string WorkingDirectory = null
 };
@@ -3948,7 +3948,7 @@ new BatchPoolStartTaskContainer {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.imageName">ImageName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#image_name BatchPool#image_name}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.registry">Registry</a></code> | <code>object</code> | registry block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.registry">Registry</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry">BatchPoolStartTaskContainerRegistry</a>[]</code> | registry block. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.runOptions">RunOptions</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#run_options BatchPool#run_options}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.workingDirectory">WorkingDirectory</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#working_directory BatchPool#working_directory}. |
 
@@ -3969,10 +3969,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Registry`<sup>Optional</sup> <a name="Registry" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer.property.registry"></a>
 
 ```csharp
-public object Registry { get; set; }
+public IResolvable|BatchPoolStartTaskContainerRegistry[] Registry { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry">BatchPoolStartTaskContainerRegistry</a>[]
 
 registry block.
 
@@ -4498,8 +4498,8 @@ new BatchPoolUserAccounts {
     string ElevationLevel,
     string Name,
     string Password,
-    object LinuxUserConfiguration = null,
-    object WindowsUserConfiguration = null
+    IResolvable|BatchPoolUserAccountsLinuxUserConfiguration[] LinuxUserConfiguration = null,
+    IResolvable|BatchPoolUserAccountsWindowsUserConfiguration[] WindowsUserConfiguration = null
 };
 ```
 
@@ -4510,8 +4510,8 @@ new BatchPoolUserAccounts {
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.elevationLevel">ElevationLevel</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#elevation_level BatchPool#elevation_level}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#name BatchPool#name}. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.password">Password</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#password BatchPool#password}. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.linuxUserConfiguration">LinuxUserConfiguration</a></code> | <code>object</code> | linux_user_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.windowsUserConfiguration">WindowsUserConfiguration</a></code> | <code>object</code> | windows_user_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.linuxUserConfiguration">LinuxUserConfiguration</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration">BatchPoolUserAccountsLinuxUserConfiguration</a>[]</code> | linux_user_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.windowsUserConfiguration">WindowsUserConfiguration</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration">BatchPoolUserAccountsWindowsUserConfiguration</a>[]</code> | windows_user_configuration block. |
 
 ---
 
@@ -4554,10 +4554,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `LinuxUserConfiguration`<sup>Optional</sup> <a name="LinuxUserConfiguration" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.linuxUserConfiguration"></a>
 
 ```csharp
-public object LinuxUserConfiguration { get; set; }
+public IResolvable|BatchPoolUserAccountsLinuxUserConfiguration[] LinuxUserConfiguration { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration">BatchPoolUserAccountsLinuxUserConfiguration</a>[]
 
 linux_user_configuration block.
 
@@ -4568,10 +4568,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `WindowsUserConfiguration`<sup>Optional</sup> <a name="WindowsUserConfiguration" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts.property.windowsUserConfiguration"></a>
 
 ```csharp
-public object WindowsUserConfiguration { get; set; }
+public IResolvable|BatchPoolUserAccountsWindowsUserConfiguration[] WindowsUserConfiguration { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration">BatchPoolUserAccountsWindowsUserConfiguration</a>[]
 
 windows_user_configuration block.
 
@@ -4679,7 +4679,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new BatchPoolWindows {
-    object EnableAutomaticUpdates = null
+    bool|IResolvable EnableAutomaticUpdates = null
 };
 ```
 
@@ -4687,17 +4687,17 @@ new BatchPoolWindows {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows.property.enableAutomaticUpdates">EnableAutomaticUpdates</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#enable_automatic_updates BatchPool#enable_automatic_updates}. |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows.property.enableAutomaticUpdates">EnableAutomaticUpdates</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#enable_automatic_updates BatchPool#enable_automatic_updates}. |
 
 ---
 
 ##### `EnableAutomaticUpdates`<sup>Optional</sup> <a name="EnableAutomaticUpdates" id="@cdktf/provider-azurerm.batchPool.BatchPoolWindows.property.enableAutomaticUpdates"></a>
 
 ```csharp
-public object EnableAutomaticUpdates { get; set; }
+public bool|IResolvable EnableAutomaticUpdates { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/batch_pool#enable_automatic_updates BatchPool#enable_automatic_updates}.
 
@@ -5126,7 +5126,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificateList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificateList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificateList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificateList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate">BatchPoolCertificate</a>[]</code> | *No description.* |
 
 ---
 
@@ -5157,10 +5157,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolCertificateList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolCertificate[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate">BatchPoolCertificate</a>[]
 
 ---
 
@@ -5415,7 +5415,7 @@ private void ResetVisibility()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificateOutputReference.property.storeLocation">StoreLocation</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificateOutputReference.property.storeName">StoreName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificateOutputReference.property.visibility">Visibility</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificateOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificateOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate">BatchPoolCertificate</a></code> | *No description.* |
 
 ---
 
@@ -5526,10 +5526,10 @@ public string[] Visibility { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolCertificateOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolCertificate InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolCertificate">BatchPoolCertificate</a>
 
 ---
 
@@ -5655,7 +5655,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries">BatchPoolContainerConfigurationContainerRegistries</a>[]</code> | *No description.* |
 
 ---
 
@@ -5686,10 +5686,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolContainerConfigurationContainerRegistries[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries">BatchPoolContainerConfigurationContainerRegistries</a>[]
 
 ---
 
@@ -5958,7 +5958,7 @@ private void ResetUserName()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesOutputReference.property.registryServer">RegistryServer</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesOutputReference.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesOutputReference.property.userName">UserName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries">BatchPoolContainerConfigurationContainerRegistries</a></code> | *No description.* |
 
 ---
 
@@ -6069,10 +6069,10 @@ public string UserName { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolContainerConfigurationContainerRegistries InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries">BatchPoolContainerConfigurationContainerRegistries</a>
 
 ---
 
@@ -6287,12 +6287,12 @@ Returns a reversible string representation.
 ##### `PutContainerRegistries` <a name="PutContainerRegistries" id="@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.putContainerRegistries"></a>
 
 ```csharp
-private void PutContainerRegistries(object Value)
+private void PutContainerRegistries(IResolvable|BatchPoolContainerConfigurationContainerRegistries[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.putContainerRegistries.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries">BatchPoolContainerConfigurationContainerRegistries</a>[]
 
 ---
 
@@ -6323,7 +6323,7 @@ private void ResetType()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.property.containerRegistries">ContainerRegistries</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistriesList">BatchPoolContainerConfigurationContainerRegistriesList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.property.containerImageNamesInput">ContainerImageNamesInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.property.containerRegistriesInput">ContainerRegistriesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.property.containerRegistriesInput">ContainerRegistriesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries">BatchPoolContainerConfigurationContainerRegistries</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.property.typeInput">TypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.property.containerImageNames">ContainerImageNames</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
@@ -6378,10 +6378,10 @@ public string[] ContainerImageNamesInput { get; }
 ##### `ContainerRegistriesInput`<sup>Optional</sup> <a name="ContainerRegistriesInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationOutputReference.property.containerRegistriesInput"></a>
 
 ```csharp
-public object ContainerRegistriesInput { get; }
+public IResolvable|BatchPoolContainerConfigurationContainerRegistries[] ContainerRegistriesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolContainerConfigurationContainerRegistries">BatchPoolContainerConfigurationContainerRegistries</a>[]
 
 ---
 
@@ -6547,7 +6547,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks">BatchPoolDataDisks</a>[]</code> | *No description.* |
 
 ---
 
@@ -6578,10 +6578,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolDataDisks[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks">BatchPoolDataDisks</a>[]
 
 ---
 
@@ -6836,7 +6836,7 @@ private void ResetStorageAccountType()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksOutputReference.property.diskSizeGb">DiskSizeGb</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksOutputReference.property.lun">Lun</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksOutputReference.property.storageAccountType">StorageAccountType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks">BatchPoolDataDisks</a></code> | *No description.* |
 
 ---
 
@@ -6947,10 +6947,10 @@ public string StorageAccountType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolDataDisksOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolDataDisks InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDataDisks">BatchPoolDataDisks</a>
 
 ---
 
@@ -7076,7 +7076,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption">BatchPoolDiskEncryption</a>[]</code> | *No description.* |
 
 ---
 
@@ -7107,10 +7107,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolDiskEncryption[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption">BatchPoolDiskEncryption</a>[]
 
 ---
 
@@ -7345,7 +7345,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionOutputReference.property.diskEncryptionTargetInput">DiskEncryptionTargetInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionOutputReference.property.diskEncryptionTarget">DiskEncryptionTarget</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption">BatchPoolDiskEncryption</a></code> | *No description.* |
 
 ---
 
@@ -7396,10 +7396,10 @@ public string DiskEncryptionTarget { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryptionOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolDiskEncryption InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolDiskEncryption">BatchPoolDiskEncryption</a>
 
 ---
 
@@ -7525,7 +7525,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions">BatchPoolExtensions</a>[]</code> | *No description.* |
 
 ---
 
@@ -7556,10 +7556,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolExtensions[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions">BatchPoolExtensions</a>[]
 
 ---
 
@@ -7834,8 +7834,8 @@ private void ResetTypeHandlerVersion()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.automaticUpgradeEnabledInput">AutomaticUpgradeEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.autoUpgradeMinorVersionInput">AutoUpgradeMinorVersionInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.automaticUpgradeEnabledInput">AutomaticUpgradeEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.autoUpgradeMinorVersionInput">AutoUpgradeMinorVersionInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.protectedSettingsInput">ProtectedSettingsInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.provisionAfterExtensionsInput">ProvisionAfterExtensionsInput</a></code> | <code>string[]</code> | *No description.* |
@@ -7843,8 +7843,8 @@ private void ResetTypeHandlerVersion()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.settingsJsonInput">SettingsJsonInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.typeHandlerVersionInput">TypeHandlerVersionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.typeInput">TypeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.automaticUpgradeEnabled">AutomaticUpgradeEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.autoUpgradeMinorVersion">AutoUpgradeMinorVersion</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.automaticUpgradeEnabled">AutomaticUpgradeEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.autoUpgradeMinorVersion">AutoUpgradeMinorVersion</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.protectedSettings">ProtectedSettings</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.provisionAfterExtensions">ProvisionAfterExtensions</a></code> | <code>string[]</code> | *No description.* |
@@ -7852,7 +7852,7 @@ private void ResetTypeHandlerVersion()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.settingsJson">SettingsJson</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.typeHandlerVersion">TypeHandlerVersion</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions">BatchPoolExtensions</a></code> | *No description.* |
 
 ---
 
@@ -7883,20 +7883,20 @@ public string Fqn { get; }
 ##### `AutomaticUpgradeEnabledInput`<sup>Optional</sup> <a name="AutomaticUpgradeEnabledInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.automaticUpgradeEnabledInput"></a>
 
 ```csharp
-public object AutomaticUpgradeEnabledInput { get; }
+public bool|IResolvable AutomaticUpgradeEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `AutoUpgradeMinorVersionInput`<sup>Optional</sup> <a name="AutoUpgradeMinorVersionInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.autoUpgradeMinorVersionInput"></a>
 
 ```csharp
-public object AutoUpgradeMinorVersionInput { get; }
+public bool|IResolvable AutoUpgradeMinorVersionInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7973,20 +7973,20 @@ public string TypeInput { get; }
 ##### `AutomaticUpgradeEnabled`<sup>Required</sup> <a name="AutomaticUpgradeEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.automaticUpgradeEnabled"></a>
 
 ```csharp
-public object AutomaticUpgradeEnabled { get; }
+public bool|IResolvable AutomaticUpgradeEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `AutoUpgradeMinorVersion`<sup>Required</sup> <a name="AutoUpgradeMinorVersion" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.autoUpgradeMinorVersion"></a>
 
 ```csharp
-public object AutoUpgradeMinorVersion { get; }
+public bool|IResolvable AutoUpgradeMinorVersion { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -8063,10 +8063,10 @@ public string TypeHandlerVersion { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolExtensionsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolExtensions InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolExtensions">BatchPoolExtensions</a>
 
 ---
 
@@ -9281,7 +9281,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare">BatchPoolMountAzureFileShare</a>[]</code> | *No description.* |
 
 ---
 
@@ -9312,10 +9312,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolMountAzureFileShare[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare">BatchPoolMountAzureFileShare</a>[]
 
 ---
 
@@ -9565,7 +9565,7 @@ private void ResetMountOptions()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareOutputReference.property.azureFileUrl">AzureFileUrl</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareOutputReference.property.mountOptions">MountOptions</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareOutputReference.property.relativeMountPath">RelativeMountPath</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare">BatchPoolMountAzureFileShare</a></code> | *No description.* |
 
 ---
 
@@ -9696,10 +9696,10 @@ public string RelativeMountPath { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShareOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolMountAzureFileShare InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare">BatchPoolMountAzureFileShare</a>
 
 ---
 
@@ -9825,7 +9825,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount">BatchPoolMountCifsMount</a>[]</code> | *No description.* |
 
 ---
 
@@ -9856,10 +9856,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolMountCifsMount[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount">BatchPoolMountCifsMount</a>[]
 
 ---
 
@@ -10109,7 +10109,7 @@ private void ResetMountOptions()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountOutputReference.property.relativeMountPath">RelativeMountPath</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountOutputReference.property.source">Source</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountOutputReference.property.userName">UserName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount">BatchPoolMountCifsMount</a></code> | *No description.* |
 
 ---
 
@@ -10240,10 +10240,10 @@ public string UserName { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolMountCifsMount InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount">BatchPoolMountCifsMount</a>
 
 ---
 
@@ -10369,7 +10369,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount">BatchPoolMount</a>[]</code> | *No description.* |
 
 ---
 
@@ -10400,10 +10400,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolMount[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount">BatchPoolMount</a>[]
 
 ---
 
@@ -10529,7 +10529,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount">BatchPoolMountNfsMount</a>[]</code> | *No description.* |
 
 ---
 
@@ -10560,10 +10560,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolMountNfsMount[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount">BatchPoolMountNfsMount</a>[]
 
 ---
 
@@ -10809,7 +10809,7 @@ private void ResetMountOptions()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountOutputReference.property.mountOptions">MountOptions</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountOutputReference.property.relativeMountPath">RelativeMountPath</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountOutputReference.property.source">Source</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount">BatchPoolMountNfsMount</a></code> | *No description.* |
 
 ---
 
@@ -10900,10 +10900,10 @@ public string Source { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolMountNfsMount InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount">BatchPoolMountNfsMount</a>
 
 ---
 
@@ -11152,36 +11152,36 @@ private void PutAzureBlobFileSystem(BatchPoolMountAzureBlobFileSystem Value)
 ##### `PutAzureFileShare` <a name="PutAzureFileShare" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.putAzureFileShare"></a>
 
 ```csharp
-private void PutAzureFileShare(object Value)
+private void PutAzureFileShare(IResolvable|BatchPoolMountAzureFileShare[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.putAzureFileShare.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare">BatchPoolMountAzureFileShare</a>[]
 
 ---
 
 ##### `PutCifsMount` <a name="PutCifsMount" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.putCifsMount"></a>
 
 ```csharp
-private void PutCifsMount(object Value)
+private void PutCifsMount(IResolvable|BatchPoolMountCifsMount[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.putCifsMount.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount">BatchPoolMountCifsMount</a>[]
 
 ---
 
 ##### `PutNfsMount` <a name="PutNfsMount" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.putNfsMount"></a>
 
 ```csharp
-private void PutNfsMount(object Value)
+private void PutNfsMount(IResolvable|BatchPoolMountNfsMount[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.putNfsMount.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount">BatchPoolMountNfsMount</a>[]
 
 ---
 
@@ -11221,10 +11221,10 @@ private void ResetNfsMount()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.cifsMount">CifsMount</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMountList">BatchPoolMountCifsMountList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.nfsMount">NfsMount</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMountList">BatchPoolMountNfsMountList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.azureBlobFileSystemInput">AzureBlobFileSystemInput</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureBlobFileSystem">BatchPoolMountAzureBlobFileSystem</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.azureFileShareInput">AzureFileShareInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.cifsMountInput">CifsMountInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.nfsMountInput">NfsMountInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.azureFileShareInput">AzureFileShareInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare">BatchPoolMountAzureFileShare</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.cifsMountInput">CifsMountInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount">BatchPoolMountCifsMount</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.nfsMountInput">NfsMountInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount">BatchPoolMountNfsMount</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount">BatchPoolMount</a></code> | *No description.* |
 
 ---
 
@@ -11305,40 +11305,40 @@ public BatchPoolMountAzureBlobFileSystem AzureBlobFileSystemInput { get; }
 ##### `AzureFileShareInput`<sup>Optional</sup> <a name="AzureFileShareInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.azureFileShareInput"></a>
 
 ```csharp
-public object AzureFileShareInput { get; }
+public IResolvable|BatchPoolMountAzureFileShare[] AzureFileShareInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountAzureFileShare">BatchPoolMountAzureFileShare</a>[]
 
 ---
 
 ##### `CifsMountInput`<sup>Optional</sup> <a name="CifsMountInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.cifsMountInput"></a>
 
 ```csharp
-public object CifsMountInput { get; }
+public IResolvable|BatchPoolMountCifsMount[] CifsMountInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountCifsMount">BatchPoolMountCifsMount</a>[]
 
 ---
 
 ##### `NfsMountInput`<sup>Optional</sup> <a name="NfsMountInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.nfsMountInput"></a>
 
 ```csharp
-public object NfsMountInput { get; }
+public IResolvable|BatchPoolMountNfsMount[] NfsMountInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMountNfsMount">BatchPoolMountNfsMount</a>[]
 
 ---
 
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolMountOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolMount InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolMount">BatchPoolMount</a>
 
 ---
 
@@ -11464,7 +11464,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration">BatchPoolNetworkConfigurationEndpointConfiguration</a>[]</code> | *No description.* |
 
 ---
 
@@ -11495,10 +11495,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolNetworkConfigurationEndpointConfiguration[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration">BatchPoolNetworkConfigurationEndpointConfiguration</a>[]
 
 ---
 
@@ -11624,7 +11624,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules">BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules</a>[]</code> | *No description.* |
 
 ---
 
@@ -11655,10 +11655,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules">BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules</a>[]
 
 ---
 
@@ -11906,7 +11906,7 @@ private void ResetSourcePortRanges()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference.property.priority">Priority</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference.property.sourceAddressPrefix">SourceAddressPrefix</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference.property.sourcePortRanges">SourcePortRanges</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules">BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules</a></code> | *No description.* |
 
 ---
 
@@ -12017,10 +12017,10 @@ public string[] SourcePortRanges { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRulesOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules">BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules</a>
 
 ---
 
@@ -12251,12 +12251,12 @@ Returns a reversible string representation.
 ##### `PutNetworkSecurityGroupRules` <a name="PutNetworkSecurityGroupRules" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.putNetworkSecurityGroupRules"></a>
 
 ```csharp
-private void PutNetworkSecurityGroupRules(object Value)
+private void PutNetworkSecurityGroupRules(IResolvable|BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.putNetworkSecurityGroupRules.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules">BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules</a>[]
 
 ---
 
@@ -12277,13 +12277,13 @@ private void ResetNetworkSecurityGroupRules()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.backendPortInput">BackendPortInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.frontendPortRangeInput">FrontendPortRangeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.networkSecurityGroupRulesInput">NetworkSecurityGroupRulesInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.networkSecurityGroupRulesInput">NetworkSecurityGroupRulesInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules">BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.protocolInput">ProtocolInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.backendPort">BackendPort</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.frontendPortRange">FrontendPortRange</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.protocol">Protocol</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration">BatchPoolNetworkConfigurationEndpointConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -12354,10 +12354,10 @@ public string NameInput { get; }
 ##### `NetworkSecurityGroupRulesInput`<sup>Optional</sup> <a name="NetworkSecurityGroupRulesInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.networkSecurityGroupRulesInput"></a>
 
 ```csharp
-public object NetworkSecurityGroupRulesInput { get; }
+public IResolvable|BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules[] NetworkSecurityGroupRulesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules">BatchPoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRules</a>[]
 
 ---
 
@@ -12414,10 +12414,10 @@ public string Protocol { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolNetworkConfigurationEndpointConfiguration InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration">BatchPoolNetworkConfigurationEndpointConfiguration</a>
 
 ---
 
@@ -12635,12 +12635,12 @@ Returns a reversible string representation.
 ##### `PutEndpointConfiguration` <a name="PutEndpointConfiguration" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.putEndpointConfiguration"></a>
 
 ```csharp
-private void PutEndpointConfiguration(object Value)
+private void PutEndpointConfiguration(IResolvable|BatchPoolNetworkConfigurationEndpointConfiguration[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.putEndpointConfiguration.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration">BatchPoolNetworkConfigurationEndpointConfiguration</a>[]
 
 ---
 
@@ -12688,13 +12688,13 @@ private void ResetSubnetId()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.endpointConfiguration">EndpointConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfigurationList">BatchPoolNetworkConfigurationEndpointConfigurationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.acceleratedNetworkingEnabledInput">AcceleratedNetworkingEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.acceleratedNetworkingEnabledInput">AcceleratedNetworkingEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.dynamicVnetAssignmentScopeInput">DynamicVnetAssignmentScopeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.endpointConfigurationInput">EndpointConfigurationInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.endpointConfigurationInput">EndpointConfigurationInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration">BatchPoolNetworkConfigurationEndpointConfiguration</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.publicAddressProvisioningTypeInput">PublicAddressProvisioningTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.publicIpsInput">PublicIpsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.subnetIdInput">SubnetIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.acceleratedNetworkingEnabled">AcceleratedNetworkingEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.acceleratedNetworkingEnabled">AcceleratedNetworkingEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.dynamicVnetAssignmentScope">DynamicVnetAssignmentScope</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.publicAddressProvisioningType">PublicAddressProvisioningType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.publicIps">PublicIps</a></code> | <code>string[]</code> | *No description.* |
@@ -12740,10 +12740,10 @@ public BatchPoolNetworkConfigurationEndpointConfigurationList EndpointConfigurat
 ##### `AcceleratedNetworkingEnabledInput`<sup>Optional</sup> <a name="AcceleratedNetworkingEnabledInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.acceleratedNetworkingEnabledInput"></a>
 
 ```csharp
-public object AcceleratedNetworkingEnabledInput { get; }
+public bool|IResolvable AcceleratedNetworkingEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12760,10 +12760,10 @@ public string DynamicVnetAssignmentScopeInput { get; }
 ##### `EndpointConfigurationInput`<sup>Optional</sup> <a name="EndpointConfigurationInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.endpointConfigurationInput"></a>
 
 ```csharp
-public object EndpointConfigurationInput { get; }
+public IResolvable|BatchPoolNetworkConfigurationEndpointConfiguration[] EndpointConfigurationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationEndpointConfiguration">BatchPoolNetworkConfigurationEndpointConfiguration</a>[]
 
 ---
 
@@ -12800,10 +12800,10 @@ public string SubnetIdInput { get; }
 ##### `AcceleratedNetworkingEnabled`<sup>Required</sup> <a name="AcceleratedNetworkingEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolNetworkConfigurationOutputReference.property.acceleratedNetworkingEnabled"></a>
 
 ```csharp
-public object AcceleratedNetworkingEnabled { get; }
+public bool|IResolvable AcceleratedNetworkingEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12979,7 +12979,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement">BatchPoolNodePlacement</a>[]</code> | *No description.* |
 
 ---
 
@@ -13010,10 +13010,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolNodePlacement[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement">BatchPoolNodePlacement</a>[]
 
 ---
 
@@ -13255,7 +13255,7 @@ private void ResetPolicy()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementOutputReference.property.policyInput">PolicyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementOutputReference.property.policy">Policy</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement">BatchPoolNodePlacement</a></code> | *No description.* |
 
 ---
 
@@ -13306,10 +13306,10 @@ public string Policy { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacementOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolNodePlacement InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolNodePlacement">BatchPoolNodePlacement</a>
 
 ---
 
@@ -13552,14 +13552,14 @@ private void ResetVtpmEnabled()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.hostEncryptionEnabledInput">HostEncryptionEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.secureBootEnabledInput">SecureBootEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.hostEncryptionEnabledInput">HostEncryptionEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.secureBootEnabledInput">SecureBootEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.securityTypeInput">SecurityTypeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.vtpmEnabledInput">VtpmEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.hostEncryptionEnabled">HostEncryptionEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.secureBootEnabled">SecureBootEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.vtpmEnabledInput">VtpmEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.hostEncryptionEnabled">HostEncryptionEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.secureBootEnabled">SecureBootEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.securityType">SecurityType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.vtpmEnabled">VtpmEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.vtpmEnabled">VtpmEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfile">BatchPoolSecurityProfile</a></code> | *No description.* |
 
 ---
@@ -13591,20 +13591,20 @@ public string Fqn { get; }
 ##### `HostEncryptionEnabledInput`<sup>Optional</sup> <a name="HostEncryptionEnabledInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.hostEncryptionEnabledInput"></a>
 
 ```csharp
-public object HostEncryptionEnabledInput { get; }
+public bool|IResolvable HostEncryptionEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `SecureBootEnabledInput`<sup>Optional</sup> <a name="SecureBootEnabledInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.secureBootEnabledInput"></a>
 
 ```csharp
-public object SecureBootEnabledInput { get; }
+public bool|IResolvable SecureBootEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -13621,30 +13621,30 @@ public string SecurityTypeInput { get; }
 ##### `VtpmEnabledInput`<sup>Optional</sup> <a name="VtpmEnabledInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.vtpmEnabledInput"></a>
 
 ```csharp
-public object VtpmEnabledInput { get; }
+public bool|IResolvable VtpmEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `HostEncryptionEnabled`<sup>Required</sup> <a name="HostEncryptionEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.hostEncryptionEnabled"></a>
 
 ```csharp
-public object HostEncryptionEnabled { get; }
+public bool|IResolvable HostEncryptionEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `SecureBootEnabled`<sup>Required</sup> <a name="SecureBootEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.secureBootEnabled"></a>
 
 ```csharp
-public object SecureBootEnabled { get; }
+public bool|IResolvable SecureBootEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -13661,10 +13661,10 @@ public string SecurityType { get; }
 ##### `VtpmEnabled`<sup>Required</sup> <a name="VtpmEnabled" id="@cdktf/provider-azurerm.batchPool.BatchPoolSecurityProfileOutputReference.property.vtpmEnabled"></a>
 
 ```csharp
-public object VtpmEnabled { get; }
+public bool|IResolvable VtpmEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -13800,7 +13800,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer">BatchPoolStartTaskContainer</a>[]</code> | *No description.* |
 
 ---
 
@@ -13831,10 +13831,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolStartTaskContainer[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer">BatchPoolStartTaskContainer</a>[]
 
 ---
 
@@ -14067,12 +14067,12 @@ Returns a reversible string representation.
 ##### `PutRegistry` <a name="PutRegistry" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.putRegistry"></a>
 
 ```csharp
-private void PutRegistry(object Value)
+private void PutRegistry(IResolvable|BatchPoolStartTaskContainerRegistry[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.putRegistry.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry">BatchPoolStartTaskContainerRegistry</a>[]
 
 ---
 
@@ -14103,13 +14103,13 @@ private void ResetWorkingDirectory()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.registry">Registry</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryList">BatchPoolStartTaskContainerRegistryList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.imageNameInput">ImageNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.registryInput">RegistryInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.registryInput">RegistryInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry">BatchPoolStartTaskContainerRegistry</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.runOptionsInput">RunOptionsInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.workingDirectoryInput">WorkingDirectoryInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.imageName">ImageName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.runOptions">RunOptions</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.workingDirectory">WorkingDirectory</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer">BatchPoolStartTaskContainer</a></code> | *No description.* |
 
 ---
 
@@ -14160,10 +14160,10 @@ public string ImageNameInput { get; }
 ##### `RegistryInput`<sup>Optional</sup> <a name="RegistryInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.registryInput"></a>
 
 ```csharp
-public object RegistryInput { get; }
+public IResolvable|BatchPoolStartTaskContainerRegistry[] RegistryInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry">BatchPoolStartTaskContainerRegistry</a>[]
 
 ---
 
@@ -14220,10 +14220,10 @@ public string WorkingDirectory { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolStartTaskContainer InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer">BatchPoolStartTaskContainer</a>
 
 ---
 
@@ -14349,7 +14349,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry">BatchPoolStartTaskContainerRegistry</a>[]</code> | *No description.* |
 
 ---
 
@@ -14380,10 +14380,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolStartTaskContainerRegistry[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry">BatchPoolStartTaskContainerRegistry</a>[]
 
 ---
 
@@ -14645,7 +14645,7 @@ private void ResetUserName()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryOutputReference.property.registryServer">RegistryServer</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryOutputReference.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryOutputReference.property.userName">UserName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry">BatchPoolStartTaskContainerRegistry</a></code> | *No description.* |
 
 ---
 
@@ -14756,10 +14756,10 @@ public string UserName { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistryOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolStartTaskContainerRegistry InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainerRegistry">BatchPoolStartTaskContainerRegistry</a>
 
 ---
 
@@ -14978,24 +14978,24 @@ Returns a reversible string representation.
 ##### `PutContainer` <a name="PutContainer" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.putContainer"></a>
 
 ```csharp
-private void PutContainer(object Value)
+private void PutContainer(IResolvable|BatchPoolStartTaskContainer[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.putContainer.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer">BatchPoolStartTaskContainer</a>[]
 
 ---
 
 ##### `PutResourceFile` <a name="PutResourceFile" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.putResourceFile"></a>
 
 ```csharp
-private void PutResourceFile(object Value)
+private void PutResourceFile(IResolvable|BatchPoolStartTaskResourceFile[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.putResourceFile.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile">BatchPoolStartTaskResourceFile</a>[]
 
 ---
 
@@ -15053,15 +15053,15 @@ private void ResetWaitForSuccess()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.userIdentity">UserIdentity</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentityOutputReference">BatchPoolStartTaskUserIdentityOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.commandLineInput">CommandLineInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.commonEnvironmentPropertiesInput">CommonEnvironmentPropertiesInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.containerInput">ContainerInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.resourceFileInput">ResourceFileInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.containerInput">ContainerInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer">BatchPoolStartTaskContainer</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.resourceFileInput">ResourceFileInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile">BatchPoolStartTaskResourceFile</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.taskRetryMaximumInput">TaskRetryMaximumInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.userIdentityInput">UserIdentityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskUserIdentity">BatchPoolStartTaskUserIdentity</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.waitForSuccessInput">WaitForSuccessInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.waitForSuccessInput">WaitForSuccessInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.commandLine">CommandLine</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.commonEnvironmentProperties">CommonEnvironmentProperties</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.taskRetryMaximum">TaskRetryMaximum</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.waitForSuccess">WaitForSuccess</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.waitForSuccess">WaitForSuccess</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTask">BatchPoolStartTask</a></code> | *No description.* |
 
 ---
@@ -15143,20 +15143,20 @@ public System.Collections.Generic.IDictionary<string, string> CommonEnvironmentP
 ##### `ContainerInput`<sup>Optional</sup> <a name="ContainerInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.containerInput"></a>
 
 ```csharp
-public object ContainerInput { get; }
+public IResolvable|BatchPoolStartTaskContainer[] ContainerInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskContainer">BatchPoolStartTaskContainer</a>[]
 
 ---
 
 ##### `ResourceFileInput`<sup>Optional</sup> <a name="ResourceFileInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.resourceFileInput"></a>
 
 ```csharp
-public object ResourceFileInput { get; }
+public IResolvable|BatchPoolStartTaskResourceFile[] ResourceFileInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile">BatchPoolStartTaskResourceFile</a>[]
 
 ---
 
@@ -15183,10 +15183,10 @@ public BatchPoolStartTaskUserIdentity UserIdentityInput { get; }
 ##### `WaitForSuccessInput`<sup>Optional</sup> <a name="WaitForSuccessInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.waitForSuccessInput"></a>
 
 ```csharp
-public object WaitForSuccessInput { get; }
+public bool|IResolvable WaitForSuccessInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -15223,10 +15223,10 @@ public double TaskRetryMaximum { get; }
 ##### `WaitForSuccess`<sup>Required</sup> <a name="WaitForSuccess" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskOutputReference.property.waitForSuccess"></a>
 
 ```csharp
-public object WaitForSuccess { get; }
+public bool|IResolvable WaitForSuccess { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -15362,7 +15362,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile">BatchPoolStartTaskResourceFile</a>[]</code> | *No description.* |
 
 ---
 
@@ -15393,10 +15393,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolStartTaskResourceFile[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile">BatchPoolStartTaskResourceFile</a>[]
 
 ---
 
@@ -15692,7 +15692,7 @@ private void ResetUserAssignedIdentityId()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileOutputReference.property.httpUrl">HttpUrl</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileOutputReference.property.storageContainerUrl">StorageContainerUrl</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileOutputReference.property.userAssignedIdentityId">UserAssignedIdentityId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile">BatchPoolStartTaskResourceFile</a></code> | *No description.* |
 
 ---
 
@@ -15863,10 +15863,10 @@ public string UserAssignedIdentityId { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFileOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolStartTaskResourceFile InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolStartTaskResourceFile">BatchPoolStartTaskResourceFile</a>
 
 ---
 
@@ -17013,7 +17013,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy">BatchPoolTaskSchedulingPolicy</a>[]</code> | *No description.* |
 
 ---
 
@@ -17044,10 +17044,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolTaskSchedulingPolicy[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy">BatchPoolTaskSchedulingPolicy</a>[]
 
 ---
 
@@ -17289,7 +17289,7 @@ private void ResetNodeFillType()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyOutputReference.property.nodeFillTypeInput">NodeFillTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyOutputReference.property.nodeFillType">NodeFillType</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy">BatchPoolTaskSchedulingPolicy</a></code> | *No description.* |
 
 ---
 
@@ -17340,10 +17340,10 @@ public string NodeFillType { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicyOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolTaskSchedulingPolicy InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTaskSchedulingPolicy">BatchPoolTaskSchedulingPolicy</a>
 
 ---
 
@@ -17594,7 +17594,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeoutsOutputReference.property.read">Read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts">BatchPoolTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -17705,10 +17705,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolTimeouts">BatchPoolTimeouts</a>
 
 ---
 
@@ -17834,7 +17834,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration">BatchPoolUserAccountsLinuxUserConfiguration</a>[]</code> | *No description.* |
 
 ---
 
@@ -17865,10 +17865,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolUserAccountsLinuxUserConfiguration[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration">BatchPoolUserAccountsLinuxUserConfiguration</a>[]
 
 ---
 
@@ -18128,7 +18128,7 @@ private void ResetUid()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationOutputReference.property.gid">Gid</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationOutputReference.property.sshPrivateKey">SshPrivateKey</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationOutputReference.property.uid">Uid</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration">BatchPoolUserAccountsLinuxUserConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -18219,10 +18219,10 @@ public double Uid { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolUserAccountsLinuxUserConfiguration InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration">BatchPoolUserAccountsLinuxUserConfiguration</a>
 
 ---
 
@@ -18348,7 +18348,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts">BatchPoolUserAccounts</a>[]</code> | *No description.* |
 
 ---
 
@@ -18379,10 +18379,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolUserAccounts[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts">BatchPoolUserAccounts</a>[]
 
 ---
 
@@ -18615,24 +18615,24 @@ Returns a reversible string representation.
 ##### `PutLinuxUserConfiguration` <a name="PutLinuxUserConfiguration" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.putLinuxUserConfiguration"></a>
 
 ```csharp
-private void PutLinuxUserConfiguration(object Value)
+private void PutLinuxUserConfiguration(IResolvable|BatchPoolUserAccountsLinuxUserConfiguration[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.putLinuxUserConfiguration.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration">BatchPoolUserAccountsLinuxUserConfiguration</a>[]
 
 ---
 
 ##### `PutWindowsUserConfiguration` <a name="PutWindowsUserConfiguration" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.putWindowsUserConfiguration"></a>
 
 ```csharp
-private void PutWindowsUserConfiguration(object Value)
+private void PutWindowsUserConfiguration(IResolvable|BatchPoolUserAccountsWindowsUserConfiguration[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.putWindowsUserConfiguration.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration">BatchPoolUserAccountsWindowsUserConfiguration</a>[]
 
 ---
 
@@ -18658,14 +18658,14 @@ private void ResetWindowsUserConfiguration()
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.linuxUserConfiguration">LinuxUserConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfigurationList">BatchPoolUserAccountsLinuxUserConfigurationList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.windowsUserConfiguration">WindowsUserConfiguration</a></code> | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationList">BatchPoolUserAccountsWindowsUserConfigurationList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.elevationLevelInput">ElevationLevelInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.linuxUserConfigurationInput">LinuxUserConfigurationInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.linuxUserConfigurationInput">LinuxUserConfigurationInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration">BatchPoolUserAccountsLinuxUserConfiguration</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.passwordInput">PasswordInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.windowsUserConfigurationInput">WindowsUserConfigurationInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.windowsUserConfigurationInput">WindowsUserConfigurationInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration">BatchPoolUserAccountsWindowsUserConfiguration</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.elevationLevel">ElevationLevel</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.password">Password</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts">BatchPoolUserAccounts</a></code> | *No description.* |
 
 ---
 
@@ -18726,10 +18726,10 @@ public string ElevationLevelInput { get; }
 ##### `LinuxUserConfigurationInput`<sup>Optional</sup> <a name="LinuxUserConfigurationInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.linuxUserConfigurationInput"></a>
 
 ```csharp
-public object LinuxUserConfigurationInput { get; }
+public IResolvable|BatchPoolUserAccountsLinuxUserConfiguration[] LinuxUserConfigurationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsLinuxUserConfiguration">BatchPoolUserAccountsLinuxUserConfiguration</a>[]
 
 ---
 
@@ -18756,10 +18756,10 @@ public string PasswordInput { get; }
 ##### `WindowsUserConfigurationInput`<sup>Optional</sup> <a name="WindowsUserConfigurationInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.windowsUserConfigurationInput"></a>
 
 ```csharp
-public object WindowsUserConfigurationInput { get; }
+public IResolvable|BatchPoolUserAccountsWindowsUserConfiguration[] WindowsUserConfigurationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration">BatchPoolUserAccountsWindowsUserConfiguration</a>[]
 
 ---
 
@@ -18796,10 +18796,10 @@ public string Password { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolUserAccounts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccounts">BatchPoolUserAccounts</a>
 
 ---
 
@@ -18925,7 +18925,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration">BatchPoolUserAccountsWindowsUserConfiguration</a>[]</code> | *No description.* |
 
 ---
 
@@ -18956,10 +18956,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolUserAccountsWindowsUserConfiguration[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration">BatchPoolUserAccountsWindowsUserConfiguration</a>[]
 
 ---
 
@@ -19194,7 +19194,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationOutputReference.property.loginModeInput">LoginModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationOutputReference.property.loginMode">LoginMode</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration">BatchPoolUserAccountsWindowsUserConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -19245,10 +19245,10 @@ public string LoginMode { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfigurationOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolUserAccountsWindowsUserConfiguration InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolUserAccountsWindowsUserConfiguration">BatchPoolUserAccountsWindowsUserConfiguration</a>
 
 ---
 
@@ -19374,7 +19374,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows">BatchPoolWindows</a>[]</code> | *No description.* |
 
 ---
 
@@ -19405,10 +19405,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolWindowsList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolWindows[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows">BatchPoolWindows</a>[]
 
 ---
 
@@ -19648,9 +19648,9 @@ private void ResetEnableAutomaticUpdates()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.property.enableAutomaticUpdatesInput">EnableAutomaticUpdatesInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.property.enableAutomaticUpdates">EnableAutomaticUpdates</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.property.enableAutomaticUpdatesInput">EnableAutomaticUpdatesInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.property.enableAutomaticUpdates">EnableAutomaticUpdates</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows">BatchPoolWindows</a></code> | *No description.* |
 
 ---
 
@@ -19681,30 +19681,30 @@ public string Fqn { get; }
 ##### `EnableAutomaticUpdatesInput`<sup>Optional</sup> <a name="EnableAutomaticUpdatesInput" id="@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.property.enableAutomaticUpdatesInput"></a>
 
 ```csharp
-public object EnableAutomaticUpdatesInput { get; }
+public bool|IResolvable EnableAutomaticUpdatesInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `EnableAutomaticUpdates`<sup>Required</sup> <a name="EnableAutomaticUpdates" id="@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.property.enableAutomaticUpdates"></a>
 
 ```csharp
-public object EnableAutomaticUpdates { get; }
+public bool|IResolvable EnableAutomaticUpdates { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.batchPool.BatchPoolWindowsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|BatchPoolWindows InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.batchPool.BatchPoolWindows">BatchPoolWindows</a>
 
 ---
 

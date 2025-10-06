@@ -299,7 +299,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-azurerm.iothub.Iothub.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.iothub.Iothub.importFrom"></a>
@@ -353,7 +353,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.iothub.Iothub.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -368,7 +368,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-azurerm.iothub.Iothub.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -405,24 +405,24 @@ private void PutCloudToDevice(IothubCloudToDevice Value)
 ##### `PutEndpoint` <a name="PutEndpoint" id="@cdktf/provider-azurerm.iothub.Iothub.putEndpoint"></a>
 
 ```csharp
-private void PutEndpoint(object Value)
+private void PutEndpoint(IResolvable|IothubEndpoint[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.iothub.Iothub.putEndpoint.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubEndpoint">IothubEndpoint</a>[]
 
 ---
 
 ##### `PutEnrichment` <a name="PutEnrichment" id="@cdktf/provider-azurerm.iothub.Iothub.putEnrichment"></a>
 
 ```csharp
-private void PutEnrichment(object Value)
+private void PutEnrichment(IResolvable|IothubEnrichment[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.iothub.Iothub.putEnrichment.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubEnrichment">IothubEnrichment</a>[]
 
 ---
 
@@ -465,24 +465,24 @@ private void PutIdentity(IothubIdentity Value)
 ##### `PutNetworkRuleSet` <a name="PutNetworkRuleSet" id="@cdktf/provider-azurerm.iothub.Iothub.putNetworkRuleSet"></a>
 
 ```csharp
-private void PutNetworkRuleSet(object Value)
+private void PutNetworkRuleSet(IResolvable|IothubNetworkRuleSet[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.iothub.Iothub.putNetworkRuleSet.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet">IothubNetworkRuleSet</a>[]
 
 ---
 
 ##### `PutRoute` <a name="PutRoute" id="@cdktf/provider-azurerm.iothub.Iothub.putRoute"></a>
 
 ```csharp
-private void PutRoute(object Value)
+private void PutRoute(IResolvable|IothubRoute[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.iothub.Iothub.putRoute.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubRoute">IothubRoute</a>[]
 
 ---
 
@@ -732,13 +732,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.cloudToDevice">CloudToDevice</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference">IothubCloudToDeviceOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.endpoint">Endpoint</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEndpointList">IothubEndpointList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.enrichment">Enrichment</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEnrichmentList">IothubEnrichmentList</a></code> | *No description.* |
@@ -758,33 +758,33 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubTimeoutsOutputReference">IothubTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.type">Type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.cloudToDeviceInput">CloudToDeviceInput</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDevice">IothubCloudToDevice</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.endpointInput">EndpointInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.enrichmentInput">EnrichmentInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.endpointInput">EndpointInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubEndpoint">IothubEndpoint</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.enrichmentInput">EnrichmentInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubEnrichment">IothubEnrichment</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.eventHubPartitionCountInput">EventHubPartitionCountInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.eventHubRetentionInDaysInput">EventHubRetentionInDaysInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.fallbackRouteInput">FallbackRouteInput</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRoute">IothubFallbackRoute</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.fileUploadInput">FileUploadInput</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUpload">IothubFileUpload</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.identityInput">IdentityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubIdentity">IothubIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.localAuthenticationEnabledInput">LocalAuthenticationEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.localAuthenticationEnabledInput">LocalAuthenticationEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.minTlsVersionInput">MinTlsVersionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.networkRuleSetInput">NetworkRuleSetInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.publicNetworkAccessEnabledInput">PublicNetworkAccessEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.networkRuleSetInput">NetworkRuleSetInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet">IothubNetworkRuleSet</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.publicNetworkAccessEnabledInput">PublicNetworkAccessEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.resourceGroupNameInput">ResourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.routeInput">RouteInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.routeInput">RouteInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubRoute">IothubRoute</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.skuInput">SkuInput</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubSku">IothubSku</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.tagsInput">TagsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubTimeouts">IothubTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.eventHubPartitionCount">EventHubPartitionCount</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.eventHubRetentionInDays">EventHubRetentionInDays</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.id">Id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.localAuthenticationEnabled">LocalAuthenticationEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.localAuthenticationEnabled">LocalAuthenticationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.location">Location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.minTlsVersion">MinTlsVersion</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.Iothub.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 
@@ -865,20 +865,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.iothub.Iothub.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.iothub.Iothub.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -925,10 +925,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.iothub.Iothub.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1125,20 +1125,20 @@ public IothubCloudToDevice CloudToDeviceInput { get; }
 ##### `EndpointInput`<sup>Optional</sup> <a name="EndpointInput" id="@cdktf/provider-azurerm.iothub.Iothub.property.endpointInput"></a>
 
 ```csharp
-public object EndpointInput { get; }
+public IResolvable|IothubEndpoint[] EndpointInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubEndpoint">IothubEndpoint</a>[]
 
 ---
 
 ##### `EnrichmentInput`<sup>Optional</sup> <a name="EnrichmentInput" id="@cdktf/provider-azurerm.iothub.Iothub.property.enrichmentInput"></a>
 
 ```csharp
-public object EnrichmentInput { get; }
+public IResolvable|IothubEnrichment[] EnrichmentInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubEnrichment">IothubEnrichment</a>[]
 
 ---
 
@@ -1205,10 +1205,10 @@ public string IdInput { get; }
 ##### `LocalAuthenticationEnabledInput`<sup>Optional</sup> <a name="LocalAuthenticationEnabledInput" id="@cdktf/provider-azurerm.iothub.Iothub.property.localAuthenticationEnabledInput"></a>
 
 ```csharp
-public object LocalAuthenticationEnabledInput { get; }
+public bool|IResolvable LocalAuthenticationEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1245,20 +1245,20 @@ public string NameInput { get; }
 ##### `NetworkRuleSetInput`<sup>Optional</sup> <a name="NetworkRuleSetInput" id="@cdktf/provider-azurerm.iothub.Iothub.property.networkRuleSetInput"></a>
 
 ```csharp
-public object NetworkRuleSetInput { get; }
+public IResolvable|IothubNetworkRuleSet[] NetworkRuleSetInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet">IothubNetworkRuleSet</a>[]
 
 ---
 
 ##### `PublicNetworkAccessEnabledInput`<sup>Optional</sup> <a name="PublicNetworkAccessEnabledInput" id="@cdktf/provider-azurerm.iothub.Iothub.property.publicNetworkAccessEnabledInput"></a>
 
 ```csharp
-public object PublicNetworkAccessEnabledInput { get; }
+public bool|IResolvable PublicNetworkAccessEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1275,10 +1275,10 @@ public string ResourceGroupNameInput { get; }
 ##### `RouteInput`<sup>Optional</sup> <a name="RouteInput" id="@cdktf/provider-azurerm.iothub.Iothub.property.routeInput"></a>
 
 ```csharp
-public object RouteInput { get; }
+public IResolvable|IothubRoute[] RouteInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubRoute">IothubRoute</a>[]
 
 ---
 
@@ -1305,10 +1305,10 @@ public System.Collections.Generic.IDictionary<string, string> TagsInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-azurerm.iothub.Iothub.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|IothubTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubTimeouts">IothubTimeouts</a>
 
 ---
 
@@ -1345,10 +1345,10 @@ public string Id { get; }
 ##### `LocalAuthenticationEnabled`<sup>Required</sup> <a name="LocalAuthenticationEnabled" id="@cdktf/provider-azurerm.iothub.Iothub.property.localAuthenticationEnabled"></a>
 
 ```csharp
-public object LocalAuthenticationEnabled { get; }
+public bool|IResolvable LocalAuthenticationEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1385,10 +1385,10 @@ public string Name { get; }
 ##### `PublicNetworkAccessEnabled`<sup>Required</sup> <a name="PublicNetworkAccessEnabled" id="@cdktf/provider-azurerm.iothub.Iothub.property.publicNetworkAccessEnabled"></a>
 
 ```csharp
-public object PublicNetworkAccessEnabled { get; }
+public bool|IResolvable PublicNetworkAccessEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1441,7 +1441,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new IothubCloudToDevice {
     string DefaultTtl = null,
-    object Feedback = null,
+    IResolvable|IothubCloudToDeviceFeedback[] Feedback = null,
     double MaxDeliveryCount = null
 };
 ```
@@ -1451,7 +1451,7 @@ new IothubCloudToDevice {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDevice.property.defaultTtl">DefaultTtl</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#default_ttl Iothub#default_ttl}. |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDevice.property.feedback">Feedback</a></code> | <code>object</code> | feedback block. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDevice.property.feedback">Feedback</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedback">IothubCloudToDeviceFeedback</a>[]</code> | feedback block. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDevice.property.maxDeliveryCount">MaxDeliveryCount</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#max_delivery_count Iothub#max_delivery_count}. |
 
 ---
@@ -1471,10 +1471,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Feedback`<sup>Optional</sup> <a name="Feedback" id="@cdktf/provider-azurerm.iothub.IothubCloudToDevice.property.feedback"></a>
 
 ```csharp
-public object Feedback { get; set; }
+public IResolvable|IothubCloudToDeviceFeedback[] Feedback { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedback">IothubCloudToDeviceFeedback</a>[]
 
 feedback block.
 
@@ -1562,31 +1562,31 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new IothubConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string Location,
     string Name,
     string ResourceGroupName,
     IothubSku Sku,
     IothubCloudToDevice CloudToDevice = null,
-    object Endpoint = null,
-    object Enrichment = null,
+    IResolvable|IothubEndpoint[] Endpoint = null,
+    IResolvable|IothubEnrichment[] Enrichment = null,
     double EventHubPartitionCount = null,
     double EventHubRetentionInDays = null,
     IothubFallbackRoute FallbackRoute = null,
     IothubFileUpload FileUpload = null,
     string Id = null,
     IothubIdentity Identity = null,
-    object LocalAuthenticationEnabled = null,
+    bool|IResolvable LocalAuthenticationEnabled = null,
     string MinTlsVersion = null,
-    object NetworkRuleSet = null,
-    object PublicNetworkAccessEnabled = null,
-    object Route = null,
+    IResolvable|IothubNetworkRuleSet[] NetworkRuleSet = null,
+    bool|IResolvable PublicNetworkAccessEnabled = null,
+    IResolvable|IothubRoute[] Route = null,
     System.Collections.Generic.IDictionary<string, string> Tags = null,
     IothubTimeouts Timeouts = null
 };
@@ -1596,31 +1596,31 @@ new IothubConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#location Iothub#location}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#name Iothub#name}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#resource_group_name Iothub#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.sku">Sku</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubSku">IothubSku</a></code> | sku block. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.cloudToDevice">CloudToDevice</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDevice">IothubCloudToDevice</a></code> | cloud_to_device block. |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.endpoint">Endpoint</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#endpoint Iothub#endpoint}. |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.enrichment">Enrichment</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#enrichment Iothub#enrichment}. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.endpoint">Endpoint</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubEndpoint">IothubEndpoint</a>[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#endpoint Iothub#endpoint}. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.enrichment">Enrichment</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubEnrichment">IothubEnrichment</a>[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#enrichment Iothub#enrichment}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.eventHubPartitionCount">EventHubPartitionCount</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#event_hub_partition_count Iothub#event_hub_partition_count}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.eventHubRetentionInDays">EventHubRetentionInDays</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#event_hub_retention_in_days Iothub#event_hub_retention_in_days}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.fallbackRoute">FallbackRoute</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRoute">IothubFallbackRoute</a></code> | fallback_route block. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.fileUpload">FileUpload</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUpload">IothubFileUpload</a></code> | file_upload block. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#id Iothub#id}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubIdentity">IothubIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.localAuthenticationEnabled">LocalAuthenticationEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#local_authentication_enabled Iothub#local_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.localAuthenticationEnabled">LocalAuthenticationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#local_authentication_enabled Iothub#local_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.minTlsVersion">MinTlsVersion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#min_tls_version Iothub#min_tls_version}. |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.networkRuleSet">NetworkRuleSet</a></code> | <code>object</code> | network_rule_set block. |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#public_network_access_enabled Iothub#public_network_access_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.route">Route</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#route Iothub#route}. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.networkRuleSet">NetworkRuleSet</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet">IothubNetworkRuleSet</a>[]</code> | network_rule_set block. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#public_network_access_enabled Iothub#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.route">Route</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubRoute">IothubRoute</a>[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#route Iothub#route}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#tags Iothub#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubTimeouts">IothubTimeouts</a></code> | timeouts block. |
 
@@ -1629,20 +1629,20 @@ new IothubConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.iothub.IothubConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.iothub.IothubConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1689,10 +1689,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.iothub.IothubConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1763,10 +1763,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Endpoint`<sup>Optional</sup> <a name="Endpoint" id="@cdktf/provider-azurerm.iothub.IothubConfig.property.endpoint"></a>
 
 ```csharp
-public object Endpoint { get; set; }
+public IResolvable|IothubEndpoint[] Endpoint { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubEndpoint">IothubEndpoint</a>[]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#endpoint Iothub#endpoint}.
 
@@ -1775,10 +1775,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Enrichment`<sup>Optional</sup> <a name="Enrichment" id="@cdktf/provider-azurerm.iothub.IothubConfig.property.enrichment"></a>
 
 ```csharp
-public object Enrichment { get; set; }
+public IResolvable|IothubEnrichment[] Enrichment { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubEnrichment">IothubEnrichment</a>[]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#enrichment Iothub#enrichment}.
 
@@ -1868,10 +1868,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `LocalAuthenticationEnabled`<sup>Optional</sup> <a name="LocalAuthenticationEnabled" id="@cdktf/provider-azurerm.iothub.IothubConfig.property.localAuthenticationEnabled"></a>
 
 ```csharp
-public object LocalAuthenticationEnabled { get; set; }
+public bool|IResolvable LocalAuthenticationEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#local_authentication_enabled Iothub#local_authentication_enabled}.
 
@@ -1892,10 +1892,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `NetworkRuleSet`<sup>Optional</sup> <a name="NetworkRuleSet" id="@cdktf/provider-azurerm.iothub.IothubConfig.property.networkRuleSet"></a>
 
 ```csharp
-public object NetworkRuleSet { get; set; }
+public IResolvable|IothubNetworkRuleSet[] NetworkRuleSet { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet">IothubNetworkRuleSet</a>[]
 
 network_rule_set block.
 
@@ -1906,10 +1906,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PublicNetworkAccessEnabled`<sup>Optional</sup> <a name="PublicNetworkAccessEnabled" id="@cdktf/provider-azurerm.iothub.IothubConfig.property.publicNetworkAccessEnabled"></a>
 
 ```csharp
-public object PublicNetworkAccessEnabled { get; set; }
+public bool|IResolvable PublicNetworkAccessEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#public_network_access_enabled Iothub#public_network_access_enabled}.
 
@@ -1918,10 +1918,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Route`<sup>Optional</sup> <a name="Route" id="@cdktf/provider-azurerm.iothub.IothubConfig.property.route"></a>
 
 ```csharp
-public object Route { get; set; }
+public IResolvable|IothubRoute[] Route { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubRoute">IothubRoute</a>[]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#route Iothub#route}.
 
@@ -2236,7 +2236,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new IothubFallbackRoute {
     string Condition = null,
-    object Enabled = null,
+    bool|IResolvable Enabled = null,
     string[] EndpointNames = null,
     string Source = null
 };
@@ -2247,7 +2247,7 @@ new IothubFallbackRoute {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRoute.property.condition">Condition</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#condition Iothub#condition}. |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRoute.property.enabled">Enabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#enabled Iothub#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRoute.property.enabled">Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#enabled Iothub#enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRoute.property.endpointNames">EndpointNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#endpoint_names Iothub#endpoint_names}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRoute.property.source">Source</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#source Iothub#source}. |
 
@@ -2268,10 +2268,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Enabled`<sup>Optional</sup> <a name="Enabled" id="@cdktf/provider-azurerm.iothub.IothubFallbackRoute.property.enabled"></a>
 
 ```csharp
-public object Enabled { get; set; }
+public bool|IResolvable Enabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#enabled Iothub#enabled}.
 
@@ -2316,7 +2316,7 @@ new IothubFileUpload {
     string IdentityId = null,
     string LockDuration = null,
     double MaxDeliveryCount = null,
-    object Notifications = null,
+    bool|IResolvable Notifications = null,
     string SasTtl = null
 };
 ```
@@ -2332,7 +2332,7 @@ new IothubFileUpload {
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUpload.property.identityId">IdentityId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#identity_id Iothub#identity_id}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUpload.property.lockDuration">LockDuration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#lock_duration Iothub#lock_duration}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUpload.property.maxDeliveryCount">MaxDeliveryCount</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#max_delivery_count Iothub#max_delivery_count}. |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUpload.property.notifications">Notifications</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#notifications Iothub#notifications}. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUpload.property.notifications">Notifications</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#notifications Iothub#notifications}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUpload.property.sasTtl">SasTtl</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#sas_ttl Iothub#sas_ttl}. |
 
 ---
@@ -2424,10 +2424,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Notifications`<sup>Optional</sup> <a name="Notifications" id="@cdktf/provider-azurerm.iothub.IothubFileUpload.property.notifications"></a>
 
 ```csharp
-public object Notifications { get; set; }
+public bool|IResolvable Notifications { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#notifications Iothub#notifications}.
 
@@ -2499,9 +2499,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new IothubNetworkRuleSet {
-    object ApplyToBuiltinEventhubEndpoint = null,
+    bool|IResolvable ApplyToBuiltinEventhubEndpoint = null,
     string DefaultAction = null,
-    object IpRule = null
+    IResolvable|IothubNetworkRuleSetIpRule[] IpRule = null
 };
 ```
 
@@ -2509,19 +2509,19 @@ new IothubNetworkRuleSet {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet.property.applyToBuiltinEventhubEndpoint">ApplyToBuiltinEventhubEndpoint</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#apply_to_builtin_eventhub_endpoint Iothub#apply_to_builtin_eventhub_endpoint}. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet.property.applyToBuiltinEventhubEndpoint">ApplyToBuiltinEventhubEndpoint</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#apply_to_builtin_eventhub_endpoint Iothub#apply_to_builtin_eventhub_endpoint}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet.property.defaultAction">DefaultAction</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#default_action Iothub#default_action}. |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet.property.ipRule">IpRule</a></code> | <code>object</code> | ip_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet.property.ipRule">IpRule</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRule">IothubNetworkRuleSetIpRule</a>[]</code> | ip_rule block. |
 
 ---
 
 ##### `ApplyToBuiltinEventhubEndpoint`<sup>Optional</sup> <a name="ApplyToBuiltinEventhubEndpoint" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet.property.applyToBuiltinEventhubEndpoint"></a>
 
 ```csharp
-public object ApplyToBuiltinEventhubEndpoint { get; set; }
+public bool|IResolvable ApplyToBuiltinEventhubEndpoint { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#apply_to_builtin_eventhub_endpoint Iothub#apply_to_builtin_eventhub_endpoint}.
 
@@ -2542,10 +2542,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `IpRule`<sup>Optional</sup> <a name="IpRule" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet.property.ipRule"></a>
 
 ```csharp
-public object IpRule { get; set; }
+public IResolvable|IothubNetworkRuleSetIpRule[] IpRule { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRule">IothubNetworkRuleSetIpRule</a>[]
 
 ip_rule block.
 
@@ -2622,7 +2622,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new IothubRoute {
     string Condition = null,
-    object Enabled = null,
+    bool|IResolvable Enabled = null,
     string[] EndpointNames = null,
     string Name = null,
     string Source = null
@@ -2634,7 +2634,7 @@ new IothubRoute {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRoute.property.condition">Condition</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#condition Iothub#condition}. |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubRoute.property.enabled">Enabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#enabled Iothub#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubRoute.property.enabled">Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#enabled Iothub#enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRoute.property.endpointNames">EndpointNames</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#endpoint_names Iothub#endpoint_names}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRoute.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#name Iothub#name}. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRoute.property.source">Source</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#source Iothub#source}. |
@@ -2656,10 +2656,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Enabled`<sup>Optional</sup> <a name="Enabled" id="@cdktf/provider-azurerm.iothub.IothubRoute.property.enabled"></a>
 
 ```csharp
-public object Enabled { get; set; }
+public bool|IResolvable Enabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/iothub#enabled Iothub#enabled}.
 
@@ -2957,7 +2957,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedback">IothubCloudToDeviceFeedback</a>[]</code> | *No description.* |
 
 ---
 
@@ -2988,10 +2988,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubCloudToDeviceFeedback[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedback">IothubCloudToDeviceFeedback</a>[]
 
 ---
 
@@ -3251,7 +3251,7 @@ private void ResetTimeToLive()
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackOutputReference.property.lockDuration">LockDuration</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackOutputReference.property.maxDeliveryCount">MaxDeliveryCount</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackOutputReference.property.timeToLive">TimeToLive</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedback">IothubCloudToDeviceFeedback</a></code> | *No description.* |
 
 ---
 
@@ -3342,10 +3342,10 @@ public string TimeToLive { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubCloudToDeviceFeedback InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedback">IothubCloudToDeviceFeedback</a>
 
 ---
 
@@ -3560,12 +3560,12 @@ Returns a reversible string representation.
 ##### `PutFeedback` <a name="PutFeedback" id="@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.putFeedback"></a>
 
 ```csharp
-private void PutFeedback(object Value)
+private void PutFeedback(IResolvable|IothubCloudToDeviceFeedback[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.putFeedback.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedback">IothubCloudToDeviceFeedback</a>[]
 
 ---
 
@@ -3596,7 +3596,7 @@ private void ResetMaxDeliveryCount()
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.property.feedback">Feedback</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedbackList">IothubCloudToDeviceFeedbackList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.property.defaultTtlInput">DefaultTtlInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.property.feedbackInput">FeedbackInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.property.feedbackInput">FeedbackInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedback">IothubCloudToDeviceFeedback</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.property.maxDeliveryCountInput">MaxDeliveryCountInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.property.defaultTtl">DefaultTtl</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.property.maxDeliveryCount">MaxDeliveryCount</a></code> | <code>double</code> | *No description.* |
@@ -3651,10 +3651,10 @@ public string DefaultTtlInput { get; }
 ##### `FeedbackInput`<sup>Optional</sup> <a name="FeedbackInput" id="@cdktf/provider-azurerm.iothub.IothubCloudToDeviceOutputReference.property.feedbackInput"></a>
 
 ```csharp
-public object FeedbackInput { get; }
+public IResolvable|IothubCloudToDeviceFeedback[] FeedbackInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubCloudToDeviceFeedback">IothubCloudToDeviceFeedback</a>[]
 
 ---
 
@@ -3820,7 +3820,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEndpointList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEndpointList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubEndpointList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubEndpointList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubEndpoint">IothubEndpoint</a>[]</code> | *No description.* |
 
 ---
 
@@ -3851,10 +3851,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubEndpointList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubEndpoint[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubEndpoint">IothubEndpoint</a>[]
 
 ---
 
@@ -4213,7 +4213,7 @@ private void ResetType()
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEndpointOutputReference.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEndpointOutputReference.property.subscriptionId">SubscriptionId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEndpointOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubEndpointOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubEndpointOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubEndpoint">IothubEndpoint</a></code> | *No description.* |
 
 ---
 
@@ -4524,10 +4524,10 @@ public string Type { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubEndpointOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubEndpoint InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubEndpoint">IothubEndpoint</a>
 
 ---
 
@@ -4653,7 +4653,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEnrichmentList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEnrichmentList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubEnrichmentList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubEnrichmentList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubEnrichment">IothubEnrichment</a>[]</code> | *No description.* |
 
 ---
 
@@ -4684,10 +4684,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubEnrichmentList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubEnrichment[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubEnrichment">IothubEnrichment</a>[]
 
 ---
 
@@ -4947,7 +4947,7 @@ private void ResetValue()
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEnrichmentOutputReference.property.endpointNames">EndpointNames</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEnrichmentOutputReference.property.key">Key</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubEnrichmentOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubEnrichmentOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubEnrichmentOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubEnrichment">IothubEnrichment</a></code> | *No description.* |
 
 ---
 
@@ -5038,10 +5038,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubEnrichmentOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubEnrichment InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubEnrichment">IothubEnrichment</a>
 
 ---
 
@@ -5285,11 +5285,11 @@ private void ResetSource()
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.conditionInput">ConditionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.enabledInput">EnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.enabledInput">EnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.endpointNamesInput">EndpointNamesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.sourceInput">SourceInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.condition">Condition</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.enabled">Enabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.enabled">Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.endpointNames">EndpointNames</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.source">Source</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFallbackRoute">IothubFallbackRoute</a></code> | *No description.* |
@@ -5333,10 +5333,10 @@ public string ConditionInput { get; }
 ##### `EnabledInput`<sup>Optional</sup> <a name="EnabledInput" id="@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.enabledInput"></a>
 
 ```csharp
-public object EnabledInput { get; }
+public bool|IResolvable EnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -5373,10 +5373,10 @@ public string Condition { get; }
 ##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-azurerm.iothub.IothubFallbackRouteOutputReference.property.enabled"></a>
 
 ```csharp
-public object Enabled { get; }
+public bool|IResolvable Enabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -5677,7 +5677,7 @@ private void ResetSasTtl()
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.identityIdInput">IdentityIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.lockDurationInput">LockDurationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.maxDeliveryCountInput">MaxDeliveryCountInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.notificationsInput">NotificationsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.notificationsInput">NotificationsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.sasTtlInput">SasTtlInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.authenticationType">AuthenticationType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.connectionString">ConnectionString</a></code> | <code>string</code> | *No description.* |
@@ -5686,7 +5686,7 @@ private void ResetSasTtl()
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.identityId">IdentityId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.lockDuration">LockDuration</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.maxDeliveryCount">MaxDeliveryCount</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.notifications">Notifications</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.notifications">Notifications</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.sasTtl">SasTtl</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubFileUpload">IothubFileUpload</a></code> | *No description.* |
 
@@ -5789,10 +5789,10 @@ public double MaxDeliveryCountInput { get; }
 ##### `NotificationsInput`<sup>Optional</sup> <a name="NotificationsInput" id="@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.notificationsInput"></a>
 
 ```csharp
-public object NotificationsInput { get; }
+public bool|IResolvable NotificationsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -5879,10 +5879,10 @@ public double MaxDeliveryCount { get; }
 ##### `Notifications`<sup>Required</sup> <a name="Notifications" id="@cdktf/provider-azurerm.iothub.IothubFileUploadOutputReference.property.notifications"></a>
 
 ```csharp
-public object Notifications { get; }
+public bool|IResolvable Notifications { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -6350,7 +6350,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRule">IothubNetworkRuleSetIpRule</a>[]</code> | *No description.* |
 
 ---
 
@@ -6381,10 +6381,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubNetworkRuleSetIpRule[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRule">IothubNetworkRuleSetIpRule</a>[]
 
 ---
 
@@ -6630,7 +6630,7 @@ private void ResetAction()
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleOutputReference.property.action">Action</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleOutputReference.property.ipMask">IpMask</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRule">IothubNetworkRuleSetIpRule</a></code> | *No description.* |
 
 ---
 
@@ -6721,10 +6721,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubNetworkRuleSetIpRule InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRule">IothubNetworkRuleSetIpRule</a>
 
 ---
 
@@ -6850,7 +6850,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet">IothubNetworkRuleSet</a>[]</code> | *No description.* |
 
 ---
 
@@ -6881,10 +6881,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubNetworkRuleSet[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet">IothubNetworkRuleSet</a>[]
 
 ---
 
@@ -7117,12 +7117,12 @@ Returns a reversible string representation.
 ##### `PutIpRule` <a name="PutIpRule" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.putIpRule"></a>
 
 ```csharp
-private void PutIpRule(object Value)
+private void PutIpRule(IResolvable|IothubNetworkRuleSetIpRule[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.putIpRule.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRule">IothubNetworkRuleSetIpRule</a>[]
 
 ---
 
@@ -7152,12 +7152,12 @@ private void ResetIpRule()
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.ipRule">IpRule</a></code> | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRuleList">IothubNetworkRuleSetIpRuleList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.applyToBuiltinEventhubEndpointInput">ApplyToBuiltinEventhubEndpointInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.applyToBuiltinEventhubEndpointInput">ApplyToBuiltinEventhubEndpointInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.defaultActionInput">DefaultActionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.ipRuleInput">IpRuleInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.applyToBuiltinEventhubEndpoint">ApplyToBuiltinEventhubEndpoint</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.ipRuleInput">IpRuleInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRule">IothubNetworkRuleSetIpRule</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.applyToBuiltinEventhubEndpoint">ApplyToBuiltinEventhubEndpoint</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.defaultAction">DefaultAction</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet">IothubNetworkRuleSet</a></code> | *No description.* |
 
 ---
 
@@ -7198,10 +7198,10 @@ public IothubNetworkRuleSetIpRuleList IpRule { get; }
 ##### `ApplyToBuiltinEventhubEndpointInput`<sup>Optional</sup> <a name="ApplyToBuiltinEventhubEndpointInput" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.applyToBuiltinEventhubEndpointInput"></a>
 
 ```csharp
-public object ApplyToBuiltinEventhubEndpointInput { get; }
+public bool|IResolvable ApplyToBuiltinEventhubEndpointInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7218,20 +7218,20 @@ public string DefaultActionInput { get; }
 ##### `IpRuleInput`<sup>Optional</sup> <a name="IpRuleInput" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.ipRuleInput"></a>
 
 ```csharp
-public object IpRuleInput { get; }
+public IResolvable|IothubNetworkRuleSetIpRule[] IpRuleInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetIpRule">IothubNetworkRuleSetIpRule</a>[]
 
 ---
 
 ##### `ApplyToBuiltinEventhubEndpoint`<sup>Required</sup> <a name="ApplyToBuiltinEventhubEndpoint" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.applyToBuiltinEventhubEndpoint"></a>
 
 ```csharp
-public object ApplyToBuiltinEventhubEndpoint { get; }
+public bool|IResolvable ApplyToBuiltinEventhubEndpoint { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7248,10 +7248,10 @@ public string DefaultAction { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubNetworkRuleSetOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubNetworkRuleSet InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubNetworkRuleSet">IothubNetworkRuleSet</a>
 
 ---
 
@@ -7377,7 +7377,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubRoute">IothubRoute</a>[]</code> | *No description.* |
 
 ---
 
@@ -7408,10 +7408,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubRouteList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubRoute[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubRoute">IothubRoute</a>[]
 
 ---
 
@@ -7680,16 +7680,16 @@ private void ResetSource()
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.conditionInput">ConditionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.enabledInput">EnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.enabledInput">EnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.endpointNamesInput">EndpointNamesInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.sourceInput">SourceInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.condition">Condition</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.enabled">Enabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.enabled">Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.endpointNames">EndpointNames</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.source">Source</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubRoute">IothubRoute</a></code> | *No description.* |
 
 ---
 
@@ -7730,10 +7730,10 @@ public string ConditionInput { get; }
 ##### `EnabledInput`<sup>Optional</sup> <a name="EnabledInput" id="@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.enabledInput"></a>
 
 ```csharp
-public object EnabledInput { get; }
+public bool|IResolvable EnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7780,10 +7780,10 @@ public string Condition { get; }
 ##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.enabled"></a>
 
 ```csharp
-public object Enabled { get; }
+public bool|IResolvable Enabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -7820,10 +7820,10 @@ public string Source { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubRouteOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubRoute InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubRoute">IothubRoute</a>
 
 ---
 
@@ -8827,7 +8827,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubTimeoutsOutputReference.property.read">Read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.iothub.IothubTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.iothub.IothubTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.iothub.IothubTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.iothub.IothubTimeouts">IothubTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -8938,10 +8938,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.iothub.IothubTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|IothubTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.iothub.IothubTimeouts">IothubTimeouts</a>
 
 ---
 

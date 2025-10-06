@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_azurerm import function_app_flex_consumption
 functionAppFlexConsumption.FunctionAppFlexConsumption(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   name: str,
   resource_group_name: str,
@@ -31,29 +31,29 @@ functionAppFlexConsumption.FunctionAppFlexConsumption(
   storage_authentication_type: str,
   storage_container_endpoint: str,
   storage_container_type: str,
-  always_ready: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAlwaysReady]] = None,
+  always_ready: IResolvable | typing.List[FunctionAppFlexConsumptionAlwaysReady] = None,
   app_settings: typing.Mapping[str] = None,
   auth_settings: FunctionAppFlexConsumptionAuthSettings = None,
   auth_settings_v2: FunctionAppFlexConsumptionAuthSettingsV2 = None,
-  client_certificate_enabled: typing.Union[bool, IResolvable] = None,
+  client_certificate_enabled: bool | IResolvable = None,
   client_certificate_exclusion_paths: str = None,
   client_certificate_mode: str = None,
-  connection_string: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionConnectionString]] = None,
-  enabled: typing.Union[bool, IResolvable] = None,
+  connection_string: IResolvable | typing.List[FunctionAppFlexConsumptionConnectionString] = None,
+  enabled: bool | IResolvable = None,
   http_concurrency: typing.Union[int, float] = None,
-  https_only: typing.Union[bool, IResolvable] = None,
+  https_only: bool | IResolvable = None,
   id: str = None,
   identity: FunctionAppFlexConsumptionIdentity = None,
   instance_memory_in_mb: typing.Union[int, float] = None,
   maximum_instance_count: typing.Union[int, float] = None,
-  public_network_access_enabled: typing.Union[bool, IResolvable] = None,
+  public_network_access_enabled: bool | IResolvable = None,
   sticky_settings: FunctionAppFlexConsumptionStickySettings = None,
   storage_access_key: str = None,
   storage_user_assigned_identity_id: str = None,
   tags: typing.Mapping[str] = None,
   timeouts: FunctionAppFlexConsumptionTimeouts = None,
   virtual_network_subnet_id: str = None,
-  webdeploy_publish_basic_authentication_enabled: typing.Union[bool, IResolvable] = None,
+  webdeploy_publish_basic_authentication_enabled: bool | IResolvable = None,
   zip_deploy_file: str = None
 )
 ```
@@ -62,13 +62,13 @@ functionAppFlexConsumption.FunctionAppFlexConsumption(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#location FunctionAppFlexConsumption#location}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.name">name</a></code> | <code>str</code> | Specifies the name of the Function App. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#resource_group_name FunctionAppFlexConsumption#resource_group_name}. |
@@ -79,29 +79,29 @@ functionAppFlexConsumption.FunctionAppFlexConsumption(
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.storageAuthenticationType">storage_authentication_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#storage_authentication_type FunctionAppFlexConsumption#storage_authentication_type}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.storageContainerEndpoint">storage_container_endpoint</a></code> | <code>str</code> | The endpoint of the storage container where the function app's code is hosted. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.storageContainerType">storage_container_type</a></code> | <code>str</code> | The type of the storage container where the function app's code is hosted. Only `blobContainer` is supported currently. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.alwaysReady">always_ready</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]]</code> | always_ready block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.alwaysReady">always_ready</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]</code> | always_ready block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.authSettings">auth_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings">FunctionAppFlexConsumptionAuthSettings</a></code> | auth_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.authSettingsV2">auth_settings_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2">FunctionAppFlexConsumptionAuthSettingsV2</a></code> | auth_settings_v2 block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the function app use Client Certificates. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the function app use Client Certificates. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.clientCertificateExclusionPaths">client_certificate_exclusion_paths</a></code> | <code>str</code> | Paths to exclude when using client certificates, separated by ; |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | The mode of the Function App's client certificates requirement for incoming requests. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.connectionString">connection_string</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]]</code> | connection_string block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Is the Function App enabled. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.connectionString">connection_string</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]</code> | connection_string block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Is the Function App enabled. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.httpConcurrency">http_concurrency</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#http_concurrency FunctionAppFlexConsumption#http_concurrency}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Can the Function App only be accessed via HTTPS? |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.httpsOnly">https_only</a></code> | <code>bool \| cdktf.IResolvable</code> | Can the Function App only be accessed via HTTPS? |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#id FunctionAppFlexConsumption#id}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionIdentity">FunctionAppFlexConsumptionIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.instanceMemoryInMb">instance_memory_in_mb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#instance_memory_in_mb FunctionAppFlexConsumption#instance_memory_in_mb}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.maximumInstanceCount">maximum_instance_count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#maximum_instance_count FunctionAppFlexConsumption#maximum_instance_count}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#public_network_access_enabled FunctionAppFlexConsumption#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#public_network_access_enabled FunctionAppFlexConsumption#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.stickySettings">sticky_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionStickySettings">FunctionAppFlexConsumptionStickySettings</a></code> | sticky_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.storageAccessKey">storage_access_key</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#storage_access_key FunctionAppFlexConsumption#storage_access_key}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.storageUserAssignedIdentityId">storage_user_assigned_identity_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#storage_user_assigned_identity_id FunctionAppFlexConsumption#storage_user_assigned_identity_id}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#tags FunctionAppFlexConsumption#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#virtual_network_subnet_id FunctionAppFlexConsumption#virtual_network_subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#webdeploy_publish_basic_authentication_enabled FunctionAppFlexConsumption#webdeploy_publish_basic_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#webdeploy_publish_basic_authentication_enabled FunctionAppFlexConsumption#webdeploy_publish_basic_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.zipDeployFile">zip_deploy_file</a></code> | <code>str</code> | The local path and filename of the Zip packaged application to deploy to this Function App. |
 
 ---
@@ -126,13 +126,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -162,7 +162,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -258,7 +258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `always_ready`<sup>Optional</sup> <a name="always_ready" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.alwaysReady"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]
 
 always_ready block.
 
@@ -298,7 +298,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `client_certificate_enabled`<sup>Optional</sup> <a name="client_certificate_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.clientCertificateEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the function app use Client Certificates.
 
@@ -330,7 +330,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `connection_string`<sup>Optional</sup> <a name="connection_string" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.connectionString"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]
 
 connection_string block.
 
@@ -340,7 +340,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Is the Function App enabled.
 
@@ -358,7 +358,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `https_only`<sup>Optional</sup> <a name="https_only" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.httpsOnly"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Can the Function App only be accessed via HTTPS?
 
@@ -405,7 +405,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `public_network_access_enabled`<sup>Optional</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.publicNetworkAccessEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#public_network_access_enabled FunctionAppFlexConsumption#public_network_access_enabled}.
 
@@ -465,7 +465,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `webdeploy_publish_basic_authentication_enabled`<sup>Optional</sup> <a name="webdeploy_publish_basic_authentication_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.Initializer.parameter.webdeployPublishBasicAuthenticationEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#webdeploy_publish_basic_authentication_enabled FunctionAppFlexConsumption#webdeploy_publish_basic_authentication_enabled}.
 
@@ -767,7 +767,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.importFrom"></a>
@@ -830,7 +830,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -846,7 +846,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -874,13 +874,13 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_always_ready(
-  value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAlwaysReady]]
+  value: IResolvable | typing.List[FunctionAppFlexConsumptionAlwaysReady]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putAlwaysReady.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]
 
 ---
 
@@ -888,7 +888,7 @@ def put_always_ready(
 
 ```python
 def put_auth_settings(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   active_directory: FunctionAppFlexConsumptionAuthSettingsActiveDirectory = None,
   additional_login_parameters: typing.Mapping[str] = None,
   allowed_external_redirect_urls: typing.List[str] = None,
@@ -900,7 +900,7 @@ def put_auth_settings(
   microsoft: FunctionAppFlexConsumptionAuthSettingsMicrosoft = None,
   runtime_version: str = None,
   token_refresh_extension_hours: typing.Union[int, float] = None,
-  token_store_enabled: typing.Union[bool, IResolvable] = None,
+  token_store_enabled: bool | IResolvable = None,
   twitter: FunctionAppFlexConsumptionAuthSettingsTwitter = None,
   unauthenticated_client_action: str = None
 ) -> None
@@ -908,7 +908,7 @@ def put_auth_settings(
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putAuthSettings.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Authentication / Authorization feature be enabled?
 
@@ -1032,7 +1032,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `token_store_enabled`<sup>Optional</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putAuthSettings.parameter.tokenStoreEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
 
@@ -1067,10 +1067,10 @@ def put_auth_settings_v2(
   login: FunctionAppFlexConsumptionAuthSettingsV2Login,
   active_directory_v2: FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2 = None,
   apple_v2: FunctionAppFlexConsumptionAuthSettingsV2AppleV2 = None,
-  auth_enabled: typing.Union[bool, IResolvable] = None,
+  auth_enabled: bool | IResolvable = None,
   azure_static_web_app_v2: FunctionAppFlexConsumptionAuthSettingsV2AzureStaticWebAppV2 = None,
   config_file_path: str = None,
-  custom_oidc_v2: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2]] = None,
+  custom_oidc_v2: IResolvable | typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2] = None,
   default_provider: str = None,
   excluded_paths: typing.List[str] = None,
   facebook_v2: FunctionAppFlexConsumptionAuthSettingsV2FacebookV2 = None,
@@ -1081,8 +1081,8 @@ def put_auth_settings_v2(
   google_v2: FunctionAppFlexConsumptionAuthSettingsV2GoogleV2 = None,
   http_route_api_prefix: str = None,
   microsoft_v2: FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2 = None,
-  require_authentication: typing.Union[bool, IResolvable] = None,
-  require_https: typing.Union[bool, IResolvable] = None,
+  require_authentication: bool | IResolvable = None,
+  require_https: bool | IResolvable = None,
   runtime_version: str = None,
   twitter_v2: FunctionAppFlexConsumptionAuthSettingsV2TwitterV2 = None,
   unauthenticated_action: str = None
@@ -1121,7 +1121,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `auth_enabled`<sup>Optional</sup> <a name="auth_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putAuthSettingsV2.parameter.authEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the AuthV2 Settings be enabled. Defaults to `false`.
 
@@ -1151,7 +1151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `custom_oidc_v2`<sup>Optional</sup> <a name="custom_oidc_v2" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putAuthSettingsV2.parameter.customOidcV2"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]
 
 custom_oidc_v2 block.
 
@@ -1265,7 +1265,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `require_authentication`<sup>Optional</sup> <a name="require_authentication" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putAuthSettingsV2.parameter.requireAuthentication"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the authentication flow be used for all requests.
 
@@ -1275,7 +1275,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `require_https`<sup>Optional</sup> <a name="require_https" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putAuthSettingsV2.parameter.requireHttps"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should HTTPS be required on connections? Defaults to true.
 
@@ -1319,13 +1319,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_connection_string(
-  value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionConnectionString]]
+  value: IResolvable | typing.List[FunctionAppFlexConsumptionConnectionString]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putConnectionString.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]
 
 ---
 
@@ -1365,28 +1365,28 @@ def put_site_config(
   application_insights_key: str = None,
   app_service_logs: FunctionAppFlexConsumptionSiteConfigAppServiceLogs = None,
   container_registry_managed_identity_client_id: str = None,
-  container_registry_use_managed_identity: typing.Union[bool, IResolvable] = None,
+  container_registry_use_managed_identity: bool | IResolvable = None,
   cors: FunctionAppFlexConsumptionSiteConfigCors = None,
   default_documents: typing.List[str] = None,
   elastic_instance_minimum: typing.Union[int, float] = None,
   health_check_eviction_time_in_min: typing.Union[int, float] = None,
   health_check_path: str = None,
-  http2_enabled: typing.Union[bool, IResolvable] = None,
-  ip_restriction: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction]] = None,
+  http2_enabled: bool | IResolvable = None,
+  ip_restriction: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction] = None,
   ip_restriction_default_action: str = None,
   load_balancing_mode: str = None,
   managed_pipeline_mode: str = None,
   minimum_tls_version: str = None,
-  remote_debugging_enabled: typing.Union[bool, IResolvable] = None,
+  remote_debugging_enabled: bool | IResolvable = None,
   remote_debugging_version: str = None,
-  runtime_scale_monitoring_enabled: typing.Union[bool, IResolvable] = None,
-  scm_ip_restriction: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction]] = None,
+  runtime_scale_monitoring_enabled: bool | IResolvable = None,
+  scm_ip_restriction: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction] = None,
   scm_ip_restriction_default_action: str = None,
   scm_minimum_tls_version: str = None,
-  scm_use_main_ip_restriction: typing.Union[bool, IResolvable] = None,
-  use32_bit_worker: typing.Union[bool, IResolvable] = None,
-  vnet_route_all_enabled: typing.Union[bool, IResolvable] = None,
-  websockets_enabled: typing.Union[bool, IResolvable] = None,
+  scm_use_main_ip_restriction: bool | IResolvable = None,
+  use32_bit_worker: bool | IResolvable = None,
+  vnet_route_all_enabled: bool | IResolvable = None,
+  websockets_enabled: bool | IResolvable = None,
   worker_count: typing.Union[int, float] = None
 ) -> None
 ```
@@ -1463,7 +1463,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `container_registry_use_managed_identity`<sup>Optional</sup> <a name="container_registry_use_managed_identity" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putSiteConfig.parameter.containerRegistryUseManagedIdentity"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should connections for Azure Container Registry use Managed Identity.
 
@@ -1525,7 +1525,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `http2_enabled`<sup>Optional</sup> <a name="http2_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putSiteConfig.parameter.http2Enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Specifies if the http2 protocol should be enabled. Defaults to `false`.
 
@@ -1535,7 +1535,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `ip_restriction`<sup>Optional</sup> <a name="ip_restriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putSiteConfig.parameter.ipRestriction"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]
 
 ip_restriction block.
 
@@ -1585,7 +1585,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `remote_debugging_enabled`<sup>Optional</sup> <a name="remote_debugging_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putSiteConfig.parameter.remoteDebuggingEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Remote Debugging be enabled. Defaults to `false`.
 
@@ -1605,7 +1605,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `runtime_scale_monitoring_enabled`<sup>Optional</sup> <a name="runtime_scale_monitoring_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putSiteConfig.parameter.runtimeScaleMonitoringEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Functions Runtime Scale Monitoring be enabled.
 
@@ -1615,7 +1615,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `scm_ip_restriction`<sup>Optional</sup> <a name="scm_ip_restriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putSiteConfig.parameter.scmIpRestriction"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]
 
 scm_ip_restriction block.
 
@@ -1643,7 +1643,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `scm_use_main_ip_restriction`<sup>Optional</sup> <a name="scm_use_main_ip_restriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putSiteConfig.parameter.scmUseMainIpRestriction"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Linux Function App `ip_restriction` configuration be used for the SCM also.
 
@@ -1653,7 +1653,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `use32_bit_worker`<sup>Optional</sup> <a name="use32_bit_worker" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putSiteConfig.parameter.use32BitWorker"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Linux Function App use a 32-bit worker.
 
@@ -1663,7 +1663,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `vnet_route_all_enabled`<sup>Optional</sup> <a name="vnet_route_all_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putSiteConfig.parameter.vnetRouteAllEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Linux Function App route all traffic through the virtual network.
 
@@ -1673,7 +1673,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `websockets_enabled`<sup>Optional</sup> <a name="websockets_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putSiteConfig.parameter.websocketsEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Web Sockets be enabled. Defaults to `false`.
 
@@ -2040,13 +2040,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.alwaysReady">always_ready</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList">FunctionAppFlexConsumptionAlwaysReadyList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.authSettings">auth_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference">FunctionAppFlexConsumptionAuthSettingsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.authSettingsV2">auth_settings_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference">FunctionAppFlexConsumptionAuthSettingsV2OutputReference</a></code> | *No description.* |
@@ -2064,24 +2064,24 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.siteCredential">site_credential</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteCredentialList">FunctionAppFlexConsumptionSiteCredentialList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.stickySettings">sticky_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionStickySettingsOutputReference">FunctionAppFlexConsumptionStickySettingsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference">FunctionAppFlexConsumptionTimeoutsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.alwaysReadyInput">always_ready_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.alwaysReadyInput">always_ready_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.appSettingsInput">app_settings_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.authSettingsInput">auth_settings_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings">FunctionAppFlexConsumptionAuthSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.authSettingsV2Input">auth_settings_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2">FunctionAppFlexConsumptionAuthSettingsV2</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabledInput">client_certificate_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabledInput">client_certificate_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateExclusionPathsInput">client_certificate_exclusion_paths_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateModeInput">client_certificate_mode_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connectionStringInput">connection_string_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connectionStringInput">connection_string_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpConcurrencyInput">http_concurrency_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnlyInput">https_only_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnlyInput">https_only_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.identityInput">identity_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionIdentity">FunctionAppFlexConsumptionIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.instanceMemoryInMbInput">instance_memory_in_mb_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.maximumInstanceCountInput">maximum_instance_count_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabledInput">public_network_access_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabledInput">public_network_access_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.runtimeNameInput">runtime_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.runtimeVersionInput">runtime_version_input</a></code> | <code>str</code> | *No description.* |
@@ -2094,23 +2094,23 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.storageContainerTypeInput">storage_container_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.storageUserAssignedIdentityIdInput">storage_user_assigned_identity_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.virtualNetworkSubnetIdInput">virtual_network_subnet_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabledInput">webdeploy_publish_basic_authentication_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabledInput">webdeploy_publish_basic_authentication_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.zipDeployFileInput">zip_deploy_file_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateExclusionPaths">client_certificate_exclusion_paths</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpConcurrency">http_concurrency</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnly">https_only</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.instanceMemoryInMb">instance_memory_in_mb</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.location">location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.maximumInstanceCount">maximum_instance_count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.runtimeName">runtime_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.runtimeVersion">runtime_version</a></code> | <code>str</code> | *No description.* |
@@ -2122,7 +2122,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.storageUserAssignedIdentityId">storage_user_assigned_identity_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.zipDeployFile">zip_deploy_file</a></code> | <code>str</code> | *No description.* |
 
 ---
@@ -2202,20 +2202,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -2262,10 +2262,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2442,10 +2442,10 @@ timeouts: FunctionAppFlexConsumptionTimeoutsOutputReference
 ##### `always_ready_input`<sup>Optional</sup> <a name="always_ready_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.alwaysReadyInput"></a>
 
 ```python
-always_ready_input: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAlwaysReady]]
+always_ready_input: IResolvable | typing.List[FunctionAppFlexConsumptionAlwaysReady]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]
 
 ---
 
@@ -2482,10 +2482,10 @@ auth_settings_v2_input: FunctionAppFlexConsumptionAuthSettingsV2
 ##### `client_certificate_enabled_input`<sup>Optional</sup> <a name="client_certificate_enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabledInput"></a>
 
 ```python
-client_certificate_enabled_input: typing.Union[bool, IResolvable]
+client_certificate_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2512,20 +2512,20 @@ client_certificate_mode_input: str
 ##### `connection_string_input`<sup>Optional</sup> <a name="connection_string_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connectionStringInput"></a>
 
 ```python
-connection_string_input: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionConnectionString]]
+connection_string_input: IResolvable | typing.List[FunctionAppFlexConsumptionConnectionString]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]
 
 ---
 
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2542,10 +2542,10 @@ http_concurrency_input: typing.Union[int, float]
 ##### `https_only_input`<sup>Optional</sup> <a name="https_only_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnlyInput"></a>
 
 ```python
-https_only_input: typing.Union[bool, IResolvable]
+https_only_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2612,10 +2612,10 @@ name_input: str
 ##### `public_network_access_enabled_input`<sup>Optional</sup> <a name="public_network_access_enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabledInput"></a>
 
 ```python
-public_network_access_enabled_input: typing.Union[bool, IResolvable]
+public_network_access_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2742,10 +2742,10 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, FunctionAppFlexConsumptionTimeouts]
+timeouts_input: IResolvable | FunctionAppFlexConsumptionTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a>
 
 ---
 
@@ -2762,10 +2762,10 @@ virtual_network_subnet_id_input: str
 ##### `webdeploy_publish_basic_authentication_enabled_input`<sup>Optional</sup> <a name="webdeploy_publish_basic_authentication_enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabledInput"></a>
 
 ```python
-webdeploy_publish_basic_authentication_enabled_input: typing.Union[bool, IResolvable]
+webdeploy_publish_basic_authentication_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2792,10 +2792,10 @@ app_settings: typing.Mapping[str]
 ##### `client_certificate_enabled`<sup>Required</sup> <a name="client_certificate_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabled"></a>
 
 ```python
-client_certificate_enabled: typing.Union[bool, IResolvable]
+client_certificate_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2822,10 +2822,10 @@ client_certificate_mode: str
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2842,10 +2842,10 @@ http_concurrency: typing.Union[int, float]
 ##### `https_only`<sup>Required</sup> <a name="https_only" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnly"></a>
 
 ```python
-https_only: typing.Union[bool, IResolvable]
+https_only: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2902,10 +2902,10 @@ name: str
 ##### `public_network_access_enabled`<sup>Required</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabled"></a>
 
 ```python
-public_network_access_enabled: typing.Union[bool, IResolvable]
+public_network_access_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3022,10 +3022,10 @@ virtual_network_subnet_id: str
 ##### `webdeploy_publish_basic_authentication_enabled`<sup>Required</sup> <a name="webdeploy_publish_basic_authentication_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabled"></a>
 
 ```python
-webdeploy_publish_basic_authentication_enabled: typing.Union[bool, IResolvable]
+webdeploy_publish_basic_authentication_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3113,7 +3113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import function_app_flex_consumption
 
 functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   active_directory: FunctionAppFlexConsumptionAuthSettingsActiveDirectory = None,
   additional_login_parameters: typing.Mapping[str] = None,
   allowed_external_redirect_urls: typing.List[str] = None,
@@ -3125,7 +3125,7 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings(
   microsoft: FunctionAppFlexConsumptionAuthSettingsMicrosoft = None,
   runtime_version: str = None,
   token_refresh_extension_hours: typing.Union[int, float] = None,
-  token_store_enabled: typing.Union[bool, IResolvable] = None,
+  token_store_enabled: bool | IResolvable = None,
   twitter: FunctionAppFlexConsumptionAuthSettingsTwitter = None,
   unauthenticated_client_action: str = None
 )
@@ -3135,7 +3135,7 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Authentication / Authorization feature be enabled? |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Authentication / Authorization feature be enabled? |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.activeDirectory">active_directory</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsActiveDirectory">FunctionAppFlexConsumptionAuthSettingsActiveDirectory</a></code> | active_directory block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.additionalLoginParameters">additional_login_parameters</a></code> | <code>typing.Mapping[str]</code> | Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.allowedExternalRedirectUrls">allowed_external_redirect_urls</a></code> | <code>typing.List[str]</code> | Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App. |
@@ -3147,7 +3147,7 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings(
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.microsoft">microsoft</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsMicrosoft">FunctionAppFlexConsumptionAuthSettingsMicrosoft</a></code> | microsoft block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.runtimeVersion">runtime_version</a></code> | <code>str</code> | The RuntimeVersion of the Authentication / Authorization feature in use. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.tokenRefreshExtensionHours">token_refresh_extension_hours</a></code> | <code>typing.Union[int, float]</code> | The number of hours after session token expiration that a session token can be used to call the token refresh API. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.twitter">twitter</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsTwitter">FunctionAppFlexConsumptionAuthSettingsTwitter</a></code> | twitter block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.unauthenticatedClientAction">unauthenticated_client_action</a></code> | <code>str</code> | The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`. |
 
@@ -3156,10 +3156,10 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings(
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Authentication / Authorization feature be enabled?
 
@@ -3328,10 +3328,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `token_store_enabled`<sup>Optional</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.tokenStoreEnabled"></a>
 
 ```python
-token_store_enabled: typing.Union[bool, IResolvable]
+token_store_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
 
@@ -3854,10 +3854,10 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2(
   login: FunctionAppFlexConsumptionAuthSettingsV2Login,
   active_directory_v2: FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2 = None,
   apple_v2: FunctionAppFlexConsumptionAuthSettingsV2AppleV2 = None,
-  auth_enabled: typing.Union[bool, IResolvable] = None,
+  auth_enabled: bool | IResolvable = None,
   azure_static_web_app_v2: FunctionAppFlexConsumptionAuthSettingsV2AzureStaticWebAppV2 = None,
   config_file_path: str = None,
-  custom_oidc_v2: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2]] = None,
+  custom_oidc_v2: IResolvable | typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2] = None,
   default_provider: str = None,
   excluded_paths: typing.List[str] = None,
   facebook_v2: FunctionAppFlexConsumptionAuthSettingsV2FacebookV2 = None,
@@ -3868,8 +3868,8 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2(
   google_v2: FunctionAppFlexConsumptionAuthSettingsV2GoogleV2 = None,
   http_route_api_prefix: str = None,
   microsoft_v2: FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2 = None,
-  require_authentication: typing.Union[bool, IResolvable] = None,
-  require_https: typing.Union[bool, IResolvable] = None,
+  require_authentication: bool | IResolvable = None,
+  require_https: bool | IResolvable = None,
   runtime_version: str = None,
   twitter_v2: FunctionAppFlexConsumptionAuthSettingsV2TwitterV2 = None,
   unauthenticated_action: str = None
@@ -3883,10 +3883,10 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2(
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.login">login</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login">FunctionAppFlexConsumptionAuthSettingsV2Login</a></code> | login block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.activeDirectoryV2">active_directory_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2">FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2</a></code> | active_directory_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.appleV2">apple_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2AppleV2">FunctionAppFlexConsumptionAuthSettingsV2AppleV2</a></code> | apple_v2 block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.authEnabled">auth_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the AuthV2 Settings be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.authEnabled">auth_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the AuthV2 Settings be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.azureStaticWebAppV2">azure_static_web_app_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2AzureStaticWebAppV2">FunctionAppFlexConsumptionAuthSettingsV2AzureStaticWebAppV2</a></code> | azure_static_web_app_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.configFilePath">config_file_path</a></code> | <code>str</code> | The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.customOidcV2">custom_oidc_v2</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]]</code> | custom_oidc_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.customOidcV2">custom_oidc_v2</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]</code> | custom_oidc_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.defaultProvider">default_provider</a></code> | <code>str</code> | The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.excludedPaths">excluded_paths</a></code> | <code>typing.List[str]</code> | The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.facebookV2">facebook_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2FacebookV2">FunctionAppFlexConsumptionAuthSettingsV2FacebookV2</a></code> | facebook_v2 block. |
@@ -3897,8 +3897,8 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2(
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.googleV2">google_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2GoogleV2">FunctionAppFlexConsumptionAuthSettingsV2GoogleV2</a></code> | google_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.httpRouteApiPrefix">http_route_api_prefix</a></code> | <code>str</code> | The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.microsoftV2">microsoft_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2">FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2</a></code> | microsoft_v2 block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireAuthentication">require_authentication</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the authentication flow be used for all requests. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireHttps">require_https</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should HTTPS be required on connections? Defaults to true. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireAuthentication">require_authentication</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the authentication flow be used for all requests. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireHttps">require_https</a></code> | <code>bool \| cdktf.IResolvable</code> | Should HTTPS be required on connections? Defaults to true. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.runtimeVersion">runtime_version</a></code> | <code>str</code> | The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.twitterV2">twitter_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2TwitterV2">FunctionAppFlexConsumptionAuthSettingsV2TwitterV2</a></code> | twitter_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.unauthenticatedAction">unauthenticated_action</a></code> | <code>str</code> | The action to take for requests made without authentication. |
@@ -3950,10 +3950,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `auth_enabled`<sup>Optional</sup> <a name="auth_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.authEnabled"></a>
 
 ```python
-auth_enabled: typing.Union[bool, IResolvable]
+auth_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the AuthV2 Settings be enabled. Defaults to `false`.
 
@@ -3992,10 +3992,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `custom_oidc_v2`<sup>Optional</sup> <a name="custom_oidc_v2" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.customOidcV2"></a>
 
 ```python
-custom_oidc_v2: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2]]
+custom_oidc_v2: IResolvable | typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]
 
 custom_oidc_v2 block.
 
@@ -4150,10 +4150,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `require_authentication`<sup>Optional</sup> <a name="require_authentication" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireAuthentication"></a>
 
 ```python
-require_authentication: typing.Union[bool, IResolvable]
+require_authentication: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the authentication flow be used for all requests.
 
@@ -4164,10 +4164,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `require_https`<sup>Optional</sup> <a name="require_https" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireHttps"></a>
 
 ```python
-require_https: typing.Union[bool, IResolvable]
+require_https: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should HTTPS be required on connections? Defaults to true.
 
@@ -4238,7 +4238,7 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirecto
   jwt_allowed_client_applications: typing.List[str] = None,
   jwt_allowed_groups: typing.List[str] = None,
   login_parameters: typing.Mapping[str] = None,
-  www_authentication_disabled: typing.Union[bool, IResolvable] = None
+  www_authentication_disabled: bool | IResolvable = None
 )
 ```
 
@@ -4257,7 +4257,7 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirecto
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedClientApplications">jwt_allowed_client_applications</a></code> | <code>typing.List[str]</code> | A list of Allowed Client Applications in the JWT Claim. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedGroups">jwt_allowed_groups</a></code> | <code>typing.List[str]</code> | A list of Allowed Groups in the JWT Claim. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.loginParameters">login_parameters</a></code> | <code>typing.Mapping[str]</code> | A map of key-value pairs to send to the Authorisation Endpoint when a user logs in. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled">www_authentication_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the www-authenticate provider should be omitted from the request? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled">www_authentication_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the www-authenticate provider should be omitted from the request? Defaults to `false`. |
 
 ---
 
@@ -4418,10 +4418,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `www_authentication_disabled`<sup>Optional</sup> <a name="www_authentication_disabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled"></a>
 
 ```python
-www_authentication_disabled: typing.Union[bool, IResolvable]
+www_authentication_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
 
@@ -4854,12 +4854,12 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login(
   cookie_expiration_time: str = None,
   logout_endpoint: str = None,
   nonce_expiration_time: str = None,
-  preserve_url_fragments_for_logins: typing.Union[bool, IResolvable] = None,
+  preserve_url_fragments_for_logins: bool | IResolvable = None,
   token_refresh_extension_time: typing.Union[int, float] = None,
-  token_store_enabled: typing.Union[bool, IResolvable] = None,
+  token_store_enabled: bool | IResolvable = None,
   token_store_path: str = None,
   token_store_sas_setting_name: str = None,
-  validate_nonce: typing.Union[bool, IResolvable] = None
+  validate_nonce: bool | IResolvable = None
 )
 ```
 
@@ -4872,12 +4872,12 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login(
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.cookieExpirationTime">cookie_expiration_time</a></code> | <code>str</code> | The time after the request is made when the session cookie should expire. Defaults to `08:00:00`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.logoutEndpoint">logout_endpoint</a></code> | <code>str</code> | The endpoint to which logout requests should be made. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.nonceExpirationTime">nonce_expiration_time</a></code> | <code>str</code> | The time after the request is made when the nonce should expire. Defaults to `00:05:00`. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.preserveUrlFragmentsForLogins">preserve_url_fragments_for_logins</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the fragments from the request be preserved after the login request is made. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.preserveUrlFragmentsForLogins">preserve_url_fragments_for_logins</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the fragments from the request be preserved after the login request is made. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenRefreshExtensionTime">token_refresh_extension_time</a></code> | <code>typing.Union[int, float]</code> | The number of hours after session token expiration that a session token can be used to call the token refresh API. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Token Store configuration Enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Token Store configuration Enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenStorePath">token_store_path</a></code> | <code>str</code> | The directory path in the App Filesystem in which the tokens will be stored. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenStoreSasSettingName">token_store_sas_setting_name</a></code> | <code>str</code> | The name of the app setting which contains the SAS URL of the blob storage containing the tokens. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.validateNonce">validate_nonce</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the nonce be validated while completing the login flow. Defaults to `true`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.validateNonce">validate_nonce</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the nonce be validated while completing the login flow. Defaults to `true`. |
 
 ---
 
@@ -4956,10 +4956,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `preserve_url_fragments_for_logins`<sup>Optional</sup> <a name="preserve_url_fragments_for_logins" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.preserveUrlFragmentsForLogins"></a>
 
 ```python
-preserve_url_fragments_for_logins: typing.Union[bool, IResolvable]
+preserve_url_fragments_for_logins: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
 
@@ -4986,10 +4986,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `token_store_enabled`<sup>Optional</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenStoreEnabled"></a>
 
 ```python
-token_store_enabled: typing.Union[bool, IResolvable]
+token_store_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Token Store configuration Enabled. Defaults to `false`.
 
@@ -5028,10 +5028,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `validate_nonce`<sup>Optional</sup> <a name="validate_nonce" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.validateNonce"></a>
 
 ```python
-validate_nonce: typing.Union[bool, IResolvable]
+validate_nonce: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the nonce be validated while completing the login flow. Defaults to `true`.
 
@@ -5179,13 +5179,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import function_app_flex_consumption
 
 functionAppFlexConsumption.FunctionAppFlexConsumptionConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   name: str,
   resource_group_name: str,
@@ -5196,29 +5196,29 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionConfig(
   storage_authentication_type: str,
   storage_container_endpoint: str,
   storage_container_type: str,
-  always_ready: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAlwaysReady]] = None,
+  always_ready: IResolvable | typing.List[FunctionAppFlexConsumptionAlwaysReady] = None,
   app_settings: typing.Mapping[str] = None,
   auth_settings: FunctionAppFlexConsumptionAuthSettings = None,
   auth_settings_v2: FunctionAppFlexConsumptionAuthSettingsV2 = None,
-  client_certificate_enabled: typing.Union[bool, IResolvable] = None,
+  client_certificate_enabled: bool | IResolvable = None,
   client_certificate_exclusion_paths: str = None,
   client_certificate_mode: str = None,
-  connection_string: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionConnectionString]] = None,
-  enabled: typing.Union[bool, IResolvable] = None,
+  connection_string: IResolvable | typing.List[FunctionAppFlexConsumptionConnectionString] = None,
+  enabled: bool | IResolvable = None,
   http_concurrency: typing.Union[int, float] = None,
-  https_only: typing.Union[bool, IResolvable] = None,
+  https_only: bool | IResolvable = None,
   id: str = None,
   identity: FunctionAppFlexConsumptionIdentity = None,
   instance_memory_in_mb: typing.Union[int, float] = None,
   maximum_instance_count: typing.Union[int, float] = None,
-  public_network_access_enabled: typing.Union[bool, IResolvable] = None,
+  public_network_access_enabled: bool | IResolvable = None,
   sticky_settings: FunctionAppFlexConsumptionStickySettings = None,
   storage_access_key: str = None,
   storage_user_assigned_identity_id: str = None,
   tags: typing.Mapping[str] = None,
   timeouts: FunctionAppFlexConsumptionTimeouts = None,
   virtual_network_subnet_id: str = None,
-  webdeploy_publish_basic_authentication_enabled: typing.Union[bool, IResolvable] = None,
+  webdeploy_publish_basic_authentication_enabled: bool | IResolvable = None,
   zip_deploy_file: str = None
 )
 ```
@@ -5227,13 +5227,13 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#location FunctionAppFlexConsumption#location}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.name">name</a></code> | <code>str</code> | Specifies the name of the Function App. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#resource_group_name FunctionAppFlexConsumption#resource_group_name}. |
@@ -5244,29 +5244,29 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionConfig(
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.storageAuthenticationType">storage_authentication_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#storage_authentication_type FunctionAppFlexConsumption#storage_authentication_type}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.storageContainerEndpoint">storage_container_endpoint</a></code> | <code>str</code> | The endpoint of the storage container where the function app's code is hosted. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.storageContainerType">storage_container_type</a></code> | <code>str</code> | The type of the storage container where the function app's code is hosted. Only `blobContainer` is supported currently. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.alwaysReady">always_ready</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]]</code> | always_ready block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.alwaysReady">always_ready</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]</code> | always_ready block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.authSettings">auth_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings">FunctionAppFlexConsumptionAuthSettings</a></code> | auth_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.authSettingsV2">auth_settings_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2">FunctionAppFlexConsumptionAuthSettingsV2</a></code> | auth_settings_v2 block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the function app use Client Certificates. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the function app use Client Certificates. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.clientCertificateExclusionPaths">client_certificate_exclusion_paths</a></code> | <code>str</code> | Paths to exclude when using client certificates, separated by ; |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | The mode of the Function App's client certificates requirement for incoming requests. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connectionString">connection_string</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]]</code> | connection_string block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Is the Function App enabled. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connectionString">connection_string</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]</code> | connection_string block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Is the Function App enabled. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.httpConcurrency">http_concurrency</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#http_concurrency FunctionAppFlexConsumption#http_concurrency}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Can the Function App only be accessed via HTTPS? |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.httpsOnly">https_only</a></code> | <code>bool \| cdktf.IResolvable</code> | Can the Function App only be accessed via HTTPS? |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#id FunctionAppFlexConsumption#id}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionIdentity">FunctionAppFlexConsumptionIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.instanceMemoryInMb">instance_memory_in_mb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#instance_memory_in_mb FunctionAppFlexConsumption#instance_memory_in_mb}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.maximumInstanceCount">maximum_instance_count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#maximum_instance_count FunctionAppFlexConsumption#maximum_instance_count}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#public_network_access_enabled FunctionAppFlexConsumption#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#public_network_access_enabled FunctionAppFlexConsumption#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.stickySettings">sticky_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionStickySettings">FunctionAppFlexConsumptionStickySettings</a></code> | sticky_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.storageAccessKey">storage_access_key</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#storage_access_key FunctionAppFlexConsumption#storage_access_key}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.storageUserAssignedIdentityId">storage_user_assigned_identity_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#storage_user_assigned_identity_id FunctionAppFlexConsumption#storage_user_assigned_identity_id}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#tags FunctionAppFlexConsumption#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#virtual_network_subnet_id FunctionAppFlexConsumption#virtual_network_subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#webdeploy_publish_basic_authentication_enabled FunctionAppFlexConsumption#webdeploy_publish_basic_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#webdeploy_publish_basic_authentication_enabled FunctionAppFlexConsumption#webdeploy_publish_basic_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.zipDeployFile">zip_deploy_file</a></code> | <code>str</code> | The local path and filename of the Zip packaged application to deploy to this Function App. |
 
 ---
@@ -5274,20 +5274,20 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -5334,10 +5334,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -5474,10 +5474,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `always_ready`<sup>Optional</sup> <a name="always_ready" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.alwaysReady"></a>
 
 ```python
-always_ready: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAlwaysReady]]
+always_ready: IResolvable | typing.List[FunctionAppFlexConsumptionAlwaysReady]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]
 
 always_ready block.
 
@@ -5530,10 +5530,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `client_certificate_enabled`<sup>Optional</sup> <a name="client_certificate_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.clientCertificateEnabled"></a>
 
 ```python
-client_certificate_enabled: typing.Union[bool, IResolvable]
+client_certificate_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the function app use Client Certificates.
 
@@ -5574,10 +5574,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `connection_string`<sup>Optional</sup> <a name="connection_string" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connectionString"></a>
 
 ```python
-connection_string: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionConnectionString]]
+connection_string: IResolvable | typing.List[FunctionAppFlexConsumptionConnectionString]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]
 
 connection_string block.
 
@@ -5588,10 +5588,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Is the Function App enabled.
 
@@ -5614,10 +5614,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `https_only`<sup>Optional</sup> <a name="https_only" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.httpsOnly"></a>
 
 ```python
-https_only: typing.Union[bool, IResolvable]
+https_only: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Can the Function App only be accessed via HTTPS?
 
@@ -5681,10 +5681,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `public_network_access_enabled`<sup>Optional</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.publicNetworkAccessEnabled"></a>
 
 ```python
-public_network_access_enabled: typing.Union[bool, IResolvable]
+public_network_access_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#public_network_access_enabled FunctionAppFlexConsumption#public_network_access_enabled}.
 
@@ -5769,10 +5769,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `webdeploy_publish_basic_authentication_enabled`<sup>Optional</sup> <a name="webdeploy_publish_basic_authentication_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.webdeployPublishBasicAuthenticationEnabled"></a>
 
 ```python
-webdeploy_publish_basic_authentication_enabled: typing.Union[bool, IResolvable]
+webdeploy_publish_basic_authentication_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#webdeploy_publish_basic_authentication_enabled FunctionAppFlexConsumption#webdeploy_publish_basic_authentication_enabled}.
 
@@ -5921,28 +5921,28 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig(
   application_insights_key: str = None,
   app_service_logs: FunctionAppFlexConsumptionSiteConfigAppServiceLogs = None,
   container_registry_managed_identity_client_id: str = None,
-  container_registry_use_managed_identity: typing.Union[bool, IResolvable] = None,
+  container_registry_use_managed_identity: bool | IResolvable = None,
   cors: FunctionAppFlexConsumptionSiteConfigCors = None,
   default_documents: typing.List[str] = None,
   elastic_instance_minimum: typing.Union[int, float] = None,
   health_check_eviction_time_in_min: typing.Union[int, float] = None,
   health_check_path: str = None,
-  http2_enabled: typing.Union[bool, IResolvable] = None,
-  ip_restriction: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction]] = None,
+  http2_enabled: bool | IResolvable = None,
+  ip_restriction: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction] = None,
   ip_restriction_default_action: str = None,
   load_balancing_mode: str = None,
   managed_pipeline_mode: str = None,
   minimum_tls_version: str = None,
-  remote_debugging_enabled: typing.Union[bool, IResolvable] = None,
+  remote_debugging_enabled: bool | IResolvable = None,
   remote_debugging_version: str = None,
-  runtime_scale_monitoring_enabled: typing.Union[bool, IResolvable] = None,
-  scm_ip_restriction: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction]] = None,
+  runtime_scale_monitoring_enabled: bool | IResolvable = None,
+  scm_ip_restriction: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction] = None,
   scm_ip_restriction_default_action: str = None,
   scm_minimum_tls_version: str = None,
-  scm_use_main_ip_restriction: typing.Union[bool, IResolvable] = None,
-  use32_bit_worker: typing.Union[bool, IResolvable] = None,
-  vnet_route_all_enabled: typing.Union[bool, IResolvable] = None,
-  websockets_enabled: typing.Union[bool, IResolvable] = None,
+  scm_use_main_ip_restriction: bool | IResolvable = None,
+  use32_bit_worker: bool | IResolvable = None,
+  vnet_route_all_enabled: bool | IResolvable = None,
+  websockets_enabled: bool | IResolvable = None,
   worker_count: typing.Union[int, float] = None
 )
 ```
@@ -5958,28 +5958,28 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig(
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.applicationInsightsKey">application_insights_key</a></code> | <code>str</code> | The Instrumentation Key for connecting the Linux Function App to Application Insights. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.appServiceLogs">app_service_logs</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigAppServiceLogs">FunctionAppFlexConsumptionSiteConfigAppServiceLogs</a></code> | app_service_logs block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.containerRegistryManagedIdentityClientId">container_registry_managed_identity_client_id</a></code> | <code>str</code> | The Client ID of the Managed Service Identity to use for connections to the Azure Container Registry. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should connections for Azure Container Registry use Managed Identity. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>bool \| cdktf.IResolvable</code> | Should connections for Azure Container Registry use Managed Identity. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.cors">cors</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors">FunctionAppFlexConsumptionSiteConfigCors</a></code> | cors block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.defaultDocuments">default_documents</a></code> | <code>typing.List[str]</code> | Specifies a list of Default Documents for the Linux Web App. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.elasticInstanceMinimum">elastic_instance_minimum</a></code> | <code>typing.Union[int, float]</code> | The number of minimum instances for this Linux Function App. Only affects apps on Elastic Premium plans. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.healthCheckEvictionTimeInMin">health_check_eviction_time_in_min</a></code> | <code>typing.Union[int, float]</code> | The amount of time in minutes that a node is unhealthy before being removed from the load balancer. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.healthCheckPath">health_check_path</a></code> | <code>str</code> | The path to be checked for this function app health. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.http2Enabled">http2_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Specifies if the http2 protocol should be enabled. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.ipRestriction">ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]]</code> | ip_restriction block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.http2Enabled">http2_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Specifies if the http2 protocol should be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.ipRestriction">ip_restriction</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]</code> | ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.ipRestrictionDefaultAction">ip_restriction_default_action</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#ip_restriction_default_action FunctionAppFlexConsumption#ip_restriction_default_action}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.loadBalancingMode">load_balancing_mode</a></code> | <code>str</code> | The Site load balancing mode. Possible values include: `WeightedRoundRobin`, `LeastRequests`, `LeastResponseTime`, `WeightedTotalTraffic`, `RequestHash`, `PerSiteRoundRobin`. Defaults to `LeastRequests` if omitted. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.managedPipelineMode">managed_pipeline_mode</a></code> | <code>str</code> | The Managed Pipeline mode. Possible values include: `Integrated`, `Classic`. Defaults to `Integrated`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.minimumTlsVersion">minimum_tls_version</a></code> | <code>str</code> | The configures the minimum version of TLS required for SSL requests. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should Remote Debugging be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should Remote Debugging be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.remoteDebuggingVersion">remote_debugging_version</a></code> | <code>str</code> | The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022``. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.runtimeScaleMonitoringEnabled">runtime_scale_monitoring_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should Functions Runtime Scale Monitoring be enabled. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmIpRestriction">scm_ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]]</code> | scm_ip_restriction block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.runtimeScaleMonitoringEnabled">runtime_scale_monitoring_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should Functions Runtime Scale Monitoring be enabled. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmIpRestriction">scm_ip_restriction</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]</code> | scm_ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmIpRestrictionDefaultAction">scm_ip_restriction_default_action</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#scm_ip_restriction_default_action FunctionAppFlexConsumption#scm_ip_restriction_default_action}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmMinimumTlsVersion">scm_minimum_tls_version</a></code> | <code>str</code> | Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Linux Function App `ip_restriction` configuration be used for the SCM also. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.use32BitWorker">use32_bit_worker</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Linux Function App use a 32-bit worker. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.vnetRouteAllEnabled">vnet_route_all_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Linux Function App route all traffic through the virtual network. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.websocketsEnabled">websockets_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should Web Sockets be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Linux Function App `ip_restriction` configuration be used for the SCM also. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.use32BitWorker">use32_bit_worker</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Linux Function App use a 32-bit worker. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.vnetRouteAllEnabled">vnet_route_all_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Linux Function App route all traffic through the virtual network. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.websocketsEnabled">websockets_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should Web Sockets be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.workerCount">worker_count</a></code> | <code>typing.Union[int, float]</code> | The number of Workers for this Linux Function App. |
 
 ---
@@ -6085,10 +6085,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `container_registry_use_managed_identity`<sup>Optional</sup> <a name="container_registry_use_managed_identity" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.containerRegistryUseManagedIdentity"></a>
 
 ```python
-container_registry_use_managed_identity: typing.Union[bool, IResolvable]
+container_registry_use_managed_identity: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should connections for Azure Container Registry use Managed Identity.
 
@@ -6171,10 +6171,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `http2_enabled`<sup>Optional</sup> <a name="http2_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.http2Enabled"></a>
 
 ```python
-http2_enabled: typing.Union[bool, IResolvable]
+http2_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Specifies if the http2 protocol should be enabled. Defaults to `false`.
 
@@ -6185,10 +6185,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ip_restriction`<sup>Optional</sup> <a name="ip_restriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.ipRestriction"></a>
 
 ```python
-ip_restriction: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction]]
+ip_restriction: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]
 
 ip_restriction block.
 
@@ -6255,10 +6255,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `remote_debugging_enabled`<sup>Optional</sup> <a name="remote_debugging_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.remoteDebuggingEnabled"></a>
 
 ```python
-remote_debugging_enabled: typing.Union[bool, IResolvable]
+remote_debugging_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Remote Debugging be enabled. Defaults to `false`.
 
@@ -6283,10 +6283,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `runtime_scale_monitoring_enabled`<sup>Optional</sup> <a name="runtime_scale_monitoring_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.runtimeScaleMonitoringEnabled"></a>
 
 ```python
-runtime_scale_monitoring_enabled: typing.Union[bool, IResolvable]
+runtime_scale_monitoring_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Functions Runtime Scale Monitoring be enabled.
 
@@ -6297,10 +6297,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `scm_ip_restriction`<sup>Optional</sup> <a name="scm_ip_restriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmIpRestriction"></a>
 
 ```python
-scm_ip_restriction: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction]]
+scm_ip_restriction: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]
 
 scm_ip_restriction block.
 
@@ -6337,10 +6337,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `scm_use_main_ip_restriction`<sup>Optional</sup> <a name="scm_use_main_ip_restriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmUseMainIpRestriction"></a>
 
 ```python
-scm_use_main_ip_restriction: typing.Union[bool, IResolvable]
+scm_use_main_ip_restriction: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Linux Function App `ip_restriction` configuration be used for the SCM also.
 
@@ -6351,10 +6351,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `use32_bit_worker`<sup>Optional</sup> <a name="use32_bit_worker" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.use32BitWorker"></a>
 
 ```python
-use32_bit_worker: typing.Union[bool, IResolvable]
+use32_bit_worker: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Linux Function App use a 32-bit worker.
 
@@ -6365,10 +6365,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `vnet_route_all_enabled`<sup>Optional</sup> <a name="vnet_route_all_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.vnetRouteAllEnabled"></a>
 
 ```python
-vnet_route_all_enabled: typing.Union[bool, IResolvable]
+vnet_route_all_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Linux Function App route all traffic through the virtual network.
 
@@ -6379,10 +6379,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `websockets_enabled`<sup>Optional</sup> <a name="websockets_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.websocketsEnabled"></a>
 
 ```python
-websockets_enabled: typing.Union[bool, IResolvable]
+websockets_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Web Sockets be enabled. Defaults to `false`.
 
@@ -6463,7 +6463,7 @@ from cdktf_cdktf_provider_azurerm import function_app_flex_consumption
 
 functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors(
   allowed_origins: typing.List[str] = None,
-  support_credentials: typing.Union[bool, IResolvable] = None
+  support_credentials: bool | IResolvable = None
 )
 ```
 
@@ -6472,7 +6472,7 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors.property.allowedOrigins">allowed_origins</a></code> | <code>typing.List[str]</code> | Specifies a list of origins that should be allowed to make cross-origin calls. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors.property.supportCredentials">support_credentials</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Are credentials allowed in CORS requests? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors.property.supportCredentials">support_credentials</a></code> | <code>bool \| cdktf.IResolvable</code> | Are credentials allowed in CORS requests? Defaults to `false`. |
 
 ---
 
@@ -6493,10 +6493,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `support_credentials`<sup>Optional</sup> <a name="support_credentials" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors.property.supportCredentials"></a>
 
 ```python
-support_credentials: typing.Union[bool, IResolvable]
+support_credentials: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Are credentials allowed in CORS requests? Defaults to `false`.
 
@@ -6514,7 +6514,7 @@ from cdktf_cdktf_provider_azurerm import function_app_flex_consumption
 functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction(
   action: str = None,
   description: str = None,
-  headers: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders]] = None,
+  headers: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders] = None,
   ip_address: str = None,
   name: str = None,
   priority: typing.Union[int, float] = None,
@@ -6529,7 +6529,7 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.action">action</a></code> | <code>str</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.description">description</a></code> | <code>str</code> | The description of the IP restriction rule. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.headers">headers</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.name">name</a></code> | <code>str</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | The priority value of this `ip_restriction`. |
@@ -6569,10 +6569,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `headers`<sup>Optional</sup> <a name="headers" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.headers"></a>
 
 ```python
-headers: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders]]
+headers: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}.
 
@@ -6734,7 +6734,7 @@ from cdktf_cdktf_provider_azurerm import function_app_flex_consumption
 functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction(
   action: str = None,
   description: str = None,
-  headers: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders]] = None,
+  headers: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders] = None,
   ip_address: str = None,
   name: str = None,
   priority: typing.Union[int, float] = None,
@@ -6749,7 +6749,7 @@ functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.action">action</a></code> | <code>str</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.description">description</a></code> | <code>str</code> | The description of the IP restriction rule. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.name">name</a></code> | <code>str</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | The priority value of this `ip_restriction`. |
@@ -6789,10 +6789,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `headers`<sup>Optional</sup> <a name="headers" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.headers"></a>
 
 ```python
-headers: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders]]
+headers: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}.
 
@@ -7208,7 +7208,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]</code> | *No description.* |
 
 ---
 
@@ -7239,10 +7239,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAlwaysReady]]
+internal_value: IResolvable | typing.List[FunctionAppFlexConsumptionAlwaysReady]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]
 
 ---
 
@@ -7513,7 +7513,7 @@ def reset_instance_count() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.instanceCount">instance_count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a></code> | *No description.* |
 
 ---
 
@@ -7584,10 +7584,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, FunctionAppFlexConsumptionAlwaysReady]
+internal_value: IResolvable | FunctionAppFlexConsumptionAlwaysReady
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>
 
 ---
 
@@ -10151,7 +10151,7 @@ def reset_unauthenticated_client_action() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.additionalLoginParametersInput">additional_login_parameters_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.allowedExternalRedirectUrlsInput">allowed_external_redirect_urls_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.defaultProviderInput">default_provider_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.facebookInput">facebook_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsFacebook">FunctionAppFlexConsumptionAuthSettingsFacebook</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.githubInput">github_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsGithub">FunctionAppFlexConsumptionAuthSettingsGithub</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.googleInput">google_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsGoogle">FunctionAppFlexConsumptionAuthSettingsGoogle</a></code> | *No description.* |
@@ -10159,17 +10159,17 @@ def reset_unauthenticated_client_action() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.microsoftInput">microsoft_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsMicrosoft">FunctionAppFlexConsumptionAuthSettingsMicrosoft</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.runtimeVersionInput">runtime_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenRefreshExtensionHoursInput">token_refresh_extension_hours_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabledInput">token_store_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabledInput">token_store_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.twitterInput">twitter_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsTwitter">FunctionAppFlexConsumptionAuthSettingsTwitter</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.unauthenticatedClientActionInput">unauthenticated_client_action_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.additionalLoginParameters">additional_login_parameters</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.allowedExternalRedirectUrls">allowed_external_redirect_urls</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.defaultProvider">default_provider</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.issuer">issuer</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.runtimeVersion">runtime_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenRefreshExtensionHours">token_refresh_extension_hours</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.unauthenticatedClientAction">unauthenticated_client_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings">FunctionAppFlexConsumptionAuthSettings</a></code> | *No description.* |
 
@@ -10302,10 +10302,10 @@ default_provider_input: str
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10382,10 +10382,10 @@ token_refresh_extension_hours_input: typing.Union[int, float]
 ##### `token_store_enabled_input`<sup>Optional</sup> <a name="token_store_enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabledInput"></a>
 
 ```python
-token_store_enabled_input: typing.Union[bool, IResolvable]
+token_store_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10442,10 +10442,10 @@ default_provider: str
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10482,10 +10482,10 @@ token_refresh_extension_hours: typing.Union[int, float]
 ##### `token_store_enabled`<sup>Required</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabled"></a>
 
 ```python
-token_store_enabled: typing.Union[bool, IResolvable]
+token_store_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11180,7 +11180,7 @@ def reset_www_authentication_disabled() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroupsInput">jwt_allowed_groups_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParametersInput">login_parameters_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpointInput">tenant_auth_endpoint_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput">www_authentication_disabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput">www_authentication_disabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplications">allowed_applications</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiences">allowed_audiences</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroups">allowed_groups</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -11192,7 +11192,7 @@ def reset_www_authentication_disabled() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroups">jwt_allowed_groups</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParameters">login_parameters</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpoint">tenant_auth_endpoint</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled">www_authentication_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled">www_authentication_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2">FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
 
 ---
@@ -11334,10 +11334,10 @@ tenant_auth_endpoint_input: str
 ##### `www_authentication_disabled_input`<sup>Optional</sup> <a name="www_authentication_disabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput"></a>
 
 ```python
-www_authentication_disabled_input: typing.Union[bool, IResolvable]
+www_authentication_disabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11454,10 +11454,10 @@ tenant_auth_endpoint: str
 ##### `www_authentication_disabled`<sup>Required</sup> <a name="www_authentication_disabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled"></a>
 
 ```python
-www_authentication_disabled: typing.Union[bool, IResolvable]
+www_authentication_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12228,7 +12228,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2List.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2List.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2List.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2List.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]</code> | *No description.* |
 
 ---
 
@@ -12259,10 +12259,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2List.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2]]
+internal_value: IResolvable | typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]
 
 ---
 
@@ -12552,7 +12552,7 @@ def reset_scopes() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType">name_claim_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint">openid_configuration_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.scopes">scopes</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a></code> | *No description.* |
 
 ---
 
@@ -12743,10 +12743,10 @@ scopes: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2]
+internal_value: IResolvable | FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>
 
 ---
 
@@ -14167,23 +14167,23 @@ def reset_validate_nonce() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.cookieExpirationTimeInput">cookie_expiration_time_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.logoutEndpointInput">logout_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.nonceExpirationTimeInput">nonce_expiration_time_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput">preserve_url_fragments_for_logins_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput">preserve_url_fragments_for_logins_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTimeInput">token_refresh_extension_time_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput">token_store_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput">token_store_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStorePathInput">token_store_path_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingNameInput">token_store_sas_setting_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonceInput">validate_nonce_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonceInput">validate_nonce_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrls">allowed_external_redirect_urls</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.cookieExpirationConvention">cookie_expiration_convention</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.cookieExpirationTime">cookie_expiration_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.logoutEndpoint">logout_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.nonceExpirationTime">nonce_expiration_time</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins">preserve_url_fragments_for_logins</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins">preserve_url_fragments_for_logins</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTime">token_refresh_extension_time</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStorePath">token_store_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingName">token_store_sas_setting_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonce">validate_nonce</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonce">validate_nonce</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login">FunctionAppFlexConsumptionAuthSettingsV2Login</a></code> | *No description.* |
 
 ---
@@ -14265,10 +14265,10 @@ nonce_expiration_time_input: str
 ##### `preserve_url_fragments_for_logins_input`<sup>Optional</sup> <a name="preserve_url_fragments_for_logins_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput"></a>
 
 ```python
-preserve_url_fragments_for_logins_input: typing.Union[bool, IResolvable]
+preserve_url_fragments_for_logins_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14285,10 +14285,10 @@ token_refresh_extension_time_input: typing.Union[int, float]
 ##### `token_store_enabled_input`<sup>Optional</sup> <a name="token_store_enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput"></a>
 
 ```python
-token_store_enabled_input: typing.Union[bool, IResolvable]
+token_store_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14315,10 +14315,10 @@ token_store_sas_setting_name_input: str
 ##### `validate_nonce_input`<sup>Optional</sup> <a name="validate_nonce_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonceInput"></a>
 
 ```python
-validate_nonce_input: typing.Union[bool, IResolvable]
+validate_nonce_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14375,10 +14375,10 @@ nonce_expiration_time: str
 ##### `preserve_url_fragments_for_logins`<sup>Required</sup> <a name="preserve_url_fragments_for_logins" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins"></a>
 
 ```python
-preserve_url_fragments_for_logins: typing.Union[bool, IResolvable]
+preserve_url_fragments_for_logins: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14395,10 +14395,10 @@ token_refresh_extension_time: typing.Union[int, float]
 ##### `token_store_enabled`<sup>Required</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled"></a>
 
 ```python
-token_store_enabled: typing.Union[bool, IResolvable]
+token_store_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14425,10 +14425,10 @@ token_store_sas_setting_name: str
 ##### `validate_nonce`<sup>Required</sup> <a name="validate_nonce" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonce"></a>
 
 ```python
-validate_nonce: typing.Union[bool, IResolvable]
+validate_nonce: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -15093,7 +15093,7 @@ def put_active_directory_v2(
   jwt_allowed_client_applications: typing.List[str] = None,
   jwt_allowed_groups: typing.List[str] = None,
   login_parameters: typing.Mapping[str] = None,
-  www_authentication_disabled: typing.Union[bool, IResolvable] = None
+  www_authentication_disabled: bool | IResolvable = None
 ) -> None
 ```
 
@@ -15209,7 +15209,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `www_authentication_disabled`<sup>Optional</sup> <a name="www_authentication_disabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.putActiveDirectoryV2.parameter.wwwAuthenticationDisabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
 
@@ -15268,13 +15268,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_custom_oidc_v2(
-  value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2]]
+  value: IResolvable | typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.putCustomOidcV2.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]
 
 ---
 
@@ -15429,12 +15429,12 @@ def put_login(
   cookie_expiration_time: str = None,
   logout_endpoint: str = None,
   nonce_expiration_time: str = None,
-  preserve_url_fragments_for_logins: typing.Union[bool, IResolvable] = None,
+  preserve_url_fragments_for_logins: bool | IResolvable = None,
   token_refresh_extension_time: typing.Union[int, float] = None,
-  token_store_enabled: typing.Union[bool, IResolvable] = None,
+  token_store_enabled: bool | IResolvable = None,
   token_store_path: str = None,
   token_store_sas_setting_name: str = None,
-  validate_nonce: typing.Union[bool, IResolvable] = None
+  validate_nonce: bool | IResolvable = None
 ) -> None
 ```
 
@@ -15492,7 +15492,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `preserve_url_fragments_for_logins`<sup>Optional</sup> <a name="preserve_url_fragments_for_logins" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.putLogin.parameter.preserveUrlFragmentsForLogins"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
 
@@ -15514,7 +15514,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `token_store_enabled`<sup>Optional</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.putLogin.parameter.tokenStoreEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Token Store configuration Enabled. Defaults to `false`.
 
@@ -15544,7 +15544,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `validate_nonce`<sup>Optional</sup> <a name="validate_nonce" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.putLogin.parameter.validateNonce"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the nonce be validated while completing the login flow. Defaults to `true`.
 
@@ -15777,10 +15777,10 @@ def reset_unauthenticated_action() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.twitterV2">twitter_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2TwitterV2OutputReference">FunctionAppFlexConsumptionAuthSettingsV2TwitterV2OutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.activeDirectoryV2Input">active_directory_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2">FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.appleV2Input">apple_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2AppleV2">FunctionAppFlexConsumptionAuthSettingsV2AppleV2</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabledInput">auth_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabledInput">auth_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.azureStaticWebAppV2Input">azure_static_web_app_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2AzureStaticWebAppV2">FunctionAppFlexConsumptionAuthSettingsV2AzureStaticWebAppV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.configFilePathInput">config_file_path_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.customOidcV2Input">custom_oidc_v2_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.customOidcV2Input">custom_oidc_v2_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.defaultProviderInput">default_provider_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.excludedPathsInput">excluded_paths_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.facebookV2Input">facebook_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2FacebookV2">FunctionAppFlexConsumptionAuthSettingsV2FacebookV2</a></code> | *No description.* |
@@ -15792,12 +15792,12 @@ def reset_unauthenticated_action() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.httpRouteApiPrefixInput">http_route_api_prefix_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.loginInput">login_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login">FunctionAppFlexConsumptionAuthSettingsV2Login</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.microsoftV2Input">microsoft_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2">FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthenticationInput">require_authentication_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttpsInput">require_https_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthenticationInput">require_authentication_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttpsInput">require_https_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.runtimeVersionInput">runtime_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.twitterV2Input">twitter_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2TwitterV2">FunctionAppFlexConsumptionAuthSettingsV2TwitterV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.unauthenticatedActionInput">unauthenticated_action_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabled">auth_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabled">auth_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.configFilePath">config_file_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.defaultProvider">default_provider</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.excludedPaths">excluded_paths</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -15805,8 +15805,8 @@ def reset_unauthenticated_action() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderName">forward_proxy_custom_host_header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderName">forward_proxy_custom_scheme_header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.httpRouteApiPrefix">http_route_api_prefix</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthentication">require_authentication</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttps">require_https</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthentication">require_authentication</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttps">require_https</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.runtimeVersion">runtime_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.unauthenticatedAction">unauthenticated_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2">FunctionAppFlexConsumptionAuthSettingsV2</a></code> | *No description.* |
@@ -15960,10 +15960,10 @@ apple_v2_input: FunctionAppFlexConsumptionAuthSettingsV2AppleV2
 ##### `auth_enabled_input`<sup>Optional</sup> <a name="auth_enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabledInput"></a>
 
 ```python
-auth_enabled_input: typing.Union[bool, IResolvable]
+auth_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -15990,10 +15990,10 @@ config_file_path_input: str
 ##### `custom_oidc_v2_input`<sup>Optional</sup> <a name="custom_oidc_v2_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.customOidcV2Input"></a>
 
 ```python
-custom_oidc_v2_input: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2]]
+custom_oidc_v2_input: IResolvable | typing.List[FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>]
 
 ---
 
@@ -16110,20 +16110,20 @@ microsoft_v2_input: FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2
 ##### `require_authentication_input`<sup>Optional</sup> <a name="require_authentication_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthenticationInput"></a>
 
 ```python
-require_authentication_input: typing.Union[bool, IResolvable]
+require_authentication_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `require_https_input`<sup>Optional</sup> <a name="require_https_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttpsInput"></a>
 
 ```python
-require_https_input: typing.Union[bool, IResolvable]
+require_https_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16160,10 +16160,10 @@ unauthenticated_action_input: str
 ##### `auth_enabled`<sup>Required</sup> <a name="auth_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabled"></a>
 
 ```python
-auth_enabled: typing.Union[bool, IResolvable]
+auth_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16240,20 +16240,20 @@ http_route_api_prefix: str
 ##### `require_authentication`<sup>Required</sup> <a name="require_authentication" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthentication"></a>
 
 ```python
-require_authentication: typing.Union[bool, IResolvable]
+require_authentication: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `require_https`<sup>Required</sup> <a name="require_https" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttps"></a>
 
 ```python
-require_https: typing.Union[bool, IResolvable]
+require_https: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16737,7 +16737,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]</code> | *No description.* |
 
 ---
 
@@ -16768,10 +16768,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionConnectionString]]
+internal_value: IResolvable | typing.List[FunctionAppFlexConsumptionConnectionString]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]
 
 ---
 
@@ -17037,7 +17037,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a></code> | *No description.* |
 
 ---
 
@@ -17128,10 +17128,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, FunctionAppFlexConsumptionConnectionString]
+internal_value: IResolvable | FunctionAppFlexConsumptionConnectionString
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>
 
 ---
 
@@ -18065,9 +18065,9 @@ def reset_support_credentials() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.allowedOriginsInput">allowed_origins_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentialsInput">support_credentials_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentialsInput">support_credentials_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.allowedOrigins">allowed_origins</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentials">support_credentials</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentials">support_credentials</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors">FunctionAppFlexConsumptionSiteConfigCors</a></code> | *No description.* |
 
 ---
@@ -18109,10 +18109,10 @@ allowed_origins_input: typing.List[str]
 ##### `support_credentials_input`<sup>Optional</sup> <a name="support_credentials_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentialsInput"></a>
 
 ```python
-support_credentials_input: typing.Union[bool, IResolvable]
+support_credentials_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -18129,10 +18129,10 @@ allowed_origins: typing.List[str]
 ##### `support_credentials`<sup>Required</sup> <a name="support_credentials" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentials"></a>
 
 ```python
-support_credentials: typing.Union[bool, IResolvable]
+support_credentials: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -18278,7 +18278,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]</code> | *No description.* |
 
 ---
 
@@ -18309,10 +18309,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders]]
+internal_value: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]
 
 ---
 
@@ -18608,7 +18608,7 @@ def reset_x_forwarded_host() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -18719,10 +18719,10 @@ x_forwarded_host: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders]
+internal_value: IResolvable | FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>
 
 ---
 
@@ -18858,7 +18858,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]</code> | *No description.* |
 
 ---
 
@@ -18889,10 +18889,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction]]
+internal_value: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]
 
 ---
 
@@ -19158,13 +19158,13 @@ Returns a reversible string representation.
 
 ```python
 def put_headers(
-  value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders]]
+  value: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.putHeaders.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]
 
 ---
 
@@ -19226,7 +19226,7 @@ def reset_virtual_network_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.headers">headers</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.actionInput">action_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.headersInput">headers_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.headersInput">headers_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.ipAddressInput">ip_address_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.priorityInput">priority_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -19239,7 +19239,7 @@ def reset_virtual_network_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.serviceTag">service_tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -19300,10 +19300,10 @@ description_input: str
 ##### `headers_input`<sup>Optional</sup> <a name="headers_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.headersInput"></a>
 
 ```python
-headers_input: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders]]
+headers_input: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>]
 
 ---
 
@@ -19430,10 +19430,10 @@ virtual_network_subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, FunctionAppFlexConsumptionSiteConfigIpRestriction]
+internal_value: IResolvable | FunctionAppFlexConsumptionSiteConfigIpRestriction
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>
 
 ---
 
@@ -19734,7 +19734,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ```python
 def put_cors(
   allowed_origins: typing.List[str] = None,
-  support_credentials: typing.Union[bool, IResolvable] = None
+  support_credentials: bool | IResolvable = None
 ) -> None
 ```
 
@@ -19750,7 +19750,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `support_credentials`<sup>Optional</sup> <a name="support_credentials" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.putCors.parameter.supportCredentials"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Are credentials allowed in CORS requests? Defaults to `false`.
 
@@ -19762,13 +19762,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_ip_restriction(
-  value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction]]
+  value: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.putIpRestriction.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]
 
 ---
 
@@ -19776,13 +19776,13 @@ def put_ip_restriction(
 
 ```python
 def put_scm_ip_restriction(
-  value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction]]
+  value: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.putScmIpRestriction.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]
 
 ---
 
@@ -19986,28 +19986,28 @@ def reset_worker_count() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.applicationInsightsKeyInput">application_insights_key_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.appServiceLogsInput">app_service_logs_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigAppServiceLogs">FunctionAppFlexConsumptionSiteConfigAppServiceLogs</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryManagedIdentityClientIdInput">container_registry_managed_identity_client_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentityInput">container_registry_use_managed_identity_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentityInput">container_registry_use_managed_identity_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.corsInput">cors_input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors">FunctionAppFlexConsumptionSiteConfigCors</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.defaultDocumentsInput">default_documents_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.elasticInstanceMinimumInput">elastic_instance_minimum_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.healthCheckEvictionTimeInMinInput">health_check_eviction_time_in_min_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.healthCheckPathInput">health_check_path_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2EnabledInput">http2_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2EnabledInput">http2_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.ipRestrictionDefaultActionInput">ip_restriction_default_action_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.ipRestrictionInput">ip_restriction_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.ipRestrictionInput">ip_restriction_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.loadBalancingModeInput">load_balancing_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.managedPipelineModeInput">managed_pipeline_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.minimumTlsVersionInput">minimum_tls_version_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabledInput">remote_debugging_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabledInput">remote_debugging_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingVersionInput">remote_debugging_version_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabledInput">runtime_scale_monitoring_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabledInput">runtime_scale_monitoring_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmIpRestrictionDefaultActionInput">scm_ip_restriction_default_action_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmIpRestrictionInput">scm_ip_restriction_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmIpRestrictionInput">scm_ip_restriction_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmMinimumTlsVersionInput">scm_minimum_tls_version_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestrictionInput">scm_use_main_ip_restriction_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorkerInput">use32_bit_worker_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabledInput">vnet_route_all_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabledInput">websockets_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestrictionInput">scm_use_main_ip_restriction_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorkerInput">use32_bit_worker_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabledInput">vnet_route_all_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabledInput">websockets_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.workerCountInput">worker_count_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.apiDefinitionUrl">api_definition_url</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.apiManagementApiId">api_management_api_id</a></code> | <code>str</code> | *No description.* |
@@ -20015,25 +20015,25 @@ def reset_worker_count() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.applicationInsightsConnectionString">application_insights_connection_string</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.applicationInsightsKey">application_insights_key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryManagedIdentityClientId">container_registry_managed_identity_client_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.defaultDocuments">default_documents</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.elasticInstanceMinimum">elastic_instance_minimum</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.healthCheckEvictionTimeInMin">health_check_eviction_time_in_min</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.healthCheckPath">health_check_path</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2Enabled">http2_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2Enabled">http2_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.ipRestrictionDefaultAction">ip_restriction_default_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.loadBalancingMode">load_balancing_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.managedPipelineMode">managed_pipeline_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.minimumTlsVersion">minimum_tls_version</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingVersion">remote_debugging_version</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabled">runtime_scale_monitoring_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabled">runtime_scale_monitoring_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmIpRestrictionDefaultAction">scm_ip_restriction_default_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmMinimumTlsVersion">scm_minimum_tls_version</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorker">use32_bit_worker</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabled">vnet_route_all_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabled">websockets_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorker">use32_bit_worker</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabled">vnet_route_all_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabled">websockets_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.workerCount">worker_count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig">FunctionAppFlexConsumptionSiteConfig</a></code> | *No description.* |
 
@@ -20196,10 +20196,10 @@ container_registry_managed_identity_client_id_input: str
 ##### `container_registry_use_managed_identity_input`<sup>Optional</sup> <a name="container_registry_use_managed_identity_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentityInput"></a>
 
 ```python
-container_registry_use_managed_identity_input: typing.Union[bool, IResolvable]
+container_registry_use_managed_identity_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20256,10 +20256,10 @@ health_check_path_input: str
 ##### `http2_enabled_input`<sup>Optional</sup> <a name="http2_enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2EnabledInput"></a>
 
 ```python
-http2_enabled_input: typing.Union[bool, IResolvable]
+http2_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20276,10 +20276,10 @@ ip_restriction_default_action_input: str
 ##### `ip_restriction_input`<sup>Optional</sup> <a name="ip_restriction_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.ipRestrictionInput"></a>
 
 ```python
-ip_restriction_input: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction]]
+ip_restriction_input: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>]
 
 ---
 
@@ -20316,10 +20316,10 @@ minimum_tls_version_input: str
 ##### `remote_debugging_enabled_input`<sup>Optional</sup> <a name="remote_debugging_enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabledInput"></a>
 
 ```python
-remote_debugging_enabled_input: typing.Union[bool, IResolvable]
+remote_debugging_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20336,10 +20336,10 @@ remote_debugging_version_input: str
 ##### `runtime_scale_monitoring_enabled_input`<sup>Optional</sup> <a name="runtime_scale_monitoring_enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabledInput"></a>
 
 ```python
-runtime_scale_monitoring_enabled_input: typing.Union[bool, IResolvable]
+runtime_scale_monitoring_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20356,10 +20356,10 @@ scm_ip_restriction_default_action_input: str
 ##### `scm_ip_restriction_input`<sup>Optional</sup> <a name="scm_ip_restriction_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmIpRestrictionInput"></a>
 
 ```python
-scm_ip_restriction_input: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction]]
+scm_ip_restriction_input: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]
 
 ---
 
@@ -20376,40 +20376,40 @@ scm_minimum_tls_version_input: str
 ##### `scm_use_main_ip_restriction_input`<sup>Optional</sup> <a name="scm_use_main_ip_restriction_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestrictionInput"></a>
 
 ```python
-scm_use_main_ip_restriction_input: typing.Union[bool, IResolvable]
+scm_use_main_ip_restriction_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `use32_bit_worker_input`<sup>Optional</sup> <a name="use32_bit_worker_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorkerInput"></a>
 
 ```python
-use32_bit_worker_input: typing.Union[bool, IResolvable]
+use32_bit_worker_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `vnet_route_all_enabled_input`<sup>Optional</sup> <a name="vnet_route_all_enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabledInput"></a>
 
 ```python
-vnet_route_all_enabled_input: typing.Union[bool, IResolvable]
+vnet_route_all_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `websockets_enabled_input`<sup>Optional</sup> <a name="websockets_enabled_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabledInput"></a>
 
 ```python
-websockets_enabled_input: typing.Union[bool, IResolvable]
+websockets_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20486,10 +20486,10 @@ container_registry_managed_identity_client_id: str
 ##### `container_registry_use_managed_identity`<sup>Required</sup> <a name="container_registry_use_managed_identity" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentity"></a>
 
 ```python
-container_registry_use_managed_identity: typing.Union[bool, IResolvable]
+container_registry_use_managed_identity: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20536,10 +20536,10 @@ health_check_path: str
 ##### `http2_enabled`<sup>Required</sup> <a name="http2_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2Enabled"></a>
 
 ```python
-http2_enabled: typing.Union[bool, IResolvable]
+http2_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20586,10 +20586,10 @@ minimum_tls_version: str
 ##### `remote_debugging_enabled`<sup>Required</sup> <a name="remote_debugging_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabled"></a>
 
 ```python
-remote_debugging_enabled: typing.Union[bool, IResolvable]
+remote_debugging_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20606,10 +20606,10 @@ remote_debugging_version: str
 ##### `runtime_scale_monitoring_enabled`<sup>Required</sup> <a name="runtime_scale_monitoring_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabled"></a>
 
 ```python
-runtime_scale_monitoring_enabled: typing.Union[bool, IResolvable]
+runtime_scale_monitoring_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20636,40 +20636,40 @@ scm_minimum_tls_version: str
 ##### `scm_use_main_ip_restriction`<sup>Required</sup> <a name="scm_use_main_ip_restriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestriction"></a>
 
 ```python
-scm_use_main_ip_restriction: typing.Union[bool, IResolvable]
+scm_use_main_ip_restriction: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `use32_bit_worker`<sup>Required</sup> <a name="use32_bit_worker" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorker"></a>
 
 ```python
-use32_bit_worker: typing.Union[bool, IResolvable]
+use32_bit_worker: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `vnet_route_all_enabled`<sup>Required</sup> <a name="vnet_route_all_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabled"></a>
 
 ```python
-vnet_route_all_enabled: typing.Union[bool, IResolvable]
+vnet_route_all_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `websockets_enabled`<sup>Required</sup> <a name="websockets_enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabled"></a>
 
 ```python
-websockets_enabled: typing.Union[bool, IResolvable]
+websockets_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20825,7 +20825,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]</code> | *No description.* |
 
 ---
 
@@ -20856,10 +20856,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders]]
+internal_value: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]
 
 ---
 
@@ -21155,7 +21155,7 @@ def reset_x_forwarded_host() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -21266,10 +21266,10 @@ x_forwarded_host: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders]
+internal_value: IResolvable | FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>
 
 ---
 
@@ -21405,7 +21405,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]</code> | *No description.* |
 
 ---
 
@@ -21436,10 +21436,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction]]
+internal_value: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]
 
 ---
 
@@ -21705,13 +21705,13 @@ Returns a reversible string representation.
 
 ```python
 def put_headers(
-  value: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders]]
+  value: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.putHeaders.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]
 
 ---
 
@@ -21773,7 +21773,7 @@ def reset_virtual_network_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.headers">headers</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.actionInput">action_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.headersInput">headers_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.headersInput">headers_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.ipAddressInput">ip_address_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.priorityInput">priority_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -21786,7 +21786,7 @@ def reset_virtual_network_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.serviceTag">service_tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -21847,10 +21847,10 @@ description_input: str
 ##### `headers_input`<sup>Optional</sup> <a name="headers_input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.headersInput"></a>
 
 ```python
-headers_input: typing.Union[IResolvable, typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders]]
+headers_input: IResolvable | typing.List[FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>]
 
 ---
 
@@ -21977,10 +21977,10 @@ virtual_network_subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, FunctionAppFlexConsumptionSiteConfigScmIpRestriction]
+internal_value: IResolvable | FunctionAppFlexConsumptionSiteConfigScmIpRestriction
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>
 
 ---
 
@@ -23063,7 +23063,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -23174,10 +23174,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, FunctionAppFlexConsumptionTimeouts]
+internal_value: IResolvable | FunctionAppFlexConsumptionTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a>
 
 ---
 

@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_azurerm import linux_function_app
 linuxFunctionApp.LinuxFunctionApp(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   name: str,
   resource_group_name: str,
@@ -30,33 +30,33 @@ linuxFunctionApp.LinuxFunctionApp(
   auth_settings: LinuxFunctionAppAuthSettings = None,
   auth_settings_v2: LinuxFunctionAppAuthSettingsV2 = None,
   backup: LinuxFunctionAppBackup = None,
-  builtin_logging_enabled: typing.Union[bool, IResolvable] = None,
-  client_certificate_enabled: typing.Union[bool, IResolvable] = None,
+  builtin_logging_enabled: bool | IResolvable = None,
+  client_certificate_enabled: bool | IResolvable = None,
   client_certificate_exclusion_paths: str = None,
   client_certificate_mode: str = None,
-  connection_string: typing.Union[IResolvable, typing.List[LinuxFunctionAppConnectionString]] = None,
-  content_share_force_disabled: typing.Union[bool, IResolvable] = None,
+  connection_string: IResolvable | typing.List[LinuxFunctionAppConnectionString] = None,
+  content_share_force_disabled: bool | IResolvable = None,
   daily_memory_time_quota: typing.Union[int, float] = None,
-  enabled: typing.Union[bool, IResolvable] = None,
-  ftp_publish_basic_authentication_enabled: typing.Union[bool, IResolvable] = None,
+  enabled: bool | IResolvable = None,
+  ftp_publish_basic_authentication_enabled: bool | IResolvable = None,
   functions_extension_version: str = None,
-  https_only: typing.Union[bool, IResolvable] = None,
+  https_only: bool | IResolvable = None,
   id: str = None,
   identity: LinuxFunctionAppIdentity = None,
   key_vault_reference_identity_id: str = None,
-  public_network_access_enabled: typing.Union[bool, IResolvable] = None,
+  public_network_access_enabled: bool | IResolvable = None,
   sticky_settings: LinuxFunctionAppStickySettings = None,
-  storage_account: typing.Union[IResolvable, typing.List[LinuxFunctionAppStorageAccount]] = None,
+  storage_account: IResolvable | typing.List[LinuxFunctionAppStorageAccount] = None,
   storage_account_access_key: str = None,
   storage_account_name: str = None,
   storage_key_vault_secret_id: str = None,
-  storage_uses_managed_identity: typing.Union[bool, IResolvable] = None,
+  storage_uses_managed_identity: bool | IResolvable = None,
   tags: typing.Mapping[str] = None,
   timeouts: LinuxFunctionAppTimeouts = None,
-  virtual_network_backup_restore_enabled: typing.Union[bool, IResolvable] = None,
+  virtual_network_backup_restore_enabled: bool | IResolvable = None,
   virtual_network_subnet_id: str = None,
-  vnet_image_pull_enabled: typing.Union[bool, IResolvable] = None,
-  webdeploy_publish_basic_authentication_enabled: typing.Union[bool, IResolvable] = None,
+  vnet_image_pull_enabled: bool | IResolvable = None,
+  webdeploy_publish_basic_authentication_enabled: bool | IResolvable = None,
   zip_deploy_file: str = None
 )
 ```
@@ -65,13 +65,13 @@ linuxFunctionApp.LinuxFunctionApp(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#location LinuxFunctionApp#location}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.name">name</a></code> | <code>str</code> | Specifies the name of the Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#resource_group_name LinuxFunctionApp#resource_group_name}. |
@@ -81,33 +81,33 @@ linuxFunctionApp.LinuxFunctionApp(
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.authSettings">auth_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings">LinuxFunctionAppAuthSettings</a></code> | auth_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.authSettingsV2">auth_settings_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2">LinuxFunctionAppAuthSettingsV2</a></code> | auth_settings_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.backup">backup</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup">LinuxFunctionAppBackup</a></code> | backup block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.builtinLoggingEnabled">builtin_logging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should built in logging be enabled. Configures `AzureWebJobsDashboard` app setting based on the configured storage setting. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the function app use Client Certificates. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.builtinLoggingEnabled">builtin_logging_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should built in logging be enabled. Configures `AzureWebJobsDashboard` app setting based on the configured storage setting. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the function app use Client Certificates. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.clientCertificateExclusionPaths">client_certificate_exclusion_paths</a></code> | <code>str</code> | Paths to exclude when using client certificates, separated by ; |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | The mode of the Function App's client certificates requirement for incoming requests. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.connectionString">connection_string</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]]</code> | connection_string block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.contentShareForceDisabled">content_share_force_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Force disable the content share settings. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.connectionString">connection_string</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]</code> | connection_string block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.contentShareForceDisabled">content_share_force_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Force disable the content share settings. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.dailyMemoryTimeQuota">daily_memory_time_quota</a></code> | <code>typing.Union[int, float]</code> | The amount of memory in gigabyte-seconds that your application is allowed to consume per day. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Is the Linux Function App enabled. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.ftpPublishBasicAuthenticationEnabled">ftp_publish_basic_authentication_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#ftp_publish_basic_authentication_enabled LinuxFunctionApp#ftp_publish_basic_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Is the Linux Function App enabled. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.ftpPublishBasicAuthenticationEnabled">ftp_publish_basic_authentication_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#ftp_publish_basic_authentication_enabled LinuxFunctionApp#ftp_publish_basic_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.functionsExtensionVersion">functions_extension_version</a></code> | <code>str</code> | The runtime version associated with the Function App. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Can the Function App only be accessed via HTTPS? |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.httpsOnly">https_only</a></code> | <code>bool \| cdktf.IResolvable</code> | Can the Function App only be accessed via HTTPS? |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#id LinuxFunctionApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppIdentity">LinuxFunctionAppIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.keyVaultReferenceIdentityId">key_vault_reference_identity_id</a></code> | <code>str</code> | The User Assigned Identity to use for Key Vault access. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#public_network_access_enabled LinuxFunctionApp#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#public_network_access_enabled LinuxFunctionApp#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.stickySettings">sticky_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStickySettings">LinuxFunctionAppStickySettings</a></code> | sticky_settings block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.storageAccount">storage_account</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]]</code> | storage_account block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.storageAccount">storage_account</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]</code> | storage_account block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.storageAccountAccessKey">storage_account_access_key</a></code> | <code>str</code> | The access key which will be used to access the storage account for the Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.storageAccountName">storage_account_name</a></code> | <code>str</code> | The backend storage account name which will be used by this Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.storageKeyVaultSecretId">storage_key_vault_secret_id</a></code> | <code>str</code> | The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.storageUsesManagedIdentity">storage_uses_managed_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Function App use its Managed Identity to access storage? |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.storageUsesManagedIdentity">storage_uses_managed_identity</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Function App use its Managed Identity to access storage? |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#tags LinuxFunctionApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.virtualNetworkBackupRestoreEnabled">virtual_network_backup_restore_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#virtual_network_backup_restore_enabled LinuxFunctionApp#virtual_network_backup_restore_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.virtualNetworkBackupRestoreEnabled">virtual_network_backup_restore_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#virtual_network_backup_restore_enabled LinuxFunctionApp#virtual_network_backup_restore_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.vnetImagePullEnabled">vnet_image_pull_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Is container image pull over virtual network enabled? Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#webdeploy_publish_basic_authentication_enabled LinuxFunctionApp#webdeploy_publish_basic_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.vnetImagePullEnabled">vnet_image_pull_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Is container image pull over virtual network enabled? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#webdeploy_publish_basic_authentication_enabled LinuxFunctionApp#webdeploy_publish_basic_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.zipDeployFile">zip_deploy_file</a></code> | <code>str</code> | The local path and filename of the Zip packaged application to deploy to this Linux Function App. |
 
 ---
@@ -132,13 +132,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -168,7 +168,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -260,7 +260,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `builtin_logging_enabled`<sup>Optional</sup> <a name="builtin_logging_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.builtinLoggingEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should built in logging be enabled. Configures `AzureWebJobsDashboard` app setting based on the configured storage setting.
 
@@ -270,7 +270,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `client_certificate_enabled`<sup>Optional</sup> <a name="client_certificate_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.clientCertificateEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the function app use Client Certificates.
 
@@ -302,7 +302,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `connection_string`<sup>Optional</sup> <a name="connection_string" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.connectionString"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]
 
 connection_string block.
 
@@ -312,7 +312,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `content_share_force_disabled`<sup>Optional</sup> <a name="content_share_force_disabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.contentShareForceDisabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Force disable the content share settings.
 
@@ -334,7 +334,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Is the Linux Function App enabled.
 
@@ -344,7 +344,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `ftp_publish_basic_authentication_enabled`<sup>Optional</sup> <a name="ftp_publish_basic_authentication_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.ftpPublishBasicAuthenticationEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#ftp_publish_basic_authentication_enabled LinuxFunctionApp#ftp_publish_basic_authentication_enabled}.
 
@@ -362,7 +362,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `https_only`<sup>Optional</sup> <a name="https_only" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.httpsOnly"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Can the Function App only be accessed via HTTPS?
 
@@ -403,7 +403,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `public_network_access_enabled`<sup>Optional</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.publicNetworkAccessEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#public_network_access_enabled LinuxFunctionApp#public_network_access_enabled}.
 
@@ -421,7 +421,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `storage_account`<sup>Optional</sup> <a name="storage_account" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.storageAccount"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]
 
 storage_account block.
 
@@ -461,7 +461,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `storage_uses_managed_identity`<sup>Optional</sup> <a name="storage_uses_managed_identity" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.storageUsesManagedIdentity"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Function App use its Managed Identity to access storage?
 
@@ -489,7 +489,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `virtual_network_backup_restore_enabled`<sup>Optional</sup> <a name="virtual_network_backup_restore_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.virtualNetworkBackupRestoreEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#virtual_network_backup_restore_enabled LinuxFunctionApp#virtual_network_backup_restore_enabled}.
 
@@ -505,7 +505,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `vnet_image_pull_enabled`<sup>Optional</sup> <a name="vnet_image_pull_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.vnetImagePullEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Is container image pull over virtual network enabled? Defaults to `false`.
 
@@ -515,7 +515,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `webdeploy_publish_basic_authentication_enabled`<sup>Optional</sup> <a name="webdeploy_publish_basic_authentication_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.Initializer.parameter.webdeployPublishBasicAuthenticationEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#webdeploy_publish_basic_authentication_enabled LinuxFunctionApp#webdeploy_publish_basic_authentication_enabled}.
 
@@ -826,7 +826,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.importFrom"></a>
@@ -889,7 +889,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -905,7 +905,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -933,7 +933,7 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_auth_settings(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   active_directory: LinuxFunctionAppAuthSettingsActiveDirectory = None,
   additional_login_parameters: typing.Mapping[str] = None,
   allowed_external_redirect_urls: typing.List[str] = None,
@@ -945,7 +945,7 @@ def put_auth_settings(
   microsoft: LinuxFunctionAppAuthSettingsMicrosoft = None,
   runtime_version: str = None,
   token_refresh_extension_hours: typing.Union[int, float] = None,
-  token_store_enabled: typing.Union[bool, IResolvable] = None,
+  token_store_enabled: bool | IResolvable = None,
   twitter: LinuxFunctionAppAuthSettingsTwitter = None,
   unauthenticated_client_action: str = None
 ) -> None
@@ -953,7 +953,7 @@ def put_auth_settings(
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putAuthSettings.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Authentication / Authorization feature be enabled?
 
@@ -1077,7 +1077,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `token_store_enabled`<sup>Optional</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putAuthSettings.parameter.tokenStoreEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
 
@@ -1112,10 +1112,10 @@ def put_auth_settings_v2(
   login: LinuxFunctionAppAuthSettingsV2Login,
   active_directory_v2: LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2 = None,
   apple_v2: LinuxFunctionAppAuthSettingsV2AppleV2 = None,
-  auth_enabled: typing.Union[bool, IResolvable] = None,
+  auth_enabled: bool | IResolvable = None,
   azure_static_web_app_v2: LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2 = None,
   config_file_path: str = None,
-  custom_oidc_v2: typing.Union[IResolvable, typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2]] = None,
+  custom_oidc_v2: IResolvable | typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2] = None,
   default_provider: str = None,
   excluded_paths: typing.List[str] = None,
   facebook_v2: LinuxFunctionAppAuthSettingsV2FacebookV2 = None,
@@ -1126,8 +1126,8 @@ def put_auth_settings_v2(
   google_v2: LinuxFunctionAppAuthSettingsV2GoogleV2 = None,
   http_route_api_prefix: str = None,
   microsoft_v2: LinuxFunctionAppAuthSettingsV2MicrosoftV2 = None,
-  require_authentication: typing.Union[bool, IResolvable] = None,
-  require_https: typing.Union[bool, IResolvable] = None,
+  require_authentication: bool | IResolvable = None,
+  require_https: bool | IResolvable = None,
   runtime_version: str = None,
   twitter_v2: LinuxFunctionAppAuthSettingsV2TwitterV2 = None,
   unauthenticated_action: str = None
@@ -1166,7 +1166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `auth_enabled`<sup>Optional</sup> <a name="auth_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putAuthSettingsV2.parameter.authEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the AuthV2 Settings be enabled. Defaults to `false`.
 
@@ -1196,7 +1196,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `custom_oidc_v2`<sup>Optional</sup> <a name="custom_oidc_v2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putAuthSettingsV2.parameter.customOidcV2"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]
 
 custom_oidc_v2 block.
 
@@ -1310,7 +1310,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `require_authentication`<sup>Optional</sup> <a name="require_authentication" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putAuthSettingsV2.parameter.requireAuthentication"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the authentication flow be used for all requests.
 
@@ -1320,7 +1320,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `require_https`<sup>Optional</sup> <a name="require_https" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putAuthSettingsV2.parameter.requireHttps"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should HTTPS be required on connections? Defaults to true.
 
@@ -1367,7 +1367,7 @@ def put_backup(
   name: str,
   schedule: LinuxFunctionAppBackupSchedule,
   storage_account_url: str,
-  enabled: typing.Union[bool, IResolvable] = None
+  enabled: bool | IResolvable = None
 ) -> None
 ```
 
@@ -1403,7 +1403,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putBackup.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should this backup job be enabled?
 
@@ -1415,13 +1415,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_connection_string(
-  value: typing.Union[IResolvable, typing.List[LinuxFunctionAppConnectionString]]
+  value: IResolvable | typing.List[LinuxFunctionAppConnectionString]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putConnectionString.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]
 
 ---
 
@@ -1454,7 +1454,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_site_config(
-  always_on: typing.Union[bool, IResolvable] = None,
+  always_on: bool | IResolvable = None,
   api_definition_url: str = None,
   api_management_api_id: str = None,
   app_command_line: str = None,
@@ -1464,37 +1464,37 @@ def put_site_config(
   app_scale_limit: typing.Union[int, float] = None,
   app_service_logs: LinuxFunctionAppSiteConfigAppServiceLogs = None,
   container_registry_managed_identity_client_id: str = None,
-  container_registry_use_managed_identity: typing.Union[bool, IResolvable] = None,
+  container_registry_use_managed_identity: bool | IResolvable = None,
   cors: LinuxFunctionAppSiteConfigCors = None,
   default_documents: typing.List[str] = None,
   elastic_instance_minimum: typing.Union[int, float] = None,
   ftps_state: str = None,
   health_check_eviction_time_in_min: typing.Union[int, float] = None,
   health_check_path: str = None,
-  http2_enabled: typing.Union[bool, IResolvable] = None,
-  ip_restriction: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigIpRestriction]] = None,
+  http2_enabled: bool | IResolvable = None,
+  ip_restriction: IResolvable | typing.List[LinuxFunctionAppSiteConfigIpRestriction] = None,
   ip_restriction_default_action: str = None,
   load_balancing_mode: str = None,
   managed_pipeline_mode: str = None,
   minimum_tls_version: str = None,
   pre_warmed_instance_count: typing.Union[int, float] = None,
-  remote_debugging_enabled: typing.Union[bool, IResolvable] = None,
+  remote_debugging_enabled: bool | IResolvable = None,
   remote_debugging_version: str = None,
-  runtime_scale_monitoring_enabled: typing.Union[bool, IResolvable] = None,
-  scm_ip_restriction: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigScmIpRestriction]] = None,
+  runtime_scale_monitoring_enabled: bool | IResolvable = None,
+  scm_ip_restriction: IResolvable | typing.List[LinuxFunctionAppSiteConfigScmIpRestriction] = None,
   scm_ip_restriction_default_action: str = None,
   scm_minimum_tls_version: str = None,
-  scm_use_main_ip_restriction: typing.Union[bool, IResolvable] = None,
-  use32_bit_worker: typing.Union[bool, IResolvable] = None,
-  vnet_route_all_enabled: typing.Union[bool, IResolvable] = None,
-  websockets_enabled: typing.Union[bool, IResolvable] = None,
+  scm_use_main_ip_restriction: bool | IResolvable = None,
+  use32_bit_worker: bool | IResolvable = None,
+  vnet_route_all_enabled: bool | IResolvable = None,
+  websockets_enabled: bool | IResolvable = None,
   worker_count: typing.Union[int, float] = None
 ) -> None
 ```
 
 ###### `always_on`<sup>Optional</sup> <a name="always_on" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putSiteConfig.parameter.alwaysOn"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If this Linux Web App is Always On enabled. Defaults to `false`.
 
@@ -1596,7 +1596,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `container_registry_use_managed_identity`<sup>Optional</sup> <a name="container_registry_use_managed_identity" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putSiteConfig.parameter.containerRegistryUseManagedIdentity"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should connections for Azure Container Registry use Managed Identity.
 
@@ -1670,7 +1670,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `http2_enabled`<sup>Optional</sup> <a name="http2_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putSiteConfig.parameter.http2Enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Specifies if the http2 protocol should be enabled. Defaults to `false`.
 
@@ -1680,7 +1680,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `ip_restriction`<sup>Optional</sup> <a name="ip_restriction" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putSiteConfig.parameter.ipRestriction"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]
 
 ip_restriction block.
 
@@ -1740,7 +1740,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `remote_debugging_enabled`<sup>Optional</sup> <a name="remote_debugging_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putSiteConfig.parameter.remoteDebuggingEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Remote Debugging be enabled. Defaults to `false`.
 
@@ -1760,7 +1760,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `runtime_scale_monitoring_enabled`<sup>Optional</sup> <a name="runtime_scale_monitoring_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putSiteConfig.parameter.runtimeScaleMonitoringEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Functions Runtime Scale Monitoring be enabled.
 
@@ -1770,7 +1770,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `scm_ip_restriction`<sup>Optional</sup> <a name="scm_ip_restriction" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putSiteConfig.parameter.scmIpRestriction"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]
 
 scm_ip_restriction block.
 
@@ -1798,7 +1798,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `scm_use_main_ip_restriction`<sup>Optional</sup> <a name="scm_use_main_ip_restriction" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putSiteConfig.parameter.scmUseMainIpRestriction"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Linux Function App `ip_restriction` configuration be used for the SCM also.
 
@@ -1808,7 +1808,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `use32_bit_worker`<sup>Optional</sup> <a name="use32_bit_worker" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putSiteConfig.parameter.use32BitWorker"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Linux Web App use a 32-bit worker.
 
@@ -1818,7 +1818,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `vnet_route_all_enabled`<sup>Optional</sup> <a name="vnet_route_all_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putSiteConfig.parameter.vnetRouteAllEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 
@@ -1828,7 +1828,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `websockets_enabled`<sup>Optional</sup> <a name="websockets_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putSiteConfig.parameter.websocketsEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Web Sockets be enabled. Defaults to `false`.
 
@@ -1875,13 +1875,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_storage_account(
-  value: typing.Union[IResolvable, typing.List[LinuxFunctionAppStorageAccount]]
+  value: IResolvable | typing.List[LinuxFunctionAppStorageAccount]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.putStorageAccount.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]
 
 ---
 
@@ -2257,13 +2257,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.authSettings">auth_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference">LinuxFunctionAppAuthSettingsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.authSettingsV2">auth_settings_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference">LinuxFunctionAppAuthSettingsV2OutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.backup">backup</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference">LinuxFunctionAppBackupOutputReference</a></code> | *No description.* |
@@ -2286,66 +2286,66 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.authSettingsInput">auth_settings_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings">LinuxFunctionAppAuthSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.authSettingsV2Input">auth_settings_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2">LinuxFunctionAppAuthSettingsV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.backupInput">backup_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup">LinuxFunctionAppBackup</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.builtinLoggingEnabledInput">builtin_logging_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateEnabledInput">client_certificate_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.builtinLoggingEnabledInput">builtin_logging_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateEnabledInput">client_certificate_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateExclusionPathsInput">client_certificate_exclusion_paths_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateModeInput">client_certificate_mode_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.connectionStringInput">connection_string_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.contentShareForceDisabledInput">content_share_force_disabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.connectionStringInput">connection_string_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.contentShareForceDisabledInput">content_share_force_disabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.dailyMemoryTimeQuotaInput">daily_memory_time_quota_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.ftpPublishBasicAuthenticationEnabledInput">ftp_publish_basic_authentication_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.ftpPublishBasicAuthenticationEnabledInput">ftp_publish_basic_authentication_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.functionsExtensionVersionInput">functions_extension_version_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.httpsOnlyInput">https_only_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.httpsOnlyInput">https_only_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.identityInput">identity_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppIdentity">LinuxFunctionAppIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.keyVaultReferenceIdentityIdInput">key_vault_reference_identity_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.publicNetworkAccessEnabledInput">public_network_access_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.publicNetworkAccessEnabledInput">public_network_access_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.servicePlanIdInput">service_plan_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.siteConfigInput">site_config_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig">LinuxFunctionAppSiteConfig</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.stickySettingsInput">sticky_settings_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStickySettings">LinuxFunctionAppStickySettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageAccountAccessKeyInput">storage_account_access_key_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageAccountInput">storage_account_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageAccountInput">storage_account_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageAccountNameInput">storage_account_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageKeyVaultSecretIdInput">storage_key_vault_secret_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageUsesManagedIdentityInput">storage_uses_managed_identity_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageUsesManagedIdentityInput">storage_uses_managed_identity_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a>]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.virtualNetworkBackupRestoreEnabledInput">virtual_network_backup_restore_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.virtualNetworkBackupRestoreEnabledInput">virtual_network_backup_restore_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.virtualNetworkSubnetIdInput">virtual_network_subnet_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.vnetImagePullEnabledInput">vnet_image_pull_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.webdeployPublishBasicAuthenticationEnabledInput">webdeploy_publish_basic_authentication_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.vnetImagePullEnabledInput">vnet_image_pull_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.webdeployPublishBasicAuthenticationEnabledInput">webdeploy_publish_basic_authentication_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.zipDeployFileInput">zip_deploy_file_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.appSettings">app_settings</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.builtinLoggingEnabled">builtin_logging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.builtinLoggingEnabled">builtin_logging_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateExclusionPaths">client_certificate_exclusion_paths</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.contentShareForceDisabled">content_share_force_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.contentShareForceDisabled">content_share_force_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.dailyMemoryTimeQuota">daily_memory_time_quota</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.ftpPublishBasicAuthenticationEnabled">ftp_publish_basic_authentication_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.ftpPublishBasicAuthenticationEnabled">ftp_publish_basic_authentication_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.functionsExtensionVersion">functions_extension_version</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.httpsOnly">https_only</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.keyVaultReferenceIdentityId">key_vault_reference_identity_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.location">location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.servicePlanId">service_plan_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageAccountAccessKey">storage_account_access_key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageAccountName">storage_account_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageKeyVaultSecretId">storage_key_vault_secret_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageUsesManagedIdentity">storage_uses_managed_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageUsesManagedIdentity">storage_uses_managed_identity</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.virtualNetworkBackupRestoreEnabled">virtual_network_backup_restore_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.virtualNetworkBackupRestoreEnabled">virtual_network_backup_restore_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.vnetImagePullEnabled">vnet_image_pull_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.vnetImagePullEnabled">vnet_image_pull_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.zipDeployFile">zip_deploy_file</a></code> | <code>str</code> | *No description.* |
 
 ---
@@ -2425,20 +2425,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -2485,10 +2485,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2715,20 +2715,20 @@ backup_input: LinuxFunctionAppBackup
 ##### `builtin_logging_enabled_input`<sup>Optional</sup> <a name="builtin_logging_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.builtinLoggingEnabledInput"></a>
 
 ```python
-builtin_logging_enabled_input: typing.Union[bool, IResolvable]
+builtin_logging_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `client_certificate_enabled_input`<sup>Optional</sup> <a name="client_certificate_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateEnabledInput"></a>
 
 ```python
-client_certificate_enabled_input: typing.Union[bool, IResolvable]
+client_certificate_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2755,20 +2755,20 @@ client_certificate_mode_input: str
 ##### `connection_string_input`<sup>Optional</sup> <a name="connection_string_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.connectionStringInput"></a>
 
 ```python
-connection_string_input: typing.Union[IResolvable, typing.List[LinuxFunctionAppConnectionString]]
+connection_string_input: IResolvable | typing.List[LinuxFunctionAppConnectionString]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]
 
 ---
 
 ##### `content_share_force_disabled_input`<sup>Optional</sup> <a name="content_share_force_disabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.contentShareForceDisabledInput"></a>
 
 ```python
-content_share_force_disabled_input: typing.Union[bool, IResolvable]
+content_share_force_disabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2785,20 +2785,20 @@ daily_memory_time_quota_input: typing.Union[int, float]
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `ftp_publish_basic_authentication_enabled_input`<sup>Optional</sup> <a name="ftp_publish_basic_authentication_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.ftpPublishBasicAuthenticationEnabledInput"></a>
 
 ```python
-ftp_publish_basic_authentication_enabled_input: typing.Union[bool, IResolvable]
+ftp_publish_basic_authentication_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2815,10 +2815,10 @@ functions_extension_version_input: str
 ##### `https_only_input`<sup>Optional</sup> <a name="https_only_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.httpsOnlyInput"></a>
 
 ```python
-https_only_input: typing.Union[bool, IResolvable]
+https_only_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2875,10 +2875,10 @@ name_input: str
 ##### `public_network_access_enabled_input`<sup>Optional</sup> <a name="public_network_access_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.publicNetworkAccessEnabledInput"></a>
 
 ```python
-public_network_access_enabled_input: typing.Union[bool, IResolvable]
+public_network_access_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2935,10 +2935,10 @@ storage_account_access_key_input: str
 ##### `storage_account_input`<sup>Optional</sup> <a name="storage_account_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageAccountInput"></a>
 
 ```python
-storage_account_input: typing.Union[IResolvable, typing.List[LinuxFunctionAppStorageAccount]]
+storage_account_input: IResolvable | typing.List[LinuxFunctionAppStorageAccount]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]
 
 ---
 
@@ -2965,10 +2965,10 @@ storage_key_vault_secret_id_input: str
 ##### `storage_uses_managed_identity_input`<sup>Optional</sup> <a name="storage_uses_managed_identity_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageUsesManagedIdentityInput"></a>
 
 ```python
-storage_uses_managed_identity_input: typing.Union[bool, IResolvable]
+storage_uses_managed_identity_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2985,20 +2985,20 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, LinuxFunctionAppTimeouts]
+timeouts_input: IResolvable | LinuxFunctionAppTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a>
 
 ---
 
 ##### `virtual_network_backup_restore_enabled_input`<sup>Optional</sup> <a name="virtual_network_backup_restore_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.virtualNetworkBackupRestoreEnabledInput"></a>
 
 ```python
-virtual_network_backup_restore_enabled_input: typing.Union[bool, IResolvable]
+virtual_network_backup_restore_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3015,20 +3015,20 @@ virtual_network_subnet_id_input: str
 ##### `vnet_image_pull_enabled_input`<sup>Optional</sup> <a name="vnet_image_pull_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.vnetImagePullEnabledInput"></a>
 
 ```python
-vnet_image_pull_enabled_input: typing.Union[bool, IResolvable]
+vnet_image_pull_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `webdeploy_publish_basic_authentication_enabled_input`<sup>Optional</sup> <a name="webdeploy_publish_basic_authentication_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.webdeployPublishBasicAuthenticationEnabledInput"></a>
 
 ```python
-webdeploy_publish_basic_authentication_enabled_input: typing.Union[bool, IResolvable]
+webdeploy_publish_basic_authentication_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3055,20 +3055,20 @@ app_settings: typing.Mapping[str]
 ##### `builtin_logging_enabled`<sup>Required</sup> <a name="builtin_logging_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.builtinLoggingEnabled"></a>
 
 ```python
-builtin_logging_enabled: typing.Union[bool, IResolvable]
+builtin_logging_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `client_certificate_enabled`<sup>Required</sup> <a name="client_certificate_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.clientCertificateEnabled"></a>
 
 ```python
-client_certificate_enabled: typing.Union[bool, IResolvable]
+client_certificate_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3095,10 +3095,10 @@ client_certificate_mode: str
 ##### `content_share_force_disabled`<sup>Required</sup> <a name="content_share_force_disabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.contentShareForceDisabled"></a>
 
 ```python
-content_share_force_disabled: typing.Union[bool, IResolvable]
+content_share_force_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3115,20 +3115,20 @@ daily_memory_time_quota: typing.Union[int, float]
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `ftp_publish_basic_authentication_enabled`<sup>Required</sup> <a name="ftp_publish_basic_authentication_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.ftpPublishBasicAuthenticationEnabled"></a>
 
 ```python
-ftp_publish_basic_authentication_enabled: typing.Union[bool, IResolvable]
+ftp_publish_basic_authentication_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3145,10 +3145,10 @@ functions_extension_version: str
 ##### `https_only`<sup>Required</sup> <a name="https_only" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.httpsOnly"></a>
 
 ```python
-https_only: typing.Union[bool, IResolvable]
+https_only: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3195,10 +3195,10 @@ name: str
 ##### `public_network_access_enabled`<sup>Required</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.publicNetworkAccessEnabled"></a>
 
 ```python
-public_network_access_enabled: typing.Union[bool, IResolvable]
+public_network_access_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3255,10 +3255,10 @@ storage_key_vault_secret_id: str
 ##### `storage_uses_managed_identity`<sup>Required</sup> <a name="storage_uses_managed_identity" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.storageUsesManagedIdentity"></a>
 
 ```python
-storage_uses_managed_identity: typing.Union[bool, IResolvable]
+storage_uses_managed_identity: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3275,10 +3275,10 @@ tags: typing.Mapping[str]
 ##### `virtual_network_backup_restore_enabled`<sup>Required</sup> <a name="virtual_network_backup_restore_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.virtualNetworkBackupRestoreEnabled"></a>
 
 ```python
-virtual_network_backup_restore_enabled: typing.Union[bool, IResolvable]
+virtual_network_backup_restore_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3295,20 +3295,20 @@ virtual_network_subnet_id: str
 ##### `vnet_image_pull_enabled`<sup>Required</sup> <a name="vnet_image_pull_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.vnetImagePullEnabled"></a>
 
 ```python
-vnet_image_pull_enabled: typing.Union[bool, IResolvable]
+vnet_image_pull_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `webdeploy_publish_basic_authentication_enabled`<sup>Required</sup> <a name="webdeploy_publish_basic_authentication_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionApp.property.webdeployPublishBasicAuthenticationEnabled"></a>
 
 ```python
-webdeploy_publish_basic_authentication_enabled: typing.Union[bool, IResolvable]
+webdeploy_publish_basic_authentication_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -3350,7 +3350,7 @@ tfResourceType: str
 from cdktf_cdktf_provider_azurerm import linux_function_app
 
 linuxFunctionApp.LinuxFunctionAppAuthSettings(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   active_directory: LinuxFunctionAppAuthSettingsActiveDirectory = None,
   additional_login_parameters: typing.Mapping[str] = None,
   allowed_external_redirect_urls: typing.List[str] = None,
@@ -3362,7 +3362,7 @@ linuxFunctionApp.LinuxFunctionAppAuthSettings(
   microsoft: LinuxFunctionAppAuthSettingsMicrosoft = None,
   runtime_version: str = None,
   token_refresh_extension_hours: typing.Union[int, float] = None,
-  token_store_enabled: typing.Union[bool, IResolvable] = None,
+  token_store_enabled: bool | IResolvable = None,
   twitter: LinuxFunctionAppAuthSettingsTwitter = None,
   unauthenticated_client_action: str = None
 )
@@ -3372,7 +3372,7 @@ linuxFunctionApp.LinuxFunctionAppAuthSettings(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Authentication / Authorization feature be enabled? |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Authentication / Authorization feature be enabled? |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.activeDirectory">active_directory</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsActiveDirectory">LinuxFunctionAppAuthSettingsActiveDirectory</a></code> | active_directory block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.additionalLoginParameters">additional_login_parameters</a></code> | <code>typing.Mapping[str]</code> | Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.allowedExternalRedirectUrls">allowed_external_redirect_urls</a></code> | <code>typing.List[str]</code> | Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App. |
@@ -3384,7 +3384,7 @@ linuxFunctionApp.LinuxFunctionAppAuthSettings(
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.microsoft">microsoft</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsMicrosoft">LinuxFunctionAppAuthSettingsMicrosoft</a></code> | microsoft block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.runtimeVersion">runtime_version</a></code> | <code>str</code> | The RuntimeVersion of the Authentication / Authorization feature in use. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.tokenRefreshExtensionHours">token_refresh_extension_hours</a></code> | <code>typing.Union[int, float]</code> | The number of hours after session token expiration that a session token can be used to call the token refresh API. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.twitter">twitter</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsTwitter">LinuxFunctionAppAuthSettingsTwitter</a></code> | twitter block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.unauthenticatedClientAction">unauthenticated_client_action</a></code> | <code>str</code> | The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`. |
 
@@ -3393,10 +3393,10 @@ linuxFunctionApp.LinuxFunctionAppAuthSettings(
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Authentication / Authorization feature be enabled?
 
@@ -3565,10 +3565,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `token_store_enabled`<sup>Optional</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings.property.tokenStoreEnabled"></a>
 
 ```python
-token_store_enabled: typing.Union[bool, IResolvable]
+token_store_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
 
@@ -4091,10 +4091,10 @@ linuxFunctionApp.LinuxFunctionAppAuthSettingsV2(
   login: LinuxFunctionAppAuthSettingsV2Login,
   active_directory_v2: LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2 = None,
   apple_v2: LinuxFunctionAppAuthSettingsV2AppleV2 = None,
-  auth_enabled: typing.Union[bool, IResolvable] = None,
+  auth_enabled: bool | IResolvable = None,
   azure_static_web_app_v2: LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2 = None,
   config_file_path: str = None,
-  custom_oidc_v2: typing.Union[IResolvable, typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2]] = None,
+  custom_oidc_v2: IResolvable | typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2] = None,
   default_provider: str = None,
   excluded_paths: typing.List[str] = None,
   facebook_v2: LinuxFunctionAppAuthSettingsV2FacebookV2 = None,
@@ -4105,8 +4105,8 @@ linuxFunctionApp.LinuxFunctionAppAuthSettingsV2(
   google_v2: LinuxFunctionAppAuthSettingsV2GoogleV2 = None,
   http_route_api_prefix: str = None,
   microsoft_v2: LinuxFunctionAppAuthSettingsV2MicrosoftV2 = None,
-  require_authentication: typing.Union[bool, IResolvable] = None,
-  require_https: typing.Union[bool, IResolvable] = None,
+  require_authentication: bool | IResolvable = None,
+  require_https: bool | IResolvable = None,
   runtime_version: str = None,
   twitter_v2: LinuxFunctionAppAuthSettingsV2TwitterV2 = None,
   unauthenticated_action: str = None
@@ -4120,10 +4120,10 @@ linuxFunctionApp.LinuxFunctionAppAuthSettingsV2(
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.login">login</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login">LinuxFunctionAppAuthSettingsV2Login</a></code> | login block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.activeDirectoryV2">active_directory_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2</a></code> | active_directory_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.appleV2">apple_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2">LinuxFunctionAppAuthSettingsV2AppleV2</a></code> | apple_v2 block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.authEnabled">auth_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the AuthV2 Settings be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.authEnabled">auth_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the AuthV2 Settings be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.azureStaticWebAppV2">azure_static_web_app_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2">LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2</a></code> | azure_static_web_app_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.configFilePath">config_file_path</a></code> | <code>str</code> | The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.customOidcV2">custom_oidc_v2</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]]</code> | custom_oidc_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.customOidcV2">custom_oidc_v2</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]</code> | custom_oidc_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.defaultProvider">default_provider</a></code> | <code>str</code> | The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.excludedPaths">excluded_paths</a></code> | <code>typing.List[str]</code> | The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.facebookV2">facebook_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2">LinuxFunctionAppAuthSettingsV2FacebookV2</a></code> | facebook_v2 block. |
@@ -4134,8 +4134,8 @@ linuxFunctionApp.LinuxFunctionAppAuthSettingsV2(
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.googleV2">google_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2GoogleV2">LinuxFunctionAppAuthSettingsV2GoogleV2</a></code> | google_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.httpRouteApiPrefix">http_route_api_prefix</a></code> | <code>str</code> | The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.microsoftV2">microsoft_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2">LinuxFunctionAppAuthSettingsV2MicrosoftV2</a></code> | microsoft_v2 block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.requireAuthentication">require_authentication</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the authentication flow be used for all requests. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.requireHttps">require_https</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should HTTPS be required on connections? Defaults to true. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.requireAuthentication">require_authentication</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the authentication flow be used for all requests. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.requireHttps">require_https</a></code> | <code>bool \| cdktf.IResolvable</code> | Should HTTPS be required on connections? Defaults to true. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.runtimeVersion">runtime_version</a></code> | <code>str</code> | The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.twitterV2">twitter_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2">LinuxFunctionAppAuthSettingsV2TwitterV2</a></code> | twitter_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.unauthenticatedAction">unauthenticated_action</a></code> | <code>str</code> | The action to take for requests made without authentication. |
@@ -4187,10 +4187,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `auth_enabled`<sup>Optional</sup> <a name="auth_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.authEnabled"></a>
 
 ```python
-auth_enabled: typing.Union[bool, IResolvable]
+auth_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the AuthV2 Settings be enabled. Defaults to `false`.
 
@@ -4229,10 +4229,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `custom_oidc_v2`<sup>Optional</sup> <a name="custom_oidc_v2" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.customOidcV2"></a>
 
 ```python
-custom_oidc_v2: typing.Union[IResolvable, typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2]]
+custom_oidc_v2: IResolvable | typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]
 
 custom_oidc_v2 block.
 
@@ -4387,10 +4387,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `require_authentication`<sup>Optional</sup> <a name="require_authentication" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.requireAuthentication"></a>
 
 ```python
-require_authentication: typing.Union[bool, IResolvable]
+require_authentication: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the authentication flow be used for all requests.
 
@@ -4401,10 +4401,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `require_https`<sup>Optional</sup> <a name="require_https" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2.property.requireHttps"></a>
 
 ```python
-require_https: typing.Union[bool, IResolvable]
+require_https: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should HTTPS be required on connections? Defaults to true.
 
@@ -4475,7 +4475,7 @@ linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2(
   jwt_allowed_client_applications: typing.List[str] = None,
   jwt_allowed_groups: typing.List[str] = None,
   login_parameters: typing.Mapping[str] = None,
-  www_authentication_disabled: typing.Union[bool, IResolvable] = None
+  www_authentication_disabled: bool | IResolvable = None
 )
 ```
 
@@ -4494,7 +4494,7 @@ linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2(
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedClientApplications">jwt_allowed_client_applications</a></code> | <code>typing.List[str]</code> | A list of Allowed Client Applications in the JWT Claim. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedGroups">jwt_allowed_groups</a></code> | <code>typing.List[str]</code> | A list of Allowed Groups in the JWT Claim. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.loginParameters">login_parameters</a></code> | <code>typing.Mapping[str]</code> | A map of key-value pairs to send to the Authorisation Endpoint when a user logs in. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled">www_authentication_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the www-authenticate provider should be omitted from the request? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled">www_authentication_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the www-authenticate provider should be omitted from the request? Defaults to `false`. |
 
 ---
 
@@ -4655,10 +4655,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `www_authentication_disabled`<sup>Optional</sup> <a name="www_authentication_disabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled"></a>
 
 ```python
-www_authentication_disabled: typing.Union[bool, IResolvable]
+www_authentication_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
 
@@ -5091,12 +5091,12 @@ linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login(
   cookie_expiration_time: str = None,
   logout_endpoint: str = None,
   nonce_expiration_time: str = None,
-  preserve_url_fragments_for_logins: typing.Union[bool, IResolvable] = None,
+  preserve_url_fragments_for_logins: bool | IResolvable = None,
   token_refresh_extension_time: typing.Union[int, float] = None,
-  token_store_enabled: typing.Union[bool, IResolvable] = None,
+  token_store_enabled: bool | IResolvable = None,
   token_store_path: str = None,
   token_store_sas_setting_name: str = None,
-  validate_nonce: typing.Union[bool, IResolvable] = None
+  validate_nonce: bool | IResolvable = None
 )
 ```
 
@@ -5109,12 +5109,12 @@ linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login(
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.cookieExpirationTime">cookie_expiration_time</a></code> | <code>str</code> | The time after the request is made when the session cookie should expire. Defaults to `08:00:00`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.logoutEndpoint">logout_endpoint</a></code> | <code>str</code> | The endpoint to which logout requests should be made. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.nonceExpirationTime">nonce_expiration_time</a></code> | <code>str</code> | The time after the request is made when the nonce should expire. Defaults to `00:05:00`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.preserveUrlFragmentsForLogins">preserve_url_fragments_for_logins</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the fragments from the request be preserved after the login request is made. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.preserveUrlFragmentsForLogins">preserve_url_fragments_for_logins</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the fragments from the request be preserved after the login request is made. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenRefreshExtensionTime">token_refresh_extension_time</a></code> | <code>typing.Union[int, float]</code> | The number of hours after session token expiration that a session token can be used to call the token refresh API. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Token Store configuration Enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Token Store configuration Enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenStorePath">token_store_path</a></code> | <code>str</code> | The directory path in the App Filesystem in which the tokens will be stored. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenStoreSasSettingName">token_store_sas_setting_name</a></code> | <code>str</code> | The name of the app setting which contains the SAS URL of the blob storage containing the tokens. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.validateNonce">validate_nonce</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the nonce be validated while completing the login flow. Defaults to `true`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.validateNonce">validate_nonce</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the nonce be validated while completing the login flow. Defaults to `true`. |
 
 ---
 
@@ -5193,10 +5193,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `preserve_url_fragments_for_logins`<sup>Optional</sup> <a name="preserve_url_fragments_for_logins" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.preserveUrlFragmentsForLogins"></a>
 
 ```python
-preserve_url_fragments_for_logins: typing.Union[bool, IResolvable]
+preserve_url_fragments_for_logins: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
 
@@ -5223,10 +5223,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `token_store_enabled`<sup>Optional</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.tokenStoreEnabled"></a>
 
 ```python
-token_store_enabled: typing.Union[bool, IResolvable]
+token_store_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Token Store configuration Enabled. Defaults to `false`.
 
@@ -5265,10 +5265,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `validate_nonce`<sup>Optional</sup> <a name="validate_nonce" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login.property.validateNonce"></a>
 
 ```python
-validate_nonce: typing.Union[bool, IResolvable]
+validate_nonce: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the nonce be validated while completing the login flow. Defaults to `true`.
 
@@ -5419,7 +5419,7 @@ linuxFunctionApp.LinuxFunctionAppBackup(
   name: str,
   schedule: LinuxFunctionAppBackupSchedule,
   storage_account_url: str,
-  enabled: typing.Union[bool, IResolvable] = None
+  enabled: bool | IResolvable = None
 )
 ```
 
@@ -5430,7 +5430,7 @@ linuxFunctionApp.LinuxFunctionAppBackup(
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup.property.name">name</a></code> | <code>str</code> | The name which should be used for this Backup. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup.property.schedule">schedule</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule">LinuxFunctionAppBackupSchedule</a></code> | schedule block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup.property.storageAccountUrl">storage_account_url</a></code> | <code>str</code> | The SAS URL to the container. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should this backup job be enabled? |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should this backup job be enabled? |
 
 ---
 
@@ -5479,10 +5479,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should this backup job be enabled?
 
@@ -5500,7 +5500,7 @@ from cdktf_cdktf_provider_azurerm import linux_function_app
 linuxFunctionApp.LinuxFunctionAppBackupSchedule(
   frequency_interval: typing.Union[int, float],
   frequency_unit: str,
-  keep_at_least_one_backup: typing.Union[bool, IResolvable] = None,
+  keep_at_least_one_backup: bool | IResolvable = None,
   retention_period_days: typing.Union[int, float] = None,
   start_time: str = None
 )
@@ -5512,7 +5512,7 @@ linuxFunctionApp.LinuxFunctionAppBackupSchedule(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule.property.frequencyInterval">frequency_interval</a></code> | <code>typing.Union[int, float]</code> | How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`). |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule.property.frequencyUnit">frequency_unit</a></code> | <code>str</code> | The unit of time for how often the backup should take place. Possible values include: `Day` and `Hour`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule.property.keepAtLeastOneBackup">keep_at_least_one_backup</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the service keep at least one backup, regardless of age of backup. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule.property.keepAtLeastOneBackup">keep_at_least_one_backup</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the service keep at least one backup, regardless of age of backup. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule.property.retentionPeriodDays">retention_period_days</a></code> | <code>typing.Union[int, float]</code> | After how many days backups should be deleted. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule.property.startTime">start_time</a></code> | <code>str</code> | When the schedule should start working in RFC-3339 format. |
 
@@ -5549,10 +5549,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `keep_at_least_one_backup`<sup>Optional</sup> <a name="keep_at_least_one_backup" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule.property.keepAtLeastOneBackup"></a>
 
 ```python
-keep_at_least_one_backup: typing.Union[bool, IResolvable]
+keep_at_least_one_backup: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the service keep at least one backup, regardless of age of backup. Defaults to `false`.
 
@@ -5596,13 +5596,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import linux_function_app
 
 linuxFunctionApp.LinuxFunctionAppConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   name: str,
   resource_group_name: str,
@@ -5612,33 +5612,33 @@ linuxFunctionApp.LinuxFunctionAppConfig(
   auth_settings: LinuxFunctionAppAuthSettings = None,
   auth_settings_v2: LinuxFunctionAppAuthSettingsV2 = None,
   backup: LinuxFunctionAppBackup = None,
-  builtin_logging_enabled: typing.Union[bool, IResolvable] = None,
-  client_certificate_enabled: typing.Union[bool, IResolvable] = None,
+  builtin_logging_enabled: bool | IResolvable = None,
+  client_certificate_enabled: bool | IResolvable = None,
   client_certificate_exclusion_paths: str = None,
   client_certificate_mode: str = None,
-  connection_string: typing.Union[IResolvable, typing.List[LinuxFunctionAppConnectionString]] = None,
-  content_share_force_disabled: typing.Union[bool, IResolvable] = None,
+  connection_string: IResolvable | typing.List[LinuxFunctionAppConnectionString] = None,
+  content_share_force_disabled: bool | IResolvable = None,
   daily_memory_time_quota: typing.Union[int, float] = None,
-  enabled: typing.Union[bool, IResolvable] = None,
-  ftp_publish_basic_authentication_enabled: typing.Union[bool, IResolvable] = None,
+  enabled: bool | IResolvable = None,
+  ftp_publish_basic_authentication_enabled: bool | IResolvable = None,
   functions_extension_version: str = None,
-  https_only: typing.Union[bool, IResolvable] = None,
+  https_only: bool | IResolvable = None,
   id: str = None,
   identity: LinuxFunctionAppIdentity = None,
   key_vault_reference_identity_id: str = None,
-  public_network_access_enabled: typing.Union[bool, IResolvable] = None,
+  public_network_access_enabled: bool | IResolvable = None,
   sticky_settings: LinuxFunctionAppStickySettings = None,
-  storage_account: typing.Union[IResolvable, typing.List[LinuxFunctionAppStorageAccount]] = None,
+  storage_account: IResolvable | typing.List[LinuxFunctionAppStorageAccount] = None,
   storage_account_access_key: str = None,
   storage_account_name: str = None,
   storage_key_vault_secret_id: str = None,
-  storage_uses_managed_identity: typing.Union[bool, IResolvable] = None,
+  storage_uses_managed_identity: bool | IResolvable = None,
   tags: typing.Mapping[str] = None,
   timeouts: LinuxFunctionAppTimeouts = None,
-  virtual_network_backup_restore_enabled: typing.Union[bool, IResolvable] = None,
+  virtual_network_backup_restore_enabled: bool | IResolvable = None,
   virtual_network_subnet_id: str = None,
-  vnet_image_pull_enabled: typing.Union[bool, IResolvable] = None,
-  webdeploy_publish_basic_authentication_enabled: typing.Union[bool, IResolvable] = None,
+  vnet_image_pull_enabled: bool | IResolvable = None,
+  webdeploy_publish_basic_authentication_enabled: bool | IResolvable = None,
   zip_deploy_file: str = None
 )
 ```
@@ -5647,13 +5647,13 @@ linuxFunctionApp.LinuxFunctionAppConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#location LinuxFunctionApp#location}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.name">name</a></code> | <code>str</code> | Specifies the name of the Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#resource_group_name LinuxFunctionApp#resource_group_name}. |
@@ -5663,33 +5663,33 @@ linuxFunctionApp.LinuxFunctionAppConfig(
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.authSettings">auth_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings">LinuxFunctionAppAuthSettings</a></code> | auth_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.authSettingsV2">auth_settings_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2">LinuxFunctionAppAuthSettingsV2</a></code> | auth_settings_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.backup">backup</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup">LinuxFunctionAppBackup</a></code> | backup block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.builtinLoggingEnabled">builtin_logging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should built in logging be enabled. Configures `AzureWebJobsDashboard` app setting based on the configured storage setting. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the function app use Client Certificates. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.builtinLoggingEnabled">builtin_logging_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should built in logging be enabled. Configures `AzureWebJobsDashboard` app setting based on the configured storage setting. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the function app use Client Certificates. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.clientCertificateExclusionPaths">client_certificate_exclusion_paths</a></code> | <code>str</code> | Paths to exclude when using client certificates, separated by ; |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | The mode of the Function App's client certificates requirement for incoming requests. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.connectionString">connection_string</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]]</code> | connection_string block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.contentShareForceDisabled">content_share_force_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Force disable the content share settings. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.connectionString">connection_string</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]</code> | connection_string block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.contentShareForceDisabled">content_share_force_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Force disable the content share settings. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.dailyMemoryTimeQuota">daily_memory_time_quota</a></code> | <code>typing.Union[int, float]</code> | The amount of memory in gigabyte-seconds that your application is allowed to consume per day. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Is the Linux Function App enabled. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.ftpPublishBasicAuthenticationEnabled">ftp_publish_basic_authentication_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#ftp_publish_basic_authentication_enabled LinuxFunctionApp#ftp_publish_basic_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Is the Linux Function App enabled. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.ftpPublishBasicAuthenticationEnabled">ftp_publish_basic_authentication_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#ftp_publish_basic_authentication_enabled LinuxFunctionApp#ftp_publish_basic_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.functionsExtensionVersion">functions_extension_version</a></code> | <code>str</code> | The runtime version associated with the Function App. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.httpsOnly">https_only</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Can the Function App only be accessed via HTTPS? |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.httpsOnly">https_only</a></code> | <code>bool \| cdktf.IResolvable</code> | Can the Function App only be accessed via HTTPS? |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#id LinuxFunctionApp#id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppIdentity">LinuxFunctionAppIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.keyVaultReferenceIdentityId">key_vault_reference_identity_id</a></code> | <code>str</code> | The User Assigned Identity to use for Key Vault access. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#public_network_access_enabled LinuxFunctionApp#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#public_network_access_enabled LinuxFunctionApp#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.stickySettings">sticky_settings</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStickySettings">LinuxFunctionAppStickySettings</a></code> | sticky_settings block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageAccount">storage_account</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]]</code> | storage_account block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageAccount">storage_account</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]</code> | storage_account block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageAccountAccessKey">storage_account_access_key</a></code> | <code>str</code> | The access key which will be used to access the storage account for the Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageAccountName">storage_account_name</a></code> | <code>str</code> | The backend storage account name which will be used by this Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageKeyVaultSecretId">storage_key_vault_secret_id</a></code> | <code>str</code> | The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageUsesManagedIdentity">storage_uses_managed_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Function App use its Managed Identity to access storage? |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageUsesManagedIdentity">storage_uses_managed_identity</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Function App use its Managed Identity to access storage? |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#tags LinuxFunctionApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.virtualNetworkBackupRestoreEnabled">virtual_network_backup_restore_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#virtual_network_backup_restore_enabled LinuxFunctionApp#virtual_network_backup_restore_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.virtualNetworkBackupRestoreEnabled">virtual_network_backup_restore_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#virtual_network_backup_restore_enabled LinuxFunctionApp#virtual_network_backup_restore_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#virtual_network_subnet_id LinuxFunctionApp#virtual_network_subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.vnetImagePullEnabled">vnet_image_pull_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Is container image pull over virtual network enabled? Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#webdeploy_publish_basic_authentication_enabled LinuxFunctionApp#webdeploy_publish_basic_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.vnetImagePullEnabled">vnet_image_pull_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Is container image pull over virtual network enabled? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.webdeployPublishBasicAuthenticationEnabled">webdeploy_publish_basic_authentication_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#webdeploy_publish_basic_authentication_enabled LinuxFunctionApp#webdeploy_publish_basic_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.zipDeployFile">zip_deploy_file</a></code> | <code>str</code> | The local path and filename of the Zip packaged application to deploy to this Linux Function App. |
 
 ---
@@ -5697,20 +5697,20 @@ linuxFunctionApp.LinuxFunctionAppConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -5757,10 +5757,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -5889,10 +5889,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `builtin_logging_enabled`<sup>Optional</sup> <a name="builtin_logging_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.builtinLoggingEnabled"></a>
 
 ```python
-builtin_logging_enabled: typing.Union[bool, IResolvable]
+builtin_logging_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should built in logging be enabled. Configures `AzureWebJobsDashboard` app setting based on the configured storage setting.
 
@@ -5903,10 +5903,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `client_certificate_enabled`<sup>Optional</sup> <a name="client_certificate_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.clientCertificateEnabled"></a>
 
 ```python
-client_certificate_enabled: typing.Union[bool, IResolvable]
+client_certificate_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the function app use Client Certificates.
 
@@ -5947,10 +5947,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `connection_string`<sup>Optional</sup> <a name="connection_string" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.connectionString"></a>
 
 ```python
-connection_string: typing.Union[IResolvable, typing.List[LinuxFunctionAppConnectionString]]
+connection_string: IResolvable | typing.List[LinuxFunctionAppConnectionString]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]
 
 connection_string block.
 
@@ -5961,10 +5961,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `content_share_force_disabled`<sup>Optional</sup> <a name="content_share_force_disabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.contentShareForceDisabled"></a>
 
 ```python
-content_share_force_disabled: typing.Union[bool, IResolvable]
+content_share_force_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Force disable the content share settings.
 
@@ -5991,10 +5991,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enabled`<sup>Optional</sup> <a name="enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Is the Linux Function App enabled.
 
@@ -6005,10 +6005,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ftp_publish_basic_authentication_enabled`<sup>Optional</sup> <a name="ftp_publish_basic_authentication_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.ftpPublishBasicAuthenticationEnabled"></a>
 
 ```python
-ftp_publish_basic_authentication_enabled: typing.Union[bool, IResolvable]
+ftp_publish_basic_authentication_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#ftp_publish_basic_authentication_enabled LinuxFunctionApp#ftp_publish_basic_authentication_enabled}.
 
@@ -6031,10 +6031,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `https_only`<sup>Optional</sup> <a name="https_only" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.httpsOnly"></a>
 
 ```python
-https_only: typing.Union[bool, IResolvable]
+https_only: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Can the Function App only be accessed via HTTPS?
 
@@ -6088,10 +6088,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `public_network_access_enabled`<sup>Optional</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.publicNetworkAccessEnabled"></a>
 
 ```python
-public_network_access_enabled: typing.Union[bool, IResolvable]
+public_network_access_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#public_network_access_enabled LinuxFunctionApp#public_network_access_enabled}.
 
@@ -6114,10 +6114,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `storage_account`<sup>Optional</sup> <a name="storage_account" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageAccount"></a>
 
 ```python
-storage_account: typing.Union[IResolvable, typing.List[LinuxFunctionAppStorageAccount]]
+storage_account: IResolvable | typing.List[LinuxFunctionAppStorageAccount]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]
 
 storage_account block.
 
@@ -6170,10 +6170,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `storage_uses_managed_identity`<sup>Optional</sup> <a name="storage_uses_managed_identity" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.storageUsesManagedIdentity"></a>
 
 ```python
-storage_uses_managed_identity: typing.Union[bool, IResolvable]
+storage_uses_managed_identity: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Function App use its Managed Identity to access storage?
 
@@ -6210,10 +6210,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `virtual_network_backup_restore_enabled`<sup>Optional</sup> <a name="virtual_network_backup_restore_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.virtualNetworkBackupRestoreEnabled"></a>
 
 ```python
-virtual_network_backup_restore_enabled: typing.Union[bool, IResolvable]
+virtual_network_backup_restore_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#virtual_network_backup_restore_enabled LinuxFunctionApp#virtual_network_backup_restore_enabled}.
 
@@ -6234,10 +6234,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `vnet_image_pull_enabled`<sup>Optional</sup> <a name="vnet_image_pull_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.vnetImagePullEnabled"></a>
 
 ```python
-vnet_image_pull_enabled: typing.Union[bool, IResolvable]
+vnet_image_pull_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Is container image pull over virtual network enabled? Defaults to `false`.
 
@@ -6248,10 +6248,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `webdeploy_publish_basic_authentication_enabled`<sup>Optional</sup> <a name="webdeploy_publish_basic_authentication_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConfig.property.webdeployPublishBasicAuthenticationEnabled"></a>
 
 ```python
-webdeploy_publish_basic_authentication_enabled: typing.Union[bool, IResolvable]
+webdeploy_publish_basic_authentication_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#webdeploy_publish_basic_authentication_enabled LinuxFunctionApp#webdeploy_publish_basic_authentication_enabled}.
 
@@ -6393,7 +6393,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import linux_function_app
 
 linuxFunctionApp.LinuxFunctionAppSiteConfig(
-  always_on: typing.Union[bool, IResolvable] = None,
+  always_on: bool | IResolvable = None,
   api_definition_url: str = None,
   api_management_api_id: str = None,
   app_command_line: str = None,
@@ -6403,30 +6403,30 @@ linuxFunctionApp.LinuxFunctionAppSiteConfig(
   app_scale_limit: typing.Union[int, float] = None,
   app_service_logs: LinuxFunctionAppSiteConfigAppServiceLogs = None,
   container_registry_managed_identity_client_id: str = None,
-  container_registry_use_managed_identity: typing.Union[bool, IResolvable] = None,
+  container_registry_use_managed_identity: bool | IResolvable = None,
   cors: LinuxFunctionAppSiteConfigCors = None,
   default_documents: typing.List[str] = None,
   elastic_instance_minimum: typing.Union[int, float] = None,
   ftps_state: str = None,
   health_check_eviction_time_in_min: typing.Union[int, float] = None,
   health_check_path: str = None,
-  http2_enabled: typing.Union[bool, IResolvable] = None,
-  ip_restriction: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigIpRestriction]] = None,
+  http2_enabled: bool | IResolvable = None,
+  ip_restriction: IResolvable | typing.List[LinuxFunctionAppSiteConfigIpRestriction] = None,
   ip_restriction_default_action: str = None,
   load_balancing_mode: str = None,
   managed_pipeline_mode: str = None,
   minimum_tls_version: str = None,
   pre_warmed_instance_count: typing.Union[int, float] = None,
-  remote_debugging_enabled: typing.Union[bool, IResolvable] = None,
+  remote_debugging_enabled: bool | IResolvable = None,
   remote_debugging_version: str = None,
-  runtime_scale_monitoring_enabled: typing.Union[bool, IResolvable] = None,
-  scm_ip_restriction: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigScmIpRestriction]] = None,
+  runtime_scale_monitoring_enabled: bool | IResolvable = None,
+  scm_ip_restriction: IResolvable | typing.List[LinuxFunctionAppSiteConfigScmIpRestriction] = None,
   scm_ip_restriction_default_action: str = None,
   scm_minimum_tls_version: str = None,
-  scm_use_main_ip_restriction: typing.Union[bool, IResolvable] = None,
-  use32_bit_worker: typing.Union[bool, IResolvable] = None,
-  vnet_route_all_enabled: typing.Union[bool, IResolvable] = None,
-  websockets_enabled: typing.Union[bool, IResolvable] = None,
+  scm_use_main_ip_restriction: bool | IResolvable = None,
+  use32_bit_worker: bool | IResolvable = None,
+  vnet_route_all_enabled: bool | IResolvable = None,
+  websockets_enabled: bool | IResolvable = None,
   worker_count: typing.Union[int, float] = None
 )
 ```
@@ -6435,7 +6435,7 @@ linuxFunctionApp.LinuxFunctionAppSiteConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.alwaysOn">always_on</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | If this Linux Web App is Always On enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.alwaysOn">always_on</a></code> | <code>bool \| cdktf.IResolvable</code> | If this Linux Web App is Always On enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.apiDefinitionUrl">api_definition_url</a></code> | <code>str</code> | The URL of the API definition that describes this Linux Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.apiManagementApiId">api_management_api_id</a></code> | <code>str</code> | The ID of the API Management API for this Linux Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.appCommandLine">app_command_line</a></code> | <code>str</code> | The program and any arguments used to launch this app via the command line. (Example `node myapp.js`). |
@@ -6445,30 +6445,30 @@ linuxFunctionApp.LinuxFunctionAppSiteConfig(
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.appScaleLimit">app_scale_limit</a></code> | <code>typing.Union[int, float]</code> | The number of workers this function app can scale out to. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.appServiceLogs">app_service_logs</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigAppServiceLogs">LinuxFunctionAppSiteConfigAppServiceLogs</a></code> | app_service_logs block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.containerRegistryManagedIdentityClientId">container_registry_managed_identity_client_id</a></code> | <code>str</code> | The Client ID of the Managed Service Identity to use for connections to the Azure Container Registry. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should connections for Azure Container Registry use Managed Identity. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>bool \| cdktf.IResolvable</code> | Should connections for Azure Container Registry use Managed Identity. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.cors">cors</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCors">LinuxFunctionAppSiteConfigCors</a></code> | cors block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.defaultDocuments">default_documents</a></code> | <code>typing.List[str]</code> | Specifies a list of Default Documents for the Linux Web App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.elasticInstanceMinimum">elastic_instance_minimum</a></code> | <code>typing.Union[int, float]</code> | The number of minimum instances for this Linux Function App. Only affects apps on Elastic Premium plans. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.ftpsState">ftps_state</a></code> | <code>str</code> | State of FTP / FTPS service for this function app. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.healthCheckEvictionTimeInMin">health_check_eviction_time_in_min</a></code> | <code>typing.Union[int, float]</code> | The amount of time in minutes that a node is unhealthy before being removed from the load balancer. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.healthCheckPath">health_check_path</a></code> | <code>str</code> | The path to be checked for this function app health. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.http2Enabled">http2_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Specifies if the http2 protocol should be enabled. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.ipRestriction">ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]]</code> | ip_restriction block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.http2Enabled">http2_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Specifies if the http2 protocol should be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.ipRestriction">ip_restriction</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]</code> | ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.ipRestrictionDefaultAction">ip_restriction_default_action</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#ip_restriction_default_action LinuxFunctionApp#ip_restriction_default_action}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.loadBalancingMode">load_balancing_mode</a></code> | <code>str</code> | The Site load balancing mode. Possible values include: `WeightedRoundRobin`, `LeastRequests`, `LeastResponseTime`, `WeightedTotalTraffic`, `RequestHash`, `PerSiteRoundRobin`. Defaults to `LeastRequests` if omitted. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.managedPipelineMode">managed_pipeline_mode</a></code> | <code>str</code> | The Managed Pipeline mode. Possible values include: `Integrated`, `Classic`. Defaults to `Integrated`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.minimumTlsVersion">minimum_tls_version</a></code> | <code>str</code> | The configures the minimum version of TLS required for SSL requests. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.preWarmedInstanceCount">pre_warmed_instance_count</a></code> | <code>typing.Union[int, float]</code> | The number of pre-warmed instances for this function app. Only affects apps on an Elastic Premium plan. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should Remote Debugging be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should Remote Debugging be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.remoteDebuggingVersion">remote_debugging_version</a></code> | <code>str</code> | The Remote Debugging Version. Currently only `VS2022` is supported. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.runtimeScaleMonitoringEnabled">runtime_scale_monitoring_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should Functions Runtime Scale Monitoring be enabled. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.scmIpRestriction">scm_ip_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]]</code> | scm_ip_restriction block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.runtimeScaleMonitoringEnabled">runtime_scale_monitoring_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should Functions Runtime Scale Monitoring be enabled. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.scmIpRestriction">scm_ip_restriction</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]</code> | scm_ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.scmIpRestrictionDefaultAction">scm_ip_restriction_default_action</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#scm_ip_restriction_default_action LinuxFunctionApp#scm_ip_restriction_default_action}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.scmMinimumTlsVersion">scm_minimum_tls_version</a></code> | <code>str</code> | Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, `1.2` and  `1.3`. Defaults to `1.2`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Linux Function App `ip_restriction` configuration be used for the SCM also. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.use32BitWorker">use32_bit_worker</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the Linux Web App use a 32-bit worker. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.vnetRouteAllEnabled">vnet_route_all_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.websocketsEnabled">websockets_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should Web Sockets be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Linux Function App `ip_restriction` configuration be used for the SCM also. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.use32BitWorker">use32_bit_worker</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the Linux Web App use a 32-bit worker. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.vnetRouteAllEnabled">vnet_route_all_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.websocketsEnabled">websockets_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Should Web Sockets be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.workerCount">worker_count</a></code> | <code>typing.Union[int, float]</code> | The number of Workers for this Linux Function App. |
 
 ---
@@ -6476,10 +6476,10 @@ linuxFunctionApp.LinuxFunctionAppSiteConfig(
 ##### `always_on`<sup>Optional</sup> <a name="always_on" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.alwaysOn"></a>
 
 ```python
-always_on: typing.Union[bool, IResolvable]
+always_on: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 If this Linux Web App is Always On enabled. Defaults to `false`.
 
@@ -6618,10 +6618,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `container_registry_use_managed_identity`<sup>Optional</sup> <a name="container_registry_use_managed_identity" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.containerRegistryUseManagedIdentity"></a>
 
 ```python
-container_registry_use_managed_identity: typing.Union[bool, IResolvable]
+container_registry_use_managed_identity: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should connections for Azure Container Registry use Managed Identity.
 
@@ -6720,10 +6720,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `http2_enabled`<sup>Optional</sup> <a name="http2_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.http2Enabled"></a>
 
 ```python
-http2_enabled: typing.Union[bool, IResolvable]
+http2_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Specifies if the http2 protocol should be enabled. Defaults to `false`.
 
@@ -6734,10 +6734,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ip_restriction`<sup>Optional</sup> <a name="ip_restriction" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.ipRestriction"></a>
 
 ```python
-ip_restriction: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigIpRestriction]]
+ip_restriction: IResolvable | typing.List[LinuxFunctionAppSiteConfigIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]
 
 ip_restriction block.
 
@@ -6818,10 +6818,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `remote_debugging_enabled`<sup>Optional</sup> <a name="remote_debugging_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.remoteDebuggingEnabled"></a>
 
 ```python
-remote_debugging_enabled: typing.Union[bool, IResolvable]
+remote_debugging_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Remote Debugging be enabled. Defaults to `false`.
 
@@ -6846,10 +6846,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `runtime_scale_monitoring_enabled`<sup>Optional</sup> <a name="runtime_scale_monitoring_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.runtimeScaleMonitoringEnabled"></a>
 
 ```python
-runtime_scale_monitoring_enabled: typing.Union[bool, IResolvable]
+runtime_scale_monitoring_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Functions Runtime Scale Monitoring be enabled.
 
@@ -6860,10 +6860,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `scm_ip_restriction`<sup>Optional</sup> <a name="scm_ip_restriction" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.scmIpRestriction"></a>
 
 ```python
-scm_ip_restriction: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigScmIpRestriction]]
+scm_ip_restriction: IResolvable | typing.List[LinuxFunctionAppSiteConfigScmIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]
 
 scm_ip_restriction block.
 
@@ -6900,10 +6900,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `scm_use_main_ip_restriction`<sup>Optional</sup> <a name="scm_use_main_ip_restriction" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.scmUseMainIpRestriction"></a>
 
 ```python
-scm_use_main_ip_restriction: typing.Union[bool, IResolvable]
+scm_use_main_ip_restriction: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Linux Function App `ip_restriction` configuration be used for the SCM also.
 
@@ -6914,10 +6914,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `use32_bit_worker`<sup>Optional</sup> <a name="use32_bit_worker" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.use32BitWorker"></a>
 
 ```python
-use32_bit_worker: typing.Union[bool, IResolvable]
+use32_bit_worker: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Linux Web App use a 32-bit worker.
 
@@ -6928,10 +6928,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `vnet_route_all_enabled`<sup>Optional</sup> <a name="vnet_route_all_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.vnetRouteAllEnabled"></a>
 
 ```python
-vnet_route_all_enabled: typing.Union[bool, IResolvable]
+vnet_route_all_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 
@@ -6942,10 +6942,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `websockets_enabled`<sup>Optional</sup> <a name="websockets_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig.property.websocketsEnabled"></a>
 
 ```python
-websockets_enabled: typing.Union[bool, IResolvable]
+websockets_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should Web Sockets be enabled. Defaults to `false`.
 
@@ -6975,14 +6975,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import linux_function_app
 
 linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack(
-  docker: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker]] = None,
+  docker: IResolvable | typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker] = None,
   dotnet_version: str = None,
   java_version: str = None,
   node_version: str = None,
   powershell_core_version: str = None,
   python_version: str = None,
-  use_custom_runtime: typing.Union[bool, IResolvable] = None,
-  use_dotnet_isolated_runtime: typing.Union[bool, IResolvable] = None
+  use_custom_runtime: bool | IResolvable = None,
+  use_dotnet_isolated_runtime: bool | IResolvable = None
 )
 ```
 
@@ -6990,24 +6990,24 @@ linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.docker">docker</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]]</code> | docker block. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.docker">docker</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]</code> | docker block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.dotnetVersion">dotnet_version</a></code> | <code>str</code> | The version of .Net. Possible values are `3.1`, `6.0`, `7.0`, `8.0` and `9.0`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.javaVersion">java_version</a></code> | <code>str</code> | The version of Java to use. Possible values are `8`, `11`, `17`, and `21`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.nodeVersion">node_version</a></code> | <code>str</code> | The version of Node to use. Possible values include `12`, `14`, `16`, `18`, `20` and `22`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.powershellCoreVersion">powershell_core_version</a></code> | <code>str</code> | The version of PowerShell Core to use. Possibles values are `7`, `7.2`, and `7.4`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.pythonVersion">python_version</a></code> | <code>str</code> | The version of Python to use. Possible values include `3.13`, `3.12`, `3.11`, `3.10`, `3.9`, `3.8`, and `3.7`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.useCustomRuntime">use_custom_runtime</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#use_custom_runtime LinuxFunctionApp#use_custom_runtime}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.useDotnetIsolatedRuntime">use_dotnet_isolated_runtime</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should the DotNet process use an isolated runtime. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.useCustomRuntime">use_custom_runtime</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#use_custom_runtime LinuxFunctionApp#use_custom_runtime}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.useDotnetIsolatedRuntime">use_dotnet_isolated_runtime</a></code> | <code>bool \| cdktf.IResolvable</code> | Should the DotNet process use an isolated runtime. Defaults to `false`. |
 
 ---
 
 ##### `docker`<sup>Optional</sup> <a name="docker" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.docker"></a>
 
 ```python
-docker: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker]]
+docker: IResolvable | typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]
 
 docker block.
 
@@ -7088,10 +7088,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `use_custom_runtime`<sup>Optional</sup> <a name="use_custom_runtime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.useCustomRuntime"></a>
 
 ```python
-use_custom_runtime: typing.Union[bool, IResolvable]
+use_custom_runtime: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#use_custom_runtime LinuxFunctionApp#use_custom_runtime}.
 
@@ -7100,10 +7100,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `use_dotnet_isolated_runtime`<sup>Optional</sup> <a name="use_dotnet_isolated_runtime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack.property.useDotnetIsolatedRuntime"></a>
 
 ```python
-use_dotnet_isolated_runtime: typing.Union[bool, IResolvable]
+use_dotnet_isolated_runtime: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the DotNet process use an isolated runtime. Defaults to `false`.
 
@@ -7268,7 +7268,7 @@ from cdktf_cdktf_provider_azurerm import linux_function_app
 
 linuxFunctionApp.LinuxFunctionAppSiteConfigCors(
   allowed_origins: typing.List[str] = None,
-  support_credentials: typing.Union[bool, IResolvable] = None
+  support_credentials: bool | IResolvable = None
 )
 ```
 
@@ -7277,7 +7277,7 @@ linuxFunctionApp.LinuxFunctionAppSiteConfigCors(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCors.property.allowedOrigins">allowed_origins</a></code> | <code>typing.List[str]</code> | Specifies a list of origins that should be allowed to make cross-origin calls. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCors.property.supportCredentials">support_credentials</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Are credentials allowed in CORS requests? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCors.property.supportCredentials">support_credentials</a></code> | <code>bool \| cdktf.IResolvable</code> | Are credentials allowed in CORS requests? Defaults to `false`. |
 
 ---
 
@@ -7298,10 +7298,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `support_credentials`<sup>Optional</sup> <a name="support_credentials" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCors.property.supportCredentials"></a>
 
 ```python
-support_credentials: typing.Union[bool, IResolvable]
+support_credentials: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Are credentials allowed in CORS requests? Defaults to `false`.
 
@@ -7319,7 +7319,7 @@ from cdktf_cdktf_provider_azurerm import linux_function_app
 linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction(
   action: str = None,
   description: str = None,
-  headers: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigIpRestrictionHeaders]] = None,
+  headers: IResolvable | typing.List[LinuxFunctionAppSiteConfigIpRestrictionHeaders] = None,
   ip_address: str = None,
   name: str = None,
   priority: typing.Union[int, float] = None,
@@ -7334,7 +7334,7 @@ linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.action">action</a></code> | <code>str</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.description">description</a></code> | <code>str</code> | The description of the IP restriction rule. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.headers">headers</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.name">name</a></code> | <code>str</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | The priority value of this `ip_restriction`. |
@@ -7374,10 +7374,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `headers`<sup>Optional</sup> <a name="headers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction.property.headers"></a>
 
 ```python
-headers: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigIpRestrictionHeaders]]
+headers: IResolvable | typing.List[LinuxFunctionAppSiteConfigIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}.
 
@@ -7539,7 +7539,7 @@ from cdktf_cdktf_provider_azurerm import linux_function_app
 linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction(
   action: str = None,
   description: str = None,
-  headers: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigScmIpRestrictionHeaders]] = None,
+  headers: IResolvable | typing.List[LinuxFunctionAppSiteConfigScmIpRestrictionHeaders] = None,
   ip_address: str = None,
   name: str = None,
   priority: typing.Union[int, float] = None,
@@ -7554,7 +7554,7 @@ linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.action">action</a></code> | <code>str</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.description">description</a></code> | <code>str</code> | The description of the IP restriction rule. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.ipAddress">ip_address</a></code> | <code>str</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.name">name</a></code> | <code>str</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | The priority value of this `ip_restriction`. |
@@ -7594,10 +7594,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `headers`<sup>Optional</sup> <a name="headers" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction.property.headers"></a>
 
 ```python
-headers: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigScmIpRestrictionHeaders]]
+headers: IResolvable | typing.List[LinuxFunctionAppSiteConfigScmIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#headers LinuxFunctionApp#headers}.
 
@@ -10543,7 +10543,7 @@ def reset_unauthenticated_client_action() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.additionalLoginParametersInput">additional_login_parameters_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.allowedExternalRedirectUrlsInput">allowed_external_redirect_urls_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.defaultProviderInput">default_provider_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.facebookInput">facebook_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsFacebook">LinuxFunctionAppAuthSettingsFacebook</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.githubInput">github_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsGithub">LinuxFunctionAppAuthSettingsGithub</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.googleInput">google_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsGoogle">LinuxFunctionAppAuthSettingsGoogle</a></code> | *No description.* |
@@ -10551,17 +10551,17 @@ def reset_unauthenticated_client_action() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.microsoftInput">microsoft_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsMicrosoft">LinuxFunctionAppAuthSettingsMicrosoft</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.runtimeVersionInput">runtime_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.tokenRefreshExtensionHoursInput">token_refresh_extension_hours_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.tokenStoreEnabledInput">token_store_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.tokenStoreEnabledInput">token_store_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.twitterInput">twitter_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsTwitter">LinuxFunctionAppAuthSettingsTwitter</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.unauthenticatedClientActionInput">unauthenticated_client_action_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.additionalLoginParameters">additional_login_parameters</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.allowedExternalRedirectUrls">allowed_external_redirect_urls</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.defaultProvider">default_provider</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.issuer">issuer</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.runtimeVersion">runtime_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.tokenRefreshExtensionHours">token_refresh_extension_hours</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.unauthenticatedClientAction">unauthenticated_client_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettings">LinuxFunctionAppAuthSettings</a></code> | *No description.* |
 
@@ -10694,10 +10694,10 @@ default_provider_input: str
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10774,10 +10774,10 @@ token_refresh_extension_hours_input: typing.Union[int, float]
 ##### `token_store_enabled_input`<sup>Optional</sup> <a name="token_store_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.tokenStoreEnabledInput"></a>
 
 ```python
-token_store_enabled_input: typing.Union[bool, IResolvable]
+token_store_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10834,10 +10834,10 @@ default_provider: str
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10874,10 +10874,10 @@ token_refresh_extension_hours: typing.Union[int, float]
 ##### `token_store_enabled`<sup>Required</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsOutputReference.property.tokenStoreEnabled"></a>
 
 ```python
-token_store_enabled: typing.Union[bool, IResolvable]
+token_store_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11572,7 +11572,7 @@ def reset_www_authentication_disabled() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroupsInput">jwt_allowed_groups_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParametersInput">login_parameters_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpointInput">tenant_auth_endpoint_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput">www_authentication_disabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput">www_authentication_disabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplications">allowed_applications</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiences">allowed_audiences</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroups">allowed_groups</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -11584,7 +11584,7 @@ def reset_www_authentication_disabled() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroups">jwt_allowed_groups</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParameters">login_parameters</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpoint">tenant_auth_endpoint</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled">www_authentication_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled">www_authentication_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
 
 ---
@@ -11726,10 +11726,10 @@ tenant_auth_endpoint_input: str
 ##### `www_authentication_disabled_input`<sup>Optional</sup> <a name="www_authentication_disabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput"></a>
 
 ```python
-www_authentication_disabled_input: typing.Union[bool, IResolvable]
+www_authentication_disabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11846,10 +11846,10 @@ tenant_auth_endpoint: str
 ##### `www_authentication_disabled`<sup>Required</sup> <a name="www_authentication_disabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled"></a>
 
 ```python
-www_authentication_disabled: typing.Union[bool, IResolvable]
+www_authentication_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12620,7 +12620,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]</code> | *No description.* |
 
 ---
 
@@ -12651,10 +12651,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2List.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2]]
+internal_value: IResolvable | typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]
 
 ---
 
@@ -12944,7 +12944,7 @@ def reset_scopes() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType">name_claim_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint">openid_configuration_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.scopes">scopes</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a></code> | *No description.* |
 
 ---
 
@@ -13135,10 +13135,10 @@ scopes: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2OutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, LinuxFunctionAppAuthSettingsV2CustomOidcV2]
+internal_value: IResolvable | LinuxFunctionAppAuthSettingsV2CustomOidcV2
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>
 
 ---
 
@@ -14559,23 +14559,23 @@ def reset_validate_nonce() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTimeInput">cookie_expiration_time_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.logoutEndpointInput">logout_endpoint_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTimeInput">nonce_expiration_time_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput">preserve_url_fragments_for_logins_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput">preserve_url_fragments_for_logins_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTimeInput">token_refresh_extension_time_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput">token_store_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput">token_store_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStorePathInput">token_store_path_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingNameInput">token_store_sas_setting_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonceInput">validate_nonce_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonceInput">validate_nonce_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrls">allowed_external_redirect_urls</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationConvention">cookie_expiration_convention</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.cookieExpirationTime">cookie_expiration_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.logoutEndpoint">logout_endpoint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.nonceExpirationTime">nonce_expiration_time</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins">preserve_url_fragments_for_logins</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins">preserve_url_fragments_for_logins</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTime">token_refresh_extension_time</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled">token_store_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStorePath">token_store_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingName">token_store_sas_setting_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonce">validate_nonce</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonce">validate_nonce</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login">LinuxFunctionAppAuthSettingsV2Login</a></code> | *No description.* |
 
 ---
@@ -14657,10 +14657,10 @@ nonce_expiration_time_input: str
 ##### `preserve_url_fragments_for_logins_input`<sup>Optional</sup> <a name="preserve_url_fragments_for_logins_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput"></a>
 
 ```python
-preserve_url_fragments_for_logins_input: typing.Union[bool, IResolvable]
+preserve_url_fragments_for_logins_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14677,10 +14677,10 @@ token_refresh_extension_time_input: typing.Union[int, float]
 ##### `token_store_enabled_input`<sup>Optional</sup> <a name="token_store_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput"></a>
 
 ```python
-token_store_enabled_input: typing.Union[bool, IResolvable]
+token_store_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14707,10 +14707,10 @@ token_store_sas_setting_name_input: str
 ##### `validate_nonce_input`<sup>Optional</sup> <a name="validate_nonce_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonceInput"></a>
 
 ```python
-validate_nonce_input: typing.Union[bool, IResolvable]
+validate_nonce_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14767,10 +14767,10 @@ nonce_expiration_time: str
 ##### `preserve_url_fragments_for_logins`<sup>Required</sup> <a name="preserve_url_fragments_for_logins" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins"></a>
 
 ```python
-preserve_url_fragments_for_logins: typing.Union[bool, IResolvable]
+preserve_url_fragments_for_logins: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14787,10 +14787,10 @@ token_refresh_extension_time: typing.Union[int, float]
 ##### `token_store_enabled`<sup>Required</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled"></a>
 
 ```python
-token_store_enabled: typing.Union[bool, IResolvable]
+token_store_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14817,10 +14817,10 @@ token_store_sas_setting_name: str
 ##### `validate_nonce`<sup>Required</sup> <a name="validate_nonce" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2LoginOutputReference.property.validateNonce"></a>
 
 ```python
-validate_nonce: typing.Union[bool, IResolvable]
+validate_nonce: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -15485,7 +15485,7 @@ def put_active_directory_v2(
   jwt_allowed_client_applications: typing.List[str] = None,
   jwt_allowed_groups: typing.List[str] = None,
   login_parameters: typing.Mapping[str] = None,
-  www_authentication_disabled: typing.Union[bool, IResolvable] = None
+  www_authentication_disabled: bool | IResolvable = None
 ) -> None
 ```
 
@@ -15601,7 +15601,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `www_authentication_disabled`<sup>Optional</sup> <a name="www_authentication_disabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putActiveDirectoryV2.parameter.wwwAuthenticationDisabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
 
@@ -15660,13 +15660,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_custom_oidc_v2(
-  value: typing.Union[IResolvable, typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2]]
+  value: IResolvable | typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putCustomOidcV2.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]
 
 ---
 
@@ -15821,12 +15821,12 @@ def put_login(
   cookie_expiration_time: str = None,
   logout_endpoint: str = None,
   nonce_expiration_time: str = None,
-  preserve_url_fragments_for_logins: typing.Union[bool, IResolvable] = None,
+  preserve_url_fragments_for_logins: bool | IResolvable = None,
   token_refresh_extension_time: typing.Union[int, float] = None,
-  token_store_enabled: typing.Union[bool, IResolvable] = None,
+  token_store_enabled: bool | IResolvable = None,
   token_store_path: str = None,
   token_store_sas_setting_name: str = None,
-  validate_nonce: typing.Union[bool, IResolvable] = None
+  validate_nonce: bool | IResolvable = None
 ) -> None
 ```
 
@@ -15884,7 +15884,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `preserve_url_fragments_for_logins`<sup>Optional</sup> <a name="preserve_url_fragments_for_logins" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putLogin.parameter.preserveUrlFragmentsForLogins"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
 
@@ -15906,7 +15906,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `token_store_enabled`<sup>Optional</sup> <a name="token_store_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putLogin.parameter.tokenStoreEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the Token Store configuration Enabled. Defaults to `false`.
 
@@ -15936,7 +15936,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `validate_nonce`<sup>Optional</sup> <a name="validate_nonce" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.putLogin.parameter.validateNonce"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the nonce be validated while completing the login flow. Defaults to `true`.
 
@@ -16169,10 +16169,10 @@ def reset_unauthenticated_action() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.twitterV2">twitter_v2</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference">LinuxFunctionAppAuthSettingsV2TwitterV2OutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.activeDirectoryV2Input">active_directory_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2">LinuxFunctionAppAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.appleV2Input">apple_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AppleV2">LinuxFunctionAppAuthSettingsV2AppleV2</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.authEnabledInput">auth_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.authEnabledInput">auth_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.azureStaticWebAppV2Input">azure_static_web_app_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2">LinuxFunctionAppAuthSettingsV2AzureStaticWebAppV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.configFilePathInput">config_file_path_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.customOidcV2Input">custom_oidc_v2_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.customOidcV2Input">custom_oidc_v2_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.defaultProviderInput">default_provider_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.excludedPathsInput">excluded_paths_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.facebookV2Input">facebook_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2FacebookV2">LinuxFunctionAppAuthSettingsV2FacebookV2</a></code> | *No description.* |
@@ -16184,12 +16184,12 @@ def reset_unauthenticated_action() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.httpRouteApiPrefixInput">http_route_api_prefix_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.loginInput">login_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2Login">LinuxFunctionAppAuthSettingsV2Login</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.microsoftV2Input">microsoft_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2MicrosoftV2">LinuxFunctionAppAuthSettingsV2MicrosoftV2</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireAuthenticationInput">require_authentication_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireHttpsInput">require_https_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireAuthenticationInput">require_authentication_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireHttpsInput">require_https_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.runtimeVersionInput">runtime_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.twitterV2Input">twitter_v2_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2TwitterV2">LinuxFunctionAppAuthSettingsV2TwitterV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.unauthenticatedActionInput">unauthenticated_action_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.authEnabled">auth_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.authEnabled">auth_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.configFilePath">config_file_path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.defaultProvider">default_provider</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.excludedPaths">excluded_paths</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -16197,8 +16197,8 @@ def reset_unauthenticated_action() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderName">forward_proxy_custom_host_header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderName">forward_proxy_custom_scheme_header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.httpRouteApiPrefix">http_route_api_prefix</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireAuthentication">require_authentication</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireHttps">require_https</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireAuthentication">require_authentication</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireHttps">require_https</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.runtimeVersion">runtime_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.unauthenticatedAction">unauthenticated_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2">LinuxFunctionAppAuthSettingsV2</a></code> | *No description.* |
@@ -16352,10 +16352,10 @@ apple_v2_input: LinuxFunctionAppAuthSettingsV2AppleV2
 ##### `auth_enabled_input`<sup>Optional</sup> <a name="auth_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.authEnabledInput"></a>
 
 ```python
-auth_enabled_input: typing.Union[bool, IResolvable]
+auth_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16382,10 +16382,10 @@ config_file_path_input: str
 ##### `custom_oidc_v2_input`<sup>Optional</sup> <a name="custom_oidc_v2_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.customOidcV2Input"></a>
 
 ```python
-custom_oidc_v2_input: typing.Union[IResolvable, typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2]]
+custom_oidc_v2_input: IResolvable | typing.List[LinuxFunctionAppAuthSettingsV2CustomOidcV2]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2CustomOidcV2">LinuxFunctionAppAuthSettingsV2CustomOidcV2</a>]
 
 ---
 
@@ -16502,20 +16502,20 @@ microsoft_v2_input: LinuxFunctionAppAuthSettingsV2MicrosoftV2
 ##### `require_authentication_input`<sup>Optional</sup> <a name="require_authentication_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireAuthenticationInput"></a>
 
 ```python
-require_authentication_input: typing.Union[bool, IResolvable]
+require_authentication_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `require_https_input`<sup>Optional</sup> <a name="require_https_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireHttpsInput"></a>
 
 ```python
-require_https_input: typing.Union[bool, IResolvable]
+require_https_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16552,10 +16552,10 @@ unauthenticated_action_input: str
 ##### `auth_enabled`<sup>Required</sup> <a name="auth_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.authEnabled"></a>
 
 ```python
-auth_enabled: typing.Union[bool, IResolvable]
+auth_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16632,20 +16632,20 @@ http_route_api_prefix: str
 ##### `require_authentication`<sup>Required</sup> <a name="require_authentication" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireAuthentication"></a>
 
 ```python
-require_authentication: typing.Union[bool, IResolvable]
+require_authentication: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `require_https`<sup>Required</sup> <a name="require_https" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppAuthSettingsV2OutputReference.property.requireHttps"></a>
 
 ```python
-require_https: typing.Union[bool, IResolvable]
+require_https: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -17234,7 +17234,7 @@ Returns a reversible string representation.
 def put_schedule(
   frequency_interval: typing.Union[int, float],
   frequency_unit: str,
-  keep_at_least_one_backup: typing.Union[bool, IResolvable] = None,
+  keep_at_least_one_backup: bool | IResolvable = None,
   retention_period_days: typing.Union[int, float] = None,
   start_time: str = None
 ) -> None
@@ -17262,7 +17262,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `keep_at_least_one_backup`<sup>Optional</sup> <a name="keep_at_least_one_backup" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.putSchedule.parameter.keepAtLeastOneBackup"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the service keep at least one backup, regardless of age of backup. Defaults to `false`.
 
@@ -17304,11 +17304,11 @@ def reset_enabled() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.schedule">schedule</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference">LinuxFunctionAppBackupScheduleOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.scheduleInput">schedule_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule">LinuxFunctionAppBackupSchedule</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.storageAccountUrlInput">storage_account_url_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.storageAccountUrl">storage_account_url</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackup">LinuxFunctionAppBackup</a></code> | *No description.* |
@@ -17352,10 +17352,10 @@ schedule: LinuxFunctionAppBackupScheduleOutputReference
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -17392,10 +17392,10 @@ storage_account_url_input: str
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -17689,12 +17689,12 @@ def reset_start_time() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.lastExecutionTime">last_execution_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.frequencyIntervalInput">frequency_interval_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.frequencyUnitInput">frequency_unit_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.keepAtLeastOneBackupInput">keep_at_least_one_backup_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.keepAtLeastOneBackupInput">keep_at_least_one_backup_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.retentionPeriodDaysInput">retention_period_days_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.startTimeInput">start_time_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.frequencyInterval">frequency_interval</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.frequencyUnit">frequency_unit</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.keepAtLeastOneBackup">keep_at_least_one_backup</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.keepAtLeastOneBackup">keep_at_least_one_backup</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.retentionPeriodDays">retention_period_days</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.startTime">start_time</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupSchedule">LinuxFunctionAppBackupSchedule</a></code> | *No description.* |
@@ -17758,10 +17758,10 @@ frequency_unit_input: str
 ##### `keep_at_least_one_backup_input`<sup>Optional</sup> <a name="keep_at_least_one_backup_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.keepAtLeastOneBackupInput"></a>
 
 ```python
-keep_at_least_one_backup_input: typing.Union[bool, IResolvable]
+keep_at_least_one_backup_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -17808,10 +17808,10 @@ frequency_unit: str
 ##### `keep_at_least_one_backup`<sup>Required</sup> <a name="keep_at_least_one_backup" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppBackupScheduleOutputReference.property.keepAtLeastOneBackup"></a>
 
 ```python
-keep_at_least_one_backup: typing.Union[bool, IResolvable]
+keep_at_least_one_backup: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -17977,7 +17977,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]</code> | *No description.* |
 
 ---
 
@@ -18008,10 +18008,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[LinuxFunctionAppConnectionString]]
+internal_value: IResolvable | typing.List[LinuxFunctionAppConnectionString]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]
 
 ---
 
@@ -18277,7 +18277,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a></code> | *No description.* |
 
 ---
 
@@ -18368,10 +18368,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionStringOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, LinuxFunctionAppConnectionString]
+internal_value: IResolvable | LinuxFunctionAppConnectionString
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppConnectionString">LinuxFunctionAppConnectionString</a>
 
 ---
 
@@ -18854,7 +18854,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]</code> | *No description.* |
 
 ---
 
@@ -18885,10 +18885,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker]]
+internal_value: IResolvable | typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]
 
 ---
 
@@ -19172,7 +19172,7 @@ def reset_registry_username() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerOutputReference.property.registryPassword">registry_password</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerOutputReference.property.registryUrl">registry_url</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerOutputReference.property.registryUsername">registry_username</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a></code> | *No description.* |
 
 ---
 
@@ -19303,10 +19303,10 @@ registry_username: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, LinuxFunctionAppSiteConfigApplicationStackDocker]
+internal_value: IResolvable | LinuxFunctionAppSiteConfigApplicationStackDocker
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>
 
 ---
 
@@ -19552,13 +19552,13 @@ Returns a reversible string representation.
 
 ```python
 def put_docker(
-  value: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker]]
+  value: IResolvable | typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.putDocker.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]
 
 ---
 
@@ -19618,21 +19618,21 @@ def reset_use_dotnet_isolated_runtime() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.docker">docker</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDockerList">LinuxFunctionAppSiteConfigApplicationStackDockerList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.dockerInput">docker_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.dockerInput">docker_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.dotnetVersionInput">dotnet_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.javaVersionInput">java_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.nodeVersionInput">node_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.powershellCoreVersionInput">powershell_core_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.pythonVersionInput">python_version_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useCustomRuntimeInput">use_custom_runtime_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useDotnetIsolatedRuntimeInput">use_dotnet_isolated_runtime_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useCustomRuntimeInput">use_custom_runtime_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useDotnetIsolatedRuntimeInput">use_dotnet_isolated_runtime_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.dotnetVersion">dotnet_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.javaVersion">java_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.nodeVersion">node_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.powershellCoreVersion">powershell_core_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.pythonVersion">python_version</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useCustomRuntime">use_custom_runtime</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useDotnetIsolatedRuntime">use_dotnet_isolated_runtime</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useCustomRuntime">use_custom_runtime</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useDotnetIsolatedRuntime">use_dotnet_isolated_runtime</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStack">LinuxFunctionAppSiteConfigApplicationStack</a></code> | *No description.* |
 
 ---
@@ -19674,10 +19674,10 @@ docker: LinuxFunctionAppSiteConfigApplicationStackDockerList
 ##### `docker_input`<sup>Optional</sup> <a name="docker_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.dockerInput"></a>
 
 ```python
-docker_input: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker]]
+docker_input: IResolvable | typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]
 
 ---
 
@@ -19734,20 +19734,20 @@ python_version_input: str
 ##### `use_custom_runtime_input`<sup>Optional</sup> <a name="use_custom_runtime_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useCustomRuntimeInput"></a>
 
 ```python
-use_custom_runtime_input: typing.Union[bool, IResolvable]
+use_custom_runtime_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `use_dotnet_isolated_runtime_input`<sup>Optional</sup> <a name="use_dotnet_isolated_runtime_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useDotnetIsolatedRuntimeInput"></a>
 
 ```python
-use_dotnet_isolated_runtime_input: typing.Union[bool, IResolvable]
+use_dotnet_isolated_runtime_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -19804,20 +19804,20 @@ python_version: str
 ##### `use_custom_runtime`<sup>Required</sup> <a name="use_custom_runtime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useCustomRuntime"></a>
 
 ```python
-use_custom_runtime: typing.Union[bool, IResolvable]
+use_custom_runtime: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `use_dotnet_isolated_runtime`<sup>Required</sup> <a name="use_dotnet_isolated_runtime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackOutputReference.property.useDotnetIsolatedRuntime"></a>
 
 ```python
-use_dotnet_isolated_runtime: typing.Union[bool, IResolvable]
+use_dotnet_isolated_runtime: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20414,9 +20414,9 @@ def reset_support_credentials() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.property.allowedOriginsInput">allowed_origins_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.property.supportCredentialsInput">support_credentials_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.property.supportCredentialsInput">support_credentials_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.property.allowedOrigins">allowed_origins</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.property.supportCredentials">support_credentials</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.property.supportCredentials">support_credentials</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCors">LinuxFunctionAppSiteConfigCors</a></code> | *No description.* |
 
 ---
@@ -20458,10 +20458,10 @@ allowed_origins_input: typing.List[str]
 ##### `support_credentials_input`<sup>Optional</sup> <a name="support_credentials_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.property.supportCredentialsInput"></a>
 
 ```python
-support_credentials_input: typing.Union[bool, IResolvable]
+support_credentials_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20478,10 +20478,10 @@ allowed_origins: typing.List[str]
 ##### `support_credentials`<sup>Required</sup> <a name="support_credentials" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCorsOutputReference.property.supportCredentials"></a>
 
 ```python
-support_credentials: typing.Union[bool, IResolvable]
+support_credentials: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -20627,7 +20627,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]</code> | *No description.* |
 
 ---
 
@@ -20658,10 +20658,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigIpRestrictionHeaders]]
+internal_value: IResolvable | typing.List[LinuxFunctionAppSiteConfigIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]
 
 ---
 
@@ -20957,7 +20957,7 @@ def reset_x_forwarded_host() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersOutputReference.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -21068,10 +21068,10 @@ x_forwarded_host: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, LinuxFunctionAppSiteConfigIpRestrictionHeaders]
+internal_value: IResolvable | LinuxFunctionAppSiteConfigIpRestrictionHeaders
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>
 
 ---
 
@@ -21207,7 +21207,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]</code> | *No description.* |
 
 ---
 
@@ -21238,10 +21238,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigIpRestriction]]
+internal_value: IResolvable | typing.List[LinuxFunctionAppSiteConfigIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]
 
 ---
 
@@ -21507,13 +21507,13 @@ Returns a reversible string representation.
 
 ```python
 def put_headers(
-  value: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigIpRestrictionHeaders]]
+  value: IResolvable | typing.List[LinuxFunctionAppSiteConfigIpRestrictionHeaders]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.putHeaders.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]
 
 ---
 
@@ -21575,7 +21575,7 @@ def reset_virtual_network_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.headers">headers</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeadersList">LinuxFunctionAppSiteConfigIpRestrictionHeadersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.actionInput">action_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.headersInput">headers_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.headersInput">headers_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.ipAddressInput">ip_address_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.priorityInput">priority_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -21588,7 +21588,7 @@ def reset_virtual_network_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.serviceTag">service_tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -21649,10 +21649,10 @@ description_input: str
 ##### `headers_input`<sup>Optional</sup> <a name="headers_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.headersInput"></a>
 
 ```python
-headers_input: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigIpRestrictionHeaders]]
+headers_input: IResolvable | typing.List[LinuxFunctionAppSiteConfigIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionHeaders">LinuxFunctionAppSiteConfigIpRestrictionHeaders</a>]
 
 ---
 
@@ -21779,10 +21779,10 @@ virtual_network_subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestrictionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, LinuxFunctionAppSiteConfigIpRestriction]
+internal_value: IResolvable | LinuxFunctionAppSiteConfigIpRestriction
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>
 
 ---
 
@@ -22059,20 +22059,20 @@ Returns a reversible string representation.
 
 ```python
 def put_application_stack(
-  docker: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker]] = None,
+  docker: IResolvable | typing.List[LinuxFunctionAppSiteConfigApplicationStackDocker] = None,
   dotnet_version: str = None,
   java_version: str = None,
   node_version: str = None,
   powershell_core_version: str = None,
   python_version: str = None,
-  use_custom_runtime: typing.Union[bool, IResolvable] = None,
-  use_dotnet_isolated_runtime: typing.Union[bool, IResolvable] = None
+  use_custom_runtime: bool | IResolvable = None,
+  use_dotnet_isolated_runtime: bool | IResolvable = None
 ) -> None
 ```
 
 ###### `docker`<sup>Optional</sup> <a name="docker" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.putApplicationStack.parameter.docker"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigApplicationStackDocker">LinuxFunctionAppSiteConfigApplicationStackDocker</a>]
 
 docker block.
 
@@ -22132,7 +22132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `use_custom_runtime`<sup>Optional</sup> <a name="use_custom_runtime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.putApplicationStack.parameter.useCustomRuntime"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app#use_custom_runtime LinuxFunctionApp#use_custom_runtime}.
 
@@ -22140,7 +22140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `use_dotnet_isolated_runtime`<sup>Optional</sup> <a name="use_dotnet_isolated_runtime" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.putApplicationStack.parameter.useDotnetIsolatedRuntime"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should the DotNet process use an isolated runtime. Defaults to `false`.
 
@@ -22182,7 +22182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ```python
 def put_cors(
   allowed_origins: typing.List[str] = None,
-  support_credentials: typing.Union[bool, IResolvable] = None
+  support_credentials: bool | IResolvable = None
 ) -> None
 ```
 
@@ -22198,7 +22198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `support_credentials`<sup>Optional</sup> <a name="support_credentials" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.putCors.parameter.supportCredentials"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Are credentials allowed in CORS requests? Defaults to `false`.
 
@@ -22210,13 +22210,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_ip_restriction(
-  value: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigIpRestriction]]
+  value: IResolvable | typing.List[LinuxFunctionAppSiteConfigIpRestriction]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.putIpRestriction.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]
 
 ---
 
@@ -22224,13 +22224,13 @@ def put_ip_restriction(
 
 ```python
 def put_scm_ip_restriction(
-  value: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigScmIpRestriction]]
+  value: IResolvable | typing.List[LinuxFunctionAppSiteConfigScmIpRestriction]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.putScmIpRestriction.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]
 
 ---
 
@@ -22459,7 +22459,7 @@ def reset_worker_count() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.linuxFxVersion">linux_fx_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmIpRestriction">scm_ip_restriction</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionList">LinuxFunctionAppSiteConfigScmIpRestrictionList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmType">scm_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.alwaysOnInput">always_on_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.alwaysOnInput">always_on_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.apiDefinitionUrlInput">api_definition_url_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.apiManagementApiIdInput">api_management_api_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.appCommandLineInput">app_command_line_input</a></code> | <code>str</code> | *No description.* |
@@ -22469,32 +22469,32 @@ def reset_worker_count() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.appScaleLimitInput">app_scale_limit_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.appServiceLogsInput">app_service_logs_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigAppServiceLogs">LinuxFunctionAppSiteConfigAppServiceLogs</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.containerRegistryManagedIdentityClientIdInput">container_registry_managed_identity_client_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.containerRegistryUseManagedIdentityInput">container_registry_use_managed_identity_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.containerRegistryUseManagedIdentityInput">container_registry_use_managed_identity_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.corsInput">cors_input</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigCors">LinuxFunctionAppSiteConfigCors</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.defaultDocumentsInput">default_documents_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.elasticInstanceMinimumInput">elastic_instance_minimum_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.ftpsStateInput">ftps_state_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.healthCheckEvictionTimeInMinInput">health_check_eviction_time_in_min_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.healthCheckPathInput">health_check_path_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.http2EnabledInput">http2_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.http2EnabledInput">http2_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.ipRestrictionDefaultActionInput">ip_restriction_default_action_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.ipRestrictionInput">ip_restriction_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.ipRestrictionInput">ip_restriction_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.loadBalancingModeInput">load_balancing_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.managedPipelineModeInput">managed_pipeline_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.minimumTlsVersionInput">minimum_tls_version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.preWarmedInstanceCountInput">pre_warmed_instance_count_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.remoteDebuggingEnabledInput">remote_debugging_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.remoteDebuggingEnabledInput">remote_debugging_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.remoteDebuggingVersionInput">remote_debugging_version_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.runtimeScaleMonitoringEnabledInput">runtime_scale_monitoring_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.runtimeScaleMonitoringEnabledInput">runtime_scale_monitoring_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmIpRestrictionDefaultActionInput">scm_ip_restriction_default_action_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmIpRestrictionInput">scm_ip_restriction_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmIpRestrictionInput">scm_ip_restriction_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmMinimumTlsVersionInput">scm_minimum_tls_version_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmUseMainIpRestrictionInput">scm_use_main_ip_restriction_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.use32BitWorkerInput">use32_bit_worker_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.vnetRouteAllEnabledInput">vnet_route_all_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.websocketsEnabledInput">websockets_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmUseMainIpRestrictionInput">scm_use_main_ip_restriction_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.use32BitWorkerInput">use32_bit_worker_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.vnetRouteAllEnabledInput">vnet_route_all_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.websocketsEnabledInput">websockets_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.workerCountInput">worker_count_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.alwaysOn">always_on</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.alwaysOn">always_on</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.apiDefinitionUrl">api_definition_url</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.apiManagementApiId">api_management_api_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.appCommandLine">app_command_line</a></code> | <code>str</code> | *No description.* |
@@ -22502,27 +22502,27 @@ def reset_worker_count() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.applicationInsightsKey">application_insights_key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.appScaleLimit">app_scale_limit</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.containerRegistryManagedIdentityClientId">container_registry_managed_identity_client_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.containerRegistryUseManagedIdentity">container_registry_use_managed_identity</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.defaultDocuments">default_documents</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.elasticInstanceMinimum">elastic_instance_minimum</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.ftpsState">ftps_state</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.healthCheckEvictionTimeInMin">health_check_eviction_time_in_min</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.healthCheckPath">health_check_path</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.http2Enabled">http2_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.http2Enabled">http2_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.ipRestrictionDefaultAction">ip_restriction_default_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.loadBalancingMode">load_balancing_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.managedPipelineMode">managed_pipeline_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.minimumTlsVersion">minimum_tls_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.preWarmedInstanceCount">pre_warmed_instance_count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.remoteDebuggingEnabled">remote_debugging_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.remoteDebuggingVersion">remote_debugging_version</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.runtimeScaleMonitoringEnabled">runtime_scale_monitoring_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.runtimeScaleMonitoringEnabled">runtime_scale_monitoring_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmIpRestrictionDefaultAction">scm_ip_restriction_default_action</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmMinimumTlsVersion">scm_minimum_tls_version</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.use32BitWorker">use32_bit_worker</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.vnetRouteAllEnabled">vnet_route_all_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.websocketsEnabled">websockets_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmUseMainIpRestriction">scm_use_main_ip_restriction</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.use32BitWorker">use32_bit_worker</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.vnetRouteAllEnabled">vnet_route_all_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.websocketsEnabled">websockets_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.workerCount">worker_count</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfig">LinuxFunctionAppSiteConfig</a></code> | *No description.* |
 
@@ -22635,10 +22635,10 @@ scm_type: str
 ##### `always_on_input`<sup>Optional</sup> <a name="always_on_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.alwaysOnInput"></a>
 
 ```python
-always_on_input: typing.Union[bool, IResolvable]
+always_on_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -22735,10 +22735,10 @@ container_registry_managed_identity_client_id_input: str
 ##### `container_registry_use_managed_identity_input`<sup>Optional</sup> <a name="container_registry_use_managed_identity_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.containerRegistryUseManagedIdentityInput"></a>
 
 ```python
-container_registry_use_managed_identity_input: typing.Union[bool, IResolvable]
+container_registry_use_managed_identity_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -22805,10 +22805,10 @@ health_check_path_input: str
 ##### `http2_enabled_input`<sup>Optional</sup> <a name="http2_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.http2EnabledInput"></a>
 
 ```python
-http2_enabled_input: typing.Union[bool, IResolvable]
+http2_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -22825,10 +22825,10 @@ ip_restriction_default_action_input: str
 ##### `ip_restriction_input`<sup>Optional</sup> <a name="ip_restriction_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.ipRestrictionInput"></a>
 
 ```python
-ip_restriction_input: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigIpRestriction]]
+ip_restriction_input: IResolvable | typing.List[LinuxFunctionAppSiteConfigIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigIpRestriction">LinuxFunctionAppSiteConfigIpRestriction</a>]
 
 ---
 
@@ -22875,10 +22875,10 @@ pre_warmed_instance_count_input: typing.Union[int, float]
 ##### `remote_debugging_enabled_input`<sup>Optional</sup> <a name="remote_debugging_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.remoteDebuggingEnabledInput"></a>
 
 ```python
-remote_debugging_enabled_input: typing.Union[bool, IResolvable]
+remote_debugging_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -22895,10 +22895,10 @@ remote_debugging_version_input: str
 ##### `runtime_scale_monitoring_enabled_input`<sup>Optional</sup> <a name="runtime_scale_monitoring_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.runtimeScaleMonitoringEnabledInput"></a>
 
 ```python
-runtime_scale_monitoring_enabled_input: typing.Union[bool, IResolvable]
+runtime_scale_monitoring_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -22915,10 +22915,10 @@ scm_ip_restriction_default_action_input: str
 ##### `scm_ip_restriction_input`<sup>Optional</sup> <a name="scm_ip_restriction_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmIpRestrictionInput"></a>
 
 ```python
-scm_ip_restriction_input: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigScmIpRestriction]]
+scm_ip_restriction_input: IResolvable | typing.List[LinuxFunctionAppSiteConfigScmIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]
 
 ---
 
@@ -22935,40 +22935,40 @@ scm_minimum_tls_version_input: str
 ##### `scm_use_main_ip_restriction_input`<sup>Optional</sup> <a name="scm_use_main_ip_restriction_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmUseMainIpRestrictionInput"></a>
 
 ```python
-scm_use_main_ip_restriction_input: typing.Union[bool, IResolvable]
+scm_use_main_ip_restriction_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `use32_bit_worker_input`<sup>Optional</sup> <a name="use32_bit_worker_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.use32BitWorkerInput"></a>
 
 ```python
-use32_bit_worker_input: typing.Union[bool, IResolvable]
+use32_bit_worker_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `vnet_route_all_enabled_input`<sup>Optional</sup> <a name="vnet_route_all_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.vnetRouteAllEnabledInput"></a>
 
 ```python
-vnet_route_all_enabled_input: typing.Union[bool, IResolvable]
+vnet_route_all_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `websockets_enabled_input`<sup>Optional</sup> <a name="websockets_enabled_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.websocketsEnabledInput"></a>
 
 ```python
-websockets_enabled_input: typing.Union[bool, IResolvable]
+websockets_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -22985,10 +22985,10 @@ worker_count_input: typing.Union[int, float]
 ##### `always_on`<sup>Required</sup> <a name="always_on" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.alwaysOn"></a>
 
 ```python
-always_on: typing.Union[bool, IResolvable]
+always_on: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -23065,10 +23065,10 @@ container_registry_managed_identity_client_id: str
 ##### `container_registry_use_managed_identity`<sup>Required</sup> <a name="container_registry_use_managed_identity" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.containerRegistryUseManagedIdentity"></a>
 
 ```python
-container_registry_use_managed_identity: typing.Union[bool, IResolvable]
+container_registry_use_managed_identity: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -23125,10 +23125,10 @@ health_check_path: str
 ##### `http2_enabled`<sup>Required</sup> <a name="http2_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.http2Enabled"></a>
 
 ```python
-http2_enabled: typing.Union[bool, IResolvable]
+http2_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -23185,10 +23185,10 @@ pre_warmed_instance_count: typing.Union[int, float]
 ##### `remote_debugging_enabled`<sup>Required</sup> <a name="remote_debugging_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.remoteDebuggingEnabled"></a>
 
 ```python
-remote_debugging_enabled: typing.Union[bool, IResolvable]
+remote_debugging_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -23205,10 +23205,10 @@ remote_debugging_version: str
 ##### `runtime_scale_monitoring_enabled`<sup>Required</sup> <a name="runtime_scale_monitoring_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.runtimeScaleMonitoringEnabled"></a>
 
 ```python
-runtime_scale_monitoring_enabled: typing.Union[bool, IResolvable]
+runtime_scale_monitoring_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -23235,40 +23235,40 @@ scm_minimum_tls_version: str
 ##### `scm_use_main_ip_restriction`<sup>Required</sup> <a name="scm_use_main_ip_restriction" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.scmUseMainIpRestriction"></a>
 
 ```python
-scm_use_main_ip_restriction: typing.Union[bool, IResolvable]
+scm_use_main_ip_restriction: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `use32_bit_worker`<sup>Required</sup> <a name="use32_bit_worker" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.use32BitWorker"></a>
 
 ```python
-use32_bit_worker: typing.Union[bool, IResolvable]
+use32_bit_worker: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `vnet_route_all_enabled`<sup>Required</sup> <a name="vnet_route_all_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.vnetRouteAllEnabled"></a>
 
 ```python
-vnet_route_all_enabled: typing.Union[bool, IResolvable]
+vnet_route_all_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `websockets_enabled`<sup>Required</sup> <a name="websockets_enabled" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigOutputReference.property.websocketsEnabled"></a>
 
 ```python
-websockets_enabled: typing.Union[bool, IResolvable]
+websockets_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -23424,7 +23424,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]</code> | *No description.* |
 
 ---
 
@@ -23455,10 +23455,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigScmIpRestrictionHeaders]]
+internal_value: IResolvable | typing.List[LinuxFunctionAppSiteConfigScmIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]
 
 ---
 
@@ -23754,7 +23754,7 @@ def reset_x_forwarded_host() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference.property.xFdHealthProbe">x_fd_health_probe</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedFor">x_forwarded_for</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedHost">x_forwarded_host</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -23865,10 +23865,10 @@ x_forwarded_host: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, LinuxFunctionAppSiteConfigScmIpRestrictionHeaders]
+internal_value: IResolvable | LinuxFunctionAppSiteConfigScmIpRestrictionHeaders
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>
 
 ---
 
@@ -24004,7 +24004,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]</code> | *No description.* |
 
 ---
 
@@ -24035,10 +24035,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigScmIpRestriction]]
+internal_value: IResolvable | typing.List[LinuxFunctionAppSiteConfigScmIpRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]
 
 ---
 
@@ -24304,13 +24304,13 @@ Returns a reversible string representation.
 
 ```python
 def put_headers(
-  value: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigScmIpRestrictionHeaders]]
+  value: IResolvable | typing.List[LinuxFunctionAppSiteConfigScmIpRestrictionHeaders]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.putHeaders.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]
 
 ---
 
@@ -24372,7 +24372,7 @@ def reset_virtual_network_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.headers">headers</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeadersList">LinuxFunctionAppSiteConfigScmIpRestrictionHeadersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.actionInput">action_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.descriptionInput">description_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.headersInput">headers_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.headersInput">headers_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.ipAddressInput">ip_address_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.priorityInput">priority_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -24385,7 +24385,7 @@ def reset_virtual_network_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.priority">priority</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.serviceTag">service_tag</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.virtualNetworkSubnetId">virtual_network_subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -24446,10 +24446,10 @@ description_input: str
 ##### `headers_input`<sup>Optional</sup> <a name="headers_input" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.headersInput"></a>
 
 ```python
-headers_input: typing.Union[IResolvable, typing.List[LinuxFunctionAppSiteConfigScmIpRestrictionHeaders]]
+headers_input: IResolvable | typing.List[LinuxFunctionAppSiteConfigScmIpRestrictionHeaders]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSiteConfigScmIpRestrictionHeaders</a>]
 
 ---
 
@@ -24576,10 +24576,10 @@ virtual_network_subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestrictionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, LinuxFunctionAppSiteConfigScmIpRestriction]
+internal_value: IResolvable | LinuxFunctionAppSiteConfigScmIpRestriction
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppSiteConfigScmIpRestriction">LinuxFunctionAppSiteConfigScmIpRestriction</a>
 
 ---
 
@@ -25522,7 +25522,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]</code> | *No description.* |
 
 ---
 
@@ -25553,10 +25553,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[LinuxFunctionAppStorageAccount]]
+internal_value: IResolvable | typing.List[LinuxFunctionAppStorageAccount]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]
 
 ---
 
@@ -25835,7 +25835,7 @@ def reset_mount_path() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountOutputReference.property.shareName">share_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a></code> | *No description.* |
 
 ---
 
@@ -25986,10 +25986,10 @@ type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccountOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, LinuxFunctionAppStorageAccount]
+internal_value: IResolvable | LinuxFunctionAppStorageAccount
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppStorageAccount">LinuxFunctionAppStorageAccount</a>
 
 ---
 
@@ -26265,7 +26265,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -26376,10 +26376,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, LinuxFunctionAppTimeouts]
+internal_value: IResolvable | LinuxFunctionAppTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.linuxFunctionApp.LinuxFunctionAppTimeouts">LinuxFunctionAppTimeouts</a>
 
 ---
 

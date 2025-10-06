@@ -305,7 +305,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.importFrom"></a>
@@ -359,7 +359,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -374,7 +374,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -399,12 +399,12 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 ##### `PutAlwaysReady` <a name="PutAlwaysReady" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putAlwaysReady"></a>
 
 ```csharp
-private void PutAlwaysReady(object Value)
+private void PutAlwaysReady(IResolvable|FunctionAppFlexConsumptionAlwaysReady[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putAlwaysReady.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>[]
 
 ---
 
@@ -435,12 +435,12 @@ private void PutAuthSettingsV2(FunctionAppFlexConsumptionAuthSettingsV2 Value)
 ##### `PutConnectionString` <a name="PutConnectionString" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putConnectionString"></a>
 
 ```csharp
-private void PutConnectionString(object Value)
+private void PutConnectionString(IResolvable|FunctionAppFlexConsumptionConnectionString[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.putConnectionString.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>[]
 
 ---
 
@@ -762,13 +762,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.alwaysReady">AlwaysReady</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList">FunctionAppFlexConsumptionAlwaysReadyList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.authSettings">AuthSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference">FunctionAppFlexConsumptionAuthSettingsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.authSettingsV2">AuthSettingsV2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference">FunctionAppFlexConsumptionAuthSettingsV2OutputReference</a></code> | *No description.* |
@@ -786,24 +786,24 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.siteCredential">SiteCredential</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteCredentialList">FunctionAppFlexConsumptionSiteCredentialList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.stickySettings">StickySettings</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionStickySettingsOutputReference">FunctionAppFlexConsumptionStickySettingsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference">FunctionAppFlexConsumptionTimeoutsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.alwaysReadyInput">AlwaysReadyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.alwaysReadyInput">AlwaysReadyInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.appSettingsInput">AppSettingsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.authSettingsInput">AuthSettingsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings">FunctionAppFlexConsumptionAuthSettings</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.authSettingsV2Input">AuthSettingsV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2">FunctionAppFlexConsumptionAuthSettingsV2</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabledInput">ClientCertificateEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabledInput">ClientCertificateEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateExclusionPathsInput">ClientCertificateExclusionPathsInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateModeInput">ClientCertificateModeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connectionStringInput">ConnectionStringInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabledInput">EnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connectionStringInput">ConnectionStringInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabledInput">EnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpConcurrencyInput">HttpConcurrencyInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnlyInput">HttpsOnlyInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnlyInput">HttpsOnlyInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.identityInput">IdentityInput</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionIdentity">FunctionAppFlexConsumptionIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.instanceMemoryInMbInput">InstanceMemoryInMbInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.locationInput">LocationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.maximumInstanceCountInput">MaximumInstanceCountInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabledInput">PublicNetworkAccessEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabledInput">PublicNetworkAccessEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.resourceGroupNameInput">ResourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.runtimeNameInput">RuntimeNameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.runtimeVersionInput">RuntimeVersionInput</a></code> | <code>string</code> | *No description.* |
@@ -816,23 +816,23 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.storageContainerTypeInput">StorageContainerTypeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.storageUserAssignedIdentityIdInput">StorageUserAssignedIdentityIdInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.tagsInput">TagsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.virtualNetworkSubnetIdInput">VirtualNetworkSubnetIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabledInput">WebdeployPublishBasicAuthenticationEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabledInput">WebdeployPublishBasicAuthenticationEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.zipDeployFileInput">ZipDeployFileInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.appSettings">AppSettings</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabled">ClientCertificateEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabled">ClientCertificateEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateExclusionPaths">ClientCertificateExclusionPaths</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateMode">ClientCertificateMode</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabled">Enabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabled">Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpConcurrency">HttpConcurrency</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnly">HttpsOnly</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnly">HttpsOnly</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.instanceMemoryInMb">InstanceMemoryInMb</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.location">Location</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.maximumInstanceCount">MaximumInstanceCount</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.runtimeName">RuntimeName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.runtimeVersion">RuntimeVersion</a></code> | <code>string</code> | *No description.* |
@@ -844,7 +844,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.storageUserAssignedIdentityId">StorageUserAssignedIdentityId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabled">WebdeployPublishBasicAuthenticationEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabled">WebdeployPublishBasicAuthenticationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.zipDeployFile">ZipDeployFile</a></code> | <code>string</code> | *No description.* |
 
 ---
@@ -924,20 +924,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -984,10 +984,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1164,10 +1164,10 @@ public FunctionAppFlexConsumptionTimeoutsOutputReference Timeouts { get; }
 ##### `AlwaysReadyInput`<sup>Optional</sup> <a name="AlwaysReadyInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.alwaysReadyInput"></a>
 
 ```csharp
-public object AlwaysReadyInput { get; }
+public IResolvable|FunctionAppFlexConsumptionAlwaysReady[] AlwaysReadyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>[]
 
 ---
 
@@ -1204,10 +1204,10 @@ public FunctionAppFlexConsumptionAuthSettingsV2 AuthSettingsV2Input { get; }
 ##### `ClientCertificateEnabledInput`<sup>Optional</sup> <a name="ClientCertificateEnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabledInput"></a>
 
 ```csharp
-public object ClientCertificateEnabledInput { get; }
+public bool|IResolvable ClientCertificateEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1234,20 +1234,20 @@ public string ClientCertificateModeInput { get; }
 ##### `ConnectionStringInput`<sup>Optional</sup> <a name="ConnectionStringInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.connectionStringInput"></a>
 
 ```csharp
-public object ConnectionStringInput { get; }
+public IResolvable|FunctionAppFlexConsumptionConnectionString[] ConnectionStringInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>[]
 
 ---
 
 ##### `EnabledInput`<sup>Optional</sup> <a name="EnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabledInput"></a>
 
 ```csharp
-public object EnabledInput { get; }
+public bool|IResolvable EnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1264,10 +1264,10 @@ public double HttpConcurrencyInput { get; }
 ##### `HttpsOnlyInput`<sup>Optional</sup> <a name="HttpsOnlyInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnlyInput"></a>
 
 ```csharp
-public object HttpsOnlyInput { get; }
+public bool|IResolvable HttpsOnlyInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1334,10 +1334,10 @@ public string NameInput { get; }
 ##### `PublicNetworkAccessEnabledInput`<sup>Optional</sup> <a name="PublicNetworkAccessEnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabledInput"></a>
 
 ```csharp
-public object PublicNetworkAccessEnabledInput { get; }
+public bool|IResolvable PublicNetworkAccessEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1464,10 +1464,10 @@ public System.Collections.Generic.IDictionary<string, string> TagsInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|FunctionAppFlexConsumptionTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a>
 
 ---
 
@@ -1484,10 +1484,10 @@ public string VirtualNetworkSubnetIdInput { get; }
 ##### `WebdeployPublishBasicAuthenticationEnabledInput`<sup>Optional</sup> <a name="WebdeployPublishBasicAuthenticationEnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabledInput"></a>
 
 ```csharp
-public object WebdeployPublishBasicAuthenticationEnabledInput { get; }
+public bool|IResolvable WebdeployPublishBasicAuthenticationEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1514,10 +1514,10 @@ public System.Collections.Generic.IDictionary<string, string> AppSettings { get;
 ##### `ClientCertificateEnabled`<sup>Required</sup> <a name="ClientCertificateEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.clientCertificateEnabled"></a>
 
 ```csharp
-public object ClientCertificateEnabled { get; }
+public bool|IResolvable ClientCertificateEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1544,10 +1544,10 @@ public string ClientCertificateMode { get; }
 ##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.enabled"></a>
 
 ```csharp
-public object Enabled { get; }
+public bool|IResolvable Enabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1564,10 +1564,10 @@ public double HttpConcurrency { get; }
 ##### `HttpsOnly`<sup>Required</sup> <a name="HttpsOnly" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.httpsOnly"></a>
 
 ```csharp
-public object HttpsOnly { get; }
+public bool|IResolvable HttpsOnly { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1624,10 +1624,10 @@ public string Name { get; }
 ##### `PublicNetworkAccessEnabled`<sup>Required</sup> <a name="PublicNetworkAccessEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.publicNetworkAccessEnabled"></a>
 
 ```csharp
-public object PublicNetworkAccessEnabled { get; }
+public bool|IResolvable PublicNetworkAccessEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1744,10 +1744,10 @@ public string VirtualNetworkSubnetId { get; }
 ##### `WebdeployPublishBasicAuthenticationEnabled`<sup>Required</sup> <a name="WebdeployPublishBasicAuthenticationEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumption.property.webdeployPublishBasicAuthenticationEnabled"></a>
 
 ```csharp
-public object WebdeployPublishBasicAuthenticationEnabled { get; }
+public bool|IResolvable WebdeployPublishBasicAuthenticationEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1835,7 +1835,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new FunctionAppFlexConsumptionAuthSettings {
-    object Enabled,
+    bool|IResolvable Enabled,
     FunctionAppFlexConsumptionAuthSettingsActiveDirectory ActiveDirectory = null,
     System.Collections.Generic.IDictionary<string, string> AdditionalLoginParameters = null,
     string[] AllowedExternalRedirectUrls = null,
@@ -1847,7 +1847,7 @@ new FunctionAppFlexConsumptionAuthSettings {
     FunctionAppFlexConsumptionAuthSettingsMicrosoft Microsoft = null,
     string RuntimeVersion = null,
     double TokenRefreshExtensionHours = null,
-    object TokenStoreEnabled = null,
+    bool|IResolvable TokenStoreEnabled = null,
     FunctionAppFlexConsumptionAuthSettingsTwitter Twitter = null,
     string UnauthenticatedClientAction = null
 };
@@ -1857,7 +1857,7 @@ new FunctionAppFlexConsumptionAuthSettings {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.enabled">Enabled</a></code> | <code>object</code> | Should the Authentication / Authorization feature be enabled? |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.enabled">Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the Authentication / Authorization feature be enabled? |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.activeDirectory">ActiveDirectory</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsActiveDirectory">FunctionAppFlexConsumptionAuthSettingsActiveDirectory</a></code> | active_directory block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.additionalLoginParameters">AdditionalLoginParameters</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.allowedExternalRedirectUrls">AllowedExternalRedirectUrls</a></code> | <code>string[]</code> | Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App. |
@@ -1869,7 +1869,7 @@ new FunctionAppFlexConsumptionAuthSettings {
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.microsoft">Microsoft</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsMicrosoft">FunctionAppFlexConsumptionAuthSettingsMicrosoft</a></code> | microsoft block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.runtimeVersion">RuntimeVersion</a></code> | <code>string</code> | The RuntimeVersion of the Authentication / Authorization feature in use. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.tokenRefreshExtensionHours">TokenRefreshExtensionHours</a></code> | <code>double</code> | The number of hours after session token expiration that a session token can be used to call the token refresh API. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>object</code> | Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.twitter">Twitter</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsTwitter">FunctionAppFlexConsumptionAuthSettingsTwitter</a></code> | twitter block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.unauthenticatedClientAction">UnauthenticatedClientAction</a></code> | <code>string</code> | The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`. |
 
@@ -1878,10 +1878,10 @@ new FunctionAppFlexConsumptionAuthSettings {
 ##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.enabled"></a>
 
 ```csharp
-public object Enabled { get; set; }
+public bool|IResolvable Enabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the Authentication / Authorization feature be enabled?
 
@@ -2050,10 +2050,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `TokenStoreEnabled`<sup>Optional</sup> <a name="TokenStoreEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings.property.tokenStoreEnabled"></a>
 
 ```csharp
-public object TokenStoreEnabled { get; set; }
+public bool|IResolvable TokenStoreEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
 
@@ -2576,10 +2576,10 @@ new FunctionAppFlexConsumptionAuthSettingsV2 {
     FunctionAppFlexConsumptionAuthSettingsV2Login Login,
     FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2 ActiveDirectoryV2 = null,
     FunctionAppFlexConsumptionAuthSettingsV2AppleV2 AppleV2 = null,
-    object AuthEnabled = null,
+    bool|IResolvable AuthEnabled = null,
     FunctionAppFlexConsumptionAuthSettingsV2AzureStaticWebAppV2 AzureStaticWebAppV2 = null,
     string ConfigFilePath = null,
-    object CustomOidcV2 = null,
+    IResolvable|FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2[] CustomOidcV2 = null,
     string DefaultProvider = null,
     string[] ExcludedPaths = null,
     FunctionAppFlexConsumptionAuthSettingsV2FacebookV2 FacebookV2 = null,
@@ -2590,8 +2590,8 @@ new FunctionAppFlexConsumptionAuthSettingsV2 {
     FunctionAppFlexConsumptionAuthSettingsV2GoogleV2 GoogleV2 = null,
     string HttpRouteApiPrefix = null,
     FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2 MicrosoftV2 = null,
-    object RequireAuthentication = null,
-    object RequireHttps = null,
+    bool|IResolvable RequireAuthentication = null,
+    bool|IResolvable RequireHttps = null,
     string RuntimeVersion = null,
     FunctionAppFlexConsumptionAuthSettingsV2TwitterV2 TwitterV2 = null,
     string UnauthenticatedAction = null
@@ -2605,10 +2605,10 @@ new FunctionAppFlexConsumptionAuthSettingsV2 {
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.login">Login</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login">FunctionAppFlexConsumptionAuthSettingsV2Login</a></code> | login block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.activeDirectoryV2">ActiveDirectoryV2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2">FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2</a></code> | active_directory_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.appleV2">AppleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2AppleV2">FunctionAppFlexConsumptionAuthSettingsV2AppleV2</a></code> | apple_v2 block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.authEnabled">AuthEnabled</a></code> | <code>object</code> | Should the AuthV2 Settings be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.authEnabled">AuthEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the AuthV2 Settings be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.azureStaticWebAppV2">AzureStaticWebAppV2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2AzureStaticWebAppV2">FunctionAppFlexConsumptionAuthSettingsV2AzureStaticWebAppV2</a></code> | azure_static_web_app_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.configFilePath">ConfigFilePath</a></code> | <code>string</code> | The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.customOidcV2">CustomOidcV2</a></code> | <code>object</code> | custom_oidc_v2 block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.customOidcV2">CustomOidcV2</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>[]</code> | custom_oidc_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.defaultProvider">DefaultProvider</a></code> | <code>string</code> | The Default Authentication Provider to use when the `unauthenticated_action` is set to `RedirectToLoginPage`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.excludedPaths">ExcludedPaths</a></code> | <code>string[]</code> | The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.facebookV2">FacebookV2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2FacebookV2">FunctionAppFlexConsumptionAuthSettingsV2FacebookV2</a></code> | facebook_v2 block. |
@@ -2619,8 +2619,8 @@ new FunctionAppFlexConsumptionAuthSettingsV2 {
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.googleV2">GoogleV2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2GoogleV2">FunctionAppFlexConsumptionAuthSettingsV2GoogleV2</a></code> | google_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.httpRouteApiPrefix">HttpRouteApiPrefix</a></code> | <code>string</code> | The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.microsoftV2">MicrosoftV2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2">FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2</a></code> | microsoft_v2 block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireAuthentication">RequireAuthentication</a></code> | <code>object</code> | Should the authentication flow be used for all requests. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireHttps">RequireHttps</a></code> | <code>object</code> | Should HTTPS be required on connections? Defaults to true. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireAuthentication">RequireAuthentication</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the authentication flow be used for all requests. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireHttps">RequireHttps</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should HTTPS be required on connections? Defaults to true. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.runtimeVersion">RuntimeVersion</a></code> | <code>string</code> | The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.twitterV2">TwitterV2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2TwitterV2">FunctionAppFlexConsumptionAuthSettingsV2TwitterV2</a></code> | twitter_v2 block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.unauthenticatedAction">UnauthenticatedAction</a></code> | <code>string</code> | The action to take for requests made without authentication. |
@@ -2672,10 +2672,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AuthEnabled`<sup>Optional</sup> <a name="AuthEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.authEnabled"></a>
 
 ```csharp
-public object AuthEnabled { get; set; }
+public bool|IResolvable AuthEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the AuthV2 Settings be enabled. Defaults to `false`.
 
@@ -2714,10 +2714,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `CustomOidcV2`<sup>Optional</sup> <a name="CustomOidcV2" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.customOidcV2"></a>
 
 ```csharp
-public object CustomOidcV2 { get; set; }
+public IResolvable|FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2[] CustomOidcV2 { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>[]
 
 custom_oidc_v2 block.
 
@@ -2872,10 +2872,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RequireAuthentication`<sup>Optional</sup> <a name="RequireAuthentication" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireAuthentication"></a>
 
 ```csharp
-public object RequireAuthentication { get; set; }
+public bool|IResolvable RequireAuthentication { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the authentication flow be used for all requests.
 
@@ -2886,10 +2886,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RequireHttps`<sup>Optional</sup> <a name="RequireHttps" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2.property.requireHttps"></a>
 
 ```csharp
-public object RequireHttps { get; set; }
+public bool|IResolvable RequireHttps { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should HTTPS be required on connections? Defaults to true.
 
@@ -2960,7 +2960,7 @@ new FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2 {
     string[] JwtAllowedClientApplications = null,
     string[] JwtAllowedGroups = null,
     System.Collections.Generic.IDictionary<string, string> LoginParameters = null,
-    object WwwAuthenticationDisabled = null
+    bool|IResolvable WwwAuthenticationDisabled = null
 };
 ```
 
@@ -2979,7 +2979,7 @@ new FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2 {
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedClientApplications">JwtAllowedClientApplications</a></code> | <code>string[]</code> | A list of Allowed Client Applications in the JWT Claim. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.jwtAllowedGroups">JwtAllowedGroups</a></code> | <code>string[]</code> | A list of Allowed Groups in the JWT Claim. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.loginParameters">LoginParameters</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | A map of key-value pairs to send to the Authorisation Endpoint when a user logs in. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled">WwwAuthenticationDisabled</a></code> | <code>object</code> | Should the www-authenticate provider should be omitted from the request? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled">WwwAuthenticationDisabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the www-authenticate provider should be omitted from the request? Defaults to `false`. |
 
 ---
 
@@ -3140,10 +3140,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `WwwAuthenticationDisabled`<sup>Optional</sup> <a name="WwwAuthenticationDisabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2.property.wwwAuthenticationDisabled"></a>
 
 ```csharp
-public object WwwAuthenticationDisabled { get; set; }
+public bool|IResolvable WwwAuthenticationDisabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
 
@@ -3576,12 +3576,12 @@ new FunctionAppFlexConsumptionAuthSettingsV2Login {
     string CookieExpirationTime = null,
     string LogoutEndpoint = null,
     string NonceExpirationTime = null,
-    object PreserveUrlFragmentsForLogins = null,
+    bool|IResolvable PreserveUrlFragmentsForLogins = null,
     double TokenRefreshExtensionTime = null,
-    object TokenStoreEnabled = null,
+    bool|IResolvable TokenStoreEnabled = null,
     string TokenStorePath = null,
     string TokenStoreSasSettingName = null,
-    object ValidateNonce = null
+    bool|IResolvable ValidateNonce = null
 };
 ```
 
@@ -3594,12 +3594,12 @@ new FunctionAppFlexConsumptionAuthSettingsV2Login {
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.cookieExpirationTime">CookieExpirationTime</a></code> | <code>string</code> | The time after the request is made when the session cookie should expire. Defaults to `08:00:00`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.logoutEndpoint">LogoutEndpoint</a></code> | <code>string</code> | The endpoint to which logout requests should be made. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.nonceExpirationTime">NonceExpirationTime</a></code> | <code>string</code> | The time after the request is made when the nonce should expire. Defaults to `00:05:00`. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.preserveUrlFragmentsForLogins">PreserveUrlFragmentsForLogins</a></code> | <code>object</code> | Should the fragments from the request be preserved after the login request is made. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.preserveUrlFragmentsForLogins">PreserveUrlFragmentsForLogins</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the fragments from the request be preserved after the login request is made. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenRefreshExtensionTime">TokenRefreshExtensionTime</a></code> | <code>double</code> | The number of hours after session token expiration that a session token can be used to call the token refresh API. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>object</code> | Should the Token Store configuration Enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the Token Store configuration Enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenStorePath">TokenStorePath</a></code> | <code>string</code> | The directory path in the App Filesystem in which the tokens will be stored. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenStoreSasSettingName">TokenStoreSasSettingName</a></code> | <code>string</code> | The name of the app setting which contains the SAS URL of the blob storage containing the tokens. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.validateNonce">ValidateNonce</a></code> | <code>object</code> | Should the nonce be validated while completing the login flow. Defaults to `true`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.validateNonce">ValidateNonce</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the nonce be validated while completing the login flow. Defaults to `true`. |
 
 ---
 
@@ -3678,10 +3678,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PreserveUrlFragmentsForLogins`<sup>Optional</sup> <a name="PreserveUrlFragmentsForLogins" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.preserveUrlFragmentsForLogins"></a>
 
 ```csharp
-public object PreserveUrlFragmentsForLogins { get; set; }
+public bool|IResolvable PreserveUrlFragmentsForLogins { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
 
@@ -3708,10 +3708,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `TokenStoreEnabled`<sup>Optional</sup> <a name="TokenStoreEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.tokenStoreEnabled"></a>
 
 ```csharp
-public object TokenStoreEnabled { get; set; }
+public bool|IResolvable TokenStoreEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the Token Store configuration Enabled. Defaults to `false`.
 
@@ -3750,10 +3750,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ValidateNonce`<sup>Optional</sup> <a name="ValidateNonce" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login.property.validateNonce"></a>
 
 ```csharp
-public object ValidateNonce { get; set; }
+public bool|IResolvable ValidateNonce { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the nonce be validated while completing the login flow. Defaults to `true`.
 
@@ -3901,13 +3901,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new FunctionAppFlexConsumptionConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string Location,
     string Name,
     string ResourceGroupName,
@@ -3918,29 +3918,29 @@ new FunctionAppFlexConsumptionConfig {
     string StorageAuthenticationType,
     string StorageContainerEndpoint,
     string StorageContainerType,
-    object AlwaysReady = null,
+    IResolvable|FunctionAppFlexConsumptionAlwaysReady[] AlwaysReady = null,
     System.Collections.Generic.IDictionary<string, string> AppSettings = null,
     FunctionAppFlexConsumptionAuthSettings AuthSettings = null,
     FunctionAppFlexConsumptionAuthSettingsV2 AuthSettingsV2 = null,
-    object ClientCertificateEnabled = null,
+    bool|IResolvable ClientCertificateEnabled = null,
     string ClientCertificateExclusionPaths = null,
     string ClientCertificateMode = null,
-    object ConnectionString = null,
-    object Enabled = null,
+    IResolvable|FunctionAppFlexConsumptionConnectionString[] ConnectionString = null,
+    bool|IResolvable Enabled = null,
     double HttpConcurrency = null,
-    object HttpsOnly = null,
+    bool|IResolvable HttpsOnly = null,
     string Id = null,
     FunctionAppFlexConsumptionIdentity Identity = null,
     double InstanceMemoryInMb = null,
     double MaximumInstanceCount = null,
-    object PublicNetworkAccessEnabled = null,
+    bool|IResolvable PublicNetworkAccessEnabled = null,
     FunctionAppFlexConsumptionStickySettings StickySettings = null,
     string StorageAccessKey = null,
     string StorageUserAssignedIdentityId = null,
     System.Collections.Generic.IDictionary<string, string> Tags = null,
     FunctionAppFlexConsumptionTimeouts Timeouts = null,
     string VirtualNetworkSubnetId = null,
-    object WebdeployPublishBasicAuthenticationEnabled = null,
+    bool|IResolvable WebdeployPublishBasicAuthenticationEnabled = null,
     string ZipDeployFile = null
 };
 ```
@@ -3949,13 +3949,13 @@ new FunctionAppFlexConsumptionConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#location FunctionAppFlexConsumption#location}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.name">Name</a></code> | <code>string</code> | Specifies the name of the Function App. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#resource_group_name FunctionAppFlexConsumption#resource_group_name}. |
@@ -3966,29 +3966,29 @@ new FunctionAppFlexConsumptionConfig {
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.storageAuthenticationType">StorageAuthenticationType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#storage_authentication_type FunctionAppFlexConsumption#storage_authentication_type}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.storageContainerEndpoint">StorageContainerEndpoint</a></code> | <code>string</code> | The endpoint of the storage container where the function app's code is hosted. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.storageContainerType">StorageContainerType</a></code> | <code>string</code> | The type of the storage container where the function app's code is hosted. Only `blobContainer` is supported currently. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.alwaysReady">AlwaysReady</a></code> | <code>object</code> | always_ready block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.alwaysReady">AlwaysReady</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>[]</code> | always_ready block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.appSettings">AppSettings</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.authSettings">AuthSettings</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings">FunctionAppFlexConsumptionAuthSettings</a></code> | auth_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.authSettingsV2">AuthSettingsV2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2">FunctionAppFlexConsumptionAuthSettingsV2</a></code> | auth_settings_v2 block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.clientCertificateEnabled">ClientCertificateEnabled</a></code> | <code>object</code> | Should the function app use Client Certificates. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.clientCertificateEnabled">ClientCertificateEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the function app use Client Certificates. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.clientCertificateExclusionPaths">ClientCertificateExclusionPaths</a></code> | <code>string</code> | Paths to exclude when using client certificates, separated by ; |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.clientCertificateMode">ClientCertificateMode</a></code> | <code>string</code> | The mode of the Function App's client certificates requirement for incoming requests. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connectionString">ConnectionString</a></code> | <code>object</code> | connection_string block. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.enabled">Enabled</a></code> | <code>object</code> | Is the Function App enabled. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connectionString">ConnectionString</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>[]</code> | connection_string block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.enabled">Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Is the Function App enabled. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.httpConcurrency">HttpConcurrency</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#http_concurrency FunctionAppFlexConsumption#http_concurrency}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.httpsOnly">HttpsOnly</a></code> | <code>object</code> | Can the Function App only be accessed via HTTPS? |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.httpsOnly">HttpsOnly</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Can the Function App only be accessed via HTTPS? |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#id FunctionAppFlexConsumption#id}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.identity">Identity</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionIdentity">FunctionAppFlexConsumptionIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.instanceMemoryInMb">InstanceMemoryInMb</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#instance_memory_in_mb FunctionAppFlexConsumption#instance_memory_in_mb}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.maximumInstanceCount">MaximumInstanceCount</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#maximum_instance_count FunctionAppFlexConsumption#maximum_instance_count}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#public_network_access_enabled FunctionAppFlexConsumption#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.publicNetworkAccessEnabled">PublicNetworkAccessEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#public_network_access_enabled FunctionAppFlexConsumption#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.stickySettings">StickySettings</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionStickySettings">FunctionAppFlexConsumptionStickySettings</a></code> | sticky_settings block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.storageAccessKey">StorageAccessKey</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#storage_access_key FunctionAppFlexConsumption#storage_access_key}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.storageUserAssignedIdentityId">StorageUserAssignedIdentityId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#storage_user_assigned_identity_id FunctionAppFlexConsumption#storage_user_assigned_identity_id}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#tags FunctionAppFlexConsumption#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#virtual_network_subnet_id FunctionAppFlexConsumption#virtual_network_subnet_id}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.webdeployPublishBasicAuthenticationEnabled">WebdeployPublishBasicAuthenticationEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#webdeploy_publish_basic_authentication_enabled FunctionAppFlexConsumption#webdeploy_publish_basic_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.webdeployPublishBasicAuthenticationEnabled">WebdeployPublishBasicAuthenticationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#webdeploy_publish_basic_authentication_enabled FunctionAppFlexConsumption#webdeploy_publish_basic_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.zipDeployFile">ZipDeployFile</a></code> | <code>string</code> | The local path and filename of the Zip packaged application to deploy to this Function App. |
 
 ---
@@ -3996,20 +3996,20 @@ new FunctionAppFlexConsumptionConfig {
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -4056,10 +4056,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -4196,10 +4196,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AlwaysReady`<sup>Optional</sup> <a name="AlwaysReady" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.alwaysReady"></a>
 
 ```csharp
-public object AlwaysReady { get; set; }
+public IResolvable|FunctionAppFlexConsumptionAlwaysReady[] AlwaysReady { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>[]
 
 always_ready block.
 
@@ -4252,10 +4252,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ClientCertificateEnabled`<sup>Optional</sup> <a name="ClientCertificateEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.clientCertificateEnabled"></a>
 
 ```csharp
-public object ClientCertificateEnabled { get; set; }
+public bool|IResolvable ClientCertificateEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the function app use Client Certificates.
 
@@ -4296,10 +4296,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ConnectionString`<sup>Optional</sup> <a name="ConnectionString" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.connectionString"></a>
 
 ```csharp
-public object ConnectionString { get; set; }
+public IResolvable|FunctionAppFlexConsumptionConnectionString[] ConnectionString { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>[]
 
 connection_string block.
 
@@ -4310,10 +4310,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Enabled`<sup>Optional</sup> <a name="Enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.enabled"></a>
 
 ```csharp
-public object Enabled { get; set; }
+public bool|IResolvable Enabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Is the Function App enabled.
 
@@ -4336,10 +4336,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `HttpsOnly`<sup>Optional</sup> <a name="HttpsOnly" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.httpsOnly"></a>
 
 ```csharp
-public object HttpsOnly { get; set; }
+public bool|IResolvable HttpsOnly { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Can the Function App only be accessed via HTTPS?
 
@@ -4403,10 +4403,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `PublicNetworkAccessEnabled`<sup>Optional</sup> <a name="PublicNetworkAccessEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.publicNetworkAccessEnabled"></a>
 
 ```csharp
-public object PublicNetworkAccessEnabled { get; set; }
+public bool|IResolvable PublicNetworkAccessEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#public_network_access_enabled FunctionAppFlexConsumption#public_network_access_enabled}.
 
@@ -4491,10 +4491,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `WebdeployPublishBasicAuthenticationEnabled`<sup>Optional</sup> <a name="WebdeployPublishBasicAuthenticationEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConfig.property.webdeployPublishBasicAuthenticationEnabled"></a>
 
 ```csharp
-public object WebdeployPublishBasicAuthenticationEnabled { get; set; }
+public bool|IResolvable WebdeployPublishBasicAuthenticationEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#webdeploy_publish_basic_authentication_enabled FunctionAppFlexConsumption#webdeploy_publish_basic_authentication_enabled}.
 
@@ -4643,28 +4643,28 @@ new FunctionAppFlexConsumptionSiteConfig {
     string ApplicationInsightsKey = null,
     FunctionAppFlexConsumptionSiteConfigAppServiceLogs AppServiceLogs = null,
     string ContainerRegistryManagedIdentityClientId = null,
-    object ContainerRegistryUseManagedIdentity = null,
+    bool|IResolvable ContainerRegistryUseManagedIdentity = null,
     FunctionAppFlexConsumptionSiteConfigCors Cors = null,
     string[] DefaultDocuments = null,
     double ElasticInstanceMinimum = null,
     double HealthCheckEvictionTimeInMin = null,
     string HealthCheckPath = null,
-    object Http2Enabled = null,
-    object IpRestriction = null,
+    bool|IResolvable Http2Enabled = null,
+    IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestriction[] IpRestriction = null,
     string IpRestrictionDefaultAction = null,
     string LoadBalancingMode = null,
     string ManagedPipelineMode = null,
     string MinimumTlsVersion = null,
-    object RemoteDebuggingEnabled = null,
+    bool|IResolvable RemoteDebuggingEnabled = null,
     string RemoteDebuggingVersion = null,
-    object RuntimeScaleMonitoringEnabled = null,
-    object ScmIpRestriction = null,
+    bool|IResolvable RuntimeScaleMonitoringEnabled = null,
+    IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestriction[] ScmIpRestriction = null,
     string ScmIpRestrictionDefaultAction = null,
     string ScmMinimumTlsVersion = null,
-    object ScmUseMainIpRestriction = null,
-    object Use32BitWorker = null,
-    object VnetRouteAllEnabled = null,
-    object WebsocketsEnabled = null,
+    bool|IResolvable ScmUseMainIpRestriction = null,
+    bool|IResolvable Use32BitWorker = null,
+    bool|IResolvable VnetRouteAllEnabled = null,
+    bool|IResolvable WebsocketsEnabled = null,
     double WorkerCount = null
 };
 ```
@@ -4680,28 +4680,28 @@ new FunctionAppFlexConsumptionSiteConfig {
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.applicationInsightsKey">ApplicationInsightsKey</a></code> | <code>string</code> | The Instrumentation Key for connecting the Linux Function App to Application Insights. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.appServiceLogs">AppServiceLogs</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigAppServiceLogs">FunctionAppFlexConsumptionSiteConfigAppServiceLogs</a></code> | app_service_logs block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.containerRegistryManagedIdentityClientId">ContainerRegistryManagedIdentityClientId</a></code> | <code>string</code> | The Client ID of the Managed Service Identity to use for connections to the Azure Container Registry. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.containerRegistryUseManagedIdentity">ContainerRegistryUseManagedIdentity</a></code> | <code>object</code> | Should connections for Azure Container Registry use Managed Identity. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.containerRegistryUseManagedIdentity">ContainerRegistryUseManagedIdentity</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should connections for Azure Container Registry use Managed Identity. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.cors">Cors</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors">FunctionAppFlexConsumptionSiteConfigCors</a></code> | cors block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.defaultDocuments">DefaultDocuments</a></code> | <code>string[]</code> | Specifies a list of Default Documents for the Linux Web App. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.elasticInstanceMinimum">ElasticInstanceMinimum</a></code> | <code>double</code> | The number of minimum instances for this Linux Function App. Only affects apps on Elastic Premium plans. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.healthCheckEvictionTimeInMin">HealthCheckEvictionTimeInMin</a></code> | <code>double</code> | The amount of time in minutes that a node is unhealthy before being removed from the load balancer. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.healthCheckPath">HealthCheckPath</a></code> | <code>string</code> | The path to be checked for this function app health. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.http2Enabled">Http2Enabled</a></code> | <code>object</code> | Specifies if the http2 protocol should be enabled. Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.ipRestriction">IpRestriction</a></code> | <code>object</code> | ip_restriction block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.http2Enabled">Http2Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Specifies if the http2 protocol should be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.ipRestriction">IpRestriction</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>[]</code> | ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.ipRestrictionDefaultAction">IpRestrictionDefaultAction</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#ip_restriction_default_action FunctionAppFlexConsumption#ip_restriction_default_action}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.loadBalancingMode">LoadBalancingMode</a></code> | <code>string</code> | The Site load balancing mode. Possible values include: `WeightedRoundRobin`, `LeastRequests`, `LeastResponseTime`, `WeightedTotalTraffic`, `RequestHash`, `PerSiteRoundRobin`. Defaults to `LeastRequests` if omitted. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.managedPipelineMode">ManagedPipelineMode</a></code> | <code>string</code> | The Managed Pipeline mode. Possible values include: `Integrated`, `Classic`. Defaults to `Integrated`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.minimumTlsVersion">MinimumTlsVersion</a></code> | <code>string</code> | The configures the minimum version of TLS required for SSL requests. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.remoteDebuggingEnabled">RemoteDebuggingEnabled</a></code> | <code>object</code> | Should Remote Debugging be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.remoteDebuggingEnabled">RemoteDebuggingEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should Remote Debugging be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.remoteDebuggingVersion">RemoteDebuggingVersion</a></code> | <code>string</code> | The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022``. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.runtimeScaleMonitoringEnabled">RuntimeScaleMonitoringEnabled</a></code> | <code>object</code> | Should Functions Runtime Scale Monitoring be enabled. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmIpRestriction">ScmIpRestriction</a></code> | <code>object</code> | scm_ip_restriction block. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.runtimeScaleMonitoringEnabled">RuntimeScaleMonitoringEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should Functions Runtime Scale Monitoring be enabled. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmIpRestriction">ScmIpRestriction</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>[]</code> | scm_ip_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmIpRestrictionDefaultAction">ScmIpRestrictionDefaultAction</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#scm_ip_restriction_default_action FunctionAppFlexConsumption#scm_ip_restriction_default_action}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmMinimumTlsVersion">ScmMinimumTlsVersion</a></code> | <code>string</code> | Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmUseMainIpRestriction">ScmUseMainIpRestriction</a></code> | <code>object</code> | Should the Linux Function App `ip_restriction` configuration be used for the SCM also. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.use32BitWorker">Use32BitWorker</a></code> | <code>object</code> | Should the Linux Function App use a 32-bit worker. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.vnetRouteAllEnabled">VnetRouteAllEnabled</a></code> | <code>object</code> | Should the Linux Function App route all traffic through the virtual network. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.websocketsEnabled">WebsocketsEnabled</a></code> | <code>object</code> | Should Web Sockets be enabled. Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmUseMainIpRestriction">ScmUseMainIpRestriction</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the Linux Function App `ip_restriction` configuration be used for the SCM also. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.use32BitWorker">Use32BitWorker</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the Linux Function App use a 32-bit worker. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.vnetRouteAllEnabled">VnetRouteAllEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should the Linux Function App route all traffic through the virtual network. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.websocketsEnabled">WebsocketsEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Should Web Sockets be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.workerCount">WorkerCount</a></code> | <code>double</code> | The number of Workers for this Linux Function App. |
 
 ---
@@ -4807,10 +4807,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ContainerRegistryUseManagedIdentity`<sup>Optional</sup> <a name="ContainerRegistryUseManagedIdentity" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.containerRegistryUseManagedIdentity"></a>
 
 ```csharp
-public object ContainerRegistryUseManagedIdentity { get; set; }
+public bool|IResolvable ContainerRegistryUseManagedIdentity { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should connections for Azure Container Registry use Managed Identity.
 
@@ -4893,10 +4893,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Http2Enabled`<sup>Optional</sup> <a name="Http2Enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.http2Enabled"></a>
 
 ```csharp
-public object Http2Enabled { get; set; }
+public bool|IResolvable Http2Enabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Specifies if the http2 protocol should be enabled. Defaults to `false`.
 
@@ -4907,10 +4907,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `IpRestriction`<sup>Optional</sup> <a name="IpRestriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.ipRestriction"></a>
 
 ```csharp
-public object IpRestriction { get; set; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestriction[] IpRestriction { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>[]
 
 ip_restriction block.
 
@@ -4977,10 +4977,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RemoteDebuggingEnabled`<sup>Optional</sup> <a name="RemoteDebuggingEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.remoteDebuggingEnabled"></a>
 
 ```csharp
-public object RemoteDebuggingEnabled { get; set; }
+public bool|IResolvable RemoteDebuggingEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should Remote Debugging be enabled. Defaults to `false`.
 
@@ -5005,10 +5005,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `RuntimeScaleMonitoringEnabled`<sup>Optional</sup> <a name="RuntimeScaleMonitoringEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.runtimeScaleMonitoringEnabled"></a>
 
 ```csharp
-public object RuntimeScaleMonitoringEnabled { get; set; }
+public bool|IResolvable RuntimeScaleMonitoringEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should Functions Runtime Scale Monitoring be enabled.
 
@@ -5019,10 +5019,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ScmIpRestriction`<sup>Optional</sup> <a name="ScmIpRestriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmIpRestriction"></a>
 
 ```csharp
-public object ScmIpRestriction { get; set; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestriction[] ScmIpRestriction { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>[]
 
 scm_ip_restriction block.
 
@@ -5059,10 +5059,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ScmUseMainIpRestriction`<sup>Optional</sup> <a name="ScmUseMainIpRestriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.scmUseMainIpRestriction"></a>
 
 ```csharp
-public object ScmUseMainIpRestriction { get; set; }
+public bool|IResolvable ScmUseMainIpRestriction { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the Linux Function App `ip_restriction` configuration be used for the SCM also.
 
@@ -5073,10 +5073,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Use32BitWorker`<sup>Optional</sup> <a name="Use32BitWorker" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.use32BitWorker"></a>
 
 ```csharp
-public object Use32BitWorker { get; set; }
+public bool|IResolvable Use32BitWorker { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the Linux Function App use a 32-bit worker.
 
@@ -5087,10 +5087,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `VnetRouteAllEnabled`<sup>Optional</sup> <a name="VnetRouteAllEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.vnetRouteAllEnabled"></a>
 
 ```csharp
-public object VnetRouteAllEnabled { get; set; }
+public bool|IResolvable VnetRouteAllEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should the Linux Function App route all traffic through the virtual network.
 
@@ -5101,10 +5101,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `WebsocketsEnabled`<sup>Optional</sup> <a name="WebsocketsEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig.property.websocketsEnabled"></a>
 
 ```csharp
-public object WebsocketsEnabled { get; set; }
+public bool|IResolvable WebsocketsEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Should Web Sockets be enabled. Defaults to `false`.
 
@@ -5185,7 +5185,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 
 new FunctionAppFlexConsumptionSiteConfigCors {
     string[] AllowedOrigins = null,
-    object SupportCredentials = null
+    bool|IResolvable SupportCredentials = null
 };
 ```
 
@@ -5194,7 +5194,7 @@ new FunctionAppFlexConsumptionSiteConfigCors {
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors.property.allowedOrigins">AllowedOrigins</a></code> | <code>string[]</code> | Specifies a list of origins that should be allowed to make cross-origin calls. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors.property.supportCredentials">SupportCredentials</a></code> | <code>object</code> | Are credentials allowed in CORS requests? Defaults to `false`. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors.property.supportCredentials">SupportCredentials</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Are credentials allowed in CORS requests? Defaults to `false`. |
 
 ---
 
@@ -5215,10 +5215,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `SupportCredentials`<sup>Optional</sup> <a name="SupportCredentials" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors.property.supportCredentials"></a>
 
 ```csharp
-public object SupportCredentials { get; set; }
+public bool|IResolvable SupportCredentials { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Are credentials allowed in CORS requests? Defaults to `false`.
 
@@ -5236,7 +5236,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 new FunctionAppFlexConsumptionSiteConfigIpRestriction {
     string Action = null,
     string Description = null,
-    object Headers = null,
+    IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders[] Headers = null,
     string IpAddress = null,
     string Name = null,
     double Priority = null,
@@ -5251,7 +5251,7 @@ new FunctionAppFlexConsumptionSiteConfigIpRestriction {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.action">Action</a></code> | <code>string</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.description">Description</a></code> | <code>string</code> | The description of the IP restriction rule. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.headers">Headers</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.headers">Headers</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.ipAddress">IpAddress</a></code> | <code>string</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.name">Name</a></code> | <code>string</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.priority">Priority</a></code> | <code>double</code> | The priority value of this `ip_restriction`. |
@@ -5291,10 +5291,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Headers`<sup>Optional</sup> <a name="Headers" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction.property.headers"></a>
 
 ```csharp
-public object Headers { get; set; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders[] Headers { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>[]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}.
 
@@ -5456,7 +5456,7 @@ using HashiCorp.Cdktf.Providers.Azurerm;
 new FunctionAppFlexConsumptionSiteConfigScmIpRestriction {
     string Action = null,
     string Description = null,
-    object Headers = null,
+    IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders[] Headers = null,
     string IpAddress = null,
     string Name = null,
     double Priority = null,
@@ -5471,7 +5471,7 @@ new FunctionAppFlexConsumptionSiteConfigScmIpRestriction {
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.action">Action</a></code> | <code>string</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.description">Description</a></code> | <code>string</code> | The description of the IP restriction rule. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.headers">Headers</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.headers">Headers</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.ipAddress">IpAddress</a></code> | <code>string</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.name">Name</a></code> | <code>string</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.priority">Priority</a></code> | <code>double</code> | The priority value of this `ip_restriction`. |
@@ -5511,10 +5511,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Headers`<sup>Optional</sup> <a name="Headers" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction.property.headers"></a>
 
 ```csharp
-public object Headers { get; set; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders[] Headers { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>[]
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_flex_consumption#headers FunctionAppFlexConsumption#headers}.
 
@@ -5922,7 +5922,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>[]</code> | *No description.* |
 
 ---
 
@@ -5953,10 +5953,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionAlwaysReady[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>[]
 
 ---
 
@@ -6200,7 +6200,7 @@ private void ResetInstanceCount()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.instanceCount">InstanceCount</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a></code> | *No description.* |
 
 ---
 
@@ -6271,10 +6271,10 @@ public string Name { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReadyOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionAlwaysReady InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAlwaysReady">FunctionAppFlexConsumptionAlwaysReady</a>
 
 ---
 
@@ -8465,7 +8465,7 @@ private void ResetUnauthenticatedClientAction()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.additionalLoginParametersInput">AdditionalLoginParametersInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.allowedExternalRedirectUrlsInput">AllowedExternalRedirectUrlsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.defaultProviderInput">DefaultProviderInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabledInput">EnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabledInput">EnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.facebookInput">FacebookInput</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsFacebook">FunctionAppFlexConsumptionAuthSettingsFacebook</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.githubInput">GithubInput</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsGithub">FunctionAppFlexConsumptionAuthSettingsGithub</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.googleInput">GoogleInput</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsGoogle">FunctionAppFlexConsumptionAuthSettingsGoogle</a></code> | *No description.* |
@@ -8473,17 +8473,17 @@ private void ResetUnauthenticatedClientAction()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.microsoftInput">MicrosoftInput</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsMicrosoft">FunctionAppFlexConsumptionAuthSettingsMicrosoft</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.runtimeVersionInput">RuntimeVersionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenRefreshExtensionHoursInput">TokenRefreshExtensionHoursInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabledInput">TokenStoreEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabledInput">TokenStoreEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.twitterInput">TwitterInput</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsTwitter">FunctionAppFlexConsumptionAuthSettingsTwitter</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.unauthenticatedClientActionInput">UnauthenticatedClientActionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.additionalLoginParameters">AdditionalLoginParameters</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.allowedExternalRedirectUrls">AllowedExternalRedirectUrls</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.defaultProvider">DefaultProvider</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabled">Enabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabled">Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.issuer">Issuer</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.runtimeVersion">RuntimeVersion</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenRefreshExtensionHours">TokenRefreshExtensionHours</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.unauthenticatedClientAction">UnauthenticatedClientAction</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettings">FunctionAppFlexConsumptionAuthSettings</a></code> | *No description.* |
 
@@ -8616,10 +8616,10 @@ public string DefaultProviderInput { get; }
 ##### `EnabledInput`<sup>Optional</sup> <a name="EnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabledInput"></a>
 
 ```csharp
-public object EnabledInput { get; }
+public bool|IResolvable EnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -8696,10 +8696,10 @@ public double TokenRefreshExtensionHoursInput { get; }
 ##### `TokenStoreEnabledInput`<sup>Optional</sup> <a name="TokenStoreEnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabledInput"></a>
 
 ```csharp
-public object TokenStoreEnabledInput { get; }
+public bool|IResolvable TokenStoreEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -8756,10 +8756,10 @@ public string DefaultProvider { get; }
 ##### `Enabled`<sup>Required</sup> <a name="Enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.enabled"></a>
 
 ```csharp
-public object Enabled { get; }
+public bool|IResolvable Enabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -8796,10 +8796,10 @@ public double TokenRefreshExtensionHours { get; }
 ##### `TokenStoreEnabled`<sup>Required</sup> <a name="TokenStoreEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsOutputReference.property.tokenStoreEnabled"></a>
 
 ```csharp
-public object TokenStoreEnabled { get; }
+public bool|IResolvable TokenStoreEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9444,7 +9444,7 @@ private void ResetWwwAuthenticationDisabled()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroupsInput">JwtAllowedGroupsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParametersInput">LoginParametersInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpointInput">TenantAuthEndpointInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput">WwwAuthenticationDisabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput">WwwAuthenticationDisabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedApplications">AllowedApplications</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedAudiences">AllowedAudiences</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.allowedGroups">AllowedGroups</a></code> | <code>string[]</code> | *No description.* |
@@ -9456,7 +9456,7 @@ private void ResetWwwAuthenticationDisabled()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.jwtAllowedGroups">JwtAllowedGroups</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.loginParameters">LoginParameters</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.tenantAuthEndpoint">TenantAuthEndpoint</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled">WwwAuthenticationDisabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled">WwwAuthenticationDisabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2">FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
 
 ---
@@ -9598,10 +9598,10 @@ public string TenantAuthEndpointInput { get; }
 ##### `WwwAuthenticationDisabledInput`<sup>Optional</sup> <a name="WwwAuthenticationDisabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabledInput"></a>
 
 ```csharp
-public object WwwAuthenticationDisabledInput { get; }
+public bool|IResolvable WwwAuthenticationDisabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -9718,10 +9718,10 @@ public string TenantAuthEndpoint { get; }
 ##### `WwwAuthenticationDisabled`<sup>Required</sup> <a name="WwwAuthenticationDisabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2OutputReference.property.wwwAuthenticationDisabled"></a>
 
 ```csharp
-public object WwwAuthenticationDisabled { get; }
+public bool|IResolvable WwwAuthenticationDisabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -10432,7 +10432,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2List.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2List.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2List.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2List.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>[]</code> | *No description.* |
 
 ---
 
@@ -10463,10 +10463,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2List.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>[]
 
 ---
 
@@ -10729,7 +10729,7 @@ private void ResetScopes()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.nameClaimType">NameClaimType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.openidConfigurationEndpoint">OpenidConfigurationEndpoint</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.scopes">Scopes</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a></code> | *No description.* |
 
 ---
 
@@ -10920,10 +10920,10 @@ public string[] Scopes { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2OutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2 InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>
 
 ---
 
@@ -12244,23 +12244,23 @@ private void ResetValidateNonce()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.cookieExpirationTimeInput">CookieExpirationTimeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.logoutEndpointInput">LogoutEndpointInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.nonceExpirationTimeInput">NonceExpirationTimeInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput">PreserveUrlFragmentsForLoginsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput">PreserveUrlFragmentsForLoginsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTimeInput">TokenRefreshExtensionTimeInput</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput">TokenStoreEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput">TokenStoreEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStorePathInput">TokenStorePathInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingNameInput">TokenStoreSasSettingNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonceInput">ValidateNonceInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonceInput">ValidateNonceInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.allowedExternalRedirectUrls">AllowedExternalRedirectUrls</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.cookieExpirationConvention">CookieExpirationConvention</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.cookieExpirationTime">CookieExpirationTime</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.logoutEndpoint">LogoutEndpoint</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.nonceExpirationTime">NonceExpirationTime</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins">PreserveUrlFragmentsForLogins</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins">PreserveUrlFragmentsForLogins</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenRefreshExtensionTime">TokenRefreshExtensionTime</a></code> | <code>double</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled">TokenStoreEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStorePath">TokenStorePath</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreSasSettingName">TokenStoreSasSettingName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonce">ValidateNonce</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonce">ValidateNonce</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login">FunctionAppFlexConsumptionAuthSettingsV2Login</a></code> | *No description.* |
 
 ---
@@ -12342,10 +12342,10 @@ public string NonceExpirationTimeInput { get; }
 ##### `PreserveUrlFragmentsForLoginsInput`<sup>Optional</sup> <a name="PreserveUrlFragmentsForLoginsInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLoginsInput"></a>
 
 ```csharp
-public object PreserveUrlFragmentsForLoginsInput { get; }
+public bool|IResolvable PreserveUrlFragmentsForLoginsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12362,10 +12362,10 @@ public double TokenRefreshExtensionTimeInput { get; }
 ##### `TokenStoreEnabledInput`<sup>Optional</sup> <a name="TokenStoreEnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabledInput"></a>
 
 ```csharp
-public object TokenStoreEnabledInput { get; }
+public bool|IResolvable TokenStoreEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12392,10 +12392,10 @@ public string TokenStoreSasSettingNameInput { get; }
 ##### `ValidateNonceInput`<sup>Optional</sup> <a name="ValidateNonceInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonceInput"></a>
 
 ```csharp
-public object ValidateNonceInput { get; }
+public bool|IResolvable ValidateNonceInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12452,10 +12452,10 @@ public string NonceExpirationTime { get; }
 ##### `PreserveUrlFragmentsForLogins`<sup>Required</sup> <a name="PreserveUrlFragmentsForLogins" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.preserveUrlFragmentsForLogins"></a>
 
 ```csharp
-public object PreserveUrlFragmentsForLogins { get; }
+public bool|IResolvable PreserveUrlFragmentsForLogins { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12472,10 +12472,10 @@ public double TokenRefreshExtensionTime { get; }
 ##### `TokenStoreEnabled`<sup>Required</sup> <a name="TokenStoreEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.tokenStoreEnabled"></a>
 
 ```csharp
-public object TokenStoreEnabled { get; }
+public bool|IResolvable TokenStoreEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -12502,10 +12502,10 @@ public string TokenStoreSasSettingName { get; }
 ##### `ValidateNonce`<sup>Required</sup> <a name="ValidateNonce" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2LoginOutputReference.property.validateNonce"></a>
 
 ```csharp
-public object ValidateNonce { get; }
+public bool|IResolvable ValidateNonce { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -13144,12 +13144,12 @@ private void PutAzureStaticWebAppV2(FunctionAppFlexConsumptionAuthSettingsV2Azur
 ##### `PutCustomOidcV2` <a name="PutCustomOidcV2" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.putCustomOidcV2"></a>
 
 ```csharp
-private void PutCustomOidcV2(object Value)
+private void PutCustomOidcV2(IResolvable|FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.putCustomOidcV2.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>[]
 
 ---
 
@@ -13370,10 +13370,10 @@ private void ResetUnauthenticatedAction()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.twitterV2">TwitterV2</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2TwitterV2OutputReference">FunctionAppFlexConsumptionAuthSettingsV2TwitterV2OutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.activeDirectoryV2Input">ActiveDirectoryV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2">FunctionAppFlexConsumptionAuthSettingsV2ActiveDirectoryV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.appleV2Input">AppleV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2AppleV2">FunctionAppFlexConsumptionAuthSettingsV2AppleV2</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabledInput">AuthEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabledInput">AuthEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.azureStaticWebAppV2Input">AzureStaticWebAppV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2AzureStaticWebAppV2">FunctionAppFlexConsumptionAuthSettingsV2AzureStaticWebAppV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.configFilePathInput">ConfigFilePathInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.customOidcV2Input">CustomOidcV2Input</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.customOidcV2Input">CustomOidcV2Input</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.defaultProviderInput">DefaultProviderInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.excludedPathsInput">ExcludedPathsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.facebookV2Input">FacebookV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2FacebookV2">FunctionAppFlexConsumptionAuthSettingsV2FacebookV2</a></code> | *No description.* |
@@ -13385,12 +13385,12 @@ private void ResetUnauthenticatedAction()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.httpRouteApiPrefixInput">HttpRouteApiPrefixInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.loginInput">LoginInput</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2Login">FunctionAppFlexConsumptionAuthSettingsV2Login</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.microsoftV2Input">MicrosoftV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2">FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthenticationInput">RequireAuthenticationInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttpsInput">RequireHttpsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthenticationInput">RequireAuthenticationInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttpsInput">RequireHttpsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.runtimeVersionInput">RuntimeVersionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.twitterV2Input">TwitterV2Input</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2TwitterV2">FunctionAppFlexConsumptionAuthSettingsV2TwitterV2</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.unauthenticatedActionInput">UnauthenticatedActionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabled">AuthEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabled">AuthEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.configFilePath">ConfigFilePath</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.defaultProvider">DefaultProvider</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.excludedPaths">ExcludedPaths</a></code> | <code>string[]</code> | *No description.* |
@@ -13398,8 +13398,8 @@ private void ResetUnauthenticatedAction()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.forwardProxyCustomHostHeaderName">ForwardProxyCustomHostHeaderName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.forwardProxyCustomSchemeHeaderName">ForwardProxyCustomSchemeHeaderName</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.httpRouteApiPrefix">HttpRouteApiPrefix</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthentication">RequireAuthentication</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttps">RequireHttps</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthentication">RequireAuthentication</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttps">RequireHttps</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.runtimeVersion">RuntimeVersion</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.unauthenticatedAction">UnauthenticatedAction</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2">FunctionAppFlexConsumptionAuthSettingsV2</a></code> | *No description.* |
@@ -13553,10 +13553,10 @@ public FunctionAppFlexConsumptionAuthSettingsV2AppleV2 AppleV2Input { get; }
 ##### `AuthEnabledInput`<sup>Optional</sup> <a name="AuthEnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabledInput"></a>
 
 ```csharp
-public object AuthEnabledInput { get; }
+public bool|IResolvable AuthEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -13583,10 +13583,10 @@ public string ConfigFilePathInput { get; }
 ##### `CustomOidcV2Input`<sup>Optional</sup> <a name="CustomOidcV2Input" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.customOidcV2Input"></a>
 
 ```csharp
-public object CustomOidcV2Input { get; }
+public IResolvable|FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2[] CustomOidcV2Input { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2">FunctionAppFlexConsumptionAuthSettingsV2CustomOidcV2</a>[]
 
 ---
 
@@ -13703,20 +13703,20 @@ public FunctionAppFlexConsumptionAuthSettingsV2MicrosoftV2 MicrosoftV2Input { ge
 ##### `RequireAuthenticationInput`<sup>Optional</sup> <a name="RequireAuthenticationInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthenticationInput"></a>
 
 ```csharp
-public object RequireAuthenticationInput { get; }
+public bool|IResolvable RequireAuthenticationInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `RequireHttpsInput`<sup>Optional</sup> <a name="RequireHttpsInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttpsInput"></a>
 
 ```csharp
-public object RequireHttpsInput { get; }
+public bool|IResolvable RequireHttpsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -13753,10 +13753,10 @@ public string UnauthenticatedActionInput { get; }
 ##### `AuthEnabled`<sup>Required</sup> <a name="AuthEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.authEnabled"></a>
 
 ```csharp
-public object AuthEnabled { get; }
+public bool|IResolvable AuthEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -13833,20 +13833,20 @@ public string HttpRouteApiPrefix { get; }
 ##### `RequireAuthentication`<sup>Required</sup> <a name="RequireAuthentication" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireAuthentication"></a>
 
 ```csharp
-public object RequireAuthentication { get; }
+public bool|IResolvable RequireAuthentication { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `RequireHttps`<sup>Required</sup> <a name="RequireHttps" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionAuthSettingsV2OutputReference.property.requireHttps"></a>
 
 ```csharp
-public object RequireHttps { get; }
+public bool|IResolvable RequireHttps { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -14295,7 +14295,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>[]</code> | *No description.* |
 
 ---
 
@@ -14326,10 +14326,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionConnectionString[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>[]
 
 ---
 
@@ -14568,7 +14568,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.name">Name</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.type">Type</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.value">Value</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a></code> | *No description.* |
 
 ---
 
@@ -14659,10 +14659,10 @@ public string Value { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionStringOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionConnectionString InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionConnectionString">FunctionAppFlexConsumptionConnectionString</a>
 
 ---
 
@@ -15521,9 +15521,9 @@ private void ResetSupportCredentials()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.allowedOriginsInput">AllowedOriginsInput</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentialsInput">SupportCredentialsInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentialsInput">SupportCredentialsInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.allowedOrigins">AllowedOrigins</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentials">SupportCredentials</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentials">SupportCredentials</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors">FunctionAppFlexConsumptionSiteConfigCors</a></code> | *No description.* |
 
 ---
@@ -15565,10 +15565,10 @@ public string[] AllowedOriginsInput { get; }
 ##### `SupportCredentialsInput`<sup>Optional</sup> <a name="SupportCredentialsInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentialsInput"></a>
 
 ```csharp
-public object SupportCredentialsInput { get; }
+public bool|IResolvable SupportCredentialsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -15585,10 +15585,10 @@ public string[] AllowedOrigins { get; }
 ##### `SupportCredentials`<sup>Required</sup> <a name="SupportCredentials" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCorsOutputReference.property.supportCredentials"></a>
 
 ```csharp
-public object SupportCredentials { get; }
+public bool|IResolvable SupportCredentials { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -15724,7 +15724,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>[]</code> | *No description.* |
 
 ---
 
@@ -15755,10 +15755,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>[]
 
 ---
 
@@ -16027,7 +16027,7 @@ private void ResetXForwardedHost()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.xFdHealthProbe">XFdHealthProbe</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedFor">XForwardedFor</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.xForwardedHost">XForwardedHost</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -16138,10 +16138,10 @@ public string[] XForwardedHost { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>
 
 ---
 
@@ -16267,7 +16267,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>[]</code> | *No description.* |
 
 ---
 
@@ -16298,10 +16298,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestriction[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>[]
 
 ---
 
@@ -16539,12 +16539,12 @@ Returns a reversible string representation.
 ##### `PutHeaders` <a name="PutHeaders" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.putHeaders"></a>
 
 ```csharp
-private void PutHeaders(object Value)
+private void PutHeaders(IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.putHeaders.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>[]
 
 ---
 
@@ -16606,7 +16606,7 @@ private void ResetVirtualNetworkSubnetId()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.headers">Headers</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeadersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.actionInput">ActionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.headersInput">HeadersInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.headersInput">HeadersInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.ipAddressInput">IpAddressInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.priorityInput">PriorityInput</a></code> | <code>double</code> | *No description.* |
@@ -16619,7 +16619,7 @@ private void ResetVirtualNetworkSubnetId()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.priority">Priority</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.serviceTag">ServiceTag</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -16680,10 +16680,10 @@ public string DescriptionInput { get; }
 ##### `HeadersInput`<sup>Optional</sup> <a name="HeadersInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.headersInput"></a>
 
 ```csharp
-public object HeadersInput { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders[] HeadersInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigIpRestrictionHeaders</a>[]
 
 ---
 
@@ -16810,10 +16810,10 @@ public string VirtualNetworkSubnetId { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestrictionOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestriction InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>
 
 ---
 
@@ -17082,24 +17082,24 @@ private void PutCors(FunctionAppFlexConsumptionSiteConfigCors Value)
 ##### `PutIpRestriction` <a name="PutIpRestriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.putIpRestriction"></a>
 
 ```csharp
-private void PutIpRestriction(object Value)
+private void PutIpRestriction(IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestriction[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.putIpRestriction.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>[]
 
 ---
 
 ##### `PutScmIpRestriction` <a name="PutScmIpRestriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.putScmIpRestriction"></a>
 
 ```csharp
-private void PutScmIpRestriction(object Value)
+private void PutScmIpRestriction(IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestriction[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.putScmIpRestriction.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>[]
 
 ---
 
@@ -17303,28 +17303,28 @@ private void ResetWorkerCount()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.applicationInsightsKeyInput">ApplicationInsightsKeyInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.appServiceLogsInput">AppServiceLogsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigAppServiceLogs">FunctionAppFlexConsumptionSiteConfigAppServiceLogs</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryManagedIdentityClientIdInput">ContainerRegistryManagedIdentityClientIdInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentityInput">ContainerRegistryUseManagedIdentityInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentityInput">ContainerRegistryUseManagedIdentityInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.corsInput">CorsInput</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigCors">FunctionAppFlexConsumptionSiteConfigCors</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.defaultDocumentsInput">DefaultDocumentsInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.elasticInstanceMinimumInput">ElasticInstanceMinimumInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.healthCheckEvictionTimeInMinInput">HealthCheckEvictionTimeInMinInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.healthCheckPathInput">HealthCheckPathInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2EnabledInput">Http2EnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2EnabledInput">Http2EnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.ipRestrictionDefaultActionInput">IpRestrictionDefaultActionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.ipRestrictionInput">IpRestrictionInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.ipRestrictionInput">IpRestrictionInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.loadBalancingModeInput">LoadBalancingModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.managedPipelineModeInput">ManagedPipelineModeInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.minimumTlsVersionInput">MinimumTlsVersionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabledInput">RemoteDebuggingEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabledInput">RemoteDebuggingEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingVersionInput">RemoteDebuggingVersionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabledInput">RuntimeScaleMonitoringEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabledInput">RuntimeScaleMonitoringEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmIpRestrictionDefaultActionInput">ScmIpRestrictionDefaultActionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmIpRestrictionInput">ScmIpRestrictionInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmIpRestrictionInput">ScmIpRestrictionInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmMinimumTlsVersionInput">ScmMinimumTlsVersionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestrictionInput">ScmUseMainIpRestrictionInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorkerInput">Use32BitWorkerInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabledInput">VnetRouteAllEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabledInput">WebsocketsEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestrictionInput">ScmUseMainIpRestrictionInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorkerInput">Use32BitWorkerInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabledInput">VnetRouteAllEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabledInput">WebsocketsEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.workerCountInput">WorkerCountInput</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.apiDefinitionUrl">ApiDefinitionUrl</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.apiManagementApiId">ApiManagementApiId</a></code> | <code>string</code> | *No description.* |
@@ -17332,25 +17332,25 @@ private void ResetWorkerCount()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.applicationInsightsConnectionString">ApplicationInsightsConnectionString</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.applicationInsightsKey">ApplicationInsightsKey</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryManagedIdentityClientId">ContainerRegistryManagedIdentityClientId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentity">ContainerRegistryUseManagedIdentity</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentity">ContainerRegistryUseManagedIdentity</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.defaultDocuments">DefaultDocuments</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.elasticInstanceMinimum">ElasticInstanceMinimum</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.healthCheckEvictionTimeInMin">HealthCheckEvictionTimeInMin</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.healthCheckPath">HealthCheckPath</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2Enabled">Http2Enabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2Enabled">Http2Enabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.ipRestrictionDefaultAction">IpRestrictionDefaultAction</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.loadBalancingMode">LoadBalancingMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.managedPipelineMode">ManagedPipelineMode</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.minimumTlsVersion">MinimumTlsVersion</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabled">RemoteDebuggingEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabled">RemoteDebuggingEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingVersion">RemoteDebuggingVersion</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabled">RuntimeScaleMonitoringEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabled">RuntimeScaleMonitoringEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmIpRestrictionDefaultAction">ScmIpRestrictionDefaultAction</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmMinimumTlsVersion">ScmMinimumTlsVersion</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestriction">ScmUseMainIpRestriction</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorker">Use32BitWorker</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabled">VnetRouteAllEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabled">WebsocketsEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestriction">ScmUseMainIpRestriction</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorker">Use32BitWorker</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabled">VnetRouteAllEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabled">WebsocketsEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.workerCount">WorkerCount</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.internalValue">InternalValue</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfig">FunctionAppFlexConsumptionSiteConfig</a></code> | *No description.* |
 
@@ -17513,10 +17513,10 @@ public string ContainerRegistryManagedIdentityClientIdInput { get; }
 ##### `ContainerRegistryUseManagedIdentityInput`<sup>Optional</sup> <a name="ContainerRegistryUseManagedIdentityInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentityInput"></a>
 
 ```csharp
-public object ContainerRegistryUseManagedIdentityInput { get; }
+public bool|IResolvable ContainerRegistryUseManagedIdentityInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17573,10 +17573,10 @@ public string HealthCheckPathInput { get; }
 ##### `Http2EnabledInput`<sup>Optional</sup> <a name="Http2EnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2EnabledInput"></a>
 
 ```csharp
-public object Http2EnabledInput { get; }
+public bool|IResolvable Http2EnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17593,10 +17593,10 @@ public string IpRestrictionDefaultActionInput { get; }
 ##### `IpRestrictionInput`<sup>Optional</sup> <a name="IpRestrictionInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.ipRestrictionInput"></a>
 
 ```csharp
-public object IpRestrictionInput { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigIpRestriction[] IpRestrictionInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigIpRestriction">FunctionAppFlexConsumptionSiteConfigIpRestriction</a>[]
 
 ---
 
@@ -17633,10 +17633,10 @@ public string MinimumTlsVersionInput { get; }
 ##### `RemoteDebuggingEnabledInput`<sup>Optional</sup> <a name="RemoteDebuggingEnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabledInput"></a>
 
 ```csharp
-public object RemoteDebuggingEnabledInput { get; }
+public bool|IResolvable RemoteDebuggingEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17653,10 +17653,10 @@ public string RemoteDebuggingVersionInput { get; }
 ##### `RuntimeScaleMonitoringEnabledInput`<sup>Optional</sup> <a name="RuntimeScaleMonitoringEnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabledInput"></a>
 
 ```csharp
-public object RuntimeScaleMonitoringEnabledInput { get; }
+public bool|IResolvable RuntimeScaleMonitoringEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17673,10 +17673,10 @@ public string ScmIpRestrictionDefaultActionInput { get; }
 ##### `ScmIpRestrictionInput`<sup>Optional</sup> <a name="ScmIpRestrictionInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmIpRestrictionInput"></a>
 
 ```csharp
-public object ScmIpRestrictionInput { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestriction[] ScmIpRestrictionInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>[]
 
 ---
 
@@ -17693,40 +17693,40 @@ public string ScmMinimumTlsVersionInput { get; }
 ##### `ScmUseMainIpRestrictionInput`<sup>Optional</sup> <a name="ScmUseMainIpRestrictionInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestrictionInput"></a>
 
 ```csharp
-public object ScmUseMainIpRestrictionInput { get; }
+public bool|IResolvable ScmUseMainIpRestrictionInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `Use32BitWorkerInput`<sup>Optional</sup> <a name="Use32BitWorkerInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorkerInput"></a>
 
 ```csharp
-public object Use32BitWorkerInput { get; }
+public bool|IResolvable Use32BitWorkerInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `VnetRouteAllEnabledInput`<sup>Optional</sup> <a name="VnetRouteAllEnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabledInput"></a>
 
 ```csharp
-public object VnetRouteAllEnabledInput { get; }
+public bool|IResolvable VnetRouteAllEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `WebsocketsEnabledInput`<sup>Optional</sup> <a name="WebsocketsEnabledInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabledInput"></a>
 
 ```csharp
-public object WebsocketsEnabledInput { get; }
+public bool|IResolvable WebsocketsEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17803,10 +17803,10 @@ public string ContainerRegistryManagedIdentityClientId { get; }
 ##### `ContainerRegistryUseManagedIdentity`<sup>Required</sup> <a name="ContainerRegistryUseManagedIdentity" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.containerRegistryUseManagedIdentity"></a>
 
 ```csharp
-public object ContainerRegistryUseManagedIdentity { get; }
+public bool|IResolvable ContainerRegistryUseManagedIdentity { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17853,10 +17853,10 @@ public string HealthCheckPath { get; }
 ##### `Http2Enabled`<sup>Required</sup> <a name="Http2Enabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.http2Enabled"></a>
 
 ```csharp
-public object Http2Enabled { get; }
+public bool|IResolvable Http2Enabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17903,10 +17903,10 @@ public string MinimumTlsVersion { get; }
 ##### `RemoteDebuggingEnabled`<sup>Required</sup> <a name="RemoteDebuggingEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.remoteDebuggingEnabled"></a>
 
 ```csharp
-public object RemoteDebuggingEnabled { get; }
+public bool|IResolvable RemoteDebuggingEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17923,10 +17923,10 @@ public string RemoteDebuggingVersion { get; }
 ##### `RuntimeScaleMonitoringEnabled`<sup>Required</sup> <a name="RuntimeScaleMonitoringEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.runtimeScaleMonitoringEnabled"></a>
 
 ```csharp
-public object RuntimeScaleMonitoringEnabled { get; }
+public bool|IResolvable RuntimeScaleMonitoringEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -17953,40 +17953,40 @@ public string ScmMinimumTlsVersion { get; }
 ##### `ScmUseMainIpRestriction`<sup>Required</sup> <a name="ScmUseMainIpRestriction" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.scmUseMainIpRestriction"></a>
 
 ```csharp
-public object ScmUseMainIpRestriction { get; }
+public bool|IResolvable ScmUseMainIpRestriction { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `Use32BitWorker`<sup>Required</sup> <a name="Use32BitWorker" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.use32BitWorker"></a>
 
 ```csharp
-public object Use32BitWorker { get; }
+public bool|IResolvable Use32BitWorker { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `VnetRouteAllEnabled`<sup>Required</sup> <a name="VnetRouteAllEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.vnetRouteAllEnabled"></a>
 
 ```csharp
-public object VnetRouteAllEnabled { get; }
+public bool|IResolvable VnetRouteAllEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `WebsocketsEnabled`<sup>Required</sup> <a name="WebsocketsEnabled" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigOutputReference.property.websocketsEnabled"></a>
 
 ```csharp
-public object WebsocketsEnabled { get; }
+public bool|IResolvable WebsocketsEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -18132,7 +18132,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>[]</code> | *No description.* |
 
 ---
 
@@ -18163,10 +18163,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>[]
 
 ---
 
@@ -18435,7 +18435,7 @@ private void ResetXForwardedHost()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.xFdHealthProbe">XFdHealthProbe</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedFor">XForwardedFor</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.xForwardedHost">XForwardedHost</a></code> | <code>string[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a></code> | *No description.* |
 
 ---
 
@@ -18546,10 +18546,10 @@ public string[] XForwardedHost { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>
 
 ---
 
@@ -18675,7 +18675,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionList.property.creationStack">CreationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionList.property.fqn">Fqn</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionList.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionList.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>[]</code> | *No description.* |
 
 ---
 
@@ -18706,10 +18706,10 @@ public string Fqn { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionList.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestriction[] InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>[]
 
 ---
 
@@ -18947,12 +18947,12 @@ Returns a reversible string representation.
 ##### `PutHeaders` <a name="PutHeaders" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.putHeaders"></a>
 
 ```csharp
-private void PutHeaders(object Value)
+private void PutHeaders(IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders[] Value)
 ```
 
 ###### `Value`<sup>Required</sup> <a name="Value" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.putHeaders.parameter.value"></a>
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>[]
 
 ---
 
@@ -19014,7 +19014,7 @@ private void ResetVirtualNetworkSubnetId()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.headers">Headers</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeadersList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.actionInput">ActionInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.headersInput">HeadersInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.headersInput">HeadersInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.ipAddressInput">IpAddressInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.nameInput">NameInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.priorityInput">PriorityInput</a></code> | <code>double</code> | *No description.* |
@@ -19027,7 +19027,7 @@ private void ResetVirtualNetworkSubnetId()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.priority">Priority</a></code> | <code>double</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.serviceTag">ServiceTag</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.virtualNetworkSubnetId">VirtualNetworkSubnetId</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a></code> | *No description.* |
 
 ---
 
@@ -19088,10 +19088,10 @@ public string DescriptionInput { get; }
 ##### `HeadersInput`<sup>Optional</sup> <a name="HeadersInput" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.headersInput"></a>
 
 ```csharp
-public object HeadersInput { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders[] HeadersInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders">FunctionAppFlexConsumptionSiteConfigScmIpRestrictionHeaders</a>[]
 
 ---
 
@@ -19218,10 +19218,10 @@ public string VirtualNetworkSubnetId { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestrictionOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionSiteConfigScmIpRestriction InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionSiteConfigScmIpRestriction">FunctionAppFlexConsumptionSiteConfigScmIpRestriction</a>
 
 ---
 
@@ -20217,7 +20217,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.read">Read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -20328,10 +20328,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|FunctionAppFlexConsumptionTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.functionAppFlexConsumption.FunctionAppFlexConsumptionTimeouts">FunctionAppFlexConsumptionTimeouts</a>
 
 ---
 

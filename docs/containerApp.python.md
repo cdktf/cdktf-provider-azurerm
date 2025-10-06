@@ -14,13 +14,13 @@ from cdktf_cdktf_provider_azurerm import container_app
 containerApp.ContainerApp(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   container_app_environment_id: str,
   name: str,
   resource_group_name: str,
@@ -31,8 +31,8 @@ containerApp.ContainerApp(
   identity: ContainerAppIdentity = None,
   ingress: ContainerAppIngress = None,
   max_inactive_revisions: typing.Union[int, float] = None,
-  registry: typing.Union[IResolvable, typing.List[ContainerAppRegistry]] = None,
-  secret: typing.Union[IResolvable, typing.List[ContainerAppSecret]] = None,
+  registry: IResolvable | typing.List[ContainerAppRegistry] = None,
+  secret: IResolvable | typing.List[ContainerAppSecret] = None,
   tags: typing.Mapping[str] = None,
   timeouts: ContainerAppTimeouts = None,
   workload_profile_name: str = None
@@ -43,13 +43,13 @@ containerApp.ContainerApp(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.containerAppEnvironmentId">container_app_environment_id</a></code> | <code>str</code> | The ID of the Container App Environment to host this Container App. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.name">name</a></code> | <code>str</code> | The name for this Container App. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}. |
@@ -60,8 +60,8 @@ containerApp.ContainerApp(
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIdentity">ContainerAppIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.ingress">ingress</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress">ContainerAppIngress</a></code> | ingress block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.maxInactiveRevisions">max_inactive_revisions</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#max_inactive_revisions ContainerApp#max_inactive_revisions}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.registry">registry</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]]</code> | registry block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.secret">secret</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]]</code> | secret block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.registry">registry</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]</code> | registry block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.secret">secret</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]</code> | secret block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#tags ContainerApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.workloadProfileName">workload_profile_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#workload_profile_name ContainerApp#workload_profile_name}. |
@@ -88,13 +88,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -124,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -225,7 +225,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `registry`<sup>Optional</sup> <a name="registry" id="@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.registry"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]
 
 registry block.
 
@@ -235,7 +235,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `secret`<sup>Optional</sup> <a name="secret" id="@cdktf/provider-azurerm.containerApp.ContainerApp.Initializer.parameter.secret"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]
 
 secret block.
 
@@ -538,7 +538,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.containerApp.ContainerApp.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.containerApp.ContainerApp.importFrom"></a>
@@ -601,7 +601,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -617,7 +617,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.containerApp.ContainerApp.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -711,13 +711,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ```python
 def put_ingress(
   target_port: typing.Union[int, float],
-  traffic_weight: typing.Union[IResolvable, typing.List[ContainerAppIngressTrafficWeight]],
-  allow_insecure_connections: typing.Union[bool, IResolvable] = None,
+  traffic_weight: IResolvable | typing.List[ContainerAppIngressTrafficWeight],
+  allow_insecure_connections: bool | IResolvable = None,
   client_certificate_mode: str = None,
   cors: ContainerAppIngressCors = None,
   exposed_port: typing.Union[int, float] = None,
-  external_enabled: typing.Union[bool, IResolvable] = None,
-  ip_security_restriction: typing.Union[IResolvable, typing.List[ContainerAppIngressIpSecurityRestriction]] = None,
+  external_enabled: bool | IResolvable = None,
+  ip_security_restriction: IResolvable | typing.List[ContainerAppIngressIpSecurityRestriction] = None,
   transport: str = None
 ) -> None
 ```
@@ -734,7 +734,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `traffic_weight`<sup>Required</sup> <a name="traffic_weight" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putIngress.parameter.trafficWeight"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]
 
 traffic_weight block.
 
@@ -744,7 +744,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `allow_insecure_connections`<sup>Optional</sup> <a name="allow_insecure_connections" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putIngress.parameter.allowInsecureConnections"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should this ingress allow insecure connections?
 
@@ -786,7 +786,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `external_enabled`<sup>Optional</sup> <a name="external_enabled" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putIngress.parameter.externalEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Is this an external Ingress.
 
@@ -796,7 +796,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `ip_security_restriction`<sup>Optional</sup> <a name="ip_security_restriction" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putIngress.parameter.ipSecurityRestriction"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]
 
 ip_security_restriction block.
 
@@ -818,13 +818,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_registry(
-  value: typing.Union[IResolvable, typing.List[ContainerAppRegistry]]
+  value: IResolvable | typing.List[ContainerAppRegistry]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putRegistry.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]
 
 ---
 
@@ -832,13 +832,13 @@ def put_registry(
 
 ```python
 def put_secret(
-  value: typing.Union[IResolvable, typing.List[ContainerAppSecret]]
+  value: IResolvable | typing.List[ContainerAppSecret]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putSecret.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]
 
 ---
 
@@ -846,23 +846,23 @@ def put_secret(
 
 ```python
 def put_template(
-  container: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainer]],
-  azure_queue_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQueueScaleRule]] = None,
-  custom_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustomScaleRule]] = None,
-  http_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpScaleRule]] = None,
-  init_container: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainer]] = None,
+  container: IResolvable | typing.List[ContainerAppTemplateContainer],
+  azure_queue_scale_rule: IResolvable | typing.List[ContainerAppTemplateAzureQueueScaleRule] = None,
+  custom_scale_rule: IResolvable | typing.List[ContainerAppTemplateCustomScaleRule] = None,
+  http_scale_rule: IResolvable | typing.List[ContainerAppTemplateHttpScaleRule] = None,
+  init_container: IResolvable | typing.List[ContainerAppTemplateInitContainer] = None,
   max_replicas: typing.Union[int, float] = None,
   min_replicas: typing.Union[int, float] = None,
   revision_suffix: str = None,
-  tcp_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpScaleRule]] = None,
+  tcp_scale_rule: IResolvable | typing.List[ContainerAppTemplateTcpScaleRule] = None,
   termination_grace_period_seconds: typing.Union[int, float] = None,
-  volume: typing.Union[IResolvable, typing.List[ContainerAppTemplateVolume]] = None
+  volume: IResolvable | typing.List[ContainerAppTemplateVolume] = None
 ) -> None
 ```
 
 ###### `container`<sup>Required</sup> <a name="container" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putTemplate.parameter.container"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]
 
 container block.
 
@@ -872,7 +872,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `azure_queue_scale_rule`<sup>Optional</sup> <a name="azure_queue_scale_rule" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putTemplate.parameter.azureQueueScaleRule"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]
 
 azure_queue_scale_rule block.
 
@@ -882,7 +882,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `custom_scale_rule`<sup>Optional</sup> <a name="custom_scale_rule" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putTemplate.parameter.customScaleRule"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]
 
 custom_scale_rule block.
 
@@ -892,7 +892,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `http_scale_rule`<sup>Optional</sup> <a name="http_scale_rule" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putTemplate.parameter.httpScaleRule"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]
 
 http_scale_rule block.
 
@@ -902,7 +902,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `init_container`<sup>Optional</sup> <a name="init_container" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putTemplate.parameter.initContainer"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]
 
 init_container block.
 
@@ -944,7 +944,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `tcp_scale_rule`<sup>Optional</sup> <a name="tcp_scale_rule" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putTemplate.parameter.tcpScaleRule"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]
 
 tcp_scale_rule block.
 
@@ -964,7 +964,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `volume`<sup>Optional</sup> <a name="volume" id="@cdktf/provider-azurerm.containerApp.ContainerApp.putTemplate.parameter.volume"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]
 
 volume block.
 
@@ -1212,13 +1212,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.customDomainVerificationId">custom_domain_verification_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.dapr">dapr</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppDaprOutputReference">ContainerAppDaprOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIdentityOutputReference">ContainerAppIdentityOutputReference</a></code> | *No description.* |
@@ -1238,13 +1238,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.ingressInput">ingress_input</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress">ContainerAppIngress</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.maxInactiveRevisionsInput">max_inactive_revisions_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.registryInput">registry_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.registryInput">registry_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.revisionModeInput">revision_mode_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.secretInput">secret_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.secretInput">secret_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.templateInput">template_input</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate">ContainerAppTemplate</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.workloadProfileNameInput">workload_profile_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.containerAppEnvironmentId">container_app_environment_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerApp.property.id">id</a></code> | <code>str</code> | *No description.* |
@@ -1332,20 +1332,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1392,10 +1392,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1592,10 +1592,10 @@ name_input: str
 ##### `registry_input`<sup>Optional</sup> <a name="registry_input" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.registryInput"></a>
 
 ```python
-registry_input: typing.Union[IResolvable, typing.List[ContainerAppRegistry]]
+registry_input: IResolvable | typing.List[ContainerAppRegistry]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]
 
 ---
 
@@ -1622,10 +1622,10 @@ revision_mode_input: str
 ##### `secret_input`<sup>Optional</sup> <a name="secret_input" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.secretInput"></a>
 
 ```python
-secret_input: typing.Union[IResolvable, typing.List[ContainerAppSecret]]
+secret_input: IResolvable | typing.List[ContainerAppSecret]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]
 
 ---
 
@@ -1652,10 +1652,10 @@ template_input: ContainerAppTemplate
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.containerApp.ContainerApp.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, ContainerAppTimeouts]
+timeouts_input: IResolvable | ContainerAppTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a>
 
 ---
 
@@ -1777,13 +1777,13 @@ tfResourceType: str
 from cdktf_cdktf_provider_azurerm import container_app
 
 containerApp.ContainerAppConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   container_app_environment_id: str,
   name: str,
   resource_group_name: str,
@@ -1794,8 +1794,8 @@ containerApp.ContainerAppConfig(
   identity: ContainerAppIdentity = None,
   ingress: ContainerAppIngress = None,
   max_inactive_revisions: typing.Union[int, float] = None,
-  registry: typing.Union[IResolvable, typing.List[ContainerAppRegistry]] = None,
-  secret: typing.Union[IResolvable, typing.List[ContainerAppSecret]] = None,
+  registry: IResolvable | typing.List[ContainerAppRegistry] = None,
+  secret: IResolvable | typing.List[ContainerAppSecret] = None,
   tags: typing.Mapping[str] = None,
   timeouts: ContainerAppTimeouts = None,
   workload_profile_name: str = None
@@ -1806,13 +1806,13 @@ containerApp.ContainerAppConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.containerAppEnvironmentId">container_app_environment_id</a></code> | <code>str</code> | The ID of the Container App Environment to host this Container App. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.name">name</a></code> | <code>str</code> | The name for this Container App. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#resource_group_name ContainerApp#resource_group_name}. |
@@ -1823,8 +1823,8 @@ containerApp.ContainerAppConfig(
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIdentity">ContainerAppIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.ingress">ingress</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress">ContainerAppIngress</a></code> | ingress block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.maxInactiveRevisions">max_inactive_revisions</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#max_inactive_revisions ContainerApp#max_inactive_revisions}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.registry">registry</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]]</code> | registry block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.secret">secret</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]]</code> | secret block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.registry">registry</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]</code> | registry block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.secret">secret</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]</code> | secret block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#tags ContainerApp#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a></code> | timeouts block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.workloadProfileName">workload_profile_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#workload_profile_name ContainerApp#workload_profile_name}. |
@@ -1834,20 +1834,20 @@ containerApp.ContainerAppConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1894,10 +1894,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2039,10 +2039,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `registry`<sup>Optional</sup> <a name="registry" id="@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.registry"></a>
 
 ```python
-registry: typing.Union[IResolvable, typing.List[ContainerAppRegistry]]
+registry: IResolvable | typing.List[ContainerAppRegistry]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]
 
 registry block.
 
@@ -2053,10 +2053,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `secret`<sup>Optional</sup> <a name="secret" id="@cdktf/provider-azurerm.containerApp.ContainerAppConfig.property.secret"></a>
 
 ```python
-secret: typing.Union[IResolvable, typing.List[ContainerAppSecret]]
+secret: IResolvable | typing.List[ContainerAppSecret]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]
 
 secret block.
 
@@ -2223,13 +2223,13 @@ from cdktf_cdktf_provider_azurerm import container_app
 
 containerApp.ContainerAppIngress(
   target_port: typing.Union[int, float],
-  traffic_weight: typing.Union[IResolvable, typing.List[ContainerAppIngressTrafficWeight]],
-  allow_insecure_connections: typing.Union[bool, IResolvable] = None,
+  traffic_weight: IResolvable | typing.List[ContainerAppIngressTrafficWeight],
+  allow_insecure_connections: bool | IResolvable = None,
   client_certificate_mode: str = None,
   cors: ContainerAppIngressCors = None,
   exposed_port: typing.Union[int, float] = None,
-  external_enabled: typing.Union[bool, IResolvable] = None,
-  ip_security_restriction: typing.Union[IResolvable, typing.List[ContainerAppIngressIpSecurityRestriction]] = None,
+  external_enabled: bool | IResolvable = None,
+  ip_security_restriction: IResolvable | typing.List[ContainerAppIngressIpSecurityRestriction] = None,
   transport: str = None
 )
 ```
@@ -2239,13 +2239,13 @@ containerApp.ContainerAppIngress(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.targetPort">target_port</a></code> | <code>typing.Union[int, float]</code> | The target port on the container for the Ingress traffic. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.trafficWeight">traffic_weight</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]]</code> | traffic_weight block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.allowInsecureConnections">allow_insecure_connections</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Should this ingress allow insecure connections? |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.trafficWeight">traffic_weight</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]</code> | traffic_weight block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.allowInsecureConnections">allow_insecure_connections</a></code> | <code>bool \| cdktf.IResolvable</code> | Should this ingress allow insecure connections? |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | Client certificate mode for mTLS authentication. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.cors">cors</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors">ContainerAppIngressCors</a></code> | cors block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.exposedPort">exposed_port</a></code> | <code>typing.Union[int, float]</code> | The exposed port on the container for the Ingress traffic. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.externalEnabled">external_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Is this an external Ingress. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.ipSecurityRestriction">ip_security_restriction</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]]</code> | ip_security_restriction block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.externalEnabled">external_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Is this an external Ingress. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.ipSecurityRestriction">ip_security_restriction</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]</code> | ip_security_restriction block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.transport">transport</a></code> | <code>str</code> | The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`, `tcp`. Defaults to `auto`. |
 
 ---
@@ -2267,10 +2267,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `traffic_weight`<sup>Required</sup> <a name="traffic_weight" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.trafficWeight"></a>
 
 ```python
-traffic_weight: typing.Union[IResolvable, typing.List[ContainerAppIngressTrafficWeight]]
+traffic_weight: IResolvable | typing.List[ContainerAppIngressTrafficWeight]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]
 
 traffic_weight block.
 
@@ -2281,10 +2281,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `allow_insecure_connections`<sup>Optional</sup> <a name="allow_insecure_connections" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.allowInsecureConnections"></a>
 
 ```python
-allow_insecure_connections: typing.Union[bool, IResolvable]
+allow_insecure_connections: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Should this ingress allow insecure connections?
 
@@ -2339,10 +2339,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `external_enabled`<sup>Optional</sup> <a name="external_enabled" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.externalEnabled"></a>
 
 ```python
-external_enabled: typing.Union[bool, IResolvable]
+external_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Is this an external Ingress.
 
@@ -2353,10 +2353,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ip_security_restriction`<sup>Optional</sup> <a name="ip_security_restriction" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngress.property.ipSecurityRestriction"></a>
 
 ```python
-ip_security_restriction: typing.Union[IResolvable, typing.List[ContainerAppIngressIpSecurityRestriction]]
+ip_security_restriction: IResolvable | typing.List[ContainerAppIngressIpSecurityRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]
 
 ip_security_restriction block.
 
@@ -2387,7 +2387,7 @@ from cdktf_cdktf_provider_azurerm import container_app
 
 containerApp.ContainerAppIngressCors(
   allowed_origins: typing.List[str],
-  allow_credentials_enabled: typing.Union[bool, IResolvable] = None,
+  allow_credentials_enabled: bool | IResolvable = None,
   allowed_headers: typing.List[str] = None,
   allowed_methods: typing.List[str] = None,
   exposed_headers: typing.List[str] = None,
@@ -2400,7 +2400,7 @@ containerApp.ContainerAppIngressCors(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowedOrigins">allowed_origins</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allowed_origins ContainerApp#allowed_origins}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowCredentialsEnabled">allow_credentials_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allow_credentials_enabled ContainerApp#allow_credentials_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowCredentialsEnabled">allow_credentials_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allow_credentials_enabled ContainerApp#allow_credentials_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowedHeaders">allowed_headers</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allowed_headers ContainerApp#allowed_headers}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowedMethods">allowed_methods</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allowed_methods ContainerApp#allowed_methods}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.exposedHeaders">exposed_headers</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#exposed_headers ContainerApp#exposed_headers}. |
@@ -2423,10 +2423,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `allow_credentials_enabled`<sup>Optional</sup> <a name="allow_credentials_enabled" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors.property.allowCredentialsEnabled"></a>
 
 ```python
-allow_credentials_enabled: typing.Union[bool, IResolvable]
+allow_credentials_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allow_credentials_enabled ContainerApp#allow_credentials_enabled}.
 
@@ -2583,7 +2583,7 @@ from cdktf_cdktf_provider_azurerm import container_app
 containerApp.ContainerAppIngressTrafficWeight(
   percentage: typing.Union[int, float],
   label: str = None,
-  latest_revision: typing.Union[bool, IResolvable] = None,
+  latest_revision: bool | IResolvable = None,
   revision_suffix: str = None
 )
 ```
@@ -2594,7 +2594,7 @@ containerApp.ContainerAppIngressTrafficWeight(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.percentage">percentage</a></code> | <code>typing.Union[int, float]</code> | The percentage of traffic to send to this revision. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.label">label</a></code> | <code>str</code> | The label to apply to the revision as a name prefix for routing traffic. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.latestRevision">latest_revision</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | This traffic Weight relates to the latest stable Container Revision. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.latestRevision">latest_revision</a></code> | <code>bool \| cdktf.IResolvable</code> | This traffic Weight relates to the latest stable Container Revision. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.revisionSuffix">revision_suffix</a></code> | <code>str</code> | The suffix string to append to the revision. |
 
 ---
@@ -2630,10 +2630,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `latest_revision`<sup>Optional</sup> <a name="latest_revision" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight.property.latestRevision"></a>
 
 ```python
-latest_revision: typing.Union[bool, IResolvable]
+latest_revision: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 This traffic Weight relates to the latest stable Container Revision.
 
@@ -2829,17 +2829,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import container_app
 
 containerApp.ContainerAppTemplate(
-  container: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainer]],
-  azure_queue_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQueueScaleRule]] = None,
-  custom_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustomScaleRule]] = None,
-  http_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpScaleRule]] = None,
-  init_container: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainer]] = None,
+  container: IResolvable | typing.List[ContainerAppTemplateContainer],
+  azure_queue_scale_rule: IResolvable | typing.List[ContainerAppTemplateAzureQueueScaleRule] = None,
+  custom_scale_rule: IResolvable | typing.List[ContainerAppTemplateCustomScaleRule] = None,
+  http_scale_rule: IResolvable | typing.List[ContainerAppTemplateHttpScaleRule] = None,
+  init_container: IResolvable | typing.List[ContainerAppTemplateInitContainer] = None,
   max_replicas: typing.Union[int, float] = None,
   min_replicas: typing.Union[int, float] = None,
   revision_suffix: str = None,
-  tcp_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpScaleRule]] = None,
+  tcp_scale_rule: IResolvable | typing.List[ContainerAppTemplateTcpScaleRule] = None,
   termination_grace_period_seconds: typing.Union[int, float] = None,
-  volume: typing.Union[IResolvable, typing.List[ContainerAppTemplateVolume]] = None
+  volume: IResolvable | typing.List[ContainerAppTemplateVolume] = None
 )
 ```
 
@@ -2847,27 +2847,27 @@ containerApp.ContainerAppTemplate(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.container">container</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]]</code> | container block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.azureQueueScaleRule">azure_queue_scale_rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]]</code> | azure_queue_scale_rule block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.customScaleRule">custom_scale_rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]]</code> | custom_scale_rule block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.httpScaleRule">http_scale_rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]]</code> | http_scale_rule block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.initContainer">init_container</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]]</code> | init_container block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.container">container</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]</code> | container block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.azureQueueScaleRule">azure_queue_scale_rule</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]</code> | azure_queue_scale_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.customScaleRule">custom_scale_rule</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]</code> | custom_scale_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.httpScaleRule">http_scale_rule</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]</code> | http_scale_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.initContainer">init_container</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]</code> | init_container block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.maxReplicas">max_replicas</a></code> | <code>typing.Union[int, float]</code> | The maximum number of replicas for this container. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.minReplicas">min_replicas</a></code> | <code>typing.Union[int, float]</code> | The minimum number of replicas for this container. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.revisionSuffix">revision_suffix</a></code> | <code>str</code> | The suffix for the revision. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.tcpScaleRule">tcp_scale_rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]]</code> | tcp_scale_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.tcpScaleRule">tcp_scale_rule</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]</code> | tcp_scale_rule block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.terminationGracePeriodSeconds">termination_grace_period_seconds</a></code> | <code>typing.Union[int, float]</code> | The time in seconds after the container is sent the termination signal before the process if forcibly killed. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.volume">volume</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]]</code> | volume block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.volume">volume</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]</code> | volume block. |
 
 ---
 
 ##### `container`<sup>Required</sup> <a name="container" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.container"></a>
 
 ```python
-container: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainer]]
+container: IResolvable | typing.List[ContainerAppTemplateContainer]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]
 
 container block.
 
@@ -2878,10 +2878,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `azure_queue_scale_rule`<sup>Optional</sup> <a name="azure_queue_scale_rule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.azureQueueScaleRule"></a>
 
 ```python
-azure_queue_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQueueScaleRule]]
+azure_queue_scale_rule: IResolvable | typing.List[ContainerAppTemplateAzureQueueScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]
 
 azure_queue_scale_rule block.
 
@@ -2892,10 +2892,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `custom_scale_rule`<sup>Optional</sup> <a name="custom_scale_rule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.customScaleRule"></a>
 
 ```python
-custom_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustomScaleRule]]
+custom_scale_rule: IResolvable | typing.List[ContainerAppTemplateCustomScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]
 
 custom_scale_rule block.
 
@@ -2906,10 +2906,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `http_scale_rule`<sup>Optional</sup> <a name="http_scale_rule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.httpScaleRule"></a>
 
 ```python
-http_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpScaleRule]]
+http_scale_rule: IResolvable | typing.List[ContainerAppTemplateHttpScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]
 
 http_scale_rule block.
 
@@ -2920,10 +2920,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `init_container`<sup>Optional</sup> <a name="init_container" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.initContainer"></a>
 
 ```python
-init_container: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainer]]
+init_container: IResolvable | typing.List[ContainerAppTemplateInitContainer]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]
 
 init_container block.
 
@@ -2978,10 +2978,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tcp_scale_rule`<sup>Optional</sup> <a name="tcp_scale_rule" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.tcpScaleRule"></a>
 
 ```python
-tcp_scale_rule: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpScaleRule]]
+tcp_scale_rule: IResolvable | typing.List[ContainerAppTemplateTcpScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]
 
 tcp_scale_rule block.
 
@@ -3006,10 +3006,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `volume`<sup>Optional</sup> <a name="volume" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplate.property.volume"></a>
 
 ```python
-volume: typing.Union[IResolvable, typing.List[ContainerAppTemplateVolume]]
+volume: IResolvable | typing.List[ContainerAppTemplateVolume]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]
 
 volume block.
 
@@ -3025,7 +3025,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import container_app
 
 containerApp.ContainerAppTemplateAzureQueueScaleRule(
-  authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQueueScaleRuleAuthentication]],
+  authentication: IResolvable | typing.List[ContainerAppTemplateAzureQueueScaleRuleAuthentication],
   name: str,
   queue_length: typing.Union[int, float],
   queue_name: str
@@ -3036,7 +3036,7 @@ containerApp.ContainerAppTemplateAzureQueueScaleRule(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.authentication">authentication</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]]</code> | authentication block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.authentication">authentication</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]</code> | authentication block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#name ContainerApp#name}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.queueLength">queue_length</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#queue_length ContainerApp#queue_length}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.queueName">queue_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#queue_name ContainerApp#queue_name}. |
@@ -3046,10 +3046,10 @@ containerApp.ContainerAppTemplateAzureQueueScaleRule(
 ##### `authentication`<sup>Required</sup> <a name="authentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule.property.authentication"></a>
 
 ```python
-authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQueueScaleRuleAuthentication]]
+authentication: IResolvable | typing.List[ContainerAppTemplateAzureQueueScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]
 
 authentication block.
 
@@ -3153,11 +3153,11 @@ containerApp.ContainerAppTemplateContainer(
   name: str,
   args: typing.List[str] = None,
   command: typing.List[str] = None,
-  env: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerEnv]] = None,
-  liveness_probe: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerLivenessProbe]] = None,
-  readiness_probe: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerReadinessProbe]] = None,
-  startup_probe: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerStartupProbe]] = None,
-  volume_mounts: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerVolumeMounts]] = None
+  env: IResolvable | typing.List[ContainerAppTemplateContainerEnv] = None,
+  liveness_probe: IResolvable | typing.List[ContainerAppTemplateContainerLivenessProbe] = None,
+  readiness_probe: IResolvable | typing.List[ContainerAppTemplateContainerReadinessProbe] = None,
+  startup_probe: IResolvable | typing.List[ContainerAppTemplateContainerStartupProbe] = None,
+  volume_mounts: IResolvable | typing.List[ContainerAppTemplateContainerVolumeMounts] = None
 )
 ```
 
@@ -3171,11 +3171,11 @@ containerApp.ContainerAppTemplateContainer(
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.name">name</a></code> | <code>str</code> | The name of the container. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.args">args</a></code> | <code>typing.List[str]</code> | A list of args to pass to the container. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.command">command</a></code> | <code>typing.List[str]</code> | A command to pass to the container to override the default. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.env">env</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]]</code> | env block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.livenessProbe">liveness_probe</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]]</code> | liveness_probe block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.readinessProbe">readiness_probe</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]]</code> | readiness_probe block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.startupProbe">startup_probe</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]]</code> | startup_probe block. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.volumeMounts">volume_mounts</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]]</code> | volume_mounts block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.env">env</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]</code> | env block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.livenessProbe">liveness_probe</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]</code> | liveness_probe block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.readinessProbe">readiness_probe</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]</code> | readiness_probe block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.startupProbe">startup_probe</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]</code> | startup_probe block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.volumeMounts">volume_mounts</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]</code> | volume_mounts block. |
 
 ---
 
@@ -3268,10 +3268,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `env`<sup>Optional</sup> <a name="env" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.env"></a>
 
 ```python
-env: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerEnv]]
+env: IResolvable | typing.List[ContainerAppTemplateContainerEnv]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]
 
 env block.
 
@@ -3282,10 +3282,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `liveness_probe`<sup>Optional</sup> <a name="liveness_probe" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.livenessProbe"></a>
 
 ```python
-liveness_probe: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerLivenessProbe]]
+liveness_probe: IResolvable | typing.List[ContainerAppTemplateContainerLivenessProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]
 
 liveness_probe block.
 
@@ -3296,10 +3296,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `readiness_probe`<sup>Optional</sup> <a name="readiness_probe" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.readinessProbe"></a>
 
 ```python
-readiness_probe: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerReadinessProbe]]
+readiness_probe: IResolvable | typing.List[ContainerAppTemplateContainerReadinessProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]
 
 readiness_probe block.
 
@@ -3310,10 +3310,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `startup_probe`<sup>Optional</sup> <a name="startup_probe" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.startupProbe"></a>
 
 ```python
-startup_probe: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerStartupProbe]]
+startup_probe: IResolvable | typing.List[ContainerAppTemplateContainerStartupProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]
 
 startup_probe block.
 
@@ -3324,10 +3324,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `volume_mounts`<sup>Optional</sup> <a name="volume_mounts" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer.property.volumeMounts"></a>
 
 ```python
-volume_mounts: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerVolumeMounts]]
+volume_mounts: IResolvable | typing.List[ContainerAppTemplateContainerVolumeMounts]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]
 
 volume_mounts block.
 
@@ -3412,7 +3412,7 @@ containerApp.ContainerAppTemplateContainerLivenessProbe(
   port: typing.Union[int, float],
   transport: str,
   failure_count_threshold: typing.Union[int, float] = None,
-  header: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerLivenessProbeHeader]] = None,
+  header: IResolvable | typing.List[ContainerAppTemplateContainerLivenessProbeHeader] = None,
   host: str = None,
   initial_delay: typing.Union[int, float] = None,
   interval_seconds: typing.Union[int, float] = None,
@@ -3428,7 +3428,7 @@ containerApp.ContainerAppTemplateContainerLivenessProbe(
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.port">port</a></code> | <code>typing.Union[int, float]</code> | The port number on which to connect. Possible values are between `1` and `65535`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.transport">transport</a></code> | <code>str</code> | Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.failureCountThreshold">failure_count_threshold</a></code> | <code>typing.Union[int, float]</code> | The number of consecutive failures required to consider this probe as failed. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.header">header</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]]</code> | header block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.header">header</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]</code> | header block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.host">host</a></code> | <code>str</code> | The probe hostname. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.initialDelay">initial_delay</a></code> | <code>typing.Union[int, float]</code> | The number of seconds elapsed after the container has started before the probe is initiated. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.intervalSeconds">interval_seconds</a></code> | <code>typing.Union[int, float]</code> | How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`. |
@@ -3484,10 +3484,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `header`<sup>Optional</sup> <a name="header" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe.property.header"></a>
 
 ```python
-header: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerLivenessProbeHeader]]
+header: IResolvable | typing.List[ContainerAppTemplateContainerLivenessProbeHeader]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]
 
 header block.
 
@@ -3632,7 +3632,7 @@ containerApp.ContainerAppTemplateContainerReadinessProbe(
   port: typing.Union[int, float],
   transport: str,
   failure_count_threshold: typing.Union[int, float] = None,
-  header: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerReadinessProbeHeader]] = None,
+  header: IResolvable | typing.List[ContainerAppTemplateContainerReadinessProbeHeader] = None,
   host: str = None,
   initial_delay: typing.Union[int, float] = None,
   interval_seconds: typing.Union[int, float] = None,
@@ -3649,7 +3649,7 @@ containerApp.ContainerAppTemplateContainerReadinessProbe(
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.port">port</a></code> | <code>typing.Union[int, float]</code> | The port number on which to connect. Possible values are between `1` and `65535`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.transport">transport</a></code> | <code>str</code> | Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.failureCountThreshold">failure_count_threshold</a></code> | <code>typing.Union[int, float]</code> | The number of consecutive failures required to consider this probe as failed. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.header">header</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]]</code> | header block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.header">header</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]</code> | header block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.host">host</a></code> | <code>str</code> | The probe hostname. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.initialDelay">initial_delay</a></code> | <code>typing.Union[int, float]</code> | The number of seconds elapsed after the container has started before the probe is initiated. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.intervalSeconds">interval_seconds</a></code> | <code>typing.Union[int, float]</code> | How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`. |
@@ -3706,10 +3706,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `header`<sup>Optional</sup> <a name="header" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe.property.header"></a>
 
 ```python
-header: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerReadinessProbeHeader]]
+header: IResolvable | typing.List[ContainerAppTemplateContainerReadinessProbeHeader]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]
 
 header block.
 
@@ -3868,7 +3868,7 @@ containerApp.ContainerAppTemplateContainerStartupProbe(
   port: typing.Union[int, float],
   transport: str,
   failure_count_threshold: typing.Union[int, float] = None,
-  header: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerStartupProbeHeader]] = None,
+  header: IResolvable | typing.List[ContainerAppTemplateContainerStartupProbeHeader] = None,
   host: str = None,
   initial_delay: typing.Union[int, float] = None,
   interval_seconds: typing.Union[int, float] = None,
@@ -3884,7 +3884,7 @@ containerApp.ContainerAppTemplateContainerStartupProbe(
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.port">port</a></code> | <code>typing.Union[int, float]</code> | The port number on which to connect. Possible values are between `1` and `65535`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.transport">transport</a></code> | <code>str</code> | Type of probe. Possible values are `TCP`, `HTTP`, and `HTTPS`. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.failureCountThreshold">failure_count_threshold</a></code> | <code>typing.Union[int, float]</code> | The number of consecutive failures required to consider this probe as failed. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.header">header</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]]</code> | header block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.header">header</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]</code> | header block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.host">host</a></code> | <code>str</code> | The probe hostname. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.initialDelay">initial_delay</a></code> | <code>typing.Union[int, float]</code> | The number of seconds elapsed after the container has started before the probe is initiated. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.intervalSeconds">interval_seconds</a></code> | <code>typing.Union[int, float]</code> | How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`. |
@@ -3940,10 +3940,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `header`<sup>Optional</sup> <a name="header" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe.property.header"></a>
 
 ```python
-header: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerStartupProbeHeader]]
+header: IResolvable | typing.List[ContainerAppTemplateContainerStartupProbeHeader]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]
 
 header block.
 
@@ -4154,7 +4154,7 @@ containerApp.ContainerAppTemplateCustomScaleRule(
   custom_rule_type: str,
   metadata: typing.Mapping[str],
   name: str,
-  authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustomScaleRuleAuthentication]] = None
+  authentication: IResolvable | typing.List[ContainerAppTemplateCustomScaleRuleAuthentication] = None
 )
 ```
 
@@ -4165,7 +4165,7 @@ containerApp.ContainerAppTemplateCustomScaleRule(
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.customRuleType">custom_rule_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#custom_rule_type ContainerApp#custom_rule_type}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.metadata">metadata</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#metadata ContainerApp#metadata}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#name ContainerApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.authentication">authentication</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]]</code> | authentication block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.authentication">authentication</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]</code> | authentication block. |
 
 ---
 
@@ -4208,10 +4208,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `authentication`<sup>Optional</sup> <a name="authentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule.property.authentication"></a>
 
 ```python
-authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustomScaleRuleAuthentication]]
+authentication: IResolvable | typing.List[ContainerAppTemplateCustomScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]
 
 authentication block.
 
@@ -4275,7 +4275,7 @@ from cdktf_cdktf_provider_azurerm import container_app
 containerApp.ContainerAppTemplateHttpScaleRule(
   concurrent_requests: str,
   name: str,
-  authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpScaleRuleAuthentication]] = None
+  authentication: IResolvable | typing.List[ContainerAppTemplateHttpScaleRuleAuthentication] = None
 )
 ```
 
@@ -4285,7 +4285,7 @@ containerApp.ContainerAppTemplateHttpScaleRule(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.concurrentRequests">concurrent_requests</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#name ContainerApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.authentication">authentication</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]]</code> | authentication block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.authentication">authentication</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]</code> | authentication block. |
 
 ---
 
@@ -4316,10 +4316,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `authentication`<sup>Optional</sup> <a name="authentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule.property.authentication"></a>
 
 ```python
-authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpScaleRuleAuthentication]]
+authentication: IResolvable | typing.List[ContainerAppTemplateHttpScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]
 
 authentication block.
 
@@ -4386,9 +4386,9 @@ containerApp.ContainerAppTemplateInitContainer(
   args: typing.List[str] = None,
   command: typing.List[str] = None,
   cpu: typing.Union[int, float] = None,
-  env: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainerEnv]] = None,
+  env: IResolvable | typing.List[ContainerAppTemplateInitContainerEnv] = None,
   memory: str = None,
-  volume_mounts: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainerVolumeMounts]] = None
+  volume_mounts: IResolvable | typing.List[ContainerAppTemplateInitContainerVolumeMounts] = None
 )
 ```
 
@@ -4401,9 +4401,9 @@ containerApp.ContainerAppTemplateInitContainer(
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.args">args</a></code> | <code>typing.List[str]</code> | A list of args to pass to the container. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.command">command</a></code> | <code>typing.List[str]</code> | A command to pass to the container to override the default. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.cpu">cpu</a></code> | <code>typing.Union[int, float]</code> | The amount of vCPU to allocate to the container. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.env">env</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]]</code> | env block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.env">env</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]</code> | env block. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.memory">memory</a></code> | <code>str</code> | The amount of memory to allocate to the container. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.volumeMounts">volume_mounts</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]]</code> | volume_mounts block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.volumeMounts">volume_mounts</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]</code> | volume_mounts block. |
 
 ---
 
@@ -4482,10 +4482,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `env`<sup>Optional</sup> <a name="env" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.env"></a>
 
 ```python
-env: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainerEnv]]
+env: IResolvable | typing.List[ContainerAppTemplateInitContainerEnv]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]
 
 env block.
 
@@ -4510,10 +4510,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `volume_mounts`<sup>Optional</sup> <a name="volume_mounts" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer.property.volumeMounts"></a>
 
 ```python
-volume_mounts: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainerVolumeMounts]]
+volume_mounts: IResolvable | typing.List[ContainerAppTemplateInitContainerVolumeMounts]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]
 
 volume_mounts block.
 
@@ -4663,7 +4663,7 @@ from cdktf_cdktf_provider_azurerm import container_app
 containerApp.ContainerAppTemplateTcpScaleRule(
   concurrent_requests: str,
   name: str,
-  authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpScaleRuleAuthentication]] = None
+  authentication: IResolvable | typing.List[ContainerAppTemplateTcpScaleRuleAuthentication] = None
 )
 ```
 
@@ -4673,7 +4673,7 @@ containerApp.ContainerAppTemplateTcpScaleRule(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.concurrentRequests">concurrent_requests</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#concurrent_requests ContainerApp#concurrent_requests}. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#name ContainerApp#name}. |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.authentication">authentication</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]]</code> | authentication block. |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.authentication">authentication</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]</code> | authentication block. |
 
 ---
 
@@ -4704,10 +4704,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `authentication`<sup>Optional</sup> <a name="authentication" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule.property.authentication"></a>
 
 ```python
-authentication: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpScaleRuleAuthentication]]
+authentication: IResolvable | typing.List[ContainerAppTemplateTcpScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]
 
 authentication block.
 
@@ -5890,13 +5890,13 @@ def reset_max_age_in_seconds() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabledInput">allow_credentials_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabledInput">allow_credentials_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedHeadersInput">allowed_headers_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedMethodsInput">allowed_methods_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedOriginsInput">allowed_origins_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.exposedHeadersInput">exposed_headers_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.maxAgeInSecondsInput">max_age_in_seconds_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabled">allow_credentials_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabled">allow_credentials_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedHeaders">allowed_headers</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedMethods">allowed_methods</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowedOrigins">allowed_origins</a></code> | <code>typing.List[str]</code> | *No description.* |
@@ -5933,10 +5933,10 @@ fqn: str
 ##### `allow_credentials_enabled_input`<sup>Optional</sup> <a name="allow_credentials_enabled_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabledInput"></a>
 
 ```python
-allow_credentials_enabled_input: typing.Union[bool, IResolvable]
+allow_credentials_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5993,10 +5993,10 @@ max_age_in_seconds_input: typing.Union[int, float]
 ##### `allow_credentials_enabled`<sup>Required</sup> <a name="allow_credentials_enabled" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressCorsOutputReference.property.allowCredentialsEnabled"></a>
 
 ```python
-allow_credentials_enabled: typing.Union[bool, IResolvable]
+allow_credentials_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6678,7 +6678,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]</code> | *No description.* |
 
 ---
 
@@ -6709,10 +6709,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppIngressIpSecurityRestriction]]
+internal_value: IResolvable | typing.List[ContainerAppIngressIpSecurityRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]
 
 ---
 
@@ -6987,7 +6987,7 @@ def reset_description() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.description">description</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.ipAddressRange">ip_address_range</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a></code> | *No description.* |
 
 ---
 
@@ -7098,10 +7098,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppIngressIpSecurityRestriction]
+internal_value: IResolvable | ContainerAppIngressIpSecurityRestriction
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>
 
 ---
 
@@ -7349,7 +7349,7 @@ Returns a reversible string representation.
 ```python
 def put_cors(
   allowed_origins: typing.List[str],
-  allow_credentials_enabled: typing.Union[bool, IResolvable] = None,
+  allow_credentials_enabled: bool | IResolvable = None,
   allowed_headers: typing.List[str] = None,
   allowed_methods: typing.List[str] = None,
   exposed_headers: typing.List[str] = None,
@@ -7367,7 +7367,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `allow_credentials_enabled`<sup>Optional</sup> <a name="allow_credentials_enabled" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.putCors.parameter.allowCredentialsEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/container_app#allow_credentials_enabled ContainerApp#allow_credentials_enabled}.
 
@@ -7409,13 +7409,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_ip_security_restriction(
-  value: typing.Union[IResolvable, typing.List[ContainerAppIngressIpSecurityRestriction]]
+  value: IResolvable | typing.List[ContainerAppIngressIpSecurityRestriction]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.putIpSecurityRestriction.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]
 
 ---
 
@@ -7423,13 +7423,13 @@ def put_ip_security_restriction(
 
 ```python
 def put_traffic_weight(
-  value: typing.Union[IResolvable, typing.List[ContainerAppIngressTrafficWeight]]
+  value: IResolvable | typing.List[ContainerAppIngressTrafficWeight]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.putTrafficWeight.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]
 
 ---
 
@@ -7487,19 +7487,19 @@ def reset_transport() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.fqdn">fqdn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.ipSecurityRestriction">ip_security_restriction</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestrictionList">ContainerAppIngressIpSecurityRestrictionList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.trafficWeight">traffic_weight</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList">ContainerAppIngressTrafficWeightList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnectionsInput">allow_insecure_connections_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnectionsInput">allow_insecure_connections_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.clientCertificateModeInput">client_certificate_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.corsInput">cors_input</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressCors">ContainerAppIngressCors</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.exposedPortInput">exposed_port_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabledInput">external_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.ipSecurityRestrictionInput">ip_security_restriction_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabledInput">external_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.ipSecurityRestrictionInput">ip_security_restriction_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.targetPortInput">target_port_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.trafficWeightInput">traffic_weight_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.trafficWeightInput">traffic_weight_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.transportInput">transport_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnections">allow_insecure_connections</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnections">allow_insecure_connections</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.clientCertificateMode">client_certificate_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.exposedPort">exposed_port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabled">external_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabled">external_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.targetPort">target_port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.transport">transport</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngress">ContainerAppIngress</a></code> | *No description.* |
@@ -7583,10 +7583,10 @@ traffic_weight: ContainerAppIngressTrafficWeightList
 ##### `allow_insecure_connections_input`<sup>Optional</sup> <a name="allow_insecure_connections_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnectionsInput"></a>
 
 ```python
-allow_insecure_connections_input: typing.Union[bool, IResolvable]
+allow_insecure_connections_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7623,20 +7623,20 @@ exposed_port_input: typing.Union[int, float]
 ##### `external_enabled_input`<sup>Optional</sup> <a name="external_enabled_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabledInput"></a>
 
 ```python
-external_enabled_input: typing.Union[bool, IResolvable]
+external_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `ip_security_restriction_input`<sup>Optional</sup> <a name="ip_security_restriction_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.ipSecurityRestrictionInput"></a>
 
 ```python
-ip_security_restriction_input: typing.Union[IResolvable, typing.List[ContainerAppIngressIpSecurityRestriction]]
+ip_security_restriction_input: IResolvable | typing.List[ContainerAppIngressIpSecurityRestriction]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressIpSecurityRestriction">ContainerAppIngressIpSecurityRestriction</a>]
 
 ---
 
@@ -7653,10 +7653,10 @@ target_port_input: typing.Union[int, float]
 ##### `traffic_weight_input`<sup>Optional</sup> <a name="traffic_weight_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.trafficWeightInput"></a>
 
 ```python
-traffic_weight_input: typing.Union[IResolvable, typing.List[ContainerAppIngressTrafficWeight]]
+traffic_weight_input: IResolvable | typing.List[ContainerAppIngressTrafficWeight]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]
 
 ---
 
@@ -7673,10 +7673,10 @@ transport_input: str
 ##### `allow_insecure_connections`<sup>Required</sup> <a name="allow_insecure_connections" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.allowInsecureConnections"></a>
 
 ```python
-allow_insecure_connections: typing.Union[bool, IResolvable]
+allow_insecure_connections: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7703,10 +7703,10 @@ exposed_port: typing.Union[int, float]
 ##### `external_enabled`<sup>Required</sup> <a name="external_enabled" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressOutputReference.property.externalEnabled"></a>
 
 ```python
-external_enabled: typing.Union[bool, IResolvable]
+external_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7872,7 +7872,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]</code> | *No description.* |
 
 ---
 
@@ -7903,10 +7903,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppIngressTrafficWeight]]
+internal_value: IResolvable | typing.List[ContainerAppIngressTrafficWeight]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]
 
 ---
 
@@ -8188,14 +8188,14 @@ def reset_revision_suffix() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.labelInput">label_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevisionInput">latest_revision_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevisionInput">latest_revision_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.percentageInput">percentage_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.revisionSuffixInput">revision_suffix_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.label">label</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevision">latest_revision</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevision">latest_revision</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.percentage">percentage</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.revisionSuffix">revision_suffix</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a></code> | *No description.* |
 
 ---
 
@@ -8236,10 +8236,10 @@ label_input: str
 ##### `latest_revision_input`<sup>Optional</sup> <a name="latest_revision_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevisionInput"></a>
 
 ```python
-latest_revision_input: typing.Union[bool, IResolvable]
+latest_revision_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8276,10 +8276,10 @@ label: str
 ##### `latest_revision`<sup>Required</sup> <a name="latest_revision" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.latestRevision"></a>
 
 ```python
-latest_revision: typing.Union[bool, IResolvable]
+latest_revision: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8306,10 +8306,10 @@ revision_suffix: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeightOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppIngressTrafficWeight]
+internal_value: IResolvable | ContainerAppIngressTrafficWeight
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppIngressTrafficWeight">ContainerAppIngressTrafficWeight</a>
 
 ---
 
@@ -8445,7 +8445,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]</code> | *No description.* |
 
 ---
 
@@ -8476,10 +8476,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppRegistryList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppRegistry]]
+internal_value: IResolvable | typing.List[ContainerAppRegistry]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]
 
 ---
 
@@ -8768,7 +8768,7 @@ def reset_username() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.passwordSecretName">password_secret_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.server">server</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.username">username</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a></code> | *No description.* |
 
 ---
 
@@ -8879,10 +8879,10 @@ username: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppRegistryOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppRegistry]
+internal_value: IResolvable | ContainerAppRegistry
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppRegistry">ContainerAppRegistry</a>
 
 ---
 
@@ -9018,7 +9018,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]</code> | *No description.* |
 
 ---
 
@@ -9049,10 +9049,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppSecretList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppSecret]]
+internal_value: IResolvable | typing.List[ContainerAppSecret]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]
 
 ---
 
@@ -9341,7 +9341,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.keyVaultSecretId">key_vault_secret_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a></code> | *No description.* |
 
 ---
 
@@ -9452,10 +9452,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppSecretOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppSecret]
+internal_value: IResolvable | ContainerAppSecret
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppSecret">ContainerAppSecret</a>
 
 ---
 
@@ -9591,7 +9591,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]</code> | *No description.* |
 
 ---
 
@@ -9622,10 +9622,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQueueScaleRuleAuthentication]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateAzureQueueScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]
 
 ---
 
@@ -9889,7 +9889,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.triggerParameterInput">trigger_parameter_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.secretName">secret_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a></code> | *No description.* |
 
 ---
 
@@ -9960,10 +9960,10 @@ trigger_parameter: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateAzureQueueScaleRuleAuthentication]
+internal_value: IResolvable | ContainerAppTemplateAzureQueueScaleRuleAuthentication
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>
 
 ---
 
@@ -10099,7 +10099,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]</code> | *No description.* |
 
 ---
 
@@ -10130,10 +10130,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQueueScaleRule]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateAzureQueueScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]
 
 ---
 
@@ -10391,13 +10391,13 @@ Returns a reversible string representation.
 
 ```python
 def put_authentication(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQueueScaleRuleAuthentication]]
+  value: IResolvable | typing.List[ContainerAppTemplateAzureQueueScaleRuleAuthentication]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.putAuthentication.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]
 
 ---
 
@@ -10409,14 +10409,14 @@ def put_authentication(
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.authentication">authentication</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthenticationList">ContainerAppTemplateAzureQueueScaleRuleAuthenticationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.authenticationInput">authentication_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.authenticationInput">authentication_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.queueLengthInput">queue_length_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.queueNameInput">queue_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.queueLength">queue_length</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.queueName">queue_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a></code> | *No description.* |
 
 ---
 
@@ -10457,10 +10457,10 @@ authentication: ContainerAppTemplateAzureQueueScaleRuleAuthenticationList
 ##### `authentication_input`<sup>Optional</sup> <a name="authentication_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.authenticationInput"></a>
 
 ```python
-authentication_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQueueScaleRuleAuthentication]]
+authentication_input: IResolvable | typing.List[ContainerAppTemplateAzureQueueScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleAuthentication">ContainerAppTemplateAzureQueueScaleRuleAuthentication</a>]
 
 ---
 
@@ -10527,10 +10527,10 @@ queue_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateAzureQueueScaleRule]
+internal_value: IResolvable | ContainerAppTemplateAzureQueueScaleRule
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>
 
 ---
 
@@ -10666,7 +10666,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]</code> | *No description.* |
 
 ---
 
@@ -10697,10 +10697,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerEnv]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateContainerEnv]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]
 
 ---
 
@@ -10980,7 +10980,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.secretName">secret_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a></code> | *No description.* |
 
 ---
 
@@ -11071,10 +11071,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnvOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateContainerEnv]
+internal_value: IResolvable | ContainerAppTemplateContainerEnv
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>
 
 ---
 
@@ -11210,7 +11210,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]</code> | *No description.* |
 
 ---
 
@@ -11241,10 +11241,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainer]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateContainer]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]
 
 ---
 
@@ -11380,7 +11380,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]</code> | *No description.* |
 
 ---
 
@@ -11411,10 +11411,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerLivenessProbeHeader]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateContainerLivenessProbeHeader]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]
 
 ---
 
@@ -11678,7 +11678,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a></code> | *No description.* |
 
 ---
 
@@ -11749,10 +11749,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateContainerLivenessProbeHeader]
+internal_value: IResolvable | ContainerAppTemplateContainerLivenessProbeHeader
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>
 
 ---
 
@@ -11888,7 +11888,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]</code> | *No description.* |
 
 ---
 
@@ -11919,10 +11919,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerLivenessProbe]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateContainerLivenessProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]
 
 ---
 
@@ -12187,13 +12187,13 @@ Returns a reversible string representation.
 
 ```python
 def put_header(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerLivenessProbeHeader]]
+  value: IResolvable | typing.List[ContainerAppTemplateContainerLivenessProbeHeader]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.putHeader.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]
 
 ---
 
@@ -12249,7 +12249,7 @@ def reset_timeout() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.header">header</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeaderList">ContainerAppTemplateContainerLivenessProbeHeaderList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.terminationGracePeriodSeconds">termination_grace_period_seconds</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.failureCountThresholdInput">failure_count_threshold_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.headerInput">header_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.headerInput">header_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.hostInput">host_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.initialDelayInput">initial_delay_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.intervalSecondsInput">interval_seconds_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -12265,7 +12265,7 @@ def reset_timeout() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.port">port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.timeout">timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.transport">transport</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a></code> | *No description.* |
 
 ---
 
@@ -12326,10 +12326,10 @@ failure_count_threshold_input: typing.Union[int, float]
 ##### `header_input`<sup>Optional</sup> <a name="header_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.headerInput"></a>
 
 ```python
-header_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerLivenessProbeHeader]]
+header_input: IResolvable | typing.List[ContainerAppTemplateContainerLivenessProbeHeader]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeHeader">ContainerAppTemplateContainerLivenessProbeHeader</a>]
 
 ---
 
@@ -12486,10 +12486,10 @@ transport: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbeOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateContainerLivenessProbe]
+internal_value: IResolvable | ContainerAppTemplateContainerLivenessProbe
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>
 
 ---
 
@@ -12758,13 +12758,13 @@ Returns a reversible string representation.
 
 ```python
 def put_env(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerEnv]]
+  value: IResolvable | typing.List[ContainerAppTemplateContainerEnv]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putEnv.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]
 
 ---
 
@@ -12772,13 +12772,13 @@ def put_env(
 
 ```python
 def put_liveness_probe(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerLivenessProbe]]
+  value: IResolvable | typing.List[ContainerAppTemplateContainerLivenessProbe]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putLivenessProbe.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]
 
 ---
 
@@ -12786,13 +12786,13 @@ def put_liveness_probe(
 
 ```python
 def put_readiness_probe(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerReadinessProbe]]
+  value: IResolvable | typing.List[ContainerAppTemplateContainerReadinessProbe]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putReadinessProbe.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]
 
 ---
 
@@ -12800,13 +12800,13 @@ def put_readiness_probe(
 
 ```python
 def put_startup_probe(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerStartupProbe]]
+  value: IResolvable | typing.List[ContainerAppTemplateContainerStartupProbe]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putStartupProbe.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]
 
 ---
 
@@ -12814,13 +12814,13 @@ def put_startup_probe(
 
 ```python
 def put_volume_mounts(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerVolumeMounts]]
+  value: IResolvable | typing.List[ContainerAppTemplateContainerVolumeMounts]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.putVolumeMounts.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]
 
 ---
 
@@ -12882,21 +12882,21 @@ def reset_volume_mounts() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.argsInput">args_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.commandInput">command_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.cpuInput">cpu_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.envInput">env_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.envInput">env_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.imageInput">image_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.livenessProbeInput">liveness_probe_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.livenessProbeInput">liveness_probe_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.memoryInput">memory_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.readinessProbeInput">readiness_probe_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.startupProbeInput">startup_probe_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.volumeMountsInput">volume_mounts_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.readinessProbeInput">readiness_probe_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.startupProbeInput">startup_probe_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.volumeMountsInput">volume_mounts_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.args">args</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.command">command</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.cpu">cpu</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.image">image</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.memory">memory</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a></code> | *No description.* |
 
 ---
 
@@ -13017,10 +13017,10 @@ cpu_input: typing.Union[int, float]
 ##### `env_input`<sup>Optional</sup> <a name="env_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.envInput"></a>
 
 ```python
-env_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerEnv]]
+env_input: IResolvable | typing.List[ContainerAppTemplateContainerEnv]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerEnv">ContainerAppTemplateContainerEnv</a>]
 
 ---
 
@@ -13037,10 +13037,10 @@ image_input: str
 ##### `liveness_probe_input`<sup>Optional</sup> <a name="liveness_probe_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.livenessProbeInput"></a>
 
 ```python
-liveness_probe_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerLivenessProbe]]
+liveness_probe_input: IResolvable | typing.List[ContainerAppTemplateContainerLivenessProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerLivenessProbe">ContainerAppTemplateContainerLivenessProbe</a>]
 
 ---
 
@@ -13067,30 +13067,30 @@ name_input: str
 ##### `readiness_probe_input`<sup>Optional</sup> <a name="readiness_probe_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.readinessProbeInput"></a>
 
 ```python
-readiness_probe_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerReadinessProbe]]
+readiness_probe_input: IResolvable | typing.List[ContainerAppTemplateContainerReadinessProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]
 
 ---
 
 ##### `startup_probe_input`<sup>Optional</sup> <a name="startup_probe_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.startupProbeInput"></a>
 
 ```python
-startup_probe_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerStartupProbe]]
+startup_probe_input: IResolvable | typing.List[ContainerAppTemplateContainerStartupProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]
 
 ---
 
 ##### `volume_mounts_input`<sup>Optional</sup> <a name="volume_mounts_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.volumeMountsInput"></a>
 
 ```python
-volume_mounts_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerVolumeMounts]]
+volume_mounts_input: IResolvable | typing.List[ContainerAppTemplateContainerVolumeMounts]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]
 
 ---
 
@@ -13157,10 +13157,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateContainer]
+internal_value: IResolvable | ContainerAppTemplateContainer
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>
 
 ---
 
@@ -13296,7 +13296,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]</code> | *No description.* |
 
 ---
 
@@ -13327,10 +13327,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerReadinessProbeHeader]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateContainerReadinessProbeHeader]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]
 
 ---
 
@@ -13594,7 +13594,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a></code> | *No description.* |
 
 ---
 
@@ -13665,10 +13665,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateContainerReadinessProbeHeader]
+internal_value: IResolvable | ContainerAppTemplateContainerReadinessProbeHeader
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>
 
 ---
 
@@ -13804,7 +13804,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]</code> | *No description.* |
 
 ---
 
@@ -13835,10 +13835,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerReadinessProbe]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateContainerReadinessProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]
 
 ---
 
@@ -14104,13 +14104,13 @@ Returns a reversible string representation.
 
 ```python
 def put_header(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerReadinessProbeHeader]]
+  value: IResolvable | typing.List[ContainerAppTemplateContainerReadinessProbeHeader]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.putHeader.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]
 
 ---
 
@@ -14171,7 +14171,7 @@ def reset_timeout() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.header">header</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeaderList">ContainerAppTemplateContainerReadinessProbeHeaderList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.failureCountThresholdInput">failure_count_threshold_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.headerInput">header_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.headerInput">header_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.hostInput">host_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.initialDelayInput">initial_delay_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.intervalSecondsInput">interval_seconds_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -14189,7 +14189,7 @@ def reset_timeout() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.successCountThreshold">success_count_threshold</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.timeout">timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.transport">transport</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a></code> | *No description.* |
 
 ---
 
@@ -14240,10 +14240,10 @@ failure_count_threshold_input: typing.Union[int, float]
 ##### `header_input`<sup>Optional</sup> <a name="header_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.headerInput"></a>
 
 ```python
-header_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerReadinessProbeHeader]]
+header_input: IResolvable | typing.List[ContainerAppTemplateContainerReadinessProbeHeader]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeHeader">ContainerAppTemplateContainerReadinessProbeHeader</a>]
 
 ---
 
@@ -14420,10 +14420,10 @@ transport: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbeOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateContainerReadinessProbe]
+internal_value: IResolvable | ContainerAppTemplateContainerReadinessProbe
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerReadinessProbe">ContainerAppTemplateContainerReadinessProbe</a>
 
 ---
 
@@ -14559,7 +14559,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]</code> | *No description.* |
 
 ---
 
@@ -14590,10 +14590,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerStartupProbeHeader]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateContainerStartupProbeHeader]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]
 
 ---
 
@@ -14857,7 +14857,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.valueInput">value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a></code> | *No description.* |
 
 ---
 
@@ -14928,10 +14928,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateContainerStartupProbeHeader]
+internal_value: IResolvable | ContainerAppTemplateContainerStartupProbeHeader
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>
 
 ---
 
@@ -15067,7 +15067,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]</code> | *No description.* |
 
 ---
 
@@ -15098,10 +15098,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerStartupProbe]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateContainerStartupProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]
 
 ---
 
@@ -15366,13 +15366,13 @@ Returns a reversible string representation.
 
 ```python
 def put_header(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerStartupProbeHeader]]
+  value: IResolvable | typing.List[ContainerAppTemplateContainerStartupProbeHeader]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.putHeader.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]
 
 ---
 
@@ -15428,7 +15428,7 @@ def reset_timeout() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.header">header</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeaderList">ContainerAppTemplateContainerStartupProbeHeaderList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.terminationGracePeriodSeconds">termination_grace_period_seconds</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.failureCountThresholdInput">failure_count_threshold_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.headerInput">header_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.headerInput">header_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.hostInput">host_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.initialDelayInput">initial_delay_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.intervalSecondsInput">interval_seconds_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -15444,7 +15444,7 @@ def reset_timeout() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.port">port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.timeout">timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.transport">transport</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a></code> | *No description.* |
 
 ---
 
@@ -15505,10 +15505,10 @@ failure_count_threshold_input: typing.Union[int, float]
 ##### `header_input`<sup>Optional</sup> <a name="header_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.headerInput"></a>
 
 ```python
-header_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerStartupProbeHeader]]
+header_input: IResolvable | typing.List[ContainerAppTemplateContainerStartupProbeHeader]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeHeader">ContainerAppTemplateContainerStartupProbeHeader</a>]
 
 ---
 
@@ -15665,10 +15665,10 @@ transport: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbeOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateContainerStartupProbe]
+internal_value: IResolvable | ContainerAppTemplateContainerStartupProbe
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerStartupProbe">ContainerAppTemplateContainerStartupProbe</a>
 
 ---
 
@@ -15804,7 +15804,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]</code> | *No description.* |
 
 ---
 
@@ -15835,10 +15835,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainerVolumeMounts]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateContainerVolumeMounts]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]
 
 ---
 
@@ -16111,7 +16111,7 @@ def reset_sub_path() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.path">path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.subPath">sub_path</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a></code> | *No description.* |
 
 ---
 
@@ -16202,10 +16202,10 @@ sub_path: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMountsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateContainerVolumeMounts]
+internal_value: IResolvable | ContainerAppTemplateContainerVolumeMounts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainerVolumeMounts">ContainerAppTemplateContainerVolumeMounts</a>
 
 ---
 
@@ -16341,7 +16341,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]</code> | *No description.* |
 
 ---
 
@@ -16372,10 +16372,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustomScaleRuleAuthentication]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateCustomScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]
 
 ---
 
@@ -16639,7 +16639,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.triggerParameterInput">trigger_parameter_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.secretName">secret_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a></code> | *No description.* |
 
 ---
 
@@ -16710,10 +16710,10 @@ trigger_parameter: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateCustomScaleRuleAuthentication]
+internal_value: IResolvable | ContainerAppTemplateCustomScaleRuleAuthentication
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>
 
 ---
 
@@ -16849,7 +16849,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]</code> | *No description.* |
 
 ---
 
@@ -16880,10 +16880,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustomScaleRule]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateCustomScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]
 
 ---
 
@@ -17142,13 +17142,13 @@ Returns a reversible string representation.
 
 ```python
 def put_authentication(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustomScaleRuleAuthentication]]
+  value: IResolvable | typing.List[ContainerAppTemplateCustomScaleRuleAuthentication]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.putAuthentication.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]
 
 ---
 
@@ -17166,14 +17166,14 @@ def reset_authentication() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.authentication">authentication</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthenticationList">ContainerAppTemplateCustomScaleRuleAuthenticationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.authenticationInput">authentication_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.authenticationInput">authentication_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.customRuleTypeInput">custom_rule_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.metadataInput">metadata_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.customRuleType">custom_rule_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.metadata">metadata</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a></code> | *No description.* |
 
 ---
 
@@ -17214,10 +17214,10 @@ authentication: ContainerAppTemplateCustomScaleRuleAuthenticationList
 ##### `authentication_input`<sup>Optional</sup> <a name="authentication_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.authenticationInput"></a>
 
 ```python
-authentication_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustomScaleRuleAuthentication]]
+authentication_input: IResolvable | typing.List[ContainerAppTemplateCustomScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleAuthentication">ContainerAppTemplateCustomScaleRuleAuthentication</a>]
 
 ---
 
@@ -17284,10 +17284,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateCustomScaleRule]
+internal_value: IResolvable | ContainerAppTemplateCustomScaleRule
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>
 
 ---
 
@@ -17423,7 +17423,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]</code> | *No description.* |
 
 ---
 
@@ -17454,10 +17454,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpScaleRuleAuthentication]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateHttpScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]
 
 ---
 
@@ -17728,7 +17728,7 @@ def reset_trigger_parameter() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.triggerParameterInput">trigger_parameter_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.secretName">secret_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a></code> | *No description.* |
 
 ---
 
@@ -17799,10 +17799,10 @@ trigger_parameter: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateHttpScaleRuleAuthentication]
+internal_value: IResolvable | ContainerAppTemplateHttpScaleRuleAuthentication
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>
 
 ---
 
@@ -17938,7 +17938,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]</code> | *No description.* |
 
 ---
 
@@ -17969,10 +17969,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpScaleRule]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateHttpScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]
 
 ---
 
@@ -18231,13 +18231,13 @@ Returns a reversible string representation.
 
 ```python
 def put_authentication(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpScaleRuleAuthentication]]
+  value: IResolvable | typing.List[ContainerAppTemplateHttpScaleRuleAuthentication]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.putAuthentication.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]
 
 ---
 
@@ -18255,12 +18255,12 @@ def reset_authentication() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.authentication">authentication</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthenticationList">ContainerAppTemplateHttpScaleRuleAuthenticationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.authenticationInput">authentication_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.authenticationInput">authentication_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.concurrentRequestsInput">concurrent_requests_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.concurrentRequests">concurrent_requests</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a></code> | *No description.* |
 
 ---
 
@@ -18301,10 +18301,10 @@ authentication: ContainerAppTemplateHttpScaleRuleAuthenticationList
 ##### `authentication_input`<sup>Optional</sup> <a name="authentication_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.authenticationInput"></a>
 
 ```python
-authentication_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpScaleRuleAuthentication]]
+authentication_input: IResolvable | typing.List[ContainerAppTemplateHttpScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleAuthentication">ContainerAppTemplateHttpScaleRuleAuthentication</a>]
 
 ---
 
@@ -18351,10 +18351,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateHttpScaleRule]
+internal_value: IResolvable | ContainerAppTemplateHttpScaleRule
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>
 
 ---
 
@@ -18490,7 +18490,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]</code> | *No description.* |
 
 ---
 
@@ -18521,10 +18521,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainerEnv]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateInitContainerEnv]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]
 
 ---
 
@@ -18804,7 +18804,7 @@ def reset_value() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.secretName">secret_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.value">value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a></code> | *No description.* |
 
 ---
 
@@ -18895,10 +18895,10 @@ value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnvOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateInitContainerEnv]
+internal_value: IResolvable | ContainerAppTemplateInitContainerEnv
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>
 
 ---
 
@@ -19034,7 +19034,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]</code> | *No description.* |
 
 ---
 
@@ -19065,10 +19065,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainer]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateInitContainer]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]
 
 ---
 
@@ -19333,13 +19333,13 @@ Returns a reversible string representation.
 
 ```python
 def put_env(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainerEnv]]
+  value: IResolvable | typing.List[ContainerAppTemplateInitContainerEnv]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.putEnv.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]
 
 ---
 
@@ -19347,13 +19347,13 @@ def put_env(
 
 ```python
 def put_volume_mounts(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainerVolumeMounts]]
+  value: IResolvable | typing.List[ContainerAppTemplateInitContainerVolumeMounts]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.putVolumeMounts.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]
 
 ---
 
@@ -19406,18 +19406,18 @@ def reset_volume_mounts() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.argsInput">args_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.commandInput">command_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.cpuInput">cpu_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.envInput">env_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.envInput">env_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.imageInput">image_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.memoryInput">memory_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.volumeMountsInput">volume_mounts_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.volumeMountsInput">volume_mounts_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.args">args</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.command">command</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.cpu">cpu</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.image">image</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.memory">memory</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a></code> | *No description.* |
 
 ---
 
@@ -19508,10 +19508,10 @@ cpu_input: typing.Union[int, float]
 ##### `env_input`<sup>Optional</sup> <a name="env_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.envInput"></a>
 
 ```python
-env_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainerEnv]]
+env_input: IResolvable | typing.List[ContainerAppTemplateInitContainerEnv]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerEnv">ContainerAppTemplateInitContainerEnv</a>]
 
 ---
 
@@ -19548,10 +19548,10 @@ name_input: str
 ##### `volume_mounts_input`<sup>Optional</sup> <a name="volume_mounts_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.volumeMountsInput"></a>
 
 ```python
-volume_mounts_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainerVolumeMounts]]
+volume_mounts_input: IResolvable | typing.List[ContainerAppTemplateInitContainerVolumeMounts]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]
 
 ---
 
@@ -19618,10 +19618,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateInitContainer]
+internal_value: IResolvable | ContainerAppTemplateInitContainer
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>
 
 ---
 
@@ -19757,7 +19757,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]</code> | *No description.* |
 
 ---
 
@@ -19788,10 +19788,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainerVolumeMounts]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateInitContainerVolumeMounts]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]
 
 ---
 
@@ -20064,7 +20064,7 @@ def reset_sub_path() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.path">path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.subPath">sub_path</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a></code> | *No description.* |
 
 ---
 
@@ -20155,10 +20155,10 @@ sub_path: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMountsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateInitContainerVolumeMounts]
+internal_value: IResolvable | ContainerAppTemplateInitContainerVolumeMounts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerVolumeMounts">ContainerAppTemplateInitContainerVolumeMounts</a>
 
 ---
 
@@ -20412,13 +20412,13 @@ Returns a reversible string representation.
 
 ```python
 def put_azure_queue_scale_rule(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQueueScaleRule]]
+  value: IResolvable | typing.List[ContainerAppTemplateAzureQueueScaleRule]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putAzureQueueScaleRule.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]
 
 ---
 
@@ -20426,13 +20426,13 @@ def put_azure_queue_scale_rule(
 
 ```python
 def put_container(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainer]]
+  value: IResolvable | typing.List[ContainerAppTemplateContainer]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putContainer.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]
 
 ---
 
@@ -20440,13 +20440,13 @@ def put_container(
 
 ```python
 def put_custom_scale_rule(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustomScaleRule]]
+  value: IResolvable | typing.List[ContainerAppTemplateCustomScaleRule]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putCustomScaleRule.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]
 
 ---
 
@@ -20454,13 +20454,13 @@ def put_custom_scale_rule(
 
 ```python
 def put_http_scale_rule(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpScaleRule]]
+  value: IResolvable | typing.List[ContainerAppTemplateHttpScaleRule]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putHttpScaleRule.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]
 
 ---
 
@@ -20468,13 +20468,13 @@ def put_http_scale_rule(
 
 ```python
 def put_init_container(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainer]]
+  value: IResolvable | typing.List[ContainerAppTemplateInitContainer]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putInitContainer.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]
 
 ---
 
@@ -20482,13 +20482,13 @@ def put_init_container(
 
 ```python
 def put_tcp_scale_rule(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpScaleRule]]
+  value: IResolvable | typing.List[ContainerAppTemplateTcpScaleRule]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putTcpScaleRule.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]
 
 ---
 
@@ -20496,13 +20496,13 @@ def put_tcp_scale_rule(
 
 ```python
 def put_volume(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateVolume]]
+  value: IResolvable | typing.List[ContainerAppTemplateVolume]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.putVolume.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]
 
 ---
 
@@ -20580,17 +20580,17 @@ def reset_volume() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.initContainer">init_container</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainerList">ContainerAppTemplateInitContainerList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.tcpScaleRule">tcp_scale_rule</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList">ContainerAppTemplateTcpScaleRuleList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.volume">volume</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList">ContainerAppTemplateVolumeList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.azureQueueScaleRuleInput">azure_queue_scale_rule_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.containerInput">container_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.customScaleRuleInput">custom_scale_rule_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.httpScaleRuleInput">http_scale_rule_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.initContainerInput">init_container_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.azureQueueScaleRuleInput">azure_queue_scale_rule_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.containerInput">container_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.customScaleRuleInput">custom_scale_rule_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.httpScaleRuleInput">http_scale_rule_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.initContainerInput">init_container_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.maxReplicasInput">max_replicas_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.minReplicasInput">min_replicas_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.revisionSuffixInput">revision_suffix_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.tcpScaleRuleInput">tcp_scale_rule_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.tcpScaleRuleInput">tcp_scale_rule_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.terminationGracePeriodSecondsInput">termination_grace_period_seconds_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.volumeInput">volume_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.volumeInput">volume_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.maxReplicas">max_replicas</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.minReplicas">min_replicas</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.revisionSuffix">revision_suffix</a></code> | <code>str</code> | *No description.* |
@@ -20696,50 +20696,50 @@ volume: ContainerAppTemplateVolumeList
 ##### `azure_queue_scale_rule_input`<sup>Optional</sup> <a name="azure_queue_scale_rule_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.azureQueueScaleRuleInput"></a>
 
 ```python
-azure_queue_scale_rule_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateAzureQueueScaleRule]]
+azure_queue_scale_rule_input: IResolvable | typing.List[ContainerAppTemplateAzureQueueScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateAzureQueueScaleRule">ContainerAppTemplateAzureQueueScaleRule</a>]
 
 ---
 
 ##### `container_input`<sup>Optional</sup> <a name="container_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.containerInput"></a>
 
 ```python
-container_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateContainer]]
+container_input: IResolvable | typing.List[ContainerAppTemplateContainer]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateContainer">ContainerAppTemplateContainer</a>]
 
 ---
 
 ##### `custom_scale_rule_input`<sup>Optional</sup> <a name="custom_scale_rule_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.customScaleRuleInput"></a>
 
 ```python
-custom_scale_rule_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateCustomScaleRule]]
+custom_scale_rule_input: IResolvable | typing.List[ContainerAppTemplateCustomScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateCustomScaleRule">ContainerAppTemplateCustomScaleRule</a>]
 
 ---
 
 ##### `http_scale_rule_input`<sup>Optional</sup> <a name="http_scale_rule_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.httpScaleRuleInput"></a>
 
 ```python
-http_scale_rule_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateHttpScaleRule]]
+http_scale_rule_input: IResolvable | typing.List[ContainerAppTemplateHttpScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateHttpScaleRule">ContainerAppTemplateHttpScaleRule</a>]
 
 ---
 
 ##### `init_container_input`<sup>Optional</sup> <a name="init_container_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.initContainerInput"></a>
 
 ```python
-init_container_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateInitContainer]]
+init_container_input: IResolvable | typing.List[ContainerAppTemplateInitContainer]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateInitContainer">ContainerAppTemplateInitContainer</a>]
 
 ---
 
@@ -20776,10 +20776,10 @@ revision_suffix_input: str
 ##### `tcp_scale_rule_input`<sup>Optional</sup> <a name="tcp_scale_rule_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.tcpScaleRuleInput"></a>
 
 ```python
-tcp_scale_rule_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpScaleRule]]
+tcp_scale_rule_input: IResolvable | typing.List[ContainerAppTemplateTcpScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]
 
 ---
 
@@ -20796,10 +20796,10 @@ termination_grace_period_seconds_input: typing.Union[int, float]
 ##### `volume_input`<sup>Optional</sup> <a name="volume_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateOutputReference.property.volumeInput"></a>
 
 ```python
-volume_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateVolume]]
+volume_input: IResolvable | typing.List[ContainerAppTemplateVolume]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]
 
 ---
 
@@ -20985,7 +20985,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]</code> | *No description.* |
 
 ---
 
@@ -21016,10 +21016,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpScaleRuleAuthentication]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateTcpScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]
 
 ---
 
@@ -21290,7 +21290,7 @@ def reset_trigger_parameter() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.triggerParameterInput">trigger_parameter_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.secretName">secret_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.triggerParameter">trigger_parameter</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a></code> | *No description.* |
 
 ---
 
@@ -21361,10 +21361,10 @@ trigger_parameter: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateTcpScaleRuleAuthentication]
+internal_value: IResolvable | ContainerAppTemplateTcpScaleRuleAuthentication
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>
 
 ---
 
@@ -21500,7 +21500,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]</code> | *No description.* |
 
 ---
 
@@ -21531,10 +21531,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpScaleRule]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateTcpScaleRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]
 
 ---
 
@@ -21793,13 +21793,13 @@ Returns a reversible string representation.
 
 ```python
 def put_authentication(
-  value: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpScaleRuleAuthentication]]
+  value: IResolvable | typing.List[ContainerAppTemplateTcpScaleRuleAuthentication]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.putAuthentication.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]
 
 ---
 
@@ -21817,12 +21817,12 @@ def reset_authentication() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.authentication">authentication</a></code> | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthenticationList">ContainerAppTemplateTcpScaleRuleAuthenticationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.authenticationInput">authentication_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.authenticationInput">authentication_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.concurrentRequestsInput">concurrent_requests_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.concurrentRequests">concurrent_requests</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a></code> | *No description.* |
 
 ---
 
@@ -21863,10 +21863,10 @@ authentication: ContainerAppTemplateTcpScaleRuleAuthenticationList
 ##### `authentication_input`<sup>Optional</sup> <a name="authentication_input" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.authenticationInput"></a>
 
 ```python
-authentication_input: typing.Union[IResolvable, typing.List[ContainerAppTemplateTcpScaleRuleAuthentication]]
+authentication_input: IResolvable | typing.List[ContainerAppTemplateTcpScaleRuleAuthentication]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleAuthentication">ContainerAppTemplateTcpScaleRuleAuthentication</a>]
 
 ---
 
@@ -21913,10 +21913,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateTcpScaleRule]
+internal_value: IResolvable | ContainerAppTemplateTcpScaleRule
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateTcpScaleRule">ContainerAppTemplateTcpScaleRule</a>
 
 ---
 
@@ -22052,7 +22052,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]</code> | *No description.* |
 
 ---
 
@@ -22083,10 +22083,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ContainerAppTemplateVolume]]
+internal_value: IResolvable | typing.List[ContainerAppTemplateVolume]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]
 
 ---
 
@@ -22375,7 +22375,7 @@ def reset_storage_type() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.storageName">storage_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.storageType">storage_type</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a></code> | *No description.* |
 
 ---
 
@@ -22486,10 +22486,10 @@ storage_type: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolumeOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTemplateVolume]
+internal_value: IResolvable | ContainerAppTemplateVolume
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTemplateVolume">ContainerAppTemplateVolume</a>
 
 ---
 
@@ -22765,7 +22765,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -22876,10 +22876,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.containerApp.ContainerAppTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ContainerAppTimeouts]
+internal_value: IResolvable | ContainerAppTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.containerApp.ContainerAppTimeouts">ContainerAppTimeouts</a>
 
 ---
 

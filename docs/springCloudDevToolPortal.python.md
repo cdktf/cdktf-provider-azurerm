@@ -14,19 +14,19 @@ from cdktf_cdktf_provider_azurerm import spring_cloud_dev_tool_portal
 springCloudDevToolPortal.SpringCloudDevToolPortal(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
   spring_cloud_service_id: str,
-  application_accelerator_enabled: typing.Union[bool, IResolvable] = None,
-  application_live_view_enabled: typing.Union[bool, IResolvable] = None,
+  application_accelerator_enabled: bool | IResolvable = None,
+  application_live_view_enabled: bool | IResolvable = None,
   id: str = None,
-  public_network_access_enabled: typing.Union[bool, IResolvable] = None,
+  public_network_access_enabled: bool | IResolvable = None,
   sso: SpringCloudDevToolPortalSso = None,
   timeouts: SpringCloudDevToolPortalTimeouts = None
 )
@@ -36,19 +36,19 @@ springCloudDevToolPortal.SpringCloudDevToolPortal(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#name SpringCloudDevToolPortal#name}. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.springCloudServiceId">spring_cloud_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#spring_cloud_service_id SpringCloudDevToolPortal#spring_cloud_service_id}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.applicationAcceleratorEnabled">application_accelerator_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_accelerator_enabled SpringCloudDevToolPortal#application_accelerator_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.applicationLiveViewEnabled">application_live_view_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_live_view_enabled SpringCloudDevToolPortal#application_live_view_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.applicationAcceleratorEnabled">application_accelerator_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_accelerator_enabled SpringCloudDevToolPortal#application_accelerator_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.applicationLiveViewEnabled">application_live_view_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_live_view_enabled SpringCloudDevToolPortal#application_live_view_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#id SpringCloudDevToolPortal#id}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#public_network_access_enabled SpringCloudDevToolPortal#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#public_network_access_enabled SpringCloudDevToolPortal#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.sso">sso</a></code> | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalSso">SpringCloudDevToolPortalSso</a></code> | sso block. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts">SpringCloudDevToolPortalTimeouts</a></code> | timeouts block. |
 
@@ -74,13 +74,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -132,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `application_accelerator_enabled`<sup>Optional</sup> <a name="application_accelerator_enabled" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.applicationAcceleratorEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_accelerator_enabled SpringCloudDevToolPortal#application_accelerator_enabled}.
 
@@ -140,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `application_live_view_enabled`<sup>Optional</sup> <a name="application_live_view_enabled" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.applicationLiveViewEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_live_view_enabled SpringCloudDevToolPortal#application_live_view_enabled}.
 
@@ -159,7 +159,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 ##### `public_network_access_enabled`<sup>Optional</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.Initializer.parameter.publicNetworkAccessEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#public_network_access_enabled SpringCloudDevToolPortal#public_network_access_enabled}.
 
@@ -445,7 +445,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.importFrom"></a>
@@ -508,7 +508,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -524,7 +524,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -807,28 +807,28 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.sso">sso</a></code> | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalSsoOutputReference">SpringCloudDevToolPortalSsoOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeoutsOutputReference">SpringCloudDevToolPortalTimeoutsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationAcceleratorEnabledInput">application_accelerator_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationLiveViewEnabledInput">application_live_view_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationAcceleratorEnabledInput">application_accelerator_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationLiveViewEnabledInput">application_live_view_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.publicNetworkAccessEnabledInput">public_network_access_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.publicNetworkAccessEnabledInput">public_network_access_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.springCloudServiceIdInput">spring_cloud_service_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.ssoInput">sso_input</a></code> | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalSso">SpringCloudDevToolPortalSso</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts">SpringCloudDevToolPortalTimeouts</a>]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationAcceleratorEnabled">application_accelerator_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationLiveViewEnabled">application_live_view_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts">SpringCloudDevToolPortalTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationAcceleratorEnabled">application_accelerator_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationLiveViewEnabled">application_live_view_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.springCloudServiceId">spring_cloud_service_id</a></code> | <code>str</code> | *No description.* |
 
 ---
@@ -908,20 +908,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -968,10 +968,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -998,20 +998,20 @@ timeouts: SpringCloudDevToolPortalTimeoutsOutputReference
 ##### `application_accelerator_enabled_input`<sup>Optional</sup> <a name="application_accelerator_enabled_input" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationAcceleratorEnabledInput"></a>
 
 ```python
-application_accelerator_enabled_input: typing.Union[bool, IResolvable]
+application_accelerator_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `application_live_view_enabled_input`<sup>Optional</sup> <a name="application_live_view_enabled_input" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationLiveViewEnabledInput"></a>
 
 ```python
-application_live_view_enabled_input: typing.Union[bool, IResolvable]
+application_live_view_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1038,10 +1038,10 @@ name_input: str
 ##### `public_network_access_enabled_input`<sup>Optional</sup> <a name="public_network_access_enabled_input" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.publicNetworkAccessEnabledInput"></a>
 
 ```python
-public_network_access_enabled_input: typing.Union[bool, IResolvable]
+public_network_access_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1068,30 +1068,30 @@ sso_input: SpringCloudDevToolPortalSso
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, SpringCloudDevToolPortalTimeouts]
+timeouts_input: IResolvable | SpringCloudDevToolPortalTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts">SpringCloudDevToolPortalTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts">SpringCloudDevToolPortalTimeouts</a>
 
 ---
 
 ##### `application_accelerator_enabled`<sup>Required</sup> <a name="application_accelerator_enabled" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationAcceleratorEnabled"></a>
 
 ```python
-application_accelerator_enabled: typing.Union[bool, IResolvable]
+application_accelerator_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `application_live_view_enabled`<sup>Required</sup> <a name="application_live_view_enabled" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.applicationLiveViewEnabled"></a>
 
 ```python
-application_live_view_enabled: typing.Union[bool, IResolvable]
+application_live_view_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1118,10 +1118,10 @@ name: str
 ##### `public_network_access_enabled`<sup>Required</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortal.property.publicNetworkAccessEnabled"></a>
 
 ```python
-public_network_access_enabled: typing.Union[bool, IResolvable]
+public_network_access_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1163,19 +1163,19 @@ tfResourceType: str
 from cdktf_cdktf_provider_azurerm import spring_cloud_dev_tool_portal
 
 springCloudDevToolPortal.SpringCloudDevToolPortalConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   name: str,
   spring_cloud_service_id: str,
-  application_accelerator_enabled: typing.Union[bool, IResolvable] = None,
-  application_live_view_enabled: typing.Union[bool, IResolvable] = None,
+  application_accelerator_enabled: bool | IResolvable = None,
+  application_live_view_enabled: bool | IResolvable = None,
   id: str = None,
-  public_network_access_enabled: typing.Union[bool, IResolvable] = None,
+  public_network_access_enabled: bool | IResolvable = None,
   sso: SpringCloudDevToolPortalSso = None,
   timeouts: SpringCloudDevToolPortalTimeouts = None
 )
@@ -1185,19 +1185,19 @@ springCloudDevToolPortal.SpringCloudDevToolPortalConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#name SpringCloudDevToolPortal#name}. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.springCloudServiceId">spring_cloud_service_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#spring_cloud_service_id SpringCloudDevToolPortal#spring_cloud_service_id}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.applicationAcceleratorEnabled">application_accelerator_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_accelerator_enabled SpringCloudDevToolPortal#application_accelerator_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.applicationLiveViewEnabled">application_live_view_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_live_view_enabled SpringCloudDevToolPortal#application_live_view_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.applicationAcceleratorEnabled">application_accelerator_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_accelerator_enabled SpringCloudDevToolPortal#application_accelerator_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.applicationLiveViewEnabled">application_live_view_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_live_view_enabled SpringCloudDevToolPortal#application_live_view_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#id SpringCloudDevToolPortal#id}. |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#public_network_access_enabled SpringCloudDevToolPortal#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#public_network_access_enabled SpringCloudDevToolPortal#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.sso">sso</a></code> | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalSso">SpringCloudDevToolPortalSso</a></code> | sso block. |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts">SpringCloudDevToolPortalTimeouts</a></code> | timeouts block. |
 
@@ -1206,20 +1206,20 @@ springCloudDevToolPortal.SpringCloudDevToolPortalConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1266,10 +1266,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1300,10 +1300,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `application_accelerator_enabled`<sup>Optional</sup> <a name="application_accelerator_enabled" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.applicationAcceleratorEnabled"></a>
 
 ```python
-application_accelerator_enabled: typing.Union[bool, IResolvable]
+application_accelerator_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_accelerator_enabled SpringCloudDevToolPortal#application_accelerator_enabled}.
 
@@ -1312,10 +1312,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `application_live_view_enabled`<sup>Optional</sup> <a name="application_live_view_enabled" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.applicationLiveViewEnabled"></a>
 
 ```python
-application_live_view_enabled: typing.Union[bool, IResolvable]
+application_live_view_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#application_live_view_enabled SpringCloudDevToolPortal#application_live_view_enabled}.
 
@@ -1339,10 +1339,10 @@ If you experience problems setting this value it might not be settable. Please t
 ##### `public_network_access_enabled`<sup>Optional</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalConfig.property.publicNetworkAccessEnabled"></a>
 
 ```python
-public_network_access_enabled: typing.Union[bool, IResolvable]
+public_network_access_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/spring_cloud_dev_tool_portal#public_network_access_enabled SpringCloudDevToolPortal#public_network_access_enabled}.
 
@@ -2187,7 +2187,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts">SpringCloudDevToolPortalTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts">SpringCloudDevToolPortalTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2298,10 +2298,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, SpringCloudDevToolPortalTimeouts]
+internal_value: IResolvable | SpringCloudDevToolPortalTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts">SpringCloudDevToolPortalTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.springCloudDevToolPortal.SpringCloudDevToolPortalTimeouts">SpringCloudDevToolPortalTimeouts</a>
 
 ---
 

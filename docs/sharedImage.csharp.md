@@ -300,7 +300,7 @@ private System.Collections.Generic.IDictionary<string, string> GetStringMapAttri
 ##### `HasResourceMove` <a name="HasResourceMove" id="@cdktf/provider-azurerm.sharedImage.SharedImage.hasResourceMove"></a>
 
 ```csharp
-private object HasResourceMove()
+private TerraformResourceMoveByTarget|TerraformResourceMoveById HasResourceMove()
 ```
 
 ##### `ImportFrom` <a name="ImportFrom" id="@cdktf/provider-azurerm.sharedImage.SharedImage.importFrom"></a>
@@ -354,7 +354,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ##### `MoveTo` <a name="MoveTo" id="@cdktf/provider-azurerm.sharedImage.SharedImage.moveTo"></a>
 
 ```csharp
-private void MoveTo(string MoveTarget, object Index = null)
+private void MoveTo(string MoveTarget, string|double Index = null)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -369,7 +369,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `Index`<sup>Optional</sup> <a name="Index" id="@cdktf/provider-azurerm.sharedImage.SharedImage.moveTo.parameter.index"></a>
 
-- *Type:* object
+- *Type:* string|double
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -697,27 +697,27 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.terraformMetaArguments">TerraformMetaArguments</a></code> | <code>System.Collections.Generic.IDictionary<string, object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.terraformResourceType">TerraformResourceType</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.terraformGeneratorMetadata">TerraformGeneratorMetadata</a></code> | <code>HashiCorp.Cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.dependsOn">DependsOn</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.identifier">Identifier</a></code> | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageIdentifierOutputReference">SharedImageIdentifierOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.purchasePlan">PurchasePlan</a></code> | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImagePurchasePlanOutputReference">SharedImagePurchasePlanOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageTimeoutsOutputReference">SharedImageTimeoutsOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.acceleratedNetworkSupportEnabledInput">AcceleratedNetworkSupportEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.acceleratedNetworkSupportEnabledInput">AcceleratedNetworkSupportEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.architectureInput">ArchitectureInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmEnabledInput">ConfidentialVmEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmSupportedInput">ConfidentialVmSupportedInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmEnabledInput">ConfidentialVmEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmSupportedInput">ConfidentialVmSupportedInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.descriptionInput">DescriptionInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.diskControllerTypeNvmeEnabledInput">DiskControllerTypeNvmeEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.diskControllerTypeNvmeEnabledInput">DiskControllerTypeNvmeEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.diskTypesNotAllowedInput">DiskTypesNotAllowedInput</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.endOfLifeDateInput">EndOfLifeDateInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.eulaInput">EulaInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.galleryNameInput">GalleryNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.hibernationEnabledInput">HibernationEnabledInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.hibernationEnabledInput">HibernationEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.hyperVGenerationInput">HyperVGenerationInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.identifierInput">IdentifierInput</a></code> | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageIdentifier">SharedImageIdentifier</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.idInput">IdInput</a></code> | <code>string</code> | *No description.* |
@@ -732,22 +732,22 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.purchasePlanInput">PurchasePlanInput</a></code> | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImagePurchasePlan">SharedImagePurchasePlan</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.releaseNoteUriInput">ReleaseNoteUriInput</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.resourceGroupNameInput">ResourceGroupNameInput</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.specializedInput">SpecializedInput</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.specializedInput">SpecializedInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.tagsInput">TagsInput</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.timeoutsInput">TimeoutsInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchEnabledInput">TrustedLaunchEnabledInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchSupportedInput">TrustedLaunchSupportedInput</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.acceleratedNetworkSupportEnabled">AcceleratedNetworkSupportEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.timeoutsInput">TimeoutsInput</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.sharedImage.SharedImageTimeouts">SharedImageTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchEnabledInput">TrustedLaunchEnabledInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchSupportedInput">TrustedLaunchSupportedInput</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.acceleratedNetworkSupportEnabled">AcceleratedNetworkSupportEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.architecture">Architecture</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmEnabled">ConfidentialVmEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmSupported">ConfidentialVmSupported</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmEnabled">ConfidentialVmEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmSupported">ConfidentialVmSupported</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.description">Description</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.diskControllerTypeNvmeEnabled">DiskControllerTypeNvmeEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.diskControllerTypeNvmeEnabled">DiskControllerTypeNvmeEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.diskTypesNotAllowed">DiskTypesNotAllowed</a></code> | <code>string[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.endOfLifeDate">EndOfLifeDate</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.eula">Eula</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.galleryName">GalleryName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.hibernationEnabled">HibernationEnabled</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.hibernationEnabled">HibernationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.hyperVGeneration">HyperVGeneration</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.id">Id</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.location">Location</a></code> | <code>string</code> | *No description.* |
@@ -760,10 +760,10 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.privacyStatementUri">PrivacyStatementUri</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.releaseNoteUri">ReleaseNoteUri</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.specialized">Specialized</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.specialized">Specialized</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchEnabled">TrustedLaunchEnabled</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchSupported">TrustedLaunchSupported</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchEnabled">TrustedLaunchEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchSupported">TrustedLaunchSupported</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -842,20 +842,20 @@ public TerraformProviderGeneratorMetadata TerraformGeneratorMetadata { get; }
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.connection"></a>
 
 ```csharp
-public object Connection { get; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.count"></a>
 
 ```csharp
-public object Count { get; }
+public double|TerraformCount Count { get; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -902,10 +902,10 @@ public TerraformProvider Provider { get; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -942,10 +942,10 @@ public SharedImageTimeoutsOutputReference Timeouts { get; }
 ##### `AcceleratedNetworkSupportEnabledInput`<sup>Optional</sup> <a name="AcceleratedNetworkSupportEnabledInput" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.acceleratedNetworkSupportEnabledInput"></a>
 
 ```csharp
-public object AcceleratedNetworkSupportEnabledInput { get; }
+public bool|IResolvable AcceleratedNetworkSupportEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -962,20 +962,20 @@ public string ArchitectureInput { get; }
 ##### `ConfidentialVmEnabledInput`<sup>Optional</sup> <a name="ConfidentialVmEnabledInput" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmEnabledInput"></a>
 
 ```csharp
-public object ConfidentialVmEnabledInput { get; }
+public bool|IResolvable ConfidentialVmEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ConfidentialVmSupportedInput`<sup>Optional</sup> <a name="ConfidentialVmSupportedInput" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmSupportedInput"></a>
 
 ```csharp
-public object ConfidentialVmSupportedInput { get; }
+public bool|IResolvable ConfidentialVmSupportedInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -992,10 +992,10 @@ public string DescriptionInput { get; }
 ##### `DiskControllerTypeNvmeEnabledInput`<sup>Optional</sup> <a name="DiskControllerTypeNvmeEnabledInput" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.diskControllerTypeNvmeEnabledInput"></a>
 
 ```csharp
-public object DiskControllerTypeNvmeEnabledInput { get; }
+public bool|IResolvable DiskControllerTypeNvmeEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1042,10 +1042,10 @@ public string GalleryNameInput { get; }
 ##### `HibernationEnabledInput`<sup>Optional</sup> <a name="HibernationEnabledInput" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.hibernationEnabledInput"></a>
 
 ```csharp
-public object HibernationEnabledInput { get; }
+public bool|IResolvable HibernationEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1192,10 +1192,10 @@ public string ResourceGroupNameInput { get; }
 ##### `SpecializedInput`<sup>Optional</sup> <a name="SpecializedInput" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.specializedInput"></a>
 
 ```csharp
-public object SpecializedInput { get; }
+public bool|IResolvable SpecializedInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1212,40 +1212,40 @@ public System.Collections.Generic.IDictionary<string, string> TagsInput { get; }
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.timeoutsInput"></a>
 
 ```csharp
-public object TimeoutsInput { get; }
+public IResolvable|SharedImageTimeouts TimeoutsInput { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.sharedImage.SharedImageTimeouts">SharedImageTimeouts</a>
 
 ---
 
 ##### `TrustedLaunchEnabledInput`<sup>Optional</sup> <a name="TrustedLaunchEnabledInput" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchEnabledInput"></a>
 
 ```csharp
-public object TrustedLaunchEnabledInput { get; }
+public bool|IResolvable TrustedLaunchEnabledInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `TrustedLaunchSupportedInput`<sup>Optional</sup> <a name="TrustedLaunchSupportedInput" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchSupportedInput"></a>
 
 ```csharp
-public object TrustedLaunchSupportedInput { get; }
+public bool|IResolvable TrustedLaunchSupportedInput { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `AcceleratedNetworkSupportEnabled`<sup>Required</sup> <a name="AcceleratedNetworkSupportEnabled" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.acceleratedNetworkSupportEnabled"></a>
 
 ```csharp
-public object AcceleratedNetworkSupportEnabled { get; }
+public bool|IResolvable AcceleratedNetworkSupportEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1262,20 +1262,20 @@ public string Architecture { get; }
 ##### `ConfidentialVmEnabled`<sup>Required</sup> <a name="ConfidentialVmEnabled" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmEnabled"></a>
 
 ```csharp
-public object ConfidentialVmEnabled { get; }
+public bool|IResolvable ConfidentialVmEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `ConfidentialVmSupported`<sup>Required</sup> <a name="ConfidentialVmSupported" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.confidentialVmSupported"></a>
 
 ```csharp
-public object ConfidentialVmSupported { get; }
+public bool|IResolvable ConfidentialVmSupported { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1292,10 +1292,10 @@ public string Description { get; }
 ##### `DiskControllerTypeNvmeEnabled`<sup>Required</sup> <a name="DiskControllerTypeNvmeEnabled" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.diskControllerTypeNvmeEnabled"></a>
 
 ```csharp
-public object DiskControllerTypeNvmeEnabled { get; }
+public bool|IResolvable DiskControllerTypeNvmeEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1342,10 +1342,10 @@ public string GalleryName { get; }
 ##### `HibernationEnabled`<sup>Required</sup> <a name="HibernationEnabled" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.hibernationEnabled"></a>
 
 ```csharp
-public object HibernationEnabled { get; }
+public bool|IResolvable HibernationEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1472,10 +1472,10 @@ public string ResourceGroupName { get; }
 ##### `Specialized`<sup>Required</sup> <a name="Specialized" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.specialized"></a>
 
 ```csharp
-public object Specialized { get; }
+public bool|IResolvable Specialized { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1492,20 +1492,20 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; }
 ##### `TrustedLaunchEnabled`<sup>Required</sup> <a name="TrustedLaunchEnabled" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchEnabled"></a>
 
 ```csharp
-public object TrustedLaunchEnabled { get; }
+public bool|IResolvable TrustedLaunchEnabled { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
 ##### `TrustedLaunchSupported`<sup>Required</sup> <a name="TrustedLaunchSupported" id="@cdktf/provider-azurerm.sharedImage.SharedImage.property.trustedLaunchSupported"></a>
 
 ```csharp
-public object TrustedLaunchSupported { get; }
+public bool|IResolvable TrustedLaunchSupported { get; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 ---
 
@@ -1537,29 +1537,29 @@ public string TfResourceType { get; }
 using HashiCorp.Cdktf.Providers.Azurerm;
 
 new SharedImageConfig {
-    object Connection = null,
-    object Count = null,
+    SSHProvisionerConnection|WinrmProvisionerConnection Connection = null,
+    double|TerraformCount Count = null,
     ITerraformDependable[] DependsOn = null,
     ITerraformIterator ForEach = null,
     TerraformResourceLifecycle Lifecycle = null,
     TerraformProvider Provider = null,
-    object[] Provisioners = null,
+    (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners = null,
     string GalleryName,
     SharedImageIdentifier Identifier,
     string Location,
     string Name,
     string OsType,
     string ResourceGroupName,
-    object AcceleratedNetworkSupportEnabled = null,
+    bool|IResolvable AcceleratedNetworkSupportEnabled = null,
     string Architecture = null,
-    object ConfidentialVmEnabled = null,
-    object ConfidentialVmSupported = null,
+    bool|IResolvable ConfidentialVmEnabled = null,
+    bool|IResolvable ConfidentialVmSupported = null,
     string Description = null,
-    object DiskControllerTypeNvmeEnabled = null,
+    bool|IResolvable DiskControllerTypeNvmeEnabled = null,
     string[] DiskTypesNotAllowed = null,
     string EndOfLifeDate = null,
     string Eula = null,
-    object HibernationEnabled = null,
+    bool|IResolvable HibernationEnabled = null,
     string HyperVGeneration = null,
     string Id = null,
     double MaxRecommendedMemoryInGb = null,
@@ -1569,11 +1569,11 @@ new SharedImageConfig {
     string PrivacyStatementUri = null,
     SharedImagePurchasePlan PurchasePlan = null,
     string ReleaseNoteUri = null,
-    object Specialized = null,
+    bool|IResolvable Specialized = null,
     System.Collections.Generic.IDictionary<string, string> Tags = null,
     SharedImageTimeouts Timeouts = null,
-    object TrustedLaunchEnabled = null,
-    object TrustedLaunchSupported = null
+    bool|IResolvable TrustedLaunchEnabled = null,
+    bool|IResolvable TrustedLaunchSupported = null
 };
 ```
 
@@ -1581,29 +1581,29 @@ new SharedImageConfig {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.connection">Connection</a></code> | <code>object</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.count">Count</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.connection">Connection</a></code> | <code>HashiCorp.Cdktf.SSHProvisionerConnection\|HashiCorp.Cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.count">Count</a></code> | <code>double\|HashiCorp.Cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.dependsOn">DependsOn</a></code> | <code>HashiCorp.Cdktf.ITerraformDependable[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.forEach">ForEach</a></code> | <code>HashiCorp.Cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.provisioners">Provisioners</a></code> | <code>object[]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.galleryName">GalleryName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#gallery_name SharedImage#gallery_name}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.identifier">Identifier</a></code> | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageIdentifier">SharedImageIdentifier</a></code> | identifier block. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.location">Location</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#location SharedImage#location}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#name SharedImage#name}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.osType">OsType</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#os_type SharedImage#os_type}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#resource_group_name SharedImage#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.acceleratedNetworkSupportEnabled">AcceleratedNetworkSupportEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#accelerated_network_support_enabled SharedImage#accelerated_network_support_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.acceleratedNetworkSupportEnabled">AcceleratedNetworkSupportEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#accelerated_network_support_enabled SharedImage#accelerated_network_support_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.architecture">Architecture</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#architecture SharedImage#architecture}. |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.confidentialVmEnabled">ConfidentialVmEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#confidential_vm_enabled SharedImage#confidential_vm_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.confidentialVmSupported">ConfidentialVmSupported</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#confidential_vm_supported SharedImage#confidential_vm_supported}. |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.confidentialVmEnabled">ConfidentialVmEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#confidential_vm_enabled SharedImage#confidential_vm_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.confidentialVmSupported">ConfidentialVmSupported</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#confidential_vm_supported SharedImage#confidential_vm_supported}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.description">Description</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#description SharedImage#description}. |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.diskControllerTypeNvmeEnabled">DiskControllerTypeNvmeEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#disk_controller_type_nvme_enabled SharedImage#disk_controller_type_nvme_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.diskControllerTypeNvmeEnabled">DiskControllerTypeNvmeEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#disk_controller_type_nvme_enabled SharedImage#disk_controller_type_nvme_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.diskTypesNotAllowed">DiskTypesNotAllowed</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#disk_types_not_allowed SharedImage#disk_types_not_allowed}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.endOfLifeDate">EndOfLifeDate</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#end_of_life_date SharedImage#end_of_life_date}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.eula">Eula</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#eula SharedImage#eula}. |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.hibernationEnabled">HibernationEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#hibernation_enabled SharedImage#hibernation_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.hibernationEnabled">HibernationEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#hibernation_enabled SharedImage#hibernation_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.hyperVGeneration">HyperVGeneration</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#hyper_v_generation SharedImage#hyper_v_generation}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#id SharedImage#id}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.maxRecommendedMemoryInGb">MaxRecommendedMemoryInGb</a></code> | <code>double</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#max_recommended_memory_in_gb SharedImage#max_recommended_memory_in_gb}. |
@@ -1613,31 +1613,31 @@ new SharedImageConfig {
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.privacyStatementUri">PrivacyStatementUri</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#privacy_statement_uri SharedImage#privacy_statement_uri}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.purchasePlan">PurchasePlan</a></code> | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImagePurchasePlan">SharedImagePurchasePlan</a></code> | purchase_plan block. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.releaseNoteUri">ReleaseNoteUri</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#release_note_uri SharedImage#release_note_uri}. |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.specialized">Specialized</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#specialized SharedImage#specialized}. |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.specialized">Specialized</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#specialized SharedImage#specialized}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#tags SharedImage#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageTimeouts">SharedImageTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.trustedLaunchEnabled">TrustedLaunchEnabled</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#trusted_launch_enabled SharedImage#trusted_launch_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.trustedLaunchSupported">TrustedLaunchSupported</a></code> | <code>object</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#trusted_launch_supported SharedImage#trusted_launch_supported}. |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.trustedLaunchEnabled">TrustedLaunchEnabled</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#trusted_launch_enabled SharedImage#trusted_launch_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.trustedLaunchSupported">TrustedLaunchSupported</a></code> | <code>bool\|HashiCorp.Cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#trusted_launch_supported SharedImage#trusted_launch_supported}. |
 
 ---
 
 ##### `Connection`<sup>Optional</sup> <a name="Connection" id="@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.connection"></a>
 
 ```csharp
-public object Connection { get; set; }
+public SSHProvisionerConnection|WinrmProvisionerConnection Connection { get; set; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.SSHProvisionerConnection|HashiCorp.Cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `Count`<sup>Optional</sup> <a name="Count" id="@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.count"></a>
 
 ```csharp
-public object Count { get; set; }
+public double|TerraformCount Count { get; set; }
 ```
 
-- *Type:* object
+- *Type:* double|HashiCorp.Cdktf.TerraformCount
 
 ---
 
@@ -1684,10 +1684,10 @@ public TerraformProvider Provider { get; set; }
 ##### `Provisioners`<sup>Optional</sup> <a name="Provisioners" id="@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.provisioners"></a>
 
 ```csharp
-public object[] Provisioners { get; set; }
+public (FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner)[] Provisioners { get; set; }
 ```
 
-- *Type:* object[]
+- *Type:* HashiCorp.Cdktf.FileProvisioner|HashiCorp.Cdktf.LocalExecProvisioner|HashiCorp.Cdktf.RemoteExecProvisioner[]
 
 ---
 
@@ -1768,10 +1768,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `AcceleratedNetworkSupportEnabled`<sup>Optional</sup> <a name="AcceleratedNetworkSupportEnabled" id="@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.acceleratedNetworkSupportEnabled"></a>
 
 ```csharp
-public object AcceleratedNetworkSupportEnabled { get; set; }
+public bool|IResolvable AcceleratedNetworkSupportEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#accelerated_network_support_enabled SharedImage#accelerated_network_support_enabled}.
 
@@ -1792,10 +1792,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ConfidentialVmEnabled`<sup>Optional</sup> <a name="ConfidentialVmEnabled" id="@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.confidentialVmEnabled"></a>
 
 ```csharp
-public object ConfidentialVmEnabled { get; set; }
+public bool|IResolvable ConfidentialVmEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#confidential_vm_enabled SharedImage#confidential_vm_enabled}.
 
@@ -1804,10 +1804,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ConfidentialVmSupported`<sup>Optional</sup> <a name="ConfidentialVmSupported" id="@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.confidentialVmSupported"></a>
 
 ```csharp
-public object ConfidentialVmSupported { get; set; }
+public bool|IResolvable ConfidentialVmSupported { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#confidential_vm_supported SharedImage#confidential_vm_supported}.
 
@@ -1828,10 +1828,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `DiskControllerTypeNvmeEnabled`<sup>Optional</sup> <a name="DiskControllerTypeNvmeEnabled" id="@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.diskControllerTypeNvmeEnabled"></a>
 
 ```csharp
-public object DiskControllerTypeNvmeEnabled { get; set; }
+public bool|IResolvable DiskControllerTypeNvmeEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#disk_controller_type_nvme_enabled SharedImage#disk_controller_type_nvme_enabled}.
 
@@ -1876,10 +1876,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `HibernationEnabled`<sup>Optional</sup> <a name="HibernationEnabled" id="@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.hibernationEnabled"></a>
 
 ```csharp
-public object HibernationEnabled { get; set; }
+public bool|IResolvable HibernationEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#hibernation_enabled SharedImage#hibernation_enabled}.
 
@@ -2001,10 +2001,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `Specialized`<sup>Optional</sup> <a name="Specialized" id="@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.specialized"></a>
 
 ```csharp
-public object Specialized { get; set; }
+public bool|IResolvable Specialized { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#specialized SharedImage#specialized}.
 
@@ -2039,10 +2039,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `TrustedLaunchEnabled`<sup>Optional</sup> <a name="TrustedLaunchEnabled" id="@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.trustedLaunchEnabled"></a>
 
 ```csharp
-public object TrustedLaunchEnabled { get; set; }
+public bool|IResolvable TrustedLaunchEnabled { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#trusted_launch_enabled SharedImage#trusted_launch_enabled}.
 
@@ -2051,10 +2051,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `TrustedLaunchSupported`<sup>Optional</sup> <a name="TrustedLaunchSupported" id="@cdktf/provider-azurerm.sharedImage.SharedImageConfig.property.trustedLaunchSupported"></a>
 
 ```csharp
-public object TrustedLaunchSupported { get; set; }
+public bool|IResolvable TrustedLaunchSupported { get; set; }
 ```
 
-- *Type:* object
+- *Type:* bool|HashiCorp.Cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/shared_image#trusted_launch_supported SharedImage#trusted_launch_supported}.
 
@@ -3146,7 +3146,7 @@ private void ResetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageTimeoutsOutputReference.property.delete">Delete</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageTimeoutsOutputReference.property.read">Read</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageTimeoutsOutputReference.property.update">Update</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>object</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.sharedImage.SharedImageTimeoutsOutputReference.property.internalValue">InternalValue</a></code> | <code>HashiCorp.Cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.sharedImage.SharedImageTimeouts">SharedImageTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -3257,10 +3257,10 @@ public string Update { get; }
 ##### `InternalValue`<sup>Optional</sup> <a name="InternalValue" id="@cdktf/provider-azurerm.sharedImage.SharedImageTimeoutsOutputReference.property.internalValue"></a>
 
 ```csharp
-public object InternalValue { get; }
+public IResolvable|SharedImageTimeouts InternalValue { get; }
 ```
 
-- *Type:* object
+- *Type:* HashiCorp.Cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.sharedImage.SharedImageTimeouts">SharedImageTimeouts</a>
 
 ---
 

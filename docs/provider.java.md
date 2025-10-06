@@ -22,13 +22,10 @@ AzurermProvider.Builder.create(Construct scope, java.lang.String id)
 //  .clientIdFilePath(java.lang.String)
 //  .clientSecret(java.lang.String)
 //  .clientSecretFilePath(java.lang.String)
-//  .disableCorrelationRequestId(java.lang.Boolean)
-//  .disableCorrelationRequestId(IResolvable)
-//  .disableTerraformPartnerId(java.lang.Boolean)
-//  .disableTerraformPartnerId(IResolvable)
+//  .disableCorrelationRequestId(java.lang.Boolean|IResolvable)
+//  .disableTerraformPartnerId(java.lang.Boolean|IResolvable)
 //  .environment(java.lang.String)
-//  .features(IResolvable)
-//  .features(java.util.List<AzurermProviderFeatures>)
+//  .features(IResolvable|java.util.List<AzurermProviderFeatures>)
 //  .metadataHost(java.lang.String)
 //  .msiApiVersion(java.lang.String)
 //  .msiEndpoint(java.lang.String)
@@ -39,20 +36,14 @@ AzurermProvider.Builder.create(Construct scope, java.lang.String id)
 //  .partnerId(java.lang.String)
 //  .resourceProviderRegistrations(java.lang.String)
 //  .resourceProvidersToRegister(java.util.List<java.lang.String>)
-//  .skipProviderRegistration(java.lang.Boolean)
-//  .skipProviderRegistration(IResolvable)
-//  .storageUseAzuread(java.lang.Boolean)
-//  .storageUseAzuread(IResolvable)
+//  .skipProviderRegistration(java.lang.Boolean|IResolvable)
+//  .storageUseAzuread(java.lang.Boolean|IResolvable)
 //  .subscriptionId(java.lang.String)
 //  .tenantId(java.lang.String)
-//  .useAksWorkloadIdentity(java.lang.Boolean)
-//  .useAksWorkloadIdentity(IResolvable)
-//  .useCli(java.lang.Boolean)
-//  .useCli(IResolvable)
-//  .useMsi(java.lang.Boolean)
-//  .useMsi(IResolvable)
-//  .useOidc(java.lang.Boolean)
-//  .useOidc(IResolvable)
+//  .useAksWorkloadIdentity(java.lang.Boolean|IResolvable)
+//  .useCli(java.lang.Boolean|IResolvable)
+//  .useMsi(java.lang.Boolean|IResolvable)
+//  .useOidc(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -70,10 +61,10 @@ AzurermProvider.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.clientIdFilePath">clientIdFilePath</a></code> | <code>java.lang.String</code> | The path to a file containing the Client ID which should be used. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.clientSecret">clientSecret</a></code> | <code>java.lang.String</code> | The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.clientSecretFilePath">clientSecretFilePath</a></code> | <code>java.lang.String</code> | The path to a file containing the Client Secret which should be used. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.disableCorrelationRequestId">disableCorrelationRequestId</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This will disable the x-ms-correlation-request-id header. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.disableTerraformPartnerId">disableTerraformPartnerId</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.disableCorrelationRequestId">disableCorrelationRequestId</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | This will disable the x-ms-correlation-request-id header. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.disableTerraformPartnerId">disableTerraformPartnerId</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.environment">environment</a></code> | <code>java.lang.String</code> | The Cloud Environment which should be used. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.features">features</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>></code> | features block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.features">features</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>></code> | features block. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.metadataHost">metadataHost</a></code> | <code>java.lang.String</code> | The Hostname which should be used for the Azure Metadata Service. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.msiApiVersion">msiApiVersion</a></code> | <code>java.lang.String</code> | The API version to use for Managed Service Identity (IMDS) - for cases where the default API version is not supported by the endpoint. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.msiEndpoint">msiEndpoint</a></code> | <code>java.lang.String</code> | The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically. |
@@ -84,14 +75,14 @@ AzurermProvider.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.partnerId">partnerId</a></code> | <code>java.lang.String</code> | A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.resourceProviderRegistrations">resourceProviderRegistrations</a></code> | <code>java.lang.String</code> | The set of Resource Providers which should be automatically registered for the subscription. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.resourceProvidersToRegister">resourceProvidersToRegister</a></code> | <code>java.util.List<java.lang.String></code> | A list of Resource Providers to explicitly register for the subscription, in addition to those specified by the `resource_provider_registrations` property. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.skipProviderRegistration">skipProviderRegistration</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered? |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.storageUseAzuread">storageUseAzuread</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Should the AzureRM Provider use Azure AD Authentication when accessing the Storage Data Plane APIs? |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.skipProviderRegistration">skipProviderRegistration</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered? |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.storageUseAzuread">storageUseAzuread</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Should the AzureRM Provider use Azure AD Authentication when accessing the Storage Data Plane APIs? |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.subscriptionId">subscriptionId</a></code> | <code>java.lang.String</code> | The Subscription ID which should be used. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.tenantId">tenantId</a></code> | <code>java.lang.String</code> | The Tenant ID which should be used. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useAksWorkloadIdentity">useAksWorkloadIdentity</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Allow Azure AKS Workload Identity to be used for Authentication. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useCli">useCli</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Allow Azure CLI to be used for Authentication. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useMsi">useMsi</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Allow Managed Service Identity to be used for Authentication. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useOidc">useOidc</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Allow OpenID Connect to be used for authentication. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useAksWorkloadIdentity">useAksWorkloadIdentity</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Allow Azure AKS Workload Identity to be used for Authentication. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useCli">useCli</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Allow Azure CLI to be used for Authentication. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useMsi">useMsi</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Allow Managed Service Identity to be used for Authentication. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useOidc">useOidc</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Allow OpenID Connect to be used for authentication. |
 
 ---
 
@@ -215,7 +206,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `disableCorrelationRequestId`<sup>Optional</sup> <a name="disableCorrelationRequestId" id="@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.disableCorrelationRequestId"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 This will disable the x-ms-correlation-request-id header.
 
@@ -225,7 +216,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `disableTerraformPartnerId`<sup>Optional</sup> <a name="disableTerraformPartnerId" id="@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.disableTerraformPartnerId"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
 
@@ -247,7 +238,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `features`<sup>Optional</sup> <a name="features" id="@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.features"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>>
 
 features block.
 
@@ -363,7 +354,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `skipProviderRegistration`<sup>Optional</sup> <a name="skipProviderRegistration" id="@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.skipProviderRegistration"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered?
 
@@ -373,7 +364,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `storageUseAzuread`<sup>Optional</sup> <a name="storageUseAzuread" id="@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.storageUseAzuread"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Should the AzureRM Provider use Azure AD Authentication when accessing the Storage Data Plane APIs?
 
@@ -403,7 +394,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `useAksWorkloadIdentity`<sup>Optional</sup> <a name="useAksWorkloadIdentity" id="@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useAksWorkloadIdentity"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Allow Azure AKS Workload Identity to be used for Authentication.
 
@@ -413,7 +404,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `useCli`<sup>Optional</sup> <a name="useCli" id="@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useCli"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Allow Azure CLI to be used for Authentication.
 
@@ -423,7 +414,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `useMsi`<sup>Optional</sup> <a name="useMsi" id="@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useMsi"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Allow Managed Service Identity to be used for Authentication.
 
@@ -433,7 +424,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `useOidc`<sup>Optional</sup> <a name="useOidc" id="@cdktf/provider-azurerm.provider.AzurermProvider.Initializer.parameter.useOidc"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Allow OpenID Connect to be used for authentication.
 
@@ -887,10 +878,10 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.clientIdInput">clientIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.clientSecretFilePathInput">clientSecretFilePathInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.clientSecretInput">clientSecretInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.disableCorrelationRequestIdInput">disableCorrelationRequestIdInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.disableTerraformPartnerIdInput">disableTerraformPartnerIdInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.disableCorrelationRequestIdInput">disableCorrelationRequestIdInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.disableTerraformPartnerIdInput">disableTerraformPartnerIdInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.environmentInput">environmentInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.featuresInput">featuresInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.featuresInput">featuresInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.metadataHostInput">metadataHostInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.msiApiVersionInput">msiApiVersionInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.msiEndpointInput">msiEndpointInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -901,14 +892,14 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.partnerIdInput">partnerIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.resourceProviderRegistrationsInput">resourceProviderRegistrationsInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.resourceProvidersToRegisterInput">resourceProvidersToRegisterInput</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.skipProviderRegistrationInput">skipProviderRegistrationInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.storageUseAzureadInput">storageUseAzureadInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.skipProviderRegistrationInput">skipProviderRegistrationInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.storageUseAzureadInput">storageUseAzureadInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.subscriptionIdInput">subscriptionIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.tenantIdInput">tenantIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useAksWorkloadIdentityInput">useAksWorkloadIdentityInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useCliInput">useCliInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useMsiInput">useMsiInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useOidcInput">useOidcInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useAksWorkloadIdentityInput">useAksWorkloadIdentityInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useCliInput">useCliInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useMsiInput">useMsiInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useOidcInput">useOidcInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.adoPipelineServiceConnectionId">adoPipelineServiceConnectionId</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.auxiliaryTenantIds">auxiliaryTenantIds</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.clientCertificate">clientCertificate</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -918,10 +909,10 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.clientIdFilePath">clientIdFilePath</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.clientSecret">clientSecret</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.clientSecretFilePath">clientSecretFilePath</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.disableCorrelationRequestId">disableCorrelationRequestId</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.disableTerraformPartnerId">disableTerraformPartnerId</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.disableCorrelationRequestId">disableCorrelationRequestId</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.disableTerraformPartnerId">disableTerraformPartnerId</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.environment">environment</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.features">features</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.features">features</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.metadataHost">metadataHost</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.msiApiVersion">msiApiVersion</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.msiEndpoint">msiEndpoint</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -932,14 +923,14 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.partnerId">partnerId</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.resourceProviderRegistrations">resourceProviderRegistrations</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.resourceProvidersToRegister">resourceProvidersToRegister</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.skipProviderRegistration">skipProviderRegistration</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.storageUseAzuread">storageUseAzuread</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.skipProviderRegistration">skipProviderRegistration</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.storageUseAzuread">storageUseAzuread</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.subscriptionId">subscriptionId</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.tenantId">tenantId</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useAksWorkloadIdentity">useAksWorkloadIdentity</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useCli">useCli</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useMsi">useMsi</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useOidc">useOidc</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useAksWorkloadIdentity">useAksWorkloadIdentity</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useCli">useCli</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useMsi">useMsi</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProvider.property.useOidc">useOidc</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -1138,20 +1129,20 @@ public java.lang.String getClientSecretInput();
 ##### `disableCorrelationRequestIdInput`<sup>Optional</sup> <a name="disableCorrelationRequestIdInput" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.disableCorrelationRequestIdInput"></a>
 
 ```java
-public java.lang.Object getDisableCorrelationRequestIdInput();
+public java.lang.Boolean|IResolvable getDisableCorrelationRequestIdInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `disableTerraformPartnerIdInput`<sup>Optional</sup> <a name="disableTerraformPartnerIdInput" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.disableTerraformPartnerIdInput"></a>
 
 ```java
-public java.lang.Object getDisableTerraformPartnerIdInput();
+public java.lang.Boolean|IResolvable getDisableTerraformPartnerIdInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1168,10 +1159,10 @@ public java.lang.String getEnvironmentInput();
 ##### `featuresInput`<sup>Optional</sup> <a name="featuresInput" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.featuresInput"></a>
 
 ```java
-public java.lang.Object getFeaturesInput();
+public IResolvable|java.util.List<AzurermProviderFeatures> getFeaturesInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>>
 
 ---
 
@@ -1278,20 +1269,20 @@ public java.util.List<java.lang.String> getResourceProvidersToRegisterInput();
 ##### `skipProviderRegistrationInput`<sup>Optional</sup> <a name="skipProviderRegistrationInput" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.skipProviderRegistrationInput"></a>
 
 ```java
-public java.lang.Object getSkipProviderRegistrationInput();
+public java.lang.Boolean|IResolvable getSkipProviderRegistrationInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `storageUseAzureadInput`<sup>Optional</sup> <a name="storageUseAzureadInput" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.storageUseAzureadInput"></a>
 
 ```java
-public java.lang.Object getStorageUseAzureadInput();
+public java.lang.Boolean|IResolvable getStorageUseAzureadInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1318,40 +1309,40 @@ public java.lang.String getTenantIdInput();
 ##### `useAksWorkloadIdentityInput`<sup>Optional</sup> <a name="useAksWorkloadIdentityInput" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.useAksWorkloadIdentityInput"></a>
 
 ```java
-public java.lang.Object getUseAksWorkloadIdentityInput();
+public java.lang.Boolean|IResolvable getUseAksWorkloadIdentityInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `useCliInput`<sup>Optional</sup> <a name="useCliInput" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.useCliInput"></a>
 
 ```java
-public java.lang.Object getUseCliInput();
+public java.lang.Boolean|IResolvable getUseCliInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `useMsiInput`<sup>Optional</sup> <a name="useMsiInput" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.useMsiInput"></a>
 
 ```java
-public java.lang.Object getUseMsiInput();
+public java.lang.Boolean|IResolvable getUseMsiInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `useOidcInput`<sup>Optional</sup> <a name="useOidcInput" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.useOidcInput"></a>
 
 ```java
-public java.lang.Object getUseOidcInput();
+public java.lang.Boolean|IResolvable getUseOidcInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1448,20 +1439,20 @@ public java.lang.String getClientSecretFilePath();
 ##### `disableCorrelationRequestId`<sup>Optional</sup> <a name="disableCorrelationRequestId" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.disableCorrelationRequestId"></a>
 
 ```java
-public java.lang.Object getDisableCorrelationRequestId();
+public java.lang.Boolean|IResolvable getDisableCorrelationRequestId();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `disableTerraformPartnerId`<sup>Optional</sup> <a name="disableTerraformPartnerId" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.disableTerraformPartnerId"></a>
 
 ```java
-public java.lang.Object getDisableTerraformPartnerId();
+public java.lang.Boolean|IResolvable getDisableTerraformPartnerId();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1478,10 +1469,10 @@ public java.lang.String getEnvironment();
 ##### `features`<sup>Optional</sup> <a name="features" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.features"></a>
 
 ```java
-public java.lang.Object getFeatures();
+public IResolvable|java.util.List<AzurermProviderFeatures> getFeatures();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>>
 
 ---
 
@@ -1588,20 +1579,20 @@ public java.util.List<java.lang.String> getResourceProvidersToRegister();
 ##### `skipProviderRegistration`<sup>Optional</sup> <a name="skipProviderRegistration" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.skipProviderRegistration"></a>
 
 ```java
-public java.lang.Object getSkipProviderRegistration();
+public java.lang.Boolean|IResolvable getSkipProviderRegistration();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `storageUseAzuread`<sup>Optional</sup> <a name="storageUseAzuread" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.storageUseAzuread"></a>
 
 ```java
-public java.lang.Object getStorageUseAzuread();
+public java.lang.Boolean|IResolvable getStorageUseAzuread();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1628,40 +1619,40 @@ public java.lang.String getTenantId();
 ##### `useAksWorkloadIdentity`<sup>Optional</sup> <a name="useAksWorkloadIdentity" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.useAksWorkloadIdentity"></a>
 
 ```java
-public java.lang.Object getUseAksWorkloadIdentity();
+public java.lang.Boolean|IResolvable getUseAksWorkloadIdentity();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `useCli`<sup>Optional</sup> <a name="useCli" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.useCli"></a>
 
 ```java
-public java.lang.Object getUseCli();
+public java.lang.Boolean|IResolvable getUseCli();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `useMsi`<sup>Optional</sup> <a name="useMsi" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.useMsi"></a>
 
 ```java
-public java.lang.Object getUseMsi();
+public java.lang.Boolean|IResolvable getUseMsi();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
 ##### `useOidc`<sup>Optional</sup> <a name="useOidc" id="@cdktf/provider-azurerm.provider.AzurermProvider.property.useOidc"></a>
 
 ```java
-public java.lang.Object getUseOidc();
+public java.lang.Boolean|IResolvable getUseOidc();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1703,13 +1694,10 @@ AzurermProviderConfig.builder()
 //  .clientIdFilePath(java.lang.String)
 //  .clientSecret(java.lang.String)
 //  .clientSecretFilePath(java.lang.String)
-//  .disableCorrelationRequestId(java.lang.Boolean)
-//  .disableCorrelationRequestId(IResolvable)
-//  .disableTerraformPartnerId(java.lang.Boolean)
-//  .disableTerraformPartnerId(IResolvable)
+//  .disableCorrelationRequestId(java.lang.Boolean|IResolvable)
+//  .disableTerraformPartnerId(java.lang.Boolean|IResolvable)
 //  .environment(java.lang.String)
-//  .features(IResolvable)
-//  .features(java.util.List<AzurermProviderFeatures>)
+//  .features(IResolvable|java.util.List<AzurermProviderFeatures>)
 //  .metadataHost(java.lang.String)
 //  .msiApiVersion(java.lang.String)
 //  .msiEndpoint(java.lang.String)
@@ -1720,20 +1708,14 @@ AzurermProviderConfig.builder()
 //  .partnerId(java.lang.String)
 //  .resourceProviderRegistrations(java.lang.String)
 //  .resourceProvidersToRegister(java.util.List<java.lang.String>)
-//  .skipProviderRegistration(java.lang.Boolean)
-//  .skipProviderRegistration(IResolvable)
-//  .storageUseAzuread(java.lang.Boolean)
-//  .storageUseAzuread(IResolvable)
+//  .skipProviderRegistration(java.lang.Boolean|IResolvable)
+//  .storageUseAzuread(java.lang.Boolean|IResolvable)
 //  .subscriptionId(java.lang.String)
 //  .tenantId(java.lang.String)
-//  .useAksWorkloadIdentity(java.lang.Boolean)
-//  .useAksWorkloadIdentity(IResolvable)
-//  .useCli(java.lang.Boolean)
-//  .useCli(IResolvable)
-//  .useMsi(java.lang.Boolean)
-//  .useMsi(IResolvable)
-//  .useOidc(java.lang.Boolean)
-//  .useOidc(IResolvable)
+//  .useAksWorkloadIdentity(java.lang.Boolean|IResolvable)
+//  .useCli(java.lang.Boolean|IResolvable)
+//  .useMsi(java.lang.Boolean|IResolvable)
+//  .useOidc(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -1751,10 +1733,10 @@ AzurermProviderConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.clientIdFilePath">clientIdFilePath</a></code> | <code>java.lang.String</code> | The path to a file containing the Client ID which should be used. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.clientSecret">clientSecret</a></code> | <code>java.lang.String</code> | The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.clientSecretFilePath">clientSecretFilePath</a></code> | <code>java.lang.String</code> | The path to a file containing the Client Secret which should be used. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.disableCorrelationRequestId">disableCorrelationRequestId</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This will disable the x-ms-correlation-request-id header. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.disableTerraformPartnerId">disableTerraformPartnerId</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.disableCorrelationRequestId">disableCorrelationRequestId</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | This will disable the x-ms-correlation-request-id header. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.disableTerraformPartnerId">disableTerraformPartnerId</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.environment">environment</a></code> | <code>java.lang.String</code> | The Cloud Environment which should be used. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.features">features</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>></code> | features block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.features">features</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>></code> | features block. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.metadataHost">metadataHost</a></code> | <code>java.lang.String</code> | The Hostname which should be used for the Azure Metadata Service. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.msiApiVersion">msiApiVersion</a></code> | <code>java.lang.String</code> | The API version to use for Managed Service Identity (IMDS) - for cases where the default API version is not supported by the endpoint. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.msiEndpoint">msiEndpoint</a></code> | <code>java.lang.String</code> | The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically. |
@@ -1765,14 +1747,14 @@ AzurermProviderConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.partnerId">partnerId</a></code> | <code>java.lang.String</code> | A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.resourceProviderRegistrations">resourceProviderRegistrations</a></code> | <code>java.lang.String</code> | The set of Resource Providers which should be automatically registered for the subscription. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.resourceProvidersToRegister">resourceProvidersToRegister</a></code> | <code>java.util.List<java.lang.String></code> | A list of Resource Providers to explicitly register for the subscription, in addition to those specified by the `resource_provider_registrations` property. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.skipProviderRegistration">skipProviderRegistration</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered? |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.storageUseAzuread">storageUseAzuread</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Should the AzureRM Provider use Azure AD Authentication when accessing the Storage Data Plane APIs? |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.skipProviderRegistration">skipProviderRegistration</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered? |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.storageUseAzuread">storageUseAzuread</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Should the AzureRM Provider use Azure AD Authentication when accessing the Storage Data Plane APIs? |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.subscriptionId">subscriptionId</a></code> | <code>java.lang.String</code> | The Subscription ID which should be used. |
 | <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.tenantId">tenantId</a></code> | <code>java.lang.String</code> | The Tenant ID which should be used. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useAksWorkloadIdentity">useAksWorkloadIdentity</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Allow Azure AKS Workload Identity to be used for Authentication. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useCli">useCli</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Allow Azure CLI to be used for Authentication. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useMsi">useMsi</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Allow Managed Service Identity to be used for Authentication. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useOidc">useOidc</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Allow OpenID Connect to be used for authentication. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useAksWorkloadIdentity">useAksWorkloadIdentity</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Allow Azure AKS Workload Identity to be used for Authentication. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useCli">useCli</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Allow Azure CLI to be used for Authentication. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useMsi">useMsi</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Allow Managed Service Identity to be used for Authentication. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useOidc">useOidc</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Allow OpenID Connect to be used for authentication. |
 
 ---
 
@@ -1919,10 +1901,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `disableCorrelationRequestId`<sup>Optional</sup> <a name="disableCorrelationRequestId" id="@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.disableCorrelationRequestId"></a>
 
 ```java
-public java.lang.Object getDisableCorrelationRequestId();
+public java.lang.Boolean|IResolvable getDisableCorrelationRequestId();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 This will disable the x-ms-correlation-request-id header.
 
@@ -1933,10 +1915,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `disableTerraformPartnerId`<sup>Optional</sup> <a name="disableTerraformPartnerId" id="@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.disableTerraformPartnerId"></a>
 
 ```java
-public java.lang.Object getDisableTerraformPartnerId();
+public java.lang.Boolean|IResolvable getDisableTerraformPartnerId();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 This will disable the Terraform Partner ID which is used if a custom `partner_id` isn't specified.
 
@@ -1963,10 +1945,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `features`<sup>Optional</sup> <a name="features" id="@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.features"></a>
 
 ```java
-public java.lang.Object getFeatures();
+public IResolvable|java.util.List<AzurermProviderFeatures> getFeatures();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures">AzurermProviderFeatures</a>>
 
 features block.
 
@@ -2123,10 +2105,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `skipProviderRegistration`<sup>Optional</sup> <a name="skipProviderRegistration" id="@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.skipProviderRegistration"></a>
 
 ```java
-public java.lang.Object getSkipProviderRegistration();
+public java.lang.Boolean|IResolvable getSkipProviderRegistration();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Should the AzureRM Provider skip registering all of the Resource Providers that it supports, if they're not already registered?
 
@@ -2137,10 +2119,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `storageUseAzuread`<sup>Optional</sup> <a name="storageUseAzuread" id="@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.storageUseAzuread"></a>
 
 ```java
-public java.lang.Object getStorageUseAzuread();
+public java.lang.Boolean|IResolvable getStorageUseAzuread();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Should the AzureRM Provider use Azure AD Authentication when accessing the Storage Data Plane APIs?
 
@@ -2179,10 +2161,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `useAksWorkloadIdentity`<sup>Optional</sup> <a name="useAksWorkloadIdentity" id="@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useAksWorkloadIdentity"></a>
 
 ```java
-public java.lang.Object getUseAksWorkloadIdentity();
+public java.lang.Boolean|IResolvable getUseAksWorkloadIdentity();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Allow Azure AKS Workload Identity to be used for Authentication.
 
@@ -2193,10 +2175,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `useCli`<sup>Optional</sup> <a name="useCli" id="@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useCli"></a>
 
 ```java
-public java.lang.Object getUseCli();
+public java.lang.Boolean|IResolvable getUseCli();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Allow Azure CLI to be used for Authentication.
 
@@ -2207,10 +2189,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `useMsi`<sup>Optional</sup> <a name="useMsi" id="@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useMsi"></a>
 
 ```java
-public java.lang.Object getUseMsi();
+public java.lang.Boolean|IResolvable getUseMsi();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Allow Managed Service Identity to be used for Authentication.
 
@@ -2221,10 +2203,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `useOidc`<sup>Optional</sup> <a name="useOidc" id="@cdktf/provider-azurerm.provider.AzurermProviderConfig.property.useOidc"></a>
 
 ```java
-public java.lang.Object getUseOidc();
+public java.lang.Boolean|IResolvable getUseOidc();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Allow OpenID Connect to be used for authentication.
 
@@ -2240,44 +2222,25 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeatures;
 
 AzurermProviderFeatures.builder()
-//  .apiManagement(IResolvable)
-//  .apiManagement(java.util.List<AzurermProviderFeaturesApiManagement>)
-//  .appConfiguration(IResolvable)
-//  .appConfiguration(java.util.List<AzurermProviderFeaturesAppConfiguration>)
-//  .applicationInsights(IResolvable)
-//  .applicationInsights(java.util.List<AzurermProviderFeaturesApplicationInsights>)
-//  .cognitiveAccount(IResolvable)
-//  .cognitiveAccount(java.util.List<AzurermProviderFeaturesCognitiveAccount>)
-//  .databricksWorkspace(IResolvable)
-//  .databricksWorkspace(java.util.List<AzurermProviderFeaturesDatabricksWorkspace>)
-//  .keyVault(IResolvable)
-//  .keyVault(java.util.List<AzurermProviderFeaturesKeyVault>)
-//  .logAnalyticsWorkspace(IResolvable)
-//  .logAnalyticsWorkspace(java.util.List<AzurermProviderFeaturesLogAnalyticsWorkspace>)
-//  .machineLearning(IResolvable)
-//  .machineLearning(java.util.List<AzurermProviderFeaturesMachineLearning>)
-//  .managedDisk(IResolvable)
-//  .managedDisk(java.util.List<AzurermProviderFeaturesManagedDisk>)
-//  .netapp(IResolvable)
-//  .netapp(java.util.List<AzurermProviderFeaturesNetapp>)
-//  .postgresqlFlexibleServer(IResolvable)
-//  .postgresqlFlexibleServer(java.util.List<AzurermProviderFeaturesPostgresqlFlexibleServer>)
-//  .recoveryService(IResolvable)
-//  .recoveryService(java.util.List<AzurermProviderFeaturesRecoveryService>)
-//  .recoveryServicesVaults(IResolvable)
-//  .recoveryServicesVaults(java.util.List<AzurermProviderFeaturesRecoveryServicesVaults>)
-//  .resourceGroup(IResolvable)
-//  .resourceGroup(java.util.List<AzurermProviderFeaturesResourceGroup>)
-//  .storage(IResolvable)
-//  .storage(java.util.List<AzurermProviderFeaturesStorage>)
-//  .subscription(IResolvable)
-//  .subscription(java.util.List<AzurermProviderFeaturesSubscription>)
-//  .templateDeployment(IResolvable)
-//  .templateDeployment(java.util.List<AzurermProviderFeaturesTemplateDeployment>)
-//  .virtualMachine(IResolvable)
-//  .virtualMachine(java.util.List<AzurermProviderFeaturesVirtualMachine>)
-//  .virtualMachineScaleSet(IResolvable)
-//  .virtualMachineScaleSet(java.util.List<AzurermProviderFeaturesVirtualMachineScaleSet>)
+//  .apiManagement(IResolvable|java.util.List<AzurermProviderFeaturesApiManagement>)
+//  .appConfiguration(IResolvable|java.util.List<AzurermProviderFeaturesAppConfiguration>)
+//  .applicationInsights(IResolvable|java.util.List<AzurermProviderFeaturesApplicationInsights>)
+//  .cognitiveAccount(IResolvable|java.util.List<AzurermProviderFeaturesCognitiveAccount>)
+//  .databricksWorkspace(IResolvable|java.util.List<AzurermProviderFeaturesDatabricksWorkspace>)
+//  .keyVault(IResolvable|java.util.List<AzurermProviderFeaturesKeyVault>)
+//  .logAnalyticsWorkspace(IResolvable|java.util.List<AzurermProviderFeaturesLogAnalyticsWorkspace>)
+//  .machineLearning(IResolvable|java.util.List<AzurermProviderFeaturesMachineLearning>)
+//  .managedDisk(IResolvable|java.util.List<AzurermProviderFeaturesManagedDisk>)
+//  .netapp(IResolvable|java.util.List<AzurermProviderFeaturesNetapp>)
+//  .postgresqlFlexibleServer(IResolvable|java.util.List<AzurermProviderFeaturesPostgresqlFlexibleServer>)
+//  .recoveryService(IResolvable|java.util.List<AzurermProviderFeaturesRecoveryService>)
+//  .recoveryServicesVaults(IResolvable|java.util.List<AzurermProviderFeaturesRecoveryServicesVaults>)
+//  .resourceGroup(IResolvable|java.util.List<AzurermProviderFeaturesResourceGroup>)
+//  .storage(IResolvable|java.util.List<AzurermProviderFeaturesStorage>)
+//  .subscription(IResolvable|java.util.List<AzurermProviderFeaturesSubscription>)
+//  .templateDeployment(IResolvable|java.util.List<AzurermProviderFeaturesTemplateDeployment>)
+//  .virtualMachine(IResolvable|java.util.List<AzurermProviderFeaturesVirtualMachine>)
+//  .virtualMachineScaleSet(IResolvable|java.util.List<AzurermProviderFeaturesVirtualMachineScaleSet>)
     .build();
 ```
 
@@ -2285,35 +2248,35 @@ AzurermProviderFeatures.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.apiManagement">apiManagement</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApiManagement">AzurermProviderFeaturesApiManagement</a>></code> | api_management block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.appConfiguration">appConfiguration</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesAppConfiguration">AzurermProviderFeaturesAppConfiguration</a>></code> | app_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.applicationInsights">applicationInsights</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApplicationInsights">AzurermProviderFeaturesApplicationInsights</a>></code> | application_insights block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.cognitiveAccount">cognitiveAccount</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesCognitiveAccount">AzurermProviderFeaturesCognitiveAccount</a>></code> | cognitive_account block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.databricksWorkspace">databricksWorkspace</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesDatabricksWorkspace">AzurermProviderFeaturesDatabricksWorkspace</a>></code> | databricks_workspace block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.keyVault">keyVault</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault">AzurermProviderFeaturesKeyVault</a>></code> | key_vault block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.logAnalyticsWorkspace">logAnalyticsWorkspace</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesLogAnalyticsWorkspace">AzurermProviderFeaturesLogAnalyticsWorkspace</a>></code> | log_analytics_workspace block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.machineLearning">machineLearning</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesMachineLearning">AzurermProviderFeaturesMachineLearning</a>></code> | machine_learning block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.managedDisk">managedDisk</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesManagedDisk">AzurermProviderFeaturesManagedDisk</a>></code> | managed_disk block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.netapp">netapp</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesNetapp">AzurermProviderFeaturesNetapp</a>></code> | netapp block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.postgresqlFlexibleServer">postgresqlFlexibleServer</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesPostgresqlFlexibleServer">AzurermProviderFeaturesPostgresqlFlexibleServer</a>></code> | postgresql_flexible_server block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.recoveryService">recoveryService</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService">AzurermProviderFeaturesRecoveryService</a>></code> | recovery_service block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.recoveryServicesVaults">recoveryServicesVaults</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryServicesVaults">AzurermProviderFeaturesRecoveryServicesVaults</a>></code> | recovery_services_vaults block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.resourceGroup">resourceGroup</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesResourceGroup">AzurermProviderFeaturesResourceGroup</a>></code> | resource_group block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.storage">storage</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesStorage">AzurermProviderFeaturesStorage</a>></code> | storage block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.subscription">subscription</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesSubscription">AzurermProviderFeaturesSubscription</a>></code> | subscription block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.templateDeployment">templateDeployment</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesTemplateDeployment">AzurermProviderFeaturesTemplateDeployment</a>></code> | template_deployment block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.virtualMachine">virtualMachine</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine">AzurermProviderFeaturesVirtualMachine</a>></code> | virtual_machine block. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.virtualMachineScaleSet">virtualMachineScaleSet</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet">AzurermProviderFeaturesVirtualMachineScaleSet</a>></code> | virtual_machine_scale_set block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.apiManagement">apiManagement</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApiManagement">AzurermProviderFeaturesApiManagement</a>></code> | api_management block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.appConfiguration">appConfiguration</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesAppConfiguration">AzurermProviderFeaturesAppConfiguration</a>></code> | app_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.applicationInsights">applicationInsights</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApplicationInsights">AzurermProviderFeaturesApplicationInsights</a>></code> | application_insights block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.cognitiveAccount">cognitiveAccount</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesCognitiveAccount">AzurermProviderFeaturesCognitiveAccount</a>></code> | cognitive_account block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.databricksWorkspace">databricksWorkspace</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesDatabricksWorkspace">AzurermProviderFeaturesDatabricksWorkspace</a>></code> | databricks_workspace block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.keyVault">keyVault</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault">AzurermProviderFeaturesKeyVault</a>></code> | key_vault block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.logAnalyticsWorkspace">logAnalyticsWorkspace</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesLogAnalyticsWorkspace">AzurermProviderFeaturesLogAnalyticsWorkspace</a>></code> | log_analytics_workspace block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.machineLearning">machineLearning</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesMachineLearning">AzurermProviderFeaturesMachineLearning</a>></code> | machine_learning block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.managedDisk">managedDisk</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesManagedDisk">AzurermProviderFeaturesManagedDisk</a>></code> | managed_disk block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.netapp">netapp</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesNetapp">AzurermProviderFeaturesNetapp</a>></code> | netapp block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.postgresqlFlexibleServer">postgresqlFlexibleServer</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesPostgresqlFlexibleServer">AzurermProviderFeaturesPostgresqlFlexibleServer</a>></code> | postgresql_flexible_server block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.recoveryService">recoveryService</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService">AzurermProviderFeaturesRecoveryService</a>></code> | recovery_service block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.recoveryServicesVaults">recoveryServicesVaults</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryServicesVaults">AzurermProviderFeaturesRecoveryServicesVaults</a>></code> | recovery_services_vaults block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.resourceGroup">resourceGroup</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesResourceGroup">AzurermProviderFeaturesResourceGroup</a>></code> | resource_group block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.storage">storage</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesStorage">AzurermProviderFeaturesStorage</a>></code> | storage block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.subscription">subscription</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesSubscription">AzurermProviderFeaturesSubscription</a>></code> | subscription block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.templateDeployment">templateDeployment</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesTemplateDeployment">AzurermProviderFeaturesTemplateDeployment</a>></code> | template_deployment block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.virtualMachine">virtualMachine</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine">AzurermProviderFeaturesVirtualMachine</a>></code> | virtual_machine block. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.virtualMachineScaleSet">virtualMachineScaleSet</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet">AzurermProviderFeaturesVirtualMachineScaleSet</a>></code> | virtual_machine_scale_set block. |
 
 ---
 
 ##### `apiManagement`<sup>Optional</sup> <a name="apiManagement" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.apiManagement"></a>
 
 ```java
-public java.lang.Object getApiManagement();
+public IResolvable|java.util.List<AzurermProviderFeaturesApiManagement> getApiManagement();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApiManagement">AzurermProviderFeaturesApiManagement</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApiManagement">AzurermProviderFeaturesApiManagement</a>>
 
 api_management block.
 
@@ -2324,10 +2287,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `appConfiguration`<sup>Optional</sup> <a name="appConfiguration" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.appConfiguration"></a>
 
 ```java
-public java.lang.Object getAppConfiguration();
+public IResolvable|java.util.List<AzurermProviderFeaturesAppConfiguration> getAppConfiguration();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesAppConfiguration">AzurermProviderFeaturesAppConfiguration</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesAppConfiguration">AzurermProviderFeaturesAppConfiguration</a>>
 
 app_configuration block.
 
@@ -2338,10 +2301,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `applicationInsights`<sup>Optional</sup> <a name="applicationInsights" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.applicationInsights"></a>
 
 ```java
-public java.lang.Object getApplicationInsights();
+public IResolvable|java.util.List<AzurermProviderFeaturesApplicationInsights> getApplicationInsights();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApplicationInsights">AzurermProviderFeaturesApplicationInsights</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApplicationInsights">AzurermProviderFeaturesApplicationInsights</a>>
 
 application_insights block.
 
@@ -2352,10 +2315,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `cognitiveAccount`<sup>Optional</sup> <a name="cognitiveAccount" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.cognitiveAccount"></a>
 
 ```java
-public java.lang.Object getCognitiveAccount();
+public IResolvable|java.util.List<AzurermProviderFeaturesCognitiveAccount> getCognitiveAccount();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesCognitiveAccount">AzurermProviderFeaturesCognitiveAccount</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesCognitiveAccount">AzurermProviderFeaturesCognitiveAccount</a>>
 
 cognitive_account block.
 
@@ -2366,10 +2329,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `databricksWorkspace`<sup>Optional</sup> <a name="databricksWorkspace" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.databricksWorkspace"></a>
 
 ```java
-public java.lang.Object getDatabricksWorkspace();
+public IResolvable|java.util.List<AzurermProviderFeaturesDatabricksWorkspace> getDatabricksWorkspace();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesDatabricksWorkspace">AzurermProviderFeaturesDatabricksWorkspace</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesDatabricksWorkspace">AzurermProviderFeaturesDatabricksWorkspace</a>>
 
 databricks_workspace block.
 
@@ -2380,10 +2343,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `keyVault`<sup>Optional</sup> <a name="keyVault" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.keyVault"></a>
 
 ```java
-public java.lang.Object getKeyVault();
+public IResolvable|java.util.List<AzurermProviderFeaturesKeyVault> getKeyVault();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault">AzurermProviderFeaturesKeyVault</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault">AzurermProviderFeaturesKeyVault</a>>
 
 key_vault block.
 
@@ -2394,10 +2357,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `logAnalyticsWorkspace`<sup>Optional</sup> <a name="logAnalyticsWorkspace" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.logAnalyticsWorkspace"></a>
 
 ```java
-public java.lang.Object getLogAnalyticsWorkspace();
+public IResolvable|java.util.List<AzurermProviderFeaturesLogAnalyticsWorkspace> getLogAnalyticsWorkspace();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesLogAnalyticsWorkspace">AzurermProviderFeaturesLogAnalyticsWorkspace</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesLogAnalyticsWorkspace">AzurermProviderFeaturesLogAnalyticsWorkspace</a>>
 
 log_analytics_workspace block.
 
@@ -2408,10 +2371,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `machineLearning`<sup>Optional</sup> <a name="machineLearning" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.machineLearning"></a>
 
 ```java
-public java.lang.Object getMachineLearning();
+public IResolvable|java.util.List<AzurermProviderFeaturesMachineLearning> getMachineLearning();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesMachineLearning">AzurermProviderFeaturesMachineLearning</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesMachineLearning">AzurermProviderFeaturesMachineLearning</a>>
 
 machine_learning block.
 
@@ -2422,10 +2385,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `managedDisk`<sup>Optional</sup> <a name="managedDisk" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.managedDisk"></a>
 
 ```java
-public java.lang.Object getManagedDisk();
+public IResolvable|java.util.List<AzurermProviderFeaturesManagedDisk> getManagedDisk();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesManagedDisk">AzurermProviderFeaturesManagedDisk</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesManagedDisk">AzurermProviderFeaturesManagedDisk</a>>
 
 managed_disk block.
 
@@ -2436,10 +2399,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `netapp`<sup>Optional</sup> <a name="netapp" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.netapp"></a>
 
 ```java
-public java.lang.Object getNetapp();
+public IResolvable|java.util.List<AzurermProviderFeaturesNetapp> getNetapp();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesNetapp">AzurermProviderFeaturesNetapp</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesNetapp">AzurermProviderFeaturesNetapp</a>>
 
 netapp block.
 
@@ -2450,10 +2413,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `postgresqlFlexibleServer`<sup>Optional</sup> <a name="postgresqlFlexibleServer" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.postgresqlFlexibleServer"></a>
 
 ```java
-public java.lang.Object getPostgresqlFlexibleServer();
+public IResolvable|java.util.List<AzurermProviderFeaturesPostgresqlFlexibleServer> getPostgresqlFlexibleServer();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesPostgresqlFlexibleServer">AzurermProviderFeaturesPostgresqlFlexibleServer</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesPostgresqlFlexibleServer">AzurermProviderFeaturesPostgresqlFlexibleServer</a>>
 
 postgresql_flexible_server block.
 
@@ -2464,10 +2427,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `recoveryService`<sup>Optional</sup> <a name="recoveryService" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.recoveryService"></a>
 
 ```java
-public java.lang.Object getRecoveryService();
+public IResolvable|java.util.List<AzurermProviderFeaturesRecoveryService> getRecoveryService();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService">AzurermProviderFeaturesRecoveryService</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService">AzurermProviderFeaturesRecoveryService</a>>
 
 recovery_service block.
 
@@ -2478,10 +2441,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `recoveryServicesVaults`<sup>Optional</sup> <a name="recoveryServicesVaults" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.recoveryServicesVaults"></a>
 
 ```java
-public java.lang.Object getRecoveryServicesVaults();
+public IResolvable|java.util.List<AzurermProviderFeaturesRecoveryServicesVaults> getRecoveryServicesVaults();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryServicesVaults">AzurermProviderFeaturesRecoveryServicesVaults</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryServicesVaults">AzurermProviderFeaturesRecoveryServicesVaults</a>>
 
 recovery_services_vaults block.
 
@@ -2492,10 +2455,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `resourceGroup`<sup>Optional</sup> <a name="resourceGroup" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.resourceGroup"></a>
 
 ```java
-public java.lang.Object getResourceGroup();
+public IResolvable|java.util.List<AzurermProviderFeaturesResourceGroup> getResourceGroup();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesResourceGroup">AzurermProviderFeaturesResourceGroup</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesResourceGroup">AzurermProviderFeaturesResourceGroup</a>>
 
 resource_group block.
 
@@ -2506,10 +2469,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `storage`<sup>Optional</sup> <a name="storage" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.storage"></a>
 
 ```java
-public java.lang.Object getStorage();
+public IResolvable|java.util.List<AzurermProviderFeaturesStorage> getStorage();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesStorage">AzurermProviderFeaturesStorage</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesStorage">AzurermProviderFeaturesStorage</a>>
 
 storage block.
 
@@ -2520,10 +2483,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `subscription`<sup>Optional</sup> <a name="subscription" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.subscription"></a>
 
 ```java
-public java.lang.Object getSubscription();
+public IResolvable|java.util.List<AzurermProviderFeaturesSubscription> getSubscription();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesSubscription">AzurermProviderFeaturesSubscription</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesSubscription">AzurermProviderFeaturesSubscription</a>>
 
 subscription block.
 
@@ -2534,10 +2497,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `templateDeployment`<sup>Optional</sup> <a name="templateDeployment" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.templateDeployment"></a>
 
 ```java
-public java.lang.Object getTemplateDeployment();
+public IResolvable|java.util.List<AzurermProviderFeaturesTemplateDeployment> getTemplateDeployment();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesTemplateDeployment">AzurermProviderFeaturesTemplateDeployment</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesTemplateDeployment">AzurermProviderFeaturesTemplateDeployment</a>>
 
 template_deployment block.
 
@@ -2548,10 +2511,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `virtualMachine`<sup>Optional</sup> <a name="virtualMachine" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.virtualMachine"></a>
 
 ```java
-public java.lang.Object getVirtualMachine();
+public IResolvable|java.util.List<AzurermProviderFeaturesVirtualMachine> getVirtualMachine();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine">AzurermProviderFeaturesVirtualMachine</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine">AzurermProviderFeaturesVirtualMachine</a>>
 
 virtual_machine block.
 
@@ -2562,10 +2525,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `virtualMachineScaleSet`<sup>Optional</sup> <a name="virtualMachineScaleSet" id="@cdktf/provider-azurerm.provider.AzurermProviderFeatures.property.virtualMachineScaleSet"></a>
 
 ```java
-public java.lang.Object getVirtualMachineScaleSet();
+public IResolvable|java.util.List<AzurermProviderFeaturesVirtualMachineScaleSet> getVirtualMachineScaleSet();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet">AzurermProviderFeaturesVirtualMachineScaleSet</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet">AzurermProviderFeaturesVirtualMachineScaleSet</a>>
 
 virtual_machine_scale_set block.
 
@@ -2581,10 +2544,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesApiManagement;
 
 AzurermProviderFeaturesApiManagement.builder()
-//  .purgeSoftDeleteOnDestroy(java.lang.Boolean)
-//  .purgeSoftDeleteOnDestroy(IResolvable)
-//  .recoverSoftDeleted(java.lang.Boolean)
-//  .recoverSoftDeleted(IResolvable)
+//  .purgeSoftDeleteOnDestroy(java.lang.Boolean|IResolvable)
+//  .recoverSoftDeleted(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2592,18 +2553,18 @@ AzurermProviderFeaturesApiManagement.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApiManagement.property.purgeSoftDeleteOnDestroy">purgeSoftDeleteOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApiManagement.property.recoverSoftDeleted">recoverSoftDeleted</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#recover_soft_deleted AzurermProvider#recover_soft_deleted}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApiManagement.property.purgeSoftDeleteOnDestroy">purgeSoftDeleteOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApiManagement.property.recoverSoftDeleted">recoverSoftDeleted</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#recover_soft_deleted AzurermProvider#recover_soft_deleted}. |
 
 ---
 
 ##### `purgeSoftDeleteOnDestroy`<sup>Optional</sup> <a name="purgeSoftDeleteOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApiManagement.property.purgeSoftDeleteOnDestroy"></a>
 
 ```java
-public java.lang.Object getPurgeSoftDeleteOnDestroy();
+public java.lang.Boolean|IResolvable getPurgeSoftDeleteOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}.
 
@@ -2612,10 +2573,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `recoverSoftDeleted`<sup>Optional</sup> <a name="recoverSoftDeleted" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApiManagement.property.recoverSoftDeleted"></a>
 
 ```java
-public java.lang.Object getRecoverSoftDeleted();
+public java.lang.Boolean|IResolvable getRecoverSoftDeleted();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#recover_soft_deleted AzurermProvider#recover_soft_deleted}.
 
@@ -2629,10 +2590,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesAppConfiguration;
 
 AzurermProviderFeaturesAppConfiguration.builder()
-//  .purgeSoftDeleteOnDestroy(java.lang.Boolean)
-//  .purgeSoftDeleteOnDestroy(IResolvable)
-//  .recoverSoftDeleted(java.lang.Boolean)
-//  .recoverSoftDeleted(IResolvable)
+//  .purgeSoftDeleteOnDestroy(java.lang.Boolean|IResolvable)
+//  .recoverSoftDeleted(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2640,18 +2599,18 @@ AzurermProviderFeaturesAppConfiguration.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesAppConfiguration.property.purgeSoftDeleteOnDestroy">purgeSoftDeleteOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesAppConfiguration.property.recoverSoftDeleted">recoverSoftDeleted</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#recover_soft_deleted AzurermProvider#recover_soft_deleted}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesAppConfiguration.property.purgeSoftDeleteOnDestroy">purgeSoftDeleteOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesAppConfiguration.property.recoverSoftDeleted">recoverSoftDeleted</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#recover_soft_deleted AzurermProvider#recover_soft_deleted}. |
 
 ---
 
 ##### `purgeSoftDeleteOnDestroy`<sup>Optional</sup> <a name="purgeSoftDeleteOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesAppConfiguration.property.purgeSoftDeleteOnDestroy"></a>
 
 ```java
-public java.lang.Object getPurgeSoftDeleteOnDestroy();
+public java.lang.Boolean|IResolvable getPurgeSoftDeleteOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}.
 
@@ -2660,10 +2619,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `recoverSoftDeleted`<sup>Optional</sup> <a name="recoverSoftDeleted" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesAppConfiguration.property.recoverSoftDeleted"></a>
 
 ```java
-public java.lang.Object getRecoverSoftDeleted();
+public java.lang.Boolean|IResolvable getRecoverSoftDeleted();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#recover_soft_deleted AzurermProvider#recover_soft_deleted}.
 
@@ -2677,8 +2636,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesApplicationInsights;
 
 AzurermProviderFeaturesApplicationInsights.builder()
-//  .disableGeneratedRule(java.lang.Boolean)
-//  .disableGeneratedRule(IResolvable)
+//  .disableGeneratedRule(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2686,17 +2644,17 @@ AzurermProviderFeaturesApplicationInsights.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApplicationInsights.property.disableGeneratedRule">disableGeneratedRule</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#disable_generated_rule AzurermProvider#disable_generated_rule}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApplicationInsights.property.disableGeneratedRule">disableGeneratedRule</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#disable_generated_rule AzurermProvider#disable_generated_rule}. |
 
 ---
 
 ##### `disableGeneratedRule`<sup>Optional</sup> <a name="disableGeneratedRule" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesApplicationInsights.property.disableGeneratedRule"></a>
 
 ```java
-public java.lang.Object getDisableGeneratedRule();
+public java.lang.Boolean|IResolvable getDisableGeneratedRule();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#disable_generated_rule AzurermProvider#disable_generated_rule}.
 
@@ -2710,8 +2668,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesCognitiveAccount;
 
 AzurermProviderFeaturesCognitiveAccount.builder()
-//  .purgeSoftDeleteOnDestroy(java.lang.Boolean)
-//  .purgeSoftDeleteOnDestroy(IResolvable)
+//  .purgeSoftDeleteOnDestroy(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2719,17 +2676,17 @@ AzurermProviderFeaturesCognitiveAccount.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesCognitiveAccount.property.purgeSoftDeleteOnDestroy">purgeSoftDeleteOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesCognitiveAccount.property.purgeSoftDeleteOnDestroy">purgeSoftDeleteOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}. |
 
 ---
 
 ##### `purgeSoftDeleteOnDestroy`<sup>Optional</sup> <a name="purgeSoftDeleteOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesCognitiveAccount.property.purgeSoftDeleteOnDestroy"></a>
 
 ```java
-public java.lang.Object getPurgeSoftDeleteOnDestroy();
+public java.lang.Boolean|IResolvable getPurgeSoftDeleteOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_delete_on_destroy AzurermProvider#purge_soft_delete_on_destroy}.
 
@@ -2743,8 +2700,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesDatabricksWorkspace;
 
 AzurermProviderFeaturesDatabricksWorkspace.builder()
-//  .forceDelete(java.lang.Boolean)
-//  .forceDelete(IResolvable)
+//  .forceDelete(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2752,17 +2708,17 @@ AzurermProviderFeaturesDatabricksWorkspace.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesDatabricksWorkspace.property.forceDelete">forceDelete</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled, the managed resource group that contains the Unity Catalog data will be forcibly deleted when the workspace is destroyed, regardless of contents. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesDatabricksWorkspace.property.forceDelete">forceDelete</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled, the managed resource group that contains the Unity Catalog data will be forcibly deleted when the workspace is destroyed, regardless of contents. |
 
 ---
 
 ##### `forceDelete`<sup>Optional</sup> <a name="forceDelete" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesDatabricksWorkspace.property.forceDelete"></a>
 
 ```java
-public java.lang.Object getForceDelete();
+public java.lang.Boolean|IResolvable getForceDelete();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled, the managed resource group that contains the Unity Catalog data will be forcibly deleted when the workspace is destroyed, regardless of contents.
 
@@ -2778,28 +2734,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesKeyVault;
 
 AzurermProviderFeaturesKeyVault.builder()
-//  .purgeSoftDeletedCertificatesOnDestroy(java.lang.Boolean)
-//  .purgeSoftDeletedCertificatesOnDestroy(IResolvable)
-//  .purgeSoftDeletedHardwareSecurityModuleKeysOnDestroy(java.lang.Boolean)
-//  .purgeSoftDeletedHardwareSecurityModuleKeysOnDestroy(IResolvable)
-//  .purgeSoftDeletedHardwareSecurityModulesOnDestroy(java.lang.Boolean)
-//  .purgeSoftDeletedHardwareSecurityModulesOnDestroy(IResolvable)
-//  .purgeSoftDeletedKeysOnDestroy(java.lang.Boolean)
-//  .purgeSoftDeletedKeysOnDestroy(IResolvable)
-//  .purgeSoftDeletedSecretsOnDestroy(java.lang.Boolean)
-//  .purgeSoftDeletedSecretsOnDestroy(IResolvable)
-//  .purgeSoftDeleteOnDestroy(java.lang.Boolean)
-//  .purgeSoftDeleteOnDestroy(IResolvable)
-//  .recoverSoftDeletedCertificates(java.lang.Boolean)
-//  .recoverSoftDeletedCertificates(IResolvable)
-//  .recoverSoftDeletedHardwareSecurityModuleKeys(java.lang.Boolean)
-//  .recoverSoftDeletedHardwareSecurityModuleKeys(IResolvable)
-//  .recoverSoftDeletedKeys(java.lang.Boolean)
-//  .recoverSoftDeletedKeys(IResolvable)
-//  .recoverSoftDeletedKeyVaults(java.lang.Boolean)
-//  .recoverSoftDeletedKeyVaults(IResolvable)
-//  .recoverSoftDeletedSecrets(java.lang.Boolean)
-//  .recoverSoftDeletedSecrets(IResolvable)
+//  .purgeSoftDeletedCertificatesOnDestroy(java.lang.Boolean|IResolvable)
+//  .purgeSoftDeletedHardwareSecurityModuleKeysOnDestroy(java.lang.Boolean|IResolvable)
+//  .purgeSoftDeletedHardwareSecurityModulesOnDestroy(java.lang.Boolean|IResolvable)
+//  .purgeSoftDeletedKeysOnDestroy(java.lang.Boolean|IResolvable)
+//  .purgeSoftDeletedSecretsOnDestroy(java.lang.Boolean|IResolvable)
+//  .purgeSoftDeleteOnDestroy(java.lang.Boolean|IResolvable)
+//  .recoverSoftDeletedCertificates(java.lang.Boolean|IResolvable)
+//  .recoverSoftDeletedHardwareSecurityModuleKeys(java.lang.Boolean|IResolvable)
+//  .recoverSoftDeletedKeys(java.lang.Boolean|IResolvable)
+//  .recoverSoftDeletedKeyVaults(java.lang.Boolean|IResolvable)
+//  .recoverSoftDeletedSecrets(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2807,27 +2752,27 @@ AzurermProviderFeaturesKeyVault.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedCertificatesOnDestroy">purgeSoftDeletedCertificatesOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_certificate` resources will be permanently deleted (e.g purged), when destroyed. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedHardwareSecurityModuleKeysOnDestroy">purgeSoftDeletedHardwareSecurityModuleKeysOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_managed_hardware_security_module_key` resources will be permanently deleted (e.g purged), when destroyed. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedHardwareSecurityModulesOnDestroy">purgeSoftDeletedHardwareSecurityModulesOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_managed_hardware_security_module` resources will be permanently deleted (e.g purged), when destroyed. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedKeysOnDestroy">purgeSoftDeletedKeysOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_key` resources will be permanently deleted (e.g purged), when destroyed. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedSecretsOnDestroy">purgeSoftDeletedSecretsOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_secret` resources will be permanently deleted (e.g purged), when destroyed. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeleteOnDestroy">purgeSoftDeleteOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault` resources will be permanently deleted (e.g purged), when destroyed. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedCertificates">recoverSoftDeletedCertificates</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_certificate` resources will be restored, instead of creating new ones. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedHardwareSecurityModuleKeys">recoverSoftDeletedHardwareSecurityModuleKeys</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_managed_hardware_security_module_key` resources will be restored, instead of creating new ones. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedKeys">recoverSoftDeletedKeys</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_key` resources will be restored, instead of creating new ones. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedKeyVaults">recoverSoftDeletedKeyVaults</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault` resources will be restored, instead of creating new ones. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedSecrets">recoverSoftDeletedSecrets</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_secret` resources will be restored, instead of creating new ones. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedCertificatesOnDestroy">purgeSoftDeletedCertificatesOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_certificate` resources will be permanently deleted (e.g purged), when destroyed. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedHardwareSecurityModuleKeysOnDestroy">purgeSoftDeletedHardwareSecurityModuleKeysOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_managed_hardware_security_module_key` resources will be permanently deleted (e.g purged), when destroyed. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedHardwareSecurityModulesOnDestroy">purgeSoftDeletedHardwareSecurityModulesOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_managed_hardware_security_module` resources will be permanently deleted (e.g purged), when destroyed. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedKeysOnDestroy">purgeSoftDeletedKeysOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_key` resources will be permanently deleted (e.g purged), when destroyed. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedSecretsOnDestroy">purgeSoftDeletedSecretsOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_secret` resources will be permanently deleted (e.g purged), when destroyed. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeleteOnDestroy">purgeSoftDeleteOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault` resources will be permanently deleted (e.g purged), when destroyed. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedCertificates">recoverSoftDeletedCertificates</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_certificate` resources will be restored, instead of creating new ones. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedHardwareSecurityModuleKeys">recoverSoftDeletedHardwareSecurityModuleKeys</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_managed_hardware_security_module_key` resources will be restored, instead of creating new ones. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedKeys">recoverSoftDeletedKeys</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_key` resources will be restored, instead of creating new ones. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedKeyVaults">recoverSoftDeletedKeyVaults</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault` resources will be restored, instead of creating new ones. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedSecrets">recoverSoftDeletedSecrets</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled soft-deleted `azurerm_key_vault_secret` resources will be restored, instead of creating new ones. |
 
 ---
 
 ##### `purgeSoftDeletedCertificatesOnDestroy`<sup>Optional</sup> <a name="purgeSoftDeletedCertificatesOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedCertificatesOnDestroy"></a>
 
 ```java
-public java.lang.Object getPurgeSoftDeletedCertificatesOnDestroy();
+public java.lang.Boolean|IResolvable getPurgeSoftDeletedCertificatesOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled soft-deleted `azurerm_key_vault_certificate` resources will be permanently deleted (e.g purged), when destroyed.
 
@@ -2838,10 +2783,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `purgeSoftDeletedHardwareSecurityModuleKeysOnDestroy`<sup>Optional</sup> <a name="purgeSoftDeletedHardwareSecurityModuleKeysOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedHardwareSecurityModuleKeysOnDestroy"></a>
 
 ```java
-public java.lang.Object getPurgeSoftDeletedHardwareSecurityModuleKeysOnDestroy();
+public java.lang.Boolean|IResolvable getPurgeSoftDeletedHardwareSecurityModuleKeysOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled soft-deleted `azurerm_key_vault_managed_hardware_security_module_key` resources will be permanently deleted (e.g purged), when destroyed.
 
@@ -2852,10 +2797,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `purgeSoftDeletedHardwareSecurityModulesOnDestroy`<sup>Optional</sup> <a name="purgeSoftDeletedHardwareSecurityModulesOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedHardwareSecurityModulesOnDestroy"></a>
 
 ```java
-public java.lang.Object getPurgeSoftDeletedHardwareSecurityModulesOnDestroy();
+public java.lang.Boolean|IResolvable getPurgeSoftDeletedHardwareSecurityModulesOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled soft-deleted `azurerm_key_vault_managed_hardware_security_module` resources will be permanently deleted (e.g purged), when destroyed.
 
@@ -2866,10 +2811,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `purgeSoftDeletedKeysOnDestroy`<sup>Optional</sup> <a name="purgeSoftDeletedKeysOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedKeysOnDestroy"></a>
 
 ```java
-public java.lang.Object getPurgeSoftDeletedKeysOnDestroy();
+public java.lang.Boolean|IResolvable getPurgeSoftDeletedKeysOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled soft-deleted `azurerm_key_vault_key` resources will be permanently deleted (e.g purged), when destroyed.
 
@@ -2880,10 +2825,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `purgeSoftDeletedSecretsOnDestroy`<sup>Optional</sup> <a name="purgeSoftDeletedSecretsOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeletedSecretsOnDestroy"></a>
 
 ```java
-public java.lang.Object getPurgeSoftDeletedSecretsOnDestroy();
+public java.lang.Boolean|IResolvable getPurgeSoftDeletedSecretsOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled soft-deleted `azurerm_key_vault_secret` resources will be permanently deleted (e.g purged), when destroyed.
 
@@ -2894,10 +2839,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `purgeSoftDeleteOnDestroy`<sup>Optional</sup> <a name="purgeSoftDeleteOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.purgeSoftDeleteOnDestroy"></a>
 
 ```java
-public java.lang.Object getPurgeSoftDeleteOnDestroy();
+public java.lang.Boolean|IResolvable getPurgeSoftDeleteOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled soft-deleted `azurerm_key_vault` resources will be permanently deleted (e.g purged), when destroyed.
 
@@ -2908,10 +2853,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `recoverSoftDeletedCertificates`<sup>Optional</sup> <a name="recoverSoftDeletedCertificates" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedCertificates"></a>
 
 ```java
-public java.lang.Object getRecoverSoftDeletedCertificates();
+public java.lang.Boolean|IResolvable getRecoverSoftDeletedCertificates();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled soft-deleted `azurerm_key_vault_certificate` resources will be restored, instead of creating new ones.
 
@@ -2922,10 +2867,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `recoverSoftDeletedHardwareSecurityModuleKeys`<sup>Optional</sup> <a name="recoverSoftDeletedHardwareSecurityModuleKeys" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedHardwareSecurityModuleKeys"></a>
 
 ```java
-public java.lang.Object getRecoverSoftDeletedHardwareSecurityModuleKeys();
+public java.lang.Boolean|IResolvable getRecoverSoftDeletedHardwareSecurityModuleKeys();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled soft-deleted `azurerm_key_vault_managed_hardware_security_module_key` resources will be restored, instead of creating new ones.
 
@@ -2936,10 +2881,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `recoverSoftDeletedKeys`<sup>Optional</sup> <a name="recoverSoftDeletedKeys" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedKeys"></a>
 
 ```java
-public java.lang.Object getRecoverSoftDeletedKeys();
+public java.lang.Boolean|IResolvable getRecoverSoftDeletedKeys();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled soft-deleted `azurerm_key_vault_key` resources will be restored, instead of creating new ones.
 
@@ -2950,10 +2895,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `recoverSoftDeletedKeyVaults`<sup>Optional</sup> <a name="recoverSoftDeletedKeyVaults" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedKeyVaults"></a>
 
 ```java
-public java.lang.Object getRecoverSoftDeletedKeyVaults();
+public java.lang.Boolean|IResolvable getRecoverSoftDeletedKeyVaults();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled soft-deleted `azurerm_key_vault` resources will be restored, instead of creating new ones.
 
@@ -2964,10 +2909,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `recoverSoftDeletedSecrets`<sup>Optional</sup> <a name="recoverSoftDeletedSecrets" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesKeyVault.property.recoverSoftDeletedSecrets"></a>
 
 ```java
-public java.lang.Object getRecoverSoftDeletedSecrets();
+public java.lang.Boolean|IResolvable getRecoverSoftDeletedSecrets();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled soft-deleted `azurerm_key_vault_secret` resources will be restored, instead of creating new ones.
 
@@ -2983,8 +2928,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesLogAnalyticsWorkspace;
 
 AzurermProviderFeaturesLogAnalyticsWorkspace.builder()
-//  .permanentlyDeleteOnDestroy(java.lang.Boolean)
-//  .permanentlyDeleteOnDestroy(IResolvable)
+//  .permanentlyDeleteOnDestroy(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -2992,17 +2936,17 @@ AzurermProviderFeaturesLogAnalyticsWorkspace.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesLogAnalyticsWorkspace.property.permanentlyDeleteOnDestroy">permanentlyDeleteOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#permanently_delete_on_destroy AzurermProvider#permanently_delete_on_destroy}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesLogAnalyticsWorkspace.property.permanentlyDeleteOnDestroy">permanentlyDeleteOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#permanently_delete_on_destroy AzurermProvider#permanently_delete_on_destroy}. |
 
 ---
 
 ##### `permanentlyDeleteOnDestroy`<sup>Optional</sup> <a name="permanentlyDeleteOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesLogAnalyticsWorkspace.property.permanentlyDeleteOnDestroy"></a>
 
 ```java
-public java.lang.Object getPermanentlyDeleteOnDestroy();
+public java.lang.Boolean|IResolvable getPermanentlyDeleteOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#permanently_delete_on_destroy AzurermProvider#permanently_delete_on_destroy}.
 
@@ -3016,8 +2960,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesMachineLearning;
 
 AzurermProviderFeaturesMachineLearning.builder()
-//  .purgeSoftDeletedWorkspaceOnDestroy(java.lang.Boolean)
-//  .purgeSoftDeletedWorkspaceOnDestroy(IResolvable)
+//  .purgeSoftDeletedWorkspaceOnDestroy(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3025,17 +2968,17 @@ AzurermProviderFeaturesMachineLearning.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesMachineLearning.property.purgeSoftDeletedWorkspaceOnDestroy">purgeSoftDeletedWorkspaceOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_deleted_workspace_on_destroy AzurermProvider#purge_soft_deleted_workspace_on_destroy}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesMachineLearning.property.purgeSoftDeletedWorkspaceOnDestroy">purgeSoftDeletedWorkspaceOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_deleted_workspace_on_destroy AzurermProvider#purge_soft_deleted_workspace_on_destroy}. |
 
 ---
 
 ##### `purgeSoftDeletedWorkspaceOnDestroy`<sup>Optional</sup> <a name="purgeSoftDeletedWorkspaceOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesMachineLearning.property.purgeSoftDeletedWorkspaceOnDestroy"></a>
 
 ```java
-public java.lang.Object getPurgeSoftDeletedWorkspaceOnDestroy();
+public java.lang.Boolean|IResolvable getPurgeSoftDeletedWorkspaceOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_soft_deleted_workspace_on_destroy AzurermProvider#purge_soft_deleted_workspace_on_destroy}.
 
@@ -3049,8 +2992,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesManagedDisk;
 
 AzurermProviderFeaturesManagedDisk.builder()
-//  .expandWithoutDowntime(java.lang.Boolean)
-//  .expandWithoutDowntime(IResolvable)
+//  .expandWithoutDowntime(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3058,17 +3000,17 @@ AzurermProviderFeaturesManagedDisk.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesManagedDisk.property.expandWithoutDowntime">expandWithoutDowntime</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#expand_without_downtime AzurermProvider#expand_without_downtime}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesManagedDisk.property.expandWithoutDowntime">expandWithoutDowntime</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#expand_without_downtime AzurermProvider#expand_without_downtime}. |
 
 ---
 
 ##### `expandWithoutDowntime`<sup>Optional</sup> <a name="expandWithoutDowntime" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesManagedDisk.property.expandWithoutDowntime"></a>
 
 ```java
-public java.lang.Object getExpandWithoutDowntime();
+public java.lang.Boolean|IResolvable getExpandWithoutDowntime();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#expand_without_downtime AzurermProvider#expand_without_downtime}.
 
@@ -3082,10 +3024,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesNetapp;
 
 AzurermProviderFeaturesNetapp.builder()
-//  .deleteBackupsOnBackupVaultDestroy(java.lang.Boolean)
-//  .deleteBackupsOnBackupVaultDestroy(IResolvable)
-//  .preventVolumeDestruction(java.lang.Boolean)
-//  .preventVolumeDestruction(IResolvable)
+//  .deleteBackupsOnBackupVaultDestroy(java.lang.Boolean|IResolvable)
+//  .preventVolumeDestruction(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3093,18 +3033,18 @@ AzurermProviderFeaturesNetapp.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesNetapp.property.deleteBackupsOnBackupVaultDestroy">deleteBackupsOnBackupVaultDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled, backups will be deleted when the `azurerm_netapp_backup_vault` resource is destroyed. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesNetapp.property.preventVolumeDestruction">preventVolumeDestruction</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | When enabled, the volume will not be destroyed, safeguarding from severe data loss. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesNetapp.property.deleteBackupsOnBackupVaultDestroy">deleteBackupsOnBackupVaultDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled, backups will be deleted when the `azurerm_netapp_backup_vault` resource is destroyed. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesNetapp.property.preventVolumeDestruction">preventVolumeDestruction</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | When enabled, the volume will not be destroyed, safeguarding from severe data loss. |
 
 ---
 
 ##### `deleteBackupsOnBackupVaultDestroy`<sup>Optional</sup> <a name="deleteBackupsOnBackupVaultDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesNetapp.property.deleteBackupsOnBackupVaultDestroy"></a>
 
 ```java
-public java.lang.Object getDeleteBackupsOnBackupVaultDestroy();
+public java.lang.Boolean|IResolvable getDeleteBackupsOnBackupVaultDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled, backups will be deleted when the `azurerm_netapp_backup_vault` resource is destroyed.
 
@@ -3115,10 +3055,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `preventVolumeDestruction`<sup>Optional</sup> <a name="preventVolumeDestruction" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesNetapp.property.preventVolumeDestruction"></a>
 
 ```java
-public java.lang.Object getPreventVolumeDestruction();
+public java.lang.Boolean|IResolvable getPreventVolumeDestruction();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 When enabled, the volume will not be destroyed, safeguarding from severe data loss.
 
@@ -3134,8 +3074,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesPostgresqlFlexibleServer;
 
 AzurermProviderFeaturesPostgresqlFlexibleServer.builder()
-//  .restartServerOnConfigurationValueChange(java.lang.Boolean)
-//  .restartServerOnConfigurationValueChange(IResolvable)
+//  .restartServerOnConfigurationValueChange(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3143,17 +3082,17 @@ AzurermProviderFeaturesPostgresqlFlexibleServer.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesPostgresqlFlexibleServer.property.restartServerOnConfigurationValueChange">restartServerOnConfigurationValueChange</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#restart_server_on_configuration_value_change AzurermProvider#restart_server_on_configuration_value_change}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesPostgresqlFlexibleServer.property.restartServerOnConfigurationValueChange">restartServerOnConfigurationValueChange</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#restart_server_on_configuration_value_change AzurermProvider#restart_server_on_configuration_value_change}. |
 
 ---
 
 ##### `restartServerOnConfigurationValueChange`<sup>Optional</sup> <a name="restartServerOnConfigurationValueChange" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesPostgresqlFlexibleServer.property.restartServerOnConfigurationValueChange"></a>
 
 ```java
-public java.lang.Object getRestartServerOnConfigurationValueChange();
+public java.lang.Boolean|IResolvable getRestartServerOnConfigurationValueChange();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#restart_server_on_configuration_value_change AzurermProvider#restart_server_on_configuration_value_change}.
 
@@ -3167,12 +3106,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesRecoveryService;
 
 AzurermProviderFeaturesRecoveryService.builder()
-//  .purgeProtectedItemsFromVaultOnDestroy(java.lang.Boolean)
-//  .purgeProtectedItemsFromVaultOnDestroy(IResolvable)
-//  .vmBackupStopProtectionAndRetainDataOnDestroy(java.lang.Boolean)
-//  .vmBackupStopProtectionAndRetainDataOnDestroy(IResolvable)
-//  .vmBackupSuspendProtectionAndRetainDataOnDestroy(java.lang.Boolean)
-//  .vmBackupSuspendProtectionAndRetainDataOnDestroy(IResolvable)
+//  .purgeProtectedItemsFromVaultOnDestroy(java.lang.Boolean|IResolvable)
+//  .vmBackupStopProtectionAndRetainDataOnDestroy(java.lang.Boolean|IResolvable)
+//  .vmBackupSuspendProtectionAndRetainDataOnDestroy(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3180,19 +3116,19 @@ AzurermProviderFeaturesRecoveryService.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService.property.purgeProtectedItemsFromVaultOnDestroy">purgeProtectedItemsFromVaultOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_protected_items_from_vault_on_destroy AzurermProvider#purge_protected_items_from_vault_on_destroy}. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService.property.vmBackupStopProtectionAndRetainDataOnDestroy">vmBackupStopProtectionAndRetainDataOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#vm_backup_stop_protection_and_retain_data_on_destroy AzurermProvider#vm_backup_stop_protection_and_retain_data_on_destroy}. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService.property.vmBackupSuspendProtectionAndRetainDataOnDestroy">vmBackupSuspendProtectionAndRetainDataOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#vm_backup_suspend_protection_and_retain_data_on_destroy AzurermProvider#vm_backup_suspend_protection_and_retain_data_on_destroy}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService.property.purgeProtectedItemsFromVaultOnDestroy">purgeProtectedItemsFromVaultOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_protected_items_from_vault_on_destroy AzurermProvider#purge_protected_items_from_vault_on_destroy}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService.property.vmBackupStopProtectionAndRetainDataOnDestroy">vmBackupStopProtectionAndRetainDataOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#vm_backup_stop_protection_and_retain_data_on_destroy AzurermProvider#vm_backup_stop_protection_and_retain_data_on_destroy}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService.property.vmBackupSuspendProtectionAndRetainDataOnDestroy">vmBackupSuspendProtectionAndRetainDataOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#vm_backup_suspend_protection_and_retain_data_on_destroy AzurermProvider#vm_backup_suspend_protection_and_retain_data_on_destroy}. |
 
 ---
 
 ##### `purgeProtectedItemsFromVaultOnDestroy`<sup>Optional</sup> <a name="purgeProtectedItemsFromVaultOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService.property.purgeProtectedItemsFromVaultOnDestroy"></a>
 
 ```java
-public java.lang.Object getPurgeProtectedItemsFromVaultOnDestroy();
+public java.lang.Boolean|IResolvable getPurgeProtectedItemsFromVaultOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#purge_protected_items_from_vault_on_destroy AzurermProvider#purge_protected_items_from_vault_on_destroy}.
 
@@ -3201,10 +3137,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `vmBackupStopProtectionAndRetainDataOnDestroy`<sup>Optional</sup> <a name="vmBackupStopProtectionAndRetainDataOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService.property.vmBackupStopProtectionAndRetainDataOnDestroy"></a>
 
 ```java
-public java.lang.Object getVmBackupStopProtectionAndRetainDataOnDestroy();
+public java.lang.Boolean|IResolvable getVmBackupStopProtectionAndRetainDataOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#vm_backup_stop_protection_and_retain_data_on_destroy AzurermProvider#vm_backup_stop_protection_and_retain_data_on_destroy}.
 
@@ -3213,10 +3149,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `vmBackupSuspendProtectionAndRetainDataOnDestroy`<sup>Optional</sup> <a name="vmBackupSuspendProtectionAndRetainDataOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryService.property.vmBackupSuspendProtectionAndRetainDataOnDestroy"></a>
 
 ```java
-public java.lang.Object getVmBackupSuspendProtectionAndRetainDataOnDestroy();
+public java.lang.Boolean|IResolvable getVmBackupSuspendProtectionAndRetainDataOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#vm_backup_suspend_protection_and_retain_data_on_destroy AzurermProvider#vm_backup_suspend_protection_and_retain_data_on_destroy}.
 
@@ -3230,8 +3166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesRecoveryServicesVaults;
 
 AzurermProviderFeaturesRecoveryServicesVaults.builder()
-//  .recoverSoftDeletedBackupProtectedVm(java.lang.Boolean)
-//  .recoverSoftDeletedBackupProtectedVm(IResolvable)
+//  .recoverSoftDeletedBackupProtectedVm(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3239,17 +3174,17 @@ AzurermProviderFeaturesRecoveryServicesVaults.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryServicesVaults.property.recoverSoftDeletedBackupProtectedVm">recoverSoftDeletedBackupProtectedVm</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#recover_soft_deleted_backup_protected_vm AzurermProvider#recover_soft_deleted_backup_protected_vm}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryServicesVaults.property.recoverSoftDeletedBackupProtectedVm">recoverSoftDeletedBackupProtectedVm</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#recover_soft_deleted_backup_protected_vm AzurermProvider#recover_soft_deleted_backup_protected_vm}. |
 
 ---
 
 ##### `recoverSoftDeletedBackupProtectedVm`<sup>Optional</sup> <a name="recoverSoftDeletedBackupProtectedVm" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesRecoveryServicesVaults.property.recoverSoftDeletedBackupProtectedVm"></a>
 
 ```java
-public java.lang.Object getRecoverSoftDeletedBackupProtectedVm();
+public java.lang.Boolean|IResolvable getRecoverSoftDeletedBackupProtectedVm();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#recover_soft_deleted_backup_protected_vm AzurermProvider#recover_soft_deleted_backup_protected_vm}.
 
@@ -3263,8 +3198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesResourceGroup;
 
 AzurermProviderFeaturesResourceGroup.builder()
-//  .preventDeletionIfContainsResources(java.lang.Boolean)
-//  .preventDeletionIfContainsResources(IResolvable)
+//  .preventDeletionIfContainsResources(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3272,17 +3206,17 @@ AzurermProviderFeaturesResourceGroup.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesResourceGroup.property.preventDeletionIfContainsResources">preventDeletionIfContainsResources</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#prevent_deletion_if_contains_resources AzurermProvider#prevent_deletion_if_contains_resources}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesResourceGroup.property.preventDeletionIfContainsResources">preventDeletionIfContainsResources</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#prevent_deletion_if_contains_resources AzurermProvider#prevent_deletion_if_contains_resources}. |
 
 ---
 
 ##### `preventDeletionIfContainsResources`<sup>Optional</sup> <a name="preventDeletionIfContainsResources" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesResourceGroup.property.preventDeletionIfContainsResources"></a>
 
 ```java
-public java.lang.Object getPreventDeletionIfContainsResources();
+public java.lang.Boolean|IResolvable getPreventDeletionIfContainsResources();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#prevent_deletion_if_contains_resources AzurermProvider#prevent_deletion_if_contains_resources}.
 
@@ -3296,8 +3230,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesStorage;
 
 AzurermProviderFeaturesStorage.builder()
-//  .dataPlaneAvailable(java.lang.Boolean)
-//  .dataPlaneAvailable(IResolvable)
+//  .dataPlaneAvailable(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3305,17 +3238,17 @@ AzurermProviderFeaturesStorage.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesStorage.property.dataPlaneAvailable">dataPlaneAvailable</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#data_plane_available AzurermProvider#data_plane_available}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesStorage.property.dataPlaneAvailable">dataPlaneAvailable</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#data_plane_available AzurermProvider#data_plane_available}. |
 
 ---
 
 ##### `dataPlaneAvailable`<sup>Optional</sup> <a name="dataPlaneAvailable" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesStorage.property.dataPlaneAvailable"></a>
 
 ```java
-public java.lang.Object getDataPlaneAvailable();
+public java.lang.Boolean|IResolvable getDataPlaneAvailable();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#data_plane_available AzurermProvider#data_plane_available}.
 
@@ -3329,8 +3262,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesSubscription;
 
 AzurermProviderFeaturesSubscription.builder()
-//  .preventCancellationOnDestroy(java.lang.Boolean)
-//  .preventCancellationOnDestroy(IResolvable)
+//  .preventCancellationOnDestroy(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3338,17 +3270,17 @@ AzurermProviderFeaturesSubscription.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesSubscription.property.preventCancellationOnDestroy">preventCancellationOnDestroy</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#prevent_cancellation_on_destroy AzurermProvider#prevent_cancellation_on_destroy}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesSubscription.property.preventCancellationOnDestroy">preventCancellationOnDestroy</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#prevent_cancellation_on_destroy AzurermProvider#prevent_cancellation_on_destroy}. |
 
 ---
 
 ##### `preventCancellationOnDestroy`<sup>Optional</sup> <a name="preventCancellationOnDestroy" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesSubscription.property.preventCancellationOnDestroy"></a>
 
 ```java
-public java.lang.Object getPreventCancellationOnDestroy();
+public java.lang.Boolean|IResolvable getPreventCancellationOnDestroy();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#prevent_cancellation_on_destroy AzurermProvider#prevent_cancellation_on_destroy}.
 
@@ -3362,8 +3294,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesTemplateDeployment;
 
 AzurermProviderFeaturesTemplateDeployment.builder()
-    .deleteNestedItemsDuringDeletion(java.lang.Boolean)
-    .deleteNestedItemsDuringDeletion(IResolvable)
+    .deleteNestedItemsDuringDeletion(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3371,17 +3302,17 @@ AzurermProviderFeaturesTemplateDeployment.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesTemplateDeployment.property.deleteNestedItemsDuringDeletion">deleteNestedItemsDuringDeletion</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#delete_nested_items_during_deletion AzurermProvider#delete_nested_items_during_deletion}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesTemplateDeployment.property.deleteNestedItemsDuringDeletion">deleteNestedItemsDuringDeletion</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#delete_nested_items_during_deletion AzurermProvider#delete_nested_items_during_deletion}. |
 
 ---
 
 ##### `deleteNestedItemsDuringDeletion`<sup>Required</sup> <a name="deleteNestedItemsDuringDeletion" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesTemplateDeployment.property.deleteNestedItemsDuringDeletion"></a>
 
 ```java
-public java.lang.Object getDeleteNestedItemsDuringDeletion();
+public java.lang.Boolean|IResolvable getDeleteNestedItemsDuringDeletion();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#delete_nested_items_during_deletion AzurermProvider#delete_nested_items_during_deletion}.
 
@@ -3395,14 +3326,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesVirtualMachine;
 
 AzurermProviderFeaturesVirtualMachine.builder()
-//  .deleteOsDiskOnDeletion(java.lang.Boolean)
-//  .deleteOsDiskOnDeletion(IResolvable)
-//  .detachImplicitDataDiskOnDeletion(java.lang.Boolean)
-//  .detachImplicitDataDiskOnDeletion(IResolvable)
-//  .gracefulShutdown(java.lang.Boolean)
-//  .gracefulShutdown(IResolvable)
-//  .skipShutdownAndForceDelete(java.lang.Boolean)
-//  .skipShutdownAndForceDelete(IResolvable)
+//  .deleteOsDiskOnDeletion(java.lang.Boolean|IResolvable)
+//  .detachImplicitDataDiskOnDeletion(java.lang.Boolean|IResolvable)
+//  .gracefulShutdown(java.lang.Boolean|IResolvable)
+//  .skipShutdownAndForceDelete(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3410,20 +3337,20 @@ AzurermProviderFeaturesVirtualMachine.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.deleteOsDiskOnDeletion">deleteOsDiskOnDeletion</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#delete_os_disk_on_deletion AzurermProvider#delete_os_disk_on_deletion}. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.detachImplicitDataDiskOnDeletion">detachImplicitDataDiskOnDeletion</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#detach_implicit_data_disk_on_deletion AzurermProvider#detach_implicit_data_disk_on_deletion}. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.gracefulShutdown">gracefulShutdown</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#graceful_shutdown AzurermProvider#graceful_shutdown}. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.skipShutdownAndForceDelete">skipShutdownAndForceDelete</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#skip_shutdown_and_force_delete AzurermProvider#skip_shutdown_and_force_delete}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.deleteOsDiskOnDeletion">deleteOsDiskOnDeletion</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#delete_os_disk_on_deletion AzurermProvider#delete_os_disk_on_deletion}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.detachImplicitDataDiskOnDeletion">detachImplicitDataDiskOnDeletion</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#detach_implicit_data_disk_on_deletion AzurermProvider#detach_implicit_data_disk_on_deletion}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.gracefulShutdown">gracefulShutdown</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#graceful_shutdown AzurermProvider#graceful_shutdown}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.skipShutdownAndForceDelete">skipShutdownAndForceDelete</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#skip_shutdown_and_force_delete AzurermProvider#skip_shutdown_and_force_delete}. |
 
 ---
 
 ##### `deleteOsDiskOnDeletion`<sup>Optional</sup> <a name="deleteOsDiskOnDeletion" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.deleteOsDiskOnDeletion"></a>
 
 ```java
-public java.lang.Object getDeleteOsDiskOnDeletion();
+public java.lang.Boolean|IResolvable getDeleteOsDiskOnDeletion();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#delete_os_disk_on_deletion AzurermProvider#delete_os_disk_on_deletion}.
 
@@ -3432,10 +3359,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `detachImplicitDataDiskOnDeletion`<sup>Optional</sup> <a name="detachImplicitDataDiskOnDeletion" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.detachImplicitDataDiskOnDeletion"></a>
 
 ```java
-public java.lang.Object getDetachImplicitDataDiskOnDeletion();
+public java.lang.Boolean|IResolvable getDetachImplicitDataDiskOnDeletion();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#detach_implicit_data_disk_on_deletion AzurermProvider#detach_implicit_data_disk_on_deletion}.
 
@@ -3444,10 +3371,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `gracefulShutdown`<sup>Optional</sup> <a name="gracefulShutdown" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.gracefulShutdown"></a>
 
 ```java
-public java.lang.Object getGracefulShutdown();
+public java.lang.Boolean|IResolvable getGracefulShutdown();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#graceful_shutdown AzurermProvider#graceful_shutdown}.
 
@@ -3456,10 +3383,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `skipShutdownAndForceDelete`<sup>Optional</sup> <a name="skipShutdownAndForceDelete" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachine.property.skipShutdownAndForceDelete"></a>
 
 ```java
-public java.lang.Object getSkipShutdownAndForceDelete();
+public java.lang.Boolean|IResolvable getSkipShutdownAndForceDelete();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#skip_shutdown_and_force_delete AzurermProvider#skip_shutdown_and_force_delete}.
 
@@ -3473,14 +3400,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 import com.hashicorp.cdktf.providers.azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet;
 
 AzurermProviderFeaturesVirtualMachineScaleSet.builder()
-//  .forceDelete(java.lang.Boolean)
-//  .forceDelete(IResolvable)
-//  .reimageOnManualUpgrade(java.lang.Boolean)
-//  .reimageOnManualUpgrade(IResolvable)
-//  .rollInstancesWhenRequired(java.lang.Boolean)
-//  .rollInstancesWhenRequired(IResolvable)
-//  .scaleToZeroBeforeDeletion(java.lang.Boolean)
-//  .scaleToZeroBeforeDeletion(IResolvable)
+//  .forceDelete(java.lang.Boolean|IResolvable)
+//  .reimageOnManualUpgrade(java.lang.Boolean|IResolvable)
+//  .rollInstancesWhenRequired(java.lang.Boolean|IResolvable)
+//  .scaleToZeroBeforeDeletion(java.lang.Boolean|IResolvable)
     .build();
 ```
 
@@ -3488,20 +3411,20 @@ AzurermProviderFeaturesVirtualMachineScaleSet.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.forceDelete">forceDelete</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#force_delete AzurermProvider#force_delete}. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.reimageOnManualUpgrade">reimageOnManualUpgrade</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#reimage_on_manual_upgrade AzurermProvider#reimage_on_manual_upgrade}. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.rollInstancesWhenRequired">rollInstancesWhenRequired</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#roll_instances_when_required AzurermProvider#roll_instances_when_required}. |
-| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.scaleToZeroBeforeDeletion">scaleToZeroBeforeDeletion</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#scale_to_zero_before_deletion AzurermProvider#scale_to_zero_before_deletion}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.forceDelete">forceDelete</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#force_delete AzurermProvider#force_delete}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.reimageOnManualUpgrade">reimageOnManualUpgrade</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#reimage_on_manual_upgrade AzurermProvider#reimage_on_manual_upgrade}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.rollInstancesWhenRequired">rollInstancesWhenRequired</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#roll_instances_when_required AzurermProvider#roll_instances_when_required}. |
+| <code><a href="#@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.scaleToZeroBeforeDeletion">scaleToZeroBeforeDeletion</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#scale_to_zero_before_deletion AzurermProvider#scale_to_zero_before_deletion}. |
 
 ---
 
 ##### `forceDelete`<sup>Optional</sup> <a name="forceDelete" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.forceDelete"></a>
 
 ```java
-public java.lang.Object getForceDelete();
+public java.lang.Boolean|IResolvable getForceDelete();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#force_delete AzurermProvider#force_delete}.
 
@@ -3510,10 +3433,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `reimageOnManualUpgrade`<sup>Optional</sup> <a name="reimageOnManualUpgrade" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.reimageOnManualUpgrade"></a>
 
 ```java
-public java.lang.Object getReimageOnManualUpgrade();
+public java.lang.Boolean|IResolvable getReimageOnManualUpgrade();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#reimage_on_manual_upgrade AzurermProvider#reimage_on_manual_upgrade}.
 
@@ -3522,10 +3445,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `rollInstancesWhenRequired`<sup>Optional</sup> <a name="rollInstancesWhenRequired" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.rollInstancesWhenRequired"></a>
 
 ```java
-public java.lang.Object getRollInstancesWhenRequired();
+public java.lang.Boolean|IResolvable getRollInstancesWhenRequired();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#roll_instances_when_required AzurermProvider#roll_instances_when_required}.
 
@@ -3534,10 +3457,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `scaleToZeroBeforeDeletion`<sup>Optional</sup> <a name="scaleToZeroBeforeDeletion" id="@cdktf/provider-azurerm.provider.AzurermProviderFeaturesVirtualMachineScaleSet.property.scaleToZeroBeforeDeletion"></a>
 
 ```java
-public java.lang.Object getScaleToZeroBeforeDeletion();
+public java.lang.Boolean|IResolvable getScaleToZeroBeforeDeletion();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs#scale_to_zero_before_deletion AzurermProvider#scale_to_zero_before_deletion}.
 

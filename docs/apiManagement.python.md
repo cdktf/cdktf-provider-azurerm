@@ -14,24 +14,24 @@ from cdktf_cdktf_provider_azurerm import api_management
 apiManagement.ApiManagement(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   name: str,
   publisher_email: str,
   publisher_name: str,
   resource_group_name: str,
   sku_name: str,
-  additional_location: typing.Union[IResolvable, typing.List[ApiManagementAdditionalLocation]] = None,
-  certificate: typing.Union[IResolvable, typing.List[ApiManagementCertificate]] = None,
-  client_certificate_enabled: typing.Union[bool, IResolvable] = None,
+  additional_location: IResolvable | typing.List[ApiManagementAdditionalLocation] = None,
+  certificate: IResolvable | typing.List[ApiManagementCertificate] = None,
+  client_certificate_enabled: bool | IResolvable = None,
   delegation: ApiManagementDelegation = None,
-  gateway_disabled: typing.Union[bool, IResolvable] = None,
+  gateway_disabled: bool | IResolvable = None,
   hostname_configuration: ApiManagementHostnameConfiguration = None,
   id: str = None,
   identity: ApiManagementIdentity = None,
@@ -39,7 +39,7 @@ apiManagement.ApiManagement(
   notification_sender_email: str = None,
   protocols: ApiManagementProtocols = None,
   public_ip_address_id: str = None,
-  public_network_access_enabled: typing.Union[bool, IResolvable] = None,
+  public_network_access_enabled: bool | IResolvable = None,
   security: ApiManagementSecurity = None,
   sign_in: ApiManagementSignIn = None,
   sign_up: ApiManagementSignUp = None,
@@ -56,24 +56,24 @@ apiManagement.ApiManagement(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#location ApiManagement#location}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#name ApiManagement#name}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.publisherEmail">publisher_email</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#publisher_email ApiManagement#publisher_email}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.publisherName">publisher_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#publisher_name ApiManagement#publisher_name}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#resource_group_name ApiManagement#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.skuName">sku_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#sku_name ApiManagement#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.additionalLocation">additional_location</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]]</code> | additional_location block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.certificate">certificate</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]]</code> | certificate block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#client_certificate_enabled ApiManagement#client_certificate_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.additionalLocation">additional_location</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]</code> | additional_location block. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.certificate">certificate</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]</code> | certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#client_certificate_enabled ApiManagement#client_certificate_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.delegation">delegation</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation">ApiManagementDelegation</a></code> | delegation block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.gatewayDisabled">gateway_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.gatewayDisabled">gateway_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.hostnameConfiguration">hostname_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration">ApiManagementHostnameConfiguration</a></code> | hostname_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#id ApiManagement#id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementIdentity">ApiManagementIdentity</a></code> | identity block. |
@@ -81,7 +81,7 @@ apiManagement.ApiManagement(
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.notificationSenderEmail">notification_sender_email</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#notification_sender_email ApiManagement#notification_sender_email}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.protocols">protocols</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocols">ApiManagementProtocols</a></code> | protocols block. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.publicIpAddressId">public_ip_address_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#public_ip_address_id ApiManagement#public_ip_address_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#public_network_access_enabled ApiManagement#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#public_network_access_enabled ApiManagement#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.security">security</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity">ApiManagementSecurity</a></code> | security block. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.signIn">sign_in</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignIn">ApiManagementSignIn</a></code> | sign_in block. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.signUp">sign_up</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUp">ApiManagementSignUp</a></code> | sign_up block. |
@@ -114,13 +114,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -150,7 +150,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -204,7 +204,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `additional_location`<sup>Optional</sup> <a name="additional_location" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.additionalLocation"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]
 
 additional_location block.
 
@@ -214,7 +214,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `certificate`<sup>Optional</sup> <a name="certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.certificate"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]
 
 certificate block.
 
@@ -224,7 +224,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `client_certificate_enabled`<sup>Optional</sup> <a name="client_certificate_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.clientCertificateEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#client_certificate_enabled ApiManagement#client_certificate_enabled}.
 
@@ -242,7 +242,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `gateway_disabled`<sup>Optional</sup> <a name="gateway_disabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.gatewayDisabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}.
 
@@ -315,7 +315,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `public_network_access_enabled`<sup>Optional</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.Initializer.parameter.publicNetworkAccessEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#public_network_access_enabled ApiManagement#public_network_access_enabled}.
 
@@ -691,7 +691,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.importFrom"></a>
@@ -754,7 +754,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -770,7 +770,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -798,13 +798,13 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_additional_location(
-  value: typing.Union[IResolvable, typing.List[ApiManagementAdditionalLocation]]
+  value: IResolvable | typing.List[ApiManagementAdditionalLocation]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putAdditionalLocation.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]
 
 ---
 
@@ -812,13 +812,13 @@ def put_additional_location(
 
 ```python
 def put_certificate(
-  value: typing.Union[IResolvable, typing.List[ApiManagementCertificate]]
+  value: IResolvable | typing.List[ApiManagementCertificate]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putCertificate.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]
 
 ---
 
@@ -826,16 +826,16 @@ def put_certificate(
 
 ```python
 def put_delegation(
-  subscriptions_enabled: typing.Union[bool, IResolvable] = None,
+  subscriptions_enabled: bool | IResolvable = None,
   url: str = None,
-  user_registration_enabled: typing.Union[bool, IResolvable] = None,
+  user_registration_enabled: bool | IResolvable = None,
   validation_key: str = None
 ) -> None
 ```
 
 ###### `subscriptions_enabled`<sup>Optional</sup> <a name="subscriptions_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putDelegation.parameter.subscriptionsEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#subscriptions_enabled ApiManagement#subscriptions_enabled}.
 
@@ -851,7 +851,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `user_registration_enabled`<sup>Optional</sup> <a name="user_registration_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putDelegation.parameter.userRegistrationEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#user_registration_enabled ApiManagement#user_registration_enabled}.
 
@@ -869,17 +869,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_hostname_configuration(
-  developer_portal: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationDeveloperPortal]] = None,
-  management: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationManagement]] = None,
-  portal: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationPortal]] = None,
-  proxy: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationProxy]] = None,
-  scm: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationScm]] = None
+  developer_portal: IResolvable | typing.List[ApiManagementHostnameConfigurationDeveloperPortal] = None,
+  management: IResolvable | typing.List[ApiManagementHostnameConfigurationManagement] = None,
+  portal: IResolvable | typing.List[ApiManagementHostnameConfigurationPortal] = None,
+  proxy: IResolvable | typing.List[ApiManagementHostnameConfigurationProxy] = None,
+  scm: IResolvable | typing.List[ApiManagementHostnameConfigurationScm] = None
 ) -> None
 ```
 
 ###### `developer_portal`<sup>Optional</sup> <a name="developer_portal" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putHostnameConfiguration.parameter.developerPortal"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]
 
 developer_portal block.
 
@@ -889,7 +889,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `management`<sup>Optional</sup> <a name="management" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putHostnameConfiguration.parameter.management"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]
 
 management block.
 
@@ -899,7 +899,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `portal`<sup>Optional</sup> <a name="portal" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putHostnameConfiguration.parameter.portal"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]
 
 portal block.
 
@@ -909,7 +909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putHostnameConfiguration.parameter.proxy"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]
 
 proxy block.
 
@@ -919,7 +919,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `scm`<sup>Optional</sup> <a name="scm" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putHostnameConfiguration.parameter.scm"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]
 
 scm block.
 
@@ -956,14 +956,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_protocols(
-  enable_http2: typing.Union[bool, IResolvable] = None,
-  http2_enabled: typing.Union[bool, IResolvable] = None
+  enable_http2: bool | IResolvable = None,
+  http2_enabled: bool | IResolvable = None
 ) -> None
 ```
 
 ###### `enable_http2`<sup>Optional</sup> <a name="enable_http2" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putProtocols.parameter.enableHttp2"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_http2 ApiManagement#enable_http2}.
 
@@ -971,7 +971,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `http2_enabled`<sup>Optional</sup> <a name="http2_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putProtocols.parameter.http2Enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#http2_enabled ApiManagement#http2_enabled}.
 
@@ -981,35 +981,35 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_security(
-  backend_ssl30_enabled: typing.Union[bool, IResolvable] = None,
-  backend_tls10_enabled: typing.Union[bool, IResolvable] = None,
-  backend_tls11_enabled: typing.Union[bool, IResolvable] = None,
-  enable_backend_ssl30: typing.Union[bool, IResolvable] = None,
-  enable_backend_tls10: typing.Union[bool, IResolvable] = None,
-  enable_backend_tls11: typing.Union[bool, IResolvable] = None,
-  enable_frontend_ssl30: typing.Union[bool, IResolvable] = None,
-  enable_frontend_tls10: typing.Union[bool, IResolvable] = None,
-  enable_frontend_tls11: typing.Union[bool, IResolvable] = None,
-  frontend_ssl30_enabled: typing.Union[bool, IResolvable] = None,
-  frontend_tls10_enabled: typing.Union[bool, IResolvable] = None,
-  frontend_tls11_enabled: typing.Union[bool, IResolvable] = None,
-  tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes128_cbc_sha256_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes128_gcm_sha256_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes256_cbc_sha256_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes256_gcm_sha384_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  triple_des_ciphers_enabled: typing.Union[bool, IResolvable] = None
+  backend_ssl30_enabled: bool | IResolvable = None,
+  backend_tls10_enabled: bool | IResolvable = None,
+  backend_tls11_enabled: bool | IResolvable = None,
+  enable_backend_ssl30: bool | IResolvable = None,
+  enable_backend_tls10: bool | IResolvable = None,
+  enable_backend_tls11: bool | IResolvable = None,
+  enable_frontend_ssl30: bool | IResolvable = None,
+  enable_frontend_tls10: bool | IResolvable = None,
+  enable_frontend_tls11: bool | IResolvable = None,
+  frontend_ssl30_enabled: bool | IResolvable = None,
+  frontend_tls10_enabled: bool | IResolvable = None,
+  frontend_tls11_enabled: bool | IResolvable = None,
+  tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes128_cbc_sha256_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes128_gcm_sha256_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes256_cbc_sha256_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes256_gcm_sha384_ciphers_enabled: bool | IResolvable = None,
+  triple_des_ciphers_enabled: bool | IResolvable = None
 ) -> None
 ```
 
 ###### `backend_ssl30_enabled`<sup>Optional</sup> <a name="backend_ssl30_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.backendSsl30Enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_ssl30_enabled ApiManagement#backend_ssl30_enabled}.
 
@@ -1017,7 +1017,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `backend_tls10_enabled`<sup>Optional</sup> <a name="backend_tls10_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.backendTls10Enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_tls10_enabled ApiManagement#backend_tls10_enabled}.
 
@@ -1025,7 +1025,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `backend_tls11_enabled`<sup>Optional</sup> <a name="backend_tls11_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.backendTls11Enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_tls11_enabled ApiManagement#backend_tls11_enabled}.
 
@@ -1033,7 +1033,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_backend_ssl30`<sup>Optional</sup> <a name="enable_backend_ssl30" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.enableBackendSsl30"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_ssl30 ApiManagement#enable_backend_ssl30}.
 
@@ -1041,7 +1041,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_backend_tls10`<sup>Optional</sup> <a name="enable_backend_tls10" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.enableBackendTls10"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_tls10 ApiManagement#enable_backend_tls10}.
 
@@ -1049,7 +1049,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_backend_tls11`<sup>Optional</sup> <a name="enable_backend_tls11" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.enableBackendTls11"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_tls11 ApiManagement#enable_backend_tls11}.
 
@@ -1057,7 +1057,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_frontend_ssl30`<sup>Optional</sup> <a name="enable_frontend_ssl30" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.enableFrontendSsl30"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_ssl30 ApiManagement#enable_frontend_ssl30}.
 
@@ -1065,7 +1065,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_frontend_tls10`<sup>Optional</sup> <a name="enable_frontend_tls10" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.enableFrontendTls10"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_tls10 ApiManagement#enable_frontend_tls10}.
 
@@ -1073,7 +1073,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enable_frontend_tls11`<sup>Optional</sup> <a name="enable_frontend_tls11" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.enableFrontendTls11"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_tls11 ApiManagement#enable_frontend_tls11}.
 
@@ -1081,7 +1081,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `frontend_ssl30_enabled`<sup>Optional</sup> <a name="frontend_ssl30_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.frontendSsl30Enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_ssl30_enabled ApiManagement#frontend_ssl30_enabled}.
 
@@ -1089,7 +1089,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `frontend_tls10_enabled`<sup>Optional</sup> <a name="frontend_tls10_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.frontendTls10Enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_tls10_enabled ApiManagement#frontend_tls10_enabled}.
 
@@ -1097,7 +1097,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `frontend_tls11_enabled`<sup>Optional</sup> <a name="frontend_tls11_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.frontendTls11Enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_tls11_enabled ApiManagement#frontend_tls11_enabled}.
 
@@ -1105,7 +1105,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled}.
 
@@ -1113,7 +1113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled}.
 
@@ -1121,7 +1121,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.tlsEcdheRsaWithAes128CbcShaCiphersEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled}.
 
@@ -1129,7 +1129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.tlsEcdheRsaWithAes256CbcShaCiphersEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled}.
 
@@ -1137,7 +1137,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `tls_rsa_with_aes128_cbc_sha256_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes128_cbc_sha256_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.tlsRsaWithAes128CbcSha256CiphersEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled}.
 
@@ -1145,7 +1145,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `tls_rsa_with_aes128_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes128_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.tlsRsaWithAes128CbcShaCiphersEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha_ciphers_enabled}.
 
@@ -1153,7 +1153,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `tls_rsa_with_aes128_gcm_sha256_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes128_gcm_sha256_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.tlsRsaWithAes128GcmSha256CiphersEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled}.
 
@@ -1161,7 +1161,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `tls_rsa_with_aes256_cbc_sha256_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes256_cbc_sha256_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.tlsRsaWithAes256CbcSha256CiphersEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled}.
 
@@ -1169,7 +1169,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `tls_rsa_with_aes256_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes256_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.tlsRsaWithAes256CbcShaCiphersEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha_ciphers_enabled}.
 
@@ -1177,7 +1177,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `tls_rsa_with_aes256_gcm_sha384_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes256_gcm_sha384_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.tlsRsaWithAes256GcmSha384CiphersEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled ApiManagement#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled}.
 
@@ -1185,7 +1185,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `triple_des_ciphers_enabled`<sup>Optional</sup> <a name="triple_des_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSecurity.parameter.tripleDesCiphersEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#triple_des_ciphers_enabled ApiManagement#triple_des_ciphers_enabled}.
 
@@ -1195,13 +1195,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_sign_in(
-  enabled: typing.Union[bool, IResolvable]
+  enabled: bool | IResolvable
 ) -> None
 ```
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSignIn.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}.
 
@@ -1211,14 +1211,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_sign_up(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   terms_of_service: ApiManagementSignUpTermsOfService
 ) -> None
 ```
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putSignUp.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}.
 
@@ -1238,13 +1238,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_tenant_access(
-  enabled: typing.Union[bool, IResolvable]
+  enabled: bool | IResolvable
 ) -> None
 ```
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.putTenantAccess.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}.
 
@@ -1578,13 +1578,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.additionalLocation">additional_location</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationList">ApiManagementAdditionalLocationList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.certificate">certificate</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateList">ApiManagementCertificateList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.delegation">delegation</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference">ApiManagementDelegationOutputReference</a></code> | *No description.* |
@@ -1605,11 +1605,11 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.tenantAccess">tenant_access</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccessOutputReference">ApiManagementTenantAccessOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeoutsOutputReference">ApiManagementTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.virtualNetworkConfiguration">virtual_network_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementVirtualNetworkConfigurationOutputReference">ApiManagementVirtualNetworkConfigurationOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.additionalLocationInput">additional_location_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.certificateInput">certificate_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.clientCertificateEnabledInput">client_certificate_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.additionalLocationInput">additional_location_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.certificateInput">certificate_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.clientCertificateEnabledInput">client_certificate_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.delegationInput">delegation_input</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation">ApiManagementDelegation</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.gatewayDisabledInput">gateway_disabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.gatewayDisabledInput">gateway_disabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.hostnameConfigurationInput">hostname_configuration_input</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration">ApiManagementHostnameConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.identityInput">identity_input</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementIdentity">ApiManagementIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
@@ -1619,7 +1619,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.notificationSenderEmailInput">notification_sender_email_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.protocolsInput">protocols_input</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocols">ApiManagementProtocols</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publicIpAddressIdInput">public_ip_address_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publicNetworkAccessEnabledInput">public_network_access_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publicNetworkAccessEnabledInput">public_network_access_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publisherEmailInput">publisher_email_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publisherNameInput">publisher_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
@@ -1629,19 +1629,19 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.skuNameInput">sku_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.tenantAccessInput">tenant_access_input</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccess">ApiManagementTenantAccess</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeouts">ApiManagementTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeouts">ApiManagementTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.virtualNetworkConfigurationInput">virtual_network_configuration_input</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementVirtualNetworkConfiguration">ApiManagementVirtualNetworkConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.virtualNetworkTypeInput">virtual_network_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.zonesInput">zones_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.gatewayDisabled">gateway_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.gatewayDisabled">gateway_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.location">location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.minApiVersion">min_api_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.notificationSenderEmail">notification_sender_email</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publicIpAddressId">public_ip_address_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publisherEmail">publisher_email</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publisherName">publisher_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagement.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
@@ -1727,20 +1727,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1787,10 +1787,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -1997,30 +1997,30 @@ virtual_network_configuration: ApiManagementVirtualNetworkConfigurationOutputRef
 ##### `additional_location_input`<sup>Optional</sup> <a name="additional_location_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.additionalLocationInput"></a>
 
 ```python
-additional_location_input: typing.Union[IResolvable, typing.List[ApiManagementAdditionalLocation]]
+additional_location_input: IResolvable | typing.List[ApiManagementAdditionalLocation]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]
 
 ---
 
 ##### `certificate_input`<sup>Optional</sup> <a name="certificate_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.certificateInput"></a>
 
 ```python
-certificate_input: typing.Union[IResolvable, typing.List[ApiManagementCertificate]]
+certificate_input: IResolvable | typing.List[ApiManagementCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]
 
 ---
 
 ##### `client_certificate_enabled_input`<sup>Optional</sup> <a name="client_certificate_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.clientCertificateEnabledInput"></a>
 
 ```python
-client_certificate_enabled_input: typing.Union[bool, IResolvable]
+client_certificate_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2037,10 +2037,10 @@ delegation_input: ApiManagementDelegation
 ##### `gateway_disabled_input`<sup>Optional</sup> <a name="gateway_disabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.gatewayDisabledInput"></a>
 
 ```python
-gateway_disabled_input: typing.Union[bool, IResolvable]
+gateway_disabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2137,10 +2137,10 @@ public_ip_address_id_input: str
 ##### `public_network_access_enabled_input`<sup>Optional</sup> <a name="public_network_access_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publicNetworkAccessEnabledInput"></a>
 
 ```python
-public_network_access_enabled_input: typing.Union[bool, IResolvable]
+public_network_access_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2237,10 +2237,10 @@ tenant_access_input: ApiManagementTenantAccess
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, ApiManagementTimeouts]
+timeouts_input: IResolvable | ApiManagementTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeouts">ApiManagementTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeouts">ApiManagementTimeouts</a>
 
 ---
 
@@ -2277,20 +2277,20 @@ zones_input: typing.List[str]
 ##### `client_certificate_enabled`<sup>Required</sup> <a name="client_certificate_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.clientCertificateEnabled"></a>
 
 ```python
-client_certificate_enabled: typing.Union[bool, IResolvable]
+client_certificate_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `gateway_disabled`<sup>Required</sup> <a name="gateway_disabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.gatewayDisabled"></a>
 
 ```python
-gateway_disabled: typing.Union[bool, IResolvable]
+gateway_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2357,10 +2357,10 @@ public_ip_address_id: str
 ##### `public_network_access_enabled`<sup>Required</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagement.property.publicNetworkAccessEnabled"></a>
 
 ```python
-public_network_access_enabled: typing.Union[bool, IResolvable]
+public_network_access_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2464,7 +2464,7 @@ from cdktf_cdktf_provider_azurerm import api_management
 apiManagement.ApiManagementAdditionalLocation(
   location: str,
   capacity: typing.Union[int, float] = None,
-  gateway_disabled: typing.Union[bool, IResolvable] = None,
+  gateway_disabled: bool | IResolvable = None,
   public_ip_address_id: str = None,
   virtual_network_configuration: ApiManagementAdditionalLocationVirtualNetworkConfiguration = None,
   zones: typing.List[str] = None
@@ -2477,7 +2477,7 @@ apiManagement.ApiManagementAdditionalLocation(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#location ApiManagement#location}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation.property.capacity">capacity</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#capacity ApiManagement#capacity}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation.property.gatewayDisabled">gateway_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation.property.gatewayDisabled">gateway_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation.property.publicIpAddressId">public_ip_address_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#public_ip_address_id ApiManagement#public_ip_address_id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation.property.virtualNetworkConfiguration">virtual_network_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationVirtualNetworkConfiguration">ApiManagementAdditionalLocationVirtualNetworkConfiguration</a></code> | virtual_network_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation.property.zones">zones</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#zones ApiManagement#zones}. |
@@ -2511,10 +2511,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `gateway_disabled`<sup>Optional</sup> <a name="gateway_disabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation.property.gatewayDisabled"></a>
 
 ```python
-gateway_disabled: typing.Union[bool, IResolvable]
+gateway_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}.
 
@@ -2658,24 +2658,24 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import api_management
 
 apiManagement.ApiManagementConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
   location: str,
   name: str,
   publisher_email: str,
   publisher_name: str,
   resource_group_name: str,
   sku_name: str,
-  additional_location: typing.Union[IResolvable, typing.List[ApiManagementAdditionalLocation]] = None,
-  certificate: typing.Union[IResolvable, typing.List[ApiManagementCertificate]] = None,
-  client_certificate_enabled: typing.Union[bool, IResolvable] = None,
+  additional_location: IResolvable | typing.List[ApiManagementAdditionalLocation] = None,
+  certificate: IResolvable | typing.List[ApiManagementCertificate] = None,
+  client_certificate_enabled: bool | IResolvable = None,
   delegation: ApiManagementDelegation = None,
-  gateway_disabled: typing.Union[bool, IResolvable] = None,
+  gateway_disabled: bool | IResolvable = None,
   hostname_configuration: ApiManagementHostnameConfiguration = None,
   id: str = None,
   identity: ApiManagementIdentity = None,
@@ -2683,7 +2683,7 @@ apiManagement.ApiManagementConfig(
   notification_sender_email: str = None,
   protocols: ApiManagementProtocols = None,
   public_ip_address_id: str = None,
-  public_network_access_enabled: typing.Union[bool, IResolvable] = None,
+  public_network_access_enabled: bool | IResolvable = None,
   security: ApiManagementSecurity = None,
   sign_in: ApiManagementSignIn = None,
   sign_up: ApiManagementSignUp = None,
@@ -2700,24 +2700,24 @@ apiManagement.ApiManagementConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#location ApiManagement#location}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#name ApiManagement#name}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.publisherEmail">publisher_email</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#publisher_email ApiManagement#publisher_email}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.publisherName">publisher_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#publisher_name ApiManagement#publisher_name}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#resource_group_name ApiManagement#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.skuName">sku_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#sku_name ApiManagement#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.additionalLocation">additional_location</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]]</code> | additional_location block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.certificate">certificate</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]]</code> | certificate block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#client_certificate_enabled ApiManagement#client_certificate_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.additionalLocation">additional_location</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]</code> | additional_location block. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.certificate">certificate</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]</code> | certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.clientCertificateEnabled">client_certificate_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#client_certificate_enabled ApiManagement#client_certificate_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.delegation">delegation</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation">ApiManagementDelegation</a></code> | delegation block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.gatewayDisabled">gateway_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.gatewayDisabled">gateway_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.hostnameConfiguration">hostname_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration">ApiManagementHostnameConfiguration</a></code> | hostname_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#id ApiManagement#id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementIdentity">ApiManagementIdentity</a></code> | identity block. |
@@ -2725,7 +2725,7 @@ apiManagement.ApiManagementConfig(
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.notificationSenderEmail">notification_sender_email</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#notification_sender_email ApiManagement#notification_sender_email}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.protocols">protocols</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocols">ApiManagementProtocols</a></code> | protocols block. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.publicIpAddressId">public_ip_address_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#public_ip_address_id ApiManagement#public_ip_address_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#public_network_access_enabled ApiManagement#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.publicNetworkAccessEnabled">public_network_access_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#public_network_access_enabled ApiManagement#public_network_access_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.security">security</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity">ApiManagementSecurity</a></code> | security block. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.signIn">sign_in</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignIn">ApiManagementSignIn</a></code> | sign_in block. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.signUp">sign_up</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUp">ApiManagementSignUp</a></code> | sign_up block. |
@@ -2741,20 +2741,20 @@ apiManagement.ApiManagementConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -2801,10 +2801,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2883,10 +2883,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `additional_location`<sup>Optional</sup> <a name="additional_location" id="@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.additionalLocation"></a>
 
 ```python
-additional_location: typing.Union[IResolvable, typing.List[ApiManagementAdditionalLocation]]
+additional_location: IResolvable | typing.List[ApiManagementAdditionalLocation]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]
 
 additional_location block.
 
@@ -2897,10 +2897,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `certificate`<sup>Optional</sup> <a name="certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.certificate"></a>
 
 ```python
-certificate: typing.Union[IResolvable, typing.List[ApiManagementCertificate]]
+certificate: IResolvable | typing.List[ApiManagementCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]
 
 certificate block.
 
@@ -2911,10 +2911,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `client_certificate_enabled`<sup>Optional</sup> <a name="client_certificate_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.clientCertificateEnabled"></a>
 
 ```python
-client_certificate_enabled: typing.Union[bool, IResolvable]
+client_certificate_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#client_certificate_enabled ApiManagement#client_certificate_enabled}.
 
@@ -2937,10 +2937,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `gateway_disabled`<sup>Optional</sup> <a name="gateway_disabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.gatewayDisabled"></a>
 
 ```python
-gateway_disabled: typing.Union[bool, IResolvable]
+gateway_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#gateway_disabled ApiManagement#gateway_disabled}.
 
@@ -3042,10 +3042,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `public_network_access_enabled`<sup>Optional</sup> <a name="public_network_access_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementConfig.property.publicNetworkAccessEnabled"></a>
 
 ```python
-public_network_access_enabled: typing.Union[bool, IResolvable]
+public_network_access_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#public_network_access_enabled ApiManagement#public_network_access_enabled}.
 
@@ -3179,9 +3179,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import api_management
 
 apiManagement.ApiManagementDelegation(
-  subscriptions_enabled: typing.Union[bool, IResolvable] = None,
+  subscriptions_enabled: bool | IResolvable = None,
   url: str = None,
-  user_registration_enabled: typing.Union[bool, IResolvable] = None,
+  user_registration_enabled: bool | IResolvable = None,
   validation_key: str = None
 )
 ```
@@ -3190,9 +3190,9 @@ apiManagement.ApiManagementDelegation(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation.property.subscriptionsEnabled">subscriptions_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#subscriptions_enabled ApiManagement#subscriptions_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation.property.subscriptionsEnabled">subscriptions_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#subscriptions_enabled ApiManagement#subscriptions_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation.property.url">url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#url ApiManagement#url}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation.property.userRegistrationEnabled">user_registration_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#user_registration_enabled ApiManagement#user_registration_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation.property.userRegistrationEnabled">user_registration_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#user_registration_enabled ApiManagement#user_registration_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation.property.validationKey">validation_key</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#validation_key ApiManagement#validation_key}. |
 
 ---
@@ -3200,10 +3200,10 @@ apiManagement.ApiManagementDelegation(
 ##### `subscriptions_enabled`<sup>Optional</sup> <a name="subscriptions_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation.property.subscriptionsEnabled"></a>
 
 ```python
-subscriptions_enabled: typing.Union[bool, IResolvable]
+subscriptions_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#subscriptions_enabled ApiManagement#subscriptions_enabled}.
 
@@ -3224,10 +3224,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `user_registration_enabled`<sup>Optional</sup> <a name="user_registration_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation.property.userRegistrationEnabled"></a>
 
 ```python
-user_registration_enabled: typing.Union[bool, IResolvable]
+user_registration_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#user_registration_enabled ApiManagement#user_registration_enabled}.
 
@@ -3253,11 +3253,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import api_management
 
 apiManagement.ApiManagementHostnameConfiguration(
-  developer_portal: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationDeveloperPortal]] = None,
-  management: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationManagement]] = None,
-  portal: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationPortal]] = None,
-  proxy: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationProxy]] = None,
-  scm: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationScm]] = None
+  developer_portal: IResolvable | typing.List[ApiManagementHostnameConfigurationDeveloperPortal] = None,
+  management: IResolvable | typing.List[ApiManagementHostnameConfigurationManagement] = None,
+  portal: IResolvable | typing.List[ApiManagementHostnameConfigurationPortal] = None,
+  proxy: IResolvable | typing.List[ApiManagementHostnameConfigurationProxy] = None,
+  scm: IResolvable | typing.List[ApiManagementHostnameConfigurationScm] = None
 )
 ```
 
@@ -3265,21 +3265,21 @@ apiManagement.ApiManagementHostnameConfiguration(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.developerPortal">developer_portal</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]]</code> | developer_portal block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.management">management</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]]</code> | management block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.portal">portal</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]]</code> | portal block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.proxy">proxy</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]]</code> | proxy block. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.scm">scm</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]]</code> | scm block. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.developerPortal">developer_portal</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]</code> | developer_portal block. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.management">management</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]</code> | management block. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.portal">portal</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]</code> | portal block. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.proxy">proxy</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]</code> | proxy block. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.scm">scm</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]</code> | scm block. |
 
 ---
 
 ##### `developer_portal`<sup>Optional</sup> <a name="developer_portal" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.developerPortal"></a>
 
 ```python
-developer_portal: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationDeveloperPortal]]
+developer_portal: IResolvable | typing.List[ApiManagementHostnameConfigurationDeveloperPortal]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]
 
 developer_portal block.
 
@@ -3290,10 +3290,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `management`<sup>Optional</sup> <a name="management" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.management"></a>
 
 ```python
-management: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationManagement]]
+management: IResolvable | typing.List[ApiManagementHostnameConfigurationManagement]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]
 
 management block.
 
@@ -3304,10 +3304,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `portal`<sup>Optional</sup> <a name="portal" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.portal"></a>
 
 ```python
-portal: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationPortal]]
+portal: IResolvable | typing.List[ApiManagementHostnameConfigurationPortal]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]
 
 portal block.
 
@@ -3318,10 +3318,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `proxy`<sup>Optional</sup> <a name="proxy" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.proxy"></a>
 
 ```python
-proxy: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationProxy]]
+proxy: IResolvable | typing.List[ApiManagementHostnameConfigurationProxy]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]
 
 proxy block.
 
@@ -3332,10 +3332,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `scm`<sup>Optional</sup> <a name="scm" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration.property.scm"></a>
 
 ```python
-scm: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationScm]]
+scm: IResolvable | typing.List[ApiManagementHostnameConfigurationScm]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]
 
 scm block.
 
@@ -3356,7 +3356,7 @@ apiManagement.ApiManagementHostnameConfigurationDeveloperPortal(
   certificate_password: str = None,
   key_vault_certificate_id: str = None,
   key_vault_id: str = None,
-  negotiate_client_certificate: typing.Union[bool, IResolvable] = None,
+  negotiate_client_certificate: bool | IResolvable = None,
   ssl_keyvault_identity_client_id: str = None
 )
 ```
@@ -3370,7 +3370,7 @@ apiManagement.ApiManagementHostnameConfigurationDeveloperPortal(
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal.property.certificatePassword">certificate_password</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal.property.keyVaultCertificateId">key_vault_certificate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#key_vault_certificate_id ApiManagement#key_vault_certificate_id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal.property.keyVaultId">key_vault_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal.property.sslKeyvaultIdentityClientId">ssl_keyvault_identity_client_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}. |
 
 ---
@@ -3438,10 +3438,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negotiate_client_certificate`<sup>Optional</sup> <a name="negotiate_client_certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal.property.negotiateClientCertificate"></a>
 
 ```python
-negotiate_client_certificate: typing.Union[bool, IResolvable]
+negotiate_client_certificate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}.
 
@@ -3472,7 +3472,7 @@ apiManagement.ApiManagementHostnameConfigurationManagement(
   certificate_password: str = None,
   key_vault_certificate_id: str = None,
   key_vault_id: str = None,
-  negotiate_client_certificate: typing.Union[bool, IResolvable] = None,
+  negotiate_client_certificate: bool | IResolvable = None,
   ssl_keyvault_identity_client_id: str = None
 )
 ```
@@ -3486,7 +3486,7 @@ apiManagement.ApiManagementHostnameConfigurationManagement(
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement.property.certificatePassword">certificate_password</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement.property.keyVaultCertificateId">key_vault_certificate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#key_vault_certificate_id ApiManagement#key_vault_certificate_id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement.property.keyVaultId">key_vault_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement.property.sslKeyvaultIdentityClientId">ssl_keyvault_identity_client_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}. |
 
 ---
@@ -3554,10 +3554,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negotiate_client_certificate`<sup>Optional</sup> <a name="negotiate_client_certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement.property.negotiateClientCertificate"></a>
 
 ```python
-negotiate_client_certificate: typing.Union[bool, IResolvable]
+negotiate_client_certificate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}.
 
@@ -3588,7 +3588,7 @@ apiManagement.ApiManagementHostnameConfigurationPortal(
   certificate_password: str = None,
   key_vault_certificate_id: str = None,
   key_vault_id: str = None,
-  negotiate_client_certificate: typing.Union[bool, IResolvable] = None,
+  negotiate_client_certificate: bool | IResolvable = None,
   ssl_keyvault_identity_client_id: str = None
 )
 ```
@@ -3602,7 +3602,7 @@ apiManagement.ApiManagementHostnameConfigurationPortal(
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal.property.certificatePassword">certificate_password</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal.property.keyVaultCertificateId">key_vault_certificate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#key_vault_certificate_id ApiManagement#key_vault_certificate_id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal.property.keyVaultId">key_vault_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal.property.sslKeyvaultIdentityClientId">ssl_keyvault_identity_client_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}. |
 
 ---
@@ -3670,10 +3670,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negotiate_client_certificate`<sup>Optional</sup> <a name="negotiate_client_certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal.property.negotiateClientCertificate"></a>
 
 ```python
-negotiate_client_certificate: typing.Union[bool, IResolvable]
+negotiate_client_certificate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}.
 
@@ -3702,10 +3702,10 @@ apiManagement.ApiManagementHostnameConfigurationProxy(
   host_name: str,
   certificate: str = None,
   certificate_password: str = None,
-  default_ssl_binding: typing.Union[bool, IResolvable] = None,
+  default_ssl_binding: bool | IResolvable = None,
   key_vault_certificate_id: str = None,
   key_vault_id: str = None,
-  negotiate_client_certificate: typing.Union[bool, IResolvable] = None,
+  negotiate_client_certificate: bool | IResolvable = None,
   ssl_keyvault_identity_client_id: str = None
 )
 ```
@@ -3717,10 +3717,10 @@ apiManagement.ApiManagementHostnameConfigurationProxy(
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.hostName">host_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#host_name ApiManagement#host_name}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.certificate">certificate</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#certificate ApiManagement#certificate}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.certificatePassword">certificate_password</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.defaultSslBinding">default_ssl_binding</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#default_ssl_binding ApiManagement#default_ssl_binding}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.defaultSslBinding">default_ssl_binding</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#default_ssl_binding ApiManagement#default_ssl_binding}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.keyVaultCertificateId">key_vault_certificate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#key_vault_certificate_id ApiManagement#key_vault_certificate_id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.keyVaultId">key_vault_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.sslKeyvaultIdentityClientId">ssl_keyvault_identity_client_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}. |
 
 ---
@@ -3764,10 +3764,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `default_ssl_binding`<sup>Optional</sup> <a name="default_ssl_binding" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.defaultSslBinding"></a>
 
 ```python
-default_ssl_binding: typing.Union[bool, IResolvable]
+default_ssl_binding: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#default_ssl_binding ApiManagement#default_ssl_binding}.
 
@@ -3800,10 +3800,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negotiate_client_certificate`<sup>Optional</sup> <a name="negotiate_client_certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy.property.negotiateClientCertificate"></a>
 
 ```python
-negotiate_client_certificate: typing.Union[bool, IResolvable]
+negotiate_client_certificate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}.
 
@@ -3834,7 +3834,7 @@ apiManagement.ApiManagementHostnameConfigurationScm(
   certificate_password: str = None,
   key_vault_certificate_id: str = None,
   key_vault_id: str = None,
-  negotiate_client_certificate: typing.Union[bool, IResolvable] = None,
+  negotiate_client_certificate: bool | IResolvable = None,
   ssl_keyvault_identity_client_id: str = None
 )
 ```
@@ -3848,7 +3848,7 @@ apiManagement.ApiManagementHostnameConfigurationScm(
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm.property.certificatePassword">certificate_password</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#certificate_password ApiManagement#certificate_password}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm.property.keyVaultCertificateId">key_vault_certificate_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#key_vault_certificate_id ApiManagement#key_vault_certificate_id}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm.property.keyVaultId">key_vault_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#key_vault_id ApiManagement#key_vault_id}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm.property.sslKeyvaultIdentityClientId">ssl_keyvault_identity_client_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#ssl_keyvault_identity_client_id ApiManagement#ssl_keyvault_identity_client_id}. |
 
 ---
@@ -3916,10 +3916,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negotiate_client_certificate`<sup>Optional</sup> <a name="negotiate_client_certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm.property.negotiateClientCertificate"></a>
 
 ```python
-negotiate_client_certificate: typing.Union[bool, IResolvable]
+negotiate_client_certificate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#negotiate_client_certificate ApiManagement#negotiate_client_certificate}.
 
@@ -3991,8 +3991,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import api_management
 
 apiManagement.ApiManagementProtocols(
-  enable_http2: typing.Union[bool, IResolvable] = None,
-  http2_enabled: typing.Union[bool, IResolvable] = None
+  enable_http2: bool | IResolvable = None,
+  http2_enabled: bool | IResolvable = None
 )
 ```
 
@@ -4000,18 +4000,18 @@ apiManagement.ApiManagementProtocols(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocols.property.enableHttp2">enable_http2</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_http2 ApiManagement#enable_http2}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocols.property.http2Enabled">http2_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#http2_enabled ApiManagement#http2_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocols.property.enableHttp2">enable_http2</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_http2 ApiManagement#enable_http2}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocols.property.http2Enabled">http2_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#http2_enabled ApiManagement#http2_enabled}. |
 
 ---
 
 ##### `enable_http2`<sup>Optional</sup> <a name="enable_http2" id="@cdktf/provider-azurerm.apiManagement.ApiManagementProtocols.property.enableHttp2"></a>
 
 ```python
-enable_http2: typing.Union[bool, IResolvable]
+enable_http2: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_http2 ApiManagement#enable_http2}.
 
@@ -4020,10 +4020,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `http2_enabled`<sup>Optional</sup> <a name="http2_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementProtocols.property.http2Enabled"></a>
 
 ```python
-http2_enabled: typing.Union[bool, IResolvable]
+http2_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#http2_enabled ApiManagement#http2_enabled}.
 
@@ -4037,29 +4037,29 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import api_management
 
 apiManagement.ApiManagementSecurity(
-  backend_ssl30_enabled: typing.Union[bool, IResolvable] = None,
-  backend_tls10_enabled: typing.Union[bool, IResolvable] = None,
-  backend_tls11_enabled: typing.Union[bool, IResolvable] = None,
-  enable_backend_ssl30: typing.Union[bool, IResolvable] = None,
-  enable_backend_tls10: typing.Union[bool, IResolvable] = None,
-  enable_backend_tls11: typing.Union[bool, IResolvable] = None,
-  enable_frontend_ssl30: typing.Union[bool, IResolvable] = None,
-  enable_frontend_tls10: typing.Union[bool, IResolvable] = None,
-  enable_frontend_tls11: typing.Union[bool, IResolvable] = None,
-  frontend_ssl30_enabled: typing.Union[bool, IResolvable] = None,
-  frontend_tls10_enabled: typing.Union[bool, IResolvable] = None,
-  frontend_tls11_enabled: typing.Union[bool, IResolvable] = None,
-  tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes128_cbc_sha256_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes128_gcm_sha256_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes256_cbc_sha256_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  tls_rsa_with_aes256_gcm_sha384_ciphers_enabled: typing.Union[bool, IResolvable] = None,
-  triple_des_ciphers_enabled: typing.Union[bool, IResolvable] = None
+  backend_ssl30_enabled: bool | IResolvable = None,
+  backend_tls10_enabled: bool | IResolvable = None,
+  backend_tls11_enabled: bool | IResolvable = None,
+  enable_backend_ssl30: bool | IResolvable = None,
+  enable_backend_tls10: bool | IResolvable = None,
+  enable_backend_tls11: bool | IResolvable = None,
+  enable_frontend_ssl30: bool | IResolvable = None,
+  enable_frontend_tls10: bool | IResolvable = None,
+  enable_frontend_tls11: bool | IResolvable = None,
+  frontend_ssl30_enabled: bool | IResolvable = None,
+  frontend_tls10_enabled: bool | IResolvable = None,
+  frontend_tls11_enabled: bool | IResolvable = None,
+  tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes128_cbc_sha256_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes128_gcm_sha256_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes256_cbc_sha256_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable = None,
+  tls_rsa_with_aes256_gcm_sha384_ciphers_enabled: bool | IResolvable = None,
+  triple_des_ciphers_enabled: bool | IResolvable = None
 )
 ```
 
@@ -4067,39 +4067,39 @@ apiManagement.ApiManagementSecurity(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.backendSsl30Enabled">backend_ssl30_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_ssl30_enabled ApiManagement#backend_ssl30_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.backendTls10Enabled">backend_tls10_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_tls10_enabled ApiManagement#backend_tls10_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.backendTls11Enabled">backend_tls11_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_tls11_enabled ApiManagement#backend_tls11_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableBackendSsl30">enable_backend_ssl30</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_ssl30 ApiManagement#enable_backend_ssl30}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableBackendTls10">enable_backend_tls10</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_tls10 ApiManagement#enable_backend_tls10}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableBackendTls11">enable_backend_tls11</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_tls11 ApiManagement#enable_backend_tls11}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableFrontendSsl30">enable_frontend_ssl30</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_ssl30 ApiManagement#enable_frontend_ssl30}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableFrontendTls10">enable_frontend_tls10</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_tls10 ApiManagement#enable_frontend_tls10}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableFrontendTls11">enable_frontend_tls11</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_tls11 ApiManagement#enable_frontend_tls11}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.frontendSsl30Enabled">frontend_ssl30_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_ssl30_enabled ApiManagement#frontend_ssl30_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.frontendTls10Enabled">frontend_tls10_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_tls10_enabled ApiManagement#frontend_tls10_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.frontendTls11Enabled">frontend_tls11_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_tls11_enabled ApiManagement#frontend_tls11_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled">tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled">tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheRsaWithAes128CbcShaCiphersEnabled">tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheRsaWithAes256CbcShaCiphersEnabled">tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes128CbcSha256CiphersEnabled">tls_rsa_with_aes128_cbc_sha256_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes128CbcShaCiphersEnabled">tls_rsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha_ciphers_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes128GcmSha256CiphersEnabled">tls_rsa_with_aes128_gcm_sha256_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes256CbcSha256CiphersEnabled">tls_rsa_with_aes256_cbc_sha256_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes256CbcShaCiphersEnabled">tls_rsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha_ciphers_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes256GcmSha384CiphersEnabled">tls_rsa_with_aes256_gcm_sha384_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled ApiManagement#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tripleDesCiphersEnabled">triple_des_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#triple_des_ciphers_enabled ApiManagement#triple_des_ciphers_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.backendSsl30Enabled">backend_ssl30_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_ssl30_enabled ApiManagement#backend_ssl30_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.backendTls10Enabled">backend_tls10_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_tls10_enabled ApiManagement#backend_tls10_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.backendTls11Enabled">backend_tls11_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_tls11_enabled ApiManagement#backend_tls11_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableBackendSsl30">enable_backend_ssl30</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_ssl30 ApiManagement#enable_backend_ssl30}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableBackendTls10">enable_backend_tls10</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_tls10 ApiManagement#enable_backend_tls10}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableBackendTls11">enable_backend_tls11</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_tls11 ApiManagement#enable_backend_tls11}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableFrontendSsl30">enable_frontend_ssl30</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_ssl30 ApiManagement#enable_frontend_ssl30}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableFrontendTls10">enable_frontend_tls10</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_tls10 ApiManagement#enable_frontend_tls10}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableFrontendTls11">enable_frontend_tls11</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_tls11 ApiManagement#enable_frontend_tls11}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.frontendSsl30Enabled">frontend_ssl30_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_ssl30_enabled ApiManagement#frontend_ssl30_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.frontendTls10Enabled">frontend_tls10_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_tls10_enabled ApiManagement#frontend_tls10_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.frontendTls11Enabled">frontend_tls11_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_tls11_enabled ApiManagement#frontend_tls11_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled">tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled">tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheRsaWithAes128CbcShaCiphersEnabled">tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheRsaWithAes256CbcShaCiphersEnabled">tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes128CbcSha256CiphersEnabled">tls_rsa_with_aes128_cbc_sha256_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes128CbcShaCiphersEnabled">tls_rsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha_ciphers_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes128GcmSha256CiphersEnabled">tls_rsa_with_aes128_gcm_sha256_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes256CbcSha256CiphersEnabled">tls_rsa_with_aes256_cbc_sha256_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes256CbcShaCiphersEnabled">tls_rsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha_ciphers_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes256GcmSha384CiphersEnabled">tls_rsa_with_aes256_gcm_sha384_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled ApiManagement#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tripleDesCiphersEnabled">triple_des_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#triple_des_ciphers_enabled ApiManagement#triple_des_ciphers_enabled}. |
 
 ---
 
 ##### `backend_ssl30_enabled`<sup>Optional</sup> <a name="backend_ssl30_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.backendSsl30Enabled"></a>
 
 ```python
-backend_ssl30_enabled: typing.Union[bool, IResolvable]
+backend_ssl30_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_ssl30_enabled ApiManagement#backend_ssl30_enabled}.
 
@@ -4108,10 +4108,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `backend_tls10_enabled`<sup>Optional</sup> <a name="backend_tls10_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.backendTls10Enabled"></a>
 
 ```python
-backend_tls10_enabled: typing.Union[bool, IResolvable]
+backend_tls10_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_tls10_enabled ApiManagement#backend_tls10_enabled}.
 
@@ -4120,10 +4120,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `backend_tls11_enabled`<sup>Optional</sup> <a name="backend_tls11_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.backendTls11Enabled"></a>
 
 ```python
-backend_tls11_enabled: typing.Union[bool, IResolvable]
+backend_tls11_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#backend_tls11_enabled ApiManagement#backend_tls11_enabled}.
 
@@ -4132,10 +4132,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_backend_ssl30`<sup>Optional</sup> <a name="enable_backend_ssl30" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableBackendSsl30"></a>
 
 ```python
-enable_backend_ssl30: typing.Union[bool, IResolvable]
+enable_backend_ssl30: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_ssl30 ApiManagement#enable_backend_ssl30}.
 
@@ -4144,10 +4144,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_backend_tls10`<sup>Optional</sup> <a name="enable_backend_tls10" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableBackendTls10"></a>
 
 ```python
-enable_backend_tls10: typing.Union[bool, IResolvable]
+enable_backend_tls10: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_tls10 ApiManagement#enable_backend_tls10}.
 
@@ -4156,10 +4156,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_backend_tls11`<sup>Optional</sup> <a name="enable_backend_tls11" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableBackendTls11"></a>
 
 ```python
-enable_backend_tls11: typing.Union[bool, IResolvable]
+enable_backend_tls11: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_backend_tls11 ApiManagement#enable_backend_tls11}.
 
@@ -4168,10 +4168,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_frontend_ssl30`<sup>Optional</sup> <a name="enable_frontend_ssl30" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableFrontendSsl30"></a>
 
 ```python
-enable_frontend_ssl30: typing.Union[bool, IResolvable]
+enable_frontend_ssl30: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_ssl30 ApiManagement#enable_frontend_ssl30}.
 
@@ -4180,10 +4180,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_frontend_tls10`<sup>Optional</sup> <a name="enable_frontend_tls10" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableFrontendTls10"></a>
 
 ```python
-enable_frontend_tls10: typing.Union[bool, IResolvable]
+enable_frontend_tls10: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_tls10 ApiManagement#enable_frontend_tls10}.
 
@@ -4192,10 +4192,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_frontend_tls11`<sup>Optional</sup> <a name="enable_frontend_tls11" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.enableFrontendTls11"></a>
 
 ```python
-enable_frontend_tls11: typing.Union[bool, IResolvable]
+enable_frontend_tls11: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enable_frontend_tls11 ApiManagement#enable_frontend_tls11}.
 
@@ -4204,10 +4204,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `frontend_ssl30_enabled`<sup>Optional</sup> <a name="frontend_ssl30_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.frontendSsl30Enabled"></a>
 
 ```python
-frontend_ssl30_enabled: typing.Union[bool, IResolvable]
+frontend_ssl30_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_ssl30_enabled ApiManagement#frontend_ssl30_enabled}.
 
@@ -4216,10 +4216,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `frontend_tls10_enabled`<sup>Optional</sup> <a name="frontend_tls10_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.frontendTls10Enabled"></a>
 
 ```python
-frontend_tls10_enabled: typing.Union[bool, IResolvable]
+frontend_tls10_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_tls10_enabled ApiManagement#frontend_tls10_enabled}.
 
@@ -4228,10 +4228,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `frontend_tls11_enabled`<sup>Optional</sup> <a name="frontend_tls11_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.frontendTls11Enabled"></a>
 
 ```python
-frontend_tls11_enabled: typing.Union[bool, IResolvable]
+frontend_tls11_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#frontend_tls11_enabled ApiManagement#frontend_tls11_enabled}.
 
@@ -4240,10 +4240,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled"></a>
 
 ```python
-tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled}.
 
@@ -4252,10 +4252,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled"></a>
 
 ```python
-tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled}.
 
@@ -4264,10 +4264,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheRsaWithAes128CbcShaCiphersEnabled"></a>
 
 ```python
-tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled}.
 
@@ -4276,10 +4276,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsEcdheRsaWithAes256CbcShaCiphersEnabled"></a>
 
 ```python
-tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled}.
 
@@ -4288,10 +4288,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tls_rsa_with_aes128_cbc_sha256_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes128_cbc_sha256_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes128CbcSha256CiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes128_cbc_sha256_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes128_cbc_sha256_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled}.
 
@@ -4300,10 +4300,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tls_rsa_with_aes128_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes128_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes128CbcShaCiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes128_cbc_sha_ciphers_enabled}.
 
@@ -4312,10 +4312,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tls_rsa_with_aes128_gcm_sha256_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes128_gcm_sha256_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes128GcmSha256CiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes128_gcm_sha256_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes128_gcm_sha256_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled}.
 
@@ -4324,10 +4324,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tls_rsa_with_aes256_cbc_sha256_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes256_cbc_sha256_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes256CbcSha256CiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes256_cbc_sha256_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes256_cbc_sha256_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled}.
 
@@ -4336,10 +4336,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tls_rsa_with_aes256_cbc_sha_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes256_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes256CbcShaCiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_cbc_sha_ciphers_enabled ApiManagement#tls_rsa_with_aes256_cbc_sha_ciphers_enabled}.
 
@@ -4348,10 +4348,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `tls_rsa_with_aes256_gcm_sha384_ciphers_enabled`<sup>Optional</sup> <a name="tls_rsa_with_aes256_gcm_sha384_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tlsRsaWithAes256GcmSha384CiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes256_gcm_sha384_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes256_gcm_sha384_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled ApiManagement#tls_rsa_with_aes256_gcm_sha384_ciphers_enabled}.
 
@@ -4360,10 +4360,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `triple_des_ciphers_enabled`<sup>Optional</sup> <a name="triple_des_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity.property.tripleDesCiphersEnabled"></a>
 
 ```python
-triple_des_ciphers_enabled: typing.Union[bool, IResolvable]
+triple_des_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#triple_des_ciphers_enabled ApiManagement#triple_des_ciphers_enabled}.
 
@@ -4377,7 +4377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import api_management
 
 apiManagement.ApiManagementSignIn(
-  enabled: typing.Union[bool, IResolvable]
+  enabled: bool | IResolvable
 )
 ```
 
@@ -4385,17 +4385,17 @@ apiManagement.ApiManagementSignIn(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignIn.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignIn.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}. |
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignIn.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}.
 
@@ -4409,7 +4409,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import api_management
 
 apiManagement.ApiManagementSignUp(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   terms_of_service: ApiManagementSignUpTermsOfService
 )
 ```
@@ -4418,7 +4418,7 @@ apiManagement.ApiManagementSignUp(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUp.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUp.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUp.property.termsOfService">terms_of_service</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfService">ApiManagementSignUpTermsOfService</a></code> | terms_of_service block. |
 
 ---
@@ -4426,10 +4426,10 @@ apiManagement.ApiManagementSignUp(
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignUp.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}.
 
@@ -4457,8 +4457,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import api_management
 
 apiManagement.ApiManagementSignUpTermsOfService(
-  consent_required: typing.Union[bool, IResolvable],
-  enabled: typing.Union[bool, IResolvable],
+  consent_required: bool | IResolvable,
+  enabled: bool | IResolvable,
   text: str = None
 )
 ```
@@ -4467,8 +4467,8 @@ apiManagement.ApiManagementSignUpTermsOfService(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfService.property.consentRequired">consent_required</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#consent_required ApiManagement#consent_required}. |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfService.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfService.property.consentRequired">consent_required</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#consent_required ApiManagement#consent_required}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfService.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfService.property.text">text</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#text ApiManagement#text}. |
 
 ---
@@ -4476,10 +4476,10 @@ apiManagement.ApiManagementSignUpTermsOfService(
 ##### `consent_required`<sup>Required</sup> <a name="consent_required" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfService.property.consentRequired"></a>
 
 ```python
-consent_required: typing.Union[bool, IResolvable]
+consent_required: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#consent_required ApiManagement#consent_required}.
 
@@ -4488,10 +4488,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfService.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}.
 
@@ -4517,7 +4517,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import api_management
 
 apiManagement.ApiManagementTenantAccess(
-  enabled: typing.Union[bool, IResolvable]
+  enabled: bool | IResolvable
 )
 ```
 
@@ -4525,17 +4525,17 @@ apiManagement.ApiManagementTenantAccess(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccess.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccess.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}. |
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccess.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}.
 
@@ -4780,7 +4780,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]</code> | *No description.* |
 
 ---
 
@@ -4811,10 +4811,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApiManagementAdditionalLocation]]
+internal_value: IResolvable | typing.List[ApiManagementAdditionalLocation]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]
 
 ---
 
@@ -5131,17 +5131,17 @@ def reset_zones() -> None
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.publicIpAddresses">public_ip_addresses</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.virtualNetworkConfiguration">virtual_network_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputReference">ApiManagementAdditionalLocationVirtualNetworkConfigurationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.capacityInput">capacity_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.gatewayDisabledInput">gateway_disabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.gatewayDisabledInput">gateway_disabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.publicIpAddressIdInput">public_ip_address_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.virtualNetworkConfigurationInput">virtual_network_configuration_input</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationVirtualNetworkConfiguration">ApiManagementAdditionalLocationVirtualNetworkConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.zonesInput">zones_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.capacity">capacity</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.gatewayDisabled">gateway_disabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.gatewayDisabled">gateway_disabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.location">location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.publicIpAddressId">public_ip_address_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.zones">zones</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a></code> | *No description.* |
 
 ---
 
@@ -5222,10 +5222,10 @@ capacity_input: typing.Union[int, float]
 ##### `gateway_disabled_input`<sup>Optional</sup> <a name="gateway_disabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.gatewayDisabledInput"></a>
 
 ```python
-gateway_disabled_input: typing.Union[bool, IResolvable]
+gateway_disabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5282,10 +5282,10 @@ capacity: typing.Union[int, float]
 ##### `gateway_disabled`<sup>Required</sup> <a name="gateway_disabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.gatewayDisabled"></a>
 
 ```python
-gateway_disabled: typing.Union[bool, IResolvable]
+gateway_disabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -5322,10 +5322,10 @@ zones: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApiManagementAdditionalLocation]
+internal_value: IResolvable | ApiManagementAdditionalLocation
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementAdditionalLocation">ApiManagementAdditionalLocation</a>
 
 ---
 
@@ -5757,7 +5757,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]</code> | *No description.* |
 
 ---
 
@@ -5788,10 +5788,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApiManagementCertificate]]
+internal_value: IResolvable | typing.List[ApiManagementCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]
 
 ---
 
@@ -6067,7 +6067,7 @@ def reset_certificate_password() -> None
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateOutputReference.property.certificatePassword">certificate_password</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateOutputReference.property.encodedCertificate">encoded_certificate</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateOutputReference.property.storeName">store_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a></code> | *No description.* |
 
 ---
 
@@ -6188,10 +6188,10 @@ store_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementCertificateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApiManagementCertificate]
+internal_value: IResolvable | ApiManagementCertificate
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementCertificate">ApiManagementCertificate</a>
 
 ---
 
@@ -6459,13 +6459,13 @@ def reset_validation_key() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.subscriptionsEnabledInput">subscriptions_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.subscriptionsEnabledInput">subscriptions_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.urlInput">url_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.userRegistrationEnabledInput">user_registration_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.userRegistrationEnabledInput">user_registration_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.validationKeyInput">validation_key_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.subscriptionsEnabled">subscriptions_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.subscriptionsEnabled">subscriptions_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.url">url</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.userRegistrationEnabled">user_registration_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.userRegistrationEnabled">user_registration_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.validationKey">validation_key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementDelegation">ApiManagementDelegation</a></code> | *No description.* |
 
@@ -6498,10 +6498,10 @@ fqn: str
 ##### `subscriptions_enabled_input`<sup>Optional</sup> <a name="subscriptions_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.subscriptionsEnabledInput"></a>
 
 ```python
-subscriptions_enabled_input: typing.Union[bool, IResolvable]
+subscriptions_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6518,10 +6518,10 @@ url_input: str
 ##### `user_registration_enabled_input`<sup>Optional</sup> <a name="user_registration_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.userRegistrationEnabledInput"></a>
 
 ```python
-user_registration_enabled_input: typing.Union[bool, IResolvable]
+user_registration_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6538,10 +6538,10 @@ validation_key_input: str
 ##### `subscriptions_enabled`<sup>Required</sup> <a name="subscriptions_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.subscriptionsEnabled"></a>
 
 ```python
-subscriptions_enabled: typing.Union[bool, IResolvable]
+subscriptions_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6558,10 +6558,10 @@ url: str
 ##### `user_registration_enabled`<sup>Required</sup> <a name="user_registration_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementDelegationOutputReference.property.userRegistrationEnabled"></a>
 
 ```python
-user_registration_enabled: typing.Union[bool, IResolvable]
+user_registration_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -6717,7 +6717,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]</code> | *No description.* |
 
 ---
 
@@ -6748,10 +6748,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationDeveloperPortal]]
+internal_value: IResolvable | typing.List[ApiManagementHostnameConfigurationDeveloperPortal]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]
 
 ---
 
@@ -7063,16 +7063,16 @@ def reset_ssl_keyvault_identity_client_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.hostNameInput">host_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.keyVaultCertificateIdInput">key_vault_certificate_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.keyVaultIdInput">key_vault_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.negotiateClientCertificateInput">negotiate_client_certificate_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.negotiateClientCertificateInput">negotiate_client_certificate_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.sslKeyvaultIdentityClientIdInput">ssl_keyvault_identity_client_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.certificate">certificate</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.certificatePassword">certificate_password</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.hostName">host_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.keyVaultCertificateId">key_vault_certificate_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.keyVaultId">key_vault_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.sslKeyvaultIdentityClientId">ssl_keyvault_identity_client_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a></code> | *No description.* |
 
 ---
 
@@ -7203,10 +7203,10 @@ key_vault_id_input: str
 ##### `negotiate_client_certificate_input`<sup>Optional</sup> <a name="negotiate_client_certificate_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.negotiateClientCertificateInput"></a>
 
 ```python
-negotiate_client_certificate_input: typing.Union[bool, IResolvable]
+negotiate_client_certificate_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7273,10 +7273,10 @@ key_vault_id: str
 ##### `negotiate_client_certificate`<sup>Required</sup> <a name="negotiate_client_certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.negotiateClientCertificate"></a>
 
 ```python
-negotiate_client_certificate: typing.Union[bool, IResolvable]
+negotiate_client_certificate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7293,10 +7293,10 @@ ssl_keyvault_identity_client_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortalOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApiManagementHostnameConfigurationDeveloperPortal]
+internal_value: IResolvable | ApiManagementHostnameConfigurationDeveloperPortal
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>
 
 ---
 
@@ -7432,7 +7432,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]</code> | *No description.* |
 
 ---
 
@@ -7463,10 +7463,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationManagement]]
+internal_value: IResolvable | typing.List[ApiManagementHostnameConfigurationManagement]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]
 
 ---
 
@@ -7778,16 +7778,16 @@ def reset_ssl_keyvault_identity_client_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.hostNameInput">host_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.keyVaultCertificateIdInput">key_vault_certificate_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.keyVaultIdInput">key_vault_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.negotiateClientCertificateInput">negotiate_client_certificate_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.negotiateClientCertificateInput">negotiate_client_certificate_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.sslKeyvaultIdentityClientIdInput">ssl_keyvault_identity_client_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.certificate">certificate</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.certificatePassword">certificate_password</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.hostName">host_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.keyVaultCertificateId">key_vault_certificate_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.keyVaultId">key_vault_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.sslKeyvaultIdentityClientId">ssl_keyvault_identity_client_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a></code> | *No description.* |
 
 ---
 
@@ -7918,10 +7918,10 @@ key_vault_id_input: str
 ##### `negotiate_client_certificate_input`<sup>Optional</sup> <a name="negotiate_client_certificate_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.negotiateClientCertificateInput"></a>
 
 ```python
-negotiate_client_certificate_input: typing.Union[bool, IResolvable]
+negotiate_client_certificate_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -7988,10 +7988,10 @@ key_vault_id: str
 ##### `negotiate_client_certificate`<sup>Required</sup> <a name="negotiate_client_certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.negotiateClientCertificate"></a>
 
 ```python
-negotiate_client_certificate: typing.Union[bool, IResolvable]
+negotiate_client_certificate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8008,10 +8008,10 @@ ssl_keyvault_identity_client_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagementOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApiManagementHostnameConfigurationManagement]
+internal_value: IResolvable | ApiManagementHostnameConfigurationManagement
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>
 
 ---
 
@@ -8258,13 +8258,13 @@ Returns a reversible string representation.
 
 ```python
 def put_developer_portal(
-  value: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationDeveloperPortal]]
+  value: IResolvable | typing.List[ApiManagementHostnameConfigurationDeveloperPortal]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.putDeveloperPortal.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]
 
 ---
 
@@ -8272,13 +8272,13 @@ def put_developer_portal(
 
 ```python
 def put_management(
-  value: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationManagement]]
+  value: IResolvable | typing.List[ApiManagementHostnameConfigurationManagement]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.putManagement.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]
 
 ---
 
@@ -8286,13 +8286,13 @@ def put_management(
 
 ```python
 def put_portal(
-  value: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationPortal]]
+  value: IResolvable | typing.List[ApiManagementHostnameConfigurationPortal]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.putPortal.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]
 
 ---
 
@@ -8300,13 +8300,13 @@ def put_portal(
 
 ```python
 def put_proxy(
-  value: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationProxy]]
+  value: IResolvable | typing.List[ApiManagementHostnameConfigurationProxy]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.putProxy.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]
 
 ---
 
@@ -8314,13 +8314,13 @@ def put_proxy(
 
 ```python
 def put_scm(
-  value: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationScm]]
+  value: IResolvable | typing.List[ApiManagementHostnameConfigurationScm]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.putScm.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]
 
 ---
 
@@ -8366,11 +8366,11 @@ def reset_scm() -> None
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.portal">portal</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalList">ApiManagementHostnameConfigurationPortalList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.proxy">proxy</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyList">ApiManagementHostnameConfigurationProxyList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.scm">scm</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmList">ApiManagementHostnameConfigurationScmList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.developerPortalInput">developer_portal_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.managementInput">management_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.portalInput">portal_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.proxyInput">proxy_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.scmInput">scm_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.developerPortalInput">developer_portal_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.managementInput">management_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.portalInput">portal_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.proxyInput">proxy_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.scmInput">scm_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfiguration">ApiManagementHostnameConfiguration</a></code> | *No description.* |
 
 ---
@@ -8452,50 +8452,50 @@ scm: ApiManagementHostnameConfigurationScmList
 ##### `developer_portal_input`<sup>Optional</sup> <a name="developer_portal_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.developerPortalInput"></a>
 
 ```python
-developer_portal_input: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationDeveloperPortal]]
+developer_portal_input: IResolvable | typing.List[ApiManagementHostnameConfigurationDeveloperPortal]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationDeveloperPortal">ApiManagementHostnameConfigurationDeveloperPortal</a>]
 
 ---
 
 ##### `management_input`<sup>Optional</sup> <a name="management_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.managementInput"></a>
 
 ```python
-management_input: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationManagement]]
+management_input: IResolvable | typing.List[ApiManagementHostnameConfigurationManagement]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationManagement">ApiManagementHostnameConfigurationManagement</a>]
 
 ---
 
 ##### `portal_input`<sup>Optional</sup> <a name="portal_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.portalInput"></a>
 
 ```python
-portal_input: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationPortal]]
+portal_input: IResolvable | typing.List[ApiManagementHostnameConfigurationPortal]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]
 
 ---
 
 ##### `proxy_input`<sup>Optional</sup> <a name="proxy_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.proxyInput"></a>
 
 ```python
-proxy_input: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationProxy]]
+proxy_input: IResolvable | typing.List[ApiManagementHostnameConfigurationProxy]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]
 
 ---
 
 ##### `scm_input`<sup>Optional</sup> <a name="scm_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationOutputReference.property.scmInput"></a>
 
 ```python
-scm_input: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationScm]]
+scm_input: IResolvable | typing.List[ApiManagementHostnameConfigurationScm]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]
 
 ---
 
@@ -8641,7 +8641,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]</code> | *No description.* |
 
 ---
 
@@ -8672,10 +8672,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationPortal]]
+internal_value: IResolvable | typing.List[ApiManagementHostnameConfigurationPortal]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]
 
 ---
 
@@ -8987,16 +8987,16 @@ def reset_ssl_keyvault_identity_client_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.hostNameInput">host_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.keyVaultCertificateIdInput">key_vault_certificate_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.keyVaultIdInput">key_vault_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.negotiateClientCertificateInput">negotiate_client_certificate_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.negotiateClientCertificateInput">negotiate_client_certificate_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.sslKeyvaultIdentityClientIdInput">ssl_keyvault_identity_client_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.certificate">certificate</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.certificatePassword">certificate_password</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.hostName">host_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.keyVaultCertificateId">key_vault_certificate_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.keyVaultId">key_vault_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.sslKeyvaultIdentityClientId">ssl_keyvault_identity_client_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a></code> | *No description.* |
 
 ---
 
@@ -9127,10 +9127,10 @@ key_vault_id_input: str
 ##### `negotiate_client_certificate_input`<sup>Optional</sup> <a name="negotiate_client_certificate_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.negotiateClientCertificateInput"></a>
 
 ```python
-negotiate_client_certificate_input: typing.Union[bool, IResolvable]
+negotiate_client_certificate_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9197,10 +9197,10 @@ key_vault_id: str
 ##### `negotiate_client_certificate`<sup>Required</sup> <a name="negotiate_client_certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.negotiateClientCertificate"></a>
 
 ```python
-negotiate_client_certificate: typing.Union[bool, IResolvable]
+negotiate_client_certificate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9217,10 +9217,10 @@ ssl_keyvault_identity_client_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortalOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApiManagementHostnameConfigurationPortal]
+internal_value: IResolvable | ApiManagementHostnameConfigurationPortal
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationPortal">ApiManagementHostnameConfigurationPortal</a>
 
 ---
 
@@ -9356,7 +9356,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]</code> | *No description.* |
 
 ---
 
@@ -9387,10 +9387,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationProxy]]
+internal_value: IResolvable | typing.List[ApiManagementHostnameConfigurationProxy]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]
 
 ---
 
@@ -9706,21 +9706,21 @@ def reset_ssl_keyvault_identity_client_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.thumbprint">thumbprint</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.certificateInput">certificate_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.certificatePasswordInput">certificate_password_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.defaultSslBindingInput">default_ssl_binding_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.defaultSslBindingInput">default_ssl_binding_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.hostNameInput">host_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.keyVaultCertificateIdInput">key_vault_certificate_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.keyVaultIdInput">key_vault_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.negotiateClientCertificateInput">negotiate_client_certificate_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.negotiateClientCertificateInput">negotiate_client_certificate_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.sslKeyvaultIdentityClientIdInput">ssl_keyvault_identity_client_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.certificate">certificate</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.certificatePassword">certificate_password</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.defaultSslBinding">default_ssl_binding</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.defaultSslBinding">default_ssl_binding</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.hostName">host_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.keyVaultCertificateId">key_vault_certificate_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.keyVaultId">key_vault_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.sslKeyvaultIdentityClientId">ssl_keyvault_identity_client_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a></code> | *No description.* |
 
 ---
 
@@ -9821,10 +9821,10 @@ certificate_password_input: str
 ##### `default_ssl_binding_input`<sup>Optional</sup> <a name="default_ssl_binding_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.defaultSslBindingInput"></a>
 
 ```python
-default_ssl_binding_input: typing.Union[bool, IResolvable]
+default_ssl_binding_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9861,10 +9861,10 @@ key_vault_id_input: str
 ##### `negotiate_client_certificate_input`<sup>Optional</sup> <a name="negotiate_client_certificate_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.negotiateClientCertificateInput"></a>
 
 ```python
-negotiate_client_certificate_input: typing.Union[bool, IResolvable]
+negotiate_client_certificate_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9901,10 +9901,10 @@ certificate_password: str
 ##### `default_ssl_binding`<sup>Required</sup> <a name="default_ssl_binding" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.defaultSslBinding"></a>
 
 ```python
-default_ssl_binding: typing.Union[bool, IResolvable]
+default_ssl_binding: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9941,10 +9941,10 @@ key_vault_id: str
 ##### `negotiate_client_certificate`<sup>Required</sup> <a name="negotiate_client_certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.negotiateClientCertificate"></a>
 
 ```python
-negotiate_client_certificate: typing.Union[bool, IResolvable]
+negotiate_client_certificate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9961,10 +9961,10 @@ ssl_keyvault_identity_client_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxyOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApiManagementHostnameConfigurationProxy]
+internal_value: IResolvable | ApiManagementHostnameConfigurationProxy
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationProxy">ApiManagementHostnameConfigurationProxy</a>
 
 ---
 
@@ -10100,7 +10100,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]</code> | *No description.* |
 
 ---
 
@@ -10131,10 +10131,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApiManagementHostnameConfigurationScm]]
+internal_value: IResolvable | typing.List[ApiManagementHostnameConfigurationScm]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]
 
 ---
 
@@ -10446,16 +10446,16 @@ def reset_ssl_keyvault_identity_client_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.hostNameInput">host_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.keyVaultCertificateIdInput">key_vault_certificate_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.keyVaultIdInput">key_vault_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.negotiateClientCertificateInput">negotiate_client_certificate_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.negotiateClientCertificateInput">negotiate_client_certificate_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.sslKeyvaultIdentityClientIdInput">ssl_keyvault_identity_client_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.certificate">certificate</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.certificatePassword">certificate_password</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.hostName">host_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.keyVaultCertificateId">key_vault_certificate_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.keyVaultId">key_vault_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.negotiateClientCertificate">negotiate_client_certificate</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.sslKeyvaultIdentityClientId">ssl_keyvault_identity_client_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a></code> | *No description.* |
 
 ---
 
@@ -10586,10 +10586,10 @@ key_vault_id_input: str
 ##### `negotiate_client_certificate_input`<sup>Optional</sup> <a name="negotiate_client_certificate_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.negotiateClientCertificateInput"></a>
 
 ```python
-negotiate_client_certificate_input: typing.Union[bool, IResolvable]
+negotiate_client_certificate_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10656,10 +10656,10 @@ key_vault_id: str
 ##### `negotiate_client_certificate`<sup>Required</sup> <a name="negotiate_client_certificate" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.negotiateClientCertificate"></a>
 
 ```python
-negotiate_client_certificate: typing.Union[bool, IResolvable]
+negotiate_client_certificate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -10676,10 +10676,10 @@ ssl_keyvault_identity_client_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScmOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApiManagementHostnameConfigurationScm]
+internal_value: IResolvable | ApiManagementHostnameConfigurationScm
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementHostnameConfigurationScm">ApiManagementHostnameConfigurationScm</a>
 
 ---
 
@@ -11280,10 +11280,10 @@ def reset_http2_enabled() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.enableHttp2Input">enable_http2_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.http2EnabledInput">http2_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.enableHttp2">enable_http2</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.http2Enabled">http2_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.enableHttp2Input">enable_http2_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.http2EnabledInput">http2_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.enableHttp2">enable_http2</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.http2Enabled">http2_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementProtocols">ApiManagementProtocols</a></code> | *No description.* |
 
 ---
@@ -11315,40 +11315,40 @@ fqn: str
 ##### `enable_http2_input`<sup>Optional</sup> <a name="enable_http2_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.enableHttp2Input"></a>
 
 ```python
-enable_http2_input: typing.Union[bool, IResolvable]
+enable_http2_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `http2_enabled_input`<sup>Optional</sup> <a name="http2_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.http2EnabledInput"></a>
 
 ```python
-http2_enabled_input: typing.Union[bool, IResolvable]
+http2_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_http2`<sup>Required</sup> <a name="enable_http2" id="@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.enableHttp2"></a>
 
 ```python
-enable_http2: typing.Union[bool, IResolvable]
+enable_http2: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `http2_enabled`<sup>Required</sup> <a name="http2_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementProtocolsOutputReference.property.http2Enabled"></a>
 
 ```python
-http2_enabled: typing.Union[bool, IResolvable]
+http2_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -11759,52 +11759,52 @@ def reset_triple_des_ciphers_enabled() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendSsl30EnabledInput">backend_ssl30_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls10EnabledInput">backend_tls10_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls11EnabledInput">backend_tls11_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendSsl30Input">enable_backend_ssl30_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls10Input">enable_backend_tls10_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls11Input">enable_backend_tls11_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendSsl30Input">enable_frontend_ssl30_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls10Input">enable_frontend_tls10_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls11Input">enable_frontend_tls11_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendSsl30EnabledInput">frontend_ssl30_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls10EnabledInput">frontend_tls10_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls11EnabledInput">frontend_tls11_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabledInput">tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabledInput">tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes128CbcShaCiphersEnabledInput">tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes256CbcShaCiphersEnabledInput">tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcSha256CiphersEnabledInput">tls_rsa_with_aes128_cbc_sha256_ciphers_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcShaCiphersEnabledInput">tls_rsa_with_aes128_cbc_sha_ciphers_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128GcmSha256CiphersEnabledInput">tls_rsa_with_aes128_gcm_sha256_ciphers_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcSha256CiphersEnabledInput">tls_rsa_with_aes256_cbc_sha256_ciphers_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcShaCiphersEnabledInput">tls_rsa_with_aes256_cbc_sha_ciphers_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256GcmSha384CiphersEnabledInput">tls_rsa_with_aes256_gcm_sha384_ciphers_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tripleDesCiphersEnabledInput">triple_des_ciphers_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendSsl30Enabled">backend_ssl30_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls10Enabled">backend_tls10_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls11Enabled">backend_tls11_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendSsl30">enable_backend_ssl30</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls10">enable_backend_tls10</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls11">enable_backend_tls11</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendSsl30">enable_frontend_ssl30</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls10">enable_frontend_tls10</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls11">enable_frontend_tls11</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendSsl30Enabled">frontend_ssl30_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls10Enabled">frontend_tls10_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls11Enabled">frontend_tls11_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled">tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled">tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes128CbcShaCiphersEnabled">tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes256CbcShaCiphersEnabled">tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcSha256CiphersEnabled">tls_rsa_with_aes128_cbc_sha256_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcShaCiphersEnabled">tls_rsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128GcmSha256CiphersEnabled">tls_rsa_with_aes128_gcm_sha256_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcSha256CiphersEnabled">tls_rsa_with_aes256_cbc_sha256_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcShaCiphersEnabled">tls_rsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256GcmSha384CiphersEnabled">tls_rsa_with_aes256_gcm_sha384_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tripleDesCiphersEnabled">triple_des_ciphers_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendSsl30EnabledInput">backend_ssl30_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls10EnabledInput">backend_tls10_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls11EnabledInput">backend_tls11_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendSsl30Input">enable_backend_ssl30_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls10Input">enable_backend_tls10_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls11Input">enable_backend_tls11_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendSsl30Input">enable_frontend_ssl30_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls10Input">enable_frontend_tls10_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls11Input">enable_frontend_tls11_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendSsl30EnabledInput">frontend_ssl30_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls10EnabledInput">frontend_tls10_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls11EnabledInput">frontend_tls11_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabledInput">tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabledInput">tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes128CbcShaCiphersEnabledInput">tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes256CbcShaCiphersEnabledInput">tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcSha256CiphersEnabledInput">tls_rsa_with_aes128_cbc_sha256_ciphers_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcShaCiphersEnabledInput">tls_rsa_with_aes128_cbc_sha_ciphers_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128GcmSha256CiphersEnabledInput">tls_rsa_with_aes128_gcm_sha256_ciphers_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcSha256CiphersEnabledInput">tls_rsa_with_aes256_cbc_sha256_ciphers_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcShaCiphersEnabledInput">tls_rsa_with_aes256_cbc_sha_ciphers_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256GcmSha384CiphersEnabledInput">tls_rsa_with_aes256_gcm_sha384_ciphers_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tripleDesCiphersEnabledInput">triple_des_ciphers_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendSsl30Enabled">backend_ssl30_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls10Enabled">backend_tls10_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls11Enabled">backend_tls11_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendSsl30">enable_backend_ssl30</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls10">enable_backend_tls10</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls11">enable_backend_tls11</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendSsl30">enable_frontend_ssl30</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls10">enable_frontend_tls10</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls11">enable_frontend_tls11</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendSsl30Enabled">frontend_ssl30_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls10Enabled">frontend_tls10_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls11Enabled">frontend_tls11_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled">tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled">tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes128CbcShaCiphersEnabled">tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes256CbcShaCiphersEnabled">tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcSha256CiphersEnabled">tls_rsa_with_aes128_cbc_sha256_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcShaCiphersEnabled">tls_rsa_with_aes128_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128GcmSha256CiphersEnabled">tls_rsa_with_aes128_gcm_sha256_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcSha256CiphersEnabled">tls_rsa_with_aes256_cbc_sha256_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcShaCiphersEnabled">tls_rsa_with_aes256_cbc_sha_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256GcmSha384CiphersEnabled">tls_rsa_with_aes256_gcm_sha384_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tripleDesCiphersEnabled">triple_des_ciphers_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSecurity">ApiManagementSecurity</a></code> | *No description.* |
 
 ---
@@ -11836,460 +11836,460 @@ fqn: str
 ##### `backend_ssl30_enabled_input`<sup>Optional</sup> <a name="backend_ssl30_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendSsl30EnabledInput"></a>
 
 ```python
-backend_ssl30_enabled_input: typing.Union[bool, IResolvable]
+backend_ssl30_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `backend_tls10_enabled_input`<sup>Optional</sup> <a name="backend_tls10_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls10EnabledInput"></a>
 
 ```python
-backend_tls10_enabled_input: typing.Union[bool, IResolvable]
+backend_tls10_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `backend_tls11_enabled_input`<sup>Optional</sup> <a name="backend_tls11_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls11EnabledInput"></a>
 
 ```python
-backend_tls11_enabled_input: typing.Union[bool, IResolvable]
+backend_tls11_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_backend_ssl30_input`<sup>Optional</sup> <a name="enable_backend_ssl30_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendSsl30Input"></a>
 
 ```python
-enable_backend_ssl30_input: typing.Union[bool, IResolvable]
+enable_backend_ssl30_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_backend_tls10_input`<sup>Optional</sup> <a name="enable_backend_tls10_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls10Input"></a>
 
 ```python
-enable_backend_tls10_input: typing.Union[bool, IResolvable]
+enable_backend_tls10_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_backend_tls11_input`<sup>Optional</sup> <a name="enable_backend_tls11_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls11Input"></a>
 
 ```python
-enable_backend_tls11_input: typing.Union[bool, IResolvable]
+enable_backend_tls11_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_frontend_ssl30_input`<sup>Optional</sup> <a name="enable_frontend_ssl30_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendSsl30Input"></a>
 
 ```python
-enable_frontend_ssl30_input: typing.Union[bool, IResolvable]
+enable_frontend_ssl30_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_frontend_tls10_input`<sup>Optional</sup> <a name="enable_frontend_tls10_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls10Input"></a>
 
 ```python
-enable_frontend_tls10_input: typing.Union[bool, IResolvable]
+enable_frontend_tls10_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_frontend_tls11_input`<sup>Optional</sup> <a name="enable_frontend_tls11_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls11Input"></a>
 
 ```python
-enable_frontend_tls11_input: typing.Union[bool, IResolvable]
+enable_frontend_tls11_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `frontend_ssl30_enabled_input`<sup>Optional</sup> <a name="frontend_ssl30_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendSsl30EnabledInput"></a>
 
 ```python
-frontend_ssl30_enabled_input: typing.Union[bool, IResolvable]
+frontend_ssl30_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `frontend_tls10_enabled_input`<sup>Optional</sup> <a name="frontend_tls10_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls10EnabledInput"></a>
 
 ```python
-frontend_tls10_enabled_input: typing.Union[bool, IResolvable]
+frontend_tls10_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `frontend_tls11_enabled_input`<sup>Optional</sup> <a name="frontend_tls11_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls11EnabledInput"></a>
 
 ```python
-frontend_tls11_enabled_input: typing.Union[bool, IResolvable]
+frontend_tls11_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled_input`<sup>Optional</sup> <a name="tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabledInput"></a>
 
 ```python
-tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled_input: typing.Union[bool, IResolvable]
+tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled_input`<sup>Optional</sup> <a name="tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabledInput"></a>
 
 ```python
-tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled_input: typing.Union[bool, IResolvable]
+tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled_input`<sup>Optional</sup> <a name="tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes128CbcShaCiphersEnabledInput"></a>
 
 ```python
-tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled_input: typing.Union[bool, IResolvable]
+tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled_input`<sup>Optional</sup> <a name="tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes256CbcShaCiphersEnabledInput"></a>
 
 ```python
-tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled_input: typing.Union[bool, IResolvable]
+tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes128_cbc_sha256_ciphers_enabled_input`<sup>Optional</sup> <a name="tls_rsa_with_aes128_cbc_sha256_ciphers_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcSha256CiphersEnabledInput"></a>
 
 ```python
-tls_rsa_with_aes128_cbc_sha256_ciphers_enabled_input: typing.Union[bool, IResolvable]
+tls_rsa_with_aes128_cbc_sha256_ciphers_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes128_cbc_sha_ciphers_enabled_input`<sup>Optional</sup> <a name="tls_rsa_with_aes128_cbc_sha_ciphers_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcShaCiphersEnabledInput"></a>
 
 ```python
-tls_rsa_with_aes128_cbc_sha_ciphers_enabled_input: typing.Union[bool, IResolvable]
+tls_rsa_with_aes128_cbc_sha_ciphers_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes128_gcm_sha256_ciphers_enabled_input`<sup>Optional</sup> <a name="tls_rsa_with_aes128_gcm_sha256_ciphers_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128GcmSha256CiphersEnabledInput"></a>
 
 ```python
-tls_rsa_with_aes128_gcm_sha256_ciphers_enabled_input: typing.Union[bool, IResolvable]
+tls_rsa_with_aes128_gcm_sha256_ciphers_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes256_cbc_sha256_ciphers_enabled_input`<sup>Optional</sup> <a name="tls_rsa_with_aes256_cbc_sha256_ciphers_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcSha256CiphersEnabledInput"></a>
 
 ```python
-tls_rsa_with_aes256_cbc_sha256_ciphers_enabled_input: typing.Union[bool, IResolvable]
+tls_rsa_with_aes256_cbc_sha256_ciphers_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes256_cbc_sha_ciphers_enabled_input`<sup>Optional</sup> <a name="tls_rsa_with_aes256_cbc_sha_ciphers_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcShaCiphersEnabledInput"></a>
 
 ```python
-tls_rsa_with_aes256_cbc_sha_ciphers_enabled_input: typing.Union[bool, IResolvable]
+tls_rsa_with_aes256_cbc_sha_ciphers_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes256_gcm_sha384_ciphers_enabled_input`<sup>Optional</sup> <a name="tls_rsa_with_aes256_gcm_sha384_ciphers_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256GcmSha384CiphersEnabledInput"></a>
 
 ```python
-tls_rsa_with_aes256_gcm_sha384_ciphers_enabled_input: typing.Union[bool, IResolvable]
+tls_rsa_with_aes256_gcm_sha384_ciphers_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `triple_des_ciphers_enabled_input`<sup>Optional</sup> <a name="triple_des_ciphers_enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tripleDesCiphersEnabledInput"></a>
 
 ```python
-triple_des_ciphers_enabled_input: typing.Union[bool, IResolvable]
+triple_des_ciphers_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `backend_ssl30_enabled`<sup>Required</sup> <a name="backend_ssl30_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendSsl30Enabled"></a>
 
 ```python
-backend_ssl30_enabled: typing.Union[bool, IResolvable]
+backend_ssl30_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `backend_tls10_enabled`<sup>Required</sup> <a name="backend_tls10_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls10Enabled"></a>
 
 ```python
-backend_tls10_enabled: typing.Union[bool, IResolvable]
+backend_tls10_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `backend_tls11_enabled`<sup>Required</sup> <a name="backend_tls11_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.backendTls11Enabled"></a>
 
 ```python
-backend_tls11_enabled: typing.Union[bool, IResolvable]
+backend_tls11_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_backend_ssl30`<sup>Required</sup> <a name="enable_backend_ssl30" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendSsl30"></a>
 
 ```python
-enable_backend_ssl30: typing.Union[bool, IResolvable]
+enable_backend_ssl30: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_backend_tls10`<sup>Required</sup> <a name="enable_backend_tls10" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls10"></a>
 
 ```python
-enable_backend_tls10: typing.Union[bool, IResolvable]
+enable_backend_tls10: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_backend_tls11`<sup>Required</sup> <a name="enable_backend_tls11" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableBackendTls11"></a>
 
 ```python
-enable_backend_tls11: typing.Union[bool, IResolvable]
+enable_backend_tls11: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_frontend_ssl30`<sup>Required</sup> <a name="enable_frontend_ssl30" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendSsl30"></a>
 
 ```python
-enable_frontend_ssl30: typing.Union[bool, IResolvable]
+enable_frontend_ssl30: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_frontend_tls10`<sup>Required</sup> <a name="enable_frontend_tls10" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls10"></a>
 
 ```python
-enable_frontend_tls10: typing.Union[bool, IResolvable]
+enable_frontend_tls10: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enable_frontend_tls11`<sup>Required</sup> <a name="enable_frontend_tls11" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.enableFrontendTls11"></a>
 
 ```python
-enable_frontend_tls11: typing.Union[bool, IResolvable]
+enable_frontend_tls11: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `frontend_ssl30_enabled`<sup>Required</sup> <a name="frontend_ssl30_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendSsl30Enabled"></a>
 
 ```python
-frontend_ssl30_enabled: typing.Union[bool, IResolvable]
+frontend_ssl30_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `frontend_tls10_enabled`<sup>Required</sup> <a name="frontend_tls10_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls10Enabled"></a>
 
 ```python
-frontend_tls10_enabled: typing.Union[bool, IResolvable]
+frontend_tls10_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `frontend_tls11_enabled`<sup>Required</sup> <a name="frontend_tls11_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.frontendTls11Enabled"></a>
 
 ```python
-frontend_tls11_enabled: typing.Union[bool, IResolvable]
+frontend_tls11_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled`<sup>Required</sup> <a name="tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled"></a>
 
 ```python
-tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled`<sup>Required</sup> <a name="tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheEcdsaWithAes256CbcShaCiphersEnabled"></a>
 
 ```python
-tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled`<sup>Required</sup> <a name="tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes128CbcShaCiphersEnabled"></a>
 
 ```python
-tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled`<sup>Required</sup> <a name="tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsEcdheRsaWithAes256CbcShaCiphersEnabled"></a>
 
 ```python
-tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes128_cbc_sha256_ciphers_enabled`<sup>Required</sup> <a name="tls_rsa_with_aes128_cbc_sha256_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcSha256CiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes128_cbc_sha256_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes128_cbc_sha256_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes128_cbc_sha_ciphers_enabled`<sup>Required</sup> <a name="tls_rsa_with_aes128_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128CbcShaCiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes128_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes128_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes128_gcm_sha256_ciphers_enabled`<sup>Required</sup> <a name="tls_rsa_with_aes128_gcm_sha256_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes128GcmSha256CiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes128_gcm_sha256_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes128_gcm_sha256_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes256_cbc_sha256_ciphers_enabled`<sup>Required</sup> <a name="tls_rsa_with_aes256_cbc_sha256_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcSha256CiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes256_cbc_sha256_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes256_cbc_sha256_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes256_cbc_sha_ciphers_enabled`<sup>Required</sup> <a name="tls_rsa_with_aes256_cbc_sha_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256CbcShaCiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes256_cbc_sha_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes256_cbc_sha_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `tls_rsa_with_aes256_gcm_sha384_ciphers_enabled`<sup>Required</sup> <a name="tls_rsa_with_aes256_gcm_sha384_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tlsRsaWithAes256GcmSha384CiphersEnabled"></a>
 
 ```python
-tls_rsa_with_aes256_gcm_sha384_ciphers_enabled: typing.Union[bool, IResolvable]
+tls_rsa_with_aes256_gcm_sha384_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `triple_des_ciphers_enabled`<sup>Required</sup> <a name="triple_des_ciphers_enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSecurityOutputReference.property.tripleDesCiphersEnabled"></a>
 
 ```python
-triple_des_ciphers_enabled: typing.Union[bool, IResolvable]
+triple_des_ciphers_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12539,8 +12539,8 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignInOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignInOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignInOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignInOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignInOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignInOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignInOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignIn">ApiManagementSignIn</a></code> | *No description.* |
 
 ---
@@ -12572,20 +12572,20 @@ fqn: str
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignInOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignInOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12833,15 +12833,15 @@ Returns a reversible string representation.
 
 ```python
 def put_terms_of_service(
-  consent_required: typing.Union[bool, IResolvable],
-  enabled: typing.Union[bool, IResolvable],
+  consent_required: bool | IResolvable,
+  enabled: bool | IResolvable,
   text: str = None
 ) -> None
 ```
 
 ###### `consent_required`<sup>Required</sup> <a name="consent_required" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.putTermsOfService.parameter.consentRequired"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#consent_required ApiManagement#consent_required}.
 
@@ -12849,7 +12849,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.putTermsOfService.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/api_management#enabled ApiManagement#enabled}.
 
@@ -12871,9 +12871,9 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.property.termsOfService">terms_of_service</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference">ApiManagementSignUpTermsOfServiceOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.property.termsOfServiceInput">terms_of_service_input</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfService">ApiManagementSignUpTermsOfService</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUp">ApiManagementSignUp</a></code> | *No description.* |
 
 ---
@@ -12915,10 +12915,10 @@ terms_of_service: ApiManagementSignUpTermsOfServiceOutputReference
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12935,10 +12935,10 @@ terms_of_service_input: ApiManagementSignUpTermsOfService
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -13195,11 +13195,11 @@ def reset_text() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.consentRequiredInput">consent_required_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.consentRequiredInput">consent_required_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.textInput">text_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.consentRequired">consent_required</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.consentRequired">consent_required</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.text">text</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfService">ApiManagementSignUpTermsOfService</a></code> | *No description.* |
 
@@ -13232,20 +13232,20 @@ fqn: str
 ##### `consent_required_input`<sup>Optional</sup> <a name="consent_required_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.consentRequiredInput"></a>
 
 ```python
-consent_required_input: typing.Union[bool, IResolvable]
+consent_required_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -13262,20 +13262,20 @@ text_input: str
 ##### `consent_required`<sup>Required</sup> <a name="consent_required" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.consentRequired"></a>
 
 ```python
-consent_required: typing.Union[bool, IResolvable]
+consent_required: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementSignUpTermsOfServiceOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -13538,8 +13538,8 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccessOutputReference.property.primaryKey">primary_key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccessOutputReference.property.secondaryKey">secondary_key</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccessOutputReference.property.tenantId">tenant_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccessOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccessOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccessOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccessOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccessOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccess">ApiManagementTenantAccess</a></code> | *No description.* |
 
 ---
@@ -13601,20 +13601,20 @@ tenant_id: str
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccessOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.apiManagement.ApiManagementTenantAccessOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -13900,7 +13900,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeouts">ApiManagementTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeouts">ApiManagementTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -14011,10 +14011,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.apiManagement.ApiManagementTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApiManagementTimeouts]
+internal_value: IResolvable | ApiManagementTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeouts">ApiManagementTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.apiManagement.ApiManagementTimeouts">ApiManagementTimeouts</a>
 
 ---
 

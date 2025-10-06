@@ -12,26 +12,20 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 import com.hashicorp.cdktf.providers.azurerm.eventgrid_partner_namespace.EventgridPartnerNamespace;
 
 EventgridPartnerNamespace.Builder.create(Construct scope, java.lang.String id)
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .location(java.lang.String)
     .name(java.lang.String)
     .partnerRegistrationId(java.lang.String)
     .resourceGroupName(java.lang.String)
 //  .id(java.lang.String)
-//  .inboundIpRule(IResolvable)
-//  .inboundIpRule(java.util.List<EventgridPartnerNamespaceInboundIpRule>)
-//  .localAuthenticationEnabled(java.lang.Boolean)
-//  .localAuthenticationEnabled(IResolvable)
+//  .inboundIpRule(IResolvable|java.util.List<EventgridPartnerNamespaceInboundIpRule>)
+//  .localAuthenticationEnabled(java.lang.Boolean|IResolvable)
 //  .partnerTopicRoutingMode(java.lang.String)
 //  .publicNetworkAccess(java.lang.String)
 //  .tags(java.util.Map<java.lang.String, java.lang.String>)
@@ -43,20 +37,20 @@ EventgridPartnerNamespace.Builder.create(Construct scope, java.lang.String id)
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.scope">scope</a></code> | <code>software.constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#location EventgridPartnerNamespace#location}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#name EventgridPartnerNamespace#name}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.partnerRegistrationId">partnerRegistrationId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#partner_registration_id EventgridPartnerNamespace#partner_registration_id}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#resource_group_name EventgridPartnerNamespace#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#id EventgridPartnerNamespace#id}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.inboundIpRule">inboundIpRule</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>></code> | inbound_ip_rule block. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.localAuthenticationEnabled">localAuthenticationEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#local_authentication_enabled EventgridPartnerNamespace#local_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.inboundIpRule">inboundIpRule</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>></code> | inbound_ip_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.localAuthenticationEnabled">localAuthenticationEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#local_authentication_enabled EventgridPartnerNamespace#local_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.partnerTopicRoutingMode">partnerTopicRoutingMode</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#partner_topic_routing_mode EventgridPartnerNamespace#partner_topic_routing_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.publicNetworkAccess">publicNetworkAccess</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#public_network_access EventgridPartnerNamespace#public_network_access}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#tags EventgridPartnerNamespace#tags}. |
@@ -84,13 +78,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.connection"></a>
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.count"></a>
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -120,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.provisioners"></a>
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -169,7 +163,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 ##### `inboundIpRule`<sup>Optional</sup> <a name="inboundIpRule" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.inboundIpRule"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>>
 
 inbound_ip_rule block.
 
@@ -179,7 +173,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `localAuthenticationEnabled`<sup>Optional</sup> <a name="localAuthenticationEnabled" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.Initializer.parameter.localAuthenticationEnabled"></a>
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#local_authentication_enabled EventgridPartnerNamespace#local_authentication_enabled}.
 
@@ -455,7 +449,7 @@ public java.util.Map<java.lang.String, java.lang.String> getStringMapAttribute(j
 ##### `hasResourceMove` <a name="hasResourceMove" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.hasResourceMove"></a>
 
 ```java
-public TerraformResourceMoveByTarget OR TerraformResourceMoveById hasResourceMove()
+public TerraformResourceMoveByTarget|TerraformResourceMoveById hasResourceMove()
 ```
 
 ##### `importFrom` <a name="importFrom" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.importFrom"></a>
@@ -511,7 +505,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 
 ```java
 public void moveTo(java.lang.String moveTarget)
-public void moveTo(java.lang.String moveTarget, java.lang.String OR java.lang.Number index)
+public void moveTo(java.lang.String moveTarget, java.lang.String|java.lang.Number index)
 ```
 
 Moves this resource to the target resource given by moveTarget.
@@ -526,7 +520,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.moveTo.parameter.index"></a>
 
-- *Type:* java.lang.String OR java.lang.Number
+- *Type:* java.lang.String|java.lang.Number
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -551,12 +545,12 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 ##### `putInboundIpRule` <a name="putInboundIpRule" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.putInboundIpRule"></a>
 
 ```java
-public void putInboundIpRule(IResolvable OR java.util.List<EventgridPartnerNamespaceInboundIpRule> value)
+public void putInboundIpRule(IResolvable|java.util.List<EventgridPartnerNamespaceInboundIpRule> value)
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.putInboundIpRule.parameter.value"></a>
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>>
 
 ---
 
@@ -740,19 +734,19 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>java.util.Map<java.lang.String, java.lang.Object></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.terraformResourceType">terraformResourceType</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>com.hashicorp.cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.dependsOn">dependsOn</a></code> | <code>java.util.List<java.lang.String></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.endpoint">endpoint</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.inboundIpRule">inboundIpRule</a></code> | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleList">EventgridPartnerNamespaceInboundIpRuleList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeoutsOutputReference">EventgridPartnerNamespaceTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.idInput">idInput</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.inboundIpRuleInput">inboundIpRuleInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.localAuthenticationEnabledInput">localAuthenticationEnabledInput</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.inboundIpRuleInput">inboundIpRuleInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.localAuthenticationEnabledInput">localAuthenticationEnabledInput</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.locationInput">locationInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.nameInput">nameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.partnerRegistrationIdInput">partnerRegistrationIdInput</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -760,9 +754,9 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.publicNetworkAccessInput">publicNetworkAccessInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.resourceGroupNameInput">resourceGroupNameInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.tagsInput">tagsInput</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeouts">EventgridPartnerNamespaceTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.timeoutsInput">timeoutsInput</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeouts">EventgridPartnerNamespaceTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.id">id</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.localAuthenticationEnabled">localAuthenticationEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.localAuthenticationEnabled">localAuthenticationEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.location">location</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.name">name</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.partnerRegistrationId">partnerRegistrationId</a></code> | <code>java.lang.String</code> | *No description.* |
@@ -848,20 +842,20 @@ public TerraformProviderGeneratorMetadata getTerraformGeneratorMetadata();
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -908,10 +902,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -958,20 +952,20 @@ public java.lang.String getIdInput();
 ##### `inboundIpRuleInput`<sup>Optional</sup> <a name="inboundIpRuleInput" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.inboundIpRuleInput"></a>
 
 ```java
-public java.lang.Object getInboundIpRuleInput();
+public IResolvable|java.util.List<EventgridPartnerNamespaceInboundIpRule> getInboundIpRuleInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>>
 
 ---
 
 ##### `localAuthenticationEnabledInput`<sup>Optional</sup> <a name="localAuthenticationEnabledInput" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.localAuthenticationEnabledInput"></a>
 
 ```java
-public java.lang.Object getLocalAuthenticationEnabledInput();
+public java.lang.Boolean|IResolvable getLocalAuthenticationEnabledInput();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1048,10 +1042,10 @@ public java.util.Map<java.lang.String, java.lang.String> getTagsInput();
 ##### `timeoutsInput`<sup>Optional</sup> <a name="timeoutsInput" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.timeoutsInput"></a>
 
 ```java
-public java.lang.Object getTimeoutsInput();
+public IResolvable|EventgridPartnerNamespaceTimeouts getTimeoutsInput();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeouts">EventgridPartnerNamespaceTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeouts">EventgridPartnerNamespaceTimeouts</a>
 
 ---
 
@@ -1068,10 +1062,10 @@ public java.lang.String getId();
 ##### `localAuthenticationEnabled`<sup>Required</sup> <a name="localAuthenticationEnabled" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespace.property.localAuthenticationEnabled"></a>
 
 ```java
-public java.lang.Object getLocalAuthenticationEnabled();
+public java.lang.Boolean|IResolvable getLocalAuthenticationEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 ---
 
@@ -1173,26 +1167,20 @@ public java.lang.String getTfResourceType();
 import com.hashicorp.cdktf.providers.azurerm.eventgrid_partner_namespace.EventgridPartnerNamespaceConfig;
 
 EventgridPartnerNamespaceConfig.builder()
-//  .connection(SSHProvisionerConnection)
-//  .connection(WinrmProvisionerConnection)
-//  .count(java.lang.Number)
-//  .count(TerraformCount)
+//  .connection(SSHProvisionerConnection|WinrmProvisionerConnection)
+//  .count(java.lang.Number|TerraformCount)
 //  .dependsOn(java.util.List<ITerraformDependable>)
 //  .forEach(ITerraformIterator)
 //  .lifecycle(TerraformResourceLifecycle)
 //  .provider(TerraformProvider)
-//  .provisioners(java.util.List<FileProvisioner)
-//  .provisioners(LocalExecProvisioner)
-//  .provisioners(RemoteExecProvisioner>)
+//  .provisioners(java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner>)
     .location(java.lang.String)
     .name(java.lang.String)
     .partnerRegistrationId(java.lang.String)
     .resourceGroupName(java.lang.String)
 //  .id(java.lang.String)
-//  .inboundIpRule(IResolvable)
-//  .inboundIpRule(java.util.List<EventgridPartnerNamespaceInboundIpRule>)
-//  .localAuthenticationEnabled(java.lang.Boolean)
-//  .localAuthenticationEnabled(IResolvable)
+//  .inboundIpRule(IResolvable|java.util.List<EventgridPartnerNamespaceInboundIpRule>)
+//  .localAuthenticationEnabled(java.lang.Boolean|IResolvable)
 //  .partnerTopicRoutingMode(java.lang.String)
 //  .publicNetworkAccess(java.lang.String)
 //  .tags(java.util.Map<java.lang.String, java.lang.String>)
@@ -1204,20 +1192,20 @@ EventgridPartnerNamespaceConfig.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.count">count</a></code> | <code>java.lang.Number OR com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.connection">connection</a></code> | <code>com.hashicorp.cdktf.SSHProvisionerConnection\|com.hashicorp.cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.count">count</a></code> | <code>java.lang.Number\|com.hashicorp.cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.dependsOn">dependsOn</a></code> | <code>java.util.List<com.hashicorp.cdktf.ITerraformDependable></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.forEach">forEach</a></code> | <code>com.hashicorp.cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#location EventgridPartnerNamespace#location}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#name EventgridPartnerNamespace#name}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.partnerRegistrationId">partnerRegistrationId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#partner_registration_id EventgridPartnerNamespace#partner_registration_id}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#resource_group_name EventgridPartnerNamespace#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#id EventgridPartnerNamespace#id}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.inboundIpRule">inboundIpRule</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>></code> | inbound_ip_rule block. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.localAuthenticationEnabled">localAuthenticationEnabled</a></code> | <code>java.lang.Boolean OR com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#local_authentication_enabled EventgridPartnerNamespace#local_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.inboundIpRule">inboundIpRule</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>></code> | inbound_ip_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.localAuthenticationEnabled">localAuthenticationEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#local_authentication_enabled EventgridPartnerNamespace#local_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.partnerTopicRoutingMode">partnerTopicRoutingMode</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#partner_topic_routing_mode EventgridPartnerNamespace#partner_topic_routing_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.publicNetworkAccess">publicNetworkAccess</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#public_network_access EventgridPartnerNamespace#public_network_access}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#tags EventgridPartnerNamespace#tags}. |
@@ -1228,20 +1216,20 @@ EventgridPartnerNamespaceConfig.builder()
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.connection"></a>
 
 ```java
-public java.lang.Object getConnection();
+public SSHProvisionerConnection|WinrmProvisionerConnection getConnection();
 ```
 
-- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection OR com.hashicorp.cdktf.WinrmProvisionerConnection
+- *Type:* com.hashicorp.cdktf.SSHProvisionerConnection|com.hashicorp.cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.count"></a>
 
 ```java
-public java.lang.Object getCount();
+public java.lang.Number|TerraformCount getCount();
 ```
 
-- *Type:* java.lang.Number OR com.hashicorp.cdktf.TerraformCount
+- *Type:* java.lang.Number|com.hashicorp.cdktf.TerraformCount
 
 ---
 
@@ -1288,10 +1276,10 @@ public TerraformProvider getProvider();
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.provisioners"></a>
 
 ```java
-public java.lang.Object getProvisioners();
+public java.util.List<FileProvisioner|LocalExecProvisioner|RemoteExecProvisioner> getProvisioners();
 ```
 
-- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner OR com.hashicorp.cdktf.LocalExecProvisioner OR com.hashicorp.cdktf.RemoteExecProvisioner>
+- *Type:* java.util.List<com.hashicorp.cdktf.FileProvisioner|com.hashicorp.cdktf.LocalExecProvisioner|com.hashicorp.cdktf.RemoteExecProvisioner>
 
 ---
 
@@ -1361,10 +1349,10 @@ If you experience problems setting this value it might not be settable. Please t
 ##### `inboundIpRule`<sup>Optional</sup> <a name="inboundIpRule" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.inboundIpRule"></a>
 
 ```java
-public java.lang.Object getInboundIpRule();
+public IResolvable|java.util.List<EventgridPartnerNamespaceInboundIpRule> getInboundIpRule();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>>
 
 inbound_ip_rule block.
 
@@ -1375,10 +1363,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `localAuthenticationEnabled`<sup>Optional</sup> <a name="localAuthenticationEnabled" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceConfig.property.localAuthenticationEnabled"></a>
 
 ```java
-public java.lang.Object getLocalAuthenticationEnabled();
+public java.lang.Boolean|IResolvable getLocalAuthenticationEnabled();
 ```
 
-- *Type:* java.lang.Boolean OR com.hashicorp.cdktf.IResolvable
+- *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_namespace#local_authentication_enabled EventgridPartnerNamespace#local_authentication_enabled}.
 
@@ -1677,7 +1665,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleList.property.creationStack">creationStack</a></code> | <code>java.util.List<java.lang.String></code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleList.property.fqn">fqn</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleList.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>></code> | *No description.* |
 
 ---
 
@@ -1708,10 +1696,10 @@ public java.lang.String getFqn();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleList.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|java.util.List<EventgridPartnerNamespaceInboundIpRule> getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>>
+- *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>>
 
 ---
 
@@ -1955,7 +1943,7 @@ public void resetAction()
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleOutputReference.property.ipMaskInput">ipMaskInput</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleOutputReference.property.action">action</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleOutputReference.property.ipMask">ipMask</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a></code> | *No description.* |
 
 ---
 
@@ -2026,10 +2014,10 @@ public java.lang.String getIpMask();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRuleOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|EventgridPartnerNamespaceInboundIpRule getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceInboundIpRule">EventgridPartnerNamespaceInboundIpRule</a>
 
 ---
 
@@ -2280,7 +2268,7 @@ public void resetUpdate()
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeoutsOutputReference.property.delete">delete</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeoutsOutputReference.property.read">read</a></code> | <code>java.lang.String</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeoutsOutputReference.property.update">update</a></code> | <code>java.lang.String</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeouts">EventgridPartnerNamespaceTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeoutsOutputReference.property.internalValue">internalValue</a></code> | <code>com.hashicorp.cdktf.IResolvable\|<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeouts">EventgridPartnerNamespaceTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -2391,10 +2379,10 @@ public java.lang.String getUpdate();
 ##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeoutsOutputReference.property.internalValue"></a>
 
 ```java
-public java.lang.Object getInternalValue();
+public IResolvable|EventgridPartnerNamespaceTimeouts getInternalValue();
 ```
 
-- *Type:* com.hashicorp.cdktf.IResolvable OR <a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeouts">EventgridPartnerNamespaceTimeouts</a>
+- *Type:* com.hashicorp.cdktf.IResolvable|<a href="#@cdktf/provider-azurerm.eventgridPartnerNamespace.EventgridPartnerNamespaceTimeouts">EventgridPartnerNamespaceTimeouts</a>
 
 ---
 

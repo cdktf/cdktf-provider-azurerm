@@ -14,46 +14,46 @@ from cdktf_cdktf_provider_azurerm import application_gateway
 applicationGateway.ApplicationGateway(
   scope: Construct,
   id: str,
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
-  backend_address_pool: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendAddressPool]],
-  backend_http_settings: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendHttpSettings]],
-  frontend_ip_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendIpConfiguration]],
-  frontend_port: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendPort]],
-  gateway_ip_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayGatewayIpConfiguration]],
-  http_listener: typing.Union[IResolvable, typing.List[ApplicationGatewayHttpListener]],
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
+  backend_address_pool: IResolvable | typing.List[ApplicationGatewayBackendAddressPool],
+  backend_http_settings: IResolvable | typing.List[ApplicationGatewayBackendHttpSettings],
+  frontend_ip_configuration: IResolvable | typing.List[ApplicationGatewayFrontendIpConfiguration],
+  frontend_port: IResolvable | typing.List[ApplicationGatewayFrontendPort],
+  gateway_ip_configuration: IResolvable | typing.List[ApplicationGatewayGatewayIpConfiguration],
+  http_listener: IResolvable | typing.List[ApplicationGatewayHttpListener],
   location: str,
   name: str,
-  request_routing_rule: typing.Union[IResolvable, typing.List[ApplicationGatewayRequestRoutingRule]],
+  request_routing_rule: IResolvable | typing.List[ApplicationGatewayRequestRoutingRule],
   resource_group_name: str,
   sku: ApplicationGatewaySku,
-  authentication_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewayAuthenticationCertificate]] = None,
+  authentication_certificate: IResolvable | typing.List[ApplicationGatewayAuthenticationCertificate] = None,
   autoscale_configuration: ApplicationGatewayAutoscaleConfiguration = None,
-  custom_error_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayCustomErrorConfiguration]] = None,
-  enable_http2: typing.Union[bool, IResolvable] = None,
-  fips_enabled: typing.Union[bool, IResolvable] = None,
+  custom_error_configuration: IResolvable | typing.List[ApplicationGatewayCustomErrorConfiguration] = None,
+  enable_http2: bool | IResolvable = None,
+  fips_enabled: bool | IResolvable = None,
   firewall_policy_id: str = None,
-  force_firewall_policy_association: typing.Union[bool, IResolvable] = None,
+  force_firewall_policy_association: bool | IResolvable = None,
   global: ApplicationGatewayGlobal = None,
   id: str = None,
   identity: ApplicationGatewayIdentity = None,
-  private_link_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayPrivateLinkConfiguration]] = None,
-  probe: typing.Union[IResolvable, typing.List[ApplicationGatewayProbe]] = None,
-  redirect_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayRedirectConfiguration]] = None,
-  rewrite_rule_set: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSet]] = None,
-  ssl_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewaySslCertificate]] = None,
+  private_link_configuration: IResolvable | typing.List[ApplicationGatewayPrivateLinkConfiguration] = None,
+  probe: IResolvable | typing.List[ApplicationGatewayProbe] = None,
+  redirect_configuration: IResolvable | typing.List[ApplicationGatewayRedirectConfiguration] = None,
+  rewrite_rule_set: IResolvable | typing.List[ApplicationGatewayRewriteRuleSet] = None,
+  ssl_certificate: IResolvable | typing.List[ApplicationGatewaySslCertificate] = None,
   ssl_policy: ApplicationGatewaySslPolicy = None,
-  ssl_profile: typing.Union[IResolvable, typing.List[ApplicationGatewaySslProfile]] = None,
+  ssl_profile: IResolvable | typing.List[ApplicationGatewaySslProfile] = None,
   tags: typing.Mapping[str] = None,
   timeouts: ApplicationGatewayTimeouts = None,
-  trusted_client_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedClientCertificate]] = None,
-  trusted_root_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedRootCertificate]] = None,
-  url_path_map: typing.Union[IResolvable, typing.List[ApplicationGatewayUrlPathMap]] = None,
+  trusted_client_certificate: IResolvable | typing.List[ApplicationGatewayTrustedClientCertificate] = None,
+  trusted_root_certificate: IResolvable | typing.List[ApplicationGatewayTrustedRootCertificate] = None,
+  url_path_map: IResolvable | typing.List[ApplicationGatewayUrlPathMap] = None,
   waf_configuration: ApplicationGatewayWafConfiguration = None,
   zones: typing.List[str] = None
 )
@@ -63,46 +63,46 @@ applicationGateway.ApplicationGateway(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.backendAddressPool">backend_address_pool</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]]</code> | backend_address_pool block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.backendHttpSettings">backend_http_settings</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]]</code> | backend_http_settings block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.frontendIpConfiguration">frontend_ip_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]]</code> | frontend_ip_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.frontendPort">frontend_port</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]]</code> | frontend_port block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.gatewayIpConfiguration">gateway_ip_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]]</code> | gateway_ip_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.httpListener">http_listener</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]]</code> | http_listener block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.backendAddressPool">backend_address_pool</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]</code> | backend_address_pool block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.backendHttpSettings">backend_http_settings</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]</code> | backend_http_settings block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.frontendIpConfiguration">frontend_ip_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]</code> | frontend_ip_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.frontendPort">frontend_port</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]</code> | frontend_port block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.gatewayIpConfiguration">gateway_ip_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]</code> | gateway_ip_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.httpListener">http_listener</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]</code> | http_listener block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#location ApplicationGateway#location}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#name ApplicationGateway#name}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.requestRoutingRule">request_routing_rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]]</code> | request_routing_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.requestRoutingRule">request_routing_rule</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]</code> | request_routing_rule block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#resource_group_name ApplicationGateway#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.sku">sku</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySku">ApplicationGatewaySku</a></code> | sku block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.authenticationCertificate">authentication_certificate</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]]</code> | authentication_certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.authenticationCertificate">authentication_certificate</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]</code> | authentication_certificate block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.autoscaleConfiguration">autoscale_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAutoscaleConfiguration">ApplicationGatewayAutoscaleConfiguration</a></code> | autoscale_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.customErrorConfiguration">custom_error_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]]</code> | custom_error_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.enableHttp2">enable_http2</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enable_http2 ApplicationGateway#enable_http2}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.fipsEnabled">fips_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#fips_enabled ApplicationGateway#fips_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.customErrorConfiguration">custom_error_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]</code> | custom_error_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.enableHttp2">enable_http2</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enable_http2 ApplicationGateway#enable_http2}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.fipsEnabled">fips_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#fips_enabled ApplicationGateway#fips_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.firewallPolicyId">firewall_policy_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#firewall_policy_id ApplicationGateway#firewall_policy_id}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.forceFirewallPolicyAssociation">force_firewall_policy_association</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#force_firewall_policy_association ApplicationGateway#force_firewall_policy_association}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.forceFirewallPolicyAssociation">force_firewall_policy_association</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#force_firewall_policy_association ApplicationGateway#force_firewall_policy_association}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.global">global</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobal">ApplicationGatewayGlobal</a></code> | global block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#id ApplicationGateway#id}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayIdentity">ApplicationGatewayIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.privateLinkConfiguration">private_link_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]]</code> | private_link_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.probe">probe</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]]</code> | probe block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.redirectConfiguration">redirect_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]]</code> | redirect_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.rewriteRuleSet">rewrite_rule_set</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]]</code> | rewrite_rule_set block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.sslCertificate">ssl_certificate</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]]</code> | ssl_certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.privateLinkConfiguration">private_link_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]</code> | private_link_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.probe">probe</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]</code> | probe block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.redirectConfiguration">redirect_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]</code> | redirect_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.rewriteRuleSet">rewrite_rule_set</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]</code> | rewrite_rule_set block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.sslCertificate">ssl_certificate</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]</code> | ssl_certificate block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.sslPolicy">ssl_policy</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslPolicy">ApplicationGatewaySslPolicy</a></code> | ssl_policy block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.sslProfile">ssl_profile</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]]</code> | ssl_profile block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.sslProfile">ssl_profile</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]</code> | ssl_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#tags ApplicationGateway#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.trustedClientCertificate">trusted_client_certificate</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]]</code> | trusted_client_certificate block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.trustedRootCertificate">trusted_root_certificate</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]]</code> | trusted_root_certificate block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.urlPathMap">url_path_map</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]]</code> | url_path_map block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.trustedClientCertificate">trusted_client_certificate</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]</code> | trusted_client_certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.trustedRootCertificate">trusted_root_certificate</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]</code> | trusted_root_certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.urlPathMap">url_path_map</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]</code> | url_path_map block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.wafConfiguration">waf_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration">ApplicationGatewayWafConfiguration</a></code> | waf_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.zones">zones</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#zones ApplicationGateway#zones}. |
 
@@ -128,13 +128,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.connection"></a>
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.count"></a>
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -164,13 +164,13 @@ Must be unique amongst siblings in the same scope
 
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.provisioners"></a>
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
 ##### `backend_address_pool`<sup>Required</sup> <a name="backend_address_pool" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.backendAddressPool"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]
 
 backend_address_pool block.
 
@@ -180,7 +180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `backend_http_settings`<sup>Required</sup> <a name="backend_http_settings" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.backendHttpSettings"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]
 
 backend_http_settings block.
 
@@ -190,7 +190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `frontend_ip_configuration`<sup>Required</sup> <a name="frontend_ip_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.frontendIpConfiguration"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]
 
 frontend_ip_configuration block.
 
@@ -200,7 +200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `frontend_port`<sup>Required</sup> <a name="frontend_port" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.frontendPort"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]
 
 frontend_port block.
 
@@ -210,7 +210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `gateway_ip_configuration`<sup>Required</sup> <a name="gateway_ip_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.gatewayIpConfiguration"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]
 
 gateway_ip_configuration block.
 
@@ -220,7 +220,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `http_listener`<sup>Required</sup> <a name="http_listener" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.httpListener"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]
 
 http_listener block.
 
@@ -246,7 +246,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `request_routing_rule`<sup>Required</sup> <a name="request_routing_rule" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.requestRoutingRule"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]
 
 request_routing_rule block.
 
@@ -274,7 +274,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `authentication_certificate`<sup>Optional</sup> <a name="authentication_certificate" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.authenticationCertificate"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]
 
 authentication_certificate block.
 
@@ -294,7 +294,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `custom_error_configuration`<sup>Optional</sup> <a name="custom_error_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.customErrorConfiguration"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]
 
 custom_error_configuration block.
 
@@ -304,7 +304,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `enable_http2`<sup>Optional</sup> <a name="enable_http2" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.enableHttp2"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enable_http2 ApplicationGateway#enable_http2}.
 
@@ -312,7 +312,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `fips_enabled`<sup>Optional</sup> <a name="fips_enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.fipsEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#fips_enabled ApplicationGateway#fips_enabled}.
 
@@ -328,7 +328,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `force_firewall_policy_association`<sup>Optional</sup> <a name="force_firewall_policy_association" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.forceFirewallPolicyAssociation"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#force_firewall_policy_association ApplicationGateway#force_firewall_policy_association}.
 
@@ -367,7 +367,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `private_link_configuration`<sup>Optional</sup> <a name="private_link_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.privateLinkConfiguration"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]
 
 private_link_configuration block.
 
@@ -377,7 +377,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `probe`<sup>Optional</sup> <a name="probe" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.probe"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]
 
 probe block.
 
@@ -387,7 +387,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `redirect_configuration`<sup>Optional</sup> <a name="redirect_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.redirectConfiguration"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]
 
 redirect_configuration block.
 
@@ -397,7 +397,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `rewrite_rule_set`<sup>Optional</sup> <a name="rewrite_rule_set" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.rewriteRuleSet"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]
 
 rewrite_rule_set block.
 
@@ -407,7 +407,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `ssl_certificate`<sup>Optional</sup> <a name="ssl_certificate" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.sslCertificate"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]
 
 ssl_certificate block.
 
@@ -427,7 +427,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `ssl_profile`<sup>Optional</sup> <a name="ssl_profile" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.sslProfile"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]
 
 ssl_profile block.
 
@@ -455,7 +455,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `trusted_client_certificate`<sup>Optional</sup> <a name="trusted_client_certificate" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.trustedClientCertificate"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]
 
 trusted_client_certificate block.
 
@@ -465,7 +465,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `trusted_root_certificate`<sup>Optional</sup> <a name="trusted_root_certificate" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.trustedRootCertificate"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]
 
 trusted_root_certificate block.
 
@@ -475,7 +475,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ##### `url_path_map`<sup>Optional</sup> <a name="url_path_map" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.Initializer.parameter.urlPathMap"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]
 
 url_path_map block.
 
@@ -802,7 +802,7 @@ def get_string_map_attribute(
 ##### `has_resource_move` <a name="has_resource_move" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.hasResourceMove"></a>
 
 ```python
-def has_resource_move() -> typing.Union[TerraformResourceMoveByTarget, TerraformResourceMoveById]
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
 ```
 
 ##### `import_from` <a name="import_from" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.importFrom"></a>
@@ -865,7 +865,7 @@ Full id of resource being moved from, e.g. "aws_s3_bucket.example".
 ```python
 def move_to(
   move_target: str,
-  index: typing.Union[str, typing.Union[int, float]] = None
+  index: str | typing.Union[int, float] = None
 ) -> None
 ```
 
@@ -881,7 +881,7 @@ The previously set user defined string set by .addMoveTarget() corresponding to 
 
 ###### `index`<sup>Optional</sup> <a name="index" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.moveTo.parameter.index"></a>
 
-- *Type:* typing.Union[str, typing.Union[int, float]]
+- *Type:* str | typing.Union[int, float]
 
 Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
 
@@ -909,13 +909,13 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ```python
 def put_authentication_certificate(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayAuthenticationCertificate]]
+  value: IResolvable | typing.List[ApplicationGatewayAuthenticationCertificate]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putAuthenticationCertificate.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]
 
 ---
 
@@ -948,13 +948,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_backend_address_pool(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendAddressPool]]
+  value: IResolvable | typing.List[ApplicationGatewayBackendAddressPool]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putBackendAddressPool.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]
 
 ---
 
@@ -962,13 +962,13 @@ def put_backend_address_pool(
 
 ```python
 def put_backend_http_settings(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendHttpSettings]]
+  value: IResolvable | typing.List[ApplicationGatewayBackendHttpSettings]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putBackendHttpSettings.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]
 
 ---
 
@@ -976,13 +976,13 @@ def put_backend_http_settings(
 
 ```python
 def put_custom_error_configuration(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayCustomErrorConfiguration]]
+  value: IResolvable | typing.List[ApplicationGatewayCustomErrorConfiguration]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putCustomErrorConfiguration.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]
 
 ---
 
@@ -990,13 +990,13 @@ def put_custom_error_configuration(
 
 ```python
 def put_frontend_ip_configuration(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendIpConfiguration]]
+  value: IResolvable | typing.List[ApplicationGatewayFrontendIpConfiguration]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putFrontendIpConfiguration.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]
 
 ---
 
@@ -1004,13 +1004,13 @@ def put_frontend_ip_configuration(
 
 ```python
 def put_frontend_port(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendPort]]
+  value: IResolvable | typing.List[ApplicationGatewayFrontendPort]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putFrontendPort.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]
 
 ---
 
@@ -1018,13 +1018,13 @@ def put_frontend_port(
 
 ```python
 def put_gateway_ip_configuration(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayGatewayIpConfiguration]]
+  value: IResolvable | typing.List[ApplicationGatewayGatewayIpConfiguration]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putGatewayIpConfiguration.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]
 
 ---
 
@@ -1032,14 +1032,14 @@ def put_gateway_ip_configuration(
 
 ```python
 def put_global(
-  request_buffering_enabled: typing.Union[bool, IResolvable],
-  response_buffering_enabled: typing.Union[bool, IResolvable]
+  request_buffering_enabled: bool | IResolvable,
+  response_buffering_enabled: bool | IResolvable
 ) -> None
 ```
 
 ###### `request_buffering_enabled`<sup>Required</sup> <a name="request_buffering_enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putGlobal.parameter.requestBufferingEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#request_buffering_enabled ApplicationGateway#request_buffering_enabled}.
 
@@ -1047,7 +1047,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `response_buffering_enabled`<sup>Required</sup> <a name="response_buffering_enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putGlobal.parameter.responseBufferingEnabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#response_buffering_enabled ApplicationGateway#response_buffering_enabled}.
 
@@ -1057,13 +1057,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_http_listener(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayHttpListener]]
+  value: IResolvable | typing.List[ApplicationGatewayHttpListener]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putHttpListener.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]
 
 ---
 
@@ -1096,13 +1096,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_private_link_configuration(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayPrivateLinkConfiguration]]
+  value: IResolvable | typing.List[ApplicationGatewayPrivateLinkConfiguration]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putPrivateLinkConfiguration.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]
 
 ---
 
@@ -1110,13 +1110,13 @@ def put_private_link_configuration(
 
 ```python
 def put_probe(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayProbe]]
+  value: IResolvable | typing.List[ApplicationGatewayProbe]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putProbe.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]
 
 ---
 
@@ -1124,13 +1124,13 @@ def put_probe(
 
 ```python
 def put_redirect_configuration(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayRedirectConfiguration]]
+  value: IResolvable | typing.List[ApplicationGatewayRedirectConfiguration]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putRedirectConfiguration.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]
 
 ---
 
@@ -1138,13 +1138,13 @@ def put_redirect_configuration(
 
 ```python
 def put_request_routing_rule(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayRequestRoutingRule]]
+  value: IResolvable | typing.List[ApplicationGatewayRequestRoutingRule]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putRequestRoutingRule.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]
 
 ---
 
@@ -1152,13 +1152,13 @@ def put_request_routing_rule(
 
 ```python
 def put_rewrite_rule_set(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSet]]
+  value: IResolvable | typing.List[ApplicationGatewayRewriteRuleSet]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putRewriteRuleSet.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]
 
 ---
 
@@ -1200,13 +1200,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_ssl_certificate(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewaySslCertificate]]
+  value: IResolvable | typing.List[ApplicationGatewaySslCertificate]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putSslCertificate.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]
 
 ---
 
@@ -1266,13 +1266,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_ssl_profile(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewaySslProfile]]
+  value: IResolvable | typing.List[ApplicationGatewaySslProfile]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putSslProfile.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]
 
 ---
 
@@ -1323,13 +1323,13 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ```python
 def put_trusted_client_certificate(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedClientCertificate]]
+  value: IResolvable | typing.List[ApplicationGatewayTrustedClientCertificate]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putTrustedClientCertificate.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]
 
 ---
 
@@ -1337,13 +1337,13 @@ def put_trusted_client_certificate(
 
 ```python
 def put_trusted_root_certificate(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedRootCertificate]]
+  value: IResolvable | typing.List[ApplicationGatewayTrustedRootCertificate]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putTrustedRootCertificate.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]
 
 ---
 
@@ -1351,13 +1351,13 @@ def put_trusted_root_certificate(
 
 ```python
 def put_url_path_map(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayUrlPathMap]]
+  value: IResolvable | typing.List[ApplicationGatewayUrlPathMap]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putUrlPathMap.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]
 
 ---
 
@@ -1365,21 +1365,21 @@ def put_url_path_map(
 
 ```python
 def put_waf_configuration(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   firewall_mode: str,
   rule_set_version: str,
-  disabled_rule_group: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup]] = None,
-  exclusion: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationExclusion]] = None,
+  disabled_rule_group: IResolvable | typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup] = None,
+  exclusion: IResolvable | typing.List[ApplicationGatewayWafConfigurationExclusion] = None,
   file_upload_limit_mb: typing.Union[int, float] = None,
   max_request_body_size_kb: typing.Union[int, float] = None,
-  request_body_check: typing.Union[bool, IResolvable] = None,
+  request_body_check: bool | IResolvable = None,
   rule_set_type: str = None
 ) -> None
 ```
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putWafConfiguration.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}.
 
@@ -1403,7 +1403,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `disabled_rule_group`<sup>Optional</sup> <a name="disabled_rule_group" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putWafConfiguration.parameter.disabledRuleGroup"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]
 
 disabled_rule_group block.
 
@@ -1413,7 +1413,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `exclusion`<sup>Optional</sup> <a name="exclusion" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putWafConfiguration.parameter.exclusion"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]
 
 exclusion block.
 
@@ -1439,7 +1439,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `request_body_check`<sup>Optional</sup> <a name="request_body_check" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.putWafConfiguration.parameter.requestBodyCheck"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#request_body_check ApplicationGateway#request_body_check}.
 
@@ -1734,13 +1734,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.authenticationCertificate">authentication_certificate</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateList">ApplicationGatewayAuthenticationCertificateList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.autoscaleConfiguration">autoscale_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAutoscaleConfigurationOutputReference">ApplicationGatewayAutoscaleConfigurationOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.backendAddressPool">backend_address_pool</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolList">ApplicationGatewayBackendAddressPoolList</a></code> | *No description.* |
@@ -1767,45 +1767,45 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.trustedRootCertificate">trusted_root_certificate</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateList">ApplicationGatewayTrustedRootCertificateList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.urlPathMap">url_path_map</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapList">ApplicationGatewayUrlPathMapList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.wafConfiguration">waf_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference">ApplicationGatewayWafConfigurationOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.authenticationCertificateInput">authentication_certificate_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.authenticationCertificateInput">authentication_certificate_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.autoscaleConfigurationInput">autoscale_configuration_input</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAutoscaleConfiguration">ApplicationGatewayAutoscaleConfiguration</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.backendAddressPoolInput">backend_address_pool_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.backendHttpSettingsInput">backend_http_settings_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.customErrorConfigurationInput">custom_error_configuration_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.enableHttp2Input">enable_http2_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.fipsEnabledInput">fips_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.backendAddressPoolInput">backend_address_pool_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.backendHttpSettingsInput">backend_http_settings_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.customErrorConfigurationInput">custom_error_configuration_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.enableHttp2Input">enable_http2_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.fipsEnabledInput">fips_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.firewallPolicyIdInput">firewall_policy_id_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.forceFirewallPolicyAssociationInput">force_firewall_policy_association_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.frontendIpConfigurationInput">frontend_ip_configuration_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.frontendPortInput">frontend_port_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.gatewayIpConfigurationInput">gateway_ip_configuration_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.forceFirewallPolicyAssociationInput">force_firewall_policy_association_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.frontendIpConfigurationInput">frontend_ip_configuration_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.frontendPortInput">frontend_port_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.gatewayIpConfigurationInput">gateway_ip_configuration_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.globalInput">global_input</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobal">ApplicationGatewayGlobal</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.httpListenerInput">http_listener_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.httpListenerInput">http_listener_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.identityInput">identity_input</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayIdentity">ApplicationGatewayIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.privateLinkConfigurationInput">private_link_configuration_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.probeInput">probe_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.redirectConfigurationInput">redirect_configuration_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.requestRoutingRuleInput">request_routing_rule_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.privateLinkConfigurationInput">private_link_configuration_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.probeInput">probe_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.redirectConfigurationInput">redirect_configuration_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.requestRoutingRuleInput">request_routing_rule_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.rewriteRuleSetInput">rewrite_rule_set_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.rewriteRuleSetInput">rewrite_rule_set_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.skuInput">sku_input</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySku">ApplicationGatewaySku</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.sslCertificateInput">ssl_certificate_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.sslCertificateInput">ssl_certificate_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.sslPolicyInput">ssl_policy_input</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslPolicy">ApplicationGatewaySslPolicy</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.sslProfileInput">ssl_profile_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.sslProfileInput">ssl_profile_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.timeoutsInput">timeouts_input</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.trustedClientCertificateInput">trusted_client_certificate_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.trustedRootCertificateInput">trusted_root_certificate_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.urlPathMapInput">url_path_map_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.trustedClientCertificateInput">trusted_client_certificate_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.trustedRootCertificateInput">trusted_root_certificate_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.urlPathMapInput">url_path_map_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.wafConfigurationInput">waf_configuration_input</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration">ApplicationGatewayWafConfiguration</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.zonesInput">zones_input</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.enableHttp2">enable_http2</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.fipsEnabled">fips_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.enableHttp2">enable_http2</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.fipsEnabled">fips_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.firewallPolicyId">firewall_policy_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.forceFirewallPolicyAssociation">force_firewall_policy_association</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.forceFirewallPolicyAssociation">force_firewall_policy_association</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.location">location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.name">name</a></code> | <code>str</code> | *No description.* |
@@ -1890,20 +1890,20 @@ terraform_generator_metadata: TerraformProviderGeneratorMetadata
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -1950,10 +1950,10 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
@@ -2220,10 +2220,10 @@ waf_configuration: ApplicationGatewayWafConfigurationOutputReference
 ##### `authentication_certificate_input`<sup>Optional</sup> <a name="authentication_certificate_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.authenticationCertificateInput"></a>
 
 ```python
-authentication_certificate_input: typing.Union[IResolvable, typing.List[ApplicationGatewayAuthenticationCertificate]]
+authentication_certificate_input: IResolvable | typing.List[ApplicationGatewayAuthenticationCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]
 
 ---
 
@@ -2240,50 +2240,50 @@ autoscale_configuration_input: ApplicationGatewayAutoscaleConfiguration
 ##### `backend_address_pool_input`<sup>Optional</sup> <a name="backend_address_pool_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.backendAddressPoolInput"></a>
 
 ```python
-backend_address_pool_input: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendAddressPool]]
+backend_address_pool_input: IResolvable | typing.List[ApplicationGatewayBackendAddressPool]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]
 
 ---
 
 ##### `backend_http_settings_input`<sup>Optional</sup> <a name="backend_http_settings_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.backendHttpSettingsInput"></a>
 
 ```python
-backend_http_settings_input: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendHttpSettings]]
+backend_http_settings_input: IResolvable | typing.List[ApplicationGatewayBackendHttpSettings]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]
 
 ---
 
 ##### `custom_error_configuration_input`<sup>Optional</sup> <a name="custom_error_configuration_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.customErrorConfigurationInput"></a>
 
 ```python
-custom_error_configuration_input: typing.Union[IResolvable, typing.List[ApplicationGatewayCustomErrorConfiguration]]
+custom_error_configuration_input: IResolvable | typing.List[ApplicationGatewayCustomErrorConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]
 
 ---
 
 ##### `enable_http2_input`<sup>Optional</sup> <a name="enable_http2_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.enableHttp2Input"></a>
 
 ```python
-enable_http2_input: typing.Union[bool, IResolvable]
+enable_http2_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `fips_enabled_input`<sup>Optional</sup> <a name="fips_enabled_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.fipsEnabledInput"></a>
 
 ```python
-fips_enabled_input: typing.Union[bool, IResolvable]
+fips_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2300,40 +2300,40 @@ firewall_policy_id_input: str
 ##### `force_firewall_policy_association_input`<sup>Optional</sup> <a name="force_firewall_policy_association_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.forceFirewallPolicyAssociationInput"></a>
 
 ```python
-force_firewall_policy_association_input: typing.Union[bool, IResolvable]
+force_firewall_policy_association_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `frontend_ip_configuration_input`<sup>Optional</sup> <a name="frontend_ip_configuration_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.frontendIpConfigurationInput"></a>
 
 ```python
-frontend_ip_configuration_input: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendIpConfiguration]]
+frontend_ip_configuration_input: IResolvable | typing.List[ApplicationGatewayFrontendIpConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]
 
 ---
 
 ##### `frontend_port_input`<sup>Optional</sup> <a name="frontend_port_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.frontendPortInput"></a>
 
 ```python
-frontend_port_input: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendPort]]
+frontend_port_input: IResolvable | typing.List[ApplicationGatewayFrontendPort]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]
 
 ---
 
 ##### `gateway_ip_configuration_input`<sup>Optional</sup> <a name="gateway_ip_configuration_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.gatewayIpConfigurationInput"></a>
 
 ```python
-gateway_ip_configuration_input: typing.Union[IResolvable, typing.List[ApplicationGatewayGatewayIpConfiguration]]
+gateway_ip_configuration_input: IResolvable | typing.List[ApplicationGatewayGatewayIpConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]
 
 ---
 
@@ -2350,10 +2350,10 @@ global_input: ApplicationGatewayGlobal
 ##### `http_listener_input`<sup>Optional</sup> <a name="http_listener_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.httpListenerInput"></a>
 
 ```python
-http_listener_input: typing.Union[IResolvable, typing.List[ApplicationGatewayHttpListener]]
+http_listener_input: IResolvable | typing.List[ApplicationGatewayHttpListener]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]
 
 ---
 
@@ -2400,40 +2400,40 @@ name_input: str
 ##### `private_link_configuration_input`<sup>Optional</sup> <a name="private_link_configuration_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.privateLinkConfigurationInput"></a>
 
 ```python
-private_link_configuration_input: typing.Union[IResolvable, typing.List[ApplicationGatewayPrivateLinkConfiguration]]
+private_link_configuration_input: IResolvable | typing.List[ApplicationGatewayPrivateLinkConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]
 
 ---
 
 ##### `probe_input`<sup>Optional</sup> <a name="probe_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.probeInput"></a>
 
 ```python
-probe_input: typing.Union[IResolvable, typing.List[ApplicationGatewayProbe]]
+probe_input: IResolvable | typing.List[ApplicationGatewayProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]
 
 ---
 
 ##### `redirect_configuration_input`<sup>Optional</sup> <a name="redirect_configuration_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.redirectConfigurationInput"></a>
 
 ```python
-redirect_configuration_input: typing.Union[IResolvable, typing.List[ApplicationGatewayRedirectConfiguration]]
+redirect_configuration_input: IResolvable | typing.List[ApplicationGatewayRedirectConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]
 
 ---
 
 ##### `request_routing_rule_input`<sup>Optional</sup> <a name="request_routing_rule_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.requestRoutingRuleInput"></a>
 
 ```python
-request_routing_rule_input: typing.Union[IResolvable, typing.List[ApplicationGatewayRequestRoutingRule]]
+request_routing_rule_input: IResolvable | typing.List[ApplicationGatewayRequestRoutingRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]
 
 ---
 
@@ -2450,10 +2450,10 @@ resource_group_name_input: str
 ##### `rewrite_rule_set_input`<sup>Optional</sup> <a name="rewrite_rule_set_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.rewriteRuleSetInput"></a>
 
 ```python
-rewrite_rule_set_input: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSet]]
+rewrite_rule_set_input: IResolvable | typing.List[ApplicationGatewayRewriteRuleSet]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]
 
 ---
 
@@ -2470,10 +2470,10 @@ sku_input: ApplicationGatewaySku
 ##### `ssl_certificate_input`<sup>Optional</sup> <a name="ssl_certificate_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.sslCertificateInput"></a>
 
 ```python
-ssl_certificate_input: typing.Union[IResolvable, typing.List[ApplicationGatewaySslCertificate]]
+ssl_certificate_input: IResolvable | typing.List[ApplicationGatewaySslCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]
 
 ---
 
@@ -2490,10 +2490,10 @@ ssl_policy_input: ApplicationGatewaySslPolicy
 ##### `ssl_profile_input`<sup>Optional</sup> <a name="ssl_profile_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.sslProfileInput"></a>
 
 ```python
-ssl_profile_input: typing.Union[IResolvable, typing.List[ApplicationGatewaySslProfile]]
+ssl_profile_input: IResolvable | typing.List[ApplicationGatewaySslProfile]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]
 
 ---
 
@@ -2510,40 +2510,40 @@ tags_input: typing.Mapping[str]
 ##### `timeouts_input`<sup>Optional</sup> <a name="timeouts_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.timeoutsInput"></a>
 
 ```python
-timeouts_input: typing.Union[IResolvable, ApplicationGatewayTimeouts]
+timeouts_input: IResolvable | ApplicationGatewayTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>
 
 ---
 
 ##### `trusted_client_certificate_input`<sup>Optional</sup> <a name="trusted_client_certificate_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.trustedClientCertificateInput"></a>
 
 ```python
-trusted_client_certificate_input: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedClientCertificate]]
+trusted_client_certificate_input: IResolvable | typing.List[ApplicationGatewayTrustedClientCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]
 
 ---
 
 ##### `trusted_root_certificate_input`<sup>Optional</sup> <a name="trusted_root_certificate_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.trustedRootCertificateInput"></a>
 
 ```python
-trusted_root_certificate_input: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedRootCertificate]]
+trusted_root_certificate_input: IResolvable | typing.List[ApplicationGatewayTrustedRootCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]
 
 ---
 
 ##### `url_path_map_input`<sup>Optional</sup> <a name="url_path_map_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.urlPathMapInput"></a>
 
 ```python
-url_path_map_input: typing.Union[IResolvable, typing.List[ApplicationGatewayUrlPathMap]]
+url_path_map_input: IResolvable | typing.List[ApplicationGatewayUrlPathMap]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]
 
 ---
 
@@ -2570,20 +2570,20 @@ zones_input: typing.List[str]
 ##### `enable_http2`<sup>Required</sup> <a name="enable_http2" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.enableHttp2"></a>
 
 ```python
-enable_http2: typing.Union[bool, IResolvable]
+enable_http2: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `fips_enabled`<sup>Required</sup> <a name="fips_enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.fipsEnabled"></a>
 
 ```python
-fips_enabled: typing.Union[bool, IResolvable]
+fips_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2600,10 +2600,10 @@ firewall_policy_id: str
 ##### `force_firewall_policy_association`<sup>Required</sup> <a name="force_firewall_policy_association" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGateway.property.forceFirewallPolicyAssociation"></a>
 
 ```python
-force_firewall_policy_association: typing.Union[bool, IResolvable]
+force_firewall_policy_association: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -2852,11 +2852,11 @@ applicationGateway.ApplicationGatewayBackendHttpSettings(
   port: typing.Union[int, float],
   protocol: str,
   affinity_cookie_name: str = None,
-  authentication_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendHttpSettingsAuthenticationCertificate]] = None,
+  authentication_certificate: IResolvable | typing.List[ApplicationGatewayBackendHttpSettingsAuthenticationCertificate] = None,
   connection_draining: ApplicationGatewayBackendHttpSettingsConnectionDraining = None,
   host_name: str = None,
   path: str = None,
-  pick_host_name_from_backend_address: typing.Union[bool, IResolvable] = None,
+  pick_host_name_from_backend_address: bool | IResolvable = None,
   probe_name: str = None,
   request_timeout: typing.Union[int, float] = None,
   trusted_root_certificate_names: typing.List[str] = None
@@ -2872,11 +2872,11 @@ applicationGateway.ApplicationGatewayBackendHttpSettings(
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.port">port</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#port ApplicationGateway#port}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.protocol">protocol</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#protocol ApplicationGateway#protocol}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.affinityCookieName">affinity_cookie_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#affinity_cookie_name ApplicationGateway#affinity_cookie_name}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.authenticationCertificate">authentication_certificate</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]]</code> | authentication_certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.authenticationCertificate">authentication_certificate</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]</code> | authentication_certificate block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.connectionDraining">connection_draining</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDraining">ApplicationGatewayBackendHttpSettingsConnectionDraining</a></code> | connection_draining block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.hostName">host_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#host_name ApplicationGateway#host_name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.path">path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#path ApplicationGateway#path}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.pickHostNameFromBackendAddress">pick_host_name_from_backend_address</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#pick_host_name_from_backend_address ApplicationGateway#pick_host_name_from_backend_address}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.pickHostNameFromBackendAddress">pick_host_name_from_backend_address</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#pick_host_name_from_backend_address ApplicationGateway#pick_host_name_from_backend_address}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.probeName">probe_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#probe_name ApplicationGateway#probe_name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.requestTimeout">request_timeout</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#request_timeout ApplicationGateway#request_timeout}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.trustedRootCertificateNames">trusted_root_certificate_names</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#trusted_root_certificate_names ApplicationGateway#trusted_root_certificate_names}. |
@@ -2946,10 +2946,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `authentication_certificate`<sup>Optional</sup> <a name="authentication_certificate" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.authenticationCertificate"></a>
 
 ```python
-authentication_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendHttpSettingsAuthenticationCertificate]]
+authentication_certificate: IResolvable | typing.List[ApplicationGatewayBackendHttpSettingsAuthenticationCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]
 
 authentication_certificate block.
 
@@ -2998,10 +2998,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `pick_host_name_from_backend_address`<sup>Optional</sup> <a name="pick_host_name_from_backend_address" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings.property.pickHostNameFromBackendAddress"></a>
 
 ```python
-pick_host_name_from_backend_address: typing.Union[bool, IResolvable]
+pick_host_name_from_backend_address: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#pick_host_name_from_backend_address ApplicationGateway#pick_host_name_from_backend_address}.
 
@@ -3084,7 +3084,7 @@ from cdktf_cdktf_provider_azurerm import application_gateway
 
 applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDraining(
   drain_timeout_sec: typing.Union[int, float],
-  enabled: typing.Union[bool, IResolvable]
+  enabled: bool | IResolvable
 )
 ```
 
@@ -3093,7 +3093,7 @@ applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDraining(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDraining.property.drainTimeoutSec">drain_timeout_sec</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#drain_timeout_sec ApplicationGateway#drain_timeout_sec}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDraining.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDraining.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}. |
 
 ---
 
@@ -3112,10 +3112,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDraining.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}.
 
@@ -3129,46 +3129,46 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import application_gateway
 
 applicationGateway.ApplicationGatewayConfig(
-  connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection] = None,
-  count: typing.Union[typing.Union[int, float], TerraformCount] = None,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
   depends_on: typing.List[ITerraformDependable] = None,
   for_each: ITerraformIterator = None,
   lifecycle: TerraformResourceLifecycle = None,
   provider: TerraformProvider = None,
-  provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]] = None,
-  backend_address_pool: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendAddressPool]],
-  backend_http_settings: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendHttpSettings]],
-  frontend_ip_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendIpConfiguration]],
-  frontend_port: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendPort]],
-  gateway_ip_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayGatewayIpConfiguration]],
-  http_listener: typing.Union[IResolvable, typing.List[ApplicationGatewayHttpListener]],
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
+  backend_address_pool: IResolvable | typing.List[ApplicationGatewayBackendAddressPool],
+  backend_http_settings: IResolvable | typing.List[ApplicationGatewayBackendHttpSettings],
+  frontend_ip_configuration: IResolvable | typing.List[ApplicationGatewayFrontendIpConfiguration],
+  frontend_port: IResolvable | typing.List[ApplicationGatewayFrontendPort],
+  gateway_ip_configuration: IResolvable | typing.List[ApplicationGatewayGatewayIpConfiguration],
+  http_listener: IResolvable | typing.List[ApplicationGatewayHttpListener],
   location: str,
   name: str,
-  request_routing_rule: typing.Union[IResolvable, typing.List[ApplicationGatewayRequestRoutingRule]],
+  request_routing_rule: IResolvable | typing.List[ApplicationGatewayRequestRoutingRule],
   resource_group_name: str,
   sku: ApplicationGatewaySku,
-  authentication_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewayAuthenticationCertificate]] = None,
+  authentication_certificate: IResolvable | typing.List[ApplicationGatewayAuthenticationCertificate] = None,
   autoscale_configuration: ApplicationGatewayAutoscaleConfiguration = None,
-  custom_error_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayCustomErrorConfiguration]] = None,
-  enable_http2: typing.Union[bool, IResolvable] = None,
-  fips_enabled: typing.Union[bool, IResolvable] = None,
+  custom_error_configuration: IResolvable | typing.List[ApplicationGatewayCustomErrorConfiguration] = None,
+  enable_http2: bool | IResolvable = None,
+  fips_enabled: bool | IResolvable = None,
   firewall_policy_id: str = None,
-  force_firewall_policy_association: typing.Union[bool, IResolvable] = None,
+  force_firewall_policy_association: bool | IResolvable = None,
   global: ApplicationGatewayGlobal = None,
   id: str = None,
   identity: ApplicationGatewayIdentity = None,
-  private_link_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayPrivateLinkConfiguration]] = None,
-  probe: typing.Union[IResolvable, typing.List[ApplicationGatewayProbe]] = None,
-  redirect_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayRedirectConfiguration]] = None,
-  rewrite_rule_set: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSet]] = None,
-  ssl_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewaySslCertificate]] = None,
+  private_link_configuration: IResolvable | typing.List[ApplicationGatewayPrivateLinkConfiguration] = None,
+  probe: IResolvable | typing.List[ApplicationGatewayProbe] = None,
+  redirect_configuration: IResolvable | typing.List[ApplicationGatewayRedirectConfiguration] = None,
+  rewrite_rule_set: IResolvable | typing.List[ApplicationGatewayRewriteRuleSet] = None,
+  ssl_certificate: IResolvable | typing.List[ApplicationGatewaySslCertificate] = None,
   ssl_policy: ApplicationGatewaySslPolicy = None,
-  ssl_profile: typing.Union[IResolvable, typing.List[ApplicationGatewaySslProfile]] = None,
+  ssl_profile: IResolvable | typing.List[ApplicationGatewaySslProfile] = None,
   tags: typing.Mapping[str] = None,
   timeouts: ApplicationGatewayTimeouts = None,
-  trusted_client_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedClientCertificate]] = None,
-  trusted_root_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedRootCertificate]] = None,
-  url_path_map: typing.Union[IResolvable, typing.List[ApplicationGatewayUrlPathMap]] = None,
+  trusted_client_certificate: IResolvable | typing.List[ApplicationGatewayTrustedClientCertificate] = None,
+  trusted_root_certificate: IResolvable | typing.List[ApplicationGatewayTrustedRootCertificate] = None,
+  url_path_map: IResolvable | typing.List[ApplicationGatewayUrlPathMap] = None,
   waf_configuration: ApplicationGatewayWafConfiguration = None,
   zones: typing.List[str] = None
 )
@@ -3178,46 +3178,46 @@ applicationGateway.ApplicationGatewayConfig(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.connection">connection</a></code> | <code>typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.count">count</a></code> | <code>typing.Union[typing.Union[int, float], cdktf.TerraformCount]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.provisioners">provisioners</a></code> | <code>typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.backendAddressPool">backend_address_pool</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]]</code> | backend_address_pool block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.backendHttpSettings">backend_http_settings</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]]</code> | backend_http_settings block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.frontendIpConfiguration">frontend_ip_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]]</code> | frontend_ip_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.frontendPort">frontend_port</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]]</code> | frontend_port block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.gatewayIpConfiguration">gateway_ip_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]]</code> | gateway_ip_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.httpListener">http_listener</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]]</code> | http_listener block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.backendAddressPool">backend_address_pool</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]</code> | backend_address_pool block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.backendHttpSettings">backend_http_settings</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]</code> | backend_http_settings block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.frontendIpConfiguration">frontend_ip_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]</code> | frontend_ip_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.frontendPort">frontend_port</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]</code> | frontend_port block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.gatewayIpConfiguration">gateway_ip_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]</code> | gateway_ip_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.httpListener">http_listener</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]</code> | http_listener block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#location ApplicationGateway#location}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#name ApplicationGateway#name}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.requestRoutingRule">request_routing_rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]]</code> | request_routing_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.requestRoutingRule">request_routing_rule</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]</code> | request_routing_rule block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#resource_group_name ApplicationGateway#resource_group_name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.sku">sku</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySku">ApplicationGatewaySku</a></code> | sku block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.authenticationCertificate">authentication_certificate</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]]</code> | authentication_certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.authenticationCertificate">authentication_certificate</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]</code> | authentication_certificate block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.autoscaleConfiguration">autoscale_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAutoscaleConfiguration">ApplicationGatewayAutoscaleConfiguration</a></code> | autoscale_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.customErrorConfiguration">custom_error_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]]</code> | custom_error_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.enableHttp2">enable_http2</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enable_http2 ApplicationGateway#enable_http2}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.fipsEnabled">fips_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#fips_enabled ApplicationGateway#fips_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.customErrorConfiguration">custom_error_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]</code> | custom_error_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.enableHttp2">enable_http2</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enable_http2 ApplicationGateway#enable_http2}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.fipsEnabled">fips_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#fips_enabled ApplicationGateway#fips_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.firewallPolicyId">firewall_policy_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#firewall_policy_id ApplicationGateway#firewall_policy_id}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.forceFirewallPolicyAssociation">force_firewall_policy_association</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#force_firewall_policy_association ApplicationGateway#force_firewall_policy_association}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.forceFirewallPolicyAssociation">force_firewall_policy_association</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#force_firewall_policy_association ApplicationGateway#force_firewall_policy_association}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.global">global</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobal">ApplicationGatewayGlobal</a></code> | global block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#id ApplicationGateway#id}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayIdentity">ApplicationGatewayIdentity</a></code> | identity block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.privateLinkConfiguration">private_link_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]]</code> | private_link_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.probe">probe</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]]</code> | probe block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.redirectConfiguration">redirect_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]]</code> | redirect_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.rewriteRuleSet">rewrite_rule_set</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]]</code> | rewrite_rule_set block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.sslCertificate">ssl_certificate</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]]</code> | ssl_certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.privateLinkConfiguration">private_link_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]</code> | private_link_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.probe">probe</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]</code> | probe block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.redirectConfiguration">redirect_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]</code> | redirect_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.rewriteRuleSet">rewrite_rule_set</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]</code> | rewrite_rule_set block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.sslCertificate">ssl_certificate</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]</code> | ssl_certificate block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.sslPolicy">ssl_policy</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslPolicy">ApplicationGatewaySslPolicy</a></code> | ssl_policy block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.sslProfile">ssl_profile</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]]</code> | ssl_profile block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.sslProfile">ssl_profile</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]</code> | ssl_profile block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#tags ApplicationGateway#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.trustedClientCertificate">trusted_client_certificate</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]]</code> | trusted_client_certificate block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.trustedRootCertificate">trusted_root_certificate</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]]</code> | trusted_root_certificate block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.urlPathMap">url_path_map</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]]</code> | url_path_map block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.trustedClientCertificate">trusted_client_certificate</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]</code> | trusted_client_certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.trustedRootCertificate">trusted_root_certificate</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]</code> | trusted_root_certificate block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.urlPathMap">url_path_map</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]</code> | url_path_map block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.wafConfiguration">waf_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration">ApplicationGatewayWafConfiguration</a></code> | waf_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.zones">zones</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#zones ApplicationGateway#zones}. |
 
@@ -3226,20 +3226,20 @@ applicationGateway.ApplicationGatewayConfig(
 ##### `connection`<sup>Optional</sup> <a name="connection" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.connection"></a>
 
 ```python
-connection: typing.Union[SSHProvisionerConnection, WinrmProvisionerConnection]
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
 ```
 
-- *Type:* typing.Union[cdktf.SSHProvisionerConnection, cdktf.WinrmProvisionerConnection]
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
 
 ---
 
 ##### `count`<sup>Optional</sup> <a name="count" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.count"></a>
 
 ```python
-count: typing.Union[typing.Union[int, float], TerraformCount]
+count: typing.Union[int, float] | TerraformCount
 ```
 
-- *Type:* typing.Union[typing.Union[int, float], cdktf.TerraformCount]
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
 
 ---
 
@@ -3286,20 +3286,20 @@ provider: TerraformProvider
 ##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.provisioners"></a>
 
 ```python
-provisioners: typing.List[typing.Union[FileProvisioner, LocalExecProvisioner, RemoteExecProvisioner]]
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
 ```
 
-- *Type:* typing.List[typing.Union[cdktf.FileProvisioner, cdktf.LocalExecProvisioner, cdktf.RemoteExecProvisioner]]
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
 
 ---
 
 ##### `backend_address_pool`<sup>Required</sup> <a name="backend_address_pool" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.backendAddressPool"></a>
 
 ```python
-backend_address_pool: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendAddressPool]]
+backend_address_pool: IResolvable | typing.List[ApplicationGatewayBackendAddressPool]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]
 
 backend_address_pool block.
 
@@ -3310,10 +3310,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `backend_http_settings`<sup>Required</sup> <a name="backend_http_settings" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.backendHttpSettings"></a>
 
 ```python
-backend_http_settings: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendHttpSettings]]
+backend_http_settings: IResolvable | typing.List[ApplicationGatewayBackendHttpSettings]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]
 
 backend_http_settings block.
 
@@ -3324,10 +3324,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `frontend_ip_configuration`<sup>Required</sup> <a name="frontend_ip_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.frontendIpConfiguration"></a>
 
 ```python
-frontend_ip_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendIpConfiguration]]
+frontend_ip_configuration: IResolvable | typing.List[ApplicationGatewayFrontendIpConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]
 
 frontend_ip_configuration block.
 
@@ -3338,10 +3338,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `frontend_port`<sup>Required</sup> <a name="frontend_port" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.frontendPort"></a>
 
 ```python
-frontend_port: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendPort]]
+frontend_port: IResolvable | typing.List[ApplicationGatewayFrontendPort]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]
 
 frontend_port block.
 
@@ -3352,10 +3352,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `gateway_ip_configuration`<sup>Required</sup> <a name="gateway_ip_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.gatewayIpConfiguration"></a>
 
 ```python
-gateway_ip_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayGatewayIpConfiguration]]
+gateway_ip_configuration: IResolvable | typing.List[ApplicationGatewayGatewayIpConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]
 
 gateway_ip_configuration block.
 
@@ -3366,10 +3366,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `http_listener`<sup>Required</sup> <a name="http_listener" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.httpListener"></a>
 
 ```python
-http_listener: typing.Union[IResolvable, typing.List[ApplicationGatewayHttpListener]]
+http_listener: IResolvable | typing.List[ApplicationGatewayHttpListener]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]
 
 http_listener block.
 
@@ -3404,10 +3404,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `request_routing_rule`<sup>Required</sup> <a name="request_routing_rule" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.requestRoutingRule"></a>
 
 ```python
-request_routing_rule: typing.Union[IResolvable, typing.List[ApplicationGatewayRequestRoutingRule]]
+request_routing_rule: IResolvable | typing.List[ApplicationGatewayRequestRoutingRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]
 
 request_routing_rule block.
 
@@ -3444,10 +3444,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `authentication_certificate`<sup>Optional</sup> <a name="authentication_certificate" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.authenticationCertificate"></a>
 
 ```python
-authentication_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewayAuthenticationCertificate]]
+authentication_certificate: IResolvable | typing.List[ApplicationGatewayAuthenticationCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]
 
 authentication_certificate block.
 
@@ -3472,10 +3472,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `custom_error_configuration`<sup>Optional</sup> <a name="custom_error_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.customErrorConfiguration"></a>
 
 ```python
-custom_error_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayCustomErrorConfiguration]]
+custom_error_configuration: IResolvable | typing.List[ApplicationGatewayCustomErrorConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]
 
 custom_error_configuration block.
 
@@ -3486,10 +3486,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `enable_http2`<sup>Optional</sup> <a name="enable_http2" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.enableHttp2"></a>
 
 ```python
-enable_http2: typing.Union[bool, IResolvable]
+enable_http2: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enable_http2 ApplicationGateway#enable_http2}.
 
@@ -3498,10 +3498,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `fips_enabled`<sup>Optional</sup> <a name="fips_enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.fipsEnabled"></a>
 
 ```python
-fips_enabled: typing.Union[bool, IResolvable]
+fips_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#fips_enabled ApplicationGateway#fips_enabled}.
 
@@ -3522,10 +3522,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `force_firewall_policy_association`<sup>Optional</sup> <a name="force_firewall_policy_association" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.forceFirewallPolicyAssociation"></a>
 
 ```python
-force_firewall_policy_association: typing.Union[bool, IResolvable]
+force_firewall_policy_association: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#force_firewall_policy_association ApplicationGateway#force_firewall_policy_association}.
 
@@ -3577,10 +3577,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `private_link_configuration`<sup>Optional</sup> <a name="private_link_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.privateLinkConfiguration"></a>
 
 ```python
-private_link_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayPrivateLinkConfiguration]]
+private_link_configuration: IResolvable | typing.List[ApplicationGatewayPrivateLinkConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]
 
 private_link_configuration block.
 
@@ -3591,10 +3591,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `probe`<sup>Optional</sup> <a name="probe" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.probe"></a>
 
 ```python
-probe: typing.Union[IResolvable, typing.List[ApplicationGatewayProbe]]
+probe: IResolvable | typing.List[ApplicationGatewayProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]
 
 probe block.
 
@@ -3605,10 +3605,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `redirect_configuration`<sup>Optional</sup> <a name="redirect_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.redirectConfiguration"></a>
 
 ```python
-redirect_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayRedirectConfiguration]]
+redirect_configuration: IResolvable | typing.List[ApplicationGatewayRedirectConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]
 
 redirect_configuration block.
 
@@ -3619,10 +3619,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `rewrite_rule_set`<sup>Optional</sup> <a name="rewrite_rule_set" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.rewriteRuleSet"></a>
 
 ```python
-rewrite_rule_set: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSet]]
+rewrite_rule_set: IResolvable | typing.List[ApplicationGatewayRewriteRuleSet]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]
 
 rewrite_rule_set block.
 
@@ -3633,10 +3633,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ssl_certificate`<sup>Optional</sup> <a name="ssl_certificate" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.sslCertificate"></a>
 
 ```python
-ssl_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewaySslCertificate]]
+ssl_certificate: IResolvable | typing.List[ApplicationGatewaySslCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]
 
 ssl_certificate block.
 
@@ -3661,10 +3661,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ssl_profile`<sup>Optional</sup> <a name="ssl_profile" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.sslProfile"></a>
 
 ```python
-ssl_profile: typing.Union[IResolvable, typing.List[ApplicationGatewaySslProfile]]
+ssl_profile: IResolvable | typing.List[ApplicationGatewaySslProfile]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]
 
 ssl_profile block.
 
@@ -3701,10 +3701,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `trusted_client_certificate`<sup>Optional</sup> <a name="trusted_client_certificate" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.trustedClientCertificate"></a>
 
 ```python
-trusted_client_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedClientCertificate]]
+trusted_client_certificate: IResolvable | typing.List[ApplicationGatewayTrustedClientCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]
 
 trusted_client_certificate block.
 
@@ -3715,10 +3715,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `trusted_root_certificate`<sup>Optional</sup> <a name="trusted_root_certificate" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.trustedRootCertificate"></a>
 
 ```python
-trusted_root_certificate: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedRootCertificate]]
+trusted_root_certificate: IResolvable | typing.List[ApplicationGatewayTrustedRootCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]
 
 trusted_root_certificate block.
 
@@ -3729,10 +3729,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `url_path_map`<sup>Optional</sup> <a name="url_path_map" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayConfig.property.urlPathMap"></a>
 
 ```python
-url_path_map: typing.Union[IResolvable, typing.List[ApplicationGatewayUrlPathMap]]
+url_path_map: IResolvable | typing.List[ApplicationGatewayUrlPathMap]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]
 
 url_path_map block.
 
@@ -4014,8 +4014,8 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import application_gateway
 
 applicationGateway.ApplicationGatewayGlobal(
-  request_buffering_enabled: typing.Union[bool, IResolvable],
-  response_buffering_enabled: typing.Union[bool, IResolvable]
+  request_buffering_enabled: bool | IResolvable,
+  response_buffering_enabled: bool | IResolvable
 )
 ```
 
@@ -4023,18 +4023,18 @@ applicationGateway.ApplicationGatewayGlobal(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobal.property.requestBufferingEnabled">request_buffering_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#request_buffering_enabled ApplicationGateway#request_buffering_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobal.property.responseBufferingEnabled">response_buffering_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#response_buffering_enabled ApplicationGateway#response_buffering_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobal.property.requestBufferingEnabled">request_buffering_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#request_buffering_enabled ApplicationGateway#request_buffering_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobal.property.responseBufferingEnabled">response_buffering_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#response_buffering_enabled ApplicationGateway#response_buffering_enabled}. |
 
 ---
 
 ##### `request_buffering_enabled`<sup>Required</sup> <a name="request_buffering_enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobal.property.requestBufferingEnabled"></a>
 
 ```python
-request_buffering_enabled: typing.Union[bool, IResolvable]
+request_buffering_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#request_buffering_enabled ApplicationGateway#request_buffering_enabled}.
 
@@ -4043,10 +4043,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `response_buffering_enabled`<sup>Required</sup> <a name="response_buffering_enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobal.property.responseBufferingEnabled"></a>
 
 ```python
-response_buffering_enabled: typing.Union[bool, IResolvable]
+response_buffering_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#response_buffering_enabled ApplicationGateway#response_buffering_enabled}.
 
@@ -4064,11 +4064,11 @@ applicationGateway.ApplicationGatewayHttpListener(
   frontend_port_name: str,
   name: str,
   protocol: str,
-  custom_error_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayHttpListenerCustomErrorConfiguration]] = None,
+  custom_error_configuration: IResolvable | typing.List[ApplicationGatewayHttpListenerCustomErrorConfiguration] = None,
   firewall_policy_id: str = None,
   host_name: str = None,
   host_names: typing.List[str] = None,
-  require_sni: typing.Union[bool, IResolvable] = None,
+  require_sni: bool | IResolvable = None,
   ssl_certificate_name: str = None,
   ssl_profile_name: str = None
 )
@@ -4082,11 +4082,11 @@ applicationGateway.ApplicationGatewayHttpListener(
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.frontendPortName">frontend_port_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#frontend_port_name ApplicationGateway#frontend_port_name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#name ApplicationGateway#name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.protocol">protocol</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#protocol ApplicationGateway#protocol}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.customErrorConfiguration">custom_error_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]]</code> | custom_error_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.customErrorConfiguration">custom_error_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]</code> | custom_error_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.firewallPolicyId">firewall_policy_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#firewall_policy_id ApplicationGateway#firewall_policy_id}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.hostName">host_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#host_name ApplicationGateway#host_name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.hostNames">host_names</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#host_names ApplicationGateway#host_names}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.requireSni">require_sni</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#require_sni ApplicationGateway#require_sni}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.requireSni">require_sni</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#require_sni ApplicationGateway#require_sni}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.sslCertificateName">ssl_certificate_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#ssl_certificate_name ApplicationGateway#ssl_certificate_name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.sslProfileName">ssl_profile_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#ssl_profile_name ApplicationGateway#ssl_profile_name}. |
 
@@ -4143,10 +4143,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `custom_error_configuration`<sup>Optional</sup> <a name="custom_error_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.customErrorConfiguration"></a>
 
 ```python
-custom_error_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayHttpListenerCustomErrorConfiguration]]
+custom_error_configuration: IResolvable | typing.List[ApplicationGatewayHttpListenerCustomErrorConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]
 
 custom_error_configuration block.
 
@@ -4193,10 +4193,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `require_sni`<sup>Optional</sup> <a name="require_sni" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener.property.requireSni"></a>
 
 ```python
-require_sni: typing.Union[bool, IResolvable]
+require_sni: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#require_sni ApplicationGateway#require_sni}.
 
@@ -4337,7 +4337,7 @@ applicationGateway.ApplicationGatewayPrivateEndpointConnection()
 from cdktf_cdktf_provider_azurerm import application_gateway
 
 applicationGateway.ApplicationGatewayPrivateLinkConfiguration(
-  ip_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayPrivateLinkConfigurationIpConfiguration]],
+  ip_configuration: IResolvable | typing.List[ApplicationGatewayPrivateLinkConfigurationIpConfiguration],
   name: str
 )
 ```
@@ -4346,7 +4346,7 @@ applicationGateway.ApplicationGatewayPrivateLinkConfiguration(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration.property.ipConfiguration">ip_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]]</code> | ip_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration.property.ipConfiguration">ip_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]</code> | ip_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#name ApplicationGateway#name}. |
 
 ---
@@ -4354,10 +4354,10 @@ applicationGateway.ApplicationGatewayPrivateLinkConfiguration(
 ##### `ip_configuration`<sup>Required</sup> <a name="ip_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration.property.ipConfiguration"></a>
 
 ```python
-ip_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayPrivateLinkConfigurationIpConfiguration]]
+ip_configuration: IResolvable | typing.List[ApplicationGatewayPrivateLinkConfigurationIpConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]
 
 ip_configuration block.
 
@@ -4386,7 +4386,7 @@ from cdktf_cdktf_provider_azurerm import application_gateway
 
 applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration(
   name: str,
-  primary: typing.Union[bool, IResolvable],
+  primary: bool | IResolvable,
   private_ip_address_allocation: str,
   subnet_id: str,
   private_ip_address: str = None
@@ -4398,7 +4398,7 @@ applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#name ApplicationGateway#name}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration.property.primary">primary</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#primary ApplicationGateway#primary}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration.property.primary">primary</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#primary ApplicationGateway#primary}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration.property.privateIpAddressAllocation">private_ip_address_allocation</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#private_ip_address_allocation ApplicationGateway#private_ip_address_allocation}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration.property.subnetId">subnet_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#subnet_id ApplicationGateway#subnet_id}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration.property.privateIpAddress">private_ip_address</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#private_ip_address ApplicationGateway#private_ip_address}. |
@@ -4420,10 +4420,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `primary`<sup>Required</sup> <a name="primary" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration.property.primary"></a>
 
 ```python
-primary: typing.Union[bool, IResolvable]
+primary: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#primary ApplicationGateway#primary}.
 
@@ -4482,7 +4482,7 @@ applicationGateway.ApplicationGatewayProbe(
   host: str = None,
   match: ApplicationGatewayProbeMatch = None,
   minimum_servers: typing.Union[int, float] = None,
-  pick_host_name_from_backend_http_settings: typing.Union[bool, IResolvable] = None,
+  pick_host_name_from_backend_http_settings: bool | IResolvable = None,
   port: typing.Union[int, float] = None
 )
 ```
@@ -4500,7 +4500,7 @@ applicationGateway.ApplicationGatewayProbe(
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe.property.host">host</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#host ApplicationGateway#host}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe.property.match">match</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeMatch">ApplicationGatewayProbeMatch</a></code> | match block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe.property.minimumServers">minimum_servers</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#minimum_servers ApplicationGateway#minimum_servers}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe.property.pickHostNameFromBackendHttpSettings">pick_host_name_from_backend_http_settings</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#pick_host_name_from_backend_http_settings ApplicationGateway#pick_host_name_from_backend_http_settings}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe.property.pickHostNameFromBackendHttpSettings">pick_host_name_from_backend_http_settings</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#pick_host_name_from_backend_http_settings ApplicationGateway#pick_host_name_from_backend_http_settings}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe.property.port">port</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#port ApplicationGateway#port}. |
 
 ---
@@ -4618,10 +4618,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `pick_host_name_from_backend_http_settings`<sup>Optional</sup> <a name="pick_host_name_from_backend_http_settings" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe.property.pickHostNameFromBackendHttpSettings"></a>
 
 ```python
-pick_host_name_from_backend_http_settings: typing.Union[bool, IResolvable]
+pick_host_name_from_backend_http_settings: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#pick_host_name_from_backend_http_settings ApplicationGateway#pick_host_name_from_backend_http_settings}.
 
@@ -4695,8 +4695,8 @@ from cdktf_cdktf_provider_azurerm import application_gateway
 applicationGateway.ApplicationGatewayRedirectConfiguration(
   name: str,
   redirect_type: str,
-  include_path: typing.Union[bool, IResolvable] = None,
-  include_query_string: typing.Union[bool, IResolvable] = None,
+  include_path: bool | IResolvable = None,
+  include_query_string: bool | IResolvable = None,
   target_listener_name: str = None,
   target_url: str = None
 )
@@ -4708,8 +4708,8 @@ applicationGateway.ApplicationGatewayRedirectConfiguration(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#name ApplicationGateway#name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration.property.redirectType">redirect_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#redirect_type ApplicationGateway#redirect_type}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration.property.includePath">include_path</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#include_path ApplicationGateway#include_path}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration.property.includeQueryString">include_query_string</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#include_query_string ApplicationGateway#include_query_string}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration.property.includePath">include_path</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#include_path ApplicationGateway#include_path}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration.property.includeQueryString">include_query_string</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#include_query_string ApplicationGateway#include_query_string}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration.property.targetListenerName">target_listener_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#target_listener_name ApplicationGateway#target_listener_name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration.property.targetUrl">target_url</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#target_url ApplicationGateway#target_url}. |
 
@@ -4742,10 +4742,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `include_path`<sup>Optional</sup> <a name="include_path" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration.property.includePath"></a>
 
 ```python
-include_path: typing.Union[bool, IResolvable]
+include_path: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#include_path ApplicationGateway#include_path}.
 
@@ -4754,10 +4754,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `include_query_string`<sup>Optional</sup> <a name="include_query_string" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration.property.includeQueryString"></a>
 
 ```python
-include_query_string: typing.Union[bool, IResolvable]
+include_query_string: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#include_query_string ApplicationGateway#include_query_string}.
 
@@ -4940,7 +4940,7 @@ from cdktf_cdktf_provider_azurerm import application_gateway
 
 applicationGateway.ApplicationGatewayRewriteRuleSet(
   name: str,
-  rewrite_rule: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRule]] = None
+  rewrite_rule: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRule] = None
 )
 ```
 
@@ -4949,7 +4949,7 @@ applicationGateway.ApplicationGatewayRewriteRuleSet(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#name ApplicationGateway#name}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet.property.rewriteRule">rewrite_rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]]</code> | rewrite_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet.property.rewriteRule">rewrite_rule</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]</code> | rewrite_rule block. |
 
 ---
 
@@ -4968,10 +4968,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `rewrite_rule`<sup>Optional</sup> <a name="rewrite_rule" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet.property.rewriteRule"></a>
 
 ```python
-rewrite_rule: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRule]]
+rewrite_rule: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]
 
 rewrite_rule block.
 
@@ -4989,9 +4989,9 @@ from cdktf_cdktf_provider_azurerm import application_gateway
 applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule(
   name: str,
   rule_sequence: typing.Union[int, float],
-  condition: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleCondition]] = None,
-  request_header_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration]] = None,
-  response_header_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration]] = None,
+  condition: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleCondition] = None,
+  request_header_configuration: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration] = None,
+  response_header_configuration: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration] = None,
   url: ApplicationGatewayRewriteRuleSetRewriteRuleUrl = None
 )
 ```
@@ -5002,9 +5002,9 @@ applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#name ApplicationGateway#name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.ruleSequence">rule_sequence</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#rule_sequence ApplicationGateway#rule_sequence}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.condition">condition</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]]</code> | condition block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.requestHeaderConfiguration">request_header_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]]</code> | request_header_configuration block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.responseHeaderConfiguration">response_header_configuration</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]]</code> | response_header_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.condition">condition</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]</code> | condition block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.requestHeaderConfiguration">request_header_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]</code> | request_header_configuration block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.responseHeaderConfiguration">response_header_configuration</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]</code> | response_header_configuration block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.url">url</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl">ApplicationGatewayRewriteRuleSetRewriteRuleUrl</a></code> | url block. |
 
 ---
@@ -5036,10 +5036,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `condition`<sup>Optional</sup> <a name="condition" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.condition"></a>
 
 ```python
-condition: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleCondition]]
+condition: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]
 
 condition block.
 
@@ -5050,10 +5050,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `request_header_configuration`<sup>Optional</sup> <a name="request_header_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.requestHeaderConfiguration"></a>
 
 ```python
-request_header_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration]]
+request_header_configuration: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]
 
 request_header_configuration block.
 
@@ -5064,10 +5064,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `response_header_configuration`<sup>Optional</sup> <a name="response_header_configuration" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule.property.responseHeaderConfiguration"></a>
 
 ```python
-response_header_configuration: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration]]
+response_header_configuration: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]
 
 response_header_configuration block.
 
@@ -5099,8 +5099,8 @@ from cdktf_cdktf_provider_azurerm import application_gateway
 applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition(
   pattern: str,
   variable: str,
-  ignore_case: typing.Union[bool, IResolvable] = None,
-  negate: typing.Union[bool, IResolvable] = None
+  ignore_case: bool | IResolvable = None,
+  negate: bool | IResolvable = None
 )
 ```
 
@@ -5110,8 +5110,8 @@ applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition(
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition.property.pattern">pattern</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#pattern ApplicationGateway#pattern}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition.property.variable">variable</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#variable ApplicationGateway#variable}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition.property.ignoreCase">ignore_case</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#ignore_case ApplicationGateway#ignore_case}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition.property.negate">negate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#negate ApplicationGateway#negate}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition.property.ignoreCase">ignore_case</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#ignore_case ApplicationGateway#ignore_case}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition.property.negate">negate</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#negate ApplicationGateway#negate}. |
 
 ---
 
@@ -5142,10 +5142,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `ignore_case`<sup>Optional</sup> <a name="ignore_case" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition.property.ignoreCase"></a>
 
 ```python
-ignore_case: typing.Union[bool, IResolvable]
+ignore_case: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#ignore_case ApplicationGateway#ignore_case}.
 
@@ -5154,10 +5154,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `negate`<sup>Optional</sup> <a name="negate" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition.property.negate"></a>
 
 ```python
-negate: typing.Union[bool, IResolvable]
+negate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#negate ApplicationGateway#negate}.
 
@@ -5266,7 +5266,7 @@ applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl(
   components: str = None,
   path: str = None,
   query_string: str = None,
-  reroute: typing.Union[bool, IResolvable] = None
+  reroute: bool | IResolvable = None
 )
 ```
 
@@ -5277,7 +5277,7 @@ applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl(
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl.property.components">components</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#components ApplicationGateway#components}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl.property.path">path</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#path ApplicationGateway#path}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl.property.queryString">query_string</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#query_string ApplicationGateway#query_string}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl.property.reroute">reroute</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#reroute ApplicationGateway#reroute}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl.property.reroute">reroute</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#reroute ApplicationGateway#reroute}. |
 
 ---
 
@@ -5320,10 +5320,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `reroute`<sup>Optional</sup> <a name="reroute" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl.property.reroute"></a>
 
 ```python
-reroute: typing.Union[bool, IResolvable]
+reroute: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#reroute ApplicationGateway#reroute}.
 
@@ -5563,7 +5563,7 @@ applicationGateway.ApplicationGatewaySslProfile(
   ssl_policy: ApplicationGatewaySslProfileSslPolicy = None,
   trusted_client_certificate_names: typing.List[str] = None,
   verify_client_certificate_revocation: str = None,
-  verify_client_cert_issuer_dn: typing.Union[bool, IResolvable] = None
+  verify_client_cert_issuer_dn: bool | IResolvable = None
 )
 ```
 
@@ -5575,7 +5575,7 @@ applicationGateway.ApplicationGatewaySslProfile(
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile.property.sslPolicy">ssl_policy</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileSslPolicy">ApplicationGatewaySslProfileSslPolicy</a></code> | ssl_policy block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile.property.trustedClientCertificateNames">trusted_client_certificate_names</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#trusted_client_certificate_names ApplicationGateway#trusted_client_certificate_names}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile.property.verifyClientCertificateRevocation">verify_client_certificate_revocation</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#verify_client_certificate_revocation ApplicationGateway#verify_client_certificate_revocation}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile.property.verifyClientCertIssuerDn">verify_client_cert_issuer_dn</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#verify_client_cert_issuer_dn ApplicationGateway#verify_client_cert_issuer_dn}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile.property.verifyClientCertIssuerDn">verify_client_cert_issuer_dn</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#verify_client_cert_issuer_dn ApplicationGateway#verify_client_cert_issuer_dn}. |
 
 ---
 
@@ -5632,10 +5632,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `verify_client_cert_issuer_dn`<sup>Optional</sup> <a name="verify_client_cert_issuer_dn" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile.property.verifyClientCertIssuerDn"></a>
 
 ```python
-verify_client_cert_issuer_dn: typing.Union[bool, IResolvable]
+verify_client_cert_issuer_dn: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#verify_client_cert_issuer_dn ApplicationGateway#verify_client_cert_issuer_dn}.
 
@@ -5918,7 +5918,7 @@ from cdktf_cdktf_provider_azurerm import application_gateway
 
 applicationGateway.ApplicationGatewayUrlPathMap(
   name: str,
-  path_rule: typing.Union[IResolvable, typing.List[ApplicationGatewayUrlPathMapPathRule]],
+  path_rule: IResolvable | typing.List[ApplicationGatewayUrlPathMapPathRule],
   default_backend_address_pool_name: str = None,
   default_backend_http_settings_name: str = None,
   default_redirect_configuration_name: str = None,
@@ -5931,7 +5931,7 @@ applicationGateway.ApplicationGatewayUrlPathMap(
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#name ApplicationGateway#name}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap.property.pathRule">path_rule</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]]</code> | path_rule block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap.property.pathRule">path_rule</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]</code> | path_rule block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap.property.defaultBackendAddressPoolName">default_backend_address_pool_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#default_backend_address_pool_name ApplicationGateway#default_backend_address_pool_name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap.property.defaultBackendHttpSettingsName">default_backend_http_settings_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#default_backend_http_settings_name ApplicationGateway#default_backend_http_settings_name}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap.property.defaultRedirectConfigurationName">default_redirect_configuration_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#default_redirect_configuration_name ApplicationGateway#default_redirect_configuration_name}. |
@@ -5954,10 +5954,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `path_rule`<sup>Required</sup> <a name="path_rule" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap.property.pathRule"></a>
 
 ```python
-path_rule: typing.Union[IResolvable, typing.List[ApplicationGatewayUrlPathMapPathRule]]
+path_rule: IResolvable | typing.List[ApplicationGatewayUrlPathMapPathRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]
 
 path_rule block.
 
@@ -6137,14 +6137,14 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 from cdktf_cdktf_provider_azurerm import application_gateway
 
 applicationGateway.ApplicationGatewayWafConfiguration(
-  enabled: typing.Union[bool, IResolvable],
+  enabled: bool | IResolvable,
   firewall_mode: str,
   rule_set_version: str,
-  disabled_rule_group: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup]] = None,
-  exclusion: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationExclusion]] = None,
+  disabled_rule_group: IResolvable | typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup] = None,
+  exclusion: IResolvable | typing.List[ApplicationGatewayWafConfigurationExclusion] = None,
   file_upload_limit_mb: typing.Union[int, float] = None,
   max_request_body_size_kb: typing.Union[int, float] = None,
-  request_body_check: typing.Union[bool, IResolvable] = None,
+  request_body_check: bool | IResolvable = None,
   rule_set_type: str = None
 )
 ```
@@ -6153,14 +6153,14 @@ applicationGateway.ApplicationGatewayWafConfiguration(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.firewallMode">firewall_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#firewall_mode ApplicationGateway#firewall_mode}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.ruleSetVersion">rule_set_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#rule_set_version ApplicationGateway#rule_set_version}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.disabledRuleGroup">disabled_rule_group</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]]</code> | disabled_rule_group block. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.exclusion">exclusion</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]]</code> | exclusion block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.disabledRuleGroup">disabled_rule_group</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]</code> | disabled_rule_group block. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.exclusion">exclusion</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]</code> | exclusion block. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.fileUploadLimitMb">file_upload_limit_mb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#file_upload_limit_mb ApplicationGateway#file_upload_limit_mb}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.maxRequestBodySizeKb">max_request_body_size_kb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#max_request_body_size_kb ApplicationGateway#max_request_body_size_kb}. |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.requestBodyCheck">request_body_check</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#request_body_check ApplicationGateway#request_body_check}. |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.requestBodyCheck">request_body_check</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#request_body_check ApplicationGateway#request_body_check}. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.ruleSetType">rule_set_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#rule_set_type ApplicationGateway#rule_set_type}. |
 
 ---
@@ -6168,10 +6168,10 @@ applicationGateway.ApplicationGatewayWafConfiguration(
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}.
 
@@ -6204,10 +6204,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `disabled_rule_group`<sup>Optional</sup> <a name="disabled_rule_group" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.disabledRuleGroup"></a>
 
 ```python
-disabled_rule_group: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup]]
+disabled_rule_group: IResolvable | typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]
 
 disabled_rule_group block.
 
@@ -6218,10 +6218,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `exclusion`<sup>Optional</sup> <a name="exclusion" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.exclusion"></a>
 
 ```python
-exclusion: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationExclusion]]
+exclusion: IResolvable | typing.List[ApplicationGatewayWafConfigurationExclusion]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]
 
 exclusion block.
 
@@ -6256,10 +6256,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 ##### `request_body_check`<sup>Optional</sup> <a name="request_body_check" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration.property.requestBodyCheck"></a>
 
 ```python
-request_body_check: typing.Union[bool, IResolvable]
+request_body_check: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#request_body_check ApplicationGateway#request_body_check}.
 
@@ -6516,7 +6516,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]</code> | *No description.* |
 
 ---
 
@@ -6547,10 +6547,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayAuthenticationCertificate]]
+internal_value: IResolvable | typing.List[ApplicationGatewayAuthenticationCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]
 
 ---
 
@@ -6815,7 +6815,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.data">data</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a></code> | *No description.* |
 
 ---
 
@@ -6896,10 +6896,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayAuthenticationCertificate]
+internal_value: IResolvable | ApplicationGatewayAuthenticationCertificate
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayAuthenticationCertificate">ApplicationGatewayAuthenticationCertificate</a>
 
 ---
 
@@ -7360,7 +7360,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]</code> | *No description.* |
 
 ---
 
@@ -7391,10 +7391,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendAddressPool]]
+internal_value: IResolvable | typing.List[ApplicationGatewayBackendAddressPool]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]
 
 ---
 
@@ -7675,7 +7675,7 @@ def reset_ip_addresses() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.fqdns">fqdns</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.ipAddresses">ip_addresses</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a></code> | *No description.* |
 
 ---
 
@@ -7776,10 +7776,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPoolOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayBackendAddressPool]
+internal_value: IResolvable | ApplicationGatewayBackendAddressPool
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendAddressPool">ApplicationGatewayBackendAddressPool</a>
 
 ---
 
@@ -7915,7 +7915,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]</code> | *No description.* |
 
 ---
 
@@ -7946,10 +7946,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendHttpSettingsAuthenticationCertificate]]
+internal_value: IResolvable | typing.List[ApplicationGatewayBackendHttpSettingsAuthenticationCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]
 
 ---
 
@@ -8212,7 +8212,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a></code> | *No description.* |
 
 ---
 
@@ -8273,10 +8273,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayBackendHttpSettingsAuthenticationCertificate]
+internal_value: IResolvable | ApplicationGatewayBackendHttpSettingsAuthenticationCertificate
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>
 
 ---
 
@@ -8517,9 +8517,9 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference.property.drainTimeoutSecInput">drain_timeout_sec_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference.property.drainTimeoutSec">drain_timeout_sec</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDraining">ApplicationGatewayBackendHttpSettingsConnectionDraining</a></code> | *No description.* |
 
 ---
@@ -8561,10 +8561,10 @@ drain_timeout_sec_input: typing.Union[int, float]
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8581,10 +8581,10 @@ drain_timeout_sec: typing.Union[int, float]
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDrainingOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -8730,7 +8730,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]</code> | *No description.* |
 
 ---
 
@@ -8761,10 +8761,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendHttpSettings]]
+internal_value: IResolvable | typing.List[ApplicationGatewayBackendHttpSettings]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]
 
 ---
 
@@ -9032,13 +9032,13 @@ Returns a reversible string representation.
 
 ```python
 def put_authentication_certificate(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendHttpSettingsAuthenticationCertificate]]
+  value: IResolvable | typing.List[ApplicationGatewayBackendHttpSettingsAuthenticationCertificate]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.putAuthenticationCertificate.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]
 
 ---
 
@@ -9047,7 +9047,7 @@ def put_authentication_certificate(
 ```python
 def put_connection_draining(
   drain_timeout_sec: typing.Union[int, float],
-  enabled: typing.Union[bool, IResolvable]
+  enabled: bool | IResolvable
 ) -> None
 ```
 
@@ -9061,7 +9061,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.putConnectionDraining.parameter.enabled"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#enabled ApplicationGateway#enabled}.
 
@@ -9133,13 +9133,13 @@ def reset_trusted_root_certificate_names() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.probeId">probe_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.affinityCookieNameInput">affinity_cookie_name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.authenticationCertificateInput">authentication_certificate_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.authenticationCertificateInput">authentication_certificate_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.connectionDrainingInput">connection_draining_input</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsConnectionDraining">ApplicationGatewayBackendHttpSettingsConnectionDraining</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.cookieBasedAffinityInput">cookie_based_affinity_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.hostNameInput">host_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.pathInput">path_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.pickHostNameFromBackendAddressInput">pick_host_name_from_backend_address_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.pickHostNameFromBackendAddressInput">pick_host_name_from_backend_address_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.portInput">port_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.probeNameInput">probe_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.protocolInput">protocol_input</a></code> | <code>str</code> | *No description.* |
@@ -9150,13 +9150,13 @@ def reset_trusted_root_certificate_names() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.hostName">host_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.path">path</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.pickHostNameFromBackendAddress">pick_host_name_from_backend_address</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.pickHostNameFromBackendAddress">pick_host_name_from_backend_address</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.port">port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.probeName">probe_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.protocol">protocol</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.requestTimeout">request_timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.trustedRootCertificateNames">trusted_root_certificate_names</a></code> | <code>typing.List[str]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a></code> | *No description.* |
 
 ---
 
@@ -9237,10 +9237,10 @@ affinity_cookie_name_input: str
 ##### `authentication_certificate_input`<sup>Optional</sup> <a name="authentication_certificate_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.authenticationCertificateInput"></a>
 
 ```python
-authentication_certificate_input: typing.Union[IResolvable, typing.List[ApplicationGatewayBackendHttpSettingsAuthenticationCertificate]]
+authentication_certificate_input: IResolvable | typing.List[ApplicationGatewayBackendHttpSettingsAuthenticationCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsAuthenticationCertificate">ApplicationGatewayBackendHttpSettingsAuthenticationCertificate</a>]
 
 ---
 
@@ -9297,10 +9297,10 @@ path_input: str
 ##### `pick_host_name_from_backend_address_input`<sup>Optional</sup> <a name="pick_host_name_from_backend_address_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.pickHostNameFromBackendAddressInput"></a>
 
 ```python
-pick_host_name_from_backend_address_input: typing.Union[bool, IResolvable]
+pick_host_name_from_backend_address_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9407,10 +9407,10 @@ path: str
 ##### `pick_host_name_from_backend_address`<sup>Required</sup> <a name="pick_host_name_from_backend_address" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.pickHostNameFromBackendAddress"></a>
 
 ```python
-pick_host_name_from_backend_address: typing.Union[bool, IResolvable]
+pick_host_name_from_backend_address: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -9467,10 +9467,10 @@ trusted_root_certificate_names: typing.List[str]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettingsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayBackendHttpSettings]
+internal_value: IResolvable | ApplicationGatewayBackendHttpSettings
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayBackendHttpSettings">ApplicationGatewayBackendHttpSettings</a>
 
 ---
 
@@ -9606,7 +9606,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -9637,10 +9637,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayCustomErrorConfiguration]]
+internal_value: IResolvable | typing.List[ApplicationGatewayCustomErrorConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]
 
 ---
 
@@ -9905,7 +9905,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.statusCodeInput">status_code_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.customErrorPageUrl">custom_error_page_url</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.statusCode">status_code</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -9986,10 +9986,10 @@ status_code: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayCustomErrorConfiguration]
+internal_value: IResolvable | ApplicationGatewayCustomErrorConfiguration
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayCustomErrorConfiguration">ApplicationGatewayCustomErrorConfiguration</a>
 
 ---
 
@@ -10125,7 +10125,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -10156,10 +10156,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendIpConfiguration]]
+internal_value: IResolvable | typing.List[ApplicationGatewayFrontendIpConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]
 
 ---
 
@@ -10468,7 +10468,7 @@ def reset_subnet_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.privateLinkConfigurationName">private_link_configuration_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.publicIpAddressId">public_ip_address_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.subnetId">subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -10639,10 +10639,10 @@ subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayFrontendIpConfiguration]
+internal_value: IResolvable | ApplicationGatewayFrontendIpConfiguration
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendIpConfiguration">ApplicationGatewayFrontendIpConfiguration</a>
 
 ---
 
@@ -10778,7 +10778,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]</code> | *No description.* |
 
 ---
 
@@ -10809,10 +10809,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayFrontendPort]]
+internal_value: IResolvable | typing.List[ApplicationGatewayFrontendPort]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]
 
 ---
 
@@ -11077,7 +11077,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.portInput">port_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.port">port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a></code> | *No description.* |
 
 ---
 
@@ -11158,10 +11158,10 @@ port: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPortOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayFrontendPort]
+internal_value: IResolvable | ApplicationGatewayFrontendPort
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayFrontendPort">ApplicationGatewayFrontendPort</a>
 
 ---
 
@@ -11297,7 +11297,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -11328,10 +11328,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayGatewayIpConfiguration]]
+internal_value: IResolvable | typing.List[ApplicationGatewayGatewayIpConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]
 
 ---
 
@@ -11596,7 +11596,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.subnetIdInput">subnet_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.subnetId">subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -11677,10 +11677,10 @@ subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayGatewayIpConfiguration]
+internal_value: IResolvable | ApplicationGatewayGatewayIpConfiguration
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGatewayIpConfiguration">ApplicationGatewayGatewayIpConfiguration</a>
 
 ---
 
@@ -11920,10 +11920,10 @@ Returns a reversible string representation.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.requestBufferingEnabledInput">request_buffering_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.responseBufferingEnabledInput">response_buffering_enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.requestBufferingEnabled">request_buffering_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.responseBufferingEnabled">response_buffering_enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.requestBufferingEnabledInput">request_buffering_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.responseBufferingEnabledInput">response_buffering_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.requestBufferingEnabled">request_buffering_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.responseBufferingEnabled">response_buffering_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobal">ApplicationGatewayGlobal</a></code> | *No description.* |
 
 ---
@@ -11955,40 +11955,40 @@ fqn: str
 ##### `request_buffering_enabled_input`<sup>Optional</sup> <a name="request_buffering_enabled_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.requestBufferingEnabledInput"></a>
 
 ```python
-request_buffering_enabled_input: typing.Union[bool, IResolvable]
+request_buffering_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `response_buffering_enabled_input`<sup>Optional</sup> <a name="response_buffering_enabled_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.responseBufferingEnabledInput"></a>
 
 ```python
-response_buffering_enabled_input: typing.Union[bool, IResolvable]
+response_buffering_enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `request_buffering_enabled`<sup>Required</sup> <a name="request_buffering_enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.requestBufferingEnabled"></a>
 
 ```python
-request_buffering_enabled: typing.Union[bool, IResolvable]
+request_buffering_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `response_buffering_enabled`<sup>Required</sup> <a name="response_buffering_enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayGlobalOutputReference.property.responseBufferingEnabled"></a>
 
 ```python
-response_buffering_enabled: typing.Union[bool, IResolvable]
+response_buffering_enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -12134,7 +12134,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -12165,10 +12165,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayHttpListenerCustomErrorConfiguration]]
+internal_value: IResolvable | typing.List[ApplicationGatewayHttpListenerCustomErrorConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]
 
 ---
 
@@ -12433,7 +12433,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.statusCodeInput">status_code_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.customErrorPageUrl">custom_error_page_url</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.statusCode">status_code</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -12514,10 +12514,10 @@ status_code: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayHttpListenerCustomErrorConfiguration]
+internal_value: IResolvable | ApplicationGatewayHttpListenerCustomErrorConfiguration
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>
 
 ---
 
@@ -12653,7 +12653,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]</code> | *No description.* |
 
 ---
 
@@ -12684,10 +12684,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayHttpListener]]
+internal_value: IResolvable | typing.List[ApplicationGatewayHttpListener]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]
 
 ---
 
@@ -12952,13 +12952,13 @@ Returns a reversible string representation.
 
 ```python
 def put_custom_error_configuration(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayHttpListenerCustomErrorConfiguration]]
+  value: IResolvable | typing.List[ApplicationGatewayHttpListenerCustomErrorConfiguration]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.putCustomErrorConfiguration.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]
 
 ---
 
@@ -13017,7 +13017,7 @@ def reset_ssl_profile_name() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.sslCertificateId">ssl_certificate_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.sslProfileId">ssl_profile_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.customErrorConfigurationInput">custom_error_configuration_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.customErrorConfigurationInput">custom_error_configuration_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.firewallPolicyIdInput">firewall_policy_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.frontendIpConfigurationNameInput">frontend_ip_configuration_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.frontendPortNameInput">frontend_port_name_input</a></code> | <code>str</code> | *No description.* |
@@ -13025,7 +13025,7 @@ def reset_ssl_profile_name() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.hostNamesInput">host_names_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.protocolInput">protocol_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.requireSniInput">require_sni_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.requireSniInput">require_sni_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.sslCertificateNameInput">ssl_certificate_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.sslProfileNameInput">ssl_profile_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.firewallPolicyId">firewall_policy_id</a></code> | <code>str</code> | *No description.* |
@@ -13035,10 +13035,10 @@ def reset_ssl_profile_name() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.hostNames">host_names</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.protocol">protocol</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.requireSni">require_sni</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.requireSni">require_sni</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.sslCertificateName">ssl_certificate_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.sslProfileName">ssl_profile_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a></code> | *No description.* |
 
 ---
 
@@ -13129,10 +13129,10 @@ ssl_profile_id: str
 ##### `custom_error_configuration_input`<sup>Optional</sup> <a name="custom_error_configuration_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.customErrorConfigurationInput"></a>
 
 ```python
-custom_error_configuration_input: typing.Union[IResolvable, typing.List[ApplicationGatewayHttpListenerCustomErrorConfiguration]]
+custom_error_configuration_input: IResolvable | typing.List[ApplicationGatewayHttpListenerCustomErrorConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerCustomErrorConfiguration">ApplicationGatewayHttpListenerCustomErrorConfiguration</a>]
 
 ---
 
@@ -13209,10 +13209,10 @@ protocol_input: str
 ##### `require_sni_input`<sup>Optional</sup> <a name="require_sni_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.requireSniInput"></a>
 
 ```python
-require_sni_input: typing.Union[bool, IResolvable]
+require_sni_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -13309,10 +13309,10 @@ protocol: str
 ##### `require_sni`<sup>Required</sup> <a name="require_sni" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.requireSni"></a>
 
 ```python
-require_sni: typing.Union[bool, IResolvable]
+require_sni: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -13339,10 +13339,10 @@ ssl_profile_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListenerOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayHttpListener]
+internal_value: IResolvable | ApplicationGatewayHttpListener
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayHttpListener">ApplicationGatewayHttpListener</a>
 
 ---
 
@@ -14300,7 +14300,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -14331,10 +14331,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayPrivateLinkConfigurationIpConfiguration]]
+internal_value: IResolvable | typing.List[ApplicationGatewayPrivateLinkConfigurationIpConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]
 
 ---
 
@@ -14602,16 +14602,16 @@ def reset_private_ip_address() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.primaryInput">primary_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.primaryInput">primary_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.privateIpAddressAllocationInput">private_ip_address_allocation_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.privateIpAddressInput">private_ip_address_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.subnetIdInput">subnet_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.primary">primary</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.primary">primary</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.privateIpAddress">private_ip_address</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.privateIpAddressAllocation">private_ip_address_allocation</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.subnetId">subnet_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -14652,10 +14652,10 @@ name_input: str
 ##### `primary_input`<sup>Optional</sup> <a name="primary_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.primaryInput"></a>
 
 ```python
-primary_input: typing.Union[bool, IResolvable]
+primary_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14702,10 +14702,10 @@ name: str
 ##### `primary`<sup>Required</sup> <a name="primary" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.primary"></a>
 
 ```python
-primary: typing.Union[bool, IResolvable]
+primary: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -14742,10 +14742,10 @@ subnet_id: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayPrivateLinkConfigurationIpConfiguration]
+internal_value: IResolvable | ApplicationGatewayPrivateLinkConfigurationIpConfiguration
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>
 
 ---
 
@@ -14881,7 +14881,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -14912,10 +14912,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayPrivateLinkConfiguration]]
+internal_value: IResolvable | typing.List[ApplicationGatewayPrivateLinkConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]
 
 ---
 
@@ -15173,13 +15173,13 @@ Returns a reversible string representation.
 
 ```python
 def put_ip_configuration(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayPrivateLinkConfigurationIpConfiguration]]
+  value: IResolvable | typing.List[ApplicationGatewayPrivateLinkConfigurationIpConfiguration]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.putIpConfiguration.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]
 
 ---
 
@@ -15192,10 +15192,10 @@ def put_ip_configuration(
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.ipConfiguration">ip_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfigurationList">ApplicationGatewayPrivateLinkConfigurationIpConfigurationList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.ipConfigurationInput">ip_configuration_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.ipConfigurationInput">ip_configuration_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -15246,10 +15246,10 @@ ip_configuration: ApplicationGatewayPrivateLinkConfigurationIpConfigurationList
 ##### `ip_configuration_input`<sup>Optional</sup> <a name="ip_configuration_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.ipConfigurationInput"></a>
 
 ```python
-ip_configuration_input: typing.Union[IResolvable, typing.List[ApplicationGatewayPrivateLinkConfigurationIpConfiguration]]
+ip_configuration_input: IResolvable | typing.List[ApplicationGatewayPrivateLinkConfigurationIpConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationIpConfiguration">ApplicationGatewayPrivateLinkConfigurationIpConfiguration</a>]
 
 ---
 
@@ -15276,10 +15276,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayPrivateLinkConfiguration]
+internal_value: IResolvable | ApplicationGatewayPrivateLinkConfiguration
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayPrivateLinkConfiguration">ApplicationGatewayPrivateLinkConfiguration</a>
 
 ---
 
@@ -15415,7 +15415,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]</code> | *No description.* |
 
 ---
 
@@ -15446,10 +15446,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayProbe]]
+internal_value: IResolvable | typing.List[ApplicationGatewayProbe]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]
 
 ---
 
@@ -16103,7 +16103,7 @@ def reset_port() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.minimumServersInput">minimum_servers_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.pathInput">path_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.pickHostNameFromBackendHttpSettingsInput">pick_host_name_from_backend_http_settings_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.pickHostNameFromBackendHttpSettingsInput">pick_host_name_from_backend_http_settings_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.portInput">port_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.protocolInput">protocol_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.timeoutInput">timeout_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
@@ -16113,12 +16113,12 @@ def reset_port() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.minimumServers">minimum_servers</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.path">path</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.pickHostNameFromBackendHttpSettings">pick_host_name_from_backend_http_settings</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.pickHostNameFromBackendHttpSettings">pick_host_name_from_backend_http_settings</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.port">port</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.protocol">protocol</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.timeout">timeout</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.unhealthyThreshold">unhealthy_threshold</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a></code> | *No description.* |
 
 ---
 
@@ -16229,10 +16229,10 @@ path_input: str
 ##### `pick_host_name_from_backend_http_settings_input`<sup>Optional</sup> <a name="pick_host_name_from_backend_http_settings_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.pickHostNameFromBackendHttpSettingsInput"></a>
 
 ```python
-pick_host_name_from_backend_http_settings_input: typing.Union[bool, IResolvable]
+pick_host_name_from_backend_http_settings_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16329,10 +16329,10 @@ path: str
 ##### `pick_host_name_from_backend_http_settings`<sup>Required</sup> <a name="pick_host_name_from_backend_http_settings" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.pickHostNameFromBackendHttpSettings"></a>
 
 ```python
-pick_host_name_from_backend_http_settings: typing.Union[bool, IResolvable]
+pick_host_name_from_backend_http_settings: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16379,10 +16379,10 @@ unhealthy_threshold: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbeOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayProbe]
+internal_value: IResolvable | ApplicationGatewayProbe
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayProbe">ApplicationGatewayProbe</a>
 
 ---
 
@@ -16518,7 +16518,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -16549,10 +16549,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayRedirectConfiguration]]
+internal_value: IResolvable | typing.List[ApplicationGatewayRedirectConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]
 
 ---
 
@@ -16842,19 +16842,19 @@ def reset_target_url() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.targetListenerId">target_listener_id</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includePathInput">include_path_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includeQueryStringInput">include_query_string_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includePathInput">include_path_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includeQueryStringInput">include_query_string_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.redirectTypeInput">redirect_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.targetListenerNameInput">target_listener_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.targetUrlInput">target_url_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includePath">include_path</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includeQueryString">include_query_string</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includePath">include_path</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includeQueryString">include_query_string</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.redirectType">redirect_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.targetListenerName">target_listener_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.targetUrl">target_url</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -16905,20 +16905,20 @@ target_listener_id: str
 ##### `include_path_input`<sup>Optional</sup> <a name="include_path_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includePathInput"></a>
 
 ```python
-include_path_input: typing.Union[bool, IResolvable]
+include_path_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `include_query_string_input`<sup>Optional</sup> <a name="include_query_string_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includeQueryStringInput"></a>
 
 ```python
-include_query_string_input: typing.Union[bool, IResolvable]
+include_query_string_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -16965,20 +16965,20 @@ target_url_input: str
 ##### `include_path`<sup>Required</sup> <a name="include_path" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includePath"></a>
 
 ```python
-include_path: typing.Union[bool, IResolvable]
+include_path: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `include_query_string`<sup>Required</sup> <a name="include_query_string" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.includeQueryString"></a>
 
 ```python
-include_query_string: typing.Union[bool, IResolvable]
+include_query_string: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -17025,10 +17025,10 @@ target_url: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayRedirectConfiguration]
+internal_value: IResolvable | ApplicationGatewayRedirectConfiguration
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRedirectConfiguration">ApplicationGatewayRedirectConfiguration</a>
 
 ---
 
@@ -17164,7 +17164,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]</code> | *No description.* |
 
 ---
 
@@ -17195,10 +17195,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayRequestRoutingRule]]
+internal_value: IResolvable | typing.List[ApplicationGatewayRequestRoutingRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]
 
 ---
 
@@ -17525,7 +17525,7 @@ def reset_url_path_map_name() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.rewriteRuleSetName">rewrite_rule_set_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.ruleType">rule_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.urlPathMapName">url_path_map_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a></code> | *No description.* |
 
 ---
 
@@ -17806,10 +17806,10 @@ url_path_map_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayRequestRoutingRule]
+internal_value: IResolvable | ApplicationGatewayRequestRoutingRule
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRequestRoutingRule">ApplicationGatewayRequestRoutingRule</a>
 
 ---
 
@@ -17945,7 +17945,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]</code> | *No description.* |
 
 ---
 
@@ -17976,10 +17976,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSet]]
+internal_value: IResolvable | typing.List[ApplicationGatewayRewriteRuleSet]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]
 
 ---
 
@@ -18238,13 +18238,13 @@ Returns a reversible string representation.
 
 ```python
 def put_rewrite_rule(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRule]]
+  value: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRule]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.putRewriteRule.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]
 
 ---
 
@@ -18264,9 +18264,9 @@ def reset_rewrite_rule() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.rewriteRule">rewrite_rule</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleList">ApplicationGatewayRewriteRuleSetRewriteRuleList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.rewriteRuleInput">rewrite_rule_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.rewriteRuleInput">rewrite_rule_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a></code> | *No description.* |
 
 ---
 
@@ -18327,10 +18327,10 @@ name_input: str
 ##### `rewrite_rule_input`<sup>Optional</sup> <a name="rewrite_rule_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.rewriteRuleInput"></a>
 
 ```python
-rewrite_rule_input: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRule]]
+rewrite_rule_input: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]
 
 ---
 
@@ -18347,10 +18347,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayRewriteRuleSet]
+internal_value: IResolvable | ApplicationGatewayRewriteRuleSet
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSet">ApplicationGatewayRewriteRuleSet</a>
 
 ---
 
@@ -18486,7 +18486,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]</code> | *No description.* |
 
 ---
 
@@ -18517,10 +18517,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleCondition]]
+internal_value: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]
 
 ---
 
@@ -18794,15 +18794,15 @@ def reset_negate() -> None
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.ignoreCaseInput">ignore_case_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.negateInput">negate_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.ignoreCaseInput">ignore_case_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.negateInput">negate_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.patternInput">pattern_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.variableInput">variable_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.ignoreCase">ignore_case</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.negate">negate</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.ignoreCase">ignore_case</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.negate">negate</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.pattern">pattern</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.variable">variable</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a></code> | *No description.* |
 
 ---
 
@@ -18833,20 +18833,20 @@ fqn: str
 ##### `ignore_case_input`<sup>Optional</sup> <a name="ignore_case_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.ignoreCaseInput"></a>
 
 ```python
-ignore_case_input: typing.Union[bool, IResolvable]
+ignore_case_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `negate_input`<sup>Optional</sup> <a name="negate_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.negateInput"></a>
 
 ```python
-negate_input: typing.Union[bool, IResolvable]
+negate_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -18873,20 +18873,20 @@ variable_input: str
 ##### `ignore_case`<sup>Required</sup> <a name="ignore_case" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.ignoreCase"></a>
 
 ```python
-ignore_case: typing.Union[bool, IResolvable]
+ignore_case: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `negate`<sup>Required</sup> <a name="negate" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.negate"></a>
 
 ```python
-negate: typing.Union[bool, IResolvable]
+negate: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -18913,10 +18913,10 @@ variable: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleConditionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayRewriteRuleSetRewriteRuleCondition]
+internal_value: IResolvable | ApplicationGatewayRewriteRuleSetRewriteRuleCondition
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>
 
 ---
 
@@ -19052,7 +19052,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]</code> | *No description.* |
 
 ---
 
@@ -19083,10 +19083,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRule]]
+internal_value: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]
 
 ---
 
@@ -19351,13 +19351,13 @@ Returns a reversible string representation.
 
 ```python
 def put_condition(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleCondition]]
+  value: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleCondition]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.putCondition.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]
 
 ---
 
@@ -19365,13 +19365,13 @@ def put_condition(
 
 ```python
 def put_request_header_configuration(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration]]
+  value: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.putRequestHeaderConfiguration.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]
 
 ---
 
@@ -19379,13 +19379,13 @@ def put_request_header_configuration(
 
 ```python
 def put_response_header_configuration(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration]]
+  value: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.putResponseHeaderConfiguration.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]
 
 ---
 
@@ -19396,7 +19396,7 @@ def put_url(
   components: str = None,
   path: str = None,
   query_string: str = None,
-  reroute: typing.Union[bool, IResolvable] = None
+  reroute: bool | IResolvable = None
 ) -> None
 ```
 
@@ -19426,7 +19426,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 ###### `reroute`<sup>Optional</sup> <a name="reroute" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.putUrl.parameter.reroute"></a>
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/application_gateway#reroute ApplicationGateway#reroute}.
 
@@ -19467,15 +19467,15 @@ def reset_url() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.requestHeaderConfiguration">request_header_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationList">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.responseHeaderConfiguration">response_header_configuration</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationList">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.url">url</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference">ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.conditionInput">condition_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.conditionInput">condition_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.requestHeaderConfigurationInput">request_header_configuration_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.responseHeaderConfigurationInput">response_header_configuration_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.requestHeaderConfigurationInput">request_header_configuration_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.responseHeaderConfigurationInput">response_header_configuration_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.ruleSequenceInput">rule_sequence_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.urlInput">url_input</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl">ApplicationGatewayRewriteRuleSetRewriteRuleUrl</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.ruleSequence">rule_sequence</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a></code> | *No description.* |
 
 ---
 
@@ -19546,10 +19546,10 @@ url: ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference
 ##### `condition_input`<sup>Optional</sup> <a name="condition_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.conditionInput"></a>
 
 ```python
-condition_input: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleCondition]]
+condition_input: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleCondition]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleCondition">ApplicationGatewayRewriteRuleSetRewriteRuleCondition</a>]
 
 ---
 
@@ -19566,20 +19566,20 @@ name_input: str
 ##### `request_header_configuration_input`<sup>Optional</sup> <a name="request_header_configuration_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.requestHeaderConfigurationInput"></a>
 
 ```python
-request_header_configuration_input: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration]]
+request_header_configuration_input: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]
 
 ---
 
 ##### `response_header_configuration_input`<sup>Optional</sup> <a name="response_header_configuration_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.responseHeaderConfigurationInput"></a>
 
 ```python
-response_header_configuration_input: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration]]
+response_header_configuration_input: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]
 
 ---
 
@@ -19626,10 +19626,10 @@ rule_sequence: typing.Union[int, float]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayRewriteRuleSetRewriteRule]
+internal_value: IResolvable | ApplicationGatewayRewriteRuleSetRewriteRule
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRule">ApplicationGatewayRewriteRuleSetRewriteRule</a>
 
 ---
 
@@ -19765,7 +19765,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -19796,10 +19796,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration]]
+internal_value: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]
 
 ---
 
@@ -20063,7 +20063,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.headerValueInput">header_value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -20134,10 +20134,10 @@ header_value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration]
+internal_value: IResolvable | ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration</a>
 
 ---
 
@@ -20273,7 +20273,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]</code> | *No description.* |
 
 ---
 
@@ -20304,10 +20304,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration]]
+internal_value: IResolvable | typing.List[ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]
 
 ---
 
@@ -20571,7 +20571,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.headerValueInput">header_value_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.headerName">header_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.headerValue">header_value</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a></code> | *No description.* |
 
 ---
 
@@ -20642,10 +20642,10 @@ header_value: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfigurationOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration]
+internal_value: IResolvable | ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration</a>
 
 ---
 
@@ -20916,11 +20916,11 @@ def reset_reroute() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.componentsInput">components_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.pathInput">path_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.queryStringInput">query_string_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.rerouteInput">reroute_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.rerouteInput">reroute_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.components">components</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.path">path</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.queryString">query_string</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.reroute">reroute</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.reroute">reroute</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrl">ApplicationGatewayRewriteRuleSetRewriteRuleUrl</a></code> | *No description.* |
 
 ---
@@ -20982,10 +20982,10 @@ query_string_input: str
 ##### `reroute_input`<sup>Optional</sup> <a name="reroute_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.rerouteInput"></a>
 
 ```python
-reroute_input: typing.Union[bool, IResolvable]
+reroute_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -21022,10 +21022,10 @@ query_string: str
 ##### `reroute`<sup>Required</sup> <a name="reroute" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayRewriteRuleSetRewriteRuleUrlOutputReference.property.reroute"></a>
 
 ```python
-reroute: typing.Union[bool, IResolvable]
+reroute: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -21518,7 +21518,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]</code> | *No description.* |
 
 ---
 
@@ -21549,10 +21549,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewaySslCertificate]]
+internal_value: IResolvable | typing.List[ApplicationGatewaySslCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]
 
 ---
 
@@ -21843,7 +21843,7 @@ def reset_password() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.keyVaultSecretId">key_vault_secret_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.password">password</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a></code> | *No description.* |
 
 ---
 
@@ -21974,10 +21974,10 @@ password: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewaySslCertificate]
+internal_value: IResolvable | ApplicationGatewaySslCertificate
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslCertificate">ApplicationGatewaySslCertificate</a>
 
 ---
 
@@ -22532,7 +22532,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]</code> | *No description.* |
 
 ---
 
@@ -22563,10 +22563,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewaySslProfile]]
+internal_value: IResolvable | typing.List[ApplicationGatewaySslProfile]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]
 
 ---
 
@@ -22913,12 +22913,12 @@ def reset_verify_client_cert_issuer_dn() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.sslPolicyInput">ssl_policy_input</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileSslPolicy">ApplicationGatewaySslProfileSslPolicy</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.trustedClientCertificateNamesInput">trusted_client_certificate_names_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.verifyClientCertificateRevocationInput">verify_client_certificate_revocation_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.verifyClientCertIssuerDnInput">verify_client_cert_issuer_dn_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.verifyClientCertIssuerDnInput">verify_client_cert_issuer_dn_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.trustedClientCertificateNames">trusted_client_certificate_names</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.verifyClientCertificateRevocation">verify_client_certificate_revocation</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.verifyClientCertIssuerDn">verify_client_cert_issuer_dn</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.verifyClientCertIssuerDn">verify_client_cert_issuer_dn</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a></code> | *No description.* |
 
 ---
 
@@ -23009,10 +23009,10 @@ verify_client_certificate_revocation_input: str
 ##### `verify_client_cert_issuer_dn_input`<sup>Optional</sup> <a name="verify_client_cert_issuer_dn_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.verifyClientCertIssuerDnInput"></a>
 
 ```python
-verify_client_cert_issuer_dn_input: typing.Union[bool, IResolvable]
+verify_client_cert_issuer_dn_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -23049,20 +23049,20 @@ verify_client_certificate_revocation: str
 ##### `verify_client_cert_issuer_dn`<sup>Required</sup> <a name="verify_client_cert_issuer_dn" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.verifyClientCertIssuerDn"></a>
 
 ```python
-verify_client_cert_issuer_dn: typing.Union[bool, IResolvable]
+verify_client_cert_issuer_dn: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfileOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewaySslProfile]
+internal_value: IResolvable | ApplicationGatewaySslProfile
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewaySslProfile">ApplicationGatewaySslProfile</a>
 
 ---
 
@@ -23757,7 +23757,7 @@ def reset_update() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.delete">delete</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.read">read</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.update">update</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a></code> | *No description.* |
 
 ---
 
@@ -23868,10 +23868,10 @@ update: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeoutsOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayTimeouts]
+internal_value: IResolvable | ApplicationGatewayTimeouts
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTimeouts">ApplicationGatewayTimeouts</a>
 
 ---
 
@@ -24007,7 +24007,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]</code> | *No description.* |
 
 ---
 
@@ -24038,10 +24038,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedClientCertificate]]
+internal_value: IResolvable | typing.List[ApplicationGatewayTrustedClientCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]
 
 ---
 
@@ -24306,7 +24306,7 @@ Returns a reversible string representation.
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.data">data</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a></code> | *No description.* |
 
 ---
 
@@ -24387,10 +24387,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayTrustedClientCertificate]
+internal_value: IResolvable | ApplicationGatewayTrustedClientCertificate
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedClientCertificate">ApplicationGatewayTrustedClientCertificate</a>
 
 ---
 
@@ -24526,7 +24526,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]</code> | *No description.* |
 
 ---
 
@@ -24557,10 +24557,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayTrustedRootCertificate]]
+internal_value: IResolvable | typing.List[ApplicationGatewayTrustedRootCertificate]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]
 
 ---
 
@@ -24841,7 +24841,7 @@ def reset_key_vault_secret_id() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.data">data</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.keyVaultSecretId">key_vault_secret_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a></code> | *No description.* |
 
 ---
 
@@ -24942,10 +24942,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificateOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayTrustedRootCertificate]
+internal_value: IResolvable | ApplicationGatewayTrustedRootCertificate
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayTrustedRootCertificate">ApplicationGatewayTrustedRootCertificate</a>
 
 ---
 
@@ -25081,7 +25081,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]</code> | *No description.* |
 
 ---
 
@@ -25112,10 +25112,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayUrlPathMap]]
+internal_value: IResolvable | typing.List[ApplicationGatewayUrlPathMap]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]
 
 ---
 
@@ -25377,13 +25377,13 @@ Returns a reversible string representation.
 
 ```python
 def put_path_rule(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayUrlPathMapPathRule]]
+  value: IResolvable | typing.List[ApplicationGatewayUrlPathMapPathRule]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.putPathRule.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]
 
 ---
 
@@ -25429,13 +25429,13 @@ def reset_default_rewrite_rule_set_name() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.defaultRedirectConfigurationNameInput">default_redirect_configuration_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.defaultRewriteRuleSetNameInput">default_rewrite_rule_set_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.pathRuleInput">path_rule_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.pathRuleInput">path_rule_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.defaultBackendAddressPoolName">default_backend_address_pool_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.defaultBackendHttpSettingsName">default_backend_http_settings_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.defaultRedirectConfigurationName">default_redirect_configuration_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.defaultRewriteRuleSetName">default_rewrite_rule_set_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.name">name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a></code> | *No description.* |
 
 ---
 
@@ -25576,10 +25576,10 @@ name_input: str
 ##### `path_rule_input`<sup>Optional</sup> <a name="path_rule_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.pathRuleInput"></a>
 
 ```python
-path_rule_input: typing.Union[IResolvable, typing.List[ApplicationGatewayUrlPathMapPathRule]]
+path_rule_input: IResolvable | typing.List[ApplicationGatewayUrlPathMapPathRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]
 
 ---
 
@@ -25636,10 +25636,10 @@ name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayUrlPathMap]
+internal_value: IResolvable | ApplicationGatewayUrlPathMap
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMap">ApplicationGatewayUrlPathMap</a>
 
 ---
 
@@ -25775,7 +25775,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]</code> | *No description.* |
 
 ---
 
@@ -25806,10 +25806,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayUrlPathMapPathRule]]
+internal_value: IResolvable | typing.List[ApplicationGatewayUrlPathMapPathRule]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]
 
 ---
 
@@ -26123,7 +26123,7 @@ def reset_rewrite_rule_set_name() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.paths">paths</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.redirectConfigurationName">redirect_configuration_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.rewriteRuleSetName">rewrite_rule_set_name</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a></code> | *No description.* |
 
 ---
 
@@ -26344,10 +26344,10 @@ rewrite_rule_set_name: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRuleOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayUrlPathMapPathRule]
+internal_value: IResolvable | ApplicationGatewayUrlPathMapPathRule
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayUrlPathMapPathRule">ApplicationGatewayUrlPathMapPathRule</a>
 
 ---
 
@@ -26483,7 +26483,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]</code> | *No description.* |
 
 ---
 
@@ -26514,10 +26514,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup]]
+internal_value: IResolvable | typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]
 
 ---
 
@@ -26788,7 +26788,7 @@ def reset_rules() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.rulesInput">rules_input</a></code> | <code>typing.List[typing.Union[int, float]]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.ruleGroupName">rule_group_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.rules">rules</a></code> | <code>typing.List[typing.Union[int, float]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a></code> | *No description.* |
 
 ---
 
@@ -26859,10 +26859,10 @@ rules: typing.List[typing.Union[int, float]]
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayWafConfigurationDisabledRuleGroup]
+internal_value: IResolvable | ApplicationGatewayWafConfigurationDisabledRuleGroup
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>
 
 ---
 
@@ -26998,7 +26998,7 @@ the index of the item to return.
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionList.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionList.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]</code> | *No description.* |
 
 ---
 
@@ -27029,10 +27029,10 @@ fqn: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionList.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationExclusion]]
+internal_value: IResolvable | typing.List[ApplicationGatewayWafConfigurationExclusion]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]
 
 ---
 
@@ -27312,7 +27312,7 @@ def reset_selector_match_operator() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.matchVariable">match_variable</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.selector">selector</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.selectorMatchOperator">selector_match_operator</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.internalValue">internal_value</a></code> | <code>typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.internalValue">internal_value</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a></code> | *No description.* |
 
 ---
 
@@ -27403,10 +27403,10 @@ selector_match_operator: str
 ##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionOutputReference.property.internalValue"></a>
 
 ```python
-internal_value: typing.Union[IResolvable, ApplicationGatewayWafConfigurationExclusion]
+internal_value: IResolvable | ApplicationGatewayWafConfigurationExclusion
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]
+- *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>
 
 ---
 
@@ -27651,13 +27651,13 @@ Returns a reversible string representation.
 
 ```python
 def put_disabled_rule_group(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup]]
+  value: IResolvable | typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.putDisabledRuleGroup.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]
 
 ---
 
@@ -27665,13 +27665,13 @@ def put_disabled_rule_group(
 
 ```python
 def put_exclusion(
-  value: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationExclusion]]
+  value: IResolvable | typing.List[ApplicationGatewayWafConfigurationExclusion]
 ) -> None
 ```
 
 ###### `value`<sup>Required</sup> <a name="value" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.putExclusion.parameter.value"></a>
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]
 
 ---
 
@@ -27720,20 +27720,20 @@ def reset_rule_set_type() -> None
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.disabledRuleGroup">disabled_rule_group</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroupList">ApplicationGatewayWafConfigurationDisabledRuleGroupList</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.exclusion">exclusion</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusionList">ApplicationGatewayWafConfigurationExclusionList</a></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.disabledRuleGroupInput">disabled_rule_group_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.enabledInput">enabled_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.exclusionInput">exclusion_input</a></code> | <code>typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.disabledRuleGroupInput">disabled_rule_group_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.enabledInput">enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.exclusionInput">exclusion_input</a></code> | <code>cdktf.IResolvable \| typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.fileUploadLimitMbInput">file_upload_limit_mb_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.firewallModeInput">firewall_mode_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.maxRequestBodySizeKbInput">max_request_body_size_kb_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.requestBodyCheckInput">request_body_check_input</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.requestBodyCheckInput">request_body_check_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.ruleSetTypeInput">rule_set_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.ruleSetVersionInput">rule_set_version_input</a></code> | <code>str</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.enabled">enabled</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.fileUploadLimitMb">file_upload_limit_mb</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.firewallMode">firewall_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.maxRequestBodySizeKb">max_request_body_size_kb</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.requestBodyCheck">request_body_check</a></code> | <code>typing.Union[bool, cdktf.IResolvable]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.requestBodyCheck">request_body_check</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.ruleSetType">rule_set_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.ruleSetVersion">rule_set_version</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfiguration">ApplicationGatewayWafConfiguration</a></code> | *No description.* |
@@ -27787,30 +27787,30 @@ exclusion: ApplicationGatewayWafConfigurationExclusionList
 ##### `disabled_rule_group_input`<sup>Optional</sup> <a name="disabled_rule_group_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.disabledRuleGroupInput"></a>
 
 ```python
-disabled_rule_group_input: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup]]
+disabled_rule_group_input: IResolvable | typing.List[ApplicationGatewayWafConfigurationDisabledRuleGroup]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationDisabledRuleGroup">ApplicationGatewayWafConfigurationDisabledRuleGroup</a>]
 
 ---
 
 ##### `enabled_input`<sup>Optional</sup> <a name="enabled_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.enabledInput"></a>
 
 ```python
-enabled_input: typing.Union[bool, IResolvable]
+enabled_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
 ##### `exclusion_input`<sup>Optional</sup> <a name="exclusion_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.exclusionInput"></a>
 
 ```python
-exclusion_input: typing.Union[IResolvable, typing.List[ApplicationGatewayWafConfigurationExclusion]]
+exclusion_input: IResolvable | typing.List[ApplicationGatewayWafConfigurationExclusion]
 ```
 
-- *Type:* typing.Union[cdktf.IResolvable, typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]]
+- *Type:* cdktf.IResolvable | typing.List[<a href="#@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationExclusion">ApplicationGatewayWafConfigurationExclusion</a>]
 
 ---
 
@@ -27847,10 +27847,10 @@ max_request_body_size_kb_input: typing.Union[int, float]
 ##### `request_body_check_input`<sup>Optional</sup> <a name="request_body_check_input" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.requestBodyCheckInput"></a>
 
 ```python
-request_body_check_input: typing.Union[bool, IResolvable]
+request_body_check_input: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -27877,10 +27877,10 @@ rule_set_version_input: str
 ##### `enabled`<sup>Required</sup> <a name="enabled" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.enabled"></a>
 
 ```python
-enabled: typing.Union[bool, IResolvable]
+enabled: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -27917,10 +27917,10 @@ max_request_body_size_kb: typing.Union[int, float]
 ##### `request_body_check`<sup>Required</sup> <a name="request_body_check" id="@cdktf/provider-azurerm.applicationGateway.ApplicationGatewayWafConfigurationOutputReference.property.requestBodyCheck"></a>
 
 ```python
-request_body_check: typing.Union[bool, IResolvable]
+request_body_check: bool | IResolvable
 ```
 
-- *Type:* typing.Union[bool, cdktf.IResolvable]
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
