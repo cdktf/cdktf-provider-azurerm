@@ -1,3 +1,3 @@
 # `azurerm_lighthouse_assignment`
 
-Refer to the Terraform Registry for docs: [`azurerm_lighthouse_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/lighthouse_assignment).
+Refer to the Terraform Registry for docs: [`azurerm_lighthouse_assignment`](https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/lighthouse_assignment).

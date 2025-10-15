@@ -1,3 +1,3 @@
 # `azurerm_fabric_capacity`
 
-Refer to the Terraform Registry for docs: [`azurerm_fabric_capacity`](https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/fabric_capacity).
+Refer to the Terraform Registry for docs: [`azurerm_fabric_capacity`](https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/fabric_capacity).

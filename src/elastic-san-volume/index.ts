@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,44 +13,44 @@ import * as cdktf from 'cdktf';
 
 export interface ElasticSanVolumeConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#id ElasticSanVolume#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#id ElasticSanVolume#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#name ElasticSanVolume#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#name ElasticSanVolume#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#size_in_gib ElasticSanVolume#size_in_gib}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#size_in_gib ElasticSanVolume#size_in_gib}
   */
   readonly sizeInGib: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#volume_group_id ElasticSanVolume#volume_group_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#volume_group_id ElasticSanVolume#volume_group_id}
   */
   readonly volumeGroupId: string;
   /**
   * create_source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#create_source ElasticSanVolume#create_source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#create_source ElasticSanVolume#create_source}
   */
   readonly createSource?: ElasticSanVolumeCreateSource;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#timeouts ElasticSanVolume#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#timeouts ElasticSanVolume#timeouts}
   */
   readonly timeouts?: ElasticSanVolumeTimeouts;
 }
 export interface ElasticSanVolumeCreateSource {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#source_id ElasticSanVolume#source_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#source_id ElasticSanVolume#source_id}
   */
   readonly sourceId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#source_type ElasticSanVolume#source_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#source_type ElasticSanVolume#source_type}
   */
   readonly sourceType: string;
 }
@@ -157,19 +157,19 @@ export class ElasticSanVolumeCreateSourceOutputReference extends cdktf.ComplexOb
 }
 export interface ElasticSanVolumeTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#create ElasticSanVolume#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#create ElasticSanVolume#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#delete ElasticSanVolume#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#delete ElasticSanVolume#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#read ElasticSanVolume#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#read ElasticSanVolume#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#update ElasticSanVolume#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#update ElasticSanVolume#update}
   */
   readonly update?: string;
 }
@@ -350,7 +350,7 @@ export class ElasticSanVolumeTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume azurerm_elastic_san_volume}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume azurerm_elastic_san_volume}
 */
 export class ElasticSanVolume extends cdktf.TerraformResource {
 
@@ -366,7 +366,7 @@ export class ElasticSanVolume extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ElasticSanVolume resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ElasticSanVolume to import
-  * @param importFromId The id of the existing ElasticSanVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ElasticSanVolume that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ElasticSanVolume to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -378,7 +378,7 @@ export class ElasticSanVolume extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/elastic_san_volume azurerm_elastic_san_volume} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/elastic_san_volume azurerm_elastic_san_volume} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -389,7 +389,7 @@ export class ElasticSanVolume extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_elastic_san_volume',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.47.0',
+        providerVersion: '4.48.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
