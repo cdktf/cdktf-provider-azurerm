@@ -4,7 +4,7 @@
 
 ### LinuxFunctionAppSlot <a name="LinuxFunctionAppSlot" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot azurerm_linux_function_app_slot}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot azurerm_linux_function_app_slot}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer"></a>
 
@@ -82,25 +82,25 @@ LinuxFunctionAppSlot.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.contentShareForceDisabled">contentShareForceDisabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Force disable the content share settings. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.dailyMemoryTimeQuota">dailyMemoryTimeQuota</a></code> | <code>java.lang.Number</code> | The amount of memory in gigabyte-seconds that your application is allowed to consume per day. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Is the Linux Function App Slot enabled. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.ftpPublishBasicAuthenticationEnabled">ftpPublishBasicAuthenticationEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#ftp_publish_basic_authentication_enabled LinuxFunctionAppSlot#ftp_publish_basic_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.ftpPublishBasicAuthenticationEnabled">ftpPublishBasicAuthenticationEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#ftp_publish_basic_authentication_enabled LinuxFunctionAppSlot#ftp_publish_basic_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.functionsExtensionVersion">functionsExtensionVersion</a></code> | <code>java.lang.String</code> | The runtime version associated with the Function App Slot. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.httpsOnly">httpsOnly</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Can the Function App Slot only be accessed via HTTPS? |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#id LinuxFunctionAppSlot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#id LinuxFunctionAppSlot#id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotIdentity">LinuxFunctionAppSlotIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.keyVaultReferenceIdentityId">keyVaultReferenceIdentityId</a></code> | <code>java.lang.String</code> | The User Assigned Identity to use for Key Vault access. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#public_network_access_enabled LinuxFunctionAppSlot#public_network_access_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.servicePlanId">servicePlanId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#service_plan_id LinuxFunctionAppSlot#service_plan_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#public_network_access_enabled LinuxFunctionAppSlot#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.servicePlanId">servicePlanId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#service_plan_id LinuxFunctionAppSlot#service_plan_id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.storageAccount">storageAccount</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount">LinuxFunctionAppSlotStorageAccount</a>></code> | storage_account block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.storageAccountAccessKey">storageAccountAccessKey</a></code> | <code>java.lang.String</code> | The access key which will be used to access the storage account for the Function App Slot. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.storageAccountName">storageAccountName</a></code> | <code>java.lang.String</code> | The backend storage account name which will be used by this Function App Slot. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.storageKeyVaultSecretId">storageKeyVaultSecretId</a></code> | <code>java.lang.String</code> | The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.storageUsesManagedIdentity">storageUsesManagedIdentity</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Should the Function App Slot use its Managed Identity to access storage? |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#tags LinuxFunctionAppSlot#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#tags LinuxFunctionAppSlot#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts">LinuxFunctionAppSlotTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.virtualNetworkBackupRestoreEnabled">virtualNetworkBackupRestoreEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#virtual_network_backup_restore_enabled LinuxFunctionAppSlot#virtual_network_backup_restore_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.virtualNetworkBackupRestoreEnabled">virtualNetworkBackupRestoreEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#virtual_network_backup_restore_enabled LinuxFunctionAppSlot#virtual_network_backup_restore_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.vnetImagePullEnabled">vnetImagePullEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Is container image pull over virtual network enabled? Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.webdeployPublishBasicAuthenticationEnabled">webdeployPublishBasicAuthenticationEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#webdeploy_publish_basic_authentication_enabled LinuxFunctionAppSlot#webdeploy_publish_basic_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlot.Initializer.parameter.webdeployPublishBasicAuthenticationEnabled">webdeployPublishBasicAuthenticationEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#webdeploy_publish_basic_authentication_enabled LinuxFunctionAppSlot#webdeploy_publish_basic_authentication_enabled}. |
 
 ---
 
@@ -170,7 +170,7 @@ Must be unique amongst siblings in the same scope
 
 The ID of the Linux Function App this Slot is a member of.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#function_app_id LinuxFunctionAppSlot#function_app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#function_app_id LinuxFunctionAppSlot#function_app_id}
 
 ---
 
@@ -180,7 +180,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Specifies the name of the Function App Slot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
 
 ---
 
@@ -190,7 +190,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 site_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#site_config LinuxFunctionAppSlot#site_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#site_config LinuxFunctionAppSlot#site_config}
 
 ---
 
@@ -200,7 +200,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#app_settings LinuxFunctionAppSlot#app_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#app_settings LinuxFunctionAppSlot#app_settings}
 
 ---
 
@@ -210,7 +210,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 auth_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#auth_settings LinuxFunctionAppSlot#auth_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#auth_settings LinuxFunctionAppSlot#auth_settings}
 
 ---
 
@@ -220,7 +220,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 auth_settings_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#auth_settings_v2 LinuxFunctionAppSlot#auth_settings_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#auth_settings_v2 LinuxFunctionAppSlot#auth_settings_v2}
 
 ---
 
@@ -230,7 +230,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 backup block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#backup LinuxFunctionAppSlot#backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#backup LinuxFunctionAppSlot#backup}
 
 ---
 
@@ -240,7 +240,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Should built in logging be enabled. Configures `AzureWebJobsDashboard` app setting based on the configured storage setting.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#builtin_logging_enabled LinuxFunctionAppSlot#builtin_logging_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#builtin_logging_enabled LinuxFunctionAppSlot#builtin_logging_enabled}
 
 ---
 
@@ -250,7 +250,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Should the Function App Slot use Client Certificates.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_certificate_enabled LinuxFunctionAppSlot#client_certificate_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_certificate_enabled LinuxFunctionAppSlot#client_certificate_enabled}
 
 ---
 
@@ -260,7 +260,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Paths to exclude when using client certificates, separated by ;
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_certificate_exclusion_paths LinuxFunctionAppSlot#client_certificate_exclusion_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_certificate_exclusion_paths LinuxFunctionAppSlot#client_certificate_exclusion_paths}
 
 ---
 
@@ -272,7 +272,7 @@ The mode of the Function App Slot's client certificates requirement for incoming
 
 Possible values are `Required`, `Optional`, and `OptionalInteractiveUser`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_certificate_mode LinuxFunctionAppSlot#client_certificate_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_certificate_mode LinuxFunctionAppSlot#client_certificate_mode}
 
 ---
 
@@ -282,7 +282,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 connection_string block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#connection_string LinuxFunctionAppSlot#connection_string}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#connection_string LinuxFunctionAppSlot#connection_string}
 
 ---
 
@@ -292,7 +292,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Force disable the content share settings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#content_share_force_disabled LinuxFunctionAppSlot#content_share_force_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#content_share_force_disabled LinuxFunctionAppSlot#content_share_force_disabled}
 
 ---
 
@@ -304,7 +304,7 @@ The amount of memory in gigabyte-seconds that your application is allowed to con
 
 Setting this value only affects function apps in Consumption Plans.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#daily_memory_time_quota LinuxFunctionAppSlot#daily_memory_time_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#daily_memory_time_quota LinuxFunctionAppSlot#daily_memory_time_quota}
 
 ---
 
@@ -314,7 +314,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Is the Linux Function App Slot enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#enabled LinuxFunctionAppSlot#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#enabled LinuxFunctionAppSlot#enabled}
 
 ---
 
@@ -322,7 +322,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#ftp_publish_basic_authentication_enabled LinuxFunctionAppSlot#ftp_publish_basic_authentication_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#ftp_publish_basic_authentication_enabled LinuxFunctionAppSlot#ftp_publish_basic_authentication_enabled}.
 
 ---
 
@@ -332,7 +332,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The runtime version associated with the Function App Slot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#functions_extension_version LinuxFunctionAppSlot#functions_extension_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#functions_extension_version LinuxFunctionAppSlot#functions_extension_version}
 
 ---
 
@@ -342,7 +342,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Can the Function App Slot only be accessed via HTTPS?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#https_only LinuxFunctionAppSlot#https_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#https_only LinuxFunctionAppSlot#https_only}
 
 ---
 
@@ -350,7 +350,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#id LinuxFunctionAppSlot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#id LinuxFunctionAppSlot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -363,7 +363,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#identity LinuxFunctionAppSlot#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#identity LinuxFunctionAppSlot#identity}
 
 ---
 
@@ -373,7 +373,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The User Assigned Identity to use for Key Vault access.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#key_vault_reference_identity_id LinuxFunctionAppSlot#key_vault_reference_identity_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#key_vault_reference_identity_id LinuxFunctionAppSlot#key_vault_reference_identity_id}
 
 ---
 
@@ -381,7 +381,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#public_network_access_enabled LinuxFunctionAppSlot#public_network_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#public_network_access_enabled LinuxFunctionAppSlot#public_network_access_enabled}.
 
 ---
 
@@ -389,7 +389,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#service_plan_id LinuxFunctionAppSlot#service_plan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#service_plan_id LinuxFunctionAppSlot#service_plan_id}.
 
 ---
 
@@ -399,7 +399,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 storage_account block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#storage_account LinuxFunctionAppSlot#storage_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#storage_account LinuxFunctionAppSlot#storage_account}
 
 ---
 
@@ -409,7 +409,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The access key which will be used to access the storage account for the Function App Slot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#storage_account_access_key LinuxFunctionAppSlot#storage_account_access_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#storage_account_access_key LinuxFunctionAppSlot#storage_account_access_key}
 
 ---
 
@@ -419,7 +419,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The backend storage account name which will be used by this Function App Slot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#storage_account_name LinuxFunctionAppSlot#storage_account_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#storage_account_name LinuxFunctionAppSlot#storage_account_name}
 
 ---
 
@@ -429,7 +429,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#storage_key_vault_secret_id LinuxFunctionAppSlot#storage_key_vault_secret_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#storage_key_vault_secret_id LinuxFunctionAppSlot#storage_key_vault_secret_id}
 
 ---
 
@@ -439,7 +439,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Should the Function App Slot use its Managed Identity to access storage?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#storage_uses_managed_identity LinuxFunctionAppSlot#storage_uses_managed_identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#storage_uses_managed_identity LinuxFunctionAppSlot#storage_uses_managed_identity}
 
 ---
 
@@ -447,7 +447,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#tags LinuxFunctionAppSlot#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#tags LinuxFunctionAppSlot#tags}.
 
 ---
 
@@ -457,7 +457,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#timeouts LinuxFunctionAppSlot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#timeouts LinuxFunctionAppSlot#timeouts}
 
 ---
 
@@ -465,7 +465,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#virtual_network_backup_restore_enabled LinuxFunctionAppSlot#virtual_network_backup_restore_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#virtual_network_backup_restore_enabled LinuxFunctionAppSlot#virtual_network_backup_restore_enabled}.
 
 ---
 
@@ -473,7 +473,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}.
 
 ---
 
@@ -483,7 +483,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 Is container image pull over virtual network enabled? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#vnet_image_pull_enabled LinuxFunctionAppSlot#vnet_image_pull_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#vnet_image_pull_enabled LinuxFunctionAppSlot#vnet_image_pull_enabled}
 
 ---
 
@@ -491,7 +491,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#webdeploy_publish_basic_authentication_enabled LinuxFunctionAppSlot#webdeploy_publish_basic_authentication_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#webdeploy_publish_basic_authentication_enabled LinuxFunctionAppSlot#webdeploy_publish_basic_authentication_enabled}.
 
 ---
 
@@ -1239,7 +1239,7 @@ The construct id used in the generated config for the LinuxFunctionAppSlot to im
 
 The id of the existing LinuxFunctionAppSlot that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -2339,7 +2339,7 @@ public java.lang.Boolean|IResolvable getEnabled();
 
 Should the Authentication / Authorization feature be enabled?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#enabled LinuxFunctionAppSlot#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#enabled LinuxFunctionAppSlot#enabled}
 
 ---
 
@@ -2353,7 +2353,7 @@ public LinuxFunctionAppSlotAuthSettingsActiveDirectory getActiveDirectory();
 
 active_directory block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#active_directory LinuxFunctionAppSlot#active_directory}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#active_directory LinuxFunctionAppSlot#active_directory}
 
 ---
 
@@ -2367,7 +2367,7 @@ public java.util.Map<java.lang.String, java.lang.String> getAdditionalLoginParam
 
 Specifies a map of Login Parameters to send to the OpenID Connect authorization endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#additional_login_parameters LinuxFunctionAppSlot#additional_login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#additional_login_parameters LinuxFunctionAppSlot#additional_login_parameters}
 
 ---
 
@@ -2381,7 +2381,7 @@ public java.util.List<java.lang.String> getAllowedExternalRedirectUrls();
 
 Specifies a list of External URLs that can be redirected to as part of logging in or logging out of the Windows Web App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#allowed_external_redirect_urls LinuxFunctionAppSlot#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#allowed_external_redirect_urls LinuxFunctionAppSlot#allowed_external_redirect_urls}
 
 ---
 
@@ -2397,7 +2397,7 @@ The default authentication provider to use when multiple providers are configure
 
 Possible values include: `AzureActiveDirectory`, `Facebook`, `Google`, `MicrosoftAccount`, `Twitter`, `Github`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#default_provider LinuxFunctionAppSlot#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#default_provider LinuxFunctionAppSlot#default_provider}
 
 ---
 
@@ -2411,7 +2411,7 @@ public LinuxFunctionAppSlotAuthSettingsFacebook getFacebook();
 
 facebook block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#facebook LinuxFunctionAppSlot#facebook}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#facebook LinuxFunctionAppSlot#facebook}
 
 ---
 
@@ -2425,7 +2425,7 @@ public LinuxFunctionAppSlotAuthSettingsGithub getGithub();
 
 github block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#github LinuxFunctionAppSlot#github}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#github LinuxFunctionAppSlot#github}
 
 ---
 
@@ -2439,7 +2439,7 @@ public LinuxFunctionAppSlotAuthSettingsGoogle getGoogle();
 
 google block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#google LinuxFunctionAppSlot#google}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#google LinuxFunctionAppSlot#google}
 
 ---
 
@@ -2453,7 +2453,7 @@ public java.lang.String getIssuer();
 
 The OpenID Connect Issuer URI that represents the entity which issues access tokens.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#issuer LinuxFunctionAppSlot#issuer}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#issuer LinuxFunctionAppSlot#issuer}
 
 ---
 
@@ -2467,7 +2467,7 @@ public LinuxFunctionAppSlotAuthSettingsMicrosoft getMicrosoft();
 
 microsoft block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#microsoft LinuxFunctionAppSlot#microsoft}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#microsoft LinuxFunctionAppSlot#microsoft}
 
 ---
 
@@ -2481,7 +2481,7 @@ public java.lang.String getRuntimeVersion();
 
 The RuntimeVersion of the Authentication / Authorization feature in use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#runtime_version LinuxFunctionAppSlot#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#runtime_version LinuxFunctionAppSlot#runtime_version}
 
 ---
 
@@ -2497,7 +2497,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#token_refresh_extension_hours LinuxFunctionAppSlot#token_refresh_extension_hours}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#token_refresh_extension_hours LinuxFunctionAppSlot#token_refresh_extension_hours}
 
 ---
 
@@ -2511,7 +2511,7 @@ public java.lang.Boolean|IResolvable getTokenStoreEnabled();
 
 Should the Windows Web App durably store platform-specific security tokens that are obtained during login flows? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#token_store_enabled LinuxFunctionAppSlot#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#token_store_enabled LinuxFunctionAppSlot#token_store_enabled}
 
 ---
 
@@ -2525,7 +2525,7 @@ public LinuxFunctionAppSlotAuthSettingsTwitter getTwitter();
 
 twitter block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#twitter LinuxFunctionAppSlot#twitter}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#twitter LinuxFunctionAppSlot#twitter}
 
 ---
 
@@ -2539,7 +2539,7 @@ public java.lang.String getUnauthenticatedClientAction();
 
 The action to take when an unauthenticated client attempts to access the app. Possible values include: `RedirectToLoginPage`, `AllowAnonymous`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#unauthenticated_client_action LinuxFunctionAppSlot#unauthenticated_client_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#unauthenticated_client_action LinuxFunctionAppSlot#unauthenticated_client_action}
 
 ---
 
@@ -2579,7 +2579,7 @@ public java.lang.String getClientId();
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
 
 ---
 
@@ -2593,7 +2593,7 @@ public java.util.List<java.lang.String> getAllowedAudiences();
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#allowed_audiences LinuxFunctionAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#allowed_audiences LinuxFunctionAppSlot#allowed_audiences}
 
 ---
 
@@ -2607,7 +2607,7 @@ public java.lang.String getClientSecret();
 
 The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret LinuxFunctionAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret LinuxFunctionAppSlot#client_secret}
 
 ---
 
@@ -2621,7 +2621,7 @@ public java.lang.String getClientSecretSettingName();
 
 The App Setting name that contains the client secret of the Client. Cannot be used with `client_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
 
 ---
 
@@ -2661,7 +2661,7 @@ public java.lang.String getAppId();
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#app_id LinuxFunctionAppSlot#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#app_id LinuxFunctionAppSlot#app_id}
 
 ---
 
@@ -2675,7 +2675,7 @@ public java.lang.String getAppSecret();
 
 The App Secret of the Facebook app used for Facebook Login. Cannot be specified with `app_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#app_secret LinuxFunctionAppSlot#app_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#app_secret LinuxFunctionAppSlot#app_secret}
 
 ---
 
@@ -2689,7 +2689,7 @@ public java.lang.String getAppSecretSettingName();
 
 The app setting name that contains the `app_secret` value used for Facebook Login. Cannot be specified with `app_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#app_secret_setting_name LinuxFunctionAppSlot#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#app_secret_setting_name LinuxFunctionAppSlot#app_secret_setting_name}
 
 ---
 
@@ -2703,7 +2703,7 @@ public java.util.List<java.lang.String> getOauthScopes();
 
 Specifies a list of OAuth 2.0 scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#oauth_scopes LinuxFunctionAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#oauth_scopes LinuxFunctionAppSlot#oauth_scopes}
 
 ---
 
@@ -2743,7 +2743,7 @@ public java.lang.String getClientId();
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
 
 ---
 
@@ -2757,7 +2757,7 @@ public java.lang.String getClientSecret();
 
 The Client Secret of the GitHub app used for GitHub Login. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret LinuxFunctionAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret LinuxFunctionAppSlot#client_secret}
 
 ---
 
@@ -2771,7 +2771,7 @@ public java.lang.String getClientSecretSettingName();
 
 The app setting name that contains the `client_secret` value used for GitHub Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
 
 ---
 
@@ -2785,7 +2785,7 @@ public java.util.List<java.lang.String> getOauthScopes();
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#oauth_scopes LinuxFunctionAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#oauth_scopes LinuxFunctionAppSlot#oauth_scopes}
 
 ---
 
@@ -2825,7 +2825,7 @@ public java.lang.String getClientId();
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
 
 ---
 
@@ -2839,7 +2839,7 @@ public java.lang.String getClientSecret();
 
 The client secret associated with the Google web application.  Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret LinuxFunctionAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret LinuxFunctionAppSlot#client_secret}
 
 ---
 
@@ -2853,7 +2853,7 @@ public java.lang.String getClientSecretSettingName();
 
 The app setting name that contains the `client_secret` value used for Google Login. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
 
 ---
 
@@ -2867,7 +2867,7 @@ public java.util.List<java.lang.String> getOauthScopes();
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication. If not specified, "openid", "profile", and "email" are used as default scopes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#oauth_scopes LinuxFunctionAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#oauth_scopes LinuxFunctionAppSlot#oauth_scopes}
 
 ---
 
@@ -2907,7 +2907,7 @@ public java.lang.String getClientId();
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
 
 ---
 
@@ -2921,7 +2921,7 @@ public java.lang.String getClientSecret();
 
 The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret LinuxFunctionAppSlot#client_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret LinuxFunctionAppSlot#client_secret}
 
 ---
 
@@ -2935,7 +2935,7 @@ public java.lang.String getClientSecretSettingName();
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with `client_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
 
 ---
 
@@ -2949,7 +2949,7 @@ public java.util.List<java.lang.String> getOauthScopes();
 
 The list of OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication. If not specified, `wl.basic` is used as the default scope.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#oauth_scopes LinuxFunctionAppSlot#oauth_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#oauth_scopes LinuxFunctionAppSlot#oauth_scopes}
 
 ---
 
@@ -2987,7 +2987,7 @@ public java.lang.String getConsumerKey();
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#consumer_key LinuxFunctionAppSlot#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#consumer_key LinuxFunctionAppSlot#consumer_key}
 
 ---
 
@@ -3001,7 +3001,7 @@ public java.lang.String getConsumerSecret();
 
 The OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret_setting_name`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#consumer_secret LinuxFunctionAppSlot#consumer_secret}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#consumer_secret LinuxFunctionAppSlot#consumer_secret}
 
 ---
 
@@ -3015,7 +3015,7 @@ public java.lang.String getConsumerSecretSettingName();
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in. Cannot be specified with `consumer_secret`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#consumer_secret_setting_name LinuxFunctionAppSlot#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#consumer_secret_setting_name LinuxFunctionAppSlot#consumer_secret_setting_name}
 
 ---
 
@@ -3091,7 +3091,7 @@ public LinuxFunctionAppSlotAuthSettingsV2Login getLogin();
 
 login block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#login LinuxFunctionAppSlot#login}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#login LinuxFunctionAppSlot#login}
 
 ---
 
@@ -3105,7 +3105,7 @@ public LinuxFunctionAppSlotAuthSettingsV2ActiveDirectoryV2 getActiveDirectoryV2(
 
 active_directory_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#active_directory_v2 LinuxFunctionAppSlot#active_directory_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#active_directory_v2 LinuxFunctionAppSlot#active_directory_v2}
 
 ---
 
@@ -3119,7 +3119,7 @@ public LinuxFunctionAppSlotAuthSettingsV2AppleV2 getAppleV2();
 
 apple_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#apple_v2 LinuxFunctionAppSlot#apple_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#apple_v2 LinuxFunctionAppSlot#apple_v2}
 
 ---
 
@@ -3133,7 +3133,7 @@ public java.lang.Boolean|IResolvable getAuthEnabled();
 
 Should the AuthV2 Settings be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#auth_enabled LinuxFunctionAppSlot#auth_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#auth_enabled LinuxFunctionAppSlot#auth_enabled}
 
 ---
 
@@ -3147,7 +3147,7 @@ public LinuxFunctionAppSlotAuthSettingsV2AzureStaticWebAppV2 getAzureStaticWebAp
 
 azure_static_web_app_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#azure_static_web_app_v2 LinuxFunctionAppSlot#azure_static_web_app_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#azure_static_web_app_v2 LinuxFunctionAppSlot#azure_static_web_app_v2}
 
 ---
 
@@ -3161,7 +3161,7 @@ public java.lang.String getConfigFilePath();
 
 The path to the App Auth settings. **Note:** Relative Paths are evaluated from the Site Root directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#config_file_path LinuxFunctionAppSlot#config_file_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#config_file_path LinuxFunctionAppSlot#config_file_path}
 
 ---
 
@@ -3175,7 +3175,7 @@ public IResolvable|java.util.List<LinuxFunctionAppSlotAuthSettingsV2CustomOidcV2
 
 custom_oidc_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#custom_oidc_v2 LinuxFunctionAppSlot#custom_oidc_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#custom_oidc_v2 LinuxFunctionAppSlot#custom_oidc_v2}
 
 ---
 
@@ -3191,7 +3191,7 @@ The Default Authentication Provider to use when the `unauthenticated_action` is 
 
 Possible values include: `apple`, `azureactivedirectory`, `facebook`, `github`, `google`, `twitter` and the `name` of your `custom_oidc_v2` provider.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#default_provider LinuxFunctionAppSlot#default_provider}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#default_provider LinuxFunctionAppSlot#default_provider}
 
 ---
 
@@ -3205,7 +3205,7 @@ public java.util.List<java.lang.String> getExcludedPaths();
 
 The paths which should be excluded from the `unauthenticated_action` when it is set to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#excluded_paths LinuxFunctionAppSlot#excluded_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#excluded_paths LinuxFunctionAppSlot#excluded_paths}
 
 ---
 
@@ -3219,7 +3219,7 @@ public LinuxFunctionAppSlotAuthSettingsV2FacebookV2 getFacebookV2();
 
 facebook_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#facebook_v2 LinuxFunctionAppSlot#facebook_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#facebook_v2 LinuxFunctionAppSlot#facebook_v2}
 
 ---
 
@@ -3235,7 +3235,7 @@ The convention used to determine the url of the request made.
 
 Possible values include `ForwardProxyConventionNoProxy`, `ForwardProxyConventionStandard`, `ForwardProxyConventionCustom`. Defaults to `ForwardProxyConventionNoProxy`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#forward_proxy_convention LinuxFunctionAppSlot#forward_proxy_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#forward_proxy_convention LinuxFunctionAppSlot#forward_proxy_convention}
 
 ---
 
@@ -3249,7 +3249,7 @@ public java.lang.String getForwardProxyCustomHostHeaderName();
 
 The name of the header containing the host of the request.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#forward_proxy_custom_host_header_name LinuxFunctionAppSlot#forward_proxy_custom_host_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#forward_proxy_custom_host_header_name LinuxFunctionAppSlot#forward_proxy_custom_host_header_name}
 
 ---
 
@@ -3263,7 +3263,7 @@ public java.lang.String getForwardProxyCustomSchemeHeaderName();
 
 The name of the header containing the scheme of the request.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#forward_proxy_custom_scheme_header_name LinuxFunctionAppSlot#forward_proxy_custom_scheme_header_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#forward_proxy_custom_scheme_header_name LinuxFunctionAppSlot#forward_proxy_custom_scheme_header_name}
 
 ---
 
@@ -3277,7 +3277,7 @@ public LinuxFunctionAppSlotAuthSettingsV2GithubV2 getGithubV2();
 
 github_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#github_v2 LinuxFunctionAppSlot#github_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#github_v2 LinuxFunctionAppSlot#github_v2}
 
 ---
 
@@ -3291,7 +3291,7 @@ public LinuxFunctionAppSlotAuthSettingsV2GoogleV2 getGoogleV2();
 
 google_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#google_v2 LinuxFunctionAppSlot#google_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#google_v2 LinuxFunctionAppSlot#google_v2}
 
 ---
 
@@ -3305,7 +3305,7 @@ public java.lang.String getHttpRouteApiPrefix();
 
 The prefix that should precede all the authentication and authorisation paths. Defaults to `/.auth`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#http_route_api_prefix LinuxFunctionAppSlot#http_route_api_prefix}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#http_route_api_prefix LinuxFunctionAppSlot#http_route_api_prefix}
 
 ---
 
@@ -3319,7 +3319,7 @@ public LinuxFunctionAppSlotAuthSettingsV2MicrosoftV2 getMicrosoftV2();
 
 microsoft_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#microsoft_v2 LinuxFunctionAppSlot#microsoft_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#microsoft_v2 LinuxFunctionAppSlot#microsoft_v2}
 
 ---
 
@@ -3333,7 +3333,7 @@ public java.lang.Boolean|IResolvable getRequireAuthentication();
 
 Should the authentication flow be used for all requests.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#require_authentication LinuxFunctionAppSlot#require_authentication}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#require_authentication LinuxFunctionAppSlot#require_authentication}
 
 ---
 
@@ -3347,7 +3347,7 @@ public java.lang.Boolean|IResolvable getRequireHttps();
 
 Should HTTPS be required on connections? Defaults to true.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#require_https LinuxFunctionAppSlot#require_https}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#require_https LinuxFunctionAppSlot#require_https}
 
 ---
 
@@ -3361,7 +3361,7 @@ public java.lang.String getRuntimeVersion();
 
 The Runtime Version of the Authentication and Authorisation feature of this App. Defaults to `~1`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#runtime_version LinuxFunctionAppSlot#runtime_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#runtime_version LinuxFunctionAppSlot#runtime_version}
 
 ---
 
@@ -3375,7 +3375,7 @@ public LinuxFunctionAppSlotAuthSettingsV2TwitterV2 getTwitterV2();
 
 twitter_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#twitter_v2 LinuxFunctionAppSlot#twitter_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#twitter_v2 LinuxFunctionAppSlot#twitter_v2}
 
 ---
 
@@ -3391,7 +3391,7 @@ The action to take for requests made without authentication.
 
 Possible values include `RedirectToLoginPage`, `AllowAnonymous`, `Return401`, and `Return403`. Defaults to `RedirectToLoginPage`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#unauthenticated_action LinuxFunctionAppSlot#unauthenticated_action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#unauthenticated_action LinuxFunctionAppSlot#unauthenticated_action}
 
 ---
 
@@ -3447,7 +3447,7 @@ public java.lang.String getClientId();
 
 The ID of the Client to use to authenticate with Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
 
 ---
 
@@ -3461,7 +3461,7 @@ public java.lang.String getTenantAuthEndpoint();
 
 The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#tenant_auth_endpoint LinuxFunctionAppSlot#tenant_auth_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#tenant_auth_endpoint LinuxFunctionAppSlot#tenant_auth_endpoint}
 
 ---
 
@@ -3475,7 +3475,7 @@ public java.util.List<java.lang.String> getAllowedApplications();
 
 The list of allowed Applications for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#allowed_applications LinuxFunctionAppSlot#allowed_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#allowed_applications LinuxFunctionAppSlot#allowed_applications}
 
 ---
 
@@ -3489,7 +3489,7 @@ public java.util.List<java.lang.String> getAllowedAudiences();
 
 Specifies a list of Allowed audience values to consider when validating JWTs issued by Azure Active Directory.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#allowed_audiences LinuxFunctionAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#allowed_audiences LinuxFunctionAppSlot#allowed_audiences}
 
 ---
 
@@ -3503,7 +3503,7 @@ public java.util.List<java.lang.String> getAllowedGroups();
 
 The list of allowed Group Names for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#allowed_groups LinuxFunctionAppSlot#allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#allowed_groups LinuxFunctionAppSlot#allowed_groups}
 
 ---
 
@@ -3517,7 +3517,7 @@ public java.util.List<java.lang.String> getAllowedIdentities();
 
 The list of allowed Identities for the Default Authorisation Policy.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#allowed_identities LinuxFunctionAppSlot#allowed_identities}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#allowed_identities LinuxFunctionAppSlot#allowed_identities}
 
 ---
 
@@ -3531,7 +3531,7 @@ public java.lang.String getClientSecretCertificateThumbprint();
 
 The thumbprint of the certificate used for signing purposes.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret_certificate_thumbprint LinuxFunctionAppSlot#client_secret_certificate_thumbprint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret_certificate_thumbprint LinuxFunctionAppSlot#client_secret_certificate_thumbprint}
 
 ---
 
@@ -3545,7 +3545,7 @@ public java.lang.String getClientSecretSettingName();
 
 The App Setting name that contains the client secret of the Client.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
 
 ---
 
@@ -3559,7 +3559,7 @@ public java.util.List<java.lang.String> getJwtAllowedClientApplications();
 
 A list of Allowed Client Applications in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#jwt_allowed_client_applications LinuxFunctionAppSlot#jwt_allowed_client_applications}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#jwt_allowed_client_applications LinuxFunctionAppSlot#jwt_allowed_client_applications}
 
 ---
 
@@ -3573,7 +3573,7 @@ public java.util.List<java.lang.String> getJwtAllowedGroups();
 
 A list of Allowed Groups in the JWT Claim.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#jwt_allowed_groups LinuxFunctionAppSlot#jwt_allowed_groups}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#jwt_allowed_groups LinuxFunctionAppSlot#jwt_allowed_groups}
 
 ---
 
@@ -3587,7 +3587,7 @@ public java.util.Map<java.lang.String, java.lang.String> getLoginParameters();
 
 A map of key-value pairs to send to the Authorisation Endpoint when a user logs in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#login_parameters LinuxFunctionAppSlot#login_parameters}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#login_parameters LinuxFunctionAppSlot#login_parameters}
 
 ---
 
@@ -3601,7 +3601,7 @@ public java.lang.Boolean|IResolvable getWwwAuthenticationDisabled();
 
 Should the www-authenticate provider should be omitted from the request? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#www_authentication_disabled LinuxFunctionAppSlot#www_authentication_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#www_authentication_disabled LinuxFunctionAppSlot#www_authentication_disabled}
 
 ---
 
@@ -3637,7 +3637,7 @@ public java.lang.String getClientId();
 
 The OpenID Connect Client ID for the Apple web application.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
 
 ---
 
@@ -3651,7 +3651,7 @@ public java.lang.String getClientSecretSettingName();
 
 The app setting name that contains the `client_secret` value used for Apple Login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
 
 ---
 
@@ -3685,7 +3685,7 @@ public java.lang.String getClientId();
 
 The ID of the Client to use to authenticate with Azure Static Web App Authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
 
 ---
 
@@ -3727,7 +3727,7 @@ public java.lang.String getClientId();
 
 The ID of the Client to use to authenticate with this Custom OIDC.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
 
 ---
 
@@ -3741,7 +3741,7 @@ public java.lang.String getName();
 
 The name of the Custom OIDC Authentication Provider.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
 
 ---
 
@@ -3755,7 +3755,7 @@ public java.lang.String getOpenidConfigurationEndpoint();
 
 The endpoint that contains all the configuration endpoints for this Custom OIDC provider.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#openid_configuration_endpoint LinuxFunctionAppSlot#openid_configuration_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#openid_configuration_endpoint LinuxFunctionAppSlot#openid_configuration_endpoint}
 
 ---
 
@@ -3769,7 +3769,7 @@ public java.lang.String getNameClaimType();
 
 The name of the claim that contains the users name.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#name_claim_type LinuxFunctionAppSlot#name_claim_type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#name_claim_type LinuxFunctionAppSlot#name_claim_type}
 
 ---
 
@@ -3783,7 +3783,7 @@ public java.util.List<java.lang.String> getScopes();
 
 The list of the scopes that should be requested while authenticating.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#scopes LinuxFunctionAppSlot#scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#scopes LinuxFunctionAppSlot#scopes}
 
 ---
 
@@ -3823,7 +3823,7 @@ public java.lang.String getAppId();
 
 The App ID of the Facebook app used for login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#app_id LinuxFunctionAppSlot#app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#app_id LinuxFunctionAppSlot#app_id}
 
 ---
 
@@ -3837,7 +3837,7 @@ public java.lang.String getAppSecretSettingName();
 
 The app setting name that contains the `app_secret` value used for Facebook Login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#app_secret_setting_name LinuxFunctionAppSlot#app_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#app_secret_setting_name LinuxFunctionAppSlot#app_secret_setting_name}
 
 ---
 
@@ -3851,7 +3851,7 @@ public java.lang.String getGraphApiVersion();
 
 The version of the Facebook API to be used while logging in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#graph_api_version LinuxFunctionAppSlot#graph_api_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#graph_api_version LinuxFunctionAppSlot#graph_api_version}
 
 ---
 
@@ -3865,7 +3865,7 @@ public java.util.List<java.lang.String> getLoginScopes();
 
 Specifies a list of scopes to be requested as part of Facebook Login authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#login_scopes LinuxFunctionAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#login_scopes LinuxFunctionAppSlot#login_scopes}
 
 ---
 
@@ -3903,7 +3903,7 @@ public java.lang.String getClientId();
 
 The ID of the GitHub app used for login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
 
 ---
 
@@ -3917,7 +3917,7 @@ public java.lang.String getClientSecretSettingName();
 
 The app setting name that contains the `client_secret` value used for GitHub Login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
 
 ---
 
@@ -3931,7 +3931,7 @@ public java.util.List<java.lang.String> getLoginScopes();
 
 Specifies a list of OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#login_scopes LinuxFunctionAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#login_scopes LinuxFunctionAppSlot#login_scopes}
 
 ---
 
@@ -3971,7 +3971,7 @@ public java.lang.String getClientId();
 
 The OpenID Connect Client ID for the Google web application.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
 
 ---
 
@@ -3985,7 +3985,7 @@ public java.lang.String getClientSecretSettingName();
 
 The app setting name that contains the `client_secret` value used for Google Login.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
 
 ---
 
@@ -3999,7 +3999,7 @@ public java.util.List<java.lang.String> getAllowedAudiences();
 
 Specifies a list of Allowed Audiences that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#allowed_audiences LinuxFunctionAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#allowed_audiences LinuxFunctionAppSlot#allowed_audiences}
 
 ---
 
@@ -4013,7 +4013,7 @@ public java.util.List<java.lang.String> getLoginScopes();
 
 Specifies a list of Login scopes that will be requested as part of Google Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#login_scopes LinuxFunctionAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#login_scopes LinuxFunctionAppSlot#login_scopes}
 
 ---
 
@@ -4069,7 +4069,7 @@ External URLs that can be redirected to as part of logging in or logging out of 
 
 This is an advanced setting typically only needed by Windows Store application backends. **Note:** URLs within the current domain are always implicitly allowed.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#allowed_external_redirect_urls LinuxFunctionAppSlot#allowed_external_redirect_urls}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#allowed_external_redirect_urls LinuxFunctionAppSlot#allowed_external_redirect_urls}
 
 ---
 
@@ -4083,7 +4083,7 @@ public java.lang.String getCookieExpirationConvention();
 
 The method by which cookies expire. Possible values include: `FixedTime`, and `IdentityProviderDerived`. Defaults to `FixedTime`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#cookie_expiration_convention LinuxFunctionAppSlot#cookie_expiration_convention}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#cookie_expiration_convention LinuxFunctionAppSlot#cookie_expiration_convention}
 
 ---
 
@@ -4097,7 +4097,7 @@ public java.lang.String getCookieExpirationTime();
 
 The time after the request is made when the session cookie should expire. Defaults to `08:00:00`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#cookie_expiration_time LinuxFunctionAppSlot#cookie_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#cookie_expiration_time LinuxFunctionAppSlot#cookie_expiration_time}
 
 ---
 
@@ -4111,7 +4111,7 @@ public java.lang.String getLogoutEndpoint();
 
 The endpoint to which logout requests should be made.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#logout_endpoint LinuxFunctionAppSlot#logout_endpoint}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#logout_endpoint LinuxFunctionAppSlot#logout_endpoint}
 
 ---
 
@@ -4125,7 +4125,7 @@ public java.lang.String getNonceExpirationTime();
 
 The time after the request is made when the nonce should expire. Defaults to `00:05:00`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#nonce_expiration_time LinuxFunctionAppSlot#nonce_expiration_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#nonce_expiration_time LinuxFunctionAppSlot#nonce_expiration_time}
 
 ---
 
@@ -4139,7 +4139,7 @@ public java.lang.Boolean|IResolvable getPreserveUrlFragmentsForLogins();
 
 Should the fragments from the request be preserved after the login request is made. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#preserve_url_fragments_for_logins LinuxFunctionAppSlot#preserve_url_fragments_for_logins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#preserve_url_fragments_for_logins LinuxFunctionAppSlot#preserve_url_fragments_for_logins}
 
 ---
 
@@ -4155,7 +4155,7 @@ The number of hours after session token expiration that a session token can be u
 
 Defaults to `72` hours.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#token_refresh_extension_time LinuxFunctionAppSlot#token_refresh_extension_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#token_refresh_extension_time LinuxFunctionAppSlot#token_refresh_extension_time}
 
 ---
 
@@ -4169,7 +4169,7 @@ public java.lang.Boolean|IResolvable getTokenStoreEnabled();
 
 Should the Token Store configuration Enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#token_store_enabled LinuxFunctionAppSlot#token_store_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#token_store_enabled LinuxFunctionAppSlot#token_store_enabled}
 
 ---
 
@@ -4183,7 +4183,7 @@ public java.lang.String getTokenStorePath();
 
 The directory path in the App Filesystem in which the tokens will be stored.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#token_store_path LinuxFunctionAppSlot#token_store_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#token_store_path LinuxFunctionAppSlot#token_store_path}
 
 ---
 
@@ -4197,7 +4197,7 @@ public java.lang.String getTokenStoreSasSettingName();
 
 The name of the app setting which contains the SAS URL of the blob storage containing the tokens.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#token_store_sas_setting_name LinuxFunctionAppSlot#token_store_sas_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#token_store_sas_setting_name LinuxFunctionAppSlot#token_store_sas_setting_name}
 
 ---
 
@@ -4211,7 +4211,7 @@ public java.lang.Boolean|IResolvable getValidateNonce();
 
 Should the nonce be validated while completing the login flow. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#validate_nonce LinuxFunctionAppSlot#validate_nonce}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#validate_nonce LinuxFunctionAppSlot#validate_nonce}
 
 ---
 
@@ -4251,7 +4251,7 @@ public java.lang.String getClientId();
 
 The OAuth 2.0 client ID that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_id LinuxFunctionAppSlot#client_id}
 
 ---
 
@@ -4265,7 +4265,7 @@ public java.lang.String getClientSecretSettingName();
 
 The app setting name containing the OAuth 2.0 client secret that was created for the app used for authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_secret_setting_name LinuxFunctionAppSlot#client_secret_setting_name}
 
 ---
 
@@ -4279,7 +4279,7 @@ public java.util.List<java.lang.String> getAllowedAudiences();
 
 Specifies a list of Allowed Audiences that will be requested as part of Microsoft Sign-In authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#allowed_audiences LinuxFunctionAppSlot#allowed_audiences}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#allowed_audiences LinuxFunctionAppSlot#allowed_audiences}
 
 ---
 
@@ -4293,7 +4293,7 @@ public java.util.List<java.lang.String> getLoginScopes();
 
 The list of Login scopes that will be requested as part of Microsoft Account authentication.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#login_scopes LinuxFunctionAppSlot#login_scopes}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#login_scopes LinuxFunctionAppSlot#login_scopes}
 
 ---
 
@@ -4329,7 +4329,7 @@ public java.lang.String getConsumerKey();
 
 The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#consumer_key LinuxFunctionAppSlot#consumer_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#consumer_key LinuxFunctionAppSlot#consumer_key}
 
 ---
 
@@ -4343,7 +4343,7 @@ public java.lang.String getConsumerSecretSettingName();
 
 The app setting name that contains the OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#consumer_secret_setting_name LinuxFunctionAppSlot#consumer_secret_setting_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#consumer_secret_setting_name LinuxFunctionAppSlot#consumer_secret_setting_name}
 
 ---
 
@@ -4383,7 +4383,7 @@ public java.lang.String getName();
 
 The name which should be used for this Backup.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
 
 ---
 
@@ -4397,7 +4397,7 @@ public LinuxFunctionAppSlotBackupSchedule getSchedule();
 
 schedule block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#schedule LinuxFunctionAppSlot#schedule}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#schedule LinuxFunctionAppSlot#schedule}
 
 ---
 
@@ -4411,7 +4411,7 @@ public java.lang.String getStorageAccountUrl();
 
 The SAS URL to the container.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#storage_account_url LinuxFunctionAppSlot#storage_account_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#storage_account_url LinuxFunctionAppSlot#storage_account_url}
 
 ---
 
@@ -4425,7 +4425,7 @@ public java.lang.Boolean|IResolvable getEnabled();
 
 Should this backup job be enabled?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#enabled LinuxFunctionAppSlot#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#enabled LinuxFunctionAppSlot#enabled}
 
 ---
 
@@ -4467,7 +4467,7 @@ public java.lang.Number getFrequencyInterval();
 
 How often the backup should be executed (e.g. for weekly backup, this should be set to `7` and `frequency_unit` should be set to `Day`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#frequency_interval LinuxFunctionAppSlot#frequency_interval}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#frequency_interval LinuxFunctionAppSlot#frequency_interval}
 
 ---
 
@@ -4481,7 +4481,7 @@ public java.lang.String getFrequencyUnit();
 
 The unit of time for how often the backup should take place. Possible values include: `Day` and `Hour`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#frequency_unit LinuxFunctionAppSlot#frequency_unit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#frequency_unit LinuxFunctionAppSlot#frequency_unit}
 
 ---
 
@@ -4495,7 +4495,7 @@ public java.lang.Boolean|IResolvable getKeepAtLeastOneBackup();
 
 Should the service keep at least one backup, regardless of age of backup. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#keep_at_least_one_backup LinuxFunctionAppSlot#keep_at_least_one_backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#keep_at_least_one_backup LinuxFunctionAppSlot#keep_at_least_one_backup}
 
 ---
 
@@ -4509,7 +4509,7 @@ public java.lang.Number getRetentionPeriodDays();
 
 After how many days backups should be deleted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#retention_period_days LinuxFunctionAppSlot#retention_period_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#retention_period_days LinuxFunctionAppSlot#retention_period_days}
 
 ---
 
@@ -4523,7 +4523,7 @@ public java.lang.String getStartTime();
 
 When the schedule should start working in RFC-3339 format.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#start_time LinuxFunctionAppSlot#start_time}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#start_time LinuxFunctionAppSlot#start_time}
 
 ---
 
@@ -4605,25 +4605,25 @@ LinuxFunctionAppSlotConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.contentShareForceDisabled">contentShareForceDisabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Force disable the content share settings. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.dailyMemoryTimeQuota">dailyMemoryTimeQuota</a></code> | <code>java.lang.Number</code> | The amount of memory in gigabyte-seconds that your application is allowed to consume per day. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.enabled">enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Is the Linux Function App Slot enabled. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.ftpPublishBasicAuthenticationEnabled">ftpPublishBasicAuthenticationEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#ftp_publish_basic_authentication_enabled LinuxFunctionAppSlot#ftp_publish_basic_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.ftpPublishBasicAuthenticationEnabled">ftpPublishBasicAuthenticationEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#ftp_publish_basic_authentication_enabled LinuxFunctionAppSlot#ftp_publish_basic_authentication_enabled}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.functionsExtensionVersion">functionsExtensionVersion</a></code> | <code>java.lang.String</code> | The runtime version associated with the Function App Slot. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.httpsOnly">httpsOnly</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Can the Function App Slot only be accessed via HTTPS? |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#id LinuxFunctionAppSlot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#id LinuxFunctionAppSlot#id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotIdentity">LinuxFunctionAppSlotIdentity</a></code> | identity block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.keyVaultReferenceIdentityId">keyVaultReferenceIdentityId</a></code> | <code>java.lang.String</code> | The User Assigned Identity to use for Key Vault access. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#public_network_access_enabled LinuxFunctionAppSlot#public_network_access_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.servicePlanId">servicePlanId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#service_plan_id LinuxFunctionAppSlot#service_plan_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.publicNetworkAccessEnabled">publicNetworkAccessEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#public_network_access_enabled LinuxFunctionAppSlot#public_network_access_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.servicePlanId">servicePlanId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#service_plan_id LinuxFunctionAppSlot#service_plan_id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.storageAccount">storageAccount</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount">LinuxFunctionAppSlotStorageAccount</a>></code> | storage_account block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.storageAccountAccessKey">storageAccountAccessKey</a></code> | <code>java.lang.String</code> | The access key which will be used to access the storage account for the Function App Slot. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.storageAccountName">storageAccountName</a></code> | <code>java.lang.String</code> | The backend storage account name which will be used by this Function App Slot. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.storageKeyVaultSecretId">storageKeyVaultSecretId</a></code> | <code>java.lang.String</code> | The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.storageUsesManagedIdentity">storageUsesManagedIdentity</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Should the Function App Slot use its Managed Identity to access storage? |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#tags LinuxFunctionAppSlot#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#tags LinuxFunctionAppSlot#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts">LinuxFunctionAppSlotTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.virtualNetworkBackupRestoreEnabled">virtualNetworkBackupRestoreEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#virtual_network_backup_restore_enabled LinuxFunctionAppSlot#virtual_network_backup_restore_enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.virtualNetworkBackupRestoreEnabled">virtualNetworkBackupRestoreEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#virtual_network_backup_restore_enabled LinuxFunctionAppSlot#virtual_network_backup_restore_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.virtualNetworkSubnetId">virtualNetworkSubnetId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.vnetImagePullEnabled">vnetImagePullEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Is container image pull over virtual network enabled? Defaults to `false`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.webdeployPublishBasicAuthenticationEnabled">webdeployPublishBasicAuthenticationEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#webdeploy_publish_basic_authentication_enabled LinuxFunctionAppSlot#webdeploy_publish_basic_authentication_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotConfig.property.webdeployPublishBasicAuthenticationEnabled">webdeployPublishBasicAuthenticationEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#webdeploy_publish_basic_authentication_enabled LinuxFunctionAppSlot#webdeploy_publish_basic_authentication_enabled}. |
 
 ---
 
@@ -4707,7 +4707,7 @@ public java.lang.String getFunctionAppId();
 
 The ID of the Linux Function App this Slot is a member of.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#function_app_id LinuxFunctionAppSlot#function_app_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#function_app_id LinuxFunctionAppSlot#function_app_id}
 
 ---
 
@@ -4721,7 +4721,7 @@ public java.lang.String getName();
 
 Specifies the name of the Function App Slot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
 
 ---
 
@@ -4735,7 +4735,7 @@ public LinuxFunctionAppSlotSiteConfig getSiteConfig();
 
 site_config block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#site_config LinuxFunctionAppSlot#site_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#site_config LinuxFunctionAppSlot#site_config}
 
 ---
 
@@ -4749,7 +4749,7 @@ public java.util.Map<java.lang.String, java.lang.String> getAppSettings();
 
 A map of key-value pairs for [App Settings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-app-settings) and custom values.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#app_settings LinuxFunctionAppSlot#app_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#app_settings LinuxFunctionAppSlot#app_settings}
 
 ---
 
@@ -4763,7 +4763,7 @@ public LinuxFunctionAppSlotAuthSettings getAuthSettings();
 
 auth_settings block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#auth_settings LinuxFunctionAppSlot#auth_settings}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#auth_settings LinuxFunctionAppSlot#auth_settings}
 
 ---
 
@@ -4777,7 +4777,7 @@ public LinuxFunctionAppSlotAuthSettingsV2 getAuthSettingsV2();
 
 auth_settings_v2 block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#auth_settings_v2 LinuxFunctionAppSlot#auth_settings_v2}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#auth_settings_v2 LinuxFunctionAppSlot#auth_settings_v2}
 
 ---
 
@@ -4791,7 +4791,7 @@ public LinuxFunctionAppSlotBackup getBackup();
 
 backup block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#backup LinuxFunctionAppSlot#backup}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#backup LinuxFunctionAppSlot#backup}
 
 ---
 
@@ -4805,7 +4805,7 @@ public java.lang.Boolean|IResolvable getBuiltinLoggingEnabled();
 
 Should built in logging be enabled. Configures `AzureWebJobsDashboard` app setting based on the configured storage setting.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#builtin_logging_enabled LinuxFunctionAppSlot#builtin_logging_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#builtin_logging_enabled LinuxFunctionAppSlot#builtin_logging_enabled}
 
 ---
 
@@ -4819,7 +4819,7 @@ public java.lang.Boolean|IResolvable getClientCertificateEnabled();
 
 Should the Function App Slot use Client Certificates.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_certificate_enabled LinuxFunctionAppSlot#client_certificate_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_certificate_enabled LinuxFunctionAppSlot#client_certificate_enabled}
 
 ---
 
@@ -4833,7 +4833,7 @@ public java.lang.String getClientCertificateExclusionPaths();
 
 Paths to exclude when using client certificates, separated by ;
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_certificate_exclusion_paths LinuxFunctionAppSlot#client_certificate_exclusion_paths}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_certificate_exclusion_paths LinuxFunctionAppSlot#client_certificate_exclusion_paths}
 
 ---
 
@@ -4849,7 +4849,7 @@ The mode of the Function App Slot's client certificates requirement for incoming
 
 Possible values are `Required`, `Optional`, and `OptionalInteractiveUser`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#client_certificate_mode LinuxFunctionAppSlot#client_certificate_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#client_certificate_mode LinuxFunctionAppSlot#client_certificate_mode}
 
 ---
 
@@ -4863,7 +4863,7 @@ public IResolvable|java.util.List<LinuxFunctionAppSlotConnectionString> getConne
 
 connection_string block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#connection_string LinuxFunctionAppSlot#connection_string}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#connection_string LinuxFunctionAppSlot#connection_string}
 
 ---
 
@@ -4877,7 +4877,7 @@ public java.lang.Boolean|IResolvable getContentShareForceDisabled();
 
 Force disable the content share settings.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#content_share_force_disabled LinuxFunctionAppSlot#content_share_force_disabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#content_share_force_disabled LinuxFunctionAppSlot#content_share_force_disabled}
 
 ---
 
@@ -4893,7 +4893,7 @@ The amount of memory in gigabyte-seconds that your application is allowed to con
 
 Setting this value only affects function apps in Consumption Plans.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#daily_memory_time_quota LinuxFunctionAppSlot#daily_memory_time_quota}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#daily_memory_time_quota LinuxFunctionAppSlot#daily_memory_time_quota}
 
 ---
 
@@ -4907,7 +4907,7 @@ public java.lang.Boolean|IResolvable getEnabled();
 
 Is the Linux Function App Slot enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#enabled LinuxFunctionAppSlot#enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#enabled LinuxFunctionAppSlot#enabled}
 
 ---
 
@@ -4919,7 +4919,7 @@ public java.lang.Boolean|IResolvable getFtpPublishBasicAuthenticationEnabled();
 
 - *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#ftp_publish_basic_authentication_enabled LinuxFunctionAppSlot#ftp_publish_basic_authentication_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#ftp_publish_basic_authentication_enabled LinuxFunctionAppSlot#ftp_publish_basic_authentication_enabled}.
 
 ---
 
@@ -4933,7 +4933,7 @@ public java.lang.String getFunctionsExtensionVersion();
 
 The runtime version associated with the Function App Slot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#functions_extension_version LinuxFunctionAppSlot#functions_extension_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#functions_extension_version LinuxFunctionAppSlot#functions_extension_version}
 
 ---
 
@@ -4947,7 +4947,7 @@ public java.lang.Boolean|IResolvable getHttpsOnly();
 
 Can the Function App Slot only be accessed via HTTPS?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#https_only LinuxFunctionAppSlot#https_only}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#https_only LinuxFunctionAppSlot#https_only}
 
 ---
 
@@ -4959,7 +4959,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#id LinuxFunctionAppSlot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#id LinuxFunctionAppSlot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -4976,7 +4976,7 @@ public LinuxFunctionAppSlotIdentity getIdentity();
 
 identity block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#identity LinuxFunctionAppSlot#identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#identity LinuxFunctionAppSlot#identity}
 
 ---
 
@@ -4990,7 +4990,7 @@ public java.lang.String getKeyVaultReferenceIdentityId();
 
 The User Assigned Identity to use for Key Vault access.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#key_vault_reference_identity_id LinuxFunctionAppSlot#key_vault_reference_identity_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#key_vault_reference_identity_id LinuxFunctionAppSlot#key_vault_reference_identity_id}
 
 ---
 
@@ -5002,7 +5002,7 @@ public java.lang.Boolean|IResolvable getPublicNetworkAccessEnabled();
 
 - *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#public_network_access_enabled LinuxFunctionAppSlot#public_network_access_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#public_network_access_enabled LinuxFunctionAppSlot#public_network_access_enabled}.
 
 ---
 
@@ -5014,7 +5014,7 @@ public java.lang.String getServicePlanId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#service_plan_id LinuxFunctionAppSlot#service_plan_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#service_plan_id LinuxFunctionAppSlot#service_plan_id}.
 
 ---
 
@@ -5028,7 +5028,7 @@ public IResolvable|java.util.List<LinuxFunctionAppSlotStorageAccount> getStorage
 
 storage_account block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#storage_account LinuxFunctionAppSlot#storage_account}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#storage_account LinuxFunctionAppSlot#storage_account}
 
 ---
 
@@ -5042,7 +5042,7 @@ public java.lang.String getStorageAccountAccessKey();
 
 The access key which will be used to access the storage account for the Function App Slot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#storage_account_access_key LinuxFunctionAppSlot#storage_account_access_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#storage_account_access_key LinuxFunctionAppSlot#storage_account_access_key}
 
 ---
 
@@ -5056,7 +5056,7 @@ public java.lang.String getStorageAccountName();
 
 The backend storage account name which will be used by this Function App Slot.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#storage_account_name LinuxFunctionAppSlot#storage_account_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#storage_account_name LinuxFunctionAppSlot#storage_account_name}
 
 ---
 
@@ -5070,7 +5070,7 @@ public java.lang.String getStorageKeyVaultSecretId();
 
 The Key Vault Secret ID, including version, that contains the Connection String to connect to the storage account for this Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#storage_key_vault_secret_id LinuxFunctionAppSlot#storage_key_vault_secret_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#storage_key_vault_secret_id LinuxFunctionAppSlot#storage_key_vault_secret_id}
 
 ---
 
@@ -5084,7 +5084,7 @@ public java.lang.Boolean|IResolvable getStorageUsesManagedIdentity();
 
 Should the Function App Slot use its Managed Identity to access storage?
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#storage_uses_managed_identity LinuxFunctionAppSlot#storage_uses_managed_identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#storage_uses_managed_identity LinuxFunctionAppSlot#storage_uses_managed_identity}
 
 ---
 
@@ -5096,7 +5096,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#tags LinuxFunctionAppSlot#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#tags LinuxFunctionAppSlot#tags}.
 
 ---
 
@@ -5110,7 +5110,7 @@ public LinuxFunctionAppSlotTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#timeouts LinuxFunctionAppSlot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#timeouts LinuxFunctionAppSlot#timeouts}
 
 ---
 
@@ -5122,7 +5122,7 @@ public java.lang.Boolean|IResolvable getVirtualNetworkBackupRestoreEnabled();
 
 - *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#virtual_network_backup_restore_enabled LinuxFunctionAppSlot#virtual_network_backup_restore_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#virtual_network_backup_restore_enabled LinuxFunctionAppSlot#virtual_network_backup_restore_enabled}.
 
 ---
 
@@ -5134,7 +5134,7 @@ public java.lang.String getVirtualNetworkSubnetId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}.
 
 ---
 
@@ -5148,7 +5148,7 @@ public java.lang.Boolean|IResolvable getVnetImagePullEnabled();
 
 Is container image pull over virtual network enabled? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#vnet_image_pull_enabled LinuxFunctionAppSlot#vnet_image_pull_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#vnet_image_pull_enabled LinuxFunctionAppSlot#vnet_image_pull_enabled}
 
 ---
 
@@ -5160,7 +5160,7 @@ public java.lang.Boolean|IResolvable getWebdeployPublishBasicAuthenticationEnabl
 
 - *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#webdeploy_publish_basic_authentication_enabled LinuxFunctionAppSlot#webdeploy_publish_basic_authentication_enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#webdeploy_publish_basic_authentication_enabled LinuxFunctionAppSlot#webdeploy_publish_basic_authentication_enabled}.
 
 ---
 
@@ -5198,7 +5198,7 @@ public java.lang.String getName();
 
 The name which should be used for this Connection.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
 
 ---
 
@@ -5212,7 +5212,7 @@ public java.lang.String getType();
 
 Type of database. Possible values include: `MySQL`, `SQLServer`, `SQLAzure`, `Custom`, `NotificationHub`, `ServiceBus`, `EventHub`, `APIHub`, `DocDb`, `RedisCache`, and `PostgreSQL`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#type LinuxFunctionAppSlot#type}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#type LinuxFunctionAppSlot#type}
 
 ---
 
@@ -5226,7 +5226,7 @@ public java.lang.String getValue();
 
 The connection string value.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#value LinuxFunctionAppSlot#value}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#value LinuxFunctionAppSlot#value}
 
 ---
 
@@ -5247,8 +5247,8 @@ LinuxFunctionAppSlotIdentity.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotIdentity.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#type LinuxFunctionAppSlot#type}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotIdentity.property.identityIds">identityIds</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#identity_ids LinuxFunctionAppSlot#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotIdentity.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#type LinuxFunctionAppSlot#type}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotIdentity.property.identityIds">identityIds</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#identity_ids LinuxFunctionAppSlot#identity_ids}. |
 
 ---
 
@@ -5260,7 +5260,7 @@ public java.lang.String getType();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#type LinuxFunctionAppSlot#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#type LinuxFunctionAppSlot#type}.
 
 ---
 
@@ -5272,7 +5272,7 @@ public java.util.List<java.lang.String> getIdentityIds();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#identity_ids LinuxFunctionAppSlot#identity_ids}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#identity_ids LinuxFunctionAppSlot#identity_ids}.
 
 ---
 
@@ -5336,7 +5336,7 @@ LinuxFunctionAppSlotSiteConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.applicationStack">applicationStack</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack">LinuxFunctionAppSlotSiteConfigApplicationStack</a></code> | application_stack block. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.appScaleLimit">appScaleLimit</a></code> | <code>java.lang.Number</code> | The number of workers this function app can scale out to. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.appServiceLogs">appServiceLogs</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigAppServiceLogs">LinuxFunctionAppSlotSiteConfigAppServiceLogs</a></code> | app_service_logs block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.autoSwapSlotName">autoSwapSlotName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#auto_swap_slot_name LinuxFunctionAppSlot#auto_swap_slot_name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.autoSwapSlotName">autoSwapSlotName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#auto_swap_slot_name LinuxFunctionAppSlot#auto_swap_slot_name}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.containerRegistryManagedIdentityClientId">containerRegistryManagedIdentityClientId</a></code> | <code>java.lang.String</code> | The Client ID of the Managed Service Identity to use for connections to the Azure Container Registry. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.containerRegistryUseManagedIdentity">containerRegistryUseManagedIdentity</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Should connections for Azure Container Registry use Managed Identity. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.cors">cors</a></code> | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigCors">LinuxFunctionAppSlotSiteConfigCors</a></code> | cors block. |
@@ -5347,7 +5347,7 @@ LinuxFunctionAppSlotSiteConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.healthCheckPath">healthCheckPath</a></code> | <code>java.lang.String</code> | The path to be checked for this function app health. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.http2Enabled">http2Enabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Specifies if the http2 protocol should be enabled. Defaults to `false`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.ipRestriction">ipRestriction</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction">LinuxFunctionAppSlotSiteConfigIpRestriction</a>></code> | ip_restriction block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.ipRestrictionDefaultAction">ipRestrictionDefaultAction</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#ip_restriction_default_action LinuxFunctionAppSlot#ip_restriction_default_action}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.ipRestrictionDefaultAction">ipRestrictionDefaultAction</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#ip_restriction_default_action LinuxFunctionAppSlot#ip_restriction_default_action}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.loadBalancingMode">loadBalancingMode</a></code> | <code>java.lang.String</code> | The Site load balancing mode. Possible values include: `WeightedRoundRobin`, `LeastRequests`, `LeastResponseTime`, `WeightedTotalTraffic`, `RequestHash`, `PerSiteRoundRobin`. Defaults to `LeastRequests` if omitted. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.managedPipelineMode">managedPipelineMode</a></code> | <code>java.lang.String</code> | The Managed Pipeline mode. Possible values include: `Integrated`, `Classic`. Defaults to `Integrated`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.minimumTlsVersion">minimumTlsVersion</a></code> | <code>java.lang.String</code> | The configures the minimum version of TLS required for SSL requests. |
@@ -5356,7 +5356,7 @@ LinuxFunctionAppSlotSiteConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.remoteDebuggingVersion">remoteDebuggingVersion</a></code> | <code>java.lang.String</code> | The Remote Debugging Version. Currently only `VS2022` is supported. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.runtimeScaleMonitoringEnabled">runtimeScaleMonitoringEnabled</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Should Functions Runtime Scale Monitoring be enabled. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.scmIpRestriction">scmIpRestriction</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction">LinuxFunctionAppSlotSiteConfigScmIpRestriction</a>></code> | scm_ip_restriction block. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.scmIpRestrictionDefaultAction">scmIpRestrictionDefaultAction</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#scm_ip_restriction_default_action LinuxFunctionAppSlot#scm_ip_restriction_default_action}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.scmIpRestrictionDefaultAction">scmIpRestrictionDefaultAction</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#scm_ip_restriction_default_action LinuxFunctionAppSlot#scm_ip_restriction_default_action}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.scmMinimumTlsVersion">scmMinimumTlsVersion</a></code> | <code>java.lang.String</code> | Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, `1.2` and `1.3`. Defaults to `1.2`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.scmUseMainIpRestriction">scmUseMainIpRestriction</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Should the Linux Function App `ip_restriction` configuration be used for the SCM also. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfig.property.use32BitWorker">use32BitWorker</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Should the Linux Web App use a 32-bit worker. |
@@ -5376,7 +5376,7 @@ public java.lang.Boolean|IResolvable getAlwaysOn();
 
 If this Linux Web App is Always On enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#always_on LinuxFunctionAppSlot#always_on}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#always_on LinuxFunctionAppSlot#always_on}
 
 ---
 
@@ -5390,7 +5390,7 @@ public java.lang.String getApiDefinitionUrl();
 
 The URL of the API definition that describes this Linux Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#api_definition_url LinuxFunctionAppSlot#api_definition_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#api_definition_url LinuxFunctionAppSlot#api_definition_url}
 
 ---
 
@@ -5404,7 +5404,7 @@ public java.lang.String getApiManagementApiId();
 
 The ID of the API Management API for this Linux Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#api_management_api_id LinuxFunctionAppSlot#api_management_api_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#api_management_api_id LinuxFunctionAppSlot#api_management_api_id}
 
 ---
 
@@ -5418,7 +5418,7 @@ public java.lang.String getAppCommandLine();
 
 The program and any arguments used to launch this app via the command line. (Example `node myapp.js`).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#app_command_line LinuxFunctionAppSlot#app_command_line}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#app_command_line LinuxFunctionAppSlot#app_command_line}
 
 ---
 
@@ -5432,7 +5432,7 @@ public java.lang.String getApplicationInsightsConnectionString();
 
 The Connection String for linking the Linux Function App to Application Insights.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#application_insights_connection_string LinuxFunctionAppSlot#application_insights_connection_string}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#application_insights_connection_string LinuxFunctionAppSlot#application_insights_connection_string}
 
 ---
 
@@ -5446,7 +5446,7 @@ public java.lang.String getApplicationInsightsKey();
 
 The Instrumentation Key for connecting the Linux Function App to Application Insights.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#application_insights_key LinuxFunctionAppSlot#application_insights_key}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#application_insights_key LinuxFunctionAppSlot#application_insights_key}
 
 ---
 
@@ -5460,7 +5460,7 @@ public LinuxFunctionAppSlotSiteConfigApplicationStack getApplicationStack();
 
 application_stack block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#application_stack LinuxFunctionAppSlot#application_stack}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#application_stack LinuxFunctionAppSlot#application_stack}
 
 ---
 
@@ -5476,7 +5476,7 @@ The number of workers this function app can scale out to.
 
 Only applicable to apps on the Consumption and Premium plan.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#app_scale_limit LinuxFunctionAppSlot#app_scale_limit}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#app_scale_limit LinuxFunctionAppSlot#app_scale_limit}
 
 ---
 
@@ -5490,7 +5490,7 @@ public LinuxFunctionAppSlotSiteConfigAppServiceLogs getAppServiceLogs();
 
 app_service_logs block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#app_service_logs LinuxFunctionAppSlot#app_service_logs}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#app_service_logs LinuxFunctionAppSlot#app_service_logs}
 
 ---
 
@@ -5502,7 +5502,7 @@ public java.lang.String getAutoSwapSlotName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#auto_swap_slot_name LinuxFunctionAppSlot#auto_swap_slot_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#auto_swap_slot_name LinuxFunctionAppSlot#auto_swap_slot_name}.
 
 ---
 
@@ -5516,7 +5516,7 @@ public java.lang.String getContainerRegistryManagedIdentityClientId();
 
 The Client ID of the Managed Service Identity to use for connections to the Azure Container Registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#container_registry_managed_identity_client_id LinuxFunctionAppSlot#container_registry_managed_identity_client_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#container_registry_managed_identity_client_id LinuxFunctionAppSlot#container_registry_managed_identity_client_id}
 
 ---
 
@@ -5530,7 +5530,7 @@ public java.lang.Boolean|IResolvable getContainerRegistryUseManagedIdentity();
 
 Should connections for Azure Container Registry use Managed Identity.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#container_registry_use_managed_identity LinuxFunctionAppSlot#container_registry_use_managed_identity}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#container_registry_use_managed_identity LinuxFunctionAppSlot#container_registry_use_managed_identity}
 
 ---
 
@@ -5544,7 +5544,7 @@ public LinuxFunctionAppSlotSiteConfigCors getCors();
 
 cors block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#cors LinuxFunctionAppSlot#cors}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#cors LinuxFunctionAppSlot#cors}
 
 ---
 
@@ -5558,7 +5558,7 @@ public java.util.List<java.lang.String> getDefaultDocuments();
 
 Specifies a list of Default Documents for the Linux Web App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#default_documents LinuxFunctionAppSlot#default_documents}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#default_documents LinuxFunctionAppSlot#default_documents}
 
 ---
 
@@ -5572,7 +5572,7 @@ public java.lang.Number getElasticInstanceMinimum();
 
 The number of minimum instances for this Linux Function App. Only affects apps on Elastic Premium plans.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#elastic_instance_minimum LinuxFunctionAppSlot#elastic_instance_minimum}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#elastic_instance_minimum LinuxFunctionAppSlot#elastic_instance_minimum}
 
 ---
 
@@ -5588,7 +5588,7 @@ State of FTP / FTPS service for this function app.
 
 Possible values include: `AllAllowed`, `FtpsOnly` and `Disabled`. Defaults to `Disabled`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#ftps_state LinuxFunctionAppSlot#ftps_state}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#ftps_state LinuxFunctionAppSlot#ftps_state}
 
 ---
 
@@ -5604,7 +5604,7 @@ The amount of time in minutes that a node is unhealthy before being removed from
 
 Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#health_check_eviction_time_in_min LinuxFunctionAppSlot#health_check_eviction_time_in_min}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#health_check_eviction_time_in_min LinuxFunctionAppSlot#health_check_eviction_time_in_min}
 
 ---
 
@@ -5618,7 +5618,7 @@ public java.lang.String getHealthCheckPath();
 
 The path to be checked for this function app health.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#health_check_path LinuxFunctionAppSlot#health_check_path}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#health_check_path LinuxFunctionAppSlot#health_check_path}
 
 ---
 
@@ -5632,7 +5632,7 @@ public java.lang.Boolean|IResolvable getHttp2Enabled();
 
 Specifies if the http2 protocol should be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#http2_enabled LinuxFunctionAppSlot#http2_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#http2_enabled LinuxFunctionAppSlot#http2_enabled}
 
 ---
 
@@ -5646,7 +5646,7 @@ public IResolvable|java.util.List<LinuxFunctionAppSlotSiteConfigIpRestriction> g
 
 ip_restriction block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#ip_restriction LinuxFunctionAppSlot#ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#ip_restriction LinuxFunctionAppSlot#ip_restriction}
 
 ---
 
@@ -5658,7 +5658,7 @@ public java.lang.String getIpRestrictionDefaultAction();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#ip_restriction_default_action LinuxFunctionAppSlot#ip_restriction_default_action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#ip_restriction_default_action LinuxFunctionAppSlot#ip_restriction_default_action}.
 
 ---
 
@@ -5672,7 +5672,7 @@ public java.lang.String getLoadBalancingMode();
 
 The Site load balancing mode. Possible values include: `WeightedRoundRobin`, `LeastRequests`, `LeastResponseTime`, `WeightedTotalTraffic`, `RequestHash`, `PerSiteRoundRobin`. Defaults to `LeastRequests` if omitted.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#load_balancing_mode LinuxFunctionAppSlot#load_balancing_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#load_balancing_mode LinuxFunctionAppSlot#load_balancing_mode}
 
 ---
 
@@ -5686,7 +5686,7 @@ public java.lang.String getManagedPipelineMode();
 
 The Managed Pipeline mode. Possible values include: `Integrated`, `Classic`. Defaults to `Integrated`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#managed_pipeline_mode LinuxFunctionAppSlot#managed_pipeline_mode}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#managed_pipeline_mode LinuxFunctionAppSlot#managed_pipeline_mode}
 
 ---
 
@@ -5702,7 +5702,7 @@ The configures the minimum version of TLS required for SSL requests.
 
 Possible values include: `1.0`, `1.1`, `1.2` and `1.3`. Defaults to `1.2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#minimum_tls_version LinuxFunctionAppSlot#minimum_tls_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#minimum_tls_version LinuxFunctionAppSlot#minimum_tls_version}
 
 ---
 
@@ -5716,7 +5716,7 @@ public java.lang.Number getPreWarmedInstanceCount();
 
 The number of pre-warmed instances for this function app. Only affects apps on an Elastic Premium plan.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#pre_warmed_instance_count LinuxFunctionAppSlot#pre_warmed_instance_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#pre_warmed_instance_count LinuxFunctionAppSlot#pre_warmed_instance_count}
 
 ---
 
@@ -5730,7 +5730,7 @@ public java.lang.Boolean|IResolvable getRemoteDebuggingEnabled();
 
 Should Remote Debugging be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#remote_debugging_enabled LinuxFunctionAppSlot#remote_debugging_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#remote_debugging_enabled LinuxFunctionAppSlot#remote_debugging_enabled}
 
 ---
 
@@ -5744,7 +5744,7 @@ public java.lang.String getRemoteDebuggingVersion();
 
 The Remote Debugging Version. Currently only `VS2022` is supported.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#remote_debugging_version LinuxFunctionAppSlot#remote_debugging_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#remote_debugging_version LinuxFunctionAppSlot#remote_debugging_version}
 
 ---
 
@@ -5758,7 +5758,7 @@ public java.lang.Boolean|IResolvable getRuntimeScaleMonitoringEnabled();
 
 Should Functions Runtime Scale Monitoring be enabled.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#runtime_scale_monitoring_enabled LinuxFunctionAppSlot#runtime_scale_monitoring_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#runtime_scale_monitoring_enabled LinuxFunctionAppSlot#runtime_scale_monitoring_enabled}
 
 ---
 
@@ -5772,7 +5772,7 @@ public IResolvable|java.util.List<LinuxFunctionAppSlotSiteConfigScmIpRestriction
 
 scm_ip_restriction block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#scm_ip_restriction LinuxFunctionAppSlot#scm_ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#scm_ip_restriction LinuxFunctionAppSlot#scm_ip_restriction}
 
 ---
 
@@ -5784,7 +5784,7 @@ public java.lang.String getScmIpRestrictionDefaultAction();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#scm_ip_restriction_default_action LinuxFunctionAppSlot#scm_ip_restriction_default_action}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#scm_ip_restriction_default_action LinuxFunctionAppSlot#scm_ip_restriction_default_action}.
 
 ---
 
@@ -5798,7 +5798,7 @@ public java.lang.String getScmMinimumTlsVersion();
 
 Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, `1.2` and `1.3`. Defaults to `1.2`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#scm_minimum_tls_version LinuxFunctionAppSlot#scm_minimum_tls_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#scm_minimum_tls_version LinuxFunctionAppSlot#scm_minimum_tls_version}
 
 ---
 
@@ -5812,7 +5812,7 @@ public java.lang.Boolean|IResolvable getScmUseMainIpRestriction();
 
 Should the Linux Function App `ip_restriction` configuration be used for the SCM also.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#scm_use_main_ip_restriction LinuxFunctionAppSlot#scm_use_main_ip_restriction}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#scm_use_main_ip_restriction LinuxFunctionAppSlot#scm_use_main_ip_restriction}
 
 ---
 
@@ -5826,7 +5826,7 @@ public java.lang.Boolean|IResolvable getUse32BitWorker();
 
 Should the Linux Web App use a 32-bit worker.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#use_32_bit_worker LinuxFunctionAppSlot#use_32_bit_worker}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#use_32_bit_worker LinuxFunctionAppSlot#use_32_bit_worker}
 
 ---
 
@@ -5840,7 +5840,7 @@ public java.lang.Boolean|IResolvable getVnetRouteAllEnabled();
 
 Should all outbound traffic to have Virtual Network Security Groups and User Defined Routes applied? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#vnet_route_all_enabled LinuxFunctionAppSlot#vnet_route_all_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#vnet_route_all_enabled LinuxFunctionAppSlot#vnet_route_all_enabled}
 
 ---
 
@@ -5854,7 +5854,7 @@ public java.lang.Boolean|IResolvable getWebsocketsEnabled();
 
 Should Web Sockets be enabled. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#websockets_enabled LinuxFunctionAppSlot#websockets_enabled}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#websockets_enabled LinuxFunctionAppSlot#websockets_enabled}
 
 ---
 
@@ -5868,7 +5868,7 @@ public java.lang.Number getWorkerCount();
 
 The number of Workers for this Linux Function App.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#worker_count LinuxFunctionAppSlot#worker_count}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#worker_count LinuxFunctionAppSlot#worker_count}
 
 ---
 
@@ -5901,7 +5901,7 @@ LinuxFunctionAppSlotSiteConfigApplicationStack.builder()
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.nodeVersion">nodeVersion</a></code> | <code>java.lang.String</code> | The version of Node to use. Possible values include `12`, `14`, `16`, `18`, `20` and `22`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.powershellCoreVersion">powershellCoreVersion</a></code> | <code>java.lang.String</code> | The version of PowerShell Core to use. Possibles values are `7`, `7.2`, and `7.4`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.pythonVersion">pythonVersion</a></code> | <code>java.lang.String</code> | The version of Python to use. Possible values include `3.13`, `3.12`, `3.11`, `3.10`, `3.9`, `3.8`, and `3.7`. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.useCustomRuntime">useCustomRuntime</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#use_custom_runtime LinuxFunctionAppSlot#use_custom_runtime}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.useCustomRuntime">useCustomRuntime</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#use_custom_runtime LinuxFunctionAppSlot#use_custom_runtime}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigApplicationStack.property.useDotnetIsolatedRuntime">useDotnetIsolatedRuntime</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | Should the DotNet process use an isolated runtime. Defaults to `false`. |
 
 ---
@@ -5916,7 +5916,7 @@ public IResolvable|java.util.List<LinuxFunctionAppSlotSiteConfigApplicationStack
 
 docker block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#docker LinuxFunctionAppSlot#docker}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#docker LinuxFunctionAppSlot#docker}
 
 ---
 
@@ -5930,7 +5930,7 @@ public java.lang.String getDotnetVersion();
 
 The version of .Net. Possible values are `3.1`, `6.0`, `7.0`, `8.0` and `9.0`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#dotnet_version LinuxFunctionAppSlot#dotnet_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#dotnet_version LinuxFunctionAppSlot#dotnet_version}
 
 ---
 
@@ -5944,7 +5944,7 @@ public java.lang.String getJavaVersion();
 
 The version of Java to use. Possible values are `8`, `11`, `17`, and `21`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#java_version LinuxFunctionAppSlot#java_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#java_version LinuxFunctionAppSlot#java_version}
 
 ---
 
@@ -5958,7 +5958,7 @@ public java.lang.String getNodeVersion();
 
 The version of Node to use. Possible values include `12`, `14`, `16`, `18`, `20` and `22`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#node_version LinuxFunctionAppSlot#node_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#node_version LinuxFunctionAppSlot#node_version}
 
 ---
 
@@ -5972,7 +5972,7 @@ public java.lang.String getPowershellCoreVersion();
 
 The version of PowerShell Core to use. Possibles values are `7`, `7.2`, and `7.4`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#powershell_core_version LinuxFunctionAppSlot#powershell_core_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#powershell_core_version LinuxFunctionAppSlot#powershell_core_version}
 
 ---
 
@@ -5986,7 +5986,7 @@ public java.lang.String getPythonVersion();
 
 The version of Python to use. Possible values include `3.13`, `3.12`, `3.11`, `3.10`, `3.9`, `3.8`, and `3.7`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#python_version LinuxFunctionAppSlot#python_version}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#python_version LinuxFunctionAppSlot#python_version}
 
 ---
 
@@ -5998,7 +5998,7 @@ public java.lang.Boolean|IResolvable getUseCustomRuntime();
 
 - *Type:* java.lang.Boolean|com.hashicorp.cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#use_custom_runtime LinuxFunctionAppSlot#use_custom_runtime}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#use_custom_runtime LinuxFunctionAppSlot#use_custom_runtime}.
 
 ---
 
@@ -6012,7 +6012,7 @@ public java.lang.Boolean|IResolvable getUseDotnetIsolatedRuntime();
 
 Should the DotNet process use an isolated runtime. Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#use_dotnet_isolated_runtime LinuxFunctionAppSlot#use_dotnet_isolated_runtime}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#use_dotnet_isolated_runtime LinuxFunctionAppSlot#use_dotnet_isolated_runtime}
 
 ---
 
@@ -6054,7 +6054,7 @@ public java.lang.String getImageName();
 
 The name of the Docker image to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#image_name LinuxFunctionAppSlot#image_name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#image_name LinuxFunctionAppSlot#image_name}
 
 ---
 
@@ -6068,7 +6068,7 @@ public java.lang.String getImageTag();
 
 The image tag of the image to use.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#image_tag LinuxFunctionAppSlot#image_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#image_tag LinuxFunctionAppSlot#image_tag}
 
 ---
 
@@ -6082,7 +6082,7 @@ public java.lang.String getRegistryUrl();
 
 The URL of the docker registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#registry_url LinuxFunctionAppSlot#registry_url}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#registry_url LinuxFunctionAppSlot#registry_url}
 
 ---
 
@@ -6096,7 +6096,7 @@ public java.lang.String getRegistryPassword();
 
 The password for the account to use to connect to the registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#registry_password LinuxFunctionAppSlot#registry_password}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#registry_password LinuxFunctionAppSlot#registry_password}
 
 ---
 
@@ -6110,7 +6110,7 @@ public java.lang.String getRegistryUsername();
 
 The username to use for connections to the registry.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#registry_username LinuxFunctionAppSlot#registry_username}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#registry_username LinuxFunctionAppSlot#registry_username}
 
 ---
 
@@ -6146,7 +6146,7 @@ public java.lang.Number getDiskQuotaMb();
 
 The amount of disk space to use for logs. Valid values are between `25` and `100`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#disk_quota_mb LinuxFunctionAppSlot#disk_quota_mb}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#disk_quota_mb LinuxFunctionAppSlot#disk_quota_mb}
 
 ---
 
@@ -6160,7 +6160,7 @@ public java.lang.Number getRetentionPeriodDays();
 
 The retention period for logs in days. Valid values are between `0` and `99999`. Defaults to `0` (never delete).
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#retention_period_days LinuxFunctionAppSlot#retention_period_days}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#retention_period_days LinuxFunctionAppSlot#retention_period_days}
 
 ---
 
@@ -6196,7 +6196,7 @@ public java.util.List<java.lang.String> getAllowedOrigins();
 
 Specifies a list of origins that should be allowed to make cross-origin calls.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#allowed_origins LinuxFunctionAppSlot#allowed_origins}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#allowed_origins LinuxFunctionAppSlot#allowed_origins}
 
 ---
 
@@ -6210,7 +6210,7 @@ public java.lang.Boolean|IResolvable getSupportCredentials();
 
 Are credentials allowed in CORS requests? Defaults to `false`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#support_credentials LinuxFunctionAppSlot#support_credentials}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#support_credentials LinuxFunctionAppSlot#support_credentials}
 
 ---
 
@@ -6239,7 +6239,7 @@ LinuxFunctionAppSlotSiteConfigIpRestriction.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.action">action</a></code> | <code>java.lang.String</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.description">description</a></code> | <code>java.lang.String</code> | The description of the IP restriction rule. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.headers">headers</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders">LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders</a>></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#headers LinuxFunctionAppSlot#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.headers">headers</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders">LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders</a>></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#headers LinuxFunctionAppSlot#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.ipAddress">ipAddress</a></code> | <code>java.lang.String</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.name">name</a></code> | <code>java.lang.String</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestriction.property.priority">priority</a></code> | <code>java.lang.Number</code> | The priority value of this `ip_restriction`. |
@@ -6258,7 +6258,7 @@ public java.lang.String getAction();
 
 The action to take. Possible values are `Allow` or `Deny`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#action LinuxFunctionAppSlot#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#action LinuxFunctionAppSlot#action}
 
 ---
 
@@ -6272,7 +6272,7 @@ public java.lang.String getDescription();
 
 The description of the IP restriction rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#description LinuxFunctionAppSlot#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#description LinuxFunctionAppSlot#description}
 
 ---
 
@@ -6284,7 +6284,7 @@ public IResolvable|java.util.List<LinuxFunctionAppSlotSiteConfigIpRestrictionHea
 
 - *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders">LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders</a>>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#headers LinuxFunctionAppSlot#headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#headers LinuxFunctionAppSlot#headers}.
 
 ---
 
@@ -6300,7 +6300,7 @@ The CIDR notation of the IP or IP Range to match.
 
 For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#ip_address LinuxFunctionAppSlot#ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#ip_address LinuxFunctionAppSlot#ip_address}
 
 ---
 
@@ -6314,7 +6314,7 @@ public java.lang.String getName();
 
 The name which should be used for this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
 
 ---
 
@@ -6328,7 +6328,7 @@ public java.lang.Number getPriority();
 
 The priority value of this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#priority LinuxFunctionAppSlot#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#priority LinuxFunctionAppSlot#priority}
 
 ---
 
@@ -6342,7 +6342,7 @@ public java.lang.String getServiceTag();
 
 The Service Tag used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#service_tag LinuxFunctionAppSlot#service_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#service_tag LinuxFunctionAppSlot#service_tag}
 
 ---
 
@@ -6356,7 +6356,7 @@ public java.lang.String getVirtualNetworkSubnetId();
 
 The Virtual Network Subnet ID used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}
 
 ---
 
@@ -6379,10 +6379,10 @@ LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders.property.xAzureFdid">xAzureFdid</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_azure_fdid LinuxFunctionAppSlot#x_azure_fdid}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_fd_health_probe LinuxFunctionAppSlot#x_fd_health_probe}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders.property.xForwardedFor">xForwardedFor</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_forwarded_for LinuxFunctionAppSlot#x_forwarded_for}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders.property.xForwardedHost">xForwardedHost</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_forwarded_host LinuxFunctionAppSlot#x_forwarded_host}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders.property.xAzureFdid">xAzureFdid</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_azure_fdid LinuxFunctionAppSlot#x_azure_fdid}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_fd_health_probe LinuxFunctionAppSlot#x_fd_health_probe}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders.property.xForwardedFor">xForwardedFor</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_forwarded_for LinuxFunctionAppSlot#x_forwarded_for}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigIpRestrictionHeaders.property.xForwardedHost">xForwardedHost</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_forwarded_host LinuxFunctionAppSlot#x_forwarded_host}. |
 
 ---
 
@@ -6394,7 +6394,7 @@ public java.util.List<java.lang.String> getXAzureFdid();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_azure_fdid LinuxFunctionAppSlot#x_azure_fdid}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_azure_fdid LinuxFunctionAppSlot#x_azure_fdid}.
 
 ---
 
@@ -6406,7 +6406,7 @@ public java.util.List<java.lang.String> getXFdHealthProbe();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_fd_health_probe LinuxFunctionAppSlot#x_fd_health_probe}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_fd_health_probe LinuxFunctionAppSlot#x_fd_health_probe}.
 
 ---
 
@@ -6418,7 +6418,7 @@ public java.util.List<java.lang.String> getXForwardedFor();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_forwarded_for LinuxFunctionAppSlot#x_forwarded_for}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_forwarded_for LinuxFunctionAppSlot#x_forwarded_for}.
 
 ---
 
@@ -6430,7 +6430,7 @@ public java.util.List<java.lang.String> getXForwardedHost();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_forwarded_host LinuxFunctionAppSlot#x_forwarded_host}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_forwarded_host LinuxFunctionAppSlot#x_forwarded_host}.
 
 ---
 
@@ -6459,7 +6459,7 @@ LinuxFunctionAppSlotSiteConfigScmIpRestriction.builder()
 | --- | --- | --- |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.action">action</a></code> | <code>java.lang.String</code> | The action to take. Possible values are `Allow` or `Deny`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.description">description</a></code> | <code>java.lang.String</code> | The description of the IP restriction rule. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders</a>></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#headers LinuxFunctionAppSlot#headers}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.headers">headers</a></code> | <code>com.hashicorp.cdktf.IResolvable\|java.util.List<<a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders</a>></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#headers LinuxFunctionAppSlot#headers}. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.ipAddress">ipAddress</a></code> | <code>java.lang.String</code> | The CIDR notation of the IP or IP Range to match. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.name">name</a></code> | <code>java.lang.String</code> | The name which should be used for this `ip_restriction`. |
 | <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestriction.property.priority">priority</a></code> | <code>java.lang.Number</code> | The priority value of this `ip_restriction`. |
@@ -6478,7 +6478,7 @@ public java.lang.String getAction();
 
 The action to take. Possible values are `Allow` or `Deny`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#action LinuxFunctionAppSlot#action}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#action LinuxFunctionAppSlot#action}
 
 ---
 
@@ -6492,7 +6492,7 @@ public java.lang.String getDescription();
 
 The description of the IP restriction rule.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#description LinuxFunctionAppSlot#description}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#description LinuxFunctionAppSlot#description}
 
 ---
 
@@ -6504,7 +6504,7 @@ public IResolvable|java.util.List<LinuxFunctionAppSlotSiteConfigScmIpRestriction
 
 - *Type:* com.hashicorp.cdktf.IResolvable|java.util.List<<a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders">LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders</a>>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#headers LinuxFunctionAppSlot#headers}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#headers LinuxFunctionAppSlot#headers}.
 
 ---
 
@@ -6520,7 +6520,7 @@ The CIDR notation of the IP or IP Range to match.
 
 For example: `10.0.0.0/24` or `192.168.10.1/32` or `fe80::/64` or `13.107.6.152/31,13.107.128.0/22`
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#ip_address LinuxFunctionAppSlot#ip_address}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#ip_address LinuxFunctionAppSlot#ip_address}
 
 ---
 
@@ -6534,7 +6534,7 @@ public java.lang.String getName();
 
 The name which should be used for this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}
 
 ---
 
@@ -6548,7 +6548,7 @@ public java.lang.Number getPriority();
 
 The priority value of this `ip_restriction`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#priority LinuxFunctionAppSlot#priority}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#priority LinuxFunctionAppSlot#priority}
 
 ---
 
@@ -6562,7 +6562,7 @@ public java.lang.String getServiceTag();
 
 The Service Tag used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#service_tag LinuxFunctionAppSlot#service_tag}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#service_tag LinuxFunctionAppSlot#service_tag}
 
 ---
 
@@ -6576,7 +6576,7 @@ public java.lang.String getVirtualNetworkSubnetId();
 
 The Virtual Network Subnet ID used for this IP Restriction.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#virtual_network_subnet_id LinuxFunctionAppSlot#virtual_network_subnet_id}
 
 ---
 
@@ -6599,10 +6599,10 @@ LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders.property.xAzureFdid">xAzureFdid</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_azure_fdid LinuxFunctionAppSlot#x_azure_fdid}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_fd_health_probe LinuxFunctionAppSlot#x_fd_health_probe}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders.property.xForwardedFor">xForwardedFor</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_forwarded_for LinuxFunctionAppSlot#x_forwarded_for}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders.property.xForwardedHost">xForwardedHost</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_forwarded_host LinuxFunctionAppSlot#x_forwarded_host}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders.property.xAzureFdid">xAzureFdid</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_azure_fdid LinuxFunctionAppSlot#x_azure_fdid}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders.property.xFdHealthProbe">xFdHealthProbe</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_fd_health_probe LinuxFunctionAppSlot#x_fd_health_probe}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders.property.xForwardedFor">xForwardedFor</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_forwarded_for LinuxFunctionAppSlot#x_forwarded_for}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotSiteConfigScmIpRestrictionHeaders.property.xForwardedHost">xForwardedHost</a></code> | <code>java.util.List<java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_forwarded_host LinuxFunctionAppSlot#x_forwarded_host}. |
 
 ---
 
@@ -6614,7 +6614,7 @@ public java.util.List<java.lang.String> getXAzureFdid();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_azure_fdid LinuxFunctionAppSlot#x_azure_fdid}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_azure_fdid LinuxFunctionAppSlot#x_azure_fdid}.
 
 ---
 
@@ -6626,7 +6626,7 @@ public java.util.List<java.lang.String> getXFdHealthProbe();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_fd_health_probe LinuxFunctionAppSlot#x_fd_health_probe}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_fd_health_probe LinuxFunctionAppSlot#x_fd_health_probe}.
 
 ---
 
@@ -6638,7 +6638,7 @@ public java.util.List<java.lang.String> getXForwardedFor();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_forwarded_for LinuxFunctionAppSlot#x_forwarded_for}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_forwarded_for LinuxFunctionAppSlot#x_forwarded_for}.
 
 ---
 
@@ -6650,7 +6650,7 @@ public java.util.List<java.lang.String> getXForwardedHost();
 
 - *Type:* java.util.List<java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#x_forwarded_host LinuxFunctionAppSlot#x_forwarded_host}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#x_forwarded_host LinuxFunctionAppSlot#x_forwarded_host}.
 
 ---
 
@@ -6687,12 +6687,12 @@ LinuxFunctionAppSlotStorageAccount.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.accessKey">accessKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#access_key LinuxFunctionAppSlot#access_key}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.accountName">accountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#account_name LinuxFunctionAppSlot#account_name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.shareName">shareName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#share_name LinuxFunctionAppSlot#share_name}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#type LinuxFunctionAppSlot#type}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.mountPath">mountPath</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#mount_path LinuxFunctionAppSlot#mount_path}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.accessKey">accessKey</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#access_key LinuxFunctionAppSlot#access_key}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.accountName">accountName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#account_name LinuxFunctionAppSlot#account_name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.shareName">shareName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#share_name LinuxFunctionAppSlot#share_name}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.type">type</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#type LinuxFunctionAppSlot#type}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotStorageAccount.property.mountPath">mountPath</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#mount_path LinuxFunctionAppSlot#mount_path}. |
 
 ---
 
@@ -6704,7 +6704,7 @@ public java.lang.String getAccessKey();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#access_key LinuxFunctionAppSlot#access_key}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#access_key LinuxFunctionAppSlot#access_key}.
 
 ---
 
@@ -6716,7 +6716,7 @@ public java.lang.String getAccountName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#account_name LinuxFunctionAppSlot#account_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#account_name LinuxFunctionAppSlot#account_name}.
 
 ---
 
@@ -6728,7 +6728,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#name LinuxFunctionAppSlot#name}.
 
 ---
 
@@ -6740,7 +6740,7 @@ public java.lang.String getShareName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#share_name LinuxFunctionAppSlot#share_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#share_name LinuxFunctionAppSlot#share_name}.
 
 ---
 
@@ -6752,7 +6752,7 @@ public java.lang.String getType();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#type LinuxFunctionAppSlot#type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#type LinuxFunctionAppSlot#type}.
 
 ---
 
@@ -6764,7 +6764,7 @@ public java.lang.String getMountPath();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#mount_path LinuxFunctionAppSlot#mount_path}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#mount_path LinuxFunctionAppSlot#mount_path}.
 
 ---
 
@@ -6787,10 +6787,10 @@ LinuxFunctionAppSlotTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#create LinuxFunctionAppSlot#create}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#delete LinuxFunctionAppSlot#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#read LinuxFunctionAppSlot#read}. |
-| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#update LinuxFunctionAppSlot#update}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#create LinuxFunctionAppSlot#create}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#delete LinuxFunctionAppSlot#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#read LinuxFunctionAppSlot#read}. |
+| <code><a href="#@cdktf/provider-azurerm.linuxFunctionAppSlot.LinuxFunctionAppSlotTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#update LinuxFunctionAppSlot#update}. |
 
 ---
 
@@ -6802,7 +6802,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#create LinuxFunctionAppSlot#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#create LinuxFunctionAppSlot#create}.
 
 ---
 
@@ -6814,7 +6814,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#delete LinuxFunctionAppSlot#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#delete LinuxFunctionAppSlot#delete}.
 
 ---
 
@@ -6826,7 +6826,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#read LinuxFunctionAppSlot#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#read LinuxFunctionAppSlot#read}.
 
 ---
 
@@ -6838,7 +6838,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/linux_function_app_slot#update LinuxFunctionAppSlot#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/linux_function_app_slot#update LinuxFunctionAppSlot#update}.
 
 ---
 
