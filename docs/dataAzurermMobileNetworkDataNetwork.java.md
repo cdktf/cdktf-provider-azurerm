@@ -4,7 +4,7 @@
 
 ### DataAzurermMobileNetworkDataNetwork <a name="DataAzurermMobileNetworkDataNetwork" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network azurerm_mobile_network_data_network}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network azurerm_mobile_network_data_network}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork.Initializer"></a>
 
@@ -37,9 +37,9 @@ DataAzurermMobileNetworkDataNetwork.Builder.create(Construct scope, java.lang.St
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork.Initializer.parameter.mobileNetworkId">mobileNetworkId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#mobile_network_id DataAzurermMobileNetworkDataNetwork#mobile_network_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#name DataAzurermMobileNetworkDataNetwork#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#id DataAzurermMobileNetworkDataNetwork#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork.Initializer.parameter.mobileNetworkId">mobileNetworkId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#mobile_network_id DataAzurermMobileNetworkDataNetwork#mobile_network_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#name DataAzurermMobileNetworkDataNetwork#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#id DataAzurermMobileNetworkDataNetwork#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetwork.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkTimeouts">DataAzurermMobileNetworkDataNetworkTimeouts</a></code> | timeouts block. |
 
 ---
@@ -108,7 +108,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#mobile_network_id DataAzurermMobileNetworkDataNetwork#mobile_network_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#mobile_network_id DataAzurermMobileNetworkDataNetwork#mobile_network_id}.
 
 ---
 
@@ -116,7 +116,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#name DataAzurermMobileNetworkDataNetwork#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#name DataAzurermMobileNetworkDataNetwork#name}.
 
 ---
 
@@ -124,7 +124,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#id DataAzurermMobileNetworkDataNetwork#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#id DataAzurermMobileNetworkDataNetwork#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -137,7 +137,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#timeouts DataAzurermMobileNetworkDataNetwork#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#timeouts DataAzurermMobileNetworkDataNetwork#timeouts}
 
 ---
 
@@ -487,7 +487,7 @@ The construct id used in the generated config for the DataAzurermMobileNetworkDa
 
 The id of the existing DataAzurermMobileNetworkDataNetwork that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -814,9 +814,9 @@ DataAzurermMobileNetworkDataNetworkConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkConfig.property.mobileNetworkId">mobileNetworkId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#mobile_network_id DataAzurermMobileNetworkDataNetwork#mobile_network_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#name DataAzurermMobileNetworkDataNetwork#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#id DataAzurermMobileNetworkDataNetwork#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkConfig.property.mobileNetworkId">mobileNetworkId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#mobile_network_id DataAzurermMobileNetworkDataNetwork#mobile_network_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#name DataAzurermMobileNetworkDataNetwork#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#id DataAzurermMobileNetworkDataNetwork#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkTimeouts">DataAzurermMobileNetworkDataNetworkTimeouts</a></code> | timeouts block. |
 
 ---
@@ -899,7 +899,7 @@ public java.lang.String getMobileNetworkId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#mobile_network_id DataAzurermMobileNetworkDataNetwork#mobile_network_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#mobile_network_id DataAzurermMobileNetworkDataNetwork#mobile_network_id}.
 
 ---
 
@@ -911,7 +911,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#name DataAzurermMobileNetworkDataNetwork#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#name DataAzurermMobileNetworkDataNetwork#name}.
 
 ---
 
@@ -923,7 +923,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#id DataAzurermMobileNetworkDataNetwork#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#id DataAzurermMobileNetworkDataNetwork#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -940,7 +940,7 @@ public DataAzurermMobileNetworkDataNetworkTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#timeouts DataAzurermMobileNetworkDataNetwork#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#timeouts DataAzurermMobileNetworkDataNetwork#timeouts}
 
 ---
 
@@ -960,7 +960,7 @@ DataAzurermMobileNetworkDataNetworkTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#read DataAzurermMobileNetworkDataNetwork#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermMobileNetworkDataNetwork.DataAzurermMobileNetworkDataNetworkTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#read DataAzurermMobileNetworkDataNetwork#read}. |
 
 ---
 
@@ -972,7 +972,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/data-sources/mobile_network_data_network#read DataAzurermMobileNetworkDataNetwork#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/data-sources/mobile_network_data_network#read DataAzurermMobileNetworkDataNetwork#read}.
 
 ---
 

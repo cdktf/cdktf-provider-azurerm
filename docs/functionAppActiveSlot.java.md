@@ -4,7 +4,7 @@
 
 ### FunctionAppActiveSlot <a name="FunctionAppActiveSlot" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot azurerm_function_app_active_slot}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot azurerm_function_app_active_slot}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.Initializer"></a>
 
@@ -38,7 +38,7 @@ FunctionAppActiveSlot.Builder.create(Construct scope, java.lang.String id)
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.Initializer.parameter.slotId">slotId</a></code> | <code>java.lang.String</code> | The ID of the Slot to swap with `Production`. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#id FunctionAppActiveSlot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#id FunctionAppActiveSlot#id}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.Initializer.parameter.overwriteNetworkConfig">overwriteNetworkConfig</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | The swap action should overwrite the Production slot's network configuration with the configuration from this slot. Defaults to `true`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlot.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts">FunctionAppActiveSlotTimeouts</a></code> | timeouts block. |
 
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 The ID of the Slot to swap with `Production`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#slot_id FunctionAppActiveSlot#slot_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#slot_id FunctionAppActiveSlot#slot_id}
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#id FunctionAppActiveSlot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#id FunctionAppActiveSlot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -131,7 +131,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 The swap action should overwrite the Production slot's network configuration with the configuration from this slot. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#overwrite_network_config FunctionAppActiveSlot#overwrite_network_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#overwrite_network_config FunctionAppActiveSlot#overwrite_network_config}
 
 ---
 
@@ -141,7 +141,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#timeouts FunctionAppActiveSlot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#timeouts FunctionAppActiveSlot#timeouts}
 
 ---
 
@@ -602,7 +602,7 @@ The construct id used in the generated config for the FunctionAppActiveSlot to i
 
 The id of the existing FunctionAppActiveSlot that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -930,7 +930,7 @@ FunctionAppActiveSlotConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotConfig.property.slotId">slotId</a></code> | <code>java.lang.String</code> | The ID of the Slot to swap with `Production`. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#id FunctionAppActiveSlot#id}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#id FunctionAppActiveSlot#id}. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotConfig.property.overwriteNetworkConfig">overwriteNetworkConfig</a></code> | <code>java.lang.Boolean\|com.hashicorp.cdktf.IResolvable</code> | The swap action should overwrite the Production slot's network configuration with the configuration from this slot. Defaults to `true`. |
 | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts">FunctionAppActiveSlotTimeouts</a></code> | timeouts block. |
 
@@ -1016,7 +1016,7 @@ public java.lang.String getSlotId();
 
 The ID of the Slot to swap with `Production`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#slot_id FunctionAppActiveSlot#slot_id}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#slot_id FunctionAppActiveSlot#slot_id}
 
 ---
 
@@ -1028,7 +1028,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#id FunctionAppActiveSlot#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#id FunctionAppActiveSlot#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1045,7 +1045,7 @@ public java.lang.Boolean|IResolvable getOverwriteNetworkConfig();
 
 The swap action should overwrite the Production slot's network configuration with the configuration from this slot. Defaults to `true`.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#overwrite_network_config FunctionAppActiveSlot#overwrite_network_config}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#overwrite_network_config FunctionAppActiveSlot#overwrite_network_config}
 
 ---
 
@@ -1059,7 +1059,7 @@ public FunctionAppActiveSlotTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#timeouts FunctionAppActiveSlot#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#timeouts FunctionAppActiveSlot#timeouts}
 
 ---
 
@@ -1082,10 +1082,10 @@ FunctionAppActiveSlotTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#create FunctionAppActiveSlot#create}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#delete FunctionAppActiveSlot#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#read FunctionAppActiveSlot#read}. |
-| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#update FunctionAppActiveSlot#update}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#create FunctionAppActiveSlot#create}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#delete FunctionAppActiveSlot#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#read FunctionAppActiveSlot#read}. |
+| <code><a href="#@cdktf/provider-azurerm.functionAppActiveSlot.FunctionAppActiveSlotTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#update FunctionAppActiveSlot#update}. |
 
 ---
 
@@ -1097,7 +1097,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#create FunctionAppActiveSlot#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#create FunctionAppActiveSlot#create}.
 
 ---
 
@@ -1109,7 +1109,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#delete FunctionAppActiveSlot#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#delete FunctionAppActiveSlot#delete}.
 
 ---
 
@@ -1121,7 +1121,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#read FunctionAppActiveSlot#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#read FunctionAppActiveSlot#read}.
 
 ---
 
@@ -1133,7 +1133,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/function_app_active_slot#update FunctionAppActiveSlot#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/function_app_active_slot#update FunctionAppActiveSlot#update}.
 
 ---
 

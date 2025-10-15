@@ -4,7 +4,7 @@
 
 ### NotificationHubNamespace <a name="NotificationHubNamespace" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace azurerm_notification_hub_namespace}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace azurerm_notification_hub_namespace}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer"></a>
 
@@ -28,8 +28,10 @@ notificationHubNamespace.NotificationHubNamespace(
   sku_name: str,
   enabled: bool | IResolvable = None,
   id: str = None,
+  replication_region: str = None,
   tags: typing.Mapping[str] = None,
-  timeouts: NotificationHubNamespaceTimeouts = None
+  timeouts: NotificationHubNamespaceTimeouts = None,
+  zone_redundancy_enabled: bool | IResolvable = None
 )
 ```
 
@@ -44,15 +46,17 @@ notificationHubNamespace.NotificationHubNamespace(
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#location NotificationHubNamespace#location}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#name NotificationHubNamespace#name}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.namespaceType">namespace_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#namespace_type NotificationHubNamespace#namespace_type}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#resource_group_name NotificationHubNamespace#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.skuName">sku_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#sku_name NotificationHubNamespace#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#enabled NotificationHubNamespace#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#id NotificationHubNamespace#id}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#tags NotificationHubNamespace#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#location NotificationHubNamespace#location}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#name NotificationHubNamespace#name}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.namespaceType">namespace_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#namespace_type NotificationHubNamespace#namespace_type}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#resource_group_name NotificationHubNamespace#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.skuName">sku_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#sku_name NotificationHubNamespace#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#enabled NotificationHubNamespace#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#id NotificationHubNamespace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.replicationRegion">replication_region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#replication_region NotificationHubNamespace#replication_region}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#tags NotificationHubNamespace#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts">NotificationHubNamespaceTimeouts</a></code> | timeouts block. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.zoneRedundancyEnabled">zone_redundancy_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#zone_redundancy_enabled NotificationHubNamespace#zone_redundancy_enabled}. |
 
 ---
 
@@ -120,7 +124,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#location NotificationHubNamespace#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#location NotificationHubNamespace#location}.
 
 ---
 
@@ -128,7 +132,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#name NotificationHubNamespace#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#name NotificationHubNamespace#name}.
 
 ---
 
@@ -136,7 +140,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#namespace_type NotificationHubNamespace#namespace_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#namespace_type NotificationHubNamespace#namespace_type}.
 
 ---
 
@@ -144,7 +148,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#resource_group_name NotificationHubNamespace#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#resource_group_name NotificationHubNamespace#resource_group_name}.
 
 ---
 
@@ -152,7 +156,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#sku_name NotificationHubNamespace#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#sku_name NotificationHubNamespace#sku_name}.
 
 ---
 
@@ -160,7 +164,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* bool | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#enabled NotificationHubNamespace#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#enabled NotificationHubNamespace#enabled}.
 
 ---
 
@@ -168,10 +172,18 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#id NotificationHubNamespace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#id NotificationHubNamespace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `replication_region`<sup>Optional</sup> <a name="replication_region" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.replicationRegion"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#replication_region NotificationHubNamespace#replication_region}.
 
 ---
 
@@ -179,7 +191,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#tags NotificationHubNamespace#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#tags NotificationHubNamespace#tags}.
 
 ---
 
@@ -189,7 +201,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#timeouts NotificationHubNamespace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#timeouts NotificationHubNamespace#timeouts}
+
+---
+
+##### `zone_redundancy_enabled`<sup>Optional</sup> <a name="zone_redundancy_enabled" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.Initializer.parameter.zoneRedundancyEnabled"></a>
+
+- *Type:* bool | cdktf.IResolvable
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#zone_redundancy_enabled NotificationHubNamespace#zone_redundancy_enabled}.
 
 ---
 
@@ -223,8 +243,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.putTimeouts">put_timeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.resetEnabled">reset_enabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.resetReplicationRegion">reset_replication_region</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.resetTags">reset_tags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.resetTimeouts">reset_timeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.resetZoneRedundancyEnabled">reset_zone_redundancy_enabled</a></code> | *No description.* |
 
 ---
 
@@ -568,7 +590,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#create NotificationHubNamespace#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#create NotificationHubNamespace#create}.
 
 ---
 
@@ -576,7 +598,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#delete NotificationHubNamespace#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#delete NotificationHubNamespace#delete}.
 
 ---
 
@@ -584,7 +606,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#read NotificationHubNamespace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#read NotificationHubNamespace#read}.
 
 ---
 
@@ -592,7 +614,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#update NotificationHubNamespace#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#update NotificationHubNamespace#update}.
 
 ---
 
@@ -608,6 +630,12 @@ def reset_enabled() -> None
 def reset_id() -> None
 ```
 
+##### `reset_replication_region` <a name="reset_replication_region" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.resetReplicationRegion"></a>
+
+```python
+def reset_replication_region() -> None
+```
+
 ##### `reset_tags` <a name="reset_tags" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.resetTags"></a>
 
 ```python
@@ -618,6 +646,12 @@ def reset_tags() -> None
 
 ```python
 def reset_timeouts() -> None
+```
+
+##### `reset_zone_redundancy_enabled` <a name="reset_zone_redundancy_enabled" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.resetZoneRedundancyEnabled"></a>
+
+```python
+def reset_zone_redundancy_enabled() -> None
 ```
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
@@ -734,7 +768,7 @@ The construct id used in the generated config for the NotificationHubNamespace t
 
 The id of the existing NotificationHubNamespace that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -771,18 +805,22 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.namespaceTypeInput">namespace_type_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.replicationRegionInput">replication_region_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.skuNameInput">sku_name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts">NotificationHubNamespaceTimeouts</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.zoneRedundancyEnabledInput">zone_redundancy_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.location">location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.name">name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.namespaceType">namespace_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.replicationRegion">replication_region</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.skuName">sku_name</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.zoneRedundancyEnabled">zone_redundancy_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 
 ---
 
@@ -998,6 +1036,16 @@ namespace_type_input: str
 
 ---
 
+##### `replication_region_input`<sup>Optional</sup> <a name="replication_region_input" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.replicationRegionInput"></a>
+
+```python
+replication_region_input: str
+```
+
+- *Type:* str
+
+---
+
 ##### `resource_group_name_input`<sup>Optional</sup> <a name="resource_group_name_input" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.resourceGroupNameInput"></a>
 
 ```python
@@ -1035,6 +1083,16 @@ timeouts_input: IResolvable | NotificationHubNamespaceTimeouts
 ```
 
 - *Type:* cdktf.IResolvable | <a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts">NotificationHubNamespaceTimeouts</a>
+
+---
+
+##### `zone_redundancy_enabled_input`<sup>Optional</sup> <a name="zone_redundancy_enabled_input" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.zoneRedundancyEnabledInput"></a>
+
+```python
+zone_redundancy_enabled_input: bool | IResolvable
+```
+
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1088,6 +1146,16 @@ namespace_type: str
 
 ---
 
+##### `replication_region`<sup>Required</sup> <a name="replication_region" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.replicationRegion"></a>
+
+```python
+replication_region: str
+```
+
+- *Type:* str
+
+---
+
 ##### `resource_group_name`<sup>Required</sup> <a name="resource_group_name" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.resourceGroupName"></a>
 
 ```python
@@ -1115,6 +1183,16 @@ tags: typing.Mapping[str]
 ```
 
 - *Type:* typing.Mapping[str]
+
+---
+
+##### `zone_redundancy_enabled`<sup>Required</sup> <a name="zone_redundancy_enabled" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespace.property.zoneRedundancyEnabled"></a>
+
+```python
+zone_redundancy_enabled: bool | IResolvable
+```
+
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1160,8 +1238,10 @@ notificationHubNamespace.NotificationHubNamespaceConfig(
   sku_name: str,
   enabled: bool | IResolvable = None,
   id: str = None,
+  replication_region: str = None,
   tags: typing.Mapping[str] = None,
-  timeouts: NotificationHubNamespaceTimeouts = None
+  timeouts: NotificationHubNamespaceTimeouts = None,
+  zone_redundancy_enabled: bool | IResolvable = None
 )
 ```
 
@@ -1176,15 +1256,17 @@ notificationHubNamespace.NotificationHubNamespaceConfig(
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#location NotificationHubNamespace#location}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#name NotificationHubNamespace#name}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.namespaceType">namespace_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#namespace_type NotificationHubNamespace#namespace_type}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#resource_group_name NotificationHubNamespace#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.skuName">sku_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#sku_name NotificationHubNamespace#sku_name}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#enabled NotificationHubNamespace#enabled}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#id NotificationHubNamespace#id}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#tags NotificationHubNamespace#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#location NotificationHubNamespace#location}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#name NotificationHubNamespace#name}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.namespaceType">namespace_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#namespace_type NotificationHubNamespace#namespace_type}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#resource_group_name NotificationHubNamespace#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.skuName">sku_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#sku_name NotificationHubNamespace#sku_name}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.enabled">enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#enabled NotificationHubNamespace#enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#id NotificationHubNamespace#id}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.replicationRegion">replication_region</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#replication_region NotificationHubNamespace#replication_region}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#tags NotificationHubNamespace#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts">NotificationHubNamespaceTimeouts</a></code> | timeouts block. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.zoneRedundancyEnabled">zone_redundancy_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#zone_redundancy_enabled NotificationHubNamespace#zone_redundancy_enabled}. |
 
 ---
 
@@ -1266,7 +1348,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#location NotificationHubNamespace#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#location NotificationHubNamespace#location}.
 
 ---
 
@@ -1278,7 +1360,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#name NotificationHubNamespace#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#name NotificationHubNamespace#name}.
 
 ---
 
@@ -1290,7 +1372,7 @@ namespace_type: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#namespace_type NotificationHubNamespace#namespace_type}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#namespace_type NotificationHubNamespace#namespace_type}.
 
 ---
 
@@ -1302,7 +1384,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#resource_group_name NotificationHubNamespace#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#resource_group_name NotificationHubNamespace#resource_group_name}.
 
 ---
 
@@ -1314,7 +1396,7 @@ sku_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#sku_name NotificationHubNamespace#sku_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#sku_name NotificationHubNamespace#sku_name}.
 
 ---
 
@@ -1326,7 +1408,7 @@ enabled: bool | IResolvable
 
 - *Type:* bool | cdktf.IResolvable
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#enabled NotificationHubNamespace#enabled}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#enabled NotificationHubNamespace#enabled}.
 
 ---
 
@@ -1338,10 +1420,22 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#id NotificationHubNamespace#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#id NotificationHubNamespace#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `replication_region`<sup>Optional</sup> <a name="replication_region" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.replicationRegion"></a>
+
+```python
+replication_region: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#replication_region NotificationHubNamespace#replication_region}.
 
 ---
 
@@ -1353,7 +1447,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#tags NotificationHubNamespace#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#tags NotificationHubNamespace#tags}.
 
 ---
 
@@ -1367,7 +1461,19 @@ timeouts: NotificationHubNamespaceTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#timeouts NotificationHubNamespace#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#timeouts NotificationHubNamespace#timeouts}
+
+---
+
+##### `zone_redundancy_enabled`<sup>Optional</sup> <a name="zone_redundancy_enabled" id="@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceConfig.property.zoneRedundancyEnabled"></a>
+
+```python
+zone_redundancy_enabled: bool | IResolvable
+```
+
+- *Type:* bool | cdktf.IResolvable
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#zone_redundancy_enabled NotificationHubNamespace#zone_redundancy_enabled}.
 
 ---
 
@@ -1390,10 +1496,10 @@ notificationHubNamespace.NotificationHubNamespaceTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#create NotificationHubNamespace#create}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#delete NotificationHubNamespace#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#read NotificationHubNamespace#read}. |
-| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#update NotificationHubNamespace#update}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#create NotificationHubNamespace#create}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#delete NotificationHubNamespace#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#read NotificationHubNamespace#read}. |
+| <code><a href="#@cdktf/provider-azurerm.notificationHubNamespace.NotificationHubNamespaceTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#update NotificationHubNamespace#update}. |
 
 ---
 
@@ -1405,7 +1511,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#create NotificationHubNamespace#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#create NotificationHubNamespace#create}.
 
 ---
 
@@ -1417,7 +1523,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#delete NotificationHubNamespace#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#delete NotificationHubNamespace#delete}.
 
 ---
 
@@ -1429,7 +1535,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#read NotificationHubNamespace#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#read NotificationHubNamespace#read}.
 
 ---
 
@@ -1441,7 +1547,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/notification_hub_namespace#update NotificationHubNamespace#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/notification_hub_namespace#update NotificationHubNamespace#update}.
 
 ---
 

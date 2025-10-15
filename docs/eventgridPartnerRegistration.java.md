@@ -4,7 +4,7 @@
 
 ### EventgridPartnerRegistration <a name="EventgridPartnerRegistration" id="@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration azurerm_eventgrid_partner_registration}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration azurerm_eventgrid_partner_registration}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer"></a>
 
@@ -38,10 +38,10 @@ EventgridPartnerRegistration.Builder.create(Construct scope, java.lang.String id
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#name EventgridPartnerRegistration#name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#resource_group_name EventgridPartnerRegistration#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#id EventgridPartnerRegistration#id}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#tags EventgridPartnerRegistration#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#name EventgridPartnerRegistration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#resource_group_name EventgridPartnerRegistration#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#id EventgridPartnerRegistration#id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#tags EventgridPartnerRegistration#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistration.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationTimeouts">EventgridPartnerRegistrationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -110,7 +110,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#name EventgridPartnerRegistration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#name EventgridPartnerRegistration#name}.
 
 ---
 
@@ -118,7 +118,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#resource_group_name EventgridPartnerRegistration#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#resource_group_name EventgridPartnerRegistration#resource_group_name}.
 
 ---
 
@@ -126,7 +126,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#id EventgridPartnerRegistration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#id EventgridPartnerRegistration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -137,7 +137,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#tags EventgridPartnerRegistration#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#tags EventgridPartnerRegistration#tags}.
 
 ---
 
@@ -147,7 +147,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#timeouts EventgridPartnerRegistration#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#timeouts EventgridPartnerRegistration#timeouts}
 
 ---
 
@@ -608,7 +608,7 @@ The construct id used in the generated config for the EventgridPartnerRegistrati
 
 The id of the existing EventgridPartnerRegistration that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -958,10 +958,10 @@ EventgridPartnerRegistrationConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#name EventgridPartnerRegistration#name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#resource_group_name EventgridPartnerRegistration#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#id EventgridPartnerRegistration#id}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#tags EventgridPartnerRegistration#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#name EventgridPartnerRegistration#name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.resourceGroupName">resourceGroupName</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#resource_group_name EventgridPartnerRegistration#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#id EventgridPartnerRegistration#id}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.tags">tags</a></code> | <code>java.util.Map<java.lang.String, java.lang.String></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#tags EventgridPartnerRegistration#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationTimeouts">EventgridPartnerRegistrationTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1044,7 +1044,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#name EventgridPartnerRegistration#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#name EventgridPartnerRegistration#name}.
 
 ---
 
@@ -1056,7 +1056,7 @@ public java.lang.String getResourceGroupName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#resource_group_name EventgridPartnerRegistration#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#resource_group_name EventgridPartnerRegistration#resource_group_name}.
 
 ---
 
@@ -1068,7 +1068,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#id EventgridPartnerRegistration#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#id EventgridPartnerRegistration#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1083,7 +1083,7 @@ public java.util.Map<java.lang.String, java.lang.String> getTags();
 
 - *Type:* java.util.Map<java.lang.String, java.lang.String>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#tags EventgridPartnerRegistration#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#tags EventgridPartnerRegistration#tags}.
 
 ---
 
@@ -1097,7 +1097,7 @@ public EventgridPartnerRegistrationTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#timeouts EventgridPartnerRegistration#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#timeouts EventgridPartnerRegistration#timeouts}
 
 ---
 
@@ -1120,10 +1120,10 @@ EventgridPartnerRegistrationTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#create EventgridPartnerRegistration#create}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#delete EventgridPartnerRegistration#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#read EventgridPartnerRegistration#read}. |
-| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#update EventgridPartnerRegistration#update}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#create EventgridPartnerRegistration#create}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#delete EventgridPartnerRegistration#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#read EventgridPartnerRegistration#read}. |
+| <code><a href="#@cdktf/provider-azurerm.eventgridPartnerRegistration.EventgridPartnerRegistrationTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#update EventgridPartnerRegistration#update}. |
 
 ---
 
@@ -1135,7 +1135,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#create EventgridPartnerRegistration#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#create EventgridPartnerRegistration#create}.
 
 ---
 
@@ -1147,7 +1147,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#delete EventgridPartnerRegistration#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#delete EventgridPartnerRegistration#delete}.
 
 ---
 
@@ -1159,7 +1159,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#read EventgridPartnerRegistration#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#read EventgridPartnerRegistration#read}.
 
 ---
 
@@ -1171,7 +1171,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.47.0/docs/resources/eventgrid_partner_registration#update EventgridPartnerRegistration#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/eventgrid_partner_registration#update EventgridPartnerRegistration#update}.
 
 ---
 
