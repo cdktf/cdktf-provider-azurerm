@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,78 +13,78 @@ import * as cdktf from 'cdktf';
 
 export interface VirtualMachineRunCommandConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#error_blob_uri VirtualMachineRunCommand#error_blob_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#error_blob_uri VirtualMachineRunCommand#error_blob_uri}
   */
   readonly errorBlobUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#id VirtualMachineRunCommand#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#id VirtualMachineRunCommand#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#location VirtualMachineRunCommand#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#location VirtualMachineRunCommand#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#name VirtualMachineRunCommand#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#name VirtualMachineRunCommand#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#output_blob_uri VirtualMachineRunCommand#output_blob_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#output_blob_uri VirtualMachineRunCommand#output_blob_uri}
   */
   readonly outputBlobUri?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#run_as_password VirtualMachineRunCommand#run_as_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#run_as_password VirtualMachineRunCommand#run_as_password}
   */
   readonly runAsPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#run_as_user VirtualMachineRunCommand#run_as_user}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#run_as_user VirtualMachineRunCommand#run_as_user}
   */
   readonly runAsUser?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#tags VirtualMachineRunCommand#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#tags VirtualMachineRunCommand#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#virtual_machine_id VirtualMachineRunCommand#virtual_machine_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#virtual_machine_id VirtualMachineRunCommand#virtual_machine_id}
   */
   readonly virtualMachineId: string;
   /**
   * error_blob_managed_identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#error_blob_managed_identity VirtualMachineRunCommand#error_blob_managed_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#error_blob_managed_identity VirtualMachineRunCommand#error_blob_managed_identity}
   */
   readonly errorBlobManagedIdentity?: VirtualMachineRunCommandErrorBlobManagedIdentity;
   /**
   * output_blob_managed_identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#output_blob_managed_identity VirtualMachineRunCommand#output_blob_managed_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#output_blob_managed_identity VirtualMachineRunCommand#output_blob_managed_identity}
   */
   readonly outputBlobManagedIdentity?: VirtualMachineRunCommandOutputBlobManagedIdentity;
   /**
   * parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#parameter VirtualMachineRunCommand#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#parameter VirtualMachineRunCommand#parameter}
   */
   readonly parameter?: VirtualMachineRunCommandParameter[] | cdktf.IResolvable;
   /**
   * protected_parameter block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#protected_parameter VirtualMachineRunCommand#protected_parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#protected_parameter VirtualMachineRunCommand#protected_parameter}
   */
   readonly protectedParameter?: VirtualMachineRunCommandProtectedParameter[] | cdktf.IResolvable;
   /**
   * source block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#source VirtualMachineRunCommand#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#source VirtualMachineRunCommand#source}
   */
   readonly source: VirtualMachineRunCommandSource;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#timeouts VirtualMachineRunCommand#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#timeouts VirtualMachineRunCommand#timeouts}
   */
   readonly timeouts?: VirtualMachineRunCommandTimeouts;
 }
@@ -195,11 +195,11 @@ export class VirtualMachineRunCommandInstanceViewList extends cdktf.ComplexList 
 }
 export interface VirtualMachineRunCommandErrorBlobManagedIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#client_id VirtualMachineRunCommand#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#client_id VirtualMachineRunCommand#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#object_id VirtualMachineRunCommand#object_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#object_id VirtualMachineRunCommand#object_id}
   */
   readonly objectId?: string;
 }
@@ -312,11 +312,11 @@ export class VirtualMachineRunCommandErrorBlobManagedIdentityOutputReference ext
 }
 export interface VirtualMachineRunCommandOutputBlobManagedIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#client_id VirtualMachineRunCommand#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#client_id VirtualMachineRunCommand#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#object_id VirtualMachineRunCommand#object_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#object_id VirtualMachineRunCommand#object_id}
   */
   readonly objectId?: string;
 }
@@ -429,11 +429,11 @@ export class VirtualMachineRunCommandOutputBlobManagedIdentityOutputReference ex
 }
 export interface VirtualMachineRunCommandParameter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#name VirtualMachineRunCommand#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#name VirtualMachineRunCommand#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#value VirtualMachineRunCommand#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#value VirtualMachineRunCommand#value}
   */
   readonly value: string;
 }
@@ -572,11 +572,11 @@ export class VirtualMachineRunCommandParameterList extends cdktf.ComplexList {
 }
 export interface VirtualMachineRunCommandProtectedParameter {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#name VirtualMachineRunCommand#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#name VirtualMachineRunCommand#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#value VirtualMachineRunCommand#value}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#value VirtualMachineRunCommand#value}
   */
   readonly value: string;
 }
@@ -715,11 +715,11 @@ export class VirtualMachineRunCommandProtectedParameterList extends cdktf.Comple
 }
 export interface VirtualMachineRunCommandSourceScriptUriManagedIdentity {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#client_id VirtualMachineRunCommand#client_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#client_id VirtualMachineRunCommand#client_id}
   */
   readonly clientId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#object_id VirtualMachineRunCommand#object_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#object_id VirtualMachineRunCommand#object_id}
   */
   readonly objectId?: string;
 }
@@ -832,21 +832,21 @@ export class VirtualMachineRunCommandSourceScriptUriManagedIdentityOutputReferen
 }
 export interface VirtualMachineRunCommandSource {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#command_id VirtualMachineRunCommand#command_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#command_id VirtualMachineRunCommand#command_id}
   */
   readonly commandId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#script VirtualMachineRunCommand#script}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#script VirtualMachineRunCommand#script}
   */
   readonly script?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#script_uri VirtualMachineRunCommand#script_uri}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#script_uri VirtualMachineRunCommand#script_uri}
   */
   readonly scriptUri?: string;
   /**
   * script_uri_managed_identity block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#script_uri_managed_identity VirtualMachineRunCommand#script_uri_managed_identity}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#script_uri_managed_identity VirtualMachineRunCommand#script_uri_managed_identity}
   */
   readonly scriptUriManagedIdentity?: VirtualMachineRunCommandSourceScriptUriManagedIdentity;
 }
@@ -1017,19 +1017,19 @@ export class VirtualMachineRunCommandSourceOutputReference extends cdktf.Complex
 }
 export interface VirtualMachineRunCommandTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#create VirtualMachineRunCommand#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#create VirtualMachineRunCommand#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#delete VirtualMachineRunCommand#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#delete VirtualMachineRunCommand#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#read VirtualMachineRunCommand#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#read VirtualMachineRunCommand#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#update VirtualMachineRunCommand#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#update VirtualMachineRunCommand#update}
   */
   readonly update?: string;
 }
@@ -1210,7 +1210,7 @@ export class VirtualMachineRunCommandTimeoutsOutputReference extends cdktf.Compl
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command azurerm_virtual_machine_run_command}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command azurerm_virtual_machine_run_command}
 */
 export class VirtualMachineRunCommand extends cdktf.TerraformResource {
 
@@ -1226,7 +1226,7 @@ export class VirtualMachineRunCommand extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a VirtualMachineRunCommand resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the VirtualMachineRunCommand to import
-  * @param importFromId The id of the existing VirtualMachineRunCommand that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing VirtualMachineRunCommand that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the VirtualMachineRunCommand to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1238,7 +1238,7 @@ export class VirtualMachineRunCommand extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/virtual_machine_run_command azurerm_virtual_machine_run_command} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/virtual_machine_run_command azurerm_virtual_machine_run_command} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1249,7 +1249,7 @@ export class VirtualMachineRunCommand extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_virtual_machine_run_command',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.48.0',
+        providerVersion: '4.49.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
