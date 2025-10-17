@@ -4,7 +4,7 @@
 
 ### DataProtectionBackupInstanceMysqlFlexibleServer <a name="DataProtectionBackupInstanceMysqlFlexibleServer" id="@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server azurerm_data_protection_backup_instance_mysql_flexible_server}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server azurerm_data_protection_backup_instance_mysql_flexible_server}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer"></a>
 
@@ -40,12 +40,12 @@ DataProtectionBackupInstanceMysqlFlexibleServer.Builder.create(Construct scope, 
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.backupPolicyId">backupPolicyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#backup_policy_id DataProtectionBackupInstanceMysqlFlexibleServer#backup_policy_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#location DataProtectionBackupInstanceMysqlFlexibleServer#location}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#name DataProtectionBackupInstanceMysqlFlexibleServer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.serverId">serverId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#server_id DataProtectionBackupInstanceMysqlFlexibleServer#server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.vaultId">vaultId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#vault_id DataProtectionBackupInstanceMysqlFlexibleServer#vault_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#id DataProtectionBackupInstanceMysqlFlexibleServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.backupPolicyId">backupPolicyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#backup_policy_id DataProtectionBackupInstanceMysqlFlexibleServer#backup_policy_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#location DataProtectionBackupInstanceMysqlFlexibleServer#location}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#name DataProtectionBackupInstanceMysqlFlexibleServer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.serverId">serverId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#server_id DataProtectionBackupInstanceMysqlFlexibleServer#server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.vaultId">vaultId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#vault_id DataProtectionBackupInstanceMysqlFlexibleServer#vault_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#id DataProtectionBackupInstanceMysqlFlexibleServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServer.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerTimeouts">DataProtectionBackupInstanceMysqlFlexibleServerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -114,7 +114,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#backup_policy_id DataProtectionBackupInstanceMysqlFlexibleServer#backup_policy_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#backup_policy_id DataProtectionBackupInstanceMysqlFlexibleServer#backup_policy_id}.
 
 ---
 
@@ -122,7 +122,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#location DataProtectionBackupInstanceMysqlFlexibleServer#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#location DataProtectionBackupInstanceMysqlFlexibleServer#location}.
 
 ---
 
@@ -130,7 +130,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#name DataProtectionBackupInstanceMysqlFlexibleServer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#name DataProtectionBackupInstanceMysqlFlexibleServer#name}.
 
 ---
 
@@ -138,7 +138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#server_id DataProtectionBackupInstanceMysqlFlexibleServer#server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#server_id DataProtectionBackupInstanceMysqlFlexibleServer#server_id}.
 
 ---
 
@@ -146,7 +146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#vault_id DataProtectionBackupInstanceMysqlFlexibleServer#vault_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#vault_id DataProtectionBackupInstanceMysqlFlexibleServer#vault_id}.
 
 ---
 
@@ -154,7 +154,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#id DataProtectionBackupInstanceMysqlFlexibleServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#id DataProtectionBackupInstanceMysqlFlexibleServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -167,7 +167,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#timeouts DataProtectionBackupInstanceMysqlFlexibleServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#timeouts DataProtectionBackupInstanceMysqlFlexibleServer#timeouts}
 
 ---
 
@@ -621,7 +621,7 @@ The construct id used in the generated config for the DataProtectionBackupInstan
 
 The id of the existing DataProtectionBackupInstanceMysqlFlexibleServer that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -1006,12 +1006,12 @@ DataProtectionBackupInstanceMysqlFlexibleServerConfig.builder()
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.lifecycle">lifecycle</a></code> | <code>com.hashicorp.cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.provider">provider</a></code> | <code>com.hashicorp.cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.provisioners">provisioners</a></code> | <code>java.util.List<com.hashicorp.cdktf.FileProvisioner\|com.hashicorp.cdktf.LocalExecProvisioner\|com.hashicorp.cdktf.RemoteExecProvisioner></code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.backupPolicyId">backupPolicyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#backup_policy_id DataProtectionBackupInstanceMysqlFlexibleServer#backup_policy_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#location DataProtectionBackupInstanceMysqlFlexibleServer#location}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#name DataProtectionBackupInstanceMysqlFlexibleServer#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.serverId">serverId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#server_id DataProtectionBackupInstanceMysqlFlexibleServer#server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.vaultId">vaultId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#vault_id DataProtectionBackupInstanceMysqlFlexibleServer#vault_id}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#id DataProtectionBackupInstanceMysqlFlexibleServer#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.backupPolicyId">backupPolicyId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#backup_policy_id DataProtectionBackupInstanceMysqlFlexibleServer#backup_policy_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.location">location</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#location DataProtectionBackupInstanceMysqlFlexibleServer#location}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.name">name</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#name DataProtectionBackupInstanceMysqlFlexibleServer#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.serverId">serverId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#server_id DataProtectionBackupInstanceMysqlFlexibleServer#server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.vaultId">vaultId</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#vault_id DataProtectionBackupInstanceMysqlFlexibleServer#vault_id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.id">id</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#id DataProtectionBackupInstanceMysqlFlexibleServer#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerTimeouts">DataProtectionBackupInstanceMysqlFlexibleServerTimeouts</a></code> | timeouts block. |
 
 ---
@@ -1094,7 +1094,7 @@ public java.lang.String getBackupPolicyId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#backup_policy_id DataProtectionBackupInstanceMysqlFlexibleServer#backup_policy_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#backup_policy_id DataProtectionBackupInstanceMysqlFlexibleServer#backup_policy_id}.
 
 ---
 
@@ -1106,7 +1106,7 @@ public java.lang.String getLocation();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#location DataProtectionBackupInstanceMysqlFlexibleServer#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#location DataProtectionBackupInstanceMysqlFlexibleServer#location}.
 
 ---
 
@@ -1118,7 +1118,7 @@ public java.lang.String getName();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#name DataProtectionBackupInstanceMysqlFlexibleServer#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#name DataProtectionBackupInstanceMysqlFlexibleServer#name}.
 
 ---
 
@@ -1130,7 +1130,7 @@ public java.lang.String getServerId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#server_id DataProtectionBackupInstanceMysqlFlexibleServer#server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#server_id DataProtectionBackupInstanceMysqlFlexibleServer#server_id}.
 
 ---
 
@@ -1142,7 +1142,7 @@ public java.lang.String getVaultId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#vault_id DataProtectionBackupInstanceMysqlFlexibleServer#vault_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#vault_id DataProtectionBackupInstanceMysqlFlexibleServer#vault_id}.
 
 ---
 
@@ -1154,7 +1154,7 @@ public java.lang.String getId();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#id DataProtectionBackupInstanceMysqlFlexibleServer#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#id DataProtectionBackupInstanceMysqlFlexibleServer#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -1171,7 +1171,7 @@ public DataProtectionBackupInstanceMysqlFlexibleServerTimeouts getTimeouts();
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#timeouts DataProtectionBackupInstanceMysqlFlexibleServer#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#timeouts DataProtectionBackupInstanceMysqlFlexibleServer#timeouts}
 
 ---
 
@@ -1194,10 +1194,10 @@ DataProtectionBackupInstanceMysqlFlexibleServerTimeouts.builder()
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#create DataProtectionBackupInstanceMysqlFlexibleServer#create}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#delete DataProtectionBackupInstanceMysqlFlexibleServer#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#read DataProtectionBackupInstanceMysqlFlexibleServer#read}. |
-| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#update DataProtectionBackupInstanceMysqlFlexibleServer#update}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerTimeouts.property.create">create</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#create DataProtectionBackupInstanceMysqlFlexibleServer#create}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerTimeouts.property.delete">delete</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#delete DataProtectionBackupInstanceMysqlFlexibleServer#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerTimeouts.property.read">read</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#read DataProtectionBackupInstanceMysqlFlexibleServer#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataProtectionBackupInstanceMysqlFlexibleServer.DataProtectionBackupInstanceMysqlFlexibleServerTimeouts.property.update">update</a></code> | <code>java.lang.String</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#update DataProtectionBackupInstanceMysqlFlexibleServer#update}. |
 
 ---
 
@@ -1209,7 +1209,7 @@ public java.lang.String getCreate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#create DataProtectionBackupInstanceMysqlFlexibleServer#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#create DataProtectionBackupInstanceMysqlFlexibleServer#create}.
 
 ---
 
@@ -1221,7 +1221,7 @@ public java.lang.String getDelete();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#delete DataProtectionBackupInstanceMysqlFlexibleServer#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#delete DataProtectionBackupInstanceMysqlFlexibleServer#delete}.
 
 ---
 
@@ -1233,7 +1233,7 @@ public java.lang.String getRead();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#read DataProtectionBackupInstanceMysqlFlexibleServer#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#read DataProtectionBackupInstanceMysqlFlexibleServer#read}.
 
 ---
 
@@ -1245,7 +1245,7 @@ public java.lang.String getUpdate();
 
 - *Type:* java.lang.String
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.48.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#update DataProtectionBackupInstanceMysqlFlexibleServer#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/data_protection_backup_instance_mysql_flexible_server#update DataProtectionBackupInstanceMysqlFlexibleServer#update}.
 
 ---
 
