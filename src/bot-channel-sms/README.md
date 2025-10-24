@@ -1,3 +1,3 @@
 # `azurerm_bot_channel_sms`
 
-Refer to the Terraform Registry for docs: [`azurerm_bot_channel_sms`](https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/bot_channel_sms).
+Refer to the Terraform Registry for docs: [`azurerm_bot_channel_sms`](https://registry.terraform.io/providers/hashicorp/azurerm/4.50.0/docs/resources/bot_channel_sms).

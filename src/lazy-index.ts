@@ -578,6 +578,8 @@ Object.defineProperty(exports, 'managedApplicationDefinition', { get: function (
 Object.defineProperty(exports, 'managedDisk', { get: function () { return require('./managed-disk'); } });
 Object.defineProperty(exports, 'managedDiskSasToken', { get: function () { return require('./managed-disk-sas-token'); } });
 Object.defineProperty(exports, 'managedLustreFileSystem', { get: function () { return require('./managed-lustre-file-system'); } });
+Object.defineProperty(exports, 'managedRedis', { get: function () { return require('./managed-redis'); } });
+Object.defineProperty(exports, 'managedRedisGeoReplication', { get: function () { return require('./managed-redis-geo-replication'); } });
 Object.defineProperty(exports, 'managementGroup', { get: function () { return require('./management-group'); } });
 Object.defineProperty(exports, 'managementGroupPolicyAssignment', { get: function () { return require('./management-group-policy-assignment'); } });
 Object.defineProperty(exports, 'managementGroupPolicyExemption', { get: function () { return require('./management-group-policy-exemption'); } });
@@ -1321,6 +1323,7 @@ Object.defineProperty(exports, 'dataAzurermManagedApi', { get: function () { ret
 Object.defineProperty(exports, 'dataAzurermManagedApplicationDefinition', { get: function () { return require('./data-azurerm-managed-application-definition'); } });
 Object.defineProperty(exports, 'dataAzurermManagedDisk', { get: function () { return require('./data-azurerm-managed-disk'); } });
 Object.defineProperty(exports, 'dataAzurermManagedDisks', { get: function () { return require('./data-azurerm-managed-disks'); } });
+Object.defineProperty(exports, 'dataAzurermManagedRedis', { get: function () { return require('./data-azurerm-managed-redis'); } });
 Object.defineProperty(exports, 'dataAzurermManagementGroup', { get: function () { return require('./data-azurerm-management-group'); } });
 Object.defineProperty(exports, 'dataAzurermManagementGroupTemplateDeployment', { get: function () { return require('./data-azurerm-management-group-template-deployment'); } });
 Object.defineProperty(exports, 'dataAzurermMapsAccount', { get: function () { return require('./data-azurerm-maps-account'); } });

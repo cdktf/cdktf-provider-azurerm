@@ -1,3 +1,3 @@
 # `azurerm_arc_machine_extension`
 
-Refer to the Terraform Registry for docs: [`azurerm_arc_machine_extension`](https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/arc_machine_extension).
+Refer to the Terraform Registry for docs: [`azurerm_arc_machine_extension`](https://registry.terraform.io/providers/hashicorp/azurerm/4.50.0/docs/resources/arc_machine_extension).

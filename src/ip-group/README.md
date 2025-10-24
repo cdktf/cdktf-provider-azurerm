@@ -1,3 +1,3 @@
 # `azurerm_ip_group`
 
-Refer to the Terraform Registry for docs: [`azurerm_ip_group`](https://registry.terraform.io/providers/hashicorp/azurerm/4.49.0/docs/resources/ip_group).
+Refer to the Terraform Registry for docs: [`azurerm_ip_group`](https://registry.terraform.io/providers/hashicorp/azurerm/4.50.0/docs/resources/ip_group).

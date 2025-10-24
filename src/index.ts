@@ -578,6 +578,8 @@ export * as managedApplicationDefinition from './managed-application-definition'
 export * as managedDisk from './managed-disk';
 export * as managedDiskSasToken from './managed-disk-sas-token';
 export * as managedLustreFileSystem from './managed-lustre-file-system';
+export * as managedRedis from './managed-redis';
+export * as managedRedisGeoReplication from './managed-redis-geo-replication';
 export * as managementGroup from './management-group';
 export * as managementGroupPolicyAssignment from './management-group-policy-assignment';
 export * as managementGroupPolicyExemption from './management-group-policy-exemption';
@@ -1321,6 +1323,7 @@ export * as dataAzurermManagedApi from './data-azurerm-managed-api';
 export * as dataAzurermManagedApplicationDefinition from './data-azurerm-managed-application-definition';
 export * as dataAzurermManagedDisk from './data-azurerm-managed-disk';
 export * as dataAzurermManagedDisks from './data-azurerm-managed-disks';
+export * as dataAzurermManagedRedis from './data-azurerm-managed-redis';
 export * as dataAzurermManagementGroup from './data-azurerm-management-group';
 export * as dataAzurermManagementGroupTemplateDeployment from './data-azurerm-management-group-template-deployment';
 export * as dataAzurermMapsAccount from './data-azurerm-maps-account';
