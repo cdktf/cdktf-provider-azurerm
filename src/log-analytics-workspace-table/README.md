@@ -1,3 +1,3 @@
 # `azurerm_log_analytics_workspace_table`
 
-Refer to the Terraform Registry for docs: [`azurerm_log_analytics_workspace_table`](https://registry.terraform.io/providers/hashicorp/azurerm/4.50.0/docs/resources/log_analytics_workspace_table).
+Refer to the Terraform Registry for docs: [`azurerm_log_analytics_workspace_table`](https://registry.terraform.io/providers/hashicorp/azurerm/4.51.0/docs/resources/log_analytics_workspace_table).

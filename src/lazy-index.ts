@@ -694,6 +694,7 @@ Object.defineProperty(exports, 'networkManagerIpamPoolStaticCidr', { get: functi
 Object.defineProperty(exports, 'networkManagerManagementGroupConnection', { get: function () { return require('./network-manager-management-group-connection'); } });
 Object.defineProperty(exports, 'networkManagerNetworkGroup', { get: function () { return require('./network-manager-network-group'); } });
 Object.defineProperty(exports, 'networkManagerRoutingConfiguration', { get: function () { return require('./network-manager-routing-configuration'); } });
+Object.defineProperty(exports, 'networkManagerRoutingRule', { get: function () { return require('./network-manager-routing-rule'); } });
 Object.defineProperty(exports, 'networkManagerRoutingRuleCollection', { get: function () { return require('./network-manager-routing-rule-collection'); } });
 Object.defineProperty(exports, 'networkManagerScopeConnection', { get: function () { return require('./network-manager-scope-connection'); } });
 Object.defineProperty(exports, 'networkManagerSecurityAdminConfiguration', { get: function () { return require('./network-manager-security-admin-configuration'); } });
@@ -723,6 +724,7 @@ Object.defineProperty(exports, 'oracleAutonomousDatabaseCloneFromDatabase', { ge
 Object.defineProperty(exports, 'oracleCloudVmCluster', { get: function () { return require('./oracle-cloud-vm-cluster'); } });
 Object.defineProperty(exports, 'oracleExadataInfrastructure', { get: function () { return require('./oracle-exadata-infrastructure'); } });
 Object.defineProperty(exports, 'oracleExascaleDatabaseStorageVault', { get: function () { return require('./oracle-exascale-database-storage-vault'); } });
+Object.defineProperty(exports, 'oracleResourceAnchor', { get: function () { return require('./oracle-resource-anchor'); } });
 Object.defineProperty(exports, 'orbitalContact', { get: function () { return require('./orbital-contact'); } });
 Object.defineProperty(exports, 'orbitalContactProfile', { get: function () { return require('./orbital-contact-profile'); } });
 Object.defineProperty(exports, 'orbitalSpacecraft', { get: function () { return require('./orbital-spacecraft'); } });
@@ -1394,6 +1396,7 @@ Object.defineProperty(exports, 'dataAzurermOracleDbSystemShapes', { get: functio
 Object.defineProperty(exports, 'dataAzurermOracleExadataInfrastructure', { get: function () { return require('./data-azurerm-oracle-exadata-infrastructure'); } });
 Object.defineProperty(exports, 'dataAzurermOracleExascaleDatabaseStorageVault', { get: function () { return require('./data-azurerm-oracle-exascale-database-storage-vault'); } });
 Object.defineProperty(exports, 'dataAzurermOracleGiVersions', { get: function () { return require('./data-azurerm-oracle-gi-versions'); } });
+Object.defineProperty(exports, 'dataAzurermOracleResourceAnchor', { get: function () { return require('./data-azurerm-oracle-resource-anchor'); } });
 Object.defineProperty(exports, 'dataAzurermOrchestratedVirtualMachineScaleSet', { get: function () { return require('./data-azurerm-orchestrated-virtual-machine-scale-set'); } });
 Object.defineProperty(exports, 'dataAzurermPaloAltoLocalRulestack', { get: function () { return require('./data-azurerm-palo-alto-local-rulestack'); } });
 Object.defineProperty(exports, 'dataAzurermPlatformImage', { get: function () { return require('./data-azurerm-platform-image'); } });

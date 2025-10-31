@@ -694,6 +694,7 @@ export * as networkManagerIpamPoolStaticCidr from './network-manager-ipam-pool-s
 export * as networkManagerManagementGroupConnection from './network-manager-management-group-connection';
 export * as networkManagerNetworkGroup from './network-manager-network-group';
 export * as networkManagerRoutingConfiguration from './network-manager-routing-configuration';
+export * as networkManagerRoutingRule from './network-manager-routing-rule';
 export * as networkManagerRoutingRuleCollection from './network-manager-routing-rule-collection';
 export * as networkManagerScopeConnection from './network-manager-scope-connection';
 export * as networkManagerSecurityAdminConfiguration from './network-manager-security-admin-configuration';
@@ -723,6 +724,7 @@ export * as oracleAutonomousDatabaseCloneFromDatabase from './oracle-autonomous-
 export * as oracleCloudVmCluster from './oracle-cloud-vm-cluster';
 export * as oracleExadataInfrastructure from './oracle-exadata-infrastructure';
 export * as oracleExascaleDatabaseStorageVault from './oracle-exascale-database-storage-vault';
+export * as oracleResourceAnchor from './oracle-resource-anchor';
 export * as orbitalContact from './orbital-contact';
 export * as orbitalContactProfile from './orbital-contact-profile';
 export * as orbitalSpacecraft from './orbital-spacecraft';
@@ -1394,6 +1396,7 @@ export * as dataAzurermOracleDbSystemShapes from './data-azurerm-oracle-db-syste
 export * as dataAzurermOracleExadataInfrastructure from './data-azurerm-oracle-exadata-infrastructure';
 export * as dataAzurermOracleExascaleDatabaseStorageVault from './data-azurerm-oracle-exascale-database-storage-vault';
 export * as dataAzurermOracleGiVersions from './data-azurerm-oracle-gi-versions';
+export * as dataAzurermOracleResourceAnchor from './data-azurerm-oracle-resource-anchor';
 export * as dataAzurermOrchestratedVirtualMachineScaleSet from './data-azurerm-orchestrated-virtual-machine-scale-set';
 export * as dataAzurermPaloAltoLocalRulestack from './data-azurerm-palo-alto-local-rulestack';
 export * as dataAzurermPlatformImage from './data-azurerm-platform-image';
