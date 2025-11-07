@@ -64,6 +64,7 @@ Object.defineProperty(exports, 'apiManagementSubscription', { get: function () {
 Object.defineProperty(exports, 'apiManagementTag', { get: function () { return require('./api-management-tag'); } });
 Object.defineProperty(exports, 'apiManagementUser', { get: function () { return require('./api-management-user'); } });
 Object.defineProperty(exports, 'apiManagementWorkspace', { get: function () { return require('./api-management-workspace'); } });
+Object.defineProperty(exports, 'apiManagementWorkspaceApiVersionSet', { get: function () { return require('./api-management-workspace-api-version-set'); } });
 Object.defineProperty(exports, 'apiManagementWorkspacePolicy', { get: function () { return require('./api-management-workspace-policy'); } });
 Object.defineProperty(exports, 'apiManagementWorkspacePolicyFragment', { get: function () { return require('./api-management-workspace-policy-fragment'); } });
 Object.defineProperty(exports, 'appConfiguration', { get: function () { return require('./app-configuration'); } });
@@ -908,7 +909,6 @@ Object.defineProperty(exports, 'siteRecoveryVmwareReplicationPolicy', { get: fun
 Object.defineProperty(exports, 'siteRecoveryVmwareReplicationPolicyAssociation', { get: function () { return require('./site-recovery-vmware-replication-policy-association'); } });
 Object.defineProperty(exports, 'snapshot', { get: function () { return require('./snapshot'); } });
 Object.defineProperty(exports, 'sourceControlToken', { get: function () { return require('./source-control-token'); } });
-Object.defineProperty(exports, 'spatialAnchorsAccount', { get: function () { return require('./spatial-anchors-account'); } });
 Object.defineProperty(exports, 'springCloudAccelerator', { get: function () { return require('./spring-cloud-accelerator'); } });
 Object.defineProperty(exports, 'springCloudActiveDeployment', { get: function () { return require('./spring-cloud-active-deployment'); } });
 Object.defineProperty(exports, 'springCloudApiPortal', { get: function () { return require('./spring-cloud-api-portal'); } });
@@ -1467,7 +1467,6 @@ Object.defineProperty(exports, 'dataAzurermSiteRecoveryReplicationPolicy', { get
 Object.defineProperty(exports, 'dataAzurermSiteRecoveryReplicationRecoveryPlan', { get: function () { return require('./data-azurerm-site-recovery-replication-recovery-plan'); } });
 Object.defineProperty(exports, 'dataAzurermSnapshot', { get: function () { return require('./data-azurerm-snapshot'); } });
 Object.defineProperty(exports, 'dataAzurermSourceControlToken', { get: function () { return require('./data-azurerm-source-control-token'); } });
-Object.defineProperty(exports, 'dataAzurermSpatialAnchorsAccount', { get: function () { return require('./data-azurerm-spatial-anchors-account'); } });
 Object.defineProperty(exports, 'dataAzurermSpringCloudApp', { get: function () { return require('./data-azurerm-spring-cloud-app'); } });
 Object.defineProperty(exports, 'dataAzurermSpringCloudService', { get: function () { return require('./data-azurerm-spring-cloud-service'); } });
 Object.defineProperty(exports, 'dataAzurermSshPublicKey', { get: function () { return require('./data-azurerm-ssh-public-key'); } });
