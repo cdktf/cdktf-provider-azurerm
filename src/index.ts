@@ -64,6 +64,7 @@ export * as apiManagementSubscription from './api-management-subscription';
 export * as apiManagementTag from './api-management-tag';
 export * as apiManagementUser from './api-management-user';
 export * as apiManagementWorkspace from './api-management-workspace';
+export * as apiManagementWorkspaceApiVersionSet from './api-management-workspace-api-version-set';
 export * as apiManagementWorkspacePolicy from './api-management-workspace-policy';
 export * as apiManagementWorkspacePolicyFragment from './api-management-workspace-policy-fragment';
 export * as appConfiguration from './app-configuration';
@@ -908,7 +909,6 @@ export * as siteRecoveryVmwareReplicationPolicy from './site-recovery-vmware-rep
 export * as siteRecoveryVmwareReplicationPolicyAssociation from './site-recovery-vmware-replication-policy-association';
 export * as snapshot from './snapshot';
 export * as sourceControlToken from './source-control-token';
-export * as spatialAnchorsAccount from './spatial-anchors-account';
 export * as springCloudAccelerator from './spring-cloud-accelerator';
 export * as springCloudActiveDeployment from './spring-cloud-active-deployment';
 export * as springCloudApiPortal from './spring-cloud-api-portal';
@@ -1467,7 +1467,6 @@ export * as dataAzurermSiteRecoveryReplicationPolicy from './data-azurerm-site-r
 export * as dataAzurermSiteRecoveryReplicationRecoveryPlan from './data-azurerm-site-recovery-replication-recovery-plan';
 export * as dataAzurermSnapshot from './data-azurerm-snapshot';
 export * as dataAzurermSourceControlToken from './data-azurerm-source-control-token';
-export * as dataAzurermSpatialAnchorsAccount from './data-azurerm-spatial-anchors-account';
 export * as dataAzurermSpringCloudApp from './data-azurerm-spring-cloud-app';
 export * as dataAzurermSpringCloudService from './data-azurerm-spring-cloud-service';
 export * as dataAzurermSshPublicKey from './data-azurerm-ssh-public-key';
