@@ -65,6 +65,7 @@ Object.defineProperty(exports, 'apiManagementTag', { get: function () { return r
 Object.defineProperty(exports, 'apiManagementUser', { get: function () { return require('./api-management-user'); } });
 Object.defineProperty(exports, 'apiManagementWorkspace', { get: function () { return require('./api-management-workspace'); } });
 Object.defineProperty(exports, 'apiManagementWorkspaceApiVersionSet', { get: function () { return require('./api-management-workspace-api-version-set'); } });
+Object.defineProperty(exports, 'apiManagementWorkspaceCertificate', { get: function () { return require('./api-management-workspace-certificate'); } });
 Object.defineProperty(exports, 'apiManagementWorkspacePolicy', { get: function () { return require('./api-management-workspace-policy'); } });
 Object.defineProperty(exports, 'apiManagementWorkspacePolicyFragment', { get: function () { return require('./api-management-workspace-policy-fragment'); } });
 Object.defineProperty(exports, 'appConfiguration', { get: function () { return require('./app-configuration'); } });
@@ -605,6 +606,7 @@ Object.defineProperty(exports, 'mobileNetworkSimPolicy', { get: function () { re
 Object.defineProperty(exports, 'mobileNetworkSite', { get: function () { return require('./mobile-network-site'); } });
 Object.defineProperty(exports, 'mobileNetworkSlice', { get: function () { return require('./mobile-network-slice'); } });
 Object.defineProperty(exports, 'mongoCluster', { get: function () { return require('./mongo-cluster'); } });
+Object.defineProperty(exports, 'mongoClusterFirewallRule', { get: function () { return require('./mongo-cluster-firewall-rule'); } });
 Object.defineProperty(exports, 'monitorAadDiagnosticSetting', { get: function () { return require('./monitor-aad-diagnostic-setting'); } });
 Object.defineProperty(exports, 'monitorActionGroup', { get: function () { return require('./monitor-action-group'); } });
 Object.defineProperty(exports, 'monitorActivityLogAlert', { get: function () { return require('./monitor-activity-log-alert'); } });
