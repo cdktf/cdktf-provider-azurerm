@@ -4,7 +4,7 @@
 
 ### OracleResourceAnchor <a name="OracleResourceAnchor" id="@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchor"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor azurerm_oracle_resource_anchor}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor azurerm_oracle_resource_anchor}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchor.Initializer"></a>
 
@@ -501,7 +501,7 @@ The construct id used in the generated config for the OracleResourceAnchor to im
 
 The id of the existing OracleResourceAnchor that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -862,10 +862,10 @@ new OracleResourceAnchorConfig {
 | <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#name OracleResourceAnchor#name}. |
-| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#resource_group_name OracleResourceAnchor#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#id OracleResourceAnchor#id}. |
-| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#tags OracleResourceAnchor#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#name OracleResourceAnchor#name}. |
+| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#resource_group_name OracleResourceAnchor#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#id OracleResourceAnchor#id}. |
+| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.tags">Tags</a></code> | <code>System.Collections.Generic.IDictionary<string, string></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#tags OracleResourceAnchor#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorTimeouts">OracleResourceAnchorTimeouts</a></code> | timeouts block. |
 
 ---
@@ -948,7 +948,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#name OracleResourceAnchor#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#name OracleResourceAnchor#name}.
 
 ---
 
@@ -960,7 +960,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#resource_group_name OracleResourceAnchor#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#resource_group_name OracleResourceAnchor#resource_group_name}.
 
 ---
 
@@ -972,7 +972,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#id OracleResourceAnchor#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#id OracleResourceAnchor#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -987,7 +987,7 @@ public System.Collections.Generic.IDictionary<string, string> Tags { get; set; }
 
 - *Type:* System.Collections.Generic.IDictionary<string, string>
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#tags OracleResourceAnchor#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#tags OracleResourceAnchor#tags}.
 
 ---
 
@@ -1001,7 +1001,7 @@ public OracleResourceAnchorTimeouts Timeouts { get; set; }
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#timeouts OracleResourceAnchor#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#timeouts OracleResourceAnchor#timeouts}
 
 ---
 
@@ -1024,10 +1024,10 @@ new OracleResourceAnchorTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#create OracleResourceAnchor#create}. |
-| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#delete OracleResourceAnchor#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#read OracleResourceAnchor#read}. |
-| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#update OracleResourceAnchor#update}. |
+| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorTimeouts.property.create">Create</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#create OracleResourceAnchor#create}. |
+| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorTimeouts.property.delete">Delete</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#delete OracleResourceAnchor#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#read OracleResourceAnchor#read}. |
+| <code><a href="#@cdktf/provider-azurerm.oracleResourceAnchor.OracleResourceAnchorTimeouts.property.update">Update</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#update OracleResourceAnchor#update}. |
 
 ---
 
@@ -1039,7 +1039,7 @@ public string Create { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#create OracleResourceAnchor#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#create OracleResourceAnchor#create}.
 
 ---
 
@@ -1051,7 +1051,7 @@ public string Delete { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#delete OracleResourceAnchor#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#delete OracleResourceAnchor#delete}.
 
 ---
 
@@ -1063,7 +1063,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#read OracleResourceAnchor#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#read OracleResourceAnchor#read}.
 
 ---
 
@@ -1075,7 +1075,7 @@ public string Update { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/oracle_resource_anchor#update OracleResourceAnchor#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/oracle_resource_anchor#update OracleResourceAnchor#update}.
 
 ---
 
