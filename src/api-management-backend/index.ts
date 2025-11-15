@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,82 +13,622 @@ import * as cdktf from 'cdktf';
 
 export interface ApiManagementBackendConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#api_management_name ApiManagementBackend#api_management_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#api_management_name ApiManagementBackend#api_management_name}
   */
   readonly apiManagementName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#description ApiManagementBackend#description}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#description ApiManagementBackend#description}
   */
   readonly description?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#id ApiManagementBackend#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#id ApiManagementBackend#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#name ApiManagementBackend#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#name ApiManagementBackend#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#protocol ApiManagementBackend#protocol}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#protocol ApiManagementBackend#protocol}
   */
   readonly protocol: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#resource_group_name ApiManagementBackend#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#resource_group_name ApiManagementBackend#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#resource_id ApiManagementBackend#resource_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#resource_id ApiManagementBackend#resource_id}
   */
   readonly resourceId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#title ApiManagementBackend#title}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#title ApiManagementBackend#title}
   */
   readonly title?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#url ApiManagementBackend#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#url ApiManagementBackend#url}
   */
   readonly url: string;
   /**
+  * circuit_breaker_rule block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#circuit_breaker_rule ApiManagementBackend#circuit_breaker_rule}
+  */
+  readonly circuitBreakerRule?: ApiManagementBackendCircuitBreakerRule;
+  /**
   * credentials block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#credentials ApiManagementBackend#credentials}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#credentials ApiManagementBackend#credentials}
   */
   readonly credentials?: ApiManagementBackendCredentials;
   /**
   * proxy block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#proxy ApiManagementBackend#proxy}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#proxy ApiManagementBackend#proxy}
   */
   readonly proxy?: ApiManagementBackendProxy;
   /**
   * service_fabric_cluster block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#service_fabric_cluster ApiManagementBackend#service_fabric_cluster}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#service_fabric_cluster ApiManagementBackend#service_fabric_cluster}
   */
   readonly serviceFabricCluster?: ApiManagementBackendServiceFabricCluster;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#timeouts ApiManagementBackend#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#timeouts ApiManagementBackend#timeouts}
   */
   readonly timeouts?: ApiManagementBackendTimeouts;
   /**
   * tls block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#tls ApiManagementBackend#tls}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#tls ApiManagementBackend#tls}
   */
   readonly tls?: ApiManagementBackendTls;
 }
+export interface ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRange {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#max ApiManagementBackend#max}
+  */
+  readonly max: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#min ApiManagementBackend#min}
+  */
+  readonly min: number;
+}
+
+export function apiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeToTerraform(struct?: ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRange | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    max: cdktf.numberToTerraform(struct!.max),
+    min: cdktf.numberToTerraform(struct!.min),
+  }
+}
+
+
+export function apiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeToHclTerraform(struct?: ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRange | cdktf.IResolvable): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    max: {
+      value: cdktf.numberToHclTerraform(struct!.max),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    min: {
+      value: cdktf.numberToHclTerraform(struct!.min),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+  private resolvableValue?: cdktf.IResolvable;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param complexObjectIndex the index of this item in the list
+  * @param complexObjectIsFromSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string, complexObjectIndex: number, complexObjectIsFromSet: boolean) {
+    super(terraformResource, terraformAttribute, complexObjectIsFromSet, complexObjectIndex);
+  }
+
+  public get internalValue(): ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRange | cdktf.IResolvable | undefined {
+    if (this.resolvableValue) {
+      return this.resolvableValue;
+    }
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._max !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.max = this._max;
+    }
+    if (this._min !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.min = this._min;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRange | cdktf.IResolvable | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this.resolvableValue = undefined;
+      this._max = undefined;
+      this._min = undefined;
+    }
+    else if (cdktf.Tokenization.isResolvable(value)) {
+      this.isEmptyObject = false;
+      this.resolvableValue = value;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this.resolvableValue = undefined;
+      this._max = value.max;
+      this._min = value.min;
+    }
+  }
+
+  // max - computed: false, optional: false, required: true
+  private _max?: number; 
+  public get max() {
+    return this.getNumberAttribute('max');
+  }
+  public set max(value: number) {
+    this._max = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get maxInput() {
+    return this._max;
+  }
+
+  // min - computed: false, optional: false, required: true
+  private _min?: number; 
+  public get min() {
+    return this.getNumberAttribute('min');
+  }
+  public set min(value: number) {
+    this._min = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get minInput() {
+    return this._min;
+  }
+}
+
+export class ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeList extends cdktf.ComplexList {
+  public internalValue? : ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRange[] | cdktf.IResolvable
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  * @param wrapsSet whether the list is wrapping a set (will add tolist() to be able to access an item via an index)
+  */
+  constructor(protected terraformResource: cdktf.IInterpolatingParent, protected terraformAttribute: string, protected wrapsSet: boolean) {
+    super(terraformResource, terraformAttribute, wrapsSet)
+  }
+
+  /**
+  * @param index the index of the item to return
+  */
+  public get(index: number): ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeOutputReference {
+    return new ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
+  }
+}
+export interface ApiManagementBackendCircuitBreakerRuleFailureCondition {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#count ApiManagementBackend#count}
+  */
+  readonly count?: number;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#error_reasons ApiManagementBackend#error_reasons}
+  */
+  readonly errorReasons?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#interval_duration ApiManagementBackend#interval_duration}
+  */
+  readonly intervalDuration: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#percentage ApiManagementBackend#percentage}
+  */
+  readonly percentage?: number;
+  /**
+  * status_code_range block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#status_code_range ApiManagementBackend#status_code_range}
+  */
+  readonly statusCodeRange?: ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRange[] | cdktf.IResolvable;
+}
+
+export function apiManagementBackendCircuitBreakerRuleFailureConditionToTerraform(struct?: ApiManagementBackendCircuitBreakerRuleFailureConditionOutputReference | ApiManagementBackendCircuitBreakerRuleFailureCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    count: cdktf.numberToTerraform(struct!.count),
+    error_reasons: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.errorReasons),
+    interval_duration: cdktf.stringToTerraform(struct!.intervalDuration),
+    percentage: cdktf.numberToTerraform(struct!.percentage),
+    status_code_range: cdktf.listMapper(apiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeToTerraform, true)(struct!.statusCodeRange),
+  }
+}
+
+
+export function apiManagementBackendCircuitBreakerRuleFailureConditionToHclTerraform(struct?: ApiManagementBackendCircuitBreakerRuleFailureConditionOutputReference | ApiManagementBackendCircuitBreakerRuleFailureCondition): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    count: {
+      value: cdktf.numberToHclTerraform(struct!.count),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    error_reasons: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.errorReasons),
+      isBlock: false,
+      type: "list",
+      storageClassType: "stringList",
+    },
+    interval_duration: {
+      value: cdktf.stringToHclTerraform(struct!.intervalDuration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    percentage: {
+      value: cdktf.numberToHclTerraform(struct!.percentage),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "number",
+    },
+    status_code_range: {
+      value: cdktf.listMapperHcl(apiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeToHclTerraform, true)(struct!.statusCodeRange),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ApiManagementBackendCircuitBreakerRuleFailureConditionOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApiManagementBackendCircuitBreakerRuleFailureCondition | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._count !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.count = this._count;
+    }
+    if (this._errorReasons !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.errorReasons = this._errorReasons;
+    }
+    if (this._intervalDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.intervalDuration = this._intervalDuration;
+    }
+    if (this._percentage !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.percentage = this._percentage;
+    }
+    if (this._statusCodeRange?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.statusCodeRange = this._statusCodeRange?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementBackendCircuitBreakerRuleFailureCondition | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._count = undefined;
+      this._errorReasons = undefined;
+      this._intervalDuration = undefined;
+      this._percentage = undefined;
+      this._statusCodeRange.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._count = value.count;
+      this._errorReasons = value.errorReasons;
+      this._intervalDuration = value.intervalDuration;
+      this._percentage = value.percentage;
+      this._statusCodeRange.internalValue = value.statusCodeRange;
+    }
+  }
+
+  // count - computed: false, optional: true, required: false
+  private _count?: number; 
+  public get count() {
+    return this.getNumberAttribute('count');
+  }
+  public set count(value: number) {
+    this._count = value;
+  }
+  public resetCount() {
+    this._count = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get countInput() {
+    return this._count;
+  }
+
+  // error_reasons - computed: false, optional: true, required: false
+  private _errorReasons?: string[]; 
+  public get errorReasons() {
+    return this.getListAttribute('error_reasons');
+  }
+  public set errorReasons(value: string[]) {
+    this._errorReasons = value;
+  }
+  public resetErrorReasons() {
+    this._errorReasons = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get errorReasonsInput() {
+    return this._errorReasons;
+  }
+
+  // interval_duration - computed: false, optional: false, required: true
+  private _intervalDuration?: string; 
+  public get intervalDuration() {
+    return this.getStringAttribute('interval_duration');
+  }
+  public set intervalDuration(value: string) {
+    this._intervalDuration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get intervalDurationInput() {
+    return this._intervalDuration;
+  }
+
+  // percentage - computed: false, optional: true, required: false
+  private _percentage?: number; 
+  public get percentage() {
+    return this.getNumberAttribute('percentage');
+  }
+  public set percentage(value: number) {
+    this._percentage = value;
+  }
+  public resetPercentage() {
+    this._percentage = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get percentageInput() {
+    return this._percentage;
+  }
+
+  // status_code_range - computed: false, optional: true, required: false
+  private _statusCodeRange = new ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeList(this, "status_code_range", false);
+  public get statusCodeRange() {
+    return this._statusCodeRange;
+  }
+  public putStatusCodeRange(value: ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRange[] | cdktf.IResolvable) {
+    this._statusCodeRange.internalValue = value;
+  }
+  public resetStatusCodeRange() {
+    this._statusCodeRange.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get statusCodeRangeInput() {
+    return this._statusCodeRange.internalValue;
+  }
+}
+export interface ApiManagementBackendCircuitBreakerRule {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#accept_retry_after_enabled ApiManagementBackend#accept_retry_after_enabled}
+  */
+  readonly acceptRetryAfterEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#name ApiManagementBackend#name}
+  */
+  readonly name: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#trip_duration ApiManagementBackend#trip_duration}
+  */
+  readonly tripDuration: string;
+  /**
+  * failure_condition block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#failure_condition ApiManagementBackend#failure_condition}
+  */
+  readonly failureCondition: ApiManagementBackendCircuitBreakerRuleFailureCondition;
+}
+
+export function apiManagementBackendCircuitBreakerRuleToTerraform(struct?: ApiManagementBackendCircuitBreakerRuleOutputReference | ApiManagementBackendCircuitBreakerRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    accept_retry_after_enabled: cdktf.booleanToTerraform(struct!.acceptRetryAfterEnabled),
+    name: cdktf.stringToTerraform(struct!.name),
+    trip_duration: cdktf.stringToTerraform(struct!.tripDuration),
+    failure_condition: apiManagementBackendCircuitBreakerRuleFailureConditionToTerraform(struct!.failureCondition),
+  }
+}
+
+
+export function apiManagementBackendCircuitBreakerRuleToHclTerraform(struct?: ApiManagementBackendCircuitBreakerRuleOutputReference | ApiManagementBackendCircuitBreakerRule): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    accept_retry_after_enabled: {
+      value: cdktf.booleanToHclTerraform(struct!.acceptRetryAfterEnabled),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "boolean",
+    },
+    name: {
+      value: cdktf.stringToHclTerraform(struct!.name),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    trip_duration: {
+      value: cdktf.stringToHclTerraform(struct!.tripDuration),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    failure_condition: {
+      value: apiManagementBackendCircuitBreakerRuleFailureConditionToHclTerraform(struct!.failureCondition),
+      isBlock: true,
+      type: "list",
+      storageClassType: "ApiManagementBackendCircuitBreakerRuleFailureConditionList",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ApiManagementBackendCircuitBreakerRuleOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ApiManagementBackendCircuitBreakerRule | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._acceptRetryAfterEnabled !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.acceptRetryAfterEnabled = this._acceptRetryAfterEnabled;
+    }
+    if (this._name !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.name = this._name;
+    }
+    if (this._tripDuration !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.tripDuration = this._tripDuration;
+    }
+    if (this._failureCondition?.internalValue !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.failureCondition = this._failureCondition?.internalValue;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ApiManagementBackendCircuitBreakerRule | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._acceptRetryAfterEnabled = undefined;
+      this._name = undefined;
+      this._tripDuration = undefined;
+      this._failureCondition.internalValue = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._acceptRetryAfterEnabled = value.acceptRetryAfterEnabled;
+      this._name = value.name;
+      this._tripDuration = value.tripDuration;
+      this._failureCondition.internalValue = value.failureCondition;
+    }
+  }
+
+  // accept_retry_after_enabled - computed: false, optional: true, required: false
+  private _acceptRetryAfterEnabled?: boolean | cdktf.IResolvable; 
+  public get acceptRetryAfterEnabled() {
+    return this.getBooleanAttribute('accept_retry_after_enabled');
+  }
+  public set acceptRetryAfterEnabled(value: boolean | cdktf.IResolvable) {
+    this._acceptRetryAfterEnabled = value;
+  }
+  public resetAcceptRetryAfterEnabled() {
+    this._acceptRetryAfterEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get acceptRetryAfterEnabledInput() {
+    return this._acceptRetryAfterEnabled;
+  }
+
+  // name - computed: false, optional: false, required: true
+  private _name?: string; 
+  public get name() {
+    return this.getStringAttribute('name');
+  }
+  public set name(value: string) {
+    this._name = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get nameInput() {
+    return this._name;
+  }
+
+  // trip_duration - computed: false, optional: false, required: true
+  private _tripDuration?: string; 
+  public get tripDuration() {
+    return this.getStringAttribute('trip_duration');
+  }
+  public set tripDuration(value: string) {
+    this._tripDuration = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get tripDurationInput() {
+    return this._tripDuration;
+  }
+
+  // failure_condition - computed: false, optional: false, required: true
+  private _failureCondition = new ApiManagementBackendCircuitBreakerRuleFailureConditionOutputReference(this, "failure_condition");
+  public get failureCondition() {
+    return this._failureCondition;
+  }
+  public putFailureCondition(value: ApiManagementBackendCircuitBreakerRuleFailureCondition) {
+    this._failureCondition.internalValue = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get failureConditionInput() {
+    return this._failureCondition.internalValue;
+  }
+}
 export interface ApiManagementBackendCredentialsAuthorization {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#parameter ApiManagementBackend#parameter}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#parameter ApiManagementBackend#parameter}
   */
   readonly parameter?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#scheme ApiManagementBackend#scheme}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#scheme ApiManagementBackend#scheme}
   */
   readonly scheme?: string;
 }
@@ -201,21 +741,21 @@ export class ApiManagementBackendCredentialsAuthorizationOutputReference extends
 }
 export interface ApiManagementBackendCredentials {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#certificate ApiManagementBackend#certificate}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#certificate ApiManagementBackend#certificate}
   */
   readonly certificate?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#header ApiManagementBackend#header}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#header ApiManagementBackend#header}
   */
   readonly header?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#query ApiManagementBackend#query}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#query ApiManagementBackend#query}
   */
   readonly query?: { [key: string]: string };
   /**
   * authorization block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#authorization ApiManagementBackend#authorization}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#authorization ApiManagementBackend#authorization}
   */
   readonly authorization?: ApiManagementBackendCredentialsAuthorization;
 }
@@ -386,15 +926,15 @@ export class ApiManagementBackendCredentialsOutputReference extends cdktf.Comple
 }
 export interface ApiManagementBackendProxy {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#password ApiManagementBackend#password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#password ApiManagementBackend#password}
   */
   readonly password?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#url ApiManagementBackend#url}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#url ApiManagementBackend#url}
   */
   readonly url: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#username ApiManagementBackend#username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#username ApiManagementBackend#username}
   */
   readonly username: string;
 }
@@ -530,11 +1070,11 @@ export class ApiManagementBackendProxyOutputReference extends cdktf.ComplexObjec
 }
 export interface ApiManagementBackendServiceFabricClusterServerX509Name {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#issuer_certificate_thumbprint ApiManagementBackend#issuer_certificate_thumbprint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#issuer_certificate_thumbprint ApiManagementBackend#issuer_certificate_thumbprint}
   */
   readonly issuerCertificateThumbprint: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#name ApiManagementBackend#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#name ApiManagementBackend#name}
   */
   readonly name: string;
 }
@@ -673,29 +1213,29 @@ export class ApiManagementBackendServiceFabricClusterServerX509NameList extends 
 }
 export interface ApiManagementBackendServiceFabricCluster {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#client_certificate_id ApiManagementBackend#client_certificate_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#client_certificate_id ApiManagementBackend#client_certificate_id}
   */
   readonly clientCertificateId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#client_certificate_thumbprint ApiManagementBackend#client_certificate_thumbprint}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#client_certificate_thumbprint ApiManagementBackend#client_certificate_thumbprint}
   */
   readonly clientCertificateThumbprint?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#management_endpoints ApiManagementBackend#management_endpoints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#management_endpoints ApiManagementBackend#management_endpoints}
   */
   readonly managementEndpoints: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#max_partition_resolution_retries ApiManagementBackend#max_partition_resolution_retries}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#max_partition_resolution_retries ApiManagementBackend#max_partition_resolution_retries}
   */
   readonly maxPartitionResolutionRetries: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#server_certificate_thumbprints ApiManagementBackend#server_certificate_thumbprints}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#server_certificate_thumbprints ApiManagementBackend#server_certificate_thumbprints}
   */
   readonly serverCertificateThumbprints?: string[];
   /**
   * server_x509_name block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#server_x509_name ApiManagementBackend#server_x509_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#server_x509_name ApiManagementBackend#server_x509_name}
   */
   readonly serverX509Name?: ApiManagementBackendServiceFabricClusterServerX509Name[] | cdktf.IResolvable;
 }
@@ -918,19 +1458,19 @@ export class ApiManagementBackendServiceFabricClusterOutputReference extends cdk
 }
 export interface ApiManagementBackendTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#create ApiManagementBackend#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#create ApiManagementBackend#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#delete ApiManagementBackend#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#delete ApiManagementBackend#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#read ApiManagementBackend#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#read ApiManagementBackend#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#update ApiManagementBackend#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#update ApiManagementBackend#update}
   */
   readonly update?: string;
 }
@@ -1111,11 +1651,11 @@ export class ApiManagementBackendTimeoutsOutputReference extends cdktf.ComplexOb
 }
 export interface ApiManagementBackendTls {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#validate_certificate_chain ApiManagementBackend#validate_certificate_chain}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#validate_certificate_chain ApiManagementBackend#validate_certificate_chain}
   */
   readonly validateCertificateChain?: boolean | cdktf.IResolvable;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#validate_certificate_name ApiManagementBackend#validate_certificate_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#validate_certificate_name ApiManagementBackend#validate_certificate_name}
   */
   readonly validateCertificateName?: boolean | cdktf.IResolvable;
 }
@@ -1228,7 +1768,7 @@ export class ApiManagementBackendTlsOutputReference extends cdktf.ComplexObject 
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend azurerm_api_management_backend}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend azurerm_api_management_backend}
 */
 export class ApiManagementBackend extends cdktf.TerraformResource {
 
@@ -1244,7 +1784,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ApiManagementBackend resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ApiManagementBackend to import
-  * @param importFromId The id of the existing ApiManagementBackend that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ApiManagementBackend that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ApiManagementBackend to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -1256,7 +1796,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.52.0/docs/resources/api_management_backend azurerm_api_management_backend} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/api_management_backend azurerm_api_management_backend} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -1267,7 +1807,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_api_management_backend',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.52.0',
+        providerVersion: '4.53.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -1287,6 +1827,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
     this._resourceId = config.resourceId;
     this._title = config.title;
     this._url = config.url;
+    this._circuitBreakerRule.internalValue = config.circuitBreakerRule;
     this._credentials.internalValue = config.credentials;
     this._proxy.internalValue = config.proxy;
     this._serviceFabricCluster.internalValue = config.serviceFabricCluster;
@@ -1427,6 +1968,22 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
     return this._url;
   }
 
+  // circuit_breaker_rule - computed: false, optional: true, required: false
+  private _circuitBreakerRule = new ApiManagementBackendCircuitBreakerRuleOutputReference(this, "circuit_breaker_rule");
+  public get circuitBreakerRule() {
+    return this._circuitBreakerRule;
+  }
+  public putCircuitBreakerRule(value: ApiManagementBackendCircuitBreakerRule) {
+    this._circuitBreakerRule.internalValue = value;
+  }
+  public resetCircuitBreakerRule() {
+    this._circuitBreakerRule.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get circuitBreakerRuleInput() {
+    return this._circuitBreakerRule.internalValue;
+  }
+
   // credentials - computed: false, optional: true, required: false
   private _credentials = new ApiManagementBackendCredentialsOutputReference(this, "credentials");
   public get credentials() {
@@ -1522,6 +2079,7 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
       resource_id: cdktf.stringToTerraform(this._resourceId),
       title: cdktf.stringToTerraform(this._title),
       url: cdktf.stringToTerraform(this._url),
+      circuit_breaker_rule: apiManagementBackendCircuitBreakerRuleToTerraform(this._circuitBreakerRule.internalValue),
       credentials: apiManagementBackendCredentialsToTerraform(this._credentials.internalValue),
       proxy: apiManagementBackendProxyToTerraform(this._proxy.internalValue),
       service_fabric_cluster: apiManagementBackendServiceFabricClusterToTerraform(this._serviceFabricCluster.internalValue),
@@ -1585,6 +2143,12 @@ export class ApiManagementBackend extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      circuit_breaker_rule: {
+        value: apiManagementBackendCircuitBreakerRuleToHclTerraform(this._circuitBreakerRule.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ApiManagementBackendCircuitBreakerRuleList",
       },
       credentials: {
         value: apiManagementBackendCredentialsToHclTerraform(this._credentials.internalValue),
