@@ -1,3 +1,3 @@
 # `azurerm_confidential_ledger`
 
-Refer to the Terraform Registry for docs: [`azurerm_confidential_ledger`](https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/confidential_ledger).
+Refer to the Terraform Registry for docs: [`azurerm_confidential_ledger`](https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/confidential_ledger).
