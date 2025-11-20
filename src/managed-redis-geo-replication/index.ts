@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,42 +13,42 @@ import * as cdktf from 'cdktf';
 
 export interface ManagedRedisGeoReplicationConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication#id ManagedRedisGeoReplication#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication#id ManagedRedisGeoReplication#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication#linked_managed_redis_ids ManagedRedisGeoReplication#linked_managed_redis_ids}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication#linked_managed_redis_ids ManagedRedisGeoReplication#linked_managed_redis_ids}
   */
   readonly linkedManagedRedisIds: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication#managed_redis_id ManagedRedisGeoReplication#managed_redis_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication#managed_redis_id ManagedRedisGeoReplication#managed_redis_id}
   */
   readonly managedRedisId: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication#timeouts ManagedRedisGeoReplication#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication#timeouts ManagedRedisGeoReplication#timeouts}
   */
   readonly timeouts?: ManagedRedisGeoReplicationTimeouts;
 }
 export interface ManagedRedisGeoReplicationTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication#create ManagedRedisGeoReplication#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication#create ManagedRedisGeoReplication#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication#delete ManagedRedisGeoReplication#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication#delete ManagedRedisGeoReplication#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication#read ManagedRedisGeoReplication#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication#read ManagedRedisGeoReplication#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication#update ManagedRedisGeoReplication#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication#update ManagedRedisGeoReplication#update}
   */
   readonly update?: string;
 }
@@ -229,7 +229,7 @@ export class ManagedRedisGeoReplicationTimeoutsOutputReference extends cdktf.Com
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication azurerm_managed_redis_geo_replication}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication azurerm_managed_redis_geo_replication}
 */
 export class ManagedRedisGeoReplication extends cdktf.TerraformResource {
 
@@ -245,7 +245,7 @@ export class ManagedRedisGeoReplication extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a ManagedRedisGeoReplication resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ManagedRedisGeoReplication to import
-  * @param importFromId The id of the existing ManagedRedisGeoReplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ManagedRedisGeoReplication that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ManagedRedisGeoReplication to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -257,7 +257,7 @@ export class ManagedRedisGeoReplication extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/managed_redis_geo_replication azurerm_managed_redis_geo_replication} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/managed_redis_geo_replication azurerm_managed_redis_geo_replication} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -268,7 +268,7 @@ export class ManagedRedisGeoReplication extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_managed_redis_geo_replication',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.53.0',
+        providerVersion: '4.54.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/data-sources/managed_redis
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/managed_redis
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,24 +13,24 @@ import * as cdktf from 'cdktf';
 
 export interface DataAzurermManagedRedisConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/data-sources/managed_redis#id DataAzurermManagedRedis#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/managed_redis#id DataAzurermManagedRedis#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/data-sources/managed_redis#name DataAzurermManagedRedis#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/managed_redis#name DataAzurermManagedRedis#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/data-sources/managed_redis#resource_group_name DataAzurermManagedRedis#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/managed_redis#resource_group_name DataAzurermManagedRedis#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/data-sources/managed_redis#timeouts DataAzurermManagedRedis#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/managed_redis#timeouts DataAzurermManagedRedis#timeouts}
   */
   readonly timeouts?: DataAzurermManagedRedisTimeouts;
 }
@@ -280,10 +280,25 @@ export class DataAzurermManagedRedisDefaultDatabaseOutputReference extends cdktf
     return cdktf.Fn.tolist(this.getListAttribute('geo_replication_linked_database_ids'));
   }
 
+  // id - computed: true, optional: false, required: false
+  public get id() {
+    return this.getStringAttribute('id');
+  }
+
   // module - computed: true, optional: false, required: false
   private _module = new DataAzurermManagedRedisDefaultDatabaseModuleList(this, "module", false);
   public get module() {
     return this._module;
+  }
+
+  // persistence_append_only_file_backup_frequency - computed: true, optional: false, required: false
+  public get persistenceAppendOnlyFileBackupFrequency() {
+    return this.getStringAttribute('persistence_append_only_file_backup_frequency');
+  }
+
+  // persistence_redis_database_backup_frequency - computed: true, optional: false, required: false
+  public get persistenceRedisDatabaseBackupFrequency() {
+    return this.getStringAttribute('persistence_redis_database_backup_frequency');
   }
 
   // port - computed: true, optional: false, required: false
@@ -412,7 +427,7 @@ export class DataAzurermManagedRedisIdentityList extends cdktf.ComplexList {
 }
 export interface DataAzurermManagedRedisTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/data-sources/managed_redis#read DataAzurermManagedRedis#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/managed_redis#read DataAzurermManagedRedis#read}
   */
   readonly read?: string;
 }
@@ -506,7 +521,7 @@ export class DataAzurermManagedRedisTimeoutsOutputReference extends cdktf.Comple
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/data-sources/managed_redis azurerm_managed_redis}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/managed_redis azurerm_managed_redis}
 */
 export class DataAzurermManagedRedis extends cdktf.TerraformDataSource {
 
@@ -522,7 +537,7 @@ export class DataAzurermManagedRedis extends cdktf.TerraformDataSource {
   * Generates CDKTF code for importing a DataAzurermManagedRedis resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the DataAzurermManagedRedis to import
-  * @param importFromId The id of the existing DataAzurermManagedRedis that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/data-sources/managed_redis#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing DataAzurermManagedRedis that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/managed_redis#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the DataAzurermManagedRedis to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -534,7 +549,7 @@ export class DataAzurermManagedRedis extends cdktf.TerraformDataSource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/data-sources/managed_redis azurerm_managed_redis} Data Source
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/managed_redis azurerm_managed_redis} Data Source
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -545,7 +560,7 @@ export class DataAzurermManagedRedis extends cdktf.TerraformDataSource {
       terraformResourceType: 'azurerm_managed_redis',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.53.0',
+        providerVersion: '4.54.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,

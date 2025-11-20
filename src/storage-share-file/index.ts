@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,70 +13,74 @@ import * as cdktf from 'cdktf';
 
 export interface StorageShareFileConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#content_disposition StorageShareFile#content_disposition}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#content_disposition StorageShareFile#content_disposition}
   */
   readonly contentDisposition?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#content_encoding StorageShareFile#content_encoding}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#content_encoding StorageShareFile#content_encoding}
   */
   readonly contentEncoding?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#content_md5 StorageShareFile#content_md5}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#content_md5 StorageShareFile#content_md5}
   */
   readonly contentMd5?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#content_type StorageShareFile#content_type}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#content_type StorageShareFile#content_type}
   */
   readonly contentType?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#id StorageShareFile#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#id StorageShareFile#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#metadata StorageShareFile#metadata}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#metadata StorageShareFile#metadata}
   */
   readonly metadata?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#name StorageShareFile#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#name StorageShareFile#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#path StorageShareFile#path}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#path StorageShareFile#path}
   */
   readonly path?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#source StorageShareFile#source}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#source StorageShareFile#source}
   */
   readonly source?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#storage_share_id StorageShareFile#storage_share_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#storage_share_id StorageShareFile#storage_share_id}
   */
-  readonly storageShareId: string;
+  readonly storageShareId?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#storage_share_url StorageShareFile#storage_share_url}
+  */
+  readonly storageShareUrl?: string;
   /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#timeouts StorageShareFile#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#timeouts StorageShareFile#timeouts}
   */
   readonly timeouts?: StorageShareFileTimeouts;
 }
 export interface StorageShareFileTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#create StorageShareFile#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#create StorageShareFile#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#delete StorageShareFile#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#delete StorageShareFile#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#read StorageShareFile#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#read StorageShareFile#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#update StorageShareFile#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#update StorageShareFile#update}
   */
   readonly update?: string;
 }
@@ -257,7 +261,7 @@ export class StorageShareFileTimeoutsOutputReference extends cdktf.ComplexObject
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file azurerm_storage_share_file}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file azurerm_storage_share_file}
 */
 export class StorageShareFile extends cdktf.TerraformResource {
 
@@ -273,7 +277,7 @@ export class StorageShareFile extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a StorageShareFile resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the StorageShareFile to import
-  * @param importFromId The id of the existing StorageShareFile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing StorageShareFile that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the StorageShareFile to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -285,7 +289,7 @@ export class StorageShareFile extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_file azurerm_storage_share_file} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_file azurerm_storage_share_file} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -296,7 +300,7 @@ export class StorageShareFile extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_storage_share_file',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.53.0',
+        providerVersion: '4.54.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -317,6 +321,7 @@ export class StorageShareFile extends cdktf.TerraformResource {
     this._path = config.path;
     this._source = config.source;
     this._storageShareId = config.storageShareId;
+    this._storageShareUrl = config.storageShareUrl;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -470,7 +475,7 @@ export class StorageShareFile extends cdktf.TerraformResource {
     return this._source;
   }
 
-  // storage_share_id - computed: false, optional: false, required: true
+  // storage_share_id - computed: true, optional: true, required: false
   private _storageShareId?: string; 
   public get storageShareId() {
     return this.getStringAttribute('storage_share_id');
@@ -478,9 +483,28 @@ export class StorageShareFile extends cdktf.TerraformResource {
   public set storageShareId(value: string) {
     this._storageShareId = value;
   }
+  public resetStorageShareId() {
+    this._storageShareId = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get storageShareIdInput() {
     return this._storageShareId;
+  }
+
+  // storage_share_url - computed: true, optional: true, required: false
+  private _storageShareUrl?: string; 
+  public get storageShareUrl() {
+    return this.getStringAttribute('storage_share_url');
+  }
+  public set storageShareUrl(value: string) {
+    this._storageShareUrl = value;
+  }
+  public resetStorageShareUrl() {
+    this._storageShareUrl = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageShareUrlInput() {
+    return this._storageShareUrl;
   }
 
   // timeouts - computed: false, optional: true, required: false
@@ -515,6 +539,7 @@ export class StorageShareFile extends cdktf.TerraformResource {
       path: cdktf.stringToTerraform(this._path),
       source: cdktf.stringToTerraform(this._source),
       storage_share_id: cdktf.stringToTerraform(this._storageShareId),
+      storage_share_url: cdktf.stringToTerraform(this._storageShareUrl),
       timeouts: storageShareFileTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -577,6 +602,12 @@ export class StorageShareFile extends cdktf.TerraformResource {
       },
       storage_share_id: {
         value: cdktf.stringToHclTerraform(this._storageShareId),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
+      storage_share_url: {
+        value: cdktf.stringToHclTerraform(this._storageShareUrl),
         isBlock: false,
         type: "simple",
         storageClassType: "string",

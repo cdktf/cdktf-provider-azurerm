@@ -4,7 +4,7 @@
 
 ### StorageShareDirectory <a name="StorageShareDirectory" id="@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory azurerm_storage_share_directory}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory azurerm_storage_share_directory}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.Initializer"></a>
 
@@ -76,6 +76,8 @@ Must be unique amongst siblings in the same scope
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.putTimeouts">PutTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.resetId">ResetId</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.resetMetadata">ResetMetadata</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.resetStorageShareId">ResetStorageShareId</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.resetStorageShareUrl">ResetStorageShareUrl</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.resetTimeouts">ResetTimeouts</a></code> | *No description.* |
 
 ---
@@ -392,6 +394,18 @@ func ResetId()
 func ResetMetadata()
 ```
 
+##### `ResetStorageShareId` <a name="ResetStorageShareId" id="@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.resetStorageShareId"></a>
+
+```go
+func ResetStorageShareId()
+```
+
+##### `ResetStorageShareUrl` <a name="ResetStorageShareUrl" id="@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.resetStorageShareUrl"></a>
+
+```go
+func ResetStorageShareUrl()
+```
+
 ##### `ResetTimeouts` <a name="ResetTimeouts" id="@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.resetTimeouts"></a>
 
 ```go
@@ -501,7 +515,7 @@ The construct id used in the generated config for the StorageShareDirectory to i
 
 The id of the existing StorageShareDirectory that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -536,11 +550,13 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.metadataInput">MetadataInput</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.nameInput">NameInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.storageShareIdInput">StorageShareIdInput</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.storageShareUrlInput">StorageShareUrlInput</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.timeoutsInput">TimeoutsInput</a></code> | <code>interface{}</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.id">Id</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.name">Name</a></code> | <code>*string</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.storageShareId">StorageShareId</a></code> | <code>*string</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.storageShareUrl">StorageShareUrl</a></code> | <code>*string</code> | *No description.* |
 
 ---
 
@@ -736,6 +752,16 @@ func StorageShareIdInput() *string
 
 ---
 
+##### `StorageShareUrlInput`<sup>Optional</sup> <a name="StorageShareUrlInput" id="@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.storageShareUrlInput"></a>
+
+```go
+func StorageShareUrlInput() *string
+```
+
+- *Type:* *string
+
+---
+
 ##### `TimeoutsInput`<sup>Optional</sup> <a name="TimeoutsInput" id="@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.timeoutsInput"></a>
 
 ```go
@@ -786,6 +812,16 @@ func StorageShareId() *string
 
 ---
 
+##### `StorageShareUrl`<sup>Required</sup> <a name="StorageShareUrl" id="@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectory.property.storageShareUrl"></a>
+
+```go
+func StorageShareUrl() *string
+```
+
+- *Type:* *string
+
+---
+
 #### Constants <a name="Constants" id="Constants"></a>
 
 | **Name** | **Type** | **Description** |
@@ -822,9 +858,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/storagesharedirec
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	Name: *string,
-	StorageShareId: *string,
 	Id: *string,
 	Metadata: *map[string]*string,
+	StorageShareId: *string,
+	StorageShareUrl: *string,
 	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.storageShareDirectory.StorageShareDirectoryTimeouts,
 }
 ```
@@ -840,10 +877,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/storagesharedirec
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.lifecycle">Lifecycle</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.provider">Provider</a></code> | <code>github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.provisioners">Provisioners</a></code> | <code>*[]interface{}</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#name StorageShareDirectory#name}. |
-| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.storageShareId">StorageShareId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#storage_share_id StorageShareDirectory#storage_share_id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#id StorageShareDirectory#id}. |
-| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#metadata StorageShareDirectory#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.name">Name</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#name StorageShareDirectory#name}. |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.id">Id</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#id StorageShareDirectory#id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.metadata">Metadata</a></code> | <code>*map[string]*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#metadata StorageShareDirectory#metadata}. |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.storageShareId">StorageShareId</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#storage_share_id StorageShareDirectory#storage_share_id}. |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.storageShareUrl">StorageShareUrl</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#storage_share_url StorageShareDirectory#storage_share_url}. |
 | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryTimeouts">StorageShareDirectoryTimeouts</a></code> | timeouts block. |
 
 ---
@@ -926,19 +964,7 @@ Name *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#name StorageShareDirectory#name}.
-
----
-
-##### `StorageShareId`<sup>Required</sup> <a name="StorageShareId" id="@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.storageShareId"></a>
-
-```go
-StorageShareId *string
-```
-
-- *Type:* *string
-
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#storage_share_id StorageShareDirectory#storage_share_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#name StorageShareDirectory#name}.
 
 ---
 
@@ -950,7 +976,7 @@ Id *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#id StorageShareDirectory#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#id StorageShareDirectory#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -965,7 +991,31 @@ Metadata *map[string]*string
 
 - *Type:* *map[string]*string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#metadata StorageShareDirectory#metadata}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#metadata StorageShareDirectory#metadata}.
+
+---
+
+##### `StorageShareId`<sup>Optional</sup> <a name="StorageShareId" id="@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.storageShareId"></a>
+
+```go
+StorageShareId *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#storage_share_id StorageShareDirectory#storage_share_id}.
+
+---
+
+##### `StorageShareUrl`<sup>Optional</sup> <a name="StorageShareUrl" id="@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryConfig.property.storageShareUrl"></a>
+
+```go
+StorageShareUrl *string
+```
+
+- *Type:* *string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#storage_share_url StorageShareDirectory#storage_share_url}.
 
 ---
 
@@ -979,7 +1029,7 @@ Timeouts StorageShareDirectoryTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#timeouts StorageShareDirectory#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#timeouts StorageShareDirectory#timeouts}
 
 ---
 
@@ -1002,10 +1052,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/storagesharedirec
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#create StorageShareDirectory#create}. |
-| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#delete StorageShareDirectory#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#read StorageShareDirectory#read}. |
-| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#update StorageShareDirectory#update}. |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryTimeouts.property.create">Create</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#create StorageShareDirectory#create}. |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryTimeouts.property.delete">Delete</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#delete StorageShareDirectory#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryTimeouts.property.read">Read</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#read StorageShareDirectory#read}. |
+| <code><a href="#@cdktf/provider-azurerm.storageShareDirectory.StorageShareDirectoryTimeouts.property.update">Update</a></code> | <code>*string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#update StorageShareDirectory#update}. |
 
 ---
 
@@ -1017,7 +1067,7 @@ Create *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#create StorageShareDirectory#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#create StorageShareDirectory#create}.
 
 ---
 
@@ -1029,7 +1079,7 @@ Delete *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#delete StorageShareDirectory#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#delete StorageShareDirectory#delete}.
 
 ---
 
@@ -1041,7 +1091,7 @@ Read *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#read StorageShareDirectory#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#read StorageShareDirectory#read}.
 
 ---
 
@@ -1053,7 +1103,7 @@ Update *string
 
 - *Type:* *string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.53.0/docs/resources/storage_share_directory#update StorageShareDirectory#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/storage_share_directory#update StorageShareDirectory#update}.
 
 ---
 
