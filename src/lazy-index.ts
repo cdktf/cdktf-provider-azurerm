@@ -193,6 +193,7 @@ Object.defineProperty(exports, 'chaosStudioExperiment', { get: function () { ret
 Object.defineProperty(exports, 'chaosStudioTarget', { get: function () { return require('./chaos-studio-target'); } });
 Object.defineProperty(exports, 'cognitiveAccount', { get: function () { return require('./cognitive-account'); } });
 Object.defineProperty(exports, 'cognitiveAccountCustomerManagedKey', { get: function () { return require('./cognitive-account-customer-managed-key'); } });
+Object.defineProperty(exports, 'cognitiveAccountProject', { get: function () { return require('./cognitive-account-project'); } });
 Object.defineProperty(exports, 'cognitiveAccountRaiBlocklist', { get: function () { return require('./cognitive-account-rai-blocklist'); } });
 Object.defineProperty(exports, 'cognitiveAccountRaiPolicy', { get: function () { return require('./cognitive-account-rai-policy'); } });
 Object.defineProperty(exports, 'cognitiveDeployment', { get: function () { return require('./cognitive-deployment'); } });
@@ -543,6 +544,7 @@ Object.defineProperty(exports, 'logAnalyticsSolution', { get: function () { retu
 Object.defineProperty(exports, 'logAnalyticsStorageInsights', { get: function () { return require('./log-analytics-storage-insights'); } });
 Object.defineProperty(exports, 'logAnalyticsWorkspace', { get: function () { return require('./log-analytics-workspace'); } });
 Object.defineProperty(exports, 'logAnalyticsWorkspaceTable', { get: function () { return require('./log-analytics-workspace-table'); } });
+Object.defineProperty(exports, 'logAnalyticsWorkspaceTableCustomLog', { get: function () { return require('./log-analytics-workspace-table-custom-log'); } });
 Object.defineProperty(exports, 'logicAppActionCustom', { get: function () { return require('./logic-app-action-custom'); } });
 Object.defineProperty(exports, 'logicAppActionHttp', { get: function () { return require('./logic-app-action-http'); } });
 Object.defineProperty(exports, 'logicAppIntegrationAccount', { get: function () { return require('./logic-app-integration-account'); } });
@@ -607,6 +609,7 @@ Object.defineProperty(exports, 'mobileNetworkSite', { get: function () { return 
 Object.defineProperty(exports, 'mobileNetworkSlice', { get: function () { return require('./mobile-network-slice'); } });
 Object.defineProperty(exports, 'mongoCluster', { get: function () { return require('./mongo-cluster'); } });
 Object.defineProperty(exports, 'mongoClusterFirewallRule', { get: function () { return require('./mongo-cluster-firewall-rule'); } });
+Object.defineProperty(exports, 'mongoClusterUser', { get: function () { return require('./mongo-cluster-user'); } });
 Object.defineProperty(exports, 'monitorAadDiagnosticSetting', { get: function () { return require('./monitor-aad-diagnostic-setting'); } });
 Object.defineProperty(exports, 'monitorActionGroup', { get: function () { return require('./monitor-action-group'); } });
 Object.defineProperty(exports, 'monitorActivityLogAlert', { get: function () { return require('./monitor-activity-log-alert'); } });
@@ -741,8 +744,10 @@ Object.defineProperty(exports, 'paloAltoLocalRulestackPrefixList', { get: functi
 Object.defineProperty(exports, 'paloAltoLocalRulestackRule', { get: function () { return require('./palo-alto-local-rulestack-rule'); } });
 Object.defineProperty(exports, 'paloAltoNextGenerationFirewallVirtualHubLocalRulestack', { get: function () { return require('./palo-alto-next-generation-firewall-virtual-hub-local-rulestack'); } });
 Object.defineProperty(exports, 'paloAltoNextGenerationFirewallVirtualHubPanorama', { get: function () { return require('./palo-alto-next-generation-firewall-virtual-hub-panorama'); } });
+Object.defineProperty(exports, 'paloAltoNextGenerationFirewallVirtualHubStrataCloudManager', { get: function () { return require('./palo-alto-next-generation-firewall-virtual-hub-strata-cloud-manager'); } });
 Object.defineProperty(exports, 'paloAltoNextGenerationFirewallVirtualNetworkLocalRulestack', { get: function () { return require('./palo-alto-next-generation-firewall-virtual-network-local-rulestack'); } });
 Object.defineProperty(exports, 'paloAltoNextGenerationFirewallVirtualNetworkPanorama', { get: function () { return require('./palo-alto-next-generation-firewall-virtual-network-panorama'); } });
+Object.defineProperty(exports, 'paloAltoNextGenerationFirewallVirtualNetworkStrataCloudManager', { get: function () { return require('./palo-alto-next-generation-firewall-virtual-network-strata-cloud-manager'); } });
 Object.defineProperty(exports, 'paloAltoVirtualNetworkAppliance', { get: function () { return require('./palo-alto-virtual-network-appliance'); } });
 Object.defineProperty(exports, 'pimActiveRoleAssignment', { get: function () { return require('./pim-active-role-assignment'); } });
 Object.defineProperty(exports, 'pimEligibleRoleAssignment', { get: function () { return require('./pim-eligible-role-assignment'); } });
@@ -1139,6 +1144,7 @@ Object.defineProperty(exports, 'dataAzurermApiManagementGroup', { get: function 
 Object.defineProperty(exports, 'dataAzurermApiManagementProduct', { get: function () { return require('./data-azurerm-api-management-product'); } });
 Object.defineProperty(exports, 'dataAzurermApiManagementSubscription', { get: function () { return require('./data-azurerm-api-management-subscription'); } });
 Object.defineProperty(exports, 'dataAzurermApiManagementUser', { get: function () { return require('./data-azurerm-api-management-user'); } });
+Object.defineProperty(exports, 'dataAzurermApiManagementWorkspace', { get: function () { return require('./data-azurerm-api-management-workspace'); } });
 Object.defineProperty(exports, 'dataAzurermAppConfiguration', { get: function () { return require('./data-azurerm-app-configuration'); } });
 Object.defineProperty(exports, 'dataAzurermAppConfigurationKey', { get: function () { return require('./data-azurerm-app-configuration-key'); } });
 Object.defineProperty(exports, 'dataAzurermAppConfigurationKeys', { get: function () { return require('./data-azurerm-app-configuration-keys'); } });

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,80 +13,110 @@ import * as cdktf from 'cdktf';
 
 export interface MongoClusterConfig extends cdktf.TerraformMetaArguments {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#administrator_password MongoCluster#administrator_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#administrator_password MongoCluster#administrator_password}
   */
   readonly administratorPassword?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#administrator_username MongoCluster#administrator_username}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#administrator_username MongoCluster#administrator_username}
   */
   readonly administratorUsername?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#compute_tier MongoCluster#compute_tier}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#authentication_methods MongoCluster#authentication_methods}
+  */
+  readonly authenticationMethods?: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#compute_tier MongoCluster#compute_tier}
   */
   readonly computeTier?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#create_mode MongoCluster#create_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#create_mode MongoCluster#create_mode}
   */
   readonly createMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#high_availability_mode MongoCluster#high_availability_mode}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#data_api_mode_enabled MongoCluster#data_api_mode_enabled}
+  */
+  readonly dataApiModeEnabled?: boolean | cdktf.IResolvable;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#high_availability_mode MongoCluster#high_availability_mode}
   */
   readonly highAvailabilityMode?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#id MongoCluster#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#id MongoCluster#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#location MongoCluster#location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#location MongoCluster#location}
   */
   readonly location: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#name MongoCluster#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#name MongoCluster#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#preview_features MongoCluster#preview_features}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#preview_features MongoCluster#preview_features}
   */
   readonly previewFeatures?: string[];
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#public_network_access MongoCluster#public_network_access}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#public_network_access MongoCluster#public_network_access}
   */
   readonly publicNetworkAccess?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#resource_group_name MongoCluster#resource_group_name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#resource_group_name MongoCluster#resource_group_name}
   */
   readonly resourceGroupName: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#shard_count MongoCluster#shard_count}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#shard_count MongoCluster#shard_count}
   */
   readonly shardCount?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#source_location MongoCluster#source_location}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_location MongoCluster#source_location}
   */
   readonly sourceLocation?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#source_server_id MongoCluster#source_server_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_server_id MongoCluster#source_server_id}
   */
   readonly sourceServerId?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#storage_size_in_gb MongoCluster#storage_size_in_gb}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#storage_size_in_gb MongoCluster#storage_size_in_gb}
   */
   readonly storageSizeInGb?: number;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#tags MongoCluster#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#storage_type MongoCluster#storage_type}
+  */
+  readonly storageType?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#tags MongoCluster#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#version MongoCluster#version}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#version MongoCluster#version}
   */
   readonly version?: string;
   /**
+  * customer_managed_key block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#customer_managed_key MongoCluster#customer_managed_key}
+  */
+  readonly customerManagedKey?: MongoClusterCustomerManagedKey;
+  /**
+  * identity block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#identity MongoCluster#identity}
+  */
+  readonly identity?: MongoClusterIdentity;
+  /**
+  * restore block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#restore MongoCluster#restore}
+  */
+  readonly restore?: MongoClusterRestore;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#timeouts MongoCluster#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#timeouts MongoCluster#timeouts}
   */
   readonly timeouts?: MongoClusterTimeouts;
 }
@@ -175,21 +205,354 @@ export class MongoClusterConnectionStringsList extends cdktf.ComplexList {
     return new MongoClusterConnectionStringsOutputReference(this.terraformResource, this.terraformAttribute, index, this.wrapsSet);
   }
 }
+export interface MongoClusterCustomerManagedKey {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#key_vault_key_id MongoCluster#key_vault_key_id}
+  */
+  readonly keyVaultKeyId: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#user_assigned_identity_id MongoCluster#user_assigned_identity_id}
+  */
+  readonly userAssignedIdentityId: string;
+}
+
+export function mongoClusterCustomerManagedKeyToTerraform(struct?: MongoClusterCustomerManagedKeyOutputReference | MongoClusterCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    key_vault_key_id: cdktf.stringToTerraform(struct!.keyVaultKeyId),
+    user_assigned_identity_id: cdktf.stringToTerraform(struct!.userAssignedIdentityId),
+  }
+}
+
+
+export function mongoClusterCustomerManagedKeyToHclTerraform(struct?: MongoClusterCustomerManagedKeyOutputReference | MongoClusterCustomerManagedKey): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    key_vault_key_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultKeyId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    user_assigned_identity_id: {
+      value: cdktf.stringToHclTerraform(struct!.userAssignedIdentityId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MongoClusterCustomerManagedKeyOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MongoClusterCustomerManagedKey | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._keyVaultKeyId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultKeyId = this._keyVaultKeyId;
+    }
+    if (this._userAssignedIdentityId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.userAssignedIdentityId = this._userAssignedIdentityId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MongoClusterCustomerManagedKey | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._keyVaultKeyId = undefined;
+      this._userAssignedIdentityId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._keyVaultKeyId = value.keyVaultKeyId;
+      this._userAssignedIdentityId = value.userAssignedIdentityId;
+    }
+  }
+
+  // key_vault_key_id - computed: false, optional: false, required: true
+  private _keyVaultKeyId?: string; 
+  public get keyVaultKeyId() {
+    return this.getStringAttribute('key_vault_key_id');
+  }
+  public set keyVaultKeyId(value: string) {
+    this._keyVaultKeyId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultKeyIdInput() {
+    return this._keyVaultKeyId;
+  }
+
+  // user_assigned_identity_id - computed: false, optional: false, required: true
+  private _userAssignedIdentityId?: string; 
+  public get userAssignedIdentityId() {
+    return this.getStringAttribute('user_assigned_identity_id');
+  }
+  public set userAssignedIdentityId(value: string) {
+    this._userAssignedIdentityId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get userAssignedIdentityIdInput() {
+    return this._userAssignedIdentityId;
+  }
+}
+export interface MongoClusterIdentity {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#identity_ids MongoCluster#identity_ids}
+  */
+  readonly identityIds: string[];
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#type MongoCluster#type}
+  */
+  readonly type: string;
+}
+
+export function mongoClusterIdentityToTerraform(struct?: MongoClusterIdentityOutputReference | MongoClusterIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity_ids: cdktf.listMapper(cdktf.stringToTerraform, false)(struct!.identityIds),
+    type: cdktf.stringToTerraform(struct!.type),
+  }
+}
+
+
+export function mongoClusterIdentityToHclTerraform(struct?: MongoClusterIdentityOutputReference | MongoClusterIdentity): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity_ids: {
+      value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(struct!.identityIds),
+      isBlock: false,
+      type: "set",
+      storageClassType: "stringList",
+    },
+    type: {
+      value: cdktf.stringToHclTerraform(struct!.type),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MongoClusterIdentityOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MongoClusterIdentity | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identityIds !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identityIds = this._identityIds;
+    }
+    if (this._type !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.type = this._type;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MongoClusterIdentity | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identityIds = undefined;
+      this._type = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identityIds = value.identityIds;
+      this._type = value.type;
+    }
+  }
+
+  // identity_ids - computed: false, optional: false, required: true
+  private _identityIds?: string[]; 
+  public get identityIds() {
+    return cdktf.Fn.tolist(this.getListAttribute('identity_ids'));
+  }
+  public set identityIds(value: string[]) {
+    this._identityIds = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityIdsInput() {
+    return this._identityIds;
+  }
+
+  // type - computed: false, optional: false, required: true
+  private _type?: string; 
+  public get type() {
+    return this.getStringAttribute('type');
+  }
+  public set type(value: string) {
+    this._type = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get typeInput() {
+    return this._type;
+  }
+}
+export interface MongoClusterRestore {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#point_in_time_utc MongoCluster#point_in_time_utc}
+  */
+  readonly pointInTimeUtc: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_id MongoCluster#source_id}
+  */
+  readonly sourceId: string;
+}
+
+export function mongoClusterRestoreToTerraform(struct?: MongoClusterRestoreOutputReference | MongoClusterRestore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    point_in_time_utc: cdktf.stringToTerraform(struct!.pointInTimeUtc),
+    source_id: cdktf.stringToTerraform(struct!.sourceId),
+  }
+}
+
+
+export function mongoClusterRestoreToHclTerraform(struct?: MongoClusterRestoreOutputReference | MongoClusterRestore): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    point_in_time_utc: {
+      value: cdktf.stringToHclTerraform(struct!.pointInTimeUtc),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    source_id: {
+      value: cdktf.stringToHclTerraform(struct!.sourceId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class MongoClusterRestoreOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): MongoClusterRestore | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._pointInTimeUtc !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.pointInTimeUtc = this._pointInTimeUtc;
+    }
+    if (this._sourceId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.sourceId = this._sourceId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: MongoClusterRestore | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._pointInTimeUtc = undefined;
+      this._sourceId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._pointInTimeUtc = value.pointInTimeUtc;
+      this._sourceId = value.sourceId;
+    }
+  }
+
+  // point_in_time_utc - computed: false, optional: false, required: true
+  private _pointInTimeUtc?: string; 
+  public get pointInTimeUtc() {
+    return this.getStringAttribute('point_in_time_utc');
+  }
+  public set pointInTimeUtc(value: string) {
+    this._pointInTimeUtc = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get pointInTimeUtcInput() {
+    return this._pointInTimeUtc;
+  }
+
+  // source_id - computed: false, optional: false, required: true
+  private _sourceId?: string; 
+  public get sourceId() {
+    return this.getStringAttribute('source_id');
+  }
+  public set sourceId(value: string) {
+    this._sourceId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get sourceIdInput() {
+    return this._sourceId;
+  }
+}
 export interface MongoClusterTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#create MongoCluster#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#create MongoCluster#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#delete MongoCluster#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#delete MongoCluster#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#read MongoCluster#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#read MongoCluster#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#update MongoCluster#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#update MongoCluster#update}
   */
   readonly update?: string;
 }
@@ -370,7 +733,7 @@ export class MongoClusterTimeoutsOutputReference extends cdktf.ComplexObject {
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster azurerm_mongo_cluster}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster azurerm_mongo_cluster}
 */
 export class MongoCluster extends cdktf.TerraformResource {
 
@@ -386,7 +749,7 @@ export class MongoCluster extends cdktf.TerraformResource {
   * Generates CDKTF code for importing a MongoCluster resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the MongoCluster to import
-  * @param importFromId The id of the existing MongoCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing MongoCluster that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the MongoCluster to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -398,7 +761,7 @@ export class MongoCluster extends cdktf.TerraformResource {
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster azurerm_mongo_cluster} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster azurerm_mongo_cluster} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -409,7 +772,7 @@ export class MongoCluster extends cdktf.TerraformResource {
       terraformResourceType: 'azurerm_mongo_cluster',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.54.0',
+        providerVersion: '4.55.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -422,8 +785,10 @@ export class MongoCluster extends cdktf.TerraformResource {
     });
     this._administratorPassword = config.administratorPassword;
     this._administratorUsername = config.administratorUsername;
+    this._authenticationMethods = config.authenticationMethods;
     this._computeTier = config.computeTier;
     this._createMode = config.createMode;
+    this._dataApiModeEnabled = config.dataApiModeEnabled;
     this._highAvailabilityMode = config.highAvailabilityMode;
     this._id = config.id;
     this._location = config.location;
@@ -435,8 +800,12 @@ export class MongoCluster extends cdktf.TerraformResource {
     this._sourceLocation = config.sourceLocation;
     this._sourceServerId = config.sourceServerId;
     this._storageSizeInGb = config.storageSizeInGb;
+    this._storageType = config.storageType;
     this._tags = config.tags;
     this._version = config.version;
+    this._customerManagedKey.internalValue = config.customerManagedKey;
+    this._identity.internalValue = config.identity;
+    this._restore.internalValue = config.restore;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -476,6 +845,22 @@ export class MongoCluster extends cdktf.TerraformResource {
     return this._administratorUsername;
   }
 
+  // authentication_methods - computed: true, optional: true, required: false
+  private _authenticationMethods?: string[]; 
+  public get authenticationMethods() {
+    return cdktf.Fn.tolist(this.getListAttribute('authentication_methods'));
+  }
+  public set authenticationMethods(value: string[]) {
+    this._authenticationMethods = value;
+  }
+  public resetAuthenticationMethods() {
+    this._authenticationMethods = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get authenticationMethodsInput() {
+    return this._authenticationMethods;
+  }
+
   // compute_tier - computed: false, optional: true, required: false
   private _computeTier?: string; 
   public get computeTier() {
@@ -512,6 +897,22 @@ export class MongoCluster extends cdktf.TerraformResource {
   // Temporarily expose input value. Use with caution.
   public get createModeInput() {
     return this._createMode;
+  }
+
+  // data_api_mode_enabled - computed: false, optional: true, required: false
+  private _dataApiModeEnabled?: boolean | cdktf.IResolvable; 
+  public get dataApiModeEnabled() {
+    return this.getBooleanAttribute('data_api_mode_enabled');
+  }
+  public set dataApiModeEnabled(value: boolean | cdktf.IResolvable) {
+    this._dataApiModeEnabled = value;
+  }
+  public resetDataApiModeEnabled() {
+    this._dataApiModeEnabled = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get dataApiModeEnabledInput() {
+    return this._dataApiModeEnabled;
   }
 
   // high_availability_mode - computed: false, optional: true, required: false
@@ -681,6 +1082,22 @@ export class MongoCluster extends cdktf.TerraformResource {
     return this._storageSizeInGb;
   }
 
+  // storage_type - computed: false, optional: true, required: false
+  private _storageType?: string; 
+  public get storageType() {
+    return this.getStringAttribute('storage_type');
+  }
+  public set storageType(value: string) {
+    this._storageType = value;
+  }
+  public resetStorageType() {
+    this._storageType = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get storageTypeInput() {
+    return this._storageType;
+  }
+
   // tags - computed: false, optional: true, required: false
   private _tags?: { [key: string]: string }; 
   public get tags() {
@@ -713,6 +1130,54 @@ export class MongoCluster extends cdktf.TerraformResource {
     return this._version;
   }
 
+  // customer_managed_key - computed: false, optional: true, required: false
+  private _customerManagedKey = new MongoClusterCustomerManagedKeyOutputReference(this, "customer_managed_key");
+  public get customerManagedKey() {
+    return this._customerManagedKey;
+  }
+  public putCustomerManagedKey(value: MongoClusterCustomerManagedKey) {
+    this._customerManagedKey.internalValue = value;
+  }
+  public resetCustomerManagedKey() {
+    this._customerManagedKey.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get customerManagedKeyInput() {
+    return this._customerManagedKey.internalValue;
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity = new MongoClusterIdentityOutputReference(this, "identity");
+  public get identity() {
+    return this._identity;
+  }
+  public putIdentity(value: MongoClusterIdentity) {
+    this._identity.internalValue = value;
+  }
+  public resetIdentity() {
+    this._identity.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity.internalValue;
+  }
+
+  // restore - computed: false, optional: true, required: false
+  private _restore = new MongoClusterRestoreOutputReference(this, "restore");
+  public get restore() {
+    return this._restore;
+  }
+  public putRestore(value: MongoClusterRestore) {
+    this._restore.internalValue = value;
+  }
+  public resetRestore() {
+    this._restore.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get restoreInput() {
+    return this._restore.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new MongoClusterTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -737,8 +1202,10 @@ export class MongoCluster extends cdktf.TerraformResource {
     return {
       administrator_password: cdktf.stringToTerraform(this._administratorPassword),
       administrator_username: cdktf.stringToTerraform(this._administratorUsername),
+      authentication_methods: cdktf.listMapper(cdktf.stringToTerraform, false)(this._authenticationMethods),
       compute_tier: cdktf.stringToTerraform(this._computeTier),
       create_mode: cdktf.stringToTerraform(this._createMode),
+      data_api_mode_enabled: cdktf.booleanToTerraform(this._dataApiModeEnabled),
       high_availability_mode: cdktf.stringToTerraform(this._highAvailabilityMode),
       id: cdktf.stringToTerraform(this._id),
       location: cdktf.stringToTerraform(this._location),
@@ -750,8 +1217,12 @@ export class MongoCluster extends cdktf.TerraformResource {
       source_location: cdktf.stringToTerraform(this._sourceLocation),
       source_server_id: cdktf.stringToTerraform(this._sourceServerId),
       storage_size_in_gb: cdktf.numberToTerraform(this._storageSizeInGb),
+      storage_type: cdktf.stringToTerraform(this._storageType),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
       version: cdktf.stringToTerraform(this._version),
+      customer_managed_key: mongoClusterCustomerManagedKeyToTerraform(this._customerManagedKey.internalValue),
+      identity: mongoClusterIdentityToTerraform(this._identity.internalValue),
+      restore: mongoClusterRestoreToTerraform(this._restore.internalValue),
       timeouts: mongoClusterTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -770,6 +1241,12 @@ export class MongoCluster extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "string",
       },
+      authentication_methods: {
+        value: cdktf.listMapperHcl(cdktf.stringToHclTerraform, false)(this._authenticationMethods),
+        isBlock: false,
+        type: "set",
+        storageClassType: "stringList",
+      },
       compute_tier: {
         value: cdktf.stringToHclTerraform(this._computeTier),
         isBlock: false,
@@ -781,6 +1258,12 @@ export class MongoCluster extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      data_api_mode_enabled: {
+        value: cdktf.booleanToHclTerraform(this._dataApiModeEnabled),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "boolean",
       },
       high_availability_mode: {
         value: cdktf.stringToHclTerraform(this._highAvailabilityMode),
@@ -848,6 +1331,12 @@ export class MongoCluster extends cdktf.TerraformResource {
         type: "simple",
         storageClassType: "number",
       },
+      storage_type: {
+        value: cdktf.stringToHclTerraform(this._storageType),
+        isBlock: false,
+        type: "simple",
+        storageClassType: "string",
+      },
       tags: {
         value: cdktf.hashMapperHcl(cdktf.stringToHclTerraform)(this._tags),
         isBlock: false,
@@ -859,6 +1348,24 @@ export class MongoCluster extends cdktf.TerraformResource {
         isBlock: false,
         type: "simple",
         storageClassType: "string",
+      },
+      customer_managed_key: {
+        value: mongoClusterCustomerManagedKeyToHclTerraform(this._customerManagedKey.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MongoClusterCustomerManagedKeyList",
+      },
+      identity: {
+        value: mongoClusterIdentityToHclTerraform(this._identity.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MongoClusterIdentityList",
+      },
+      restore: {
+        value: mongoClusterRestoreToHclTerraform(this._restore.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "MongoClusterRestoreList",
       },
       timeouts: {
         value: mongoClusterTimeoutsToHclTerraform(this._timeouts.internalValue),
