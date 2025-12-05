@@ -4,7 +4,7 @@
 
 ### MongoCluster <a name="MongoCluster" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster azurerm_mongo_cluster}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster azurerm_mongo_cluster}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer"></a>
 
@@ -26,16 +26,22 @@ mongoCluster.MongoCluster(
   resource_group_name: str,
   administrator_password: str = None,
   administrator_username: str = None,
+  authentication_methods: typing.List[str] = None,
   compute_tier: str = None,
   create_mode: str = None,
+  customer_managed_key: MongoClusterCustomerManagedKey = None,
+  data_api_mode_enabled: bool | IResolvable = None,
   high_availability_mode: str = None,
   id: str = None,
+  identity: MongoClusterIdentity = None,
   preview_features: typing.List[str] = None,
   public_network_access: str = None,
+  restore: MongoClusterRestore = None,
   shard_count: typing.Union[int, float] = None,
   source_location: str = None,
   source_server_id: str = None,
   storage_size_in_gb: typing.Union[int, float] = None,
+  storage_type: str = None,
   tags: typing.Mapping[str] = None,
   timeouts: MongoClusterTimeouts = None,
   version: str = None
@@ -53,24 +59,30 @@ mongoCluster.MongoCluster(
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#location MongoCluster#location}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#name MongoCluster#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#resource_group_name MongoCluster#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.administratorPassword">administrator_password</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#administrator_password MongoCluster#administrator_password}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.administratorUsername">administrator_username</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#administrator_username MongoCluster#administrator_username}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.computeTier">compute_tier</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#compute_tier MongoCluster#compute_tier}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.createMode">create_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#create_mode MongoCluster#create_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.highAvailabilityMode">high_availability_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#high_availability_mode MongoCluster#high_availability_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#id MongoCluster#id}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.previewFeatures">preview_features</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#preview_features MongoCluster#preview_features}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.publicNetworkAccess">public_network_access</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#public_network_access MongoCluster#public_network_access}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.shardCount">shard_count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#shard_count MongoCluster#shard_count}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.sourceLocation">source_location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#source_location MongoCluster#source_location}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.sourceServerId">source_server_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#source_server_id MongoCluster#source_server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.storageSizeInGb">storage_size_in_gb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#storage_size_in_gb MongoCluster#storage_size_in_gb}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#tags MongoCluster#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#location MongoCluster#location}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#name MongoCluster#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#resource_group_name MongoCluster#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.administratorPassword">administrator_password</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#administrator_password MongoCluster#administrator_password}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.administratorUsername">administrator_username</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#administrator_username MongoCluster#administrator_username}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.authenticationMethods">authentication_methods</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#authentication_methods MongoCluster#authentication_methods}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.computeTier">compute_tier</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#compute_tier MongoCluster#compute_tier}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.createMode">create_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#create_mode MongoCluster#create_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.customerManagedKey">customer_managed_key</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey">MongoClusterCustomerManagedKey</a></code> | customer_managed_key block. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.dataApiModeEnabled">data_api_mode_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#data_api_mode_enabled MongoCluster#data_api_mode_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.highAvailabilityMode">high_availability_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#high_availability_mode MongoCluster#high_availability_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#id MongoCluster#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity">MongoClusterIdentity</a></code> | identity block. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.previewFeatures">preview_features</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#preview_features MongoCluster#preview_features}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.publicNetworkAccess">public_network_access</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#public_network_access MongoCluster#public_network_access}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.restore">restore</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore">MongoClusterRestore</a></code> | restore block. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.shardCount">shard_count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#shard_count MongoCluster#shard_count}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.sourceLocation">source_location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_location MongoCluster#source_location}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.sourceServerId">source_server_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_server_id MongoCluster#source_server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.storageSizeInGb">storage_size_in_gb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#storage_size_in_gb MongoCluster#storage_size_in_gb}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.storageType">storage_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#storage_type MongoCluster#storage_type}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#tags MongoCluster#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts">MongoClusterTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.version">version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#version MongoCluster#version}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.version">version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#version MongoCluster#version}. |
 
 ---
 
@@ -138,7 +150,7 @@ Must be unique amongst siblings in the same scope
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#location MongoCluster#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#location MongoCluster#location}.
 
 ---
 
@@ -146,7 +158,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#name MongoCluster#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#name MongoCluster#name}.
 
 ---
 
@@ -154,7 +166,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#resource_group_name MongoCluster#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#resource_group_name MongoCluster#resource_group_name}.
 
 ---
 
@@ -162,7 +174,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#administrator_password MongoCluster#administrator_password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#administrator_password MongoCluster#administrator_password}.
 
 ---
 
@@ -170,7 +182,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#administrator_username MongoCluster#administrator_username}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#administrator_username MongoCluster#administrator_username}.
+
+---
+
+##### `authentication_methods`<sup>Optional</sup> <a name="authentication_methods" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.authenticationMethods"></a>
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#authentication_methods MongoCluster#authentication_methods}.
 
 ---
 
@@ -178,7 +198,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#compute_tier MongoCluster#compute_tier}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#compute_tier MongoCluster#compute_tier}.
 
 ---
 
@@ -186,7 +206,25 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#create_mode MongoCluster#create_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#create_mode MongoCluster#create_mode}.
+
+---
+
+##### `customer_managed_key`<sup>Optional</sup> <a name="customer_managed_key" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.customerManagedKey"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey">MongoClusterCustomerManagedKey</a>
+
+customer_managed_key block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#customer_managed_key MongoCluster#customer_managed_key}
+
+---
+
+##### `data_api_mode_enabled`<sup>Optional</sup> <a name="data_api_mode_enabled" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.dataApiModeEnabled"></a>
+
+- *Type:* bool | cdktf.IResolvable
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#data_api_mode_enabled MongoCluster#data_api_mode_enabled}.
 
 ---
 
@@ -194,7 +232,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#high_availability_mode MongoCluster#high_availability_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#high_availability_mode MongoCluster#high_availability_mode}.
 
 ---
 
@@ -202,10 +240,20 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#id MongoCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#id MongoCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `identity`<sup>Optional</sup> <a name="identity" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.identity"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity">MongoClusterIdentity</a>
+
+identity block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#identity MongoCluster#identity}
 
 ---
 
@@ -213,7 +261,7 @@ If you experience problems setting this value it might not be settable. Please t
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#preview_features MongoCluster#preview_features}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#preview_features MongoCluster#preview_features}.
 
 ---
 
@@ -221,7 +269,17 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#public_network_access MongoCluster#public_network_access}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#public_network_access MongoCluster#public_network_access}.
+
+---
+
+##### `restore`<sup>Optional</sup> <a name="restore" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.restore"></a>
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore">MongoClusterRestore</a>
+
+restore block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#restore MongoCluster#restore}
 
 ---
 
@@ -229,7 +287,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#shard_count MongoCluster#shard_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#shard_count MongoCluster#shard_count}.
 
 ---
 
@@ -237,7 +295,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#source_location MongoCluster#source_location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_location MongoCluster#source_location}.
 
 ---
 
@@ -245,7 +303,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#source_server_id MongoCluster#source_server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_server_id MongoCluster#source_server_id}.
 
 ---
 
@@ -253,7 +311,15 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#storage_size_in_gb MongoCluster#storage_size_in_gb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#storage_size_in_gb MongoCluster#storage_size_in_gb}.
+
+---
+
+##### `storage_type`<sup>Optional</sup> <a name="storage_type" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.Initializer.parameter.storageType"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#storage_type MongoCluster#storage_type}.
 
 ---
 
@@ -261,7 +327,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#tags MongoCluster#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#tags MongoCluster#tags}.
 
 ---
 
@@ -271,7 +337,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#timeouts MongoCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#timeouts MongoCluster#timeouts}
 
 ---
 
@@ -279,7 +345,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#version MongoCluster#version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#version MongoCluster#version}.
 
 ---
 
@@ -310,19 +376,28 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.moveFromId">move_from_id</a></code> | Move the resource corresponding to "id" to this resource. |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.putCustomerManagedKey">put_customer_managed_key</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.putIdentity">put_identity</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.putRestore">put_restore</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.putTimeouts">put_timeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetAdministratorPassword">reset_administrator_password</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetAdministratorUsername">reset_administrator_username</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetAuthenticationMethods">reset_authentication_methods</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetComputeTier">reset_compute_tier</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetCreateMode">reset_create_mode</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetCustomerManagedKey">reset_customer_managed_key</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetDataApiModeEnabled">reset_data_api_mode_enabled</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetHighAvailabilityMode">reset_high_availability_mode</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetIdentity">reset_identity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetPreviewFeatures">reset_preview_features</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetPublicNetworkAccess">reset_public_network_access</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetRestore">reset_restore</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetShardCount">reset_shard_count</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetSourceLocation">reset_source_location</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetSourceServerId">reset_source_server_id</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetStorageSizeInGb">reset_storage_size_in_gb</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetStorageType">reset_storage_type</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetTags">reset_tags</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetTimeouts">reset_timeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetVersion">reset_version</a></code> | *No description.* |
@@ -654,6 +729,81 @@ Full id of resource to move to, e.g. "aws_s3_bucket.example".
 
 ---
 
+##### `put_customer_managed_key` <a name="put_customer_managed_key" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.putCustomerManagedKey"></a>
+
+```python
+def put_customer_managed_key(
+  key_vault_key_id: str,
+  user_assigned_identity_id: str
+) -> None
+```
+
+###### `key_vault_key_id`<sup>Required</sup> <a name="key_vault_key_id" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.putCustomerManagedKey.parameter.keyVaultKeyId"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#key_vault_key_id MongoCluster#key_vault_key_id}.
+
+---
+
+###### `user_assigned_identity_id`<sup>Required</sup> <a name="user_assigned_identity_id" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.putCustomerManagedKey.parameter.userAssignedIdentityId"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#user_assigned_identity_id MongoCluster#user_assigned_identity_id}.
+
+---
+
+##### `put_identity` <a name="put_identity" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.putIdentity"></a>
+
+```python
+def put_identity(
+  identity_ids: typing.List[str],
+  type: str
+) -> None
+```
+
+###### `identity_ids`<sup>Required</sup> <a name="identity_ids" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.putIdentity.parameter.identityIds"></a>
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#identity_ids MongoCluster#identity_ids}.
+
+---
+
+###### `type`<sup>Required</sup> <a name="type" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.putIdentity.parameter.type"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#type MongoCluster#type}.
+
+---
+
+##### `put_restore` <a name="put_restore" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.putRestore"></a>
+
+```python
+def put_restore(
+  point_in_time_utc: str,
+  source_id: str
+) -> None
+```
+
+###### `point_in_time_utc`<sup>Required</sup> <a name="point_in_time_utc" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.putRestore.parameter.pointInTimeUtc"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#point_in_time_utc MongoCluster#point_in_time_utc}.
+
+---
+
+###### `source_id`<sup>Required</sup> <a name="source_id" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.putRestore.parameter.sourceId"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_id MongoCluster#source_id}.
+
+---
+
 ##### `put_timeouts` <a name="put_timeouts" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.putTimeouts"></a>
 
 ```python
@@ -669,7 +819,7 @@ def put_timeouts(
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#create MongoCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#create MongoCluster#create}.
 
 ---
 
@@ -677,7 +827,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#delete MongoCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#delete MongoCluster#delete}.
 
 ---
 
@@ -685,7 +835,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#read MongoCluster#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#read MongoCluster#read}.
 
 ---
 
@@ -693,7 +843,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#update MongoCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#update MongoCluster#update}.
 
 ---
 
@@ -709,6 +859,12 @@ def reset_administrator_password() -> None
 def reset_administrator_username() -> None
 ```
 
+##### `reset_authentication_methods` <a name="reset_authentication_methods" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetAuthenticationMethods"></a>
+
+```python
+def reset_authentication_methods() -> None
+```
+
 ##### `reset_compute_tier` <a name="reset_compute_tier" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetComputeTier"></a>
 
 ```python
@@ -719,6 +875,18 @@ def reset_compute_tier() -> None
 
 ```python
 def reset_create_mode() -> None
+```
+
+##### `reset_customer_managed_key` <a name="reset_customer_managed_key" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetCustomerManagedKey"></a>
+
+```python
+def reset_customer_managed_key() -> None
+```
+
+##### `reset_data_api_mode_enabled` <a name="reset_data_api_mode_enabled" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetDataApiModeEnabled"></a>
+
+```python
+def reset_data_api_mode_enabled() -> None
 ```
 
 ##### `reset_high_availability_mode` <a name="reset_high_availability_mode" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetHighAvailabilityMode"></a>
@@ -733,6 +901,12 @@ def reset_high_availability_mode() -> None
 def reset_id() -> None
 ```
 
+##### `reset_identity` <a name="reset_identity" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetIdentity"></a>
+
+```python
+def reset_identity() -> None
+```
+
 ##### `reset_preview_features` <a name="reset_preview_features" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetPreviewFeatures"></a>
 
 ```python
@@ -743,6 +917,12 @@ def reset_preview_features() -> None
 
 ```python
 def reset_public_network_access() -> None
+```
+
+##### `reset_restore` <a name="reset_restore" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetRestore"></a>
+
+```python
+def reset_restore() -> None
 ```
 
 ##### `reset_shard_count` <a name="reset_shard_count" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetShardCount"></a>
@@ -767,6 +947,12 @@ def reset_source_server_id() -> None
 
 ```python
 def reset_storage_size_in_gb() -> None
+```
+
+##### `reset_storage_type` <a name="reset_storage_type" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetStorageType"></a>
+
+```python
+def reset_storage_type() -> None
 ```
 
 ##### `reset_tags` <a name="reset_tags" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.resetTags"></a>
@@ -901,7 +1087,7 @@ The construct id used in the generated config for the MongoCluster to import.
 
 The id of the existing MongoCluster that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -932,29 +1118,40 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.connectionStrings">connection_strings</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConnectionStringsList">MongoClusterConnectionStringsList</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.customerManagedKey">customer_managed_key</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference">MongoClusterCustomerManagedKeyOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference">MongoClusterIdentityOutputReference</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.restore">restore</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference">MongoClusterRestoreOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeoutsOutputReference">MongoClusterTimeoutsOutputReference</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.administratorPasswordInput">administrator_password_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.administratorUsernameInput">administrator_username_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.authenticationMethodsInput">authentication_methods_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.computeTierInput">compute_tier_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.createModeInput">create_mode_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.customerManagedKeyInput">customer_managed_key_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey">MongoClusterCustomerManagedKey</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.dataApiModeEnabledInput">data_api_mode_enabled_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.highAvailabilityModeInput">high_availability_mode_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.identityInput">identity_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity">MongoClusterIdentity</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.locationInput">location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.previewFeaturesInput">preview_features_input</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.publicNetworkAccessInput">public_network_access_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.resourceGroupNameInput">resource_group_name_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.restoreInput">restore_input</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore">MongoClusterRestore</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.shardCountInput">shard_count_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.sourceLocationInput">source_location_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.sourceServerIdInput">source_server_id_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.storageSizeInGbInput">storage_size_in_gb_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.storageTypeInput">storage_type_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.tagsInput">tags_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.timeoutsInput">timeouts_input</a></code> | <code>cdktf.IResolvable \| <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts">MongoClusterTimeouts</a></code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.versionInput">version_input</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.administratorPassword">administrator_password</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.administratorUsername">administrator_username</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.authenticationMethods">authentication_methods</a></code> | <code>typing.List[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.computeTier">compute_tier</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.createMode">create_mode</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.dataApiModeEnabled">data_api_mode_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.highAvailabilityMode">high_availability_mode</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.id">id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.location">location</a></code> | <code>str</code> | *No description.* |
@@ -966,6 +1163,7 @@ Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.sourceLocation">source_location</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.sourceServerId">source_server_id</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.storageSizeInGb">storage_size_in_gb</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.storageType">storage_type</a></code> | <code>str</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.version">version</a></code> | <code>str</code> | *No description.* |
 
@@ -1123,6 +1321,36 @@ connection_strings: MongoClusterConnectionStringsList
 
 ---
 
+##### `customer_managed_key`<sup>Required</sup> <a name="customer_managed_key" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.customerManagedKey"></a>
+
+```python
+customer_managed_key: MongoClusterCustomerManagedKeyOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference">MongoClusterCustomerManagedKeyOutputReference</a>
+
+---
+
+##### `identity`<sup>Required</sup> <a name="identity" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.identity"></a>
+
+```python
+identity: MongoClusterIdentityOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference">MongoClusterIdentityOutputReference</a>
+
+---
+
+##### `restore`<sup>Required</sup> <a name="restore" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.restore"></a>
+
+```python
+restore: MongoClusterRestoreOutputReference
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference">MongoClusterRestoreOutputReference</a>
+
+---
+
 ##### `timeouts`<sup>Required</sup> <a name="timeouts" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.timeouts"></a>
 
 ```python
@@ -1153,6 +1381,16 @@ administrator_username_input: str
 
 ---
 
+##### `authentication_methods_input`<sup>Optional</sup> <a name="authentication_methods_input" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.authenticationMethodsInput"></a>
+
+```python
+authentication_methods_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
 ##### `compute_tier_input`<sup>Optional</sup> <a name="compute_tier_input" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.computeTierInput"></a>
 
 ```python
@@ -1173,6 +1411,26 @@ create_mode_input: str
 
 ---
 
+##### `customer_managed_key_input`<sup>Optional</sup> <a name="customer_managed_key_input" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.customerManagedKeyInput"></a>
+
+```python
+customer_managed_key_input: MongoClusterCustomerManagedKey
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey">MongoClusterCustomerManagedKey</a>
+
+---
+
+##### `data_api_mode_enabled_input`<sup>Optional</sup> <a name="data_api_mode_enabled_input" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.dataApiModeEnabledInput"></a>
+
+```python
+data_api_mode_enabled_input: bool | IResolvable
+```
+
+- *Type:* bool | cdktf.IResolvable
+
+---
+
 ##### `high_availability_mode_input`<sup>Optional</sup> <a name="high_availability_mode_input" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.highAvailabilityModeInput"></a>
 
 ```python
@@ -1180,6 +1438,16 @@ high_availability_mode_input: str
 ```
 
 - *Type:* str
+
+---
+
+##### `identity_input`<sup>Optional</sup> <a name="identity_input" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.identityInput"></a>
+
+```python
+identity_input: MongoClusterIdentity
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity">MongoClusterIdentity</a>
 
 ---
 
@@ -1243,6 +1511,16 @@ resource_group_name_input: str
 
 ---
 
+##### `restore_input`<sup>Optional</sup> <a name="restore_input" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.restoreInput"></a>
+
+```python
+restore_input: MongoClusterRestore
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore">MongoClusterRestore</a>
+
+---
+
 ##### `shard_count_input`<sup>Optional</sup> <a name="shard_count_input" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.shardCountInput"></a>
 
 ```python
@@ -1280,6 +1558,16 @@ storage_size_in_gb_input: typing.Union[int, float]
 ```
 
 - *Type:* typing.Union[int, float]
+
+---
+
+##### `storage_type_input`<sup>Optional</sup> <a name="storage_type_input" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.storageTypeInput"></a>
+
+```python
+storage_type_input: str
+```
+
+- *Type:* str
 
 ---
 
@@ -1333,6 +1621,16 @@ administrator_username: str
 
 ---
 
+##### `authentication_methods`<sup>Required</sup> <a name="authentication_methods" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.authenticationMethods"></a>
+
+```python
+authentication_methods: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
 ##### `compute_tier`<sup>Required</sup> <a name="compute_tier" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.computeTier"></a>
 
 ```python
@@ -1350,6 +1648,16 @@ create_mode: str
 ```
 
 - *Type:* str
+
+---
+
+##### `data_api_mode_enabled`<sup>Required</sup> <a name="data_api_mode_enabled" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.dataApiModeEnabled"></a>
+
+```python
+data_api_mode_enabled: bool | IResolvable
+```
+
+- *Type:* bool | cdktf.IResolvable
 
 ---
 
@@ -1463,6 +1771,16 @@ storage_size_in_gb: typing.Union[int, float]
 
 ---
 
+##### `storage_type`<sup>Required</sup> <a name="storage_type" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.storageType"></a>
+
+```python
+storage_type: str
+```
+
+- *Type:* str
+
+---
+
 ##### `tags`<sup>Required</sup> <a name="tags" id="@cdktf/provider-azurerm.mongoCluster.MongoCluster.property.tags"></a>
 
 ```python
@@ -1523,16 +1841,22 @@ mongoCluster.MongoClusterConfig(
   resource_group_name: str,
   administrator_password: str = None,
   administrator_username: str = None,
+  authentication_methods: typing.List[str] = None,
   compute_tier: str = None,
   create_mode: str = None,
+  customer_managed_key: MongoClusterCustomerManagedKey = None,
+  data_api_mode_enabled: bool | IResolvable = None,
   high_availability_mode: str = None,
   id: str = None,
+  identity: MongoClusterIdentity = None,
   preview_features: typing.List[str] = None,
   public_network_access: str = None,
+  restore: MongoClusterRestore = None,
   shard_count: typing.Union[int, float] = None,
   source_location: str = None,
   source_server_id: str = None,
   storage_size_in_gb: typing.Union[int, float] = None,
+  storage_type: str = None,
   tags: typing.Mapping[str] = None,
   timeouts: MongoClusterTimeouts = None,
   version: str = None
@@ -1550,24 +1874,30 @@ mongoCluster.MongoClusterConfig(
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#location MongoCluster#location}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#name MongoCluster#name}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#resource_group_name MongoCluster#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.administratorPassword">administrator_password</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#administrator_password MongoCluster#administrator_password}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.administratorUsername">administrator_username</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#administrator_username MongoCluster#administrator_username}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.computeTier">compute_tier</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#compute_tier MongoCluster#compute_tier}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.createMode">create_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#create_mode MongoCluster#create_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.highAvailabilityMode">high_availability_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#high_availability_mode MongoCluster#high_availability_mode}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#id MongoCluster#id}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.previewFeatures">preview_features</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#preview_features MongoCluster#preview_features}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.publicNetworkAccess">public_network_access</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#public_network_access MongoCluster#public_network_access}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.shardCount">shard_count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#shard_count MongoCluster#shard_count}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.sourceLocation">source_location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#source_location MongoCluster#source_location}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.sourceServerId">source_server_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#source_server_id MongoCluster#source_server_id}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.storageSizeInGb">storage_size_in_gb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#storage_size_in_gb MongoCluster#storage_size_in_gb}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#tags MongoCluster#tags}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.location">location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#location MongoCluster#location}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#name MongoCluster#name}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.resourceGroupName">resource_group_name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#resource_group_name MongoCluster#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.administratorPassword">administrator_password</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#administrator_password MongoCluster#administrator_password}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.administratorUsername">administrator_username</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#administrator_username MongoCluster#administrator_username}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.authenticationMethods">authentication_methods</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#authentication_methods MongoCluster#authentication_methods}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.computeTier">compute_tier</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#compute_tier MongoCluster#compute_tier}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.createMode">create_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#create_mode MongoCluster#create_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.customerManagedKey">customer_managed_key</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey">MongoClusterCustomerManagedKey</a></code> | customer_managed_key block. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.dataApiModeEnabled">data_api_mode_enabled</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#data_api_mode_enabled MongoCluster#data_api_mode_enabled}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.highAvailabilityMode">high_availability_mode</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#high_availability_mode MongoCluster#high_availability_mode}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#id MongoCluster#id}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.identity">identity</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity">MongoClusterIdentity</a></code> | identity block. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.previewFeatures">preview_features</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#preview_features MongoCluster#preview_features}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.publicNetworkAccess">public_network_access</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#public_network_access MongoCluster#public_network_access}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.restore">restore</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore">MongoClusterRestore</a></code> | restore block. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.shardCount">shard_count</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#shard_count MongoCluster#shard_count}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.sourceLocation">source_location</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_location MongoCluster#source_location}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.sourceServerId">source_server_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_server_id MongoCluster#source_server_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.storageSizeInGb">storage_size_in_gb</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#storage_size_in_gb MongoCluster#storage_size_in_gb}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.storageType">storage_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#storage_type MongoCluster#storage_type}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.tags">tags</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#tags MongoCluster#tags}. |
 | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.timeouts">timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts">MongoClusterTimeouts</a></code> | timeouts block. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.version">version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#version MongoCluster#version}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.version">version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#version MongoCluster#version}. |
 
 ---
 
@@ -1649,7 +1979,7 @@ location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#location MongoCluster#location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#location MongoCluster#location}.
 
 ---
 
@@ -1661,7 +1991,7 @@ name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#name MongoCluster#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#name MongoCluster#name}.
 
 ---
 
@@ -1673,7 +2003,7 @@ resource_group_name: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#resource_group_name MongoCluster#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#resource_group_name MongoCluster#resource_group_name}.
 
 ---
 
@@ -1685,7 +2015,7 @@ administrator_password: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#administrator_password MongoCluster#administrator_password}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#administrator_password MongoCluster#administrator_password}.
 
 ---
 
@@ -1697,7 +2027,19 @@ administrator_username: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#administrator_username MongoCluster#administrator_username}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#administrator_username MongoCluster#administrator_username}.
+
+---
+
+##### `authentication_methods`<sup>Optional</sup> <a name="authentication_methods" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.authenticationMethods"></a>
+
+```python
+authentication_methods: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#authentication_methods MongoCluster#authentication_methods}.
 
 ---
 
@@ -1709,7 +2051,7 @@ compute_tier: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#compute_tier MongoCluster#compute_tier}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#compute_tier MongoCluster#compute_tier}.
 
 ---
 
@@ -1721,7 +2063,33 @@ create_mode: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#create_mode MongoCluster#create_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#create_mode MongoCluster#create_mode}.
+
+---
+
+##### `customer_managed_key`<sup>Optional</sup> <a name="customer_managed_key" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.customerManagedKey"></a>
+
+```python
+customer_managed_key: MongoClusterCustomerManagedKey
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey">MongoClusterCustomerManagedKey</a>
+
+customer_managed_key block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#customer_managed_key MongoCluster#customer_managed_key}
+
+---
+
+##### `data_api_mode_enabled`<sup>Optional</sup> <a name="data_api_mode_enabled" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.dataApiModeEnabled"></a>
+
+```python
+data_api_mode_enabled: bool | IResolvable
+```
+
+- *Type:* bool | cdktf.IResolvable
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#data_api_mode_enabled MongoCluster#data_api_mode_enabled}.
 
 ---
 
@@ -1733,7 +2101,7 @@ high_availability_mode: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#high_availability_mode MongoCluster#high_availability_mode}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#high_availability_mode MongoCluster#high_availability_mode}.
 
 ---
 
@@ -1745,10 +2113,24 @@ id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#id MongoCluster#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#id MongoCluster#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `identity`<sup>Optional</sup> <a name="identity" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.identity"></a>
+
+```python
+identity: MongoClusterIdentity
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity">MongoClusterIdentity</a>
+
+identity block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#identity MongoCluster#identity}
 
 ---
 
@@ -1760,7 +2142,7 @@ preview_features: typing.List[str]
 
 - *Type:* typing.List[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#preview_features MongoCluster#preview_features}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#preview_features MongoCluster#preview_features}.
 
 ---
 
@@ -1772,7 +2154,21 @@ public_network_access: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#public_network_access MongoCluster#public_network_access}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#public_network_access MongoCluster#public_network_access}.
+
+---
+
+##### `restore`<sup>Optional</sup> <a name="restore" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.restore"></a>
+
+```python
+restore: MongoClusterRestore
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore">MongoClusterRestore</a>
+
+restore block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#restore MongoCluster#restore}
 
 ---
 
@@ -1784,7 +2180,7 @@ shard_count: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#shard_count MongoCluster#shard_count}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#shard_count MongoCluster#shard_count}.
 
 ---
 
@@ -1796,7 +2192,7 @@ source_location: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#source_location MongoCluster#source_location}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_location MongoCluster#source_location}.
 
 ---
 
@@ -1808,7 +2204,7 @@ source_server_id: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#source_server_id MongoCluster#source_server_id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_server_id MongoCluster#source_server_id}.
 
 ---
 
@@ -1820,7 +2216,19 @@ storage_size_in_gb: typing.Union[int, float]
 
 - *Type:* typing.Union[int, float]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#storage_size_in_gb MongoCluster#storage_size_in_gb}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#storage_size_in_gb MongoCluster#storage_size_in_gb}.
+
+---
+
+##### `storage_type`<sup>Optional</sup> <a name="storage_type" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterConfig.property.storageType"></a>
+
+```python
+storage_type: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#storage_type MongoCluster#storage_type}.
 
 ---
 
@@ -1832,7 +2240,7 @@ tags: typing.Mapping[str]
 
 - *Type:* typing.Mapping[str]
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#tags MongoCluster#tags}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#tags MongoCluster#tags}.
 
 ---
 
@@ -1846,7 +2254,7 @@ timeouts: MongoClusterTimeouts
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#timeouts MongoCluster#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#timeouts MongoCluster#timeouts}
 
 ---
 
@@ -1858,7 +2266,7 @@ version: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#version MongoCluster#version}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#version MongoCluster#version}.
 
 ---
 
@@ -1872,6 +2280,144 @@ from cdktf_cdktf_provider_azurerm import mongo_cluster
 mongoCluster.MongoClusterConnectionStrings()
 ```
 
+
+### MongoClusterCustomerManagedKey <a name="MongoClusterCustomerManagedKey" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_azurerm import mongo_cluster
+
+mongoCluster.MongoClusterCustomerManagedKey(
+  key_vault_key_id: str,
+  user_assigned_identity_id: str
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey.property.keyVaultKeyId">key_vault_key_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#key_vault_key_id MongoCluster#key_vault_key_id}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey.property.userAssignedIdentityId">user_assigned_identity_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#user_assigned_identity_id MongoCluster#user_assigned_identity_id}. |
+
+---
+
+##### `key_vault_key_id`<sup>Required</sup> <a name="key_vault_key_id" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey.property.keyVaultKeyId"></a>
+
+```python
+key_vault_key_id: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#key_vault_key_id MongoCluster#key_vault_key_id}.
+
+---
+
+##### `user_assigned_identity_id`<sup>Required</sup> <a name="user_assigned_identity_id" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey.property.userAssignedIdentityId"></a>
+
+```python
+user_assigned_identity_id: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#user_assigned_identity_id MongoCluster#user_assigned_identity_id}.
+
+---
+
+### MongoClusterIdentity <a name="MongoClusterIdentity" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_azurerm import mongo_cluster
+
+mongoCluster.MongoClusterIdentity(
+  identity_ids: typing.List[str],
+  type: str
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity.property.identityIds">identity_ids</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#identity_ids MongoCluster#identity_ids}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity.property.type">type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#type MongoCluster#type}. |
+
+---
+
+##### `identity_ids`<sup>Required</sup> <a name="identity_ids" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity.property.identityIds"></a>
+
+```python
+identity_ids: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#identity_ids MongoCluster#identity_ids}.
+
+---
+
+##### `type`<sup>Required</sup> <a name="type" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity.property.type"></a>
+
+```python
+type: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#type MongoCluster#type}.
+
+---
+
+### MongoClusterRestore <a name="MongoClusterRestore" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore"></a>
+
+#### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_azurerm import mongo_cluster
+
+mongoCluster.MongoClusterRestore(
+  point_in_time_utc: str,
+  source_id: str
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore.property.pointInTimeUtc">point_in_time_utc</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#point_in_time_utc MongoCluster#point_in_time_utc}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore.property.sourceId">source_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_id MongoCluster#source_id}. |
+
+---
+
+##### `point_in_time_utc`<sup>Required</sup> <a name="point_in_time_utc" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore.property.pointInTimeUtc"></a>
+
+```python
+point_in_time_utc: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#point_in_time_utc MongoCluster#point_in_time_utc}.
+
+---
+
+##### `source_id`<sup>Required</sup> <a name="source_id" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore.property.sourceId"></a>
+
+```python
+source_id: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#source_id MongoCluster#source_id}.
+
+---
 
 ### MongoClusterTimeouts <a name="MongoClusterTimeouts" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts"></a>
 
@@ -1892,10 +2438,10 @@ mongoCluster.MongoClusterTimeouts(
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#create MongoCluster#create}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#delete MongoCluster#delete}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#read MongoCluster#read}. |
-| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#update MongoCluster#update}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts.property.create">create</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#create MongoCluster#create}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts.property.delete">delete</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#delete MongoCluster#delete}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts.property.read">read</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#read MongoCluster#read}. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterTimeouts.property.update">update</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#update MongoCluster#update}. |
 
 ---
 
@@ -1907,7 +2453,7 @@ create: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#create MongoCluster#create}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#create MongoCluster#create}.
 
 ---
 
@@ -1919,7 +2465,7 @@ delete: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#delete MongoCluster#delete}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#delete MongoCluster#delete}.
 
 ---
 
@@ -1931,7 +2477,7 @@ read: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#read MongoCluster#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#read MongoCluster#read}.
 
 ---
 
@@ -1943,7 +2489,7 @@ update: str
 
 - *Type:* str
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/mongo_cluster#update MongoCluster#update}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/mongo_cluster#update MongoCluster#update}.
 
 ---
 
@@ -2431,6 +2977,960 @@ internal_value: MongoClusterConnectionStrings
 ```
 
 - *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterConnectionStrings">MongoClusterConnectionStrings</a>
+
+---
+
+
+### MongoClusterCustomerManagedKeyOutputReference <a name="MongoClusterCustomerManagedKeyOutputReference" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_azurerm import mongo_cluster
+
+mongoCluster.MongoClusterCustomerManagedKeyOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.keyVaultKeyIdInput">key_vault_key_id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.userAssignedIdentityIdInput">user_assigned_identity_id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.keyVaultKeyId">key_vault_key_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.userAssignedIdentityId">user_assigned_identity_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey">MongoClusterCustomerManagedKey</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `key_vault_key_id_input`<sup>Optional</sup> <a name="key_vault_key_id_input" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.keyVaultKeyIdInput"></a>
+
+```python
+key_vault_key_id_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `user_assigned_identity_id_input`<sup>Optional</sup> <a name="user_assigned_identity_id_input" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.userAssignedIdentityIdInput"></a>
+
+```python
+user_assigned_identity_id_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `key_vault_key_id`<sup>Required</sup> <a name="key_vault_key_id" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.keyVaultKeyId"></a>
+
+```python
+key_vault_key_id: str
+```
+
+- *Type:* str
+
+---
+
+##### `user_assigned_identity_id`<sup>Required</sup> <a name="user_assigned_identity_id" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.userAssignedIdentityId"></a>
+
+```python
+user_assigned_identity_id: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKeyOutputReference.property.internalValue"></a>
+
+```python
+internal_value: MongoClusterCustomerManagedKey
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterCustomerManagedKey">MongoClusterCustomerManagedKey</a>
+
+---
+
+
+### MongoClusterIdentityOutputReference <a name="MongoClusterIdentityOutputReference" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_azurerm import mongo_cluster
+
+mongoCluster.MongoClusterIdentityOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.identityIdsInput">identity_ids_input</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.typeInput">type_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.identityIds">identity_ids</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.type">type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity">MongoClusterIdentity</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `identity_ids_input`<sup>Optional</sup> <a name="identity_ids_input" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.identityIdsInput"></a>
+
+```python
+identity_ids_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `type_input`<sup>Optional</sup> <a name="type_input" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.typeInput"></a>
+
+```python
+type_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `identity_ids`<sup>Required</sup> <a name="identity_ids" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.identityIds"></a>
+
+```python
+identity_ids: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `type`<sup>Required</sup> <a name="type" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.type"></a>
+
+```python
+type: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentityOutputReference.property.internalValue"></a>
+
+```python
+internal_value: MongoClusterIdentity
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterIdentity">MongoClusterIdentity</a>
+
+---
+
+
+### MongoClusterRestoreOutputReference <a name="MongoClusterRestoreOutputReference" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.Initializer"></a>
+
+```python
+from cdktf_cdktf_provider_azurerm import mongo_cluster
+
+mongoCluster.MongoClusterRestoreOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.pointInTimeUtcInput">point_in_time_utc_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.sourceIdInput">source_id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.pointInTimeUtc">point_in_time_utc</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.sourceId">source_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore">MongoClusterRestore</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `point_in_time_utc_input`<sup>Optional</sup> <a name="point_in_time_utc_input" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.pointInTimeUtcInput"></a>
+
+```python
+point_in_time_utc_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `source_id_input`<sup>Optional</sup> <a name="source_id_input" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.sourceIdInput"></a>
+
+```python
+source_id_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `point_in_time_utc`<sup>Required</sup> <a name="point_in_time_utc" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.pointInTimeUtc"></a>
+
+```python
+point_in_time_utc: str
+```
+
+- *Type:* str
+
+---
+
+##### `source_id`<sup>Required</sup> <a name="source_id" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.sourceId"></a>
+
+```python
+source_id: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="@cdktf/provider-azurerm.mongoCluster.MongoClusterRestoreOutputReference.property.internalValue"></a>
+
+```python
+internal_value: MongoClusterRestore
+```
+
+- *Type:* <a href="#@cdktf/provider-azurerm.mongoCluster.MongoClusterRestore">MongoClusterRestore</a>
 
 ---
 

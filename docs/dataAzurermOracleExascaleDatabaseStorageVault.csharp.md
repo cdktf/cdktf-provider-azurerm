@@ -4,7 +4,7 @@
 
 ### DataAzurermOracleExascaleDatabaseStorageVault <a name="DataAzurermOracleExascaleDatabaseStorageVault" id="@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVault"></a>
 
-Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/oracle_exascale_database_storage_vault azurerm_oracle_exascale_database_storage_vault}.
+Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/data-sources/oracle_exascale_database_storage_vault azurerm_oracle_exascale_database_storage_vault}.
 
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVault.Initializer"></a>
 
@@ -392,7 +392,7 @@ The construct id used in the generated config for the DataAzurermOracleExascaleD
 
 The id of the existing DataAzurermOracleExascaleDatabaseStorageVault that should be imported.
 
-Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/oracle_exascale_database_storage_vault#import import section} in the documentation of this resource for the id to use
+Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/data-sources/oracle_exascale_database_storage_vault#import import section} in the documentation of this resource for the id to use
 
 ---
 
@@ -818,9 +818,9 @@ new DataAzurermOracleExascaleDatabaseStorageVaultConfig {
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultConfig.property.lifecycle">Lifecycle</a></code> | <code>HashiCorp.Cdktf.TerraformResourceLifecycle</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultConfig.property.provider">Provider</a></code> | <code>HashiCorp.Cdktf.TerraformProvider</code> | *No description.* |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultConfig.property.provisioners">Provisioners</a></code> | <code>HashiCorp.Cdktf.FileProvisioner\|HashiCorp.Cdktf.LocalExecProvisioner\|HashiCorp.Cdktf.RemoteExecProvisioner[]</code> | *No description.* |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/oracle_exascale_database_storage_vault#name DataAzurermOracleExascaleDatabaseStorageVault#name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/oracle_exascale_database_storage_vault#resource_group_name DataAzurermOracleExascaleDatabaseStorageVault#resource_group_name}. |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/oracle_exascale_database_storage_vault#id DataAzurermOracleExascaleDatabaseStorageVault#id}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultConfig.property.name">Name</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/data-sources/oracle_exascale_database_storage_vault#name DataAzurermOracleExascaleDatabaseStorageVault#name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultConfig.property.resourceGroupName">ResourceGroupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/data-sources/oracle_exascale_database_storage_vault#resource_group_name DataAzurermOracleExascaleDatabaseStorageVault#resource_group_name}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultConfig.property.id">Id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/data-sources/oracle_exascale_database_storage_vault#id DataAzurermOracleExascaleDatabaseStorageVault#id}. |
 | <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultConfig.property.timeouts">Timeouts</a></code> | <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultTimeouts">DataAzurermOracleExascaleDatabaseStorageVaultTimeouts</a></code> | timeouts block. |
 
 ---
@@ -903,7 +903,7 @@ public string Name { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/oracle_exascale_database_storage_vault#name DataAzurermOracleExascaleDatabaseStorageVault#name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/data-sources/oracle_exascale_database_storage_vault#name DataAzurermOracleExascaleDatabaseStorageVault#name}.
 
 ---
 
@@ -915,7 +915,7 @@ public string ResourceGroupName { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/oracle_exascale_database_storage_vault#resource_group_name DataAzurermOracleExascaleDatabaseStorageVault#resource_group_name}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/data-sources/oracle_exascale_database_storage_vault#resource_group_name DataAzurermOracleExascaleDatabaseStorageVault#resource_group_name}.
 
 ---
 
@@ -927,7 +927,7 @@ public string Id { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/oracle_exascale_database_storage_vault#id DataAzurermOracleExascaleDatabaseStorageVault#id}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/data-sources/oracle_exascale_database_storage_vault#id DataAzurermOracleExascaleDatabaseStorageVault#id}.
 
 Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
 If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
@@ -944,7 +944,7 @@ public DataAzurermOracleExascaleDatabaseStorageVaultTimeouts Timeouts { get; set
 
 timeouts block.
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/oracle_exascale_database_storage_vault#timeouts DataAzurermOracleExascaleDatabaseStorageVault#timeouts}
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/data-sources/oracle_exascale_database_storage_vault#timeouts DataAzurermOracleExascaleDatabaseStorageVault#timeouts}
 
 ---
 
@@ -977,7 +977,7 @@ new DataAzurermOracleExascaleDatabaseStorageVaultTimeouts {
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/oracle_exascale_database_storage_vault#read DataAzurermOracleExascaleDatabaseStorageVault#read}. |
+| <code><a href="#@cdktf/provider-azurerm.dataAzurermOracleExascaleDatabaseStorageVault.DataAzurermOracleExascaleDatabaseStorageVaultTimeouts.property.read">Read</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/data-sources/oracle_exascale_database_storage_vault#read DataAzurermOracleExascaleDatabaseStorageVault#read}. |
 
 ---
 
@@ -989,7 +989,7 @@ public string Read { get; set; }
 
 - *Type:* string
 
-Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/data-sources/oracle_exascale_database_storage_vault#read DataAzurermOracleExascaleDatabaseStorageVault#read}.
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/data-sources/oracle_exascale_database_storage_vault#read DataAzurermOracleExascaleDatabaseStorageVault#read}.
 
 ---
 
