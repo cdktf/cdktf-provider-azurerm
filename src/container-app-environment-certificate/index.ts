@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MPL-2.0
  */
 
-// https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate
+// https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate
 // generated from terraform resource schema
 
 import { Construct } from 'constructs';
@@ -13,62 +13,174 @@ import * as cdktf from 'cdktf';
 
 export interface ContainerAppEnvironmentCertificateConfig extends cdktf.TerraformMetaArguments {
   /**
-  * The Certificate Private Key as a base64 encoded PFX or PEM.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#certificate_blob_base64 ContainerAppEnvironmentCertificate#certificate_blob_base64}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#certificate_blob_base64 ContainerAppEnvironmentCertificate#certificate_blob_base64}
   */
-  readonly certificateBlobBase64: string;
+  readonly certificateBlobBase64?: string;
   /**
-  * The password for the Certificate.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#certificate_password ContainerAppEnvironmentCertificate#certificate_password}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#certificate_password ContainerAppEnvironmentCertificate#certificate_password}
   */
-  readonly certificatePassword: string;
+  readonly certificatePassword?: string;
   /**
-  * The Container App Managed Environment ID to configure this Certificate on.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#container_app_environment_id ContainerAppEnvironmentCertificate#container_app_environment_id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#container_app_environment_id ContainerAppEnvironmentCertificate#container_app_environment_id}
   */
   readonly containerAppEnvironmentId: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#id ContainerAppEnvironmentCertificate#id}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#id ContainerAppEnvironmentCertificate#id}
   *
   * Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
   * If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
   */
   readonly id?: string;
   /**
-  * The name of the Container Apps Environment Certificate.
-  *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#name ContainerAppEnvironmentCertificate#name}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#name ContainerAppEnvironmentCertificate#name}
   */
   readonly name: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#tags ContainerAppEnvironmentCertificate#tags}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#tags ContainerAppEnvironmentCertificate#tags}
   */
   readonly tags?: { [key: string]: string };
   /**
+  * certificate_key_vault block
+  *
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#certificate_key_vault ContainerAppEnvironmentCertificate#certificate_key_vault}
+  */
+  readonly certificateKeyVault?: ContainerAppEnvironmentCertificateCertificateKeyVault;
+  /**
   * timeouts block
   *
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#timeouts ContainerAppEnvironmentCertificate#timeouts}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#timeouts ContainerAppEnvironmentCertificate#timeouts}
   */
   readonly timeouts?: ContainerAppEnvironmentCertificateTimeouts;
 }
+export interface ContainerAppEnvironmentCertificateCertificateKeyVault {
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#identity ContainerAppEnvironmentCertificate#identity}
+  */
+  readonly identity?: string;
+  /**
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#key_vault_secret_id ContainerAppEnvironmentCertificate#key_vault_secret_id}
+  */
+  readonly keyVaultSecretId: string;
+}
+
+export function containerAppEnvironmentCertificateCertificateKeyVaultToTerraform(struct?: ContainerAppEnvironmentCertificateCertificateKeyVaultOutputReference | ContainerAppEnvironmentCertificateCertificateKeyVault): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  return {
+    identity: cdktf.stringToTerraform(struct!.identity),
+    key_vault_secret_id: cdktf.stringToTerraform(struct!.keyVaultSecretId),
+  }
+}
+
+
+export function containerAppEnvironmentCertificateCertificateKeyVaultToHclTerraform(struct?: ContainerAppEnvironmentCertificateCertificateKeyVaultOutputReference | ContainerAppEnvironmentCertificateCertificateKeyVault): any {
+  if (!cdktf.canInspect(struct) || cdktf.Tokenization.isResolvable(struct)) { return struct; }
+  if (cdktf.isComplexElement(struct)) {
+    throw new Error("A complex element was used as configuration, this is not supported: https://cdk.tf/complex-object-as-configuration");
+  }
+  const attrs = {
+    identity: {
+      value: cdktf.stringToHclTerraform(struct!.identity),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+    key_vault_secret_id: {
+      value: cdktf.stringToHclTerraform(struct!.keyVaultSecretId),
+      isBlock: false,
+      type: "simple",
+      storageClassType: "string",
+    },
+  };
+
+  // remove undefined attributes
+  return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
+}
+
+export class ContainerAppEnvironmentCertificateCertificateKeyVaultOutputReference extends cdktf.ComplexObject {
+  private isEmptyObject = false;
+
+  /**
+  * @param terraformResource The parent resource
+  * @param terraformAttribute The attribute on the parent resource this class is referencing
+  */
+  public constructor(terraformResource: cdktf.IInterpolatingParent, terraformAttribute: string) {
+    super(terraformResource, terraformAttribute, false, 0);
+  }
+
+  public get internalValue(): ContainerAppEnvironmentCertificateCertificateKeyVault | undefined {
+    let hasAnyValues = this.isEmptyObject;
+    const internalValueResult: any = {};
+    if (this._identity !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.identity = this._identity;
+    }
+    if (this._keyVaultSecretId !== undefined) {
+      hasAnyValues = true;
+      internalValueResult.keyVaultSecretId = this._keyVaultSecretId;
+    }
+    return hasAnyValues ? internalValueResult : undefined;
+  }
+
+  public set internalValue(value: ContainerAppEnvironmentCertificateCertificateKeyVault | undefined) {
+    if (value === undefined) {
+      this.isEmptyObject = false;
+      this._identity = undefined;
+      this._keyVaultSecretId = undefined;
+    }
+    else {
+      this.isEmptyObject = Object.keys(value).length === 0;
+      this._identity = value.identity;
+      this._keyVaultSecretId = value.keyVaultSecretId;
+    }
+  }
+
+  // identity - computed: false, optional: true, required: false
+  private _identity?: string; 
+  public get identity() {
+    return this.getStringAttribute('identity');
+  }
+  public set identity(value: string) {
+    this._identity = value;
+  }
+  public resetIdentity() {
+    this._identity = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get identityInput() {
+    return this._identity;
+  }
+
+  // key_vault_secret_id - computed: false, optional: false, required: true
+  private _keyVaultSecretId?: string; 
+  public get keyVaultSecretId() {
+    return this.getStringAttribute('key_vault_secret_id');
+  }
+  public set keyVaultSecretId(value: string) {
+    this._keyVaultSecretId = value;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get keyVaultSecretIdInput() {
+    return this._keyVaultSecretId;
+  }
+}
 export interface ContainerAppEnvironmentCertificateTimeouts {
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#create ContainerAppEnvironmentCertificate#create}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#create ContainerAppEnvironmentCertificate#create}
   */
   readonly create?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#delete ContainerAppEnvironmentCertificate#delete}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#delete ContainerAppEnvironmentCertificate#delete}
   */
   readonly delete?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#read ContainerAppEnvironmentCertificate#read}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#read ContainerAppEnvironmentCertificate#read}
   */
   readonly read?: string;
   /**
-  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#update ContainerAppEnvironmentCertificate#update}
+  * Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#update ContainerAppEnvironmentCertificate#update}
   */
   readonly update?: string;
 }
@@ -249,7 +361,7 @@ export class ContainerAppEnvironmentCertificateTimeoutsOutputReference extends c
 }
 
 /**
-* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate azurerm_container_app_environment_certificate}
+* Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate azurerm_container_app_environment_certificate}
 */
 export class ContainerAppEnvironmentCertificate extends cdktf.TerraformResource {
 
@@ -265,7 +377,7 @@ export class ContainerAppEnvironmentCertificate extends cdktf.TerraformResource 
   * Generates CDKTF code for importing a ContainerAppEnvironmentCertificate resource upon running "cdktf plan <stack-name>"
   * @param scope The scope in which to define this construct
   * @param importToId The construct id used in the generated config for the ContainerAppEnvironmentCertificate to import
-  * @param importFromId The id of the existing ContainerAppEnvironmentCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate#import import section} in the documentation of this resource for the id to use
+  * @param importFromId The id of the existing ContainerAppEnvironmentCertificate that should be imported. Refer to the {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate#import import section} in the documentation of this resource for the id to use
   * @param provider? Optional instance of the provider where the ContainerAppEnvironmentCertificate to import is found
   */
   public static generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: cdktf.TerraformProvider) {
@@ -277,7 +389,7 @@ export class ContainerAppEnvironmentCertificate extends cdktf.TerraformResource 
   // ===========
 
   /**
-  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.54.0/docs/resources/container_app_environment_certificate azurerm_container_app_environment_certificate} Resource
+  * Create a new {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.55.0/docs/resources/container_app_environment_certificate azurerm_container_app_environment_certificate} Resource
   *
   * @param scope The scope in which to define this construct
   * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -288,7 +400,7 @@ export class ContainerAppEnvironmentCertificate extends cdktf.TerraformResource 
       terraformResourceType: 'azurerm_container_app_environment_certificate',
       terraformGeneratorMetadata: {
         providerName: 'azurerm',
-        providerVersion: '4.54.0',
+        providerVersion: '4.55.0',
         providerVersionConstraint: '~> 4.0'
       },
       provider: config.provider,
@@ -305,6 +417,7 @@ export class ContainerAppEnvironmentCertificate extends cdktf.TerraformResource 
     this._id = config.id;
     this._name = config.name;
     this._tags = config.tags;
+    this._certificateKeyVault.internalValue = config.certificateKeyVault;
     this._timeouts.internalValue = config.timeouts;
   }
 
@@ -312,7 +425,7 @@ export class ContainerAppEnvironmentCertificate extends cdktf.TerraformResource 
   // ATTRIBUTES
   // ==========
 
-  // certificate_blob_base64 - computed: false, optional: false, required: true
+  // certificate_blob_base64 - computed: false, optional: true, required: false
   private _certificateBlobBase64?: string; 
   public get certificateBlobBase64() {
     return this.getStringAttribute('certificate_blob_base64');
@@ -320,18 +433,24 @@ export class ContainerAppEnvironmentCertificate extends cdktf.TerraformResource 
   public set certificateBlobBase64(value: string) {
     this._certificateBlobBase64 = value;
   }
+  public resetCertificateBlobBase64() {
+    this._certificateBlobBase64 = undefined;
+  }
   // Temporarily expose input value. Use with caution.
   public get certificateBlobBase64Input() {
     return this._certificateBlobBase64;
   }
 
-  // certificate_password - computed: false, optional: false, required: true
+  // certificate_password - computed: false, optional: true, required: false
   private _certificatePassword?: string; 
   public get certificatePassword() {
     return this.getStringAttribute('certificate_password');
   }
   public set certificatePassword(value: string) {
     this._certificatePassword = value;
+  }
+  public resetCertificatePassword() {
+    this._certificatePassword = undefined;
   }
   // Temporarily expose input value. Use with caution.
   public get certificatePasswordInput() {
@@ -421,6 +540,22 @@ export class ContainerAppEnvironmentCertificate extends cdktf.TerraformResource 
     return this.getStringAttribute('thumbprint');
   }
 
+  // certificate_key_vault - computed: false, optional: true, required: false
+  private _certificateKeyVault = new ContainerAppEnvironmentCertificateCertificateKeyVaultOutputReference(this, "certificate_key_vault");
+  public get certificateKeyVault() {
+    return this._certificateKeyVault;
+  }
+  public putCertificateKeyVault(value: ContainerAppEnvironmentCertificateCertificateKeyVault) {
+    this._certificateKeyVault.internalValue = value;
+  }
+  public resetCertificateKeyVault() {
+    this._certificateKeyVault.internalValue = undefined;
+  }
+  // Temporarily expose input value. Use with caution.
+  public get certificateKeyVaultInput() {
+    return this._certificateKeyVault.internalValue;
+  }
+
   // timeouts - computed: false, optional: true, required: false
   private _timeouts = new ContainerAppEnvironmentCertificateTimeoutsOutputReference(this, "timeouts");
   public get timeouts() {
@@ -449,6 +584,7 @@ export class ContainerAppEnvironmentCertificate extends cdktf.TerraformResource 
       id: cdktf.stringToTerraform(this._id),
       name: cdktf.stringToTerraform(this._name),
       tags: cdktf.hashMapper(cdktf.stringToTerraform)(this._tags),
+      certificate_key_vault: containerAppEnvironmentCertificateCertificateKeyVaultToTerraform(this._certificateKeyVault.internalValue),
       timeouts: containerAppEnvironmentCertificateTimeoutsToTerraform(this._timeouts.internalValue),
     };
   }
@@ -490,6 +626,12 @@ export class ContainerAppEnvironmentCertificate extends cdktf.TerraformResource 
         isBlock: false,
         type: "map",
         storageClassType: "stringMap",
+      },
+      certificate_key_vault: {
+        value: containerAppEnvironmentCertificateCertificateKeyVaultToHclTerraform(this._certificateKeyVault.internalValue),
+        isBlock: true,
+        type: "list",
+        storageClassType: "ContainerAppEnvironmentCertificateCertificateKeyVaultList",
       },
       timeouts: {
         value: containerAppEnvironmentCertificateTimeoutsToHclTerraform(this._timeouts.internalValue),
