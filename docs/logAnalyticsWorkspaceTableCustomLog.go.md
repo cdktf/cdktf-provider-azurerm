@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLog.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 loganalyticsworkspacetablecustomlog.NewLogAnalyticsWorkspaceTableCustomLog(scope Construct, id *string, config LogAnalyticsWorkspaceTableCustomLogConfig) LogAnalyticsWorkspaceTableCustomLog
 ```
@@ -453,7 +453,7 @@ func ResetTotalRetentionInDays()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLog.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 loganalyticsworkspacetablecustomlog.LogAnalyticsWorkspaceTableCustomLog_IsConstruct(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLog.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 loganalyticsworkspacetablecustomlog.LogAnalyticsWorkspaceTableCustomLog_IsTerraformElement(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ loganalyticsworkspacetablecustomlog.LogAnalyticsWorkspaceTableCustomLog_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLog.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 loganalyticsworkspacetablecustomlog.LogAnalyticsWorkspaceTableCustomLog_IsTerraformResource(x interface{}) *bool
 ```
@@ -513,7 +513,7 @@ loganalyticsworkspacetablecustomlog.LogAnalyticsWorkspaceTableCustomLog_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLog.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 loganalyticsworkspacetablecustomlog.LogAnalyticsWorkspaceTableCustomLog_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -984,7 +984,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLogColumn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 &loganalyticsworkspacetablecustomlog.LogAnalyticsWorkspaceTableCustomLogColumn {
 	Name: *string,
@@ -1058,7 +1058,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLogConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 &loganalyticsworkspacetablecustomlog.LogAnalyticsWorkspaceTableCustomLogConfig {
 	Connection: interface{},
@@ -1076,7 +1076,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworks
 	Id: *string,
 	Plan: *string,
 	RetentionInDays: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLogTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLogTimeouts,
 	TotalRetentionInDays: *f64,
 }
 ```
@@ -1307,7 +1307,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLogStandardColumn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 &loganalyticsworkspacetablecustomlog.LogAnalyticsWorkspaceTableCustomLogStandardColumn {
 
@@ -1320,7 +1320,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworks
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLogTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 &loganalyticsworkspacetablecustomlog.LogAnalyticsWorkspaceTableCustomLogTimeouts {
 	Create: *string,
@@ -1396,7 +1396,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLogColumnList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 loganalyticsworkspacetablecustomlog.NewLogAnalyticsWorkspaceTableCustomLogColumnList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LogAnalyticsWorkspaceTableCustomLogColumnList
 ```
@@ -1556,7 +1556,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLogColumnOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 loganalyticsworkspacetablecustomlog.NewLogAnalyticsWorkspaceTableCustomLogColumnOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LogAnalyticsWorkspaceTableCustomLogColumnOutputReference
 ```
@@ -1925,7 +1925,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLogStandardColumnList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 loganalyticsworkspacetablecustomlog.NewLogAnalyticsWorkspaceTableCustomLogStandardColumnList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LogAnalyticsWorkspaceTableCustomLogStandardColumnList
 ```
@@ -2074,7 +2074,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLogStandardColumnOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 loganalyticsworkspacetablecustomlog.NewLogAnalyticsWorkspaceTableCustomLogStandardColumnOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LogAnalyticsWorkspaceTableCustomLogStandardColumnOutputReference
 ```
@@ -2385,7 +2385,7 @@ func InternalValue() LogAnalyticsWorkspaceTableCustomLogStandardColumn
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.logAnalyticsWorkspaceTableCustomLog.LogAnalyticsWorkspaceTableCustomLogTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/loganalyticsworkspacetablecustomlog"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/loganalyticsworkspacetablecustomlog"
 
 loganalyticsworkspacetablecustomlog.NewLogAnalyticsWorkspaceTableCustomLogTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LogAnalyticsWorkspaceTableCustomLogTimeoutsOutputReference
 ```

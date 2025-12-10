@@ -8,7 +8,6 @@
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
-    "check-if-new-provider-version": "npx projen check-if-new-provider-version",
     "clobber": "npx projen clobber",
     "compat": "npx projen compat",
     "compile": "jsii --silence-warnings=reserved-word",
@@ -24,14 +23,11 @@
     "package:js": "npx projen package:js",
     "package:python": "npx projen package:python",
     "post-compile": "npx projen post-compile",
-    "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
     "release": "npx projen release",
     "test": "jest --passWithNoTests",
     "unbump": "npx projen unbump",
     "unconditional-bump": "npx projen unconditional-bump",
-    "unconditional-release": "npx projen unconditional-release",
-    "upgrade": "npx projen upgrade",
     "validate-workflows": "npx projen validate-workflows",
     "watch": "npx projen watch",
     "projen": "npx projen",
@@ -62,7 +58,6 @@
     "jsii-pacmak": "^1.119.0",
     "jsii-rosetta": "~5.8.0",
     "projen": "^0.98.11",
-    "semver": "^7.5.3",
     "typescript": "~5.8.0"
   },
   "peerDependencies": {
@@ -155,7 +150,7 @@
     ]
   },
   "cdktf": {
-    "isDeprecated": false,
+    "isDeprecated": true,
     "provider": {
       "name": "registry.terraform.io/hashicorp/azurerm",
       "version": "4.55.0"

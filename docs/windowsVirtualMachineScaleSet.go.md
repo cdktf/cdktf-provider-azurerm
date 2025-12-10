@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSet(scope Construct, id *string, config WindowsVirtualMachineScaleSetConfig) WindowsVirtualMachineScaleSet
 ```
@@ -988,7 +988,7 @@ func ResetZones()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSet_IsConstruct(x interface{}) *bool
 ```
@@ -1020,7 +1020,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSet_IsTerraformElement(x interface{}) *bool
 ```
@@ -1034,7 +1034,7 @@ windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSet_IsTerraformElement(x
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSet.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSet_IsTerraformResource(x interface{}) *bool
 ```
@@ -1048,7 +1048,7 @@ windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSet_IsTerraformResource(
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSet.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSet_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -2586,7 +2586,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAdditionalCapabilities.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetAdditionalCapabilities {
 	UltraSsdEnabled: interface{},
@@ -2618,7 +2618,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAdditionalUnattendContent.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetAdditionalUnattendContent {
 	Content: *string,
@@ -2664,7 +2664,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAutomaticInstanceRepair.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetAutomaticInstanceRepair {
 	Enabled: interface{},
@@ -2724,7 +2724,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicy {
 	DisableAutomaticRollback: interface{},
@@ -2770,7 +2770,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetBootDiagnostics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetBootDiagnostics {
 	StorageAccountUri: *string,
@@ -2802,7 +2802,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetConfig {
 	Connection: interface{},
@@ -2818,14 +2818,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmac
 	Location: *string,
 	Name: *string,
 	NetworkInterface: interface{},
-	OsDisk: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetOsDisk,
+	OsDisk: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetOsDisk,
 	ResourceGroupName: *string,
 	Sku: *string,
-	AdditionalCapabilities: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAdditionalCapabilities,
+	AdditionalCapabilities: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAdditionalCapabilities,
 	AdditionalUnattendContent: interface{},
-	AutomaticInstanceRepair: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAutomaticInstanceRepair,
-	AutomaticOsUpgradePolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicy,
-	BootDiagnostics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetBootDiagnostics,
+	AutomaticInstanceRepair: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAutomaticInstanceRepair,
+	AutomaticOsUpgradePolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicy,
+	BootDiagnostics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetBootDiagnostics,
 	CapacityReservationGroupId: *string,
 	ComputerNamePrefix: *string,
 	CustomData: *string,
@@ -2842,28 +2842,28 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmac
 	HealthProbeId: *string,
 	HostGroupId: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetIdentity,
 	LicenseType: *string,
 	MaxBidPrice: *f64,
 	Overprovision: interface{},
-	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetPlan,
+	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetPlan,
 	PlatformFaultDomainCount: *f64,
 	Priority: *string,
 	ProvisionVmAgent: interface{},
 	ProximityPlacementGroupId: *string,
 	ResilientVmCreationEnabled: interface{},
 	ResilientVmDeletionEnabled: interface{},
-	RollingUpgradePolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetRollingUpgradePolicy,
-	ScaleIn: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetScaleIn,
+	RollingUpgradePolicy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetRollingUpgradePolicy,
+	ScaleIn: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetScaleIn,
 	Secret: interface{},
 	SecureBootEnabled: interface{},
 	SinglePlacementGroup: interface{},
 	SourceImageId: *string,
-	SourceImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSourceImageReference,
-	SpotRestore: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSpotRestore,
+	SourceImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSourceImageReference,
+	SpotRestore: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSpotRestore,
 	Tags: *map[string]*string,
-	TerminationNotification: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetTerminationNotification,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetTimeouts,
+	TerminationNotification: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetTerminationNotification,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetTimeouts,
 	Timezone: *string,
 	UpgradeMode: *string,
 	UserData: *string,
@@ -3773,7 +3773,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetDataDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetDataDisk {
 	Caching: *string,
@@ -3931,7 +3931,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetExtension.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetExtension {
 	Name: *string,
@@ -3942,7 +3942,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmac
 	AutoUpgradeMinorVersion: interface{},
 	ForceUpdateTag: *string,
 	ProtectedSettings: *string,
-	ProtectedSettingsFromKeyVault: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault,
+	ProtectedSettingsFromKeyVault: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault,
 	ProvisionAfterExtensions: *[]*string,
 	Settings: *string,
 }
@@ -4105,7 +4105,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVault {
 	SecretUrl: *string,
@@ -4151,7 +4151,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetGalleryApplication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetGalleryApplication {
 	VersionId: *string,
@@ -4225,7 +4225,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetIdentity {
 	Type: *string,
@@ -4271,7 +4271,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterface.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetNetworkInterface {
 	IpConfiguration: interface{},
@@ -4417,7 +4417,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfiguration.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfiguration {
 	Name: *string,
@@ -4563,7 +4563,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress {
 	Name: *string,
@@ -4667,7 +4667,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag {
 	Tag: *string,
@@ -4713,12 +4713,12 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetOsDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetOsDisk {
 	Caching: *string,
 	StorageAccountType: *string,
-	DiffDiskSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetOsDiskDiffDiskSettings,
+	DiffDiskSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetOsDiskDiffDiskSettings,
 	DiskEncryptionSetId: *string,
 	DiskSizeGb: *f64,
 	SecureVmDiskEncryptionSetId: *string,
@@ -4845,7 +4845,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetOsDiskDiffDiskSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetOsDiskDiffDiskSettings {
 	Option: *string,
@@ -4891,7 +4891,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetPlan {
 	Name: *string,
@@ -4951,7 +4951,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetRollingUpgradePolicy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetRollingUpgradePolicy {
 	MaxBatchInstancePercent: *f64,
@@ -5067,7 +5067,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetScaleIn.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetScaleIn {
 	ForceDeletionEnabled: interface{},
@@ -5113,7 +5113,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetSecret {
 	Certificate: interface{},
@@ -5161,7 +5161,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSecretCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetSecretCertificate {
 	Store: *string,
@@ -5207,7 +5207,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSourceImageReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetSourceImageReference {
 	Offer: *string,
@@ -5281,7 +5281,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSpotRestore.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetSpotRestore {
 	Enabled: interface{},
@@ -5327,7 +5327,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetTerminationNotification.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetTerminationNotification {
 	Enabled: interface{},
@@ -5373,7 +5373,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetTimeouts {
 	Create: *string,
@@ -5447,7 +5447,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetWinrmListener.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 &windowsvirtualmachinescaleset.WindowsVirtualMachineScaleSetWinrmListener {
 	Protocol: *string,
@@ -5495,7 +5495,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAdditionalCapabilitiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetAdditionalCapabilitiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetAdditionalCapabilitiesOutputReference
 ```
@@ -5773,7 +5773,7 @@ func InternalValue() WindowsVirtualMachineScaleSetAdditionalCapabilities
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAdditionalUnattendContentList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetAdditionalUnattendContentList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsVirtualMachineScaleSetAdditionalUnattendContentList
 ```
@@ -5933,7 +5933,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAdditionalUnattendContentOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetAdditionalUnattendContentOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsVirtualMachineScaleSetAdditionalUnattendContentOutputReference
 ```
@@ -6244,7 +6244,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAutomaticInstanceRepairOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetAutomaticInstanceRepairOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetAutomaticInstanceRepairOutputReference
 ```
@@ -6573,7 +6573,7 @@ func InternalValue() WindowsVirtualMachineScaleSetAutomaticInstanceRepair
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicyOutputReference
 ```
@@ -6866,7 +6866,7 @@ func InternalValue() WindowsVirtualMachineScaleSetAutomaticOsUpgradePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetBootDiagnosticsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetBootDiagnosticsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetBootDiagnosticsOutputReference
 ```
@@ -7144,7 +7144,7 @@ func InternalValue() WindowsVirtualMachineScaleSetBootDiagnostics
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetDataDiskList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetDataDiskList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsVirtualMachineScaleSetDataDiskList
 ```
@@ -7304,7 +7304,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetDataDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetDataDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsVirtualMachineScaleSetDataDiskOutputReference
 ```
@@ -7833,7 +7833,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetExtensionList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetExtensionList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsVirtualMachineScaleSetExtensionList
 ```
@@ -7993,7 +7993,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetExtensionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetExtensionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsVirtualMachineScaleSetExtensionOutputReference
 ```
@@ -8564,7 +8564,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetExtensionProtectedSettingsFromKeyVaultOutputReference
 ```
@@ -8857,7 +8857,7 @@ func InternalValue() WindowsVirtualMachineScaleSetExtensionProtectedSettingsFrom
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetGalleryApplicationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetGalleryApplicationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsVirtualMachineScaleSetGalleryApplicationList
 ```
@@ -9017,7 +9017,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetGalleryApplicationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetGalleryApplicationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsVirtualMachineScaleSetGalleryApplicationOutputReference
 ```
@@ -9393,7 +9393,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetIdentityOutputReference
 ```
@@ -9715,7 +9715,7 @@ func InternalValue() WindowsVirtualMachineScaleSetIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationList
 ```
@@ -9875,7 +9875,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationOutputReference
 ```
@@ -10409,7 +10409,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagList
 ```
@@ -10569,7 +10569,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTagOutputReference
 ```
@@ -10880,7 +10880,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressList
 ```
@@ -11040,7 +11040,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressOutputReference
 ```
@@ -11487,7 +11487,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterfaceList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetNetworkInterfaceList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsVirtualMachineScaleSetNetworkInterfaceList
 ```
@@ -11647,7 +11647,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetNetworkInterfaceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetNetworkInterfaceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsVirtualMachineScaleSetNetworkInterfaceOutputReference
 ```
@@ -12174,7 +12174,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetOsDiskDiffDiskSettingsOutputReference
 ```
@@ -12474,7 +12474,7 @@ func InternalValue() WindowsVirtualMachineScaleSetOsDiskDiffDiskSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetOsDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetOsDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetOsDiskOutputReference
 ```
@@ -12954,7 +12954,7 @@ func InternalValue() WindowsVirtualMachineScaleSetOsDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetPlanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetPlanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetPlanOutputReference
 ```
@@ -13269,7 +13269,7 @@ func InternalValue() WindowsVirtualMachineScaleSetPlan
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetRollingUpgradePolicyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetRollingUpgradePolicyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetRollingUpgradePolicyOutputReference
 ```
@@ -13693,7 +13693,7 @@ func InternalValue() WindowsVirtualMachineScaleSetRollingUpgradePolicy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetScaleInOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetScaleInOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetScaleInOutputReference
 ```
@@ -14000,7 +14000,7 @@ func InternalValue() WindowsVirtualMachineScaleSetScaleIn
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSecretCertificateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetSecretCertificateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsVirtualMachineScaleSetSecretCertificateList
 ```
@@ -14160,7 +14160,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSecretCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetSecretCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsVirtualMachineScaleSetSecretCertificateOutputReference
 ```
@@ -14471,7 +14471,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSecretList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetSecretList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsVirtualMachineScaleSetSecretList
 ```
@@ -14631,7 +14631,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsVirtualMachineScaleSetSecretOutputReference
 ```
@@ -14955,7 +14955,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSourceImageReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetSourceImageReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetSourceImageReferenceOutputReference
 ```
@@ -15292,7 +15292,7 @@ func InternalValue() WindowsVirtualMachineScaleSetSourceImageReference
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetSpotRestoreOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetSpotRestoreOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetSpotRestoreOutputReference
 ```
@@ -15599,7 +15599,7 @@ func InternalValue() WindowsVirtualMachineScaleSetSpotRestore
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetTerminationNotificationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetTerminationNotificationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetTerminationNotificationOutputReference
 ```
@@ -15899,7 +15899,7 @@ func InternalValue() WindowsVirtualMachineScaleSetTerminationNotification
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) WindowsVirtualMachineScaleSetTimeoutsOutputReference
 ```
@@ -16264,7 +16264,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetWinrmListenerList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetWinrmListenerList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) WindowsVirtualMachineScaleSetWinrmListenerList
 ```
@@ -16424,7 +16424,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.windowsVirtualMachineScaleSet.WindowsVirtualMachineScaleSetWinrmListenerOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/windowsvirtualmachinescaleset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/windowsvirtualmachinescaleset"
 
 windowsvirtualmachinescaleset.NewWindowsVirtualMachineScaleSetWinrmListenerOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) WindowsVirtualMachineScaleSetWinrmListenerOutputReference
 ```

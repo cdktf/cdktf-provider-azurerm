@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mongoClusterUser.MongoClusterUser.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mongoclusteruser"
 
 mongoclusteruser.NewMongoClusterUser(scope Construct, id *string, config MongoClusterUserConfig) MongoClusterUser
 ```
@@ -418,7 +418,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mongoClusterUser.MongoClusterUser.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mongoclusteruser"
 
 mongoclusteruser.MongoClusterUser_IsConstruct(x interface{}) *bool
 ```
@@ -450,7 +450,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mongoClusterUser.MongoClusterUser.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mongoclusteruser"
 
 mongoclusteruser.MongoClusterUser_IsTerraformElement(x interface{}) *bool
 ```
@@ -464,7 +464,7 @@ mongoclusteruser.MongoClusterUser_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mongoClusterUser.MongoClusterUser.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mongoclusteruser"
 
 mongoclusteruser.MongoClusterUser_IsTerraformResource(x interface{}) *bool
 ```
@@ -478,7 +478,7 @@ mongoclusteruser.MongoClusterUser_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mongoClusterUser.MongoClusterUser.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mongoclusteruser"
 
 mongoclusteruser.MongoClusterUser_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -861,7 +861,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mongoClusterUser.MongoClusterUserConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mongoclusteruser"
 
 &mongoclusteruser.MongoClusterUserConfig {
 	Connection: interface{},
@@ -877,7 +877,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
 	PrincipalType: *string,
 	Role: interface{},
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.mongoClusterUser.MongoClusterUserTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mongoClusterUser.MongoClusterUserTimeouts,
 }
 ```
 
@@ -1068,7 +1068,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mongoClusterUser.MongoClusterUserRole.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mongoclusteruser"
 
 &mongoclusteruser.MongoClusterUserRole {
 	Database: *string,
@@ -1114,7 +1114,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mongoClusterUser.MongoClusterUserTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mongoclusteruser"
 
 &mongoclusteruser.MongoClusterUserTimeouts {
 	Create: *string,
@@ -1176,7 +1176,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mongoClusterUser.MongoClusterUserRoleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mongoclusteruser"
 
 mongoclusteruser.NewMongoClusterUserRoleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) MongoClusterUserRoleList
 ```
@@ -1336,7 +1336,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mongoClusterUser.MongoClusterUserRoleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mongoclusteruser"
 
 mongoclusteruser.NewMongoClusterUserRoleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) MongoClusterUserRoleOutputReference
 ```
@@ -1647,7 +1647,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mongoClusterUser.MongoClusterUserTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mongoclusteruser"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mongoclusteruser"
 
 mongoclusteruser.NewMongoClusterUserTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MongoClusterUserTimeoutsOutputReference
 ```

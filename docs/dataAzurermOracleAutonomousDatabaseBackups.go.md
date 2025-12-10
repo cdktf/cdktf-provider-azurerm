@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackups.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracleautonomousdatabasebackups"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleautonomousdatabasebackups"
 
 dataazurermoracleautonomousdatabasebackups.NewDataAzurermOracleAutonomousDatabaseBackups(scope Construct, id *string, config DataAzurermOracleAutonomousDatabaseBackupsConfig) DataAzurermOracleAutonomousDatabaseBackups
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackups.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracleautonomousdatabasebackups"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleautonomousdatabasebackups"
 
 dataazurermoracleautonomousdatabasebackups.DataAzurermOracleAutonomousDatabaseBackups_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackups.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracleautonomousdatabasebackups"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleautonomousdatabasebackups"
 
 dataazurermoracleautonomousdatabasebackups.DataAzurermOracleAutonomousDatabaseBackups_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermoracleautonomousdatabasebackups.DataAzurermOracleAutonomousDatabaseBa
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackups.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracleautonomousdatabasebackups"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleautonomousdatabasebackups"
 
 dataazurermoracleautonomousdatabasebackups.DataAzurermOracleAutonomousDatabaseBackups_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermoracleautonomousdatabasebackups.DataAzurermOracleAutonomousDatabaseBa
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackups.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracleautonomousdatabasebackups"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleautonomousdatabasebackups"
 
 dataazurermoracleautonomousdatabasebackups.DataAzurermOracleAutonomousDatabaseBackups_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -647,7 +647,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackupsAutonomousDatabaseBackups.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracleautonomousdatabasebackups"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleautonomousdatabasebackups"
 
 &dataazurermoracleautonomousdatabasebackups.DataAzurermOracleAutonomousDatabaseBackupsAutonomousDatabaseBackups {
 
@@ -660,7 +660,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracle
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackupsConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracleautonomousdatabasebackups"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleautonomousdatabasebackups"
 
 &dataazurermoracleautonomousdatabasebackups.DataAzurermOracleAutonomousDatabaseBackupsConfig {
 	Connection: interface{},
@@ -672,7 +672,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracle
 	Provisioners: *[]interface{},
 	AutonomousDatabaseId: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackupsTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackupsTimeouts,
 }
 ```
 
@@ -809,7 +809,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackupsTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracleautonomousdatabasebackups"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleautonomousdatabasebackups"
 
 &dataazurermoracleautonomousdatabasebackups.DataAzurermOracleAutonomousDatabaseBackupsTimeouts {
 	Read: *string,
@@ -843,7 +843,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackupsAutonomousDatabaseBackupsList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracleautonomousdatabasebackups"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleautonomousdatabasebackups"
 
 dataazurermoracleautonomousdatabasebackups.NewDataAzurermOracleAutonomousDatabaseBackupsAutonomousDatabaseBackupsList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermOracleAutonomousDatabaseBackupsAutonomousDatabaseBackupsList
 ```
@@ -992,7 +992,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackupsAutonomousDatabaseBackupsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracleautonomousdatabasebackups"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleautonomousdatabasebackups"
 
 dataazurermoracleautonomousdatabasebackups.NewDataAzurermOracleAutonomousDatabaseBackupsAutonomousDatabaseBackupsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermOracleAutonomousDatabaseBackupsAutonomousDatabaseBackupsOutputReference
 ```
@@ -1446,7 +1446,7 @@ func InternalValue() DataAzurermOracleAutonomousDatabaseBackupsAutonomousDatabas
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermOracleAutonomousDatabaseBackups.DataAzurermOracleAutonomousDatabaseBackupsTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermoracleautonomousdatabasebackups"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermoracleautonomousdatabasebackups"
 
 dataazurermoracleautonomousdatabasebackups.NewDataAzurermOracleAutonomousDatabaseBackupsTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermOracleAutonomousDatabaseBackupsTimeoutsOutputReference
 ```

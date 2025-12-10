@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackend.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackend(scope Construct, id *string, config ApiManagementBackendConfig) ApiManagementBackend
 ```
@@ -526,7 +526,7 @@ func ResetTls()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackend.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.ApiManagementBackend_IsConstruct(x interface{}) *bool
 ```
@@ -558,7 +558,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackend.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.ApiManagementBackend_IsTerraformElement(x interface{}) *bool
 ```
@@ -572,7 +572,7 @@ apimanagementbackend.ApiManagementBackend_IsTerraformElement(x interface{}) *boo
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackend.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.ApiManagementBackend_IsTerraformResource(x interface{}) *bool
 ```
@@ -586,7 +586,7 @@ apimanagementbackend.ApiManagementBackend_IsTerraformResource(x interface{}) *bo
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackend.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.ApiManagementBackend_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1145,10 +1145,10 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendCircuitBreakerRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 &apimanagementbackend.ApiManagementBackendCircuitBreakerRule {
-	FailureCondition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementBackend.ApiManagementBackendCircuitBreakerRuleFailureCondition,
+	FailureCondition: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementBackend.ApiManagementBackendCircuitBreakerRuleFailureCondition,
 	Name: *string,
 	TripDuration: *string,
 	AcceptRetryAfterEnabled: interface{},
@@ -1221,7 +1221,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendCircuitBreakerRuleFailureCondition.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 &apimanagementbackend.ApiManagementBackendCircuitBreakerRuleFailureCondition {
 	IntervalDuration: *string,
@@ -1311,7 +1311,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRange.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 &apimanagementbackend.ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRange {
 	Max: *f64,
@@ -1357,7 +1357,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 &apimanagementbackend.ApiManagementBackendConfig {
 	Connection: interface{},
@@ -1372,16 +1372,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementback
 	Protocol: *string,
 	ResourceGroupName: *string,
 	Url: *string,
-	CircuitBreakerRule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementBackend.ApiManagementBackendCircuitBreakerRule,
-	Credentials: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementBackend.ApiManagementBackendCredentials,
+	CircuitBreakerRule: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementBackend.ApiManagementBackendCircuitBreakerRule,
+	Credentials: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementBackend.ApiManagementBackendCredentials,
 	Description: *string,
 	Id: *string,
-	Proxy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementBackend.ApiManagementBackendProxy,
+	Proxy: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementBackend.ApiManagementBackendProxy,
 	ResourceId: *string,
-	ServiceFabricCluster: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementBackend.ApiManagementBackendServiceFabricCluster,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementBackend.ApiManagementBackendTimeouts,
+	ServiceFabricCluster: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementBackend.ApiManagementBackendServiceFabricCluster,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementBackend.ApiManagementBackendTimeouts,
 	Title: *string,
-	Tls: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementBackend.ApiManagementBackendTls,
+	Tls: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementBackend.ApiManagementBackendTls,
 }
 ```
 
@@ -1684,10 +1684,10 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendCredentials.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 &apimanagementbackend.ApiManagementBackendCredentials {
-	Authorization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementBackend.ApiManagementBackendCredentialsAuthorization,
+	Authorization: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementBackend.ApiManagementBackendCredentialsAuthorization,
 	Certificate: *[]*string,
 	Header: *map[string]*string,
 	Query: *map[string]*string,
@@ -1760,7 +1760,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendCredentialsAuthorization.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 &apimanagementbackend.ApiManagementBackendCredentialsAuthorization {
 	Parameter: *string,
@@ -1806,7 +1806,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendProxy.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 &apimanagementbackend.ApiManagementBackendProxy {
 	Url: *string,
@@ -1866,7 +1866,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendServiceFabricCluster.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 &apimanagementbackend.ApiManagementBackendServiceFabricCluster {
 	ManagementEndpoints: *[]*string,
@@ -1970,7 +1970,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendServiceFabricClusterServerX509Name.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 &apimanagementbackend.ApiManagementBackendServiceFabricClusterServerX509Name {
 	IssuerCertificateThumbprint: *string,
@@ -2016,7 +2016,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 &apimanagementbackend.ApiManagementBackendTimeouts {
 	Create: *string,
@@ -2090,7 +2090,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendTls.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 &apimanagementbackend.ApiManagementBackendTls {
 	ValidateCertificateChain: interface{},
@@ -2138,7 +2138,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendCircuitBreakerRuleFailureConditionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendCircuitBreakerRuleFailureConditionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementBackendCircuitBreakerRuleFailureConditionOutputReference
 ```
@@ -2538,7 +2538,7 @@ func InternalValue() ApiManagementBackendCircuitBreakerRuleFailureCondition
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeList
 ```
@@ -2698,7 +2698,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementBackendCircuitBreakerRuleFailureConditionStatusCodeRangeOutputReference
 ```
@@ -3009,7 +3009,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendCircuitBreakerRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendCircuitBreakerRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementBackendCircuitBreakerRuleOutputReference
 ```
@@ -3366,7 +3366,7 @@ func InternalValue() ApiManagementBackendCircuitBreakerRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendCredentialsAuthorizationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendCredentialsAuthorizationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementBackendCredentialsAuthorizationOutputReference
 ```
@@ -3673,7 +3673,7 @@ func InternalValue() ApiManagementBackendCredentialsAuthorization
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendCredentialsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendCredentialsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementBackendCredentialsOutputReference
 ```
@@ -4051,7 +4051,7 @@ func InternalValue() ApiManagementBackendCredentials
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendProxyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendProxyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementBackendProxyOutputReference
 ```
@@ -4373,7 +4373,7 @@ func InternalValue() ApiManagementBackendProxy
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendServiceFabricClusterOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendServiceFabricClusterOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementBackendServiceFabricClusterOutputReference
 ```
@@ -4795,7 +4795,7 @@ func InternalValue() ApiManagementBackendServiceFabricCluster
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendServiceFabricClusterServerX509NameList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendServiceFabricClusterServerX509NameList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ApiManagementBackendServiceFabricClusterServerX509NameList
 ```
@@ -4955,7 +4955,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendServiceFabricClusterServerX509NameOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendServiceFabricClusterServerX509NameOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ApiManagementBackendServiceFabricClusterServerX509NameOutputReference
 ```
@@ -5266,7 +5266,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementBackendTimeoutsOutputReference
 ```
@@ -5631,7 +5631,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementBackend.ApiManagementBackendTlsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementbackend"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementbackend"
 
 apimanagementbackend.NewApiManagementBackendTlsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementBackendTlsOutputReference
 ```

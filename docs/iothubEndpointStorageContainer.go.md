@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEndpointStorageContainer.IothubEndpointStorageContainer.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothubendpointstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointstoragecontainer"
 
 iothubendpointstoragecontainer.NewIothubEndpointStorageContainer(scope Construct, id *string, config IothubEndpointStorageContainerConfig) IothubEndpointStorageContainer
 ```
@@ -468,7 +468,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.iothubEndpointStorageContainer.IothubEndpointStorageContainer.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothubendpointstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointstoragecontainer"
 
 iothubendpointstoragecontainer.IothubEndpointStorageContainer_IsConstruct(x interface{}) *bool
 ```
@@ -500,7 +500,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.iothubEndpointStorageContainer.IothubEndpointStorageContainer.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothubendpointstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointstoragecontainer"
 
 iothubendpointstoragecontainer.IothubEndpointStorageContainer_IsTerraformElement(x interface{}) *bool
 ```
@@ -514,7 +514,7 @@ iothubendpointstoragecontainer.IothubEndpointStorageContainer_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.iothubEndpointStorageContainer.IothubEndpointStorageContainer.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothubendpointstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointstoragecontainer"
 
 iothubendpointstoragecontainer.IothubEndpointStorageContainer_IsTerraformResource(x interface{}) *bool
 ```
@@ -528,7 +528,7 @@ iothubendpointstoragecontainer.IothubEndpointStorageContainer_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.iothubEndpointStorageContainer.IothubEndpointStorageContainer.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothubendpointstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointstoragecontainer"
 
 iothubendpointstoragecontainer.IothubEndpointStorageContainer_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1087,7 +1087,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEndpointStorageContainer.IothubEndpointStorageContainerConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothubendpointstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointstoragecontainer"
 
 &iothubendpointstoragecontainer.IothubEndpointStorageContainerConfig {
 	Connection: interface{},
@@ -1111,7 +1111,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothubendpointsto
 	IdentityId: *string,
 	MaxChunkSizeInBytes: *f64,
 	SubscriptionId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.iothubEndpointStorageContainer.IothubEndpointStorageContainerTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.iothubEndpointStorageContainer.IothubEndpointStorageContainerTimeouts,
 }
 ```
 
@@ -1404,7 +1404,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.iothubEndpointStorageContainer.IothubEndpointStorageContainerTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothubendpointstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointstoragecontainer"
 
 &iothubendpointstoragecontainer.IothubEndpointStorageContainerTimeouts {
 	Create: *string,
@@ -1480,7 +1480,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.iothubEndpointStorageContainer.IothubEndpointStorageContainerTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/iothubendpointstoragecontainer"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/iothubendpointstoragecontainer"
 
 iothubendpointstoragecontainer.NewIothubEndpointStorageContainerTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) IothubEndpointStorageContainerTimeoutsOutputReference
 ```

@@ -42,14 +42,6 @@
       ],
       "condition": "git log --oneline -1 | grep -qv \"chore(release):\""
     },
-    "check-if-new-provider-version": {
-      "name": "check-if-new-provider-version",
-      "steps": [
-        {
-          "exec": "node ./scripts/check-for-upgrades.js"
-        }
-      ]
-    },
     "clobber": {
       "name": "clobber",
       "description": "hard resets to HEAD of origin and cleans the local repo",
@@ -254,10 +246,6 @@
         }
       ]
     },
-    "post-upgrade": {
-      "name": "post-upgrade",
-      "description": "Runs after upgrading dependencies"
-    },
     "pre-compile": {
       "name": "pre-compile",
       "description": "Prepare the project for compilation",
@@ -290,8 +278,7 @@
         {
           "exec": "git diff --ignore-space-at-eol --exit-code"
         }
-      ],
-      "condition": "node ./scripts/should-release.js"
+      ]
     },
     "test": {
       "name": "test",
@@ -332,55 +319,6 @@
         },
         {
           "builtin": "release/bump-version"
-        }
-      ]
-    },
-    "unconditional-release": {
-      "name": "unconditional-release",
-      "description": "Prepare a release from \"main\" branch",
-      "env": {
-        "RELEASE": "true",
-        "MIN_MAJOR": "1"
-      },
-      "steps": [
-        {
-          "exec": "rm -fr dist"
-        },
-        {
-          "spawn": "bump"
-        },
-        {
-          "spawn": "build"
-        },
-        {
-          "spawn": "unbump"
-        },
-        {
-          "exec": "git diff --ignore-space-at-eol --exit-code"
-        }
-      ]
-    },
-    "upgrade": {
-      "name": "upgrade",
-      "description": "upgrade dependencies",
-      "env": {
-        "CI": "0"
-      },
-      "steps": [
-        {
-          "exec": "npx npm-check-updates@18 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@action-validator/cli,@action-validator/core,jsii-diff,jsii-pacmak,projen"
-        },
-        {
-          "exec": "yarn install --check-files"
-        },
-        {
-          "exec": "yarn upgrade @action-validator/cli @action-validator/core @actions/core @cdktf/provider-project @types/node cdktf-cli cdktf commit-and-tag-version constructs dot-prop jsii-diff jsii-docgen jsii-pacmak jsii-rosetta jsii projen semver typescript"
-        },
-        {
-          "exec": "npx projen"
-        },
-        {
-          "spawn": "post-upgrade"
         }
       ]
     },

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetwork.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetwork(scope Construct, id *string, config VirtualNetworkConfig) VirtualNetwork
 ```
@@ -534,7 +534,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetwork.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.VirtualNetwork_IsConstruct(x interface{}) *bool
 ```
@@ -566,7 +566,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetwork.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.VirtualNetwork_IsTerraformElement(x interface{}) *bool
 ```
@@ -580,7 +580,7 @@ virtualnetwork.VirtualNetwork_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetwork.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.VirtualNetwork_IsTerraformResource(x interface{}) *bool
 ```
@@ -594,7 +594,7 @@ virtualnetwork.VirtualNetwork_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetwork.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.VirtualNetwork_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1186,7 +1186,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 &virtualnetwork.VirtualNetworkConfig {
 	Connection: interface{},
@@ -1201,17 +1201,17 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
 	ResourceGroupName: *string,
 	AddressSpace: *[]*string,
 	BgpCommunity: *string,
-	DdosProtectionPlan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.virtualNetwork.VirtualNetworkDdosProtectionPlan,
+	DdosProtectionPlan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualNetwork.VirtualNetworkDdosProtectionPlan,
 	DnsServers: *[]*string,
 	EdgeZone: *string,
-	Encryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.virtualNetwork.VirtualNetworkEncryption,
+	Encryption: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualNetwork.VirtualNetworkEncryption,
 	FlowTimeoutInMinutes: *f64,
 	Id: *string,
 	IpAddressPool: interface{},
 	PrivateEndpointVnetPolicies: *string,
 	Subnet: interface{},
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.virtualNetwork.VirtualNetworkTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.virtualNetwork.VirtualNetworkTimeouts,
 }
 ```
 
@@ -1523,7 +1523,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkDdosProtectionPlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 &virtualnetwork.VirtualNetworkDdosProtectionPlan {
 	Enable: interface{},
@@ -1572,7 +1572,7 @@ If you experience problems setting this value it might not be settable. Please t
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 &virtualnetwork.VirtualNetworkEncryption {
 	Enforcement: *string,
@@ -1604,7 +1604,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkIpAddressPool.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 &virtualnetwork.VirtualNetworkIpAddressPool {
 	Id: *string,
@@ -1653,7 +1653,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkSubnet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 &virtualnetwork.VirtualNetworkSubnet {
 	AddressPrefixes: *[]*string,
@@ -1828,7 +1828,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkSubnetDelegation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 &virtualnetwork.VirtualNetworkSubnetDelegation {
 	Name: *string,
@@ -1874,7 +1874,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkSubnetDelegationServiceDelegation.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 &virtualnetwork.VirtualNetworkSubnetDelegationServiceDelegation {
 	Actions: *[]*string,
@@ -1920,7 +1920,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 &virtualnetwork.VirtualNetworkTimeouts {
 	Create: *string,
@@ -1996,7 +1996,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkDdosProtectionPlanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetworkDdosProtectionPlanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualNetworkDdosProtectionPlanOutputReference
 ```
@@ -2289,7 +2289,7 @@ func InternalValue() VirtualNetworkDdosProtectionPlan
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkEncryptionOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetworkEncryptionOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualNetworkEncryptionOutputReference
 ```
@@ -2560,7 +2560,7 @@ func InternalValue() VirtualNetworkEncryption
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkIpAddressPoolList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetworkIpAddressPoolList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VirtualNetworkIpAddressPoolList
 ```
@@ -2720,7 +2720,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkIpAddressPoolOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetworkIpAddressPoolOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VirtualNetworkIpAddressPoolOutputReference
 ```
@@ -3042,7 +3042,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkSubnetDelegationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetworkSubnetDelegationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VirtualNetworkSubnetDelegationList
 ```
@@ -3202,7 +3202,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkSubnetDelegationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetworkSubnetDelegationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VirtualNetworkSubnetDelegationOutputReference
 ```
@@ -3540,7 +3540,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkSubnetDelegationServiceDelegationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetworkSubnetDelegationServiceDelegationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VirtualNetworkSubnetDelegationServiceDelegationList
 ```
@@ -3700,7 +3700,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkSubnetDelegationServiceDelegationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetworkSubnetDelegationServiceDelegationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VirtualNetworkSubnetDelegationServiceDelegationOutputReference
 ```
@@ -4025,7 +4025,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkSubnetList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetworkSubnetList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) VirtualNetworkSubnetList
 ```
@@ -4185,7 +4185,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkSubnetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetworkSubnetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) VirtualNetworkSubnetOutputReference
 ```
@@ -4784,7 +4784,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.virtualNetwork.VirtualNetworkTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/virtualnetwork"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/virtualnetwork"
 
 virtualnetwork.NewVirtualNetworkTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) VirtualNetworkTimeoutsOutputReference
 ```
