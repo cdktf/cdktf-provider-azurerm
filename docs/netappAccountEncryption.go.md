@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccountencryption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappaccountencryption"
 
 netappaccountencryption.NewNetappAccountEncryption(scope Construct, id *string, config NetappAccountEncryptionConfig) NetappAccountEncryption
 ```
@@ -433,7 +433,7 @@ func ResetUserAssignedIdentityId()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccountencryption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappaccountencryption"
 
 netappaccountencryption.NetappAccountEncryption_IsConstruct(x interface{}) *bool
 ```
@@ -465,7 +465,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccountencryption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappaccountencryption"
 
 netappaccountencryption.NetappAccountEncryption_IsTerraformElement(x interface{}) *bool
 ```
@@ -479,7 +479,7 @@ netappaccountencryption.NetappAccountEncryption_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccountencryption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappaccountencryption"
 
 netappaccountencryption.NetappAccountEncryption_IsTerraformResource(x interface{}) *bool
 ```
@@ -493,7 +493,7 @@ netappaccountencryption.NetappAccountEncryption_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryption.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccountencryption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappaccountencryption"
 
 netappaccountencryption.NetappAccountEncryption_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -898,7 +898,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccountencryption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappaccountencryption"
 
 &netappaccountencryption.NetappAccountEncryptionConfig {
 	Connection: interface{},
@@ -914,7 +914,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccountencrypti
 	FederatedClientId: *string,
 	Id: *string,
 	SystemAssignedIdentityPrincipalId: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.netappAccountEncryption.NetappAccountEncryptionTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.netappAccountEncryption.NetappAccountEncryptionTimeouts,
 	UserAssignedIdentityId: *string,
 }
 ```
@@ -1129,7 +1129,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccountencryption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappaccountencryption"
 
 &netappaccountencryption.NetappAccountEncryptionTimeouts {
 	Create: *string,
@@ -1205,7 +1205,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.netappAccountEncryption.NetappAccountEncryptionTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/netappaccountencryption"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/netappaccountencryption"
 
 netappaccountencryption.NewNetappAccountEncryptionTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetappAccountEncryptionTimeoutsOutputReference
 ```

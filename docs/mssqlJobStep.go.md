@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlJobStep.MssqlJobStep.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqljobstep"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mssqljobstep"
 
 mssqljobstep.NewMssqlJobStep(scope Construct, id *string, config MssqlJobStepConfig) MssqlJobStep
 ```
@@ -467,7 +467,7 @@ func ResetTimeoutSeconds()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.mssqlJobStep.MssqlJobStep.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqljobstep"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mssqljobstep"
 
 mssqljobstep.MssqlJobStep_IsConstruct(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.mssqlJobStep.MssqlJobStep.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqljobstep"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mssqljobstep"
 
 mssqljobstep.MssqlJobStep_IsTerraformElement(x interface{}) *bool
 ```
@@ -513,7 +513,7 @@ mssqljobstep.MssqlJobStep_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.mssqlJobStep.MssqlJobStep.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqljobstep"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mssqljobstep"
 
 mssqljobstep.MssqlJobStep_IsTerraformResource(x interface{}) *bool
 ```
@@ -527,7 +527,7 @@ mssqljobstep.MssqlJobStep_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.mssqlJobStep.MssqlJobStep.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqljobstep"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mssqljobstep"
 
 mssqljobstep.MssqlJobStep_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1064,7 +1064,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlJobStep.MssqlJobStepConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqljobstep"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mssqljobstep"
 
 &mssqljobstep.MssqlJobStepConfig {
 	Connection: interface{},
@@ -1083,10 +1083,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqljobstep"
 	InitialRetryIntervalSeconds: *f64,
 	JobCredentialId: *string,
 	MaximumRetryIntervalSeconds: *f64,
-	OutputTarget: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlJobStep.MssqlJobStepOutputTarget,
+	OutputTarget: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.mssqlJobStep.MssqlJobStepOutputTarget,
 	RetryAttempts: *f64,
 	RetryIntervalBackoffMultiplier: *f64,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.mssqlJobStep.MssqlJobStepTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.mssqlJobStep.MssqlJobStepTimeouts,
 	TimeoutSeconds: *f64,
 }
 ```
@@ -1369,7 +1369,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlJobStep.MssqlJobStepOutputTarget.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqljobstep"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mssqljobstep"
 
 &mssqljobstep.MssqlJobStepOutputTarget {
 	MssqlDatabaseId: *string,
@@ -1443,7 +1443,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.mssqlJobStep.MssqlJobStepTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqljobstep"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mssqljobstep"
 
 &mssqljobstep.MssqlJobStepTimeouts {
 	Create: *string,
@@ -1519,7 +1519,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlJobStep.MssqlJobStepOutputTargetOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqljobstep"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mssqljobstep"
 
 mssqljobstep.NewMssqlJobStepOutputTargetOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlJobStepOutputTargetOutputReference
 ```
@@ -1870,7 +1870,7 @@ func InternalValue() MssqlJobStepOutputTarget
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.mssqlJobStep.MssqlJobStepTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/mssqljobstep"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/mssqljobstep"
 
 mssqljobstep.NewMssqlJobStepTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) MssqlJobStepTimeoutsOutputReference
 ```

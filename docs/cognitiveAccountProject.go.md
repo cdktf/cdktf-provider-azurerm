@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccountProject.CognitiveAccountProject.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccountproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/cognitiveaccountproject"
 
 cognitiveaccountproject.NewCognitiveAccountProject(scope Construct, id *string, config CognitiveAccountProjectConfig) CognitiveAccountProject
 ```
@@ -439,7 +439,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.cognitiveAccountProject.CognitiveAccountProject.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccountproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/cognitiveaccountproject"
 
 cognitiveaccountproject.CognitiveAccountProject_IsConstruct(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.cognitiveAccountProject.CognitiveAccountProject.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccountproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/cognitiveaccountproject"
 
 cognitiveaccountproject.CognitiveAccountProject_IsTerraformElement(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ cognitiveaccountproject.CognitiveAccountProject_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.cognitiveAccountProject.CognitiveAccountProject.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccountproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/cognitiveaccountproject"
 
 cognitiveaccountproject.CognitiveAccountProject_IsTerraformResource(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ cognitiveaccountproject.CognitiveAccountProject_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.cognitiveAccountProject.CognitiveAccountProject.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccountproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/cognitiveaccountproject"
 
 cognitiveaccountproject.CognitiveAccountProject_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -948,7 +948,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveAccountProject.CognitiveAccountProjectConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccountproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/cognitiveaccountproject"
 
 &cognitiveaccountproject.CognitiveAccountProjectConfig {
 	Connection: interface{},
@@ -959,14 +959,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccountproje
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
 	CognitiveAccountId: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cognitiveAccountProject.CognitiveAccountProjectIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.cognitiveAccountProject.CognitiveAccountProjectIdentity,
 	Location: *string,
 	Name: *string,
 	Description: *string,
 	DisplayName: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.cognitiveAccountProject.CognitiveAccountProjectTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.cognitiveAccountProject.CognitiveAccountProjectTimeouts,
 }
 ```
 
@@ -1183,7 +1183,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveAccountProject.CognitiveAccountProjectIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccountproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/cognitiveaccountproject"
 
 &cognitiveaccountproject.CognitiveAccountProjectIdentity {
 	Type: *string,
@@ -1229,7 +1229,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.cognitiveAccountProject.CognitiveAccountProjectTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccountproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/cognitiveaccountproject"
 
 &cognitiveaccountproject.CognitiveAccountProjectTimeouts {
 	Create: *string,
@@ -1305,7 +1305,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccountProject.CognitiveAccountProjectIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccountproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/cognitiveaccountproject"
 
 cognitiveaccountproject.NewCognitiveAccountProjectIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CognitiveAccountProjectIdentityOutputReference
 ```
@@ -1627,7 +1627,7 @@ func InternalValue() CognitiveAccountProjectIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.cognitiveAccountProject.CognitiveAccountProjectTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/cognitiveaccountproject"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/cognitiveaccountproject"
 
 cognitiveaccountproject.NewCognitiveAccountProjectTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) CognitiveAccountProjectTimeoutsOutputReference
 ```

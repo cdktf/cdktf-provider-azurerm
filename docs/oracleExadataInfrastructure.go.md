@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.oracleExadataInfrastructure.OracleExadataInfrastructure.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastructure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/oracleexadatainfrastructure"
 
 oracleexadatainfrastructure.NewOracleExadataInfrastructure(scope Construct, id *string, config OracleExadataInfrastructureConfig) OracleExadataInfrastructure
 ```
@@ -453,7 +453,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.oracleExadataInfrastructure.OracleExadataInfrastructure.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastructure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/oracleexadatainfrastructure"
 
 oracleexadatainfrastructure.OracleExadataInfrastructure_IsConstruct(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.oracleExadataInfrastructure.OracleExadataInfrastructure.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastructure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/oracleexadatainfrastructure"
 
 oracleexadatainfrastructure.OracleExadataInfrastructure_IsTerraformElement(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ oracleexadatainfrastructure.OracleExadataInfrastructure_IsTerraformElement(x int
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.oracleExadataInfrastructure.OracleExadataInfrastructure.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastructure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/oracleexadatainfrastructure"
 
 oracleexadatainfrastructure.OracleExadataInfrastructure_IsTerraformResource(x interface{}) *bool
 ```
@@ -513,7 +513,7 @@ oracleexadatainfrastructure.OracleExadataInfrastructure_IsTerraformResource(x in
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.oracleExadataInfrastructure.OracleExadataInfrastructure.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastructure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/oracleexadatainfrastructure"
 
 oracleexadatainfrastructure.OracleExadataInfrastructure_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1072,7 +1072,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.oracleExadataInfrastructure.OracleExadataInfrastructureConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastructure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/oracleexadatainfrastructure"
 
 &oracleexadatainfrastructure.OracleExadataInfrastructureConfig {
 	Connection: interface{},
@@ -1096,7 +1096,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastr
 	MaintenanceWindow: interface{},
 	StorageServerType: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.oracleExadataInfrastructure.OracleExadataInfrastructureTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.oracleExadataInfrastructure.OracleExadataInfrastructureTimeouts,
 }
 ```
 
@@ -1391,7 +1391,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.oracleExadataInfrastructure.OracleExadataInfrastructureMaintenanceWindow.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastructure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/oracleexadatainfrastructure"
 
 &oracleexadatainfrastructure.OracleExadataInfrastructureMaintenanceWindow {
 	DaysOfWeek: *[]*string,
@@ -1507,7 +1507,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.oracleExadataInfrastructure.OracleExadataInfrastructureTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastructure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/oracleexadatainfrastructure"
 
 &oracleexadatainfrastructure.OracleExadataInfrastructureTimeouts {
 	Create: *string,
@@ -1583,7 +1583,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.oracleExadataInfrastructure.OracleExadataInfrastructureMaintenanceWindowList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastructure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/oracleexadatainfrastructure"
 
 oracleexadatainfrastructure.NewOracleExadataInfrastructureMaintenanceWindowList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) OracleExadataInfrastructureMaintenanceWindowList
 ```
@@ -1743,7 +1743,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.oracleExadataInfrastructure.OracleExadataInfrastructureMaintenanceWindowOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastructure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/oracleexadatainfrastructure"
 
 oracleexadatainfrastructure.NewOracleExadataInfrastructureMaintenanceWindowOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) OracleExadataInfrastructureMaintenanceWindowOutputReference
 ```
@@ -2213,7 +2213,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.oracleExadataInfrastructure.OracleExadataInfrastructureTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/oracleexadatainfrastructure"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/oracleexadatainfrastructure"
 
 oracleexadatainfrastructure.NewOracleExadataInfrastructureTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) OracleExadataInfrastructureTimeoutsOutputReference
 ```

@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementWorkspaceApiVersionSet.ApiManagementWorkspaceApiVersionSet.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementworkspaceapiversionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementworkspaceapiversionset"
 
 apimanagementworkspaceapiversionset.NewApiManagementWorkspaceApiVersionSet(scope Construct, id *string, config ApiManagementWorkspaceApiVersionSetConfig) ApiManagementWorkspaceApiVersionSet
 ```
@@ -426,7 +426,7 @@ func ResetVersionQueryName()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementWorkspaceApiVersionSet.ApiManagementWorkspaceApiVersionSet.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementworkspaceapiversionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementworkspaceapiversionset"
 
 apimanagementworkspaceapiversionset.ApiManagementWorkspaceApiVersionSet_IsConstruct(x interface{}) *bool
 ```
@@ -458,7 +458,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementWorkspaceApiVersionSet.ApiManagementWorkspaceApiVersionSet.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementworkspaceapiversionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementworkspaceapiversionset"
 
 apimanagementworkspaceapiversionset.ApiManagementWorkspaceApiVersionSet_IsTerraformElement(x interface{}) *bool
 ```
@@ -472,7 +472,7 @@ apimanagementworkspaceapiversionset.ApiManagementWorkspaceApiVersionSet_IsTerraf
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementWorkspaceApiVersionSet.ApiManagementWorkspaceApiVersionSet.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementworkspaceapiversionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementworkspaceapiversionset"
 
 apimanagementworkspaceapiversionset.ApiManagementWorkspaceApiVersionSet_IsTerraformResource(x interface{}) *bool
 ```
@@ -486,7 +486,7 @@ apimanagementworkspaceapiversionset.ApiManagementWorkspaceApiVersionSet_IsTerraf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementWorkspaceApiVersionSet.ApiManagementWorkspaceApiVersionSet.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementworkspaceapiversionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementworkspaceapiversionset"
 
 apimanagementworkspaceapiversionset.ApiManagementWorkspaceApiVersionSet_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -913,7 +913,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementWorkspaceApiVersionSet.ApiManagementWorkspaceApiVersionSetConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementworkspaceapiversionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementworkspaceapiversionset"
 
 &apimanagementworkspaceapiversionset.ApiManagementWorkspaceApiVersionSetConfig {
 	Connection: interface{},
@@ -929,7 +929,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementworkspac
 	VersioningScheme: *string,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementWorkspaceApiVersionSet.ApiManagementWorkspaceApiVersionSetTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementWorkspaceApiVersionSet.ApiManagementWorkspaceApiVersionSetTimeouts,
 	VersionHeaderName: *string,
 	VersionQueryName: *string,
 }
@@ -1146,7 +1146,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementWorkspaceApiVersionSet.ApiManagementWorkspaceApiVersionSetTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementworkspaceapiversionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementworkspaceapiversionset"
 
 &apimanagementworkspaceapiversionset.ApiManagementWorkspaceApiVersionSetTimeouts {
 	Create: *string,
@@ -1222,7 +1222,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementWorkspaceApiVersionSet.ApiManagementWorkspaceApiVersionSetTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementworkspaceapiversionset"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementworkspaceapiversionset"
 
 apimanagementworkspaceapiversionset.NewApiManagementWorkspaceApiVersionSetTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementWorkspaceApiVersionSetTimeoutsOutputReference
 ```

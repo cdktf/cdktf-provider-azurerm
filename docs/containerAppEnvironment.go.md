@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 containerappenvironment.NewContainerAppEnvironment(scope Construct, id *string, config ContainerAppEnvironmentConfig) ContainerAppEnvironment
 ```
@@ -515,7 +515,7 @@ func ResetZoneRedundancyEnabled()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 containerappenvironment.ContainerAppEnvironment_IsConstruct(x interface{}) *bool
 ```
@@ -547,7 +547,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 containerappenvironment.ContainerAppEnvironment_IsTerraformElement(x interface{}) *bool
 ```
@@ -561,7 +561,7 @@ containerappenvironment.ContainerAppEnvironment_IsTerraformElement(x interface{}
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 containerappenvironment.ContainerAppEnvironment_IsTerraformResource(x interface{}) *bool
 ```
@@ -575,7 +575,7 @@ containerappenvironment.ContainerAppEnvironment_IsTerraformResource(x interface{
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironment.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 containerappenvironment.ContainerAppEnvironment_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -1244,7 +1244,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 &containerappenvironment.ContainerAppEnvironmentConfig {
 	Connection: interface{},
@@ -1259,7 +1259,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironme
 	ResourceGroupName: *string,
 	DaprApplicationInsightsConnectionString: *string,
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerAppEnvironment.ContainerAppEnvironmentIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.containerAppEnvironment.ContainerAppEnvironmentIdentity,
 	InfrastructureResourceGroupName: *string,
 	InfrastructureSubnetId: *string,
 	InternalLoadBalancerEnabled: interface{},
@@ -1268,7 +1268,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironme
 	MutualTlsEnabled: interface{},
 	PublicNetworkAccess: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.containerAppEnvironment.ContainerAppEnvironmentTimeouts,
 	WorkloadProfile: interface{},
 	ZoneRedundancyEnabled: interface{},
 }
@@ -1617,7 +1617,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 &containerappenvironment.ContainerAppEnvironmentIdentity {
 	Type: *string,
@@ -1663,7 +1663,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 &containerappenvironment.ContainerAppEnvironmentTimeouts {
 	Create: *string,
@@ -1737,7 +1737,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfile.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 &containerappenvironment.ContainerAppEnvironmentWorkloadProfile {
 	Name: *string,
@@ -1813,7 +1813,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 containerappenvironment.NewContainerAppEnvironmentIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppEnvironmentIdentityOutputReference
 ```
@@ -2135,7 +2135,7 @@ func InternalValue() ContainerAppEnvironmentIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 containerappenvironment.NewContainerAppEnvironmentTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ContainerAppEnvironmentTimeoutsOutputReference
 ```
@@ -2500,7 +2500,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfileList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 containerappenvironment.NewContainerAppEnvironmentWorkloadProfileList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ContainerAppEnvironmentWorkloadProfileList
 ```
@@ -2660,7 +2660,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.containerAppEnvironment.ContainerAppEnvironmentWorkloadProfileOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/containerappenvironment"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/containerappenvironment"
 
 containerappenvironment.NewContainerAppEnvironmentWorkloadProfileOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) ContainerAppEnvironmentWorkloadProfileOutputReference
 ```

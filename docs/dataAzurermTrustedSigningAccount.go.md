@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrustedSigningAccount.DataAzurermTrustedSigningAccount.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrustedsigningaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermtrustedsigningaccount"
 
 dataazurermtrustedsigningaccount.NewDataAzurermTrustedSigningAccount(scope Construct, id *string, config DataAzurermTrustedSigningAccountConfig) DataAzurermTrustedSigningAccount
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermTrustedSigningAccount.DataAzurermTrustedSigningAccount.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrustedsigningaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermtrustedsigningaccount"
 
 dataazurermtrustedsigningaccount.DataAzurermTrustedSigningAccount_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermTrustedSigningAccount.DataAzurermTrustedSigningAccount.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrustedsigningaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermtrustedsigningaccount"
 
 dataazurermtrustedsigningaccount.DataAzurermTrustedSigningAccount_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermtrustedsigningaccount.DataAzurermTrustedSigningAccount_IsTerraformEle
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermTrustedSigningAccount.DataAzurermTrustedSigningAccount.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrustedsigningaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermtrustedsigningaccount"
 
 dataazurermtrustedsigningaccount.DataAzurermTrustedSigningAccount_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermtrustedsigningaccount.DataAzurermTrustedSigningAccount_IsTerraformDat
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermTrustedSigningAccount.DataAzurermTrustedSigningAccount.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrustedsigningaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermtrustedsigningaccount"
 
 dataazurermtrustedsigningaccount.DataAzurermTrustedSigningAccount_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -702,7 +702,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrustedSigningAccount.DataAzurermTrustedSigningAccountConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrustedsigningaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermtrustedsigningaccount"
 
 &dataazurermtrustedsigningaccount.DataAzurermTrustedSigningAccountConfig {
 	Connection: interface{},
@@ -715,7 +715,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrustedsig
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermTrustedSigningAccount.DataAzurermTrustedSigningAccountTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.dataAzurermTrustedSigningAccount.DataAzurermTrustedSigningAccountTimeouts,
 }
 ```
 
@@ -865,7 +865,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermTrustedSigningAccount.DataAzurermTrustedSigningAccountTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrustedsigningaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermtrustedsigningaccount"
 
 &dataazurermtrustedsigningaccount.DataAzurermTrustedSigningAccountTimeouts {
 	Read: *string,
@@ -899,7 +899,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermTrustedSigningAccount.DataAzurermTrustedSigningAccountTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermtrustedsigningaccount"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermtrustedsigningaccount"
 
 dataazurermtrustedsigningaccount.NewDataAzurermTrustedSigningAccountTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermTrustedSigningAccountTimeoutsOutputReference
 ```

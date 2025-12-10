@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 networkmanagerroutingrule.NewNetworkManagerRoutingRule(scope Construct, id *string, config NetworkManagerRoutingRuleConfig) NetworkManagerRoutingRule
 ```
@@ -438,7 +438,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRule.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 networkmanagerroutingrule.NetworkManagerRoutingRule_IsConstruct(x interface{}) *bool
 ```
@@ -470,7 +470,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRule.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 networkmanagerroutingrule.NetworkManagerRoutingRule_IsTerraformElement(x interface{}) *bool
 ```
@@ -484,7 +484,7 @@ networkmanagerroutingrule.NetworkManagerRoutingRule_IsTerraformElement(x interfa
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRule.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 networkmanagerroutingrule.NetworkManagerRoutingRule_IsTerraformResource(x interface{}) *bool
 ```
@@ -498,7 +498,7 @@ networkmanagerroutingrule.NetworkManagerRoutingRule_IsTerraformResource(x interf
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRule.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 networkmanagerroutingrule.NetworkManagerRoutingRule_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -881,7 +881,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRuleConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 &networkmanagerroutingrule.NetworkManagerRoutingRuleConfig {
 	Connection: interface{},
@@ -891,13 +891,13 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerrouting
 	Lifecycle: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformResourceLifecycle,
 	Provider: github.com/hashicorp/terraform-cdk-go/cdktf.TerraformProvider,
 	Provisioners: *[]interface{},
-	Destination: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkManagerRoutingRule.NetworkManagerRoutingRuleDestination,
+	Destination: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.networkManagerRoutingRule.NetworkManagerRoutingRuleDestination,
 	Name: *string,
-	NextHop: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkManagerRoutingRule.NetworkManagerRoutingRuleNextHop,
+	NextHop: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.networkManagerRoutingRule.NetworkManagerRoutingRuleNextHop,
 	RuleCollectionId: *string,
 	Description: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.networkManagerRoutingRule.NetworkManagerRoutingRuleTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.networkManagerRoutingRule.NetworkManagerRoutingRuleTimeouts,
 }
 ```
 
@@ -1090,7 +1090,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRuleDestination.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 &networkmanagerroutingrule.NetworkManagerRoutingRuleDestination {
 	Address: *string,
@@ -1136,7 +1136,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRuleNextHop.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 &networkmanagerroutingrule.NetworkManagerRoutingRuleNextHop {
 	Type: *string,
@@ -1182,7 +1182,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRuleTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 &networkmanagerroutingrule.NetworkManagerRoutingRuleTimeouts {
 	Create: *string,
@@ -1258,7 +1258,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRuleDestinationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 networkmanagerroutingrule.NewNetworkManagerRoutingRuleDestinationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkManagerRoutingRuleDestinationOutputReference
 ```
@@ -1551,7 +1551,7 @@ func InternalValue() NetworkManagerRoutingRuleDestination
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRuleNextHopOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 networkmanagerroutingrule.NewNetworkManagerRoutingRuleNextHopOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkManagerRoutingRuleNextHopOutputReference
 ```
@@ -1851,7 +1851,7 @@ func InternalValue() NetworkManagerRoutingRuleNextHop
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.networkManagerRoutingRule.NetworkManagerRoutingRuleTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/networkmanagerroutingrule"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/networkmanagerroutingrule"
 
 networkmanagerroutingrule.NewNetworkManagerRoutingRuleTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) NetworkManagerRoutingRuleTimeoutsOutputReference
 ```

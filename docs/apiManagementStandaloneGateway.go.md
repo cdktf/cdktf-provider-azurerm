@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGateway.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementstandalonegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementstandalonegateway"
 
 apimanagementstandalonegateway.NewApiManagementStandaloneGateway(scope Construct, id *string, config ApiManagementStandaloneGatewayConfig) ApiManagementStandaloneGateway
 ```
@@ -439,7 +439,7 @@ func ResetVirtualNetworkType()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGateway.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementstandalonegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementstandalonegateway"
 
 apimanagementstandalonegateway.ApiManagementStandaloneGateway_IsConstruct(x interface{}) *bool
 ```
@@ -471,7 +471,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGateway.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementstandalonegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementstandalonegateway"
 
 apimanagementstandalonegateway.ApiManagementStandaloneGateway_IsTerraformElement(x interface{}) *bool
 ```
@@ -485,7 +485,7 @@ apimanagementstandalonegateway.ApiManagementStandaloneGateway_IsTerraformElement
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGateway.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementstandalonegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementstandalonegateway"
 
 apimanagementstandalonegateway.ApiManagementStandaloneGateway_IsTerraformResource(x interface{}) *bool
 ```
@@ -499,7 +499,7 @@ apimanagementstandalonegateway.ApiManagementStandaloneGateway_IsTerraformResourc
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGateway.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementstandalonegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementstandalonegateway"
 
 apimanagementstandalonegateway.ApiManagementStandaloneGateway_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -926,7 +926,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGatewayConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementstandalonegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementstandalonegateway"
 
 &apimanagementstandalonegateway.ApiManagementStandaloneGatewayConfig {
 	Connection: interface{},
@@ -939,11 +939,11 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementstandalo
 	Location: *string,
 	Name: *string,
 	ResourceGroupName: *string,
-	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGatewaySku,
+	Sku: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementStandaloneGateway.ApiManagementStandaloneGatewaySku,
 	BackendSubnetId: *string,
 	Id: *string,
 	Tags: *map[string]*string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGatewayTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.apiManagementStandaloneGateway.ApiManagementStandaloneGatewayTimeouts,
 	VirtualNetworkType: *string,
 }
 ```
@@ -1161,7 +1161,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGatewaySku.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementstandalonegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementstandalonegateway"
 
 &apimanagementstandalonegateway.ApiManagementStandaloneGatewaySku {
 	Name: *string,
@@ -1207,7 +1207,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGatewayTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementstandalonegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementstandalonegateway"
 
 &apimanagementstandalonegateway.ApiManagementStandaloneGatewayTimeouts {
 	Create: *string,
@@ -1283,7 +1283,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGatewaySkuOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementstandalonegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementstandalonegateway"
 
 apimanagementstandalonegateway.NewApiManagementStandaloneGatewaySkuOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementStandaloneGatewaySkuOutputReference
 ```
@@ -1583,7 +1583,7 @@ func InternalValue() ApiManagementStandaloneGatewaySku
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.apiManagementStandaloneGateway.ApiManagementStandaloneGatewayTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/apimanagementstandalonegateway"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/apimanagementstandalonegateway"
 
 apimanagementstandalonegateway.NewApiManagementStandaloneGatewayTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) ApiManagementStandaloneGatewayTimeoutsOutputReference
 ```

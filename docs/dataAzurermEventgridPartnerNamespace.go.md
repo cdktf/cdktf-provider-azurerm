@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespace.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridpartnernamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermeventgridpartnernamespace"
 
 dataazurermeventgridpartnernamespace.NewDataAzurermEventgridPartnerNamespace(scope Construct, id *string, config DataAzurermEventgridPartnerNamespaceConfig) DataAzurermEventgridPartnerNamespace
 ```
@@ -303,7 +303,7 @@ func ResetTimeouts()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespace.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridpartnernamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermeventgridpartnernamespace"
 
 dataazurermeventgridpartnernamespace.DataAzurermEventgridPartnerNamespace_IsConstruct(x interface{}) *bool
 ```
@@ -335,7 +335,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespace.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridpartnernamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermeventgridpartnernamespace"
 
 dataazurermeventgridpartnernamespace.DataAzurermEventgridPartnerNamespace_IsTerraformElement(x interface{}) *bool
 ```
@@ -349,7 +349,7 @@ dataazurermeventgridpartnernamespace.DataAzurermEventgridPartnerNamespace_IsTerr
 ##### `IsTerraformDataSource` <a name="IsTerraformDataSource" id="@cdktf/provider-azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespace.isTerraformDataSource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridpartnernamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermeventgridpartnernamespace"
 
 dataazurermeventgridpartnernamespace.DataAzurermEventgridPartnerNamespace_IsTerraformDataSource(x interface{}) *bool
 ```
@@ -363,7 +363,7 @@ dataazurermeventgridpartnernamespace.DataAzurermEventgridPartnerNamespace_IsTerr
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespace.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridpartnernamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermeventgridpartnernamespace"
 
 dataazurermeventgridpartnernamespace.DataAzurermEventgridPartnerNamespace_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -746,7 +746,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespaceConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridpartnernamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermeventgridpartnernamespace"
 
 &dataazurermeventgridpartnernamespace.DataAzurermEventgridPartnerNamespaceConfig {
 	Connection: interface{},
@@ -759,7 +759,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridp
 	Name: *string,
 	ResourceGroupName: *string,
 	Id: *string,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespaceTimeouts,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespaceTimeouts,
 }
 ```
 
@@ -909,7 +909,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespaceInboundIpRule.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridpartnernamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermeventgridpartnernamespace"
 
 &dataazurermeventgridpartnernamespace.DataAzurermEventgridPartnerNamespaceInboundIpRule {
 
@@ -922,7 +922,7 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridp
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespaceTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridpartnernamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermeventgridpartnernamespace"
 
 &dataazurermeventgridpartnernamespace.DataAzurermEventgridPartnerNamespaceTimeouts {
 	Read: *string,
@@ -956,7 +956,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespaceInboundIpRuleList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridpartnernamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermeventgridpartnernamespace"
 
 dataazurermeventgridpartnernamespace.NewDataAzurermEventgridPartnerNamespaceInboundIpRuleList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataAzurermEventgridPartnerNamespaceInboundIpRuleList
 ```
@@ -1105,7 +1105,7 @@ func Fqn() *string
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespaceInboundIpRuleOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridpartnernamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermeventgridpartnernamespace"
 
 dataazurermeventgridpartnernamespace.NewDataAzurermEventgridPartnerNamespaceInboundIpRuleOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) DataAzurermEventgridPartnerNamespaceInboundIpRuleOutputReference
 ```
@@ -1394,7 +1394,7 @@ func InternalValue() DataAzurermEventgridPartnerNamespaceInboundIpRule
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.dataAzurermEventgridPartnerNamespace.DataAzurermEventgridPartnerNamespaceTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/dataazurermeventgridpartnernamespace"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/dataazurermeventgridpartnernamespace"
 
 dataazurermeventgridpartnernamespace.NewDataAzurermEventgridPartnerNamespaceTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) DataAzurermEventgridPartnerNamespaceTimeoutsOutputReference
 ```

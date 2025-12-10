@@ -9,7 +9,7 @@ Represents a {@link https://registry.terraform.io/providers/hashicorp/azurerm/4.
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachine.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachine(scope Construct, id *string, config LinuxVirtualMachineConfig) LinuxVirtualMachine
 ```
@@ -856,7 +856,7 @@ func ResetZone()
 ##### `IsConstruct` <a name="IsConstruct" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachine.isConstruct"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.LinuxVirtualMachine_IsConstruct(x interface{}) *bool
 ```
@@ -888,7 +888,7 @@ Any object.
 ##### `IsTerraformElement` <a name="IsTerraformElement" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachine.isTerraformElement"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.LinuxVirtualMachine_IsTerraformElement(x interface{}) *bool
 ```
@@ -902,7 +902,7 @@ linuxvirtualmachine.LinuxVirtualMachine_IsTerraformElement(x interface{}) *bool
 ##### `IsTerraformResource` <a name="IsTerraformResource" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachine.isTerraformResource"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.LinuxVirtualMachine_IsTerraformResource(x interface{}) *bool
 ```
@@ -916,7 +916,7 @@ linuxvirtualmachine.LinuxVirtualMachine_IsTerraformResource(x interface{}) *bool
 ##### `GenerateConfigForImport` <a name="GenerateConfigForImport" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachine.generateConfigForImport"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.LinuxVirtualMachine_GenerateConfigForImport(scope Construct, importToId *string, importFromId *string, provider TerraformProvider) ImportableResource
 ```
@@ -2344,7 +2344,7 @@ func TfResourceType() *string
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineAdditionalCapabilities.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineAdditionalCapabilities {
 	HibernationEnabled: interface{},
@@ -2390,7 +2390,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineAdminSshKey.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineAdminSshKey {
 	PublicKey: *string,
@@ -2436,7 +2436,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineBootDiagnostics.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineBootDiagnostics {
 	StorageAccountUri: *string,
@@ -2468,7 +2468,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineConfig.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineConfig {
 	Connection: interface{},
@@ -2481,16 +2481,16 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
 	Location: *string,
 	Name: *string,
 	NetworkInterfaceIds: *[]*string,
-	OsDisk: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxVirtualMachine.LinuxVirtualMachineOsDisk,
+	OsDisk: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.linuxVirtualMachine.LinuxVirtualMachineOsDisk,
 	ResourceGroupName: *string,
 	Size: *string,
-	AdditionalCapabilities: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxVirtualMachine.LinuxVirtualMachineAdditionalCapabilities,
+	AdditionalCapabilities: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.linuxVirtualMachine.LinuxVirtualMachineAdditionalCapabilities,
 	AdminPassword: *string,
 	AdminSshKey: interface{},
 	AdminUsername: *string,
 	AllowExtensionOperations: interface{},
 	AvailabilitySetId: *string,
-	BootDiagnostics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxVirtualMachine.LinuxVirtualMachineBootDiagnostics,
+	BootDiagnostics: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.linuxVirtualMachine.LinuxVirtualMachineBootDiagnostics,
 	BypassPlatformSafetyChecksOnUserScheduleEnabled: interface{},
 	CapacityReservationGroupId: *string,
 	ComputerName: *string,
@@ -2505,14 +2505,14 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
 	ExtensionsTimeBudget: *string,
 	GalleryApplication: interface{},
 	Id: *string,
-	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxVirtualMachine.LinuxVirtualMachineIdentity,
+	Identity: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.linuxVirtualMachine.LinuxVirtualMachineIdentity,
 	LicenseType: *string,
 	MaxBidPrice: *f64,
-	OsImageNotification: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxVirtualMachine.LinuxVirtualMachineOsImageNotification,
+	OsImageNotification: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.linuxVirtualMachine.LinuxVirtualMachineOsImageNotification,
 	OsManagedDiskId: *string,
 	PatchAssessmentMode: *string,
 	PatchMode: *string,
-	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxVirtualMachine.LinuxVirtualMachinePlan,
+	Plan: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.linuxVirtualMachine.LinuxVirtualMachinePlan,
 	PlatformFaultDomain: *f64,
 	Priority: *string,
 	ProvisionVmAgent: interface{},
@@ -2521,10 +2521,10 @@ import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
 	Secret: interface{},
 	SecureBootEnabled: interface{},
 	SourceImageId: *string,
-	SourceImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxVirtualMachine.LinuxVirtualMachineSourceImageReference,
+	SourceImageReference: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.linuxVirtualMachine.LinuxVirtualMachineSourceImageReference,
 	Tags: *map[string]*string,
-	TerminationNotification: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxVirtualMachine.LinuxVirtualMachineTerminationNotification,
-	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxVirtualMachine.LinuxVirtualMachineTimeouts,
+	TerminationNotification: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.linuxVirtualMachine.LinuxVirtualMachineTerminationNotification,
+	Timeouts: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.linuxVirtualMachine.LinuxVirtualMachineTimeouts,
 	UserData: *string,
 	VirtualMachineScaleSetId: *string,
 	VmAgentPlatformUpdatesEnabled: interface{},
@@ -3325,7 +3325,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineGalleryApplication.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineGalleryApplication {
 	VersionId: *string,
@@ -3427,7 +3427,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineIdentity.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineIdentity {
 	Type: *string,
@@ -3473,11 +3473,11 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineOsDisk.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineOsDisk {
 	Caching: *string,
-	DiffDiskSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm.linuxVirtualMachine.LinuxVirtualMachineOsDiskDiffDiskSettings,
+	DiffDiskSettings: github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14.linuxVirtualMachine.LinuxVirtualMachineOsDiskDiffDiskSettings,
 	DiskEncryptionSetId: *string,
 	DiskSizeGb: *f64,
 	Name: *string,
@@ -3619,7 +3619,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineOsDiskDiffDiskSettings.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineOsDiskDiffDiskSettings {
 	Option: *string,
@@ -3665,7 +3665,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineOsImageNotification.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineOsImageNotification {
 	Timeout: *string,
@@ -3697,7 +3697,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachinePlan.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachinePlan {
 	Name: *string,
@@ -3757,7 +3757,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineSecret.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineSecret {
 	Certificate: interface{},
@@ -3805,7 +3805,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineSecretCertificate.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineSecretCertificate {
 	Url: *string,
@@ -3837,7 +3837,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineSourceImageReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineSourceImageReference {
 	Offer: *string,
@@ -3911,7 +3911,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineTerminationNotification.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineTerminationNotification {
 	Enabled: interface{},
@@ -3957,7 +3957,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializer <a name="Initializer" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineTimeouts.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 &linuxvirtualmachine.LinuxVirtualMachineTimeouts {
 	Create: *string,
@@ -4033,7 +4033,7 @@ Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashi
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineAdditionalCapabilitiesOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineAdditionalCapabilitiesOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxVirtualMachineAdditionalCapabilitiesOutputReference
 ```
@@ -4340,7 +4340,7 @@ func InternalValue() LinuxVirtualMachineAdditionalCapabilities
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineAdminSshKeyList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineAdminSshKeyList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxVirtualMachineAdminSshKeyList
 ```
@@ -4500,7 +4500,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineAdminSshKeyOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineAdminSshKeyOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxVirtualMachineAdminSshKeyOutputReference
 ```
@@ -4811,7 +4811,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineBootDiagnosticsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineBootDiagnosticsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxVirtualMachineBootDiagnosticsOutputReference
 ```
@@ -5089,7 +5089,7 @@ func InternalValue() LinuxVirtualMachineBootDiagnostics
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineGalleryApplicationList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineGalleryApplicationList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxVirtualMachineGalleryApplicationList
 ```
@@ -5249,7 +5249,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineGalleryApplicationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineGalleryApplicationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxVirtualMachineGalleryApplicationOutputReference
 ```
@@ -5683,7 +5683,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineIdentityOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineIdentityOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxVirtualMachineIdentityOutputReference
 ```
@@ -6005,7 +6005,7 @@ func InternalValue() LinuxVirtualMachineIdentity
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineOsDiskDiffDiskSettingsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineOsDiskDiffDiskSettingsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxVirtualMachineOsDiskDiffDiskSettingsOutputReference
 ```
@@ -6305,7 +6305,7 @@ func InternalValue() LinuxVirtualMachineOsDiskDiffDiskSettings
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineOsDiskOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineOsDiskOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxVirtualMachineOsDiskOutputReference
 ```
@@ -6832,7 +6832,7 @@ func InternalValue() LinuxVirtualMachineOsDisk
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineOsImageNotificationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineOsImageNotificationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxVirtualMachineOsImageNotificationOutputReference
 ```
@@ -7110,7 +7110,7 @@ func InternalValue() LinuxVirtualMachineOsImageNotification
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachinePlanOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachinePlanOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxVirtualMachinePlanOutputReference
 ```
@@ -7425,7 +7425,7 @@ func InternalValue() LinuxVirtualMachinePlan
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineSecretCertificateList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineSecretCertificateList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxVirtualMachineSecretCertificateList
 ```
@@ -7585,7 +7585,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineSecretCertificateOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineSecretCertificateOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxVirtualMachineSecretCertificateOutputReference
 ```
@@ -7874,7 +7874,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineSecretList.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineSecretList(terraformResource IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) LinuxVirtualMachineSecretList
 ```
@@ -8034,7 +8034,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineSecretOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineSecretOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string, complexObjectIndex *f64, complexObjectIsFromSet *bool) LinuxVirtualMachineSecretOutputReference
 ```
@@ -8358,7 +8358,7 @@ func InternalValue() interface{}
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineSourceImageReferenceOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineSourceImageReferenceOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxVirtualMachineSourceImageReferenceOutputReference
 ```
@@ -8695,7 +8695,7 @@ func InternalValue() LinuxVirtualMachineSourceImageReference
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineTerminationNotificationOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineTerminationNotificationOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxVirtualMachineTerminationNotificationOutputReference
 ```
@@ -8995,7 +8995,7 @@ func InternalValue() LinuxVirtualMachineTerminationNotification
 #### Initializers <a name="Initializers" id="@cdktf/provider-azurerm.linuxVirtualMachine.LinuxVirtualMachineTimeoutsOutputReference.Initializer"></a>
 
 ```go
-import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/linuxvirtualmachine"
+import "github.com/cdktf/cdktf-provider-azurerm-go/azurerm/v14/linuxvirtualmachine"
 
 linuxvirtualmachine.NewLinuxVirtualMachineTimeoutsOutputReference(terraformResource IInterpolatingParent, terraformAttribute *string) LinuxVirtualMachineTimeoutsOutputReference
 ```
