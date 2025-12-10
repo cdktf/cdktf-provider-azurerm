@@ -76,11 +76,6 @@
       "type": "build"
     },
     {
-      "name": "semver",
-      "version": "^7.5.3",
-      "type": "build"
-    },
-    {
       "name": "typescript",
       "version": "~5.8.0",
       "type": "build"

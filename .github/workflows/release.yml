@@ -45,9 +45,11 @@ jobs:
           TAG=$(cat dist/releasetag.txt)
           ([ ! -z "$TAG" ] && git ls-remote -q --exit-code --tags origin $TAG && (echo "exists=true" >> $GITHUB_OUTPUT)) || (echo "exists=false" >> $GITHUB_OUTPUT)
           cat $GITHUB_OUTPUT
-      - name: Check for new commits or cancel via faking a SHA if release was cancelled
+      - name: Check for new commits
         id: git_remote
-        run: node ./scripts/should-release.js && (echo "latest_commit=$(git ls-remote origin -h ${{ github.ref }} | cut -f1)" >> $GITHUB_OUTPUT && cat $GITHUB_OUTPUT) || echo "latest_commit=release_cancelled" >> $GITHUB_OUTPUT
+        run: |-
+          echo "latest_commit=$(git ls-remote origin -h ${{ github.ref }} | cut -f1)" >> $GITHUB_OUTPUT
+          cat $GITHUB_OUTPUT
         shell: bash
       - name: Backup artifact permissions
         if: ${{ steps.git_remote.outputs.latest_commit == github.sha }}
@@ -402,13 +404,15 @@ jobs:
       - name: Remove some text from the README that doesn't apply to Go
         run: |-
           sed -i 's/# CDKTF prebuilt bindings for/# CDKTF Go bindings for/' .repo/dist/go/*/README.md
-          sed -i -e '/## Available Packages/,/### Go/!b' -e '/### Go/!d;p; s/### Go/## Go Package/' -e 'd' .repo/dist/go/*/README.md
-          sed -i 's/### Go/## Go Package/' .repo/dist/go/*/README.md
+          sed -i -e '/## Deprecated Packages/,/### Go/!b' -e '/### Go/!d;p; s/### Go/## Go Package/' -e 'd' .repo/dist/go/*/README.md
+          sed -i 's/### Go/## Deprecated Package/' .repo/dist/go/*/README.md
           sed -i -e '/API.typescript.md/,/You can also visit a hosted version/!b' -e 'd' .repo/dist/go/*/README.md
           sed -i 's|Find auto-generated docs for this provider here:|Find auto-generated docs for this provider [here](https://github.com/cdktf/cdktf-provider-azurerm/blob/main/docs/API.go.md).|' .repo/dist/go/*/README.md
           sed -i -e '/### Provider Version/,/The provider version can be adjusted/!b' -e 'd' .repo/dist/go/*/README.md
       - name: Copy the README file to the parent directory
         run: cp .repo/dist/go/*/README.md .repo/dist/go/README.md
+      - name: Mark the Go module as deprecated
+        run: "find '.repo/dist/go' -mindepth 2 -maxdepth 4 -type f -name 'go.mod' | xargs sed -i '1s|^|// Deprecated: HashiCorp is no longer publishing new versions of the prebuilt provider for azurerm.\\n// Previously-published versions of this prebuilt provider will still continue to be available as installable Go modules,\\n// but these will not be compatible with newer versions of CDK for Terraform and are not eligible for commercial support.\\n// You can continue to use the azurerm provider in your CDK for Terraform projects with newer versions of CDKTF,\\n// but you will need to generate the bindings locally. See https://cdk.tf/imports for details.\\n|'"
       - name: Collect go Artifact
         run: mv .repo/dist dist
       - name: Release
